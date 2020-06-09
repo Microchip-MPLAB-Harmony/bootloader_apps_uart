@@ -10,3 +10,4 @@
 *.jar binary
 *.exe binary
 *.chm binary
+*.png binary
