@@ -44,6 +44,7 @@ The following applications are provided to demonstrate the UART bootloader
 | Name | Description|
 |:---------|:-----------|
 |[UART Bootloader](apps/uart_bootloader/readme.md) | This example application shows how to use the Bootloader Library to bootload an application using UART protocol |
+|[UART Fail Safe Bootloader](apps/uart_fail_safe_bootloader/readme.md) | This example application shows how to use the Bootloader Library to bootload an application on device having dual flash bank feature using UART protocol  |
 ____
 
 [![License](https://img.shields.io/badge/license-Harmony%20license-orange.svg)](https://github.com/Microchip-MPLAB-Harmony/bootloader_apps_uart/blob/master/mplab_harmony_license.md)
