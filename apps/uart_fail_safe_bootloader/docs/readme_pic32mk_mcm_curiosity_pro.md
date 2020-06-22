@@ -4,9 +4,7 @@
 
 ## Downloading and building the application
 
-To download or clone this application from Github, go to the [top level of the repository](https://github.com/Microchip-MPLAB-Harmony/bootloader_apps_uart) and click
-
-![clone](../../../docs/images/clone.png)
+To clone or download this application from Github,go to the [main page of this repository](https://github.com/Microchip-MPLAB-Harmony/bootloader_apps_uart) and then click Clone button to clone this repo or download as zip file. This content can also be download using content manager by following [these instructions](https://github.com/Microchip-MPLAB-Harmony/contentmanager/wiki)
 
 Path of the application within the repository is **apps/uart_fail_safe_bootloader/**
 
@@ -17,32 +15,21 @@ To build the application, refer to the following table and open the project usin
 | Project Name      | Description                                    |
 | ----------------- | ---------------------------------------------- |
 | bootloader/firmware/pic32mk_mcm_curiosity_pro.X    | MPLABX Project for PIC32MK MCM Curiosity Pro Development Board |
-|||
 
 ### Test Application
 
 | Project Name      | Description                                    |
 | ----------------- | ---------------------------------------------- |
 | test_app/firmware/pic32mk_mcm_curiosity_pro.X    | MPLABX Project for PIC32MK MCM Curiosity Pro Development Board |
-|||
 
-## Setting up the hardware
-
-The following table shows the target hardware for the application projects.
-
-| Project Name| Board|
-|:---------|:---------:|
-|pic32mk_mcm_curiosity_pro.X | PIC32MK MCM Curiosity Pro Development Board |
-|||
-
-### Setting up PIC32MK MCM Curiosity Pro Development Board
+## Setting up PIC32MK MCM Curiosity Pro Development Board
 
 - Connect a micro USB cable to the USB to UART port J400. This will enumerate as a COM port on the PC.
 - For programming, Connect a micro USB cable to the USB DEBUG port J500
 
 ## Setting up the host script
 
-- Refer to [Bootloader Tools Help](https://github.com/Microchip-MPLAB-Harmony/bootloader/blob/master/tools/readme.md) for setting up the host script
+- Refer to [Bootloader Host Script Help](../../../tools/docs/readme_btl_host.md) for setting up the **btl_host.py** utility used to send the application binary from host PC
 
 ## Running the Application
 
@@ -85,3 +72,8 @@ The following table shows the target hardware for the application projects.
     - This step is to verify that bootloader is running after triggering bootloader from test application in Step 12
     - Also to program the new firmware in opposite bank
     - You should see other Bank in console displayed compared to first run
+
+## Additional Steps (Optional)
+- To bootload any other application refer to [Application Configurations](../../docs/readme_configure_application_pic32m.md)
+
+- Once done repeat the applicable steps mentioned in [Running The Application](#running-the-application)
