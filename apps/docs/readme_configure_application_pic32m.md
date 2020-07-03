@@ -1,3 +1,10 @@
+---
+parent: Application Configurations
+title: PIC32M Application Configurations
+has_children: false
+has_toc: false
+---
+
 [![MCHP](https://www.microchip.com/ResourcePackages/Microchip/assets/dist/images/logo.png)](https://www.microchip.com)
 
 # Configuring a PIC32M based Application to be bootloaded

@@ -1,3 +1,11 @@
+---
+parent: UART Bootloader Host Tools
+title: Bootloader and Application binary merge script
+has_children: false
+has_toc: false
+nav_order: 2
+---
+
 [![MCHP](https://www.microchip.com/ResourcePackages/Microchip/assets/dist/images/logo.png)](https://www.microchip.com)
 
 # Bootloader and Application binary merge script Help

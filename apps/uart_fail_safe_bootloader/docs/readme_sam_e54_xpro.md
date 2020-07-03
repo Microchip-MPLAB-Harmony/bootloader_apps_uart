@@ -1,3 +1,10 @@
+---
+grand_parent: UART Bootloader Applications
+parent: UART Fail Safe Bootloader
+title: Building and Running on SAM E54 Xplained Pro Evaluation Kit
+has_toc: false
+---
+
 [![MCHP](https://www.microchip.com/ResourcePackages/Microchip/assets/dist/images/logo.png)](https://www.microchip.com)
 
 # Building and Running the UART Fail Safe Bootloader applications

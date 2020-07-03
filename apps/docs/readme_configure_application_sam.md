@@ -1,3 +1,10 @@
+---
+parent: Application Configurations
+title: SAM Application Configurations
+has_children: false
+has_toc: false
+---
+
 [![MCHP](https://www.microchip.com/ResourcePackages/Microchip/assets/dist/images/logo.png)](https://www.microchip.com)
 
 # Configuring a SAM based Application to be bootloaded

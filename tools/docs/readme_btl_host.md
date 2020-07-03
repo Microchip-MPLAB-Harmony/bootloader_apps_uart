@@ -1,3 +1,11 @@
+---
+parent: UART Bootloader Host Tools
+title: Bootloader Host Script
+has_children: false
+has_toc: false
+nav_order: 1
+---
+
 [![MCHP](https://www.microchip.com/ResourcePackages/Microchip/assets/dist/images/logo.png)](https://www.microchip.com)
 
 # Bootloader Host Script Help

@@ -1,3 +1,10 @@
+---
+title: Application Configurations
+has_children: true
+has_toc: false
+nav_order: 3
+---
+
 [![MCHP](https://www.microchip.com/ResourcePackages/Microchip/assets/dist/images/logo.png)](https://www.microchip.com)
 
 # Configuring an Application to be bootloaded

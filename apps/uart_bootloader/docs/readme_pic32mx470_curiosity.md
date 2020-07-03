@@ -1,3 +1,10 @@
+---
+grand_parent: UART Bootloader Applications
+parent: UART Bootloader
+title: Building and Running on PIC32MX Curiosity Development Board
+has_toc: false
+---
+
 [![MCHP](https://www.microchip.com/ResourcePackages/Microchip/assets/dist/images/logo.png)](https://www.microchip.com)
 
 # Building and Running the UART Bootloader applications
