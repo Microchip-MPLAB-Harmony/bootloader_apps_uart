@@ -107,10 +107,13 @@ _GEN_EXCPT_ADDR                = _ebase_address + 0x180;
 
 MEMORY
 {
-    kseg0_program_mem  (rx) : ORIGIN = 0x9D000000 + 0x480, LENGTH = 0x100000 - 0x480 /* All C files will be located here */
-    kseg0_boot_mem          : ORIGIN = 0x9D000000, LENGTH = 0x0
+    /* All C files will be located here */
+    kseg0_program_mem  (rx) : ORIGIN = 0x9D001000, LENGTH = 0x100000 - 0x1000
     kseg1_boot_mem          : ORIGIN = 0x9D000000, LENGTH = 0x480
-    kseg0_data_mem       (w!x)  : ORIGIN = 0x80000000 + 16, LENGTH = 0x40000 - 16 /* Reserve 16 Bytes to Store Bootloader Trigger Pattern */
+
+    /* Reserve 16 Bytes to Store Bootloader Trigger Pattern */
+    kseg0_data_mem       (w!x)  : ORIGIN = 0x80000000 + 16, LENGTH = 0x40000 - 16
+
     sfrs                        : ORIGIN = 0xBF800000, LENGTH = 0x100000
 }
 
@@ -914,15 +917,6 @@ SECTIONS
     __vector_offset_default = . - _ebase_address;
     KEEP(*(.vector_default))
   } > kseg0_program_mem
-
-  /*  The startup code is in the .reset.startup section.
-   *  Keep this here for backwards compatibility with older
-   *  C32 v1.xx releases.
-   */
-  .startup ORIGIN(kseg0_boot_mem) :
-  {
-    KEEP(*(.startup))
-  } > kseg0_boot_mem
 
   /* Code Sections - Note that input sections *(.text) and *(.text.*)
    * are not mapped here. The best-fit allocator locates them,
