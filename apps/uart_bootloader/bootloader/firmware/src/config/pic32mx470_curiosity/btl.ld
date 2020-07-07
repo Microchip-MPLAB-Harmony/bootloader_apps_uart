@@ -71,7 +71,7 @@ OPTIONAL("processor.o")
  *   xc32-gcc src.c -Wl,--defsym=_ebase_address=0x9D001000
  *************************************************************************/
 PROVIDE(_vector_spacing = 0x0001);
-PROVIDE(_ebase_address = 0x9FC00300);
+PROVIDE(_ebase_address = 0x9FC01000);
 
 /*************************************************************************
  * Memory Address Equates
@@ -96,8 +96,6 @@ _GEN_EXCPT_ADDR                = _ebase_address + 0x180;
  * Only sections specifically assigned to these regions can be allocated
  * into these regions.
  *
- * The Debug exception vector is located at 0x9FC00480.
- *
  * The config_<address> sections are used to locate the config words at
  * their absolute addresses.
  *************************************************************************/
@@ -107,8 +105,6 @@ MEMORY
 {
   kseg0_program_mem     (rx)  : ORIGIN = 0x9FC00500, LENGTH = 4096 /* All C files will be located here */
   kseg1_boot_mem              : ORIGIN = 0xBFC00000, LENGTH = 0x490
-  kseg0_boot_mem              : ORIGIN = 0x9FC00490, LENGTH = 0x0
-  exception_mem               : ORIGIN = 0x9FC01000, LENGTH = 0x1000
   debug_exec_mem              : ORIGIN = 0xBFC02000, LENGTH = 0xFF0
   config3                     : ORIGIN = 0xBFC02FF0, LENGTH = 0x4
   config2                     : ORIGIN = 0xBFC02FF4, LENGTH = 0x4
@@ -164,16 +160,7 @@ SECTIONS
   .app_excpt _GEN_EXCPT_ADDR :
   {
     KEEP(*(.gen_handler))
-  } > exception_mem
-
-  /*  The startup code is in the .reset.startup section.
-   *  Keep this here for backwards compatibility with older
-   *  C32 v1.xx releases.
-   */
-  .startup ORIGIN(kseg0_boot_mem) :
-  {
-    KEEP(*(.startup))
-  } > kseg0_boot_mem
+  } > kseg0_program_mem
 
   /* Code Sections - Note that input sections *(.text) and *(.text.*)
    * are not mapped here. The best-fit allocator locates them,
