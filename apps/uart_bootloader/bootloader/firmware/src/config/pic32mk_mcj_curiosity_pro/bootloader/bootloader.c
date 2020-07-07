@@ -342,7 +342,7 @@ bool __WEAK bootloader_Trigger(void)
     return false;
 }
 
-void bootloader_Start(void)
+void bootloader_Tasks(void)
 {
     CORETIMER_CompareSet(TIMER_COMPARE_VALUE);
 
