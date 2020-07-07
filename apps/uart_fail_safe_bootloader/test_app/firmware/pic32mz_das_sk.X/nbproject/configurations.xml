@@ -88,6 +88,8 @@
                    displayName="Important Files"
                    projectFiles="false">
       <itemPath>Makefile</itemPath>
+      <itemPath>../src/config/pic32mz_das_sk/harmony.prj</itemPath>
+      <itemPath>../../../../../../mhc/../bootloader_apps_uart/apps/uart_fail_safe_bootloader/test_app/firmware/src/config/pic32mz_das_sk/pic32mz_das_sk.xml</itemPath>
     </logicalFolder>
   </logicalFolder>
   <sourceRootList>
@@ -109,6 +111,8 @@
       <packs>
         <pack name="PIC32MZ-DA_DFP" vendor="Microchip" version="1.1.98"/>
       </packs>
+      <ScriptingSettings>
+      </ScriptingSettings>
       <compileType>
         <linkerTool>
           <linkerLibItems>
@@ -142,7 +146,7 @@
         <property key="enable-unroll-loops" value="false"/>
         <property key="exclude-floating-point" value="false"/>
         <property key="extra-include-directories"
-                  value="../src;../src/config/pic32mz_das_sk;../src/packs/PIC32MZ2064DAS169_DFP;../src/mips"/>
+                  value="../src;../src/config/pic32mz_das_sk;../src/packs/PIC32MZ2064DAS169_DFP"/>
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="true"/>
