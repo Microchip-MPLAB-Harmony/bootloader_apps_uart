@@ -115,10 +115,9 @@ MEMORY
      * serial number used by bootloader to decide which program flash bank to
      * update and run.
      */
-    kseg0_program_mem  (rx)     : ORIGIN = 0x9D000000 + 0x480, LENGTH = 0x100000 - 0x480 - 2048
-
-    kseg0_boot_mem              : ORIGIN = 0x9D000000, LENGTH = 0x0
-    kseg1_boot_mem              : ORIGIN = 0x9D000000, LENGTH = 0x480
+    kseg0_program_mem  (rx) : ORIGIN = 0x9D001000, LENGTH = 0x100000 - 0x1000 - 2048
+    kseg1_boot_mem          : ORIGIN = 0x9D000000, LENGTH = 0x480
+    kseg1_boot_mem_4B0      : ORIGIN = 0x9D0004B0, LENGTH = 0x1000 - 0x4B0
 
     /* Reserve 16 Bytes to Store Bootloader Trigger Pattern */
     kseg0_data_mem     (w!x)    : ORIGIN = 0x80000000 + 16, LENGTH = 0x80000 - 16
@@ -142,14 +141,23 @@ SECTIONS
     KEEP(*(.reset))
     KEEP(*(.reset.startup))
   } > kseg1_boot_mem
+
+  .cache_init :
+  {
+    *(.cache_init)
+    *(.cache_init.*)
+  } > kseg1_boot_mem_4B0
+
   .simple_tlb_refill_excpt _SIMPLE_TLB_REFILL_EXCPT_ADDR :
   {
     KEEP(*(.simple_tlb_refill_vector))
   } > kseg0_program_mem
+
   .cache_err_excpt _CACHE_ERR_EXCPT_ADDR :
   {
     KEEP(*(.cache_err_vector))
   } > kseg0_program_mem
+
   .app_excpt _GEN_EXCPT_ADDR :
   {
     KEEP(*(.gen_handler))
@@ -937,15 +945,6 @@ SECTIONS
     __vector_offset_default = . - _ebase_address;
     KEEP(*(.vector_default))
   } > kseg0_program_mem
-
-  /*  The startup code is in the .reset.startup section.
-   *  Keep this here for backwards compatibility with older
-   *  C32 v1.xx releases.
-   */
-  .startup ORIGIN(kseg0_boot_mem) :
-  {
-    KEEP(*(.startup))
-  } > kseg0_boot_mem
 
   /* Code Sections - Note that input sections *(.text) and *(.text.*)
    * are not mapped here. The best-fit allocator locates them,
