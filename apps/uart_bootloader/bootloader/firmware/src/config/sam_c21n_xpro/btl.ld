@@ -54,34 +54,31 @@ SEARCH_DIR(.)
  */
 ENTRY(__XC32_RESET_HANDLER_NAME)
 
-/* Bootloader Size is calculated with below criteria with optimization level -O1
+#define ROM_START 0x00000000
+
+/* Bootloader size is calculated with below criteria with optimization level -O1
  * bootloader size = Minimum Flash Erase Size Or actual bootloader ELF size
                      (Rounded of to nearest erase boundary) whichever is
                      greater.
  */
-bootloader_size        = 2048;
-
-/* Bootloader Request pattern needs to be stored in starting 16 Bytes of Ram
- * by the application if it wants to run bootloader at startup without any
- * external trigger.
- * ram[0] = 0x5048434D;
- * ram[1] = 0x5048434D;
- * ram[2] = 0x5048434D;
- * ram[3] = 0x5048434D;
- */
-bootloader_request_len = 16;
-
-#define ROM_START 0x00000000
-
-#define ROM_SIZE  bootloader_size
+#define ROM_SIZE  2048
 
 #if (ROM_SIZE > 0x40000)
     #  error ROM_SIZE is greater than the max size of 0x40000
 #endif
 
-#define RAM_START (0x20000000 + bootloader_request_len)
+/* Bootloader Trigger pattern needs to be stored in starting 16 Bytes of Ram
+ * by the application if it wants to run bootloader at startup without any
+ * external trigger.
+ * Example:
+ *     ram[0] = 0x5048434D;
+ *     ram[1] = 0x5048434D;
+ *     ....
+ *     ram[n] = 0x5048434D;
+ */
+#define RAM_START (0x20000000 + 16)
 
-#define RAM_SIZE  (0x8000 - bootloader_request_len)
+#define RAM_SIZE  (0x8000 - 16)
 
 #if (RAM_SIZE > 0x8000)
     #  error RAM_SIZE is greater than the max size of 0x8000
