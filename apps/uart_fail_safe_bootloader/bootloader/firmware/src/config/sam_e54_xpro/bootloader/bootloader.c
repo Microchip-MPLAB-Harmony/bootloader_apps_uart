@@ -139,6 +139,8 @@ static uint32_t crc_generate(void)
 
     DSU_CRCCalculate (addr, size, 0xffffffff, &crc);
 
+    PAC_PeripheralProtectSetup (PAC_PERIPHERAL_DSU, PAC_PROTECTION_SET);
+
     return crc;
 }
 
@@ -347,7 +349,7 @@ bool __WEAK bootloader_Trigger(void)
     return false;
 }
 
-void bootloader_Start(void)
+void bootloader_Tasks(void)
 {
     while (1)
     {
