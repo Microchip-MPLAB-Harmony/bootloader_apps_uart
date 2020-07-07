@@ -33,6 +33,10 @@ To build the application, refer to the following table and open the project usin
 
 - Connect the Debug USB port on the board to the computer using a micro USB cable
 
+### Note
+- **ATSAMHA1G16A** device in [SAM HA1G16A Xplained Pro](https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/ATSAMHA1G16A-XPRO) board is not recommended for new design, hence replace the device with **ATSAMHA1G16AB** device
+- Connect the supported external debugger to Cortex Debug Port 
+
 ## Setting up the host script
 
 - Refer to [Bootloader Host Script Help](../../../tools/docs/readme_btl_host.md) for setting up the **btl_host.py** utility used to send the application binary from host PC

@@ -65,7 +65,7 @@ To build the application, refer to the following table and open the project usin
 10. Reset or Power cycle the device
 11. **LED0** should start blinking and you should see below output on the console
 
-    ![output](./images/btl_uart_test_app_console_success.png)
+    ![output](./images/btl_uart_test_app_console_success_l10.png)
 
 12. Disconnect UART console
 13. **Press and hold** the Switch **SW0** and then press Reset button or Power cycle the device to force trigger bootloader at startup
