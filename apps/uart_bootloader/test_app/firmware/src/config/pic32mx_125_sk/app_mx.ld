@@ -88,7 +88,7 @@ OPTIONAL("processor.o")
  *   xc32-gcc src.c -Wl,--defsym=_ebase_address=0x9D001000
  *************************************************************************/
 PROVIDE(_vector_spacing = 0x0001);
-PROVIDE(_ebase_address = 0x9D003000);
+PROVIDE(_ebase_address = 0x9D002000);
 
 /*************************************************************************
  * Memory Address Equates
@@ -118,9 +118,13 @@ _GEN_EXCPT_ADDR                = _ebase_address + 0x180;
 
 MEMORY
 {
-  kseg0_program_mem     (rx)  : ORIGIN = 0x9D001000, LENGTH = 0x7F000 - 0x1000 /* Size of Bootloader is 0x1000 */
-  kseg0_boot_mem              : ORIGIN = 0x9D002490, LENGTH = 0x0
-  kseg1_data_mem       (w!x)  : ORIGIN = 0xA0000000 + 16, LENGTH = 0x10000 - 16 /* Bootloader Trigger Pattern 16 Bytes */
+  /* Size of Bootloader is 0x1000 */
+  kseg0_program_mem     (rx)  : ORIGIN = 0x9D002000, LENGTH = 0x80000 - 0x1000 - 0x1000
+  kseg1_boot_mem              : ORIGIN = 0x9D001000, LENGTH = 0x490
+
+  /* Bootloader Trigger Pattern 16 Bytes */
+  kseg1_data_mem       (w!x)  : ORIGIN = 0xA0000000 + 16, LENGTH = 0x10000 - 16
+
   sfrs                        : ORIGIN = 0xBF800000, LENGTH = 0x100000
   configsfrs                  : ORIGIN = 0xBFC00BF0, LENGTH = 0x10
 }
@@ -137,7 +141,7 @@ SECTIONS
   {
     KEEP(*(.reset))
     KEEP(*(.reset.startup))
-  } > kseg0_program_mem
+  } > kseg1_boot_mem
 
   .app_excpt _GEN_EXCPT_ADDR :
   {
@@ -464,15 +468,6 @@ SECTIONS
      KEEP(*(.vector_63))
   } > kseg0_program_mem
   ASSERT (_vector_spacing == 0 || SIZEOF(.vector_63) <= (_vector_spacing << 5), "function at exception vector 63 too large")
-
-  /*  The startup code is in the .reset.startup section.
-   *  Keep this here for backwards compatibility with older
-   *  C32 v1.xx releases.
-   */
-  .startup ORIGIN(kseg0_boot_mem) :
-  {
-    KEEP(*(.startup))
-  } > kseg0_boot_mem
 
   /* Code Sections - Note that input sections *(.text) and *(.text.*)
    * are not mapped here. The best-fit allocator locates them,
