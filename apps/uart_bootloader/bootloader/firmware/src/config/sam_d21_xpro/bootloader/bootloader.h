@@ -39,6 +39,9 @@
 #ifndef BOOTLOADER_H
 #define BOOTLOADER_H
 
+#include <stdint.h>
+#include <stdbool.h>
+
 #define BTL_TRIGGER_RAM_START   0x20000000
 
 #define BTL_TRIGGER_LEN         16
@@ -149,7 +152,7 @@ void run_Application( void );
 
 // *****************************************************************************
 /* Function:
-    void bootloader_Start( void );
+    void bootloader_Tasks( void );
 
  Summary:
     Starts bootloader execution.
@@ -157,17 +160,20 @@ void run_Application( void );
  Description:
     This function can be used to start bootloader execution.
 
-    The function continuously waits for application firmware from the HOST-PC via
+    The function continuously waits for application firmware from the HOST via
     selected communication protocol to program into internal flash memory.
 
     Once the complete application is received, programmed and verified successfully,
     It resets the device to jump into programmed application.
 
-    Before Jumping into application it clears the initial 16 bytes of ram memory so
-    that the bootloader is not triggered at reset in case application has previously
-    filled it to have a internal firmware trigger.
+    Note:
+    For Optimized Bootloaders:
+        - This function never returns.
+        - This function will be directly called from main function
 
-    Note: This function never returns.
+    For Unified and File System based Bootloaders:
+        - This function returns once the state machine execution is completed
+        - This function will be called from SYS_Tasks() routine from the super loop
 
  Precondition:
     bootloader_Trigger() must be called to check for bootloader triggers at startup.
@@ -181,12 +187,10 @@ void run_Application( void );
  Example:
     <code>
 
-        SYS_Initialize( NULL );
-
-        bootloader_Start();
+        bootloader_Tasks();
 
     </code>
 */
-void bootloader_Start( void );
+void bootloader_Tasks( void );
 
 #endif
