@@ -1,7 +1,7 @@
 /**
  * \brief Header file for ATSAML22N18A
  *
- * Copyright (c) 2019 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2020 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -82,12 +82,12 @@ typedef enum IRQn
   PendSV_IRQn               =  -2, /**< -2  Pendable request for system service */
   SysTick_IRQn              =  -1, /**< -1  System Tick Timer                   */
 /******  SAML22N18A specific Interrupt Numbers ***********************************/
-  MCLK_IRQn                 =   0, /**< 0   Shared between MCLK OSCCTRL OSC32KCTRL PAC PM SUPC (MCLK) */
-  OSCCTRL_IRQn              =   0, /**< 0   Shared between MCLK OSCCTRL OSC32KCTRL PAC PM SUPC (OSCCTRL) */
   OSC32KCTRL_IRQn           =   0, /**< 0   Shared between MCLK OSCCTRL OSC32KCTRL PAC PM SUPC (OSC32KCTRL) */
+  OSCCTRL_IRQn              =   0, /**< 0   Shared between MCLK OSCCTRL OSC32KCTRL PAC PM SUPC (OSCCTRL) */
+  MCLK_IRQn                 =   0, /**< 0   Shared between MCLK OSCCTRL OSC32KCTRL PAC PM SUPC (MCLK) */
   PAC_IRQn                  =   0, /**< 0   Shared between MCLK OSCCTRL OSC32KCTRL PAC PM SUPC (PAC) */
-  PM_IRQn                   =   0, /**< 0   Shared between MCLK OSCCTRL OSC32KCTRL PAC PM SUPC (PM) */
   SUPC_IRQn                 =   0, /**< 0   Shared between MCLK OSCCTRL OSC32KCTRL PAC PM SUPC (SUPC) */
+  PM_IRQn                   =   0, /**< 0   Shared between MCLK OSCCTRL OSC32KCTRL PAC PM SUPC (PM) */
   WDT_IRQn                  =   1, /**< 1   Watchdog Timer (WDT)                */
   RTC_IRQn                  =   2, /**< 2   Real-Time Counter (RTC)             */
   EIC_IRQn                  =   3, /**< 3   External Interrupt Controller (EIC) */
@@ -264,8 +264,8 @@ void TRNG_Handler                  ( void );
 #include "component/mclk.h"
 #include "component/mtb.h"
 #include "component/nvmctrl.h"
-#include "component/oscctrl.h"
 #include "component/osc32kctrl.h"
+#include "component/oscctrl.h"
 #include "component/pac.h"
 #include "component/pm.h"
 #include "component/port.h"
@@ -488,7 +488,7 @@ void TRNG_Handler                  ( void );
 /* ************************************************************************** */
 /**  DEVICE SIGNATURES FOR SAML22N18A                                         */
 /* ************************************************************************** */
-#define DSU_DID                        _UL_(0X10820100)
+#define CHIP_DSU_DID                   _UL_(0X10820100)
 
 /* ************************************************************************** */
 /**  ELECTRICAL DEFINITIONS FOR SAML22N18A                                    */
