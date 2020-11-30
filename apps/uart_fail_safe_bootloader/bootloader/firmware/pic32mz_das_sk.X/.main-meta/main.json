@@ -1,0 +1,74 @@
+{
+	"metaDataVersion": "1.0.0",
+	"category": "com.microchip.ide.project",
+	"content": {
+		"metaDataVersion": "1.1.0",
+		"name": "com.microchip.mcu32.mplabx.project.bootloader_apps_uart_uart_fail_safe_bootloader_pic32mz_das_sk",
+		"version": "3.0.2",
+		"displayName": "UART Fail Safe Bootloader Example for PIC32MZ DA Family",
+		"projectName": "uart_fail_safe_bootloader_pic32mz_das_sk",
+		"shortDescription": "This example application shows how to use the Bootloader Library to bootload an application on device having dual flash bank feature using UART protocol.",
+		"ide": {
+			"name": "MPLABX",
+			"semverRange": ">=5.40.0"
+		},
+		"compiler": [
+			{
+				"name": "XC32",
+				"semverRange": ">=2.40.0"
+			}
+		],
+		"dfp": {
+			"name": "PIC32MZ-DA_DFP",
+			"semverRange": "^1.2.102"
+		},
+		"configurator": {
+			"name": "MHC",
+			"semverRange": ">=3.4.1"
+		},
+		"device": {
+			"metaDataVersion": "1.0.0",
+			"category": "com.microchip.portal.contentRef",
+			"content": {
+				"metaDataVersion": "1.0.0",
+				"category": "com.microchip.device",
+				"name": "PIC32MZ2064DAS169",
+				"versionRange": "*"
+			}
+		},
+		"author": "Microchip",
+		"subcategories": [
+			[
+				"Development Kit", "PIC32MZ Embedded Graphics with Stacked DRAM (DA) Starter Kit (Crypto)"
+			],
+			[
+				"Harmony", "Bootloader", "UART"
+			],
+			[
+				"Bootloader", "UART"
+			]
+		],
+		"peripherals": [
+			"Bootloader"
+		],
+		"keywords": [
+			"MHC",
+			"Harmony",
+			"Bootloader",
+			"UART",
+			"PIC32MZ2064DAS169",
+			"PIC32MZ DA Family"
+		],
+		"additionalData": {
+			"longDescription": {
+				"metaDataVersion": "1.0.0",
+				"category": "com.microchip.portal.fileRef",
+				"content": {
+					"metaDataVersion": "1.0.0",
+					"fileName": "./../../../readme.md",
+					"mimeType": "text/markdown"
+				}
+			}
+		}
+	}
+}
