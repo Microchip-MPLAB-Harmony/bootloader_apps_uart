@@ -11,6 +11,9 @@
 *.exe binary
 *.chm binary
 *.png binary
+*.svg binary
 *.ico binary
+*.elf binary
+*.bin binary
 *.jpg binary
 *.gif binary

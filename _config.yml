@@ -68,18 +68,25 @@ heading_anchors: true
 ga_tracking: UA-2724382-16
 
 exclude:
-  - "*.xml"
+  - "*.X"
+  - "*.IAR"
+  - "*.KEIL"
   - "*.py"
   - "*.ftl"
   - "*.c"
   - "*.h"
-  - "*.X"
-  - "*.IAR"
-  - "Gem*"
   - "*.S"
+  - "*.s"
   - "*.ld"
   - "*.jar"
   - "*.prj"
+  - "*.xml"
+  - "*.yml"
+  - "*.sct"
+  - "*.icf"
+  - "*.group"
+  - "*.link"
+  - "Gem*"
 
 # Aux links for the upper right navigation
 aux_links:
