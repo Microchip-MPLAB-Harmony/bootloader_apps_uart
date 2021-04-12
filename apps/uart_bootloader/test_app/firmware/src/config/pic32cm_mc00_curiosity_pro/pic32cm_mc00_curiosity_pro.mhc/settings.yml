@@ -1,0 +1,14 @@
+configName: pic32cm_mc00_curiosity_pro
+folderName: pic32cm_mc00_curiosity_pro
+format_version: v1.0
+frameworkPath: ..\..\..\..
+processor: PIC32CM1216MC00048
+projectName: uart_bootloader_test_app_pic32cm_mc00_curiosity_pro
+settings:
+  PackageFilter: bootloader;bootloader_apps_can;bootloader_apps_ethernet;bootloader_apps_i2c;bootloader_apps_sdcard;bootloader_apps_serial_memory;bootloader_apps_uart;bootloader_apps_usb;bsp;core;csp;net;usb
+  FORCE_OPTIMIZATION: 'false'
+  GENERATE_BACKUP: 'true'
+  TRUSTZONE: 'false'
+  CMSISPath: .\dev_packs\arm\CMSIS\5.7.0
+  MERGE_STRATEGY: USER_ALL
+  DFPPath: .\dev_packs\Microchip\PIC32CM-MC_DFP\1.2.52\PIC32CM1216MC00048\atdf\PIC32CM1216MC00048.atdf
