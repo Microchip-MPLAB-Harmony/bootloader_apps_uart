@@ -47,7 +47,7 @@ To build the application, refer to the following table and open the project usin
 
 5. Run the **btl_host.py** from command prompt to program the test application binary to opposite panel
 
-        python <harmony3_path>\bootloader\tools\btl_host.py -v -s -i <COM PORT> -d pic32mz -a 0x9D100000 -f <harmony3_path>\bootloader_apps_uart\apps\uart_fail_safe_bootloader\test_app\firmware\pic32mz_ef_sk.X\dist\pic32mz_ef_sk\production\pic32mz_ef_sk.X.production.bin
+        python <harmony3_path>/bootloader/tools/btl_host.py -v -s -i <COM PORT> -d pic32mz -a 0x9D100000 -f <harmony3_path>/bootloader_apps_uart/apps/uart_fail_safe_bootloader/test_app/firmware/pic32mz_ef_sk.X/dist/pic32mz_ef_sk/production/pic32mz_ef_sk.X.production.bin
 
 6. Following snapshot shows output of successfully programming the test application
     - **Swapping Bank And Rebooting** and **Reboot Done** messages in below output signifies that bootloading is successful

@@ -51,7 +51,7 @@ To build the application, refer to the following table and open the project usin
 
 5. Run the **btl_host.py** from command prompt to program the application binary
 
-        python <harmony3_path>\bootloader\tools\btl_host.py -v -i <COM PORT> -d pic32mx -a 0x9D001000 -p 1024 -f <harmony3_path>\bootloader_apps_uart\apps\uart_bootloader\test_app\firmware\pic32mx_125_sk.X\dist\pic32mx_125_sk\production\pic32mx_125_sk.X.production.bin
+        python <harmony3_path>/bootloader/tools/btl_host.py -v -i <COM PORT> -d pic32mx -a 0x9D001000 -p 1024 -f <harmony3_path>/bootloader_apps_uart/apps/uart_bootloader/test_app/firmware/pic32mx_125_sk.X/dist/pic32mx_125_sk/production/pic32mx_125_sk.X.production.bin
 
 6. Following snapshot shows output of successfully programming the test application
     - **Rebooting** and **Reboot Done** messages in below output signifies that bootloading is successful

@@ -63,13 +63,13 @@ To build the application, refer to the following table and open the project usin
 
 7. Run the **btl_app_merge_bin.py** from command prompt to merge the generated Bootloader binary and test application binary. Below output should be displayed on command prompt
 
-        python <harmony3_path>\bootloader\tools\btl_app_merge_bin.py -o 0x2000 -b <harmony3_path>\bootloader_apps_uart\apps\uart_fail_safe_bootloader\bootloader\firmware\sam_e54_xpro.X\dist\sam_e54_xpro\production\sam_e54_xpro.X.production.bin -a <harmony3_path>\bootloader_apps_uart\apps\uart_fail_safe_bootloader\test_app\firmware\sam_e54_xpro.X\dist\sam_e54_xpro\production\sam_e54_xpro.X.production.bin
+        python <harmony3_path>/bootloader/tools/btl_app_merge_bin.py -o 0x2000 -b <harmony3_path>/bootloader_apps_uart/apps/uart_fail_safe_bootloader/bootloader/firmware/sam_e54_xpro.X/dist/sam_e54_xpro/production/sam_e54_xpro.X.production.bin -a <harmony3_path>/bootloader_apps_uart/apps/uart_fail_safe_bootloader/test_app/firmware/sam_e54_xpro.X/dist/sam_e54_xpro/production/sam_e54_xpro.X.production.bin
 
     ![output](./images/btl_uart_fail_safe_app_merger_console.png)
 
 8. Run the **btl_host.py** from command prompt to program the merged binary to opposite panel. **btl_app_merged.bin** will be created in the current directory from where the **btl_app_merge_bin.py** was called
 
-        python <harmony3_path>\bootloader\tools\btl_host.py -v -s -i <COM PORT> -d same5x -a 0x80000 -f <Path_To_Merged_Binary>\btl_app_merged.bin
+        python <harmony3_path>/bootloader/tools/btl_host.py -v -s -i <COM PORT> -d same5x -a 0x80000 -f <Path_To_Merged_Binary>/btl_app_merged.bin
 
 9. Following snapshot shows example output of successfully programming the merged binary
     - **Swapping Bank And Rebooting** and **Reboot Done** messages in below output signifies that bootloading is successful
@@ -100,7 +100,7 @@ To build the application, refer to the following table and open the project usin
 16. Disconnect UART console
 17. Run the **btl_host.py** from command prompt to program only the test application binary to opposite panel
 
-        python <harmony3_path>\bootloader\tools\btl_host.py -v -s -i <COM PORT> -d same5x -a 0x82000 -f <harmony3_path>\bootloader_apps_uart\apps\uart_fail_safe_bootloader\test_app\firmware\sam_e54_xpro.X\dist\sam_e54_xpro\production\sam_e54_xpro.X.production.bin
+        python <harmony3_path>/bootloader/tools/btl_host.py -v -s -i <COM PORT> -d same5x -a 0x82000 -f <harmony3_path>/bootloader_apps_uart/apps/uart_fail_safe_bootloader/test_app/firmware/sam_e54_xpro.X/dist/sam_e54_xpro/production/sam_e54_xpro.X.production.bin
 
 18. Repeat Steps 9-14 once
     - This step is to verify that bootloader is running after triggering bootloader from test application in Step 15

@@ -40,7 +40,7 @@ To clone or download the host tools from Github,go to the [bootloader repository
 ### Below is the syntax to show help menu for the script
 
 ```
-python <harmony3_path>\bootloader\tools\btl_host.py --help
+python <harmony3_path>/bootloader/tools/btl_host.py --help
 ```
 
 ![btl_host_help_menu](./images/btl_host_help_menu.png)
@@ -48,11 +48,11 @@ python <harmony3_path>\bootloader\tools\btl_host.py --help
 ### Below is the syntax and an example to program a binary and send a Reset command
 
 ```
-python <harmony3_path>\bootloader\tools\btl_host.py -v -i <COM PORT> -d <Device Name> -a <address> -f <Application_binary_path>
+python <harmony3_path>/bootloader/tools/btl_host.py -v -i <COM PORT> -d <Device Name> -a <address> -f <Application_binary_path>
 ```
 
 ```
-python <harmony3_path>\bootloader\tools\btl_host.py -v -i COM18 -d same5x -a 0x2000 -f <harmony3_path>\bootloader_apps_uart\apps\uart_bootloader\test_app\firmware\sam_e54_xpro.X\dist\sam_e54_xpro\production\sam_e54_xpro.X.production.bin
+python <harmony3_path>/bootloader/tools/btl_host.py -v -i COM18 -d same5x -a 0x2000 -f <harmony3_path>/bootloader_apps_uart/apps/uart_bootloader/test_app/firmware/sam_e54_xpro.X/dist/sam_e54_xpro/production/sam_e54_xpro.X.production.bin
 ```
 
 ![btl_host_output](./images/btl_host_output.png)
@@ -60,11 +60,11 @@ python <harmony3_path>\bootloader\tools\btl_host.py -v -i COM18 -d same5x -a 0x2
 ### Below is the syntax and an example to program a binary in Inactive Bank and send a Swap Bank and Reset command
 
 ```
-python <harmony3_path>\bootloader\tools\btl_host.py -v -s -i <COM PORT> -d <Device Name> -a <Inactive Bank address> -f <Path to application binary>
+python <harmony3_path>/bootloader/tools/btl_host.py -v -s -i <COM PORT> -d <Device Name> -a <Inactive Bank address> -f <Path to application binary>
 ```
 
 ```
-python <harmony3_path>\bootloader\tools\btl_host.py -v -s -i COM18 -d same5x -a 0x82000 -f <harmony3_path>\bootloader_apps_uart\apps\uart_fail_safe_bootloader\test_app\firmware\sam_e54_xpro.X\dist\sam_e54_xpro\production\sam_e54_xpro.X.production.bin
+python <harmony3_path>/bootloader/tools/btl_host.py -v -s -i COM18 -d same5x -a 0x82000 -f <harmony3_path>/bootloader_apps_uart/apps/uart_fail_safe_bootloader/test_app/firmware/sam_e54_xpro.X/dist/sam_e54_xpro/production/sam_e54_xpro.X.production.bin
 ```
 
 ![btl_host_swap_bank_output](./images/btl_host_swap_bank_output.png)

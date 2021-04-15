@@ -38,7 +38,7 @@ To clone or download the host tools from Github,go to the [bootloader repository
 ### Below is the syntax to show help menu for the script
 
 ```
-python <harmony3_path>\bootloader\tools\btl_app_merge_bin.py --help
+python <harmony3_path>/bootloader/tools/btl_app_merge_bin.py --help
 ```
 
 ![btl_app_merge_bin_help_menu](./images/btl_app_merge_bin_help_menu.png)
@@ -46,17 +46,17 @@ python <harmony3_path>\bootloader\tools\btl_app_merge_bin.py --help
 ### Below is the syntax and an example on how to merge a bootloader binary and application binary
 
 ```
-python <harmony3_path>\bootloader\tools\btl_app_merge_bin.py -o <Offset> -b <Bootloader_binary_path> -a <Application_binary_path>
+python <harmony3_path>/bootloader/tools/btl_app_merge_bin.py -o <Offset> -b <Bootloader_binary_path> -a <Application_binary_path>
 ```
 
 ```
-python <harmony3_path>\bootloader\tools\btl_app_merge_bin.py -o 0x2000 -b <harmony3_path>\bootloader_apps_uart\apps\uart_fail_safe_bootloader\bootloader\firmware\sam_e54_xpro.X\dist\sam_e54_xpro\production\sam_e54_xpro.X.production.bin -a <harmony3_path>\bootloader_apps_uart\apps\uart_fail_safe_bootloader\test_app\firmware\sam_e54_xpro.X\dist\sam_e54_xpro\production\sam_e54_xpro.X.production.bin
+python <harmony3_path>/bootloader/tools/btl_app_merge_bin.py -o 0x2000 -b <harmony3_path>/bootloader_apps_uart/apps/uart_fail_safe_bootloader/bootloader/firmware/sam_e54_xpro.X/dist/sam_e54_xpro/production/sam_e54_xpro.X.production.bin -a <harmony3_path>/bootloader_apps_uart/apps/uart_fail_safe_bootloader/test_app/firmware/sam_e54_xpro.X/dist/sam_e54_xpro/production/sam_e54_xpro.X.production.bin
 ```
 
 ![btl_app_merge_bin_output](./images/btl_app_merge_bin_output.png)
 
 ```
-python <harmony3_path>\bootloader\tools\btl_host.py -v -s -i COM18 -d same5x -a 0x80000 -f <Path_to_merged_binary>\btl_app_merged.bin
+python <harmony3_path>/bootloader/tools/btl_host.py -v -s -i COM18 -d same5x -a 0x80000 -f <Path_to_merged_binary>/btl_app_merged.bin
 ```
 
 ![btl_host_swap_bank_output](./images/btl_host_swap_bank_output.png)

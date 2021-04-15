@@ -46,7 +46,7 @@ To build the application, refer to the following table and open the project usin
 
 5. Run the **btl_host.py** from command prompt to program the application binary
 
-        python <harmony3_path>\bootloader\tools\btl_host.py -v -i <COM PORT> -d samd2x -a 0x800 -f <harmony3_path>\bootloader_apps_uart\apps\uart_bootloader\test_app\firmware\sam_d21_xpro.X\dist\sam_d21_xpro\production\sam_d21_xpro.X.production.bin
+        python <harmony3_path>/bootloader/tools/btl_host.py -v -i <COM PORT> -d samd2x -a 0x800 -f <harmony3_path>/bootloader_apps_uart/apps/uart_bootloader/test_app/firmware/sam_d21_xpro.X/dist/sam_d21_xpro/production/sam_d21_xpro.X.production.bin
 
 6. Following snapshot shows output of successfully programming the test application
     - **Rebooting** and **Reboot Done** messages in below output signifies that bootloading is successful
