@@ -42,6 +42,7 @@ The following table provides links to documentation on how to build and run UART
 
 | Development Kit |
 |:---------|
+|[PIC32CM MC00 Curiosity Pro Evaluation Kit](docs/readme_pic32cm_mc00_curiosity_pro.md) |
 |[PIC32MK GP Development Kit](docs/readme_pic32mk_gp_db.md) |
 |[PIC32MK MCJ Curiosity Pro Development Board](docs/readme_pic32mk_mcj_curiosity_pro.md) |
 |[PIC32MK MCM Curiosity Pro Development Board](docs/readme_pic32mk_mcm_curiosity_pro.md) |
@@ -49,6 +50,7 @@ The following table provides links to documentation on how to build and run UART
 |[PIC32MX Curiosity Development Board](docs/readme_pic32mx470_curiosity.md) |
 |[PIC32MZ Embedded Graphics with Stacked DRAM (DA) Starter Kit (Crypto)](docs/readme_pic32mz_das_sk.md) |
 |[PIC32MZ Embedded Connectivity with FPU (EF) Starter Kit](docs/readme_pic32mz_ef_sk.md) |
+|[PIC32 WFI32E Curiosity Board](docs/readme_pic32mz_w1_curiosity.md) |
 |[SAM C21N Xplained Pro Evaluation Kit](docs/readme_sam_c21n_xpro.md) |
 |[SAM D11 Xplained Pro Evaluation Kit](docs/readme_sam_d11_xpro.md) |
 |[SAM D20 Xplained Pro Evaluation Kit](docs/readme_sam_d20_xpro.md) |
