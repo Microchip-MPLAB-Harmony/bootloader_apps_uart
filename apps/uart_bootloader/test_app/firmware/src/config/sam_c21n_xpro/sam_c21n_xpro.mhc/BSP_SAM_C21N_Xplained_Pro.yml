@@ -1,0 +1,6 @@
+format_version: v1.0
+type: UniqueComponent
+attributes: {id: BSP_SAM_C21N_Xplained_Pro, bsp: 'true'}
+children:
+- type: ElementPosition
+  attributes: {x: '16', y: '83', id: BSP_SAM_C21N_Xplained_Pro}
