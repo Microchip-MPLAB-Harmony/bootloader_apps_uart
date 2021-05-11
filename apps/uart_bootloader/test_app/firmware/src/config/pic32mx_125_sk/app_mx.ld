@@ -1,8 +1,8 @@
 /*--------------------------------------------------------------------------
  * MPLAB XC Compiler -  PIC32MX570F512L linker script
- * Build date : Jul 16 2019
+ * Build date : Jan 26 2021
  * 
- * Copyright (c) 2019, Microchip Technology Inc. and its subsidiaries ("Microchip")
+ * Copyright (c) 2021, Microchip Technology Inc. and its subsidiaries ("Microchip")
  * All rights reserved.
  * 
  * This software is developed by Microchip Technology Inc. and its
@@ -17,7 +17,8 @@
  * 2.      Redistributions in binary form must reproduce the above 
  *         copyright notice, this list of conditions and the following 
  *         disclaimer in the documentation and/or other materials provided 
- *         with the distribution.
+ *         with the distribution. Publication is not required when this file 
+ *         is used in an embedded application.
  * 3.      Microchip's name may not be used to endorse or promote products
  *         derived from this software without specific prior written 
  *         permission.
@@ -65,12 +66,11 @@ PROVIDE(_min_stack_size = 0x400) ;
  * The SFR definitions are now provided in a processor-specific *.S
  * assembly source file rather than the processor.o file. Use the new
  * .S file rather than this processor.o file for new projects. MPLAB XC32
- * v2.10 and later will automatically link the new .S file. When using * this linker script with an older MPLAB XC32 version, remove the
- * OPTIONAL() line below and add the pic32mx/lib/proc/<device>.S file
- * to your project.
+ * v2.10 and later will automatically link the new .S file.
  *************************************************************************/
+#if defined(__XC32_VERSION__) && (__XC32_VERSION__ < 2100)
 OPTIONAL("processor.o")
-
+#endif
 /*************************************************************************
  * Processor-specific legacy peripheral libraries are optional.
  * These legacy plibs are available as a separate download from
@@ -99,7 +99,7 @@ PROVIDE(_ebase_address = 0x9D002000);
  * _DBG_CODE_SIZE                 -- In-circuit Debug Executive size
  * _GEN_EXCPT_ADDR                -- General Exception Vector
  *************************************************************************/
-_RESET_ADDR                    = 0x9D000000 + 0x1000; /* Size of Bootloader is 0x1000 */
+_RESET_ADDR                    = 0xBD000000 + 0x1000; /* Size of Bootloader is 0x1000 */
 _GEN_EXCPT_ADDR                = _ebase_address + 0x180;
 
 /*************************************************************************
@@ -120,7 +120,7 @@ MEMORY
 {
   /* Size of Bootloader is 0x1000 */
   kseg0_program_mem     (rx)  : ORIGIN = 0x9D002000, LENGTH = 0x80000 - 0x1000 - 0x1000
-  kseg1_boot_mem              : ORIGIN = 0x9D001000, LENGTH = 0x490
+  kseg1_boot_mem              : ORIGIN = 0xBD001000, LENGTH = 0x490
 
   /* Bootloader Trigger Pattern 16 Bytes */
   kseg1_data_mem       (w!x)  : ORIGIN = 0xA0000000 + 16, LENGTH = 0x10000 - 16
