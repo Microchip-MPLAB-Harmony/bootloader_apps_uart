@@ -187,9 +187,12 @@ uint16_t NVMCTRL_ErrorGet( void )
     uint16_t temp;
     /* Store previous and current error flags */
     temp = NVMCTRL_REGS->NVMCTRL_INTFLAG;
+
     nvm_error |= temp;
+
     /* Clear NVMCTRL INTFLAG register */
-    NVMCTRL_REGS->NVMCTRL_INTFLAG = NVMCTRL_INTFLAG_Msk;
+    NVMCTRL_REGS->NVMCTRL_INTFLAG = nvm_error;
+
     return nvm_error;
 }
 
