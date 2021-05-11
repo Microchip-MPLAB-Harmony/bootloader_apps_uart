@@ -42,19 +42,21 @@
 #include <stdint.h>
 #include <stdbool.h>
 
+
 #define BTL_TRIGGER_RAM_START   0x20000000
 
 #define BTL_TRIGGER_LEN         16
+
 
 
 // *****************************************************************************
 /* Function:
     bool bootloader_Trigger( void );
 
- Summary:
+Summary:
     Checks if Bootloader has to be executed at startup.
 
- Description:
+Description:
     This function can be used to check for a External HW trigger or Internal firmware
     trigger to execute bootloader at startup.
 
@@ -78,17 +80,17 @@
             sram[3] = 0x5048434D;
         </code>
 
- Precondition:
+Precondition:
     PORT/PIO Initialize must have been called.
 
- Parameters:
+Parameters:
     None.
 
- Returns:
+Returns:
     - True  : If any of trigger is detected.
     - False : If no trigger is detected..
 
- Example:
+Example:
     <code>
 
         NVMCTRL_Initialize();
@@ -110,10 +112,10 @@ bool bootloader_Trigger( void );
 /* Function:
     void run_Application( void );
 
- Summary:
+Summary:
     Runs the programmed application at startup.
 
- Description:
+Description:
     This function can be used to run programmed application though bootloader at startup.
 
     If the first 4Bytes of Application Memory is not 0xFFFFFFFF then it jumps to
@@ -123,16 +125,16 @@ bool bootloader_Trigger( void );
     If the first 4Bytes of Application Memory is 0xFFFFFFFF then it returns from function
     and executes bootloader for accepting a new application firmware.
 
- Precondition:
+Precondition:
     bootloader_Trigger() must be called to check for bootloader triggers at startup.
 
- Parameters:
+Parameters:
     None.
 
- Returns:
+Returns:
     None
 
- Example:
+Example:
     <code>
 
         NVMCTRL_Initialize();
