@@ -1,0 +1,21 @@
+format_version: v1.0
+type: UniqueComponent
+attributes: {id: core_timer}
+children:
+- type: Attachments
+  children:
+  - type: DirectCapability
+    attributes: {id: CORE_TIMER_TMR}
+    children:
+    - type: Attributes
+      children:
+      - type: String
+        attributes: {id: targetComponentID}
+        children:
+        - {type: Value, value: uart_bootloader}
+      - type: String
+        attributes: {id: targetAttachmentID}
+        children:
+        - {type: Value, value: btl_TIMER_dependency}
+- type: ElementPosition
+  attributes: {x: '24', y: '173', id: core_timer}
