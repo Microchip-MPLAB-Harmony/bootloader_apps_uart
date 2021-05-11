@@ -1,8 +1,8 @@
 /*--------------------------------------------------------------------------
  * MPLAB XC Compiler -  PIC32MZDA linker script
- * Build date : Jul 16 2019
+ * Build date : Jan 26 2021
  * 
- * Copyright (c) 2019, Microchip Technology Inc. and its subsidiaries ("Microchip")
+ * Copyright (c) 2021, Microchip Technology Inc. and its subsidiaries ("Microchip")
  * All rights reserved.
  * 
  * This software is developed by Microchip Technology Inc. and its
@@ -17,7 +17,8 @@
  * 2.      Redistributions in binary form must reproduce the above 
  *         copyright notice, this list of conditions and the following 
  *         disclaimer in the documentation and/or other materials provided 
- *         with the distribution.
+ *         with the distribution. Publication is not required when this file 
+ *         is used in an embedded application.
  * 3.      Microchip's name may not be used to endorse or promote products
  *         derived from this software without specific prior written 
  *         permission.
@@ -61,12 +62,11 @@ PROVIDE(_min_stack_size = 0x400) ;
  * The SFR definitions are now provided in a processor-specific *.S
  * assembly source file rather than the processor.o file. Use the new
  * .S file rather than this processor.o file for new projects. MPLAB XC32
- * v2.10 and later will automatically link the new .S file. When using * this linker script with an older MPLAB XC32 version, remove the
- * OPTIONAL() line below and add the pic32mx/lib/proc/<device>.S file
- * to your project.
+ * v2.10 and later will automatically link the new .S file.
  *************************************************************************/
+#if defined(__XC32_VERSION__) && (__XC32_VERSION__ < 2100)
 OPTIONAL("processor.o")
-
+#endif
 
 /*************************************************************************
  * Vector-offset initialization
@@ -80,7 +80,12 @@ OPTIONAL("vector_offset_init.o")
  *   xc32-gcc src.c -Wl,--defsym=_ebase_address=0x9D001000
  *************************************************************************/
 PROVIDE(_vector_spacing = 0x0001);
-PROVIDE(_ebase_address = 0x9D001000);
+PROVIDE(_ebase_address = 0x9D000000);
+
+/* Place the vector table and other exceptions after the device reset and
+ * cache init code.
+ */
+PROVIDE(_ebase_vector_offsets = 0x1000);
 
 /*************************************************************************
  * Memory Address Equates
@@ -91,10 +96,10 @@ PROVIDE(_ebase_address = 0x9D001000);
  * _CACHE_ERR_EXCPT_ADDR          -- Cache-error Exception Vector
  * _GEN_EXCPT_ADDR                -- General Exception Vector
  *************************************************************************/
-_RESET_ADDR                    = 0x9D000000;
-_SIMPLE_TLB_REFILL_EXCPT_ADDR  = _ebase_address + 0;
-_CACHE_ERR_EXCPT_ADDR          = _ebase_address + 0x100;
-_GEN_EXCPT_ADDR                = _ebase_address + 0x180;
+_RESET_ADDR                    = 0xBD000000;
+_SIMPLE_TLB_REFILL_EXCPT_ADDR  = _ebase_address + _ebase_vector_offsets + 0;
+_CACHE_ERR_EXCPT_ADDR          = _ebase_address + _ebase_vector_offsets + 0x100;
+_GEN_EXCPT_ADDR                = _ebase_address + _ebase_vector_offsets + 0x180;
 
 /*************************************************************************
  * Memory Regions
@@ -116,11 +121,12 @@ MEMORY
      * update and run.
      */
     kseg0_program_mem  (rx) : ORIGIN = 0x9D001000, LENGTH = 0x100000 - 0x1000 - 2048
-    kseg1_boot_mem          : ORIGIN = 0x9D000000, LENGTH = 0x480
-    kseg1_boot_mem_4B0      : ORIGIN = 0x9D0004B0, LENGTH = 0x1000 - 0x4B0
+    kseg1_boot_mem          : ORIGIN = 0xBD000000, LENGTH = 0x480
+    kseg1_boot_mem_4B0      : ORIGIN = 0xBD0004B0, LENGTH = 0x1000 - 0x4B0
 
     /* Reserve 16 Bytes to Store Bootloader Trigger Pattern */
     kseg0_data_mem       (w!x)  : ORIGIN = 0x80000000 + 16, LENGTH = 0xA0000 - 16
+
     sfrs                        : ORIGIN = 0xBF800000, LENGTH = 0x100000
     kseg2_ebi_data_mem          : ORIGIN = 0xC0000000, LENGTH = 0x4000000
     kseg2_sqi_data_mem          : ORIGIN = 0xD0000000, LENGTH = 0x4000000
@@ -163,7 +169,7 @@ SECTIONS
   } > kseg0_program_mem
 
   /* Interrupt vector table with vector offsets */
-  .vectors _ebase_address + 0x200 :
+  .vectors _ebase_address + _ebase_vector_offsets + 0x200 :
   {
     /*  Symbol __vector_offset_n points to .vector_n if it exists, 
      *  otherwise points to the default handler. The
@@ -1069,6 +1075,12 @@ SECTIONS
     *(.gcc_except_table .gcc_except_table.*)
   } >kseg0_program_mem
     . = ALIGN(4) ;
+  .dbg_data (NOLOAD) :
+  {
+    . += (DEFINED (_DEBUGGER) ? 0x200 : 0x0);
+    /* Additional data memory required for DSPr2 registers */
+    . += (DEFINED (_DEBUGGER) ? 0x80 : 0x0);
+  } >kseg0_data_mem
   .jcr   :
   {
     KEEP (*(.jcr))
@@ -1418,6 +1430,45 @@ __pic32_tlb_7_entrylo0 = ((__pic32_init_ebi_kseg3_physical_base_addr + 0x2000000
 /*  ENTRYLO1 = RI<31> XI<30> 0<29:26> PFN<25:6> C<5:3> D<2> V<1> G<0> */
 __pic32_tlb_7_entrylo1 = __pic32_tlb_7_entrylo0 | 0x00040000 ;
 
-
-
+/*
+ *  The default pic32_init_tlb_ebi_sqi.o module, which is
+ *  called by the default C startup code (crt0_<isa>.o),
+ *  uses the table created in the .tlb_init_values output
+ *  section to initialize the Translation Lookaside buffer (TLB)
+ *  of the Memory Management Unit (MMU).
+ */
+SECTIONS
+{
+  .tlb_init_values :
+  {
+    . = ALIGN(4) ;
+    __pic32_tlb_init_values_begin = ABSOLUTE(.);
+    LONG(__pic32_tlb_0_entryhi) ;
+    LONG(__pic32_tlb_0_entrylo0) ;
+    LONG(__pic32_tlb_0_entrylo1) ;
+    LONG(__pic32_tlb_1_entryhi) ;
+    LONG(__pic32_tlb_1_entrylo0) ;
+    LONG(__pic32_tlb_1_entrylo1) ;
+    LONG(__pic32_tlb_2_entryhi) ;
+    LONG(__pic32_tlb_2_entrylo0) ;
+    LONG(__pic32_tlb_2_entrylo1) ;
+    LONG(__pic32_tlb_3_entryhi) ;
+    LONG(__pic32_tlb_3_entrylo0) ;
+    LONG(__pic32_tlb_3_entrylo1) ;
+    LONG(__pic32_tlb_4_entryhi) ;
+    LONG(__pic32_tlb_4_entrylo0) ;
+    LONG(__pic32_tlb_4_entrylo1) ;
+    LONG(__pic32_tlb_5_entryhi) ;
+    LONG(__pic32_tlb_5_entrylo0) ;
+    LONG(__pic32_tlb_5_entrylo1) ;
+    LONG(__pic32_tlb_6_entryhi) ;
+    LONG(__pic32_tlb_6_entrylo0) ;
+    LONG(__pic32_tlb_6_entrylo1) ;
+    LONG(__pic32_tlb_7_entryhi) ;
+    LONG(__pic32_tlb_7_entrylo0) ;
+    LONG(__pic32_tlb_7_entrylo1) ;
+    __pic32_tlb_init_values_end = ABSOLUTE(.);
+    __pic32_tlb_init_values_count = 8 ;
+  } > kseg1_boot_mem_4B0
+}
 
