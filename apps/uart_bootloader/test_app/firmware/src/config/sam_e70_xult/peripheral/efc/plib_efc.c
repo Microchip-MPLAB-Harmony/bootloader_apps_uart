@@ -43,6 +43,7 @@ It allows user to Program, Erase and lock the on-chip FLASH memory.
 #include <string.h>
 #include "device.h"
 #include "plib_efc.h"
+#include "interrupts.h"
 
 static uint32_t status = 0;
 
@@ -79,7 +80,7 @@ bool EFC_PageWrite( uint32_t *data, uint32_t address )
     /*Calculate the Page number to be passed for FARG register*/
     page_number = (address - IFLASH_ADDR) / IFLASH_PAGE_SIZE;
 
-    for (int i = 0; i < IFLASH_PAGE_SIZE; i += 4)
+    for (uint32_t i = 0; i < IFLASH_PAGE_SIZE; i += 4)
     {
     *((uint32_t *)( IFLASH_ADDR + ( page_number * IFLASH_PAGE_SIZE ) + i )) =    *(( data++ ));
     }
@@ -103,7 +104,7 @@ bool EFC_QuadWordWrite( uint32_t *data, uint32_t address )
     /*Calculate the Page number to be passed for FARG register*/
     page_number = (address - IFLASH_ADDR) / IFLASH_PAGE_SIZE;
 
-    for (int i = 0; i < 16; i += 4)
+    for (uint32_t i = 0; i < 16; i += 4)
     {
     *((uint32_t *)(( address ) + i )) =    *((uint32_t *)( data++ ));
     }
