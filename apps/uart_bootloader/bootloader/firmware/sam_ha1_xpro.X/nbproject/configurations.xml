@@ -6,44 +6,46 @@
                    projectFiles="true">
       <logicalFolder name="f1" displayName="config" projectFiles="true">
         <logicalFolder name="f1" displayName="sam_ha1_xpro" projectFiles="true">
-          <logicalFolder name="f2" displayName="bootloader" projectFiles="true">
+          <logicalFolder name="f1" displayName="bootloader" projectFiles="true">
             <itemPath>../src/config/sam_ha1_xpro/bootloader/bootloader.h</itemPath>
           </logicalFolder>
-          <logicalFolder name="f1" displayName="peripheral" projectFiles="true">
-            <logicalFolder name="f5" displayName="clock" projectFiles="true">
+          <logicalFolder name="f2" displayName="peripheral" projectFiles="true">
+            <logicalFolder name="f1" displayName="clock" projectFiles="true">
               <itemPath>../src/config/sam_ha1_xpro/peripheral/clock/plib_clock.h</itemPath>
             </logicalFolder>
-            <logicalFolder name="f9" displayName="dsu" projectFiles="true">
+            <logicalFolder name="f2" displayName="dsu" projectFiles="true">
               <itemPath>../src/config/sam_ha1_xpro/peripheral/dsu/plib_dsu.h</itemPath>
             </logicalFolder>
             <logicalFolder name="f3" displayName="evsys" projectFiles="true">
               <itemPath>../src/config/sam_ha1_xpro/peripheral/evsys/plib_evsys.h</itemPath>
             </logicalFolder>
-            <logicalFolder name="f6" displayName="nvic" projectFiles="true">
+            <logicalFolder name="f4" displayName="nvic" projectFiles="true">
               <itemPath>../src/config/sam_ha1_xpro/peripheral/nvic/plib_nvic.h</itemPath>
             </logicalFolder>
-            <logicalFolder name="f1" displayName="nvmctrl" projectFiles="true">
+            <logicalFolder name="f5" displayName="nvmctrl" projectFiles="true">
               <itemPath>../src/config/sam_ha1_xpro/peripheral/nvmctrl/plib_nvmctrl.h</itemPath>
             </logicalFolder>
-            <logicalFolder name="f8" displayName="pac" projectFiles="true">
+            <logicalFolder name="f6" displayName="pac" projectFiles="true">
               <itemPath>../src/config/sam_ha1_xpro/peripheral/pac/plib_pac.h</itemPath>
             </logicalFolder>
-            <logicalFolder name="f4" displayName="port" projectFiles="true">
+            <logicalFolder name="f7" displayName="port" projectFiles="true">
               <itemPath>../src/config/sam_ha1_xpro/peripheral/port/plib_port.h</itemPath>
             </logicalFolder>
-            <logicalFolder name="f2" displayName="sercom" projectFiles="true">
+            <logicalFolder name="f8" displayName="sercom" projectFiles="true">
               <logicalFolder name="f1" displayName="usart" projectFiles="true">
                 <itemPath>../src/config/sam_ha1_xpro/peripheral/sercom/usart/plib_sercom1_usart.h</itemPath>
                 <itemPath>../src/config/sam_ha1_xpro/peripheral/sercom/usart/plib_sercom_usart_common.h</itemPath>
               </logicalFolder>
             </logicalFolder>
-            <logicalFolder name="f7" displayName="systick" projectFiles="true">
+            <logicalFolder name="f9" displayName="systick" projectFiles="true">
               <itemPath>../src/config/sam_ha1_xpro/peripheral/systick/plib_systick.h</itemPath>
             </logicalFolder>
           </logicalFolder>
           <itemPath>../src/config/sam_ha1_xpro/device_cache.h</itemPath>
           <itemPath>../src/config/sam_ha1_xpro/toolchain_specifics.h</itemPath>
           <itemPath>../src/config/sam_ha1_xpro/definitions.h</itemPath>
+          <itemPath>../src/config/sam_ha1_xpro/device.h</itemPath>
+          <itemPath>../src/config/sam_ha1_xpro/device_vectors.h</itemPath>
         </logicalFolder>
       </logicalFolder>
       <logicalFolder name="f2" displayName="packs" projectFiles="true">
@@ -71,11 +73,46 @@
             <itemPath>../src/packs/ATSAMHA1G16AB_DFP/component/tcc.h</itemPath>
             <itemPath>../src/packs/ATSAMHA1G16AB_DFP/component/wdt.h</itemPath>
           </logicalFolder>
+          <logicalFolder name="f3" displayName="instance" projectFiles="true">
+            <itemPath>../src/packs/ATSAMHA1G16AB_DFP/instance/ac.h</itemPath>
+            <itemPath>../src/packs/ATSAMHA1G16AB_DFP/instance/adc.h</itemPath>
+            <itemPath>../src/packs/ATSAMHA1G16AB_DFP/instance/dac.h</itemPath>
+            <itemPath>../src/packs/ATSAMHA1G16AB_DFP/instance/dmac.h</itemPath>
+            <itemPath>../src/packs/ATSAMHA1G16AB_DFP/instance/dsu.h</itemPath>
+            <itemPath>../src/packs/ATSAMHA1G16AB_DFP/instance/eic.h</itemPath>
+            <itemPath>../src/packs/ATSAMHA1G16AB_DFP/instance/evsys.h</itemPath>
+            <itemPath>../src/packs/ATSAMHA1G16AB_DFP/instance/gclk.h</itemPath>
+            <itemPath>../src/packs/ATSAMHA1G16AB_DFP/instance/mtb.h</itemPath>
+            <itemPath>../src/packs/ATSAMHA1G16AB_DFP/instance/nvmctrl.h</itemPath>
+            <itemPath>../src/packs/ATSAMHA1G16AB_DFP/instance/pac0.h</itemPath>
+            <itemPath>../src/packs/ATSAMHA1G16AB_DFP/instance/pac1.h</itemPath>
+            <itemPath>../src/packs/ATSAMHA1G16AB_DFP/instance/pac2.h</itemPath>
+            <itemPath>../src/packs/ATSAMHA1G16AB_DFP/instance/pm.h</itemPath>
+            <itemPath>../src/packs/ATSAMHA1G16AB_DFP/instance/port.h</itemPath>
+            <itemPath>../src/packs/ATSAMHA1G16AB_DFP/instance/ptc.h</itemPath>
+            <itemPath>../src/packs/ATSAMHA1G16AB_DFP/instance/rtc.h</itemPath>
+            <itemPath>../src/packs/ATSAMHA1G16AB_DFP/instance/sbmatrix.h</itemPath>
+            <itemPath>../src/packs/ATSAMHA1G16AB_DFP/instance/sercom0.h</itemPath>
+            <itemPath>../src/packs/ATSAMHA1G16AB_DFP/instance/sercom1.h</itemPath>
+            <itemPath>../src/packs/ATSAMHA1G16AB_DFP/instance/sercom2.h</itemPath>
+            <itemPath>../src/packs/ATSAMHA1G16AB_DFP/instance/sercom3.h</itemPath>
+            <itemPath>../src/packs/ATSAMHA1G16AB_DFP/instance/sercom4.h</itemPath>
+            <itemPath>../src/packs/ATSAMHA1G16AB_DFP/instance/sercom5.h</itemPath>
+            <itemPath>../src/packs/ATSAMHA1G16AB_DFP/instance/sysctrl.h</itemPath>
+            <itemPath>../src/packs/ATSAMHA1G16AB_DFP/instance/tc3.h</itemPath>
+            <itemPath>../src/packs/ATSAMHA1G16AB_DFP/instance/tc4.h</itemPath>
+            <itemPath>../src/packs/ATSAMHA1G16AB_DFP/instance/tc5.h</itemPath>
+            <itemPath>../src/packs/ATSAMHA1G16AB_DFP/instance/tc6.h</itemPath>
+            <itemPath>../src/packs/ATSAMHA1G16AB_DFP/instance/tc7.h</itemPath>
+            <itemPath>../src/packs/ATSAMHA1G16AB_DFP/instance/tcc0.h</itemPath>
+            <itemPath>../src/packs/ATSAMHA1G16AB_DFP/instance/tcc1.h</itemPath>
+            <itemPath>../src/packs/ATSAMHA1G16AB_DFP/instance/tcc2.h</itemPath>
+            <itemPath>../src/packs/ATSAMHA1G16AB_DFP/instance/wdt.h</itemPath>
+          </logicalFolder>
           <logicalFolder name="f2" displayName="pio" projectFiles="true">
             <itemPath>../src/packs/ATSAMHA1G16AB_DFP/pio/samha1g16ab.h</itemPath>
           </logicalFolder>
-          <itemPath>../src/packs/ATSAMHA1G16AB_DFP/device.h</itemPath>
-          <itemPath>../src/packs/ATSAMHA1G16AB_DFP/atsamha1g16ab.h</itemPath>
+          <itemPath>../src/packs/ATSAMHA1G16AB_DFP/samha1g16ab.h</itemPath>
         </logicalFolder>
         <logicalFolder name="f2" displayName="CMSIS" projectFiles="true">
           <logicalFolder name="f1" displayName="CMSIS" projectFiles="true">
@@ -90,11 +127,18 @@
                 <itemPath>../src/packs/CMSIS/CMSIS/Core/Include/cmsis_armclang_ltm.h</itemPath>
                 <itemPath>../src/packs/CMSIS/CMSIS/Core/Include/core_cm0plus.h</itemPath>
                 <itemPath>../src/packs/CMSIS/CMSIS/Core/Include/mpu_armv7.h</itemPath>
+                <itemPath>../src/packs/CMSIS/CMSIS/Core/Include/cachel1_armv7.h</itemPath>
               </logicalFolder>
             </logicalFolder>
           </logicalFolder>
         </logicalFolder>
       </logicalFolder>
+    </logicalFolder>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="true">
+      <itemPath>Makefile</itemPath>
+      <itemPath>../src/config/sam_ha1_xpro/harmony-manifest-success.yml</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -106,37 +150,37 @@
                    projectFiles="true">
       <logicalFolder name="f1" displayName="config" projectFiles="true">
         <logicalFolder name="f1" displayName="sam_ha1_xpro" projectFiles="true">
-          <logicalFolder name="f2" displayName="bootloader" projectFiles="true">
+          <logicalFolder name="f1" displayName="bootloader" projectFiles="true">
             <itemPath>../src/config/sam_ha1_xpro/bootloader/bootloader.c</itemPath>
           </logicalFolder>
-          <logicalFolder name="f1" displayName="peripheral" projectFiles="true">
-            <logicalFolder name="f5" displayName="clock" projectFiles="true">
+          <logicalFolder name="f2" displayName="peripheral" projectFiles="true">
+            <logicalFolder name="f1" displayName="clock" projectFiles="true">
               <itemPath>../src/config/sam_ha1_xpro/peripheral/clock/plib_clock.c</itemPath>
             </logicalFolder>
-            <logicalFolder name="f9" displayName="dsu" projectFiles="true">
+            <logicalFolder name="f2" displayName="dsu" projectFiles="true">
               <itemPath>../src/config/sam_ha1_xpro/peripheral/dsu/plib_dsu.c</itemPath>
             </logicalFolder>
             <logicalFolder name="f3" displayName="evsys" projectFiles="true">
               <itemPath>../src/config/sam_ha1_xpro/peripheral/evsys/plib_evsys.c</itemPath>
             </logicalFolder>
-            <logicalFolder name="f6" displayName="nvic" projectFiles="true">
+            <logicalFolder name="f4" displayName="nvic" projectFiles="true">
               <itemPath>../src/config/sam_ha1_xpro/peripheral/nvic/plib_nvic.c</itemPath>
             </logicalFolder>
-            <logicalFolder name="f1" displayName="nvmctrl" projectFiles="true">
+            <logicalFolder name="f5" displayName="nvmctrl" projectFiles="true">
               <itemPath>../src/config/sam_ha1_xpro/peripheral/nvmctrl/plib_nvmctrl.c</itemPath>
             </logicalFolder>
-            <logicalFolder name="f8" displayName="pac" projectFiles="true">
+            <logicalFolder name="f6" displayName="pac" projectFiles="true">
               <itemPath>../src/config/sam_ha1_xpro/peripheral/pac/plib_pac.c</itemPath>
             </logicalFolder>
-            <logicalFolder name="f4" displayName="port" projectFiles="true">
+            <logicalFolder name="f7" displayName="port" projectFiles="true">
               <itemPath>../src/config/sam_ha1_xpro/peripheral/port/plib_port.c</itemPath>
             </logicalFolder>
-            <logicalFolder name="f2" displayName="sercom" projectFiles="true">
+            <logicalFolder name="f8" displayName="sercom" projectFiles="true">
               <logicalFolder name="f1" displayName="usart" projectFiles="true">
                 <itemPath>../src/config/sam_ha1_xpro/peripheral/sercom/usart/plib_sercom1_usart.c</itemPath>
               </logicalFolder>
             </logicalFolder>
-            <logicalFolder name="f7" displayName="systick" projectFiles="true">
+            <logicalFolder name="f9" displayName="systick" projectFiles="true">
               <itemPath>../src/config/sam_ha1_xpro/peripheral/systick/plib_systick.c</itemPath>
             </logicalFolder>
           </logicalFolder>
@@ -145,13 +189,6 @@
         </logicalFolder>
       </logicalFolder>
       <itemPath>../src/main.c</itemPath>
-    </logicalFolder>
-    <logicalFolder name="ExternalFiles"
-                   displayName="Important Files"
-                   projectFiles="false">
-      <itemPath>Makefile</itemPath>
-      <itemPath>../src/config/sam_ha1_xpro/harmony.prj</itemPath>
-      <itemPath>../../../../../../mhc/../bootloader_apps_uart/apps/uart_bootloader/bootloader/firmware/src/config/sam_ha1_xpro/sam_ha1_xpro.xml</itemPath>
     </logicalFolder>
   </logicalFolder>
   <sourceRootList>
@@ -167,12 +204,12 @@
         <targetPluginBoard></targetPluginBoard>
         <platformTool>ICD4Tool</platformTool>
         <languageToolchain>XC32</languageToolchain>
-        <languageToolchainVersion>2.41</languageToolchainVersion>
+        <languageToolchainVersion>3.00</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <packs>
         <pack name="CMSIS" vendor="ARM" version="5.4.0"/>
-        <pack name="SAMHA1_DFP" vendor="Microchip" version="2.0.42"/>
+        <pack name="SAMHA1_DFP" vendor="Microchip" version="2.1.64"/>
       </packs>
       <ScriptingSettings>
       </ScriptingSettings>
@@ -193,6 +230,7 @@
       </compileType>
       <makeCustomizationType>
         <makeCustomizationPreStepEnabled>false</makeCustomizationPreStepEnabled>
+        <makeUseCleanTarget>false</makeUseCleanTarget>
         <makeCustomizationPreStep></makeCustomizationPreStep>
         <makeCustomizationPostStepEnabled>false</makeCustomizationPostStepEnabled>
         <makeCustomizationPostStep></makeCustomizationPostStep>
@@ -233,18 +271,19 @@
         <property key="enable-unroll-loops" value="false"/>
         <property key="exclude-floating-point" value="false"/>
         <property key="extra-include-directories"
-                  value="../src;../src/config/sam_ha1_xpro;../src/packs/ATSAMHA1G16AB_DFP;../src/packs/CMSIS/CMSIS/Core/Include;../src/packs/CMSIS/"/>
+                  value="../src;../src/config/sam_ha1_xpro;../src/packs/ATSAMHA1G16AB_DFP;../src/packs/CMSIS/;../src/packs/CMSIS/CMSIS/Core/Include"/>
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="true"/>
         <property key="make-warnings-into-errors" value="true"/>
-        <property key="optimization-level" value="-O1"/>
+        <property key="optimization-level" value="-O2"/>
         <property key="place-data-into-section" value="false"/>
         <property key="post-instruction-scheduling" value="default"/>
         <property key="pre-instruction-scheduling" value="default"/>
         <property key="preprocessor-macros" value=""/>
         <property key="strict-ansi" value="false"/>
         <property key="support-ansi" value="false"/>
+        <property key="tentative-definitions" value="-fno-common"/>
         <property key="toplevel-reordering" value=""/>
         <property key="unaligned-access" value=""/>
         <property key="use-cci" value="false"/>
@@ -276,6 +315,7 @@
       </C32-AS>
       <C32-CO>
         <property key="coverage-enable" value=""/>
+        <property key="stack-guidance" value="false"/>
       </C32-CO>
       <C32-LD>
         <property key="additional-options-use-response-files" value="false"/>
@@ -328,7 +368,8 @@
         <property key="enable-unroll-loops" value="false"/>
         <property key="exceptions" value="true"/>
         <property key="exclude-floating-point" value="false"/>
-        <property key="extra-include-directories" value=""/>
+        <property key="extra-include-directories"
+                  value="../src;../src/config/sam_ha1_xpro;../src/packs/ATSAMHA1G16AB_DFP;../src/packs/CMSIS/;../src/packs/CMSIS/CMSIS/Core/Include"/>
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="true"/>
@@ -356,6 +397,7 @@
         <property key="omit-pack-options" value="1"/>
         <property key="relaxed-math" value="false"/>
         <property key="save-temps" value="false"/>
+        <property key="stack-smashing" value=""/>
         <property key="wpo-lto" value="false"/>
       </C32Global>
       <EdbgTool>
@@ -409,6 +451,7 @@
         <property key="ToolFirmwareToolPack"
                   value="Press to select which tool pack to use"/>
         <property key="communication.interface.jtag" value="2wire"/>
+        <property key="debugoptions.simultaneous.debug" value="false"/>
         <property key="debugoptions.useswbreakpoints" value="false"/>
         <property key="hwtoolclock.frcindebug" value="false"/>
         <property key="memories.aux" value="false"/>
@@ -937,6 +980,59 @@
                   value=""/>
         <property key="warningmessagebreakoptions.warningmessages" value="holdstate"/>
       </Simulator>
+      <Tool>
+        <property key="AutoSelectMemRanges" value="auto"/>
+        <property key="SecureSegment.SegmentProgramming" value="FullChipProgramming"/>
+        <property key="ToolFirmwareFilePath"
+                  value="Press to browse for a specific firmware version"/>
+        <property key="ToolFirmwareOption.UpdateOptions"
+                  value="ToolFirmwareOption.UseLatest"/>
+        <property key="ToolFirmwareToolPack"
+                  value="Press to select which tool pack to use"/>
+        <property key="communication.interface.jtag" value="2wire"/>
+        <property key="debugoptions.simultaneous.debug" value="false"/>
+        <property key="debugoptions.useswbreakpoints" value="false"/>
+        <property key="hwtoolclock.frcindebug" value="false"/>
+        <property key="memories.aux" value="false"/>
+        <property key="memories.bootflash" value="true"/>
+        <property key="memories.configurationmemory" value="true"/>
+        <property key="memories.configurationmemory2" value="true"/>
+        <property key="memories.dataflash" value="true"/>
+        <property key="memories.eeprom" value="true"/>
+        <property key="memories.exclude.configurationmemory" value="true"/>
+        <property key="memories.flashdata" value="true"/>
+        <property key="memories.id" value="true"/>
+        <property key="memories.instruction.ram.ranges"
+                  value="${memories.instruction.ram.ranges}"/>
+        <property key="memories.programmemory" value="true"/>
+        <property key="memories.programmemory.ranges" value="0-ffff"/>
+        <property key="poweroptions.powerenable" value="false"/>
+        <property key="programoptions.donoteraseauxmem" value="false"/>
+        <property key="programoptions.eraseb4program" value="true"/>
+        <property key="programoptions.ledbrightness" value="5"/>
+        <property key="programoptions.pgcconfig" value="pull down"/>
+        <property key="programoptions.pgcresistor.value" value="4.7"/>
+        <property key="programoptions.pgdconfig" value="pull down"/>
+        <property key="programoptions.pgdresistor.value" value="4.7"/>
+        <property key="programoptions.pgmentry.voltage" value="low"/>
+        <property key="programoptions.pgmspeed" value="Med"/>
+        <property key="programoptions.preservedataflash" value="false"/>
+        <property key="programoptions.preservedataflash.ranges"
+                  value="${memories.dataflash.default}"/>
+        <property key="programoptions.preserveeeprom" value="false"/>
+        <property key="programoptions.preserveeeprom.ranges" value=""/>
+        <property key="programoptions.preserveprogram.ranges" value=""/>
+        <property key="programoptions.preserveprogramrange" value="false"/>
+        <property key="programoptions.preserveuserid" value="false"/>
+        <property key="programoptions.programcalmem" value="false"/>
+        <property key="programoptions.programuserotp" value="false"/>
+        <property key="programoptions.testmodeentrymethod" value="VDDFirst"/>
+        <property key="toolpack.updateoptions"
+                  value="toolpack.updateoptions.uselatestoolpack"/>
+        <property key="toolpack.updateoptions.packversion"
+                  value="Press to select which tool pack to use"/>
+        <property key="voltagevalue" value="3.25"/>
+      </Tool>
     </conf>
   </confs>
 </configurationDescriptor>
