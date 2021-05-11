@@ -1,20 +1,20 @@
 /*******************************************************************************
- Debug Console Source file
+ System Interrupts File
 
   Company:
     Microchip Technology Inc.
 
   File Name:
-    xc32_monitor.c
+    interrupt.h
 
   Summary:
-    debug console Source File
+    Interrupt vectors mapping
 
   Description:
-    None
+    This file contains declarations of device vectors used by Harmony 3
+ *******************************************************************************/
 
-*******************************************************************************/
-
+// DOM-IGNORE-BEGIN
 /*******************************************************************************
 * Copyright (C) 2018 Microchip Technology Inc. and its subsidiaries.
 *
@@ -36,34 +36,26 @@
 * FULLEST EXTENT ALLOWED BY LAW, MICROCHIP'S TOTAL LIABILITY ON ALL CLAIMS IN
 * ANY WAY RELATED TO THIS SOFTWARE WILL NOT EXCEED THE AMOUNT OF FEES, IF ANY,
 * THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
-*******************************************************************************/
+ *******************************************************************************/
+// DOM-IGNORE-END
 
-#include "definitions.h"
+#ifndef INTERRUPTS_H
+#define INTERRUPTS_H
 
-#ifdef __arm__
-/* Declaration of these functions are missing in stdio.h for ARM parts*/
-int _mon_getc(int canblock);
-void _mon_putc(char c);
-#endif //__arm__
+// *****************************************************************************
+// *****************************************************************************
+// Section: Included Files
+// *****************************************************************************
+// *****************************************************************************
+#include <stdint.h>
 
-int _mon_getc(int canblock)
-{
-   int c = 0;
-   bool success = false;
-   (void)canblock;
-   do
-   {
-       success = UART1_Read(&c, 1);                
-   }while( !success);
-   return c;
-}
 
-void _mon_putc(char c)
-{
-   bool success = false;
-   do
-   {
-       success = UART1_Write(&c, 1);
-   }while (!success);
-}
+// *****************************************************************************
+// *****************************************************************************
+// Section: Handler Routines
+// *****************************************************************************
+// *****************************************************************************
 
+
+
+#endif // INTERRUPTS_H
