@@ -1,22 +1,24 @@
 /*******************************************************************************
-  UART2 PLIB
+  Device Header File
 
   Company:
     Microchip Technology Inc.
 
   File Name:
-    plib_uart2.h
+    device.h
 
   Summary:
-    UART2 PLIB Header File
+    This file includes the selected device from within the project.
+    The device will provide access to respective device packs.
 
   Description:
     None
 
 *******************************************************************************/
 
+// DOM-IGNORE-BEGIN
 /*******************************************************************************
-* Copyright (C) 2019 Microchip Technology Inc. and its subsidiaries.
+* Copyright (C) 2018 Microchip Technology Inc. and its subsidiaries.
 *
 * Subject to your compliance with these terms, you may use Microchip software
 * and any derivatives exclusively with Microchip products. It is your
@@ -37,64 +39,13 @@
 * ANY WAY RELATED TO THIS SOFTWARE WILL NOT EXCEED THE AMOUNT OF FEES, IF ANY,
 * THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
 *******************************************************************************/
-
-#ifndef PLIB_UART2_H
-#define PLIB_UART2_H
-
-#include <stddef.h>
-#include <stdbool.h>
-#include <stdint.h>
-#include "device.h"
-#include "plib_uart_common.h"
-
-// DOM-IGNORE-BEGIN
-#ifdef __cplusplus  // Provide C++ Compatibility
-
-    extern "C" {
-
-#endif
 // DOM-IGNORE-END
 
-// *****************************************************************************
-// *****************************************************************************
-// Section: Interface
-// *****************************************************************************
-// *****************************************************************************
+#ifndef DEVICE_H
+#define DEVICE_H
 
-#define UART2_FrequencyGet()    (uint32_t)(48000000UL)
+#include <xc.h>
+#include <sys/attribs.h>
+#include "toolchain_specifics.h"
 
-/****************************** UART2 API *********************************/
-
-void UART2_Initialize( void );
-
-bool UART2_SerialSetup( UART_SERIAL_SETUP *setup, uint32_t srcClkFreq );
-
-bool UART2_AutoBaudQuery( void );
-
-void UART2_AutoBaudSet( bool enable );
-
-bool UART2_Write( void *buffer, const size_t size );
-
-bool UART2_Read( void *buffer, const size_t size );
-
-UART_ERROR UART2_ErrorGet( void );
-
-int UART2_ReadByte( void );
-
-bool UART2_ReceiverIsReady( void );
-
-void UART2_WriteByte( int data );
-
-bool UART2_TransmitterIsReady( void );
-
-bool UART2_TransmitComplete( void );
-
-// DOM-IGNORE-BEGIN
-#ifdef __cplusplus  // Provide C++ Compatibility
-
-    }
-
-#endif
-// DOM-IGNORE-END
-
-#endif // PLIB_UART2_H
+#endif //DEVICE_H
