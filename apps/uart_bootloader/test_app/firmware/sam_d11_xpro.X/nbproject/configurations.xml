@@ -7,6 +7,22 @@
       <logicalFolder name="f1" displayName="config" projectFiles="true">
         <logicalFolder name="f1" displayName="sam_d11_xpro" projectFiles="true">
           <logicalFolder name="f2" displayName="bsp" projectFiles="true">
+            <logicalFolder name="f1" displayName="clock" projectFiles="true">
+            </logicalFolder>
+            <logicalFolder name="f2" displayName="evsys" projectFiles="true">
+            </logicalFolder>
+            <logicalFolder name="f3" displayName="nvic" projectFiles="true">
+            </logicalFolder>
+            <logicalFolder name="f4" displayName="nvmctrl" projectFiles="true">
+            </logicalFolder>
+            <logicalFolder name="f5" displayName="port" projectFiles="true">
+            </logicalFolder>
+            <logicalFolder name="f6" displayName="sercom" projectFiles="true">
+              <logicalFolder name="f1" displayName="usart" projectFiles="true">
+              </logicalFolder>
+            </logicalFolder>
+            <logicalFolder name="f7" displayName="systick" projectFiles="true">
+            </logicalFolder>
             <itemPath>../src/config/sam_d11_xpro/bsp/bsp.h</itemPath>
           </logicalFolder>
           <logicalFolder name="f1" displayName="peripheral" projectFiles="true">
@@ -40,6 +56,9 @@
           <itemPath>../src/config/sam_d11_xpro/definitions.h</itemPath>
           <itemPath>../src/config/sam_d11_xpro/user.h</itemPath>
           <itemPath>../src/config/sam_d11_xpro/configuration.h</itemPath>
+          <itemPath>../src/config/sam_d11_xpro/device.h</itemPath>
+          <itemPath>../src/config/sam_d11_xpro/interrupts.h</itemPath>
+          <itemPath>../src/config/sam_d11_xpro/device_vectors.h</itemPath>
         </logicalFolder>
       </logicalFolder>
       <logicalFolder name="f2" displayName="packs" projectFiles="true">
@@ -68,12 +87,42 @@
             <itemPath>../src/packs/ATSAMD11D14AM_DFP/component/usb.h</itemPath>
             <itemPath>../src/packs/ATSAMD11D14AM_DFP/component/wdt.h</itemPath>
           </logicalFolder>
+          <logicalFolder name="f3" displayName="instance" projectFiles="true">
+            <itemPath>../src/packs/ATSAMD11D14AM_DFP/instance/ac.h</itemPath>
+            <itemPath>../src/packs/ATSAMD11D14AM_DFP/instance/adc.h</itemPath>
+            <itemPath>../src/packs/ATSAMD11D14AM_DFP/instance/dac.h</itemPath>
+            <itemPath>../src/packs/ATSAMD11D14AM_DFP/instance/dmac.h</itemPath>
+            <itemPath>../src/packs/ATSAMD11D14AM_DFP/instance/dsu.h</itemPath>
+            <itemPath>../src/packs/ATSAMD11D14AM_DFP/instance/eic.h</itemPath>
+            <itemPath>../src/packs/ATSAMD11D14AM_DFP/instance/evsys.h</itemPath>
+            <itemPath>../src/packs/ATSAMD11D14AM_DFP/instance/gclk.h</itemPath>
+            <itemPath>../src/packs/ATSAMD11D14AM_DFP/instance/mtb.h</itemPath>
+            <itemPath>../src/packs/ATSAMD11D14AM_DFP/instance/nvmctrl.h</itemPath>
+            <itemPath>../src/packs/ATSAMD11D14AM_DFP/instance/pac0.h</itemPath>
+            <itemPath>../src/packs/ATSAMD11D14AM_DFP/instance/pac1.h</itemPath>
+            <itemPath>../src/packs/ATSAMD11D14AM_DFP/instance/pac2.h</itemPath>
+            <itemPath>../src/packs/ATSAMD11D14AM_DFP/instance/pm.h</itemPath>
+            <itemPath>../src/packs/ATSAMD11D14AM_DFP/instance/port.h</itemPath>
+            <itemPath>../src/packs/ATSAMD11D14AM_DFP/instance/ptc.h</itemPath>
+            <itemPath>../src/packs/ATSAMD11D14AM_DFP/instance/rtc.h</itemPath>
+            <itemPath>../src/packs/ATSAMD11D14AM_DFP/instance/sbmatrix.h</itemPath>
+            <itemPath>../src/packs/ATSAMD11D14AM_DFP/instance/sercom0.h</itemPath>
+            <itemPath>../src/packs/ATSAMD11D14AM_DFP/instance/sercom1.h</itemPath>
+            <itemPath>../src/packs/ATSAMD11D14AM_DFP/instance/sercom2.h</itemPath>
+            <itemPath>../src/packs/ATSAMD11D14AM_DFP/instance/sysctrl.h</itemPath>
+            <itemPath>../src/packs/ATSAMD11D14AM_DFP/instance/tc1.h</itemPath>
+            <itemPath>../src/packs/ATSAMD11D14AM_DFP/instance/tc2.h</itemPath>
+            <itemPath>../src/packs/ATSAMD11D14AM_DFP/instance/tcc0.h</itemPath>
+            <itemPath>../src/packs/ATSAMD11D14AM_DFP/instance/usb.h</itemPath>
+            <itemPath>../src/packs/ATSAMD11D14AM_DFP/instance/wdt.h</itemPath>
+          </logicalFolder>
           <logicalFolder name="f2" displayName="pio" projectFiles="true">
             <itemPath>../src/packs/ATSAMD11D14AM_DFP/pio/samd11d14am.h</itemPath>
           </logicalFolder>
           <itemPath>../src/packs/ATSAMD11D14AM_DFP/device.h</itemPath>
           <itemPath>../src/packs/ATSAMD11D14AM_DFP/atsamd11d14am.h</itemPath>
           <itemPath>../src/packs/ATSAMD11D14AM_DFP/atsamd11d14am_compat.h</itemPath>
+          <itemPath>../src/packs/ATSAMD11D14AM_DFP/samd11d14am.h</itemPath>
         </logicalFolder>
         <logicalFolder name="f2" displayName="CMSIS" projectFiles="true">
           <logicalFolder name="f1" displayName="CMSIS" projectFiles="true">
@@ -88,6 +137,7 @@
                 <itemPath>../src/packs/CMSIS/CMSIS/Core/Include/cmsis_armclang_ltm.h</itemPath>
                 <itemPath>../src/packs/CMSIS/CMSIS/Core/Include/core_cm0plus.h</itemPath>
                 <itemPath>../src/packs/CMSIS/CMSIS/Core/Include/mpu_armv7.h</itemPath>
+                <itemPath>../src/packs/CMSIS/CMSIS/Core/Include/cachel1_armv7.h</itemPath>
               </logicalFolder>
             </logicalFolder>
           </logicalFolder>
@@ -98,6 +148,11 @@
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
                    projectFiles="true">
+      <logicalFolder name="f1" displayName="config" projectFiles="true">
+        <logicalFolder name="f1" displayName="sam_d11_xpro" projectFiles="true">
+          <itemPath>../src/config/sam_d11_xpro/ATSAMD11D14AM.ld</itemPath>
+        </logicalFolder>
+      </logicalFolder>
     </logicalFolder>
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
@@ -133,6 +188,22 @@
             </logicalFolder>
           </logicalFolder>
           <logicalFolder name="f2" displayName="stdio" projectFiles="true">
+            <logicalFolder name="f1" displayName="clock" projectFiles="true">
+            </logicalFolder>
+            <logicalFolder name="f2" displayName="evsys" projectFiles="true">
+            </logicalFolder>
+            <logicalFolder name="f3" displayName="nvic" projectFiles="true">
+            </logicalFolder>
+            <logicalFolder name="f4" displayName="nvmctrl" projectFiles="true">
+            </logicalFolder>
+            <logicalFolder name="f5" displayName="port" projectFiles="true">
+            </logicalFolder>
+            <logicalFolder name="f6" displayName="sercom" projectFiles="true">
+              <logicalFolder name="f1" displayName="usart" projectFiles="true">
+              </logicalFolder>
+            </logicalFolder>
+            <logicalFolder name="f7" displayName="systick" projectFiles="true">
+            </logicalFolder>
             <itemPath>../src/config/sam_d11_xpro/stdio/xc32_monitor.c</itemPath>
           </logicalFolder>
           <itemPath>../src/config/sam_d11_xpro/initialization.c</itemPath>
@@ -150,8 +221,7 @@
                    displayName="Important Files"
                    projectFiles="false">
       <itemPath>Makefile</itemPath>
-      <itemPath>../src/config/sam_d11_xpro/harmony.prj</itemPath>
-      <itemPath>../../../../../../mhc/../bootloader_apps_uart/apps/uart_bootloader/test_app/firmware/src/config/sam_d11_xpro/sam_d11_xpro.xml</itemPath>
+      <itemPath>../src/config/sam_d11_xpro/harmony-manifest-success.yml</itemPath>
     </logicalFolder>
   </logicalFolder>
   <sourceRootList>
@@ -167,11 +237,11 @@
         <targetPluginBoard></targetPluginBoard>
         <platformTool>noID</platformTool>
         <languageToolchain>XC32</languageToolchain>
-        <languageToolchainVersion>2.41</languageToolchainVersion>
+        <languageToolchainVersion>3.00</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <packs>
-        <pack name="SAMD11_DFP" vendor="Microchip" version="2.3.40"/>
+        <pack name="SAMD11_DFP" vendor="Microchip" version="2.4.56"/>
         <pack name="CMSIS" vendor="ARM" version="5.4.0"/>
       </packs>
       <ScriptingSettings>
@@ -193,6 +263,7 @@
       </compileType>
       <makeCustomizationType>
         <makeCustomizationPreStepEnabled>false</makeCustomizationPreStepEnabled>
+        <makeUseCleanTarget>false</makeUseCleanTarget>
         <makeCustomizationPreStep></makeCustomizationPreStep>
         <makeCustomizationPostStepEnabled>true</makeCustomizationPostStepEnabled>
         <makeCustomizationPostStep>${MP_CC_DIR}/xc32-objcopy -I ihex -O binary ${DISTDIR}/${PROJECTNAME}.${IMAGE_TYPE}.hex ${DISTDIR}/${PROJECTNAME}.${IMAGE_TYPE}.bin</makeCustomizationPostStep>
@@ -233,7 +304,7 @@
         <property key="enable-unroll-loops" value="false"/>
         <property key="exclude-floating-point" value="false"/>
         <property key="extra-include-directories"
-                  value="../src;../src/config/sam_d11_xpro;../src/packs/ATSAMD11D14AM_DFP;../src/packs/CMSIS/CMSIS/Core/Include;../src/packs/CMSIS/"/>
+                  value="../src;../src/config/sam_d11_xpro;../src/packs/ATSAMD11D14AM_DFP;../src/packs/CMSIS/;../src/packs/CMSIS/CMSIS/Core/Include"/>
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="true"/>
@@ -245,6 +316,7 @@
         <property key="preprocessor-macros" value=""/>
         <property key="strict-ansi" value="false"/>
         <property key="support-ansi" value="false"/>
+        <property key="tentative-definitions" value="-fno-common"/>
         <property key="toplevel-reordering" value=""/>
         <property key="unaligned-access" value=""/>
         <property key="use-cci" value="false"/>
@@ -276,6 +348,7 @@
       </C32-AS>
       <C32-CO>
         <property key="coverage-enable" value=""/>
+        <property key="stack-guidance" value="false"/>
       </C32-CO>
       <C32-LD>
         <property key="additional-options-use-response-files" value="false"/>
@@ -307,7 +380,7 @@
         <property key="no-startup-files" value="false"/>
         <property key="oXC32ld-extra-opts" value=""/>
         <property key="optimization-level" value=""/>
-        <property key="preprocessor-macros" value="ROM_ORIGIN=0x800;ROM_LENGTH=0x3800"/>
+        <property key="preprocessor-macros" value="ROM_LENGTH=0x3800;ROM_ORIGIN=0x800"/>
         <property key="remove-unused-sections" value="true"/>
         <property key="report-memory-usage" value="false"/>
         <property key="serial-length" value=""/>
@@ -329,7 +402,8 @@
         <property key="enable-unroll-loops" value="false"/>
         <property key="exceptions" value="true"/>
         <property key="exclude-floating-point" value="false"/>
-        <property key="extra-include-directories" value=""/>
+        <property key="extra-include-directories"
+                  value="../src;../src/config/sam_d11_xpro;../src/packs/ATSAMD11D14AM_DFP;../src/packs/CMSIS/;../src/packs/CMSIS/CMSIS/Core/Include"/>
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="true"/>
@@ -357,6 +431,7 @@
         <property key="omit-pack-options" value="1"/>
         <property key="relaxed-math" value="false"/>
         <property key="save-temps" value="false"/>
+        <property key="stack-smashing" value=""/>
         <property key="wpo-lto" value="false"/>
       </C32Global>
       <EdbgTool>
