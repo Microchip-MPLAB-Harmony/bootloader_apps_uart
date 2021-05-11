@@ -1,0 +1,13 @@
+configName: pic32mz_das_sk
+folderName: ''
+format_version: v1.0
+frameworkPath: ../../../..
+processor: PIC32MZ2064DAS169
+projectName: ''
+settings:
+  PackageFilter: bootloader;bsp;core;csp;expresslogic_threadx;
+  FORCE_OPTIMIZATION: 'false'
+  GENERATE_BACKUP: 'true'
+  CMSISPath: .\dev_packs\arm\CMSIS\5.6.0
+  MERGE_STRATEGY: USER_ALL
+  DFPPath: .\dev_packs\Microchip\PIC32MZ_DA_DFP\1.1.98\atdf\PIC32MZ2064DAS169.atdf
