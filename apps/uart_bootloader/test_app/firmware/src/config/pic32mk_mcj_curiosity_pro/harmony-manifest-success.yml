@@ -4,27 +4,16 @@
 
 
 project: test_app
-creation_date: 2020-07-07T16:57:36.571+05:30[Asia/Calcutta]    # ISO 8601 format: https://www.w3.org/TR/NOTE-datetime
+creation_date: 2021-05-11T18:33:57.182+05:30[Asia/Calcutta]    # ISO 8601 format: https://www.w3.org/TR/NOTE-datetime
 operating_system: Windows 10
 mhc_mode: IDE            # [IDE|Standalone|Headless]
-mplabx_version: v5.40        # if MPLAB X plugin only
-plugin_version: v3.5.0        # if MPLAB X plugin only
+mhc_version: v3.7.2
+mplabx_version: v5.50        # if MPLAB X plugin only
+plugin_version: v3.6.4        # if MPLAB X plugin only
+compiler: XC32 (3.00)
 
 modules:
-    - {name: "bootloader", version: "v3.4.0-rc.1"}
-    - {name: "bootloader_apps_ethernet", version: "unknown"}
-    - {name: "bootloader_apps_i2c", version: "unknown"}
-    - {name: "bootloader_apps_sdcard", version: "unknown"}
-    - {name: "bootloader_apps_uart", version: "unknown"}
-    - {name: "bootloader_apps_usb", version: "v3.0.0-rc.1"}
-    - {name: "bsp", version: "v3.7.0"}
-    - {name: "core", version: "v3.7.2"}
-    - {name: "csp", version: "v3.7.1"}
-    - {name: "dev_packs", version: "v3.7.0"}
-    - {name: "h3_apps_regenerator", version: "unknown"}
-    - {name: "h3_dft_setup", version: "unknown"}
-    - {name: "h3_doc_generator", version: "unknown"}
-    - {name: "mhc", version: "v3.4.1"}
-    - {name: "net", version: "v3.6.1"}
-    - {name: "usb", version: "unknown"}
-
+    - {name: "csp", version: "v3.9.1"}
+    - {name: "dev_packs", version: "v3.9.0"}
+    - {name: "core", version: "v3.9.1"}
+    - {name: "bsp", version: "v3.9.0"}
