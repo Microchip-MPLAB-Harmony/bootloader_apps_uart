@@ -40,6 +40,10 @@
 
 #include "plib_clock.h"
 #include "device.h"
+#include "interrupts.h"
+
+
+
 
 static void OSCCTRL_Initialize(void)
 {
@@ -49,14 +53,14 @@ static void OSCCTRL_Initialize(void)
 
 static void OSC32KCTRL_Initialize(void)
 {
-	OSC32KCTRL_REGS->OSC32KCTRL_RTCCTRL = OSC32KCTRL_RTCCTRL_RTCSEL(0);
+    OSC32KCTRL_REGS->OSC32KCTRL_RTCCTRL = OSC32KCTRL_RTCCTRL_RTCSEL(0);
 }
 
 
 static void FDPLL_Initialize(void)
 {
-	GCLK_REGS->GCLK_PCHCTRL[0] = GCLK_PCHCTRL_GEN(0x1)  | GCLK_PCHCTRL_CHEN_Msk;
-	while ((GCLK_REGS->GCLK_PCHCTRL[0] & GCLK_PCHCTRL_CHEN_Msk) != GCLK_PCHCTRL_CHEN_Msk)
+    GCLK_REGS->GCLK_PCHCTRL[0] = GCLK_PCHCTRL_GEN(0x1)  | GCLK_PCHCTRL_CHEN_Msk;
+    while ((GCLK_REGS->GCLK_PCHCTRL[0] & GCLK_PCHCTRL_CHEN_Msk) != GCLK_PCHCTRL_CHEN_Msk)
     {
         /* Wait for synchronization */
     }
@@ -92,7 +96,7 @@ static void FDPLL_Initialize(void)
 
 static void GCLK0_Initialize(void)
 {
-    
+
     GCLK_REGS->GCLK_GENCTRL[0] = GCLK_GENCTRL_DIV(2) | GCLK_GENCTRL_SRC(7) | GCLK_GENCTRL_GENEN_Msk;
 
     while((GCLK_REGS->GCLK_SYNCBUSY & GCLK_SYNCBUSY_GENCTRL0_Msk) == GCLK_SYNCBUSY_GENCTRL0_Msk)
@@ -126,7 +130,7 @@ void CLOCK_Initialize (void)
 
 
 
-	/* Selection of the Generator and write Lock for SERCOM0_CORE */
+    /* Selection of the Generator and write Lock for SERCOM0_CORE */
     GCLK_REGS->GCLK_PCHCTRL[11] = GCLK_PCHCTRL_GEN(0x0)  | GCLK_PCHCTRL_CHEN_Msk;
 
     while ((GCLK_REGS->GCLK_PCHCTRL[11] & GCLK_PCHCTRL_CHEN_Msk) != GCLK_PCHCTRL_CHEN_Msk)
@@ -136,3 +140,6 @@ void CLOCK_Initialize (void)
 
 
 }
+
+
+
