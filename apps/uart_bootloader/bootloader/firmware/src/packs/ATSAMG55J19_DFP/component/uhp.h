@@ -1,7 +1,7 @@
 /**
  * \brief Component description for UHP
  *
- * Copyright (c) 2020 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2021 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -484,6 +484,8 @@
 #define UHP_HCRHDESCRIPTORB_REG_OFST   (0x4C)              /**< (UHP_HCRHDESCRIPTORB) HC Root Hub B Register Offset */
 #define UHP_HCRHSTATUS_REG_OFST        (0x50)              /**< (UHP_HCRHSTATUS) HC Root Hub Status Register Offset */
 #define UHP_HCRHPORTSTATUS_REG_OFST    (0x54)              /**< (UHP_HCRHPORTSTATUS) HC Port 1 Status and Control Register 0 Offset */
+#define UHP_HCRHPORTSTATUS0_REG_OFST   (0x54)              /**< (UHP_HCRHPORTSTATUS0) HC Port 1 Status and Control Register 0 Offset */
+#define UHP_HCRHPORTSTATUS1_REG_OFST   (0x58)              /**< (UHP_HCRHPORTSTATUS1) HC Port 1 Status and Control Register 0 Offset */
 
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
 /** \brief UHP register API structure */

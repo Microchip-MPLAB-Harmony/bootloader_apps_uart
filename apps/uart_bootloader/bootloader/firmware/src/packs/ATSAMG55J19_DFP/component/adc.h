@@ -1,7 +1,7 @@
 /**
  * \brief Component description for ADC
  *
- * Copyright (c) 2020 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2021 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -814,6 +814,14 @@
 #define ADC_CWR_REG_OFST               (0x44)              /**< (ADC_CWR) Compare Window Register Offset */
 #define ADC_COR_REG_OFST               (0x4C)              /**< (ADC_COR) Channel Offset Register Offset */
 #define ADC_CDR_REG_OFST               (0x50)              /**< (ADC_CDR) Channel Data Register 0 Offset */
+#define ADC_CDR0_REG_OFST              (0x50)              /**< (ADC_CDR0) Channel Data Register 0 Offset */
+#define ADC_CDR1_REG_OFST              (0x54)              /**< (ADC_CDR1) Channel Data Register 0 Offset */
+#define ADC_CDR2_REG_OFST              (0x58)              /**< (ADC_CDR2) Channel Data Register 0 Offset */
+#define ADC_CDR3_REG_OFST              (0x5C)              /**< (ADC_CDR3) Channel Data Register 0 Offset */
+#define ADC_CDR4_REG_OFST              (0x60)              /**< (ADC_CDR4) Channel Data Register 0 Offset */
+#define ADC_CDR5_REG_OFST              (0x64)              /**< (ADC_CDR5) Channel Data Register 0 Offset */
+#define ADC_CDR6_REG_OFST              (0x68)              /**< (ADC_CDR6) Channel Data Register 0 Offset */
+#define ADC_CDR7_REG_OFST              (0x6C)              /**< (ADC_CDR7) Channel Data Register 0 Offset */
 #define ADC_ACR_REG_OFST               (0x94)              /**< (ADC_ACR) Analog Control Register Offset */
 #define ADC_WPMR_REG_OFST              (0xE4)              /**< (ADC_WPMR) Write Protection Mode Register Offset */
 #define ADC_WPSR_REG_OFST              (0xE8)              /**< (ADC_WPSR) Write Protection Status Register Offset */

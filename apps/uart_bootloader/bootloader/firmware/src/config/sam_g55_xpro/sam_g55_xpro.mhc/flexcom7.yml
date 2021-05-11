@@ -1,0 +1,419 @@
+format_version: v1.0
+type: UniqueComponent
+attributes: {id: flexcom7}
+children:
+- type: Symbols
+  children:
+  - type: Integer
+    attributes: {id: BAUD_RATE}
+    children:
+    - type: Attributes
+      children:
+      - type: Boolean
+        attributes: {id: visible}
+        children:
+        - {type: Value, value: 'true'}
+  - type: Integer
+    attributes: {id: BRG_VALUE}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: flexcom7, value: '65'}
+  - type: File
+    attributes: {id: FLEXCOM7_COMMON_HEADER}
+    children:
+    - type: Attributes
+      children:
+      - type: String
+        attributes: {id: dest}
+        children:
+        - {type: Value, value: /peripheral/flexcom/usart/}
+      - type: Boolean
+        attributes: {id: enabled}
+        children:
+        - {type: Value, value: 'true'}
+      - type: String
+        attributes: {id: name}
+        children:
+        - {type: Value, value: plib_flexcom_usart_local.h}
+      - type: String
+        attributes: {id: project}
+        children:
+        - {type: Value, value: config/sam_g55_xpro/peripheral/flexcom/usart/}
+      - type: String
+        attributes: {id: source}
+        children:
+        - {type: Value, value: ../peripheral/flexcom_11277/templates/plib_flexcom_usart_local.h}
+      - type: String
+        attributes: {id: type}
+        children:
+        - {type: Value, value: HEADER}
+  - type: File
+    attributes: {id: FLEXCOM7_HEADER}
+    children:
+    - type: Attributes
+      children:
+      - type: String
+        attributes: {id: dest}
+        children:
+        - {type: Value, value: /peripheral/flexcom/usart/}
+      - type: Boolean
+        attributes: {id: enabled}
+        children:
+        - {type: Value, value: 'true'}
+      - type: Boolean
+        attributes: {id: markup}
+        children:
+        - {type: Value, value: 'true'}
+      - type: String
+        attributes: {id: name}
+        children:
+        - {type: Value, value: plib_flexcom7_usart.h}
+      - type: String
+        attributes: {id: project}
+        children:
+        - {type: Value, value: config/sam_g55_xpro/peripheral/flexcom/usart/}
+      - type: String
+        attributes: {id: source}
+        children:
+        - {type: Value, value: ../peripheral/flexcom_11277/templates/plib_flexcom_usart.h.ftl}
+      - type: String
+        attributes: {id: type}
+        children:
+        - {type: Value, value: HEADER}
+  - type: File
+    attributes: {id: FLEXCOM7_SOURCE}
+    children:
+    - type: Attributes
+      children:
+      - type: String
+        attributes: {id: dest}
+        children:
+        - {type: Value, value: /peripheral/flexcom/usart/}
+      - type: Boolean
+        attributes: {id: enabled}
+        children:
+        - {type: Value, value: 'true'}
+      - type: Boolean
+        attributes: {id: markup}
+        children:
+        - {type: Value, value: 'true'}
+      - type: String
+        attributes: {id: name}
+        children:
+        - {type: Value, value: plib_flexcom7_usart.c}
+      - type: String
+        attributes: {id: project}
+        children:
+        - {type: Value, value: config/sam_g55_xpro/peripheral/flexcom/usart/}
+      - type: String
+        attributes: {id: source}
+        children:
+        - {type: Value, value: ../peripheral/flexcom_11277/templates/plib_flexcom_usart.c.ftl}
+  - type: KeyValueSet
+    attributes: {id: FLEXCOM_MODE}
+    children:
+    - type: Attributes
+      children:
+      - type: Boolean
+        attributes: {id: readOnly}
+        children:
+        - {type: Value, value: 'true'}
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: flexcom7, value: '1'}
+  - type: Integer
+    attributes: {id: FLEXCOM_SPI_CSR0_SCBR_VALUE}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: flexcom7, value: '119'}
+  - type: Integer
+    attributes: {id: FLEXCOM_SPI_CSR1_SCBR_VALUE}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: flexcom7, value: '119'}
+  - type: Integer
+    attributes: {id: FLEXCOM_SPI_PERIPHERAL_CLOCK}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: flexcom7, value: '119996416'}
+  - type: File
+    attributes: {id: FLEXCOM_SYS_DEF}
+    children:
+    - type: Attributes
+      children:
+      - type: Boolean
+        attributes: {id: markup}
+        children:
+        - {type: Value, value: 'true'}
+      - type: String
+        attributes: {id: name}
+        children:
+        - {type: Value, value: core.LIST_SYSTEM_DEFINITIONS_H_INCLUDES}
+      - type: String
+        attributes: {id: source}
+        children:
+        - {type: Value, value: ../peripheral/flexcom_11277/templates/system/definitions.h.ftl}
+      - type: String
+        attributes: {id: type}
+        children:
+        - {type: Value, value: STRING}
+  - type: File
+    attributes: {id: FLEXCOM_SYS_INIT}
+    children:
+    - type: Attributes
+      children:
+      - type: Boolean
+        attributes: {id: markup}
+        children:
+        - {type: Value, value: 'true'}
+      - type: String
+        attributes: {id: name}
+        children:
+        - {type: Value, value: core.LIST_SYSTEM_INIT_C_SYS_INITIALIZE_PERIPHERALS}
+      - type: String
+        attributes: {id: source}
+        children:
+        - {type: Value, value: ../peripheral/flexcom_11277/templates/system/initialization.c.ftl}
+      - type: String
+        attributes: {id: type}
+        children:
+        - {type: Value, value: STRING}
+  - type: Integer
+    attributes: {id: FLEXCOM_TWI_CLK_SRC_FREQ}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: flexcom7, value: '119996416'}
+  - type: Integer
+    attributes: {id: FLEXCOM_TWI_CWGR_CHDIV}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: flexcom7, value: '146'}
+  - type: Integer
+    attributes: {id: FLEXCOM_TWI_CWGR_CKDIV}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: flexcom7, value: '0'}
+  - type: Integer
+    attributes: {id: FLEXCOM_TWI_CWGR_CLDIV}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: flexcom7, value: '146'}
+  - type: Boolean
+    attributes: {id: FLEXCOM_USART_INTERRUPT_MODE_ENABLE}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: flexcom7, value: 'false'}
+  - type: Integer
+    attributes: {id: FLEXCOM_USART_MR_OVER}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: flexcom7, value: '0'}
+  - type: KeyValueSet
+    attributes: {id: FLEXCOM_USART_MR_USCLKS}
+    children:
+    - type: Attributes
+      children:
+      - type: Boolean
+        attributes: {id: visible}
+        children:
+        - {type: Value, value: 'true'}
+  - type: KeyValueSet
+    attributes: {id: FLEXCOM_USART_OPERATING_MODE}
+    children:
+    - type: Attributes
+      children:
+      - type: Boolean
+        attributes: {id: visible}
+        children:
+        - {type: Value, value: 'true'}
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: flexcom7, value: '0'}
+  - type: Boolean
+    attributes: {id: FLEXCOM_USART_RING_BUFFER_MODE_ENABLE}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: flexcom7, value: 'false'}
+  - type: Integer
+    attributes: {id: FLEX_USART_CLOCK_FREQ}
+    children:
+    - type: Attributes
+      children:
+      - type: Boolean
+        attributes: {id: visible}
+        children:
+        - {type: Value, value: 'true'}
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: flexcom7, value: '119996416'}
+  - type: KeyValueSet
+    attributes: {id: FLEX_USART_MR_CHRL}
+    children:
+    - type: Attributes
+      children:
+      - type: Boolean
+        attributes: {id: visible}
+        children:
+        - {type: Value, value: 'true'}
+  - type: Boolean
+    attributes: {id: FLEX_USART_MR_MODE9}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: flexcom7, value: 'false'}
+  - type: KeyValueSet
+    attributes: {id: FLEX_USART_MR_NBSTOP}
+    children:
+    - type: Attributes
+      children:
+      - type: Boolean
+        attributes: {id: visible}
+        children:
+        - {type: Value, value: 'true'}
+  - type: KeyValueSet
+    attributes: {id: FLEX_USART_MR_PAR}
+    children:
+    - type: Attributes
+      children:
+      - type: Boolean
+        attributes: {id: visible}
+        children:
+        - {type: Value, value: 'true'}
+  - type: String
+    attributes: {id: RECEIVE_DATA_REGISTER}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: flexcom7, value: '&(FLEXCOM7_REGS->FLEX_US_RHR)'}
+  - type: String
+    attributes: {id: TRANSMIT_DATA_REGISTER}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: flexcom7, value: '&(FLEXCOM7_REGS->FLEX_US_THR)'}
+  - type: Boolean
+    attributes: {id: TWI_INTERRUPT_MODE}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: flexcom7, value: 'true'}
+  - type: String
+    attributes: {id: USART_DATA_BITS}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: flexcom7, value: DRV_USART_DATA_8_BIT}
+  - type: Boolean
+    attributes: {id: USART_INTERRUPT_MODE}
+    children:
+    - type: Attributes
+      children:
+      - type: String
+        attributes: {id: label}
+        children:
+        - {type: Value, value: '---'}
+      - type: Boolean
+        attributes: {id: visible}
+        children:
+        - {type: Value, value: 'false'}
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: uart_bootloader, value: 'false'}
+  - type: Boolean
+    attributes: {id: USE_USART_RECEIVE_DMA}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: flexcom7, value: 'false'}
+  - type: Boolean
+    attributes: {id: USE_USART_RX_DMA}
+    children:
+    - type: Attributes
+      children:
+      - type: String
+        attributes: {id: label}
+        children:
+        - {type: Value, value: '---'}
+  - type: Boolean
+    attributes: {id: USE_USART_TRANSMIT_DMA}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: flexcom7, value: 'false'}
+  - type: Boolean
+    attributes: {id: USE_USART_TX_DMA}
+    children:
+    - type: Attributes
+      children:
+      - type: String
+        attributes: {id: label}
+        children:
+        - {type: Value, value: '---'}
+- type: Attachments
+  children:
+  - type: DirectCapability
+    attributes: {id: FLEXCOM7_I2C}
+    children:
+    - type: Attributes
+      children:
+      - type: Boolean
+        attributes: {id: enabled}
+        children:
+        - {type: Value, value: 'false'}
+  - type: DirectCapability
+    attributes: {id: FLEXCOM7_SPI}
+    children:
+    - type: Attributes
+      children:
+      - type: Boolean
+        attributes: {id: enabled}
+        children:
+        - {type: Value, value: 'false'}
+  - type: DirectCapability
+    attributes: {id: FLEXCOM7_UART}
+    children:
+    - type: Attributes
+      children:
+      - type: String
+        attributes: {id: targetComponentID}
+        children:
+        - {type: Value, value: uart_bootloader}
+      - type: String
+        attributes: {id: targetAttachmentID}
+        children:
+        - {type: Value, value: btl_UART_dependency}
+- type: ElementPosition
+  attributes: {x: '12', y: '185', id: flexcom7}
