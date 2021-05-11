@@ -1,0 +1,13 @@
+configName: sam_e70_xult
+folderName: ''
+format_version: v1.0
+frameworkPath: ../../..
+processor: ATSAME70Q21B
+projectName: ''
+settings:
+  PackageFilter: bootloader;bsp;core;csp;expresslogic_threadx;
+  FORCE_OPTIMIZATION: 'false'
+  GENERATE_BACKUP: 'true'
+  CMSISPath: .\dev_packs\arm\CMSIS\5.6.0
+  MERGE_STRATEGY: USER_ALL
+  DFPPath: .\dev_packs\Microchip\SAME70_DFP\4.2.56\same70b\atdf\ATSAME70Q21B.atdf
