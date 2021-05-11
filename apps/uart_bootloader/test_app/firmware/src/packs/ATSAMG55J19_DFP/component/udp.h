@@ -1,7 +1,7 @@
 /**
  * \brief Component description for UDP
  *
- * Copyright (c) 2020 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2021 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -356,7 +356,19 @@
 #define UDP_ICR_REG_OFST               (0x20)              /**< (UDP_ICR) Interrupt Clear Register Offset */
 #define UDP_RST_EP_REG_OFST            (0x28)              /**< (UDP_RST_EP) Reset Endpoint Register Offset */
 #define UDP_CSR_REG_OFST               (0x30)              /**< (UDP_CSR) Endpoint Control and Status Register 0 Offset */
+#define UDP_CSR0_REG_OFST              (0x30)              /**< (UDP_CSR0) Endpoint Control and Status Register 0 Offset */
+#define UDP_CSR1_REG_OFST              (0x34)              /**< (UDP_CSR1) Endpoint Control and Status Register 0 Offset */
+#define UDP_CSR2_REG_OFST              (0x38)              /**< (UDP_CSR2) Endpoint Control and Status Register 0 Offset */
+#define UDP_CSR3_REG_OFST              (0x3C)              /**< (UDP_CSR3) Endpoint Control and Status Register 0 Offset */
+#define UDP_CSR4_REG_OFST              (0x40)              /**< (UDP_CSR4) Endpoint Control and Status Register 0 Offset */
+#define UDP_CSR5_REG_OFST              (0x44)              /**< (UDP_CSR5) Endpoint Control and Status Register 0 Offset */
 #define UDP_FDR_REG_OFST               (0x50)              /**< (UDP_FDR) Endpoint FIFO Data Register 0 Offset */
+#define UDP_FDR0_REG_OFST              (0x50)              /**< (UDP_FDR0) Endpoint FIFO Data Register 0 Offset */
+#define UDP_FDR1_REG_OFST              (0x54)              /**< (UDP_FDR1) Endpoint FIFO Data Register 0 Offset */
+#define UDP_FDR2_REG_OFST              (0x58)              /**< (UDP_FDR2) Endpoint FIFO Data Register 0 Offset */
+#define UDP_FDR3_REG_OFST              (0x5C)              /**< (UDP_FDR3) Endpoint FIFO Data Register 0 Offset */
+#define UDP_FDR4_REG_OFST              (0x60)              /**< (UDP_FDR4) Endpoint FIFO Data Register 0 Offset */
+#define UDP_FDR5_REG_OFST              (0x64)              /**< (UDP_FDR5) Endpoint FIFO Data Register 0 Offset */
 #define UDP_TXVC_REG_OFST              (0x74)              /**< (UDP_TXVC) Transceiver Control Register Offset */
 
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))

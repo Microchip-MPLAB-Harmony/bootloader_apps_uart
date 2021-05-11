@@ -1,7 +1,7 @@
 /**
  * \brief Component description for MATRIX
  *
- * Copyright (c) 2020 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2021 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -219,7 +219,14 @@
 
 /** \brief MATRIX register offsets definitions */
 #define MATRIX_MCFG_REG_OFST           (0x00)              /**< (MATRIX_MCFG) Master Configuration Register 0 Offset */
+#define MATRIX_MCFG0_REG_OFST          (0x00)              /**< (MATRIX_MCFG0) Master Configuration Register 0 Offset */
+#define MATRIX_MCFG1_REG_OFST          (0x04)              /**< (MATRIX_MCFG1) Master Configuration Register 0 Offset */
+#define MATRIX_MCFG2_REG_OFST          (0x08)              /**< (MATRIX_MCFG2) Master Configuration Register 0 Offset */
 #define MATRIX_SCFG_REG_OFST           (0x40)              /**< (MATRIX_SCFG) Slave Configuration Register 0 Offset */
+#define MATRIX_SCFG0_REG_OFST          (0x40)              /**< (MATRIX_SCFG0) Slave Configuration Register 0 Offset */
+#define MATRIX_SCFG1_REG_OFST          (0x44)              /**< (MATRIX_SCFG1) Slave Configuration Register 0 Offset */
+#define MATRIX_SCFG2_REG_OFST          (0x48)              /**< (MATRIX_SCFG2) Slave Configuration Register 0 Offset */
+#define MATRIX_SCFG3_REG_OFST          (0x4C)              /**< (MATRIX_SCFG3) Slave Configuration Register 0 Offset */
 #define MATRIX_PRAS0_REG_OFST          (0x80)              /**< (MATRIX_PRAS0) Priority Register A for Slave 0 Offset */
 #define MATRIX_PRAS1_REG_OFST          (0x88)              /**< (MATRIX_PRAS1) Priority Register A for Slave 1 Offset */
 #define MATRIX_PRAS2_REG_OFST          (0x90)              /**< (MATRIX_PRAS2) Priority Register A for Slave 2 Offset */

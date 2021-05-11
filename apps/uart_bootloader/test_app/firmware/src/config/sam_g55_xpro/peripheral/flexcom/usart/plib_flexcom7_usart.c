@@ -49,6 +49,7 @@
 // *****************************************************************************
 
 #include "plib_flexcom7_usart.h"
+#include "interrupts.h"
 
 // *****************************************************************************
 // *****************************************************************************
@@ -56,21 +57,26 @@
 // *****************************************************************************
 // *****************************************************************************
 
+
 void static FLEXCOM7_USART_ErrorClear( void )
 {
     uint8_t dummyData = 0u;
 
-    USART7_REGS->US_CR = US_CR_RSTSTA_Msk;
-
-    /* Flush existing error bytes from the RX FIFO */
-    while( US_CSR_RXRDY_Msk == (USART7_REGS->US_CSR& US_CSR_RXRDY_Msk) )
+    if (USART7_REGS->US_CSR & (US_CSR_OVRE_Msk | US_CSR_FRAME_Msk | US_CSR_PARE_Msk))
     {
-        dummyData = (USART7_REGS->US_RHR& US_RHR_RXCHR_Msk);
+        USART7_REGS->US_CR = US_CR_RSTSTA_Msk;
+
+        /* Flush existing error bytes from the RX FIFO */
+        while (USART7_REGS->US_CSR & US_CSR_RXRDY_Msk)
+        {
+            dummyData = (USART7_REGS->US_RHR & US_RHR_RXCHR_Msk);
+        }
     }
 
     /* Ignore the warning */
     (void)dummyData;
 }
+
 
 void FLEXCOM7_USART_Initialize( void )
 {
@@ -152,7 +158,7 @@ bool FLEXCOM7_USART_SerialSetup( FLEXCOM_USART_SERIAL_SETUP *setup, uint32_t src
             /* The input clock source - srcClkFreq, is too low to generate the desired baud */
             return status;
         }
-        
+
         if (brgVal > 65535)
         {
             /* The requested baud is so low that the ratio of srcClkFreq to baud exceeds the 16-bit register value of CD register */
@@ -177,16 +183,17 @@ bool FLEXCOM7_USART_Read( void *buffer, const size_t size )
     bool status = false;
     uint32_t errorStatus = 0;
     size_t processedSize = 0;
-    uint8_t * lBuffer = (uint8_t *)buffer;
+    uint8_t* pBuffer = (uint8_t*)buffer;
 
-    if(lBuffer != NULL)
+    if(pBuffer != NULL)
     {
-        /* Clear errors before submitting the request.
-         * ErrorGet clears errors internally. */
-        FLEXCOM7_USART_ErrorGet();
+        /* Clear errors that may have got generated when there was no active read request pending */
+        FLEXCOM7_USART_ErrorClear();
 
         while( size > processedSize )
         {
+            while (!(USART7_REGS->US_CSR & US_CSR_RXRDY_Msk));
+
             /* Error status */
             errorStatus = (USART7_REGS->US_CSR & (US_CSR_OVRE_Msk | US_CSR_FRAME_Msk | US_CSR_PARE_Msk));
 
@@ -195,11 +202,17 @@ bool FLEXCOM7_USART_Read( void *buffer, const size_t size )
                 break;
             }
 
-            if(US_CSR_RXRDY_Msk == (USART7_REGS->US_CSR & US_CSR_RXRDY_Msk))
+            if (USART7_REGS->US_MR & US_MR_MODE9_Msk)
             {
-                *lBuffer++ = (USART7_REGS->US_RHR& US_RHR_RXCHR_Msk);
-                processedSize++;
+                *((uint16_t*)pBuffer) = (USART7_REGS->US_RHR & US_RHR_RXCHR_Msk);
+                pBuffer += 2;
             }
+            else
+            {
+                *pBuffer++ = (USART7_REGS->US_RHR & US_RHR_RXCHR_Msk);
+            }
+
+            processedSize++;
         }
 
         if(size == processedSize)
@@ -216,16 +229,21 @@ bool FLEXCOM7_USART_Write( void *buffer, const size_t size )
 {
     bool status = false;
     size_t processedSize = 0;
-    uint8_t * lBuffer = (uint8_t *)buffer;
+    uint8_t* pBuffer = (uint8_t *)buffer;
 
-    if(lBuffer != NULL)
+    if(pBuffer != NULL)
     {
         while( size > processedSize )
         {
-            if(US_CSR_TXEMPTY_Msk == (USART7_REGS->US_CSR & US_CSR_TXEMPTY_Msk))
+            while (!(USART7_REGS->US_CSR & US_CSR_TXRDY_Msk));
+
+            if (USART7_REGS->US_MR & US_MR_MODE9_Msk)
             {
-                USART7_REGS->US_THR = (US_THR_TXCHR(*lBuffer++) & US_THR_TXCHR_Msk);
-                processedSize++;
+                USART7_REGS->US_THR = ((uint16_t*)pBuffer)[processedSize++] & US_THR_TXCHR_Msk;
+            }
+            else
+            {
+                USART7_REGS->US_THR = pBuffer[processedSize++];
             }
         }
 
@@ -242,7 +260,7 @@ uint8_t FLEXCOM7_USART_ReadByte( void )
 
 void FLEXCOM7_USART_WriteByte( uint8_t data )
 {
-    while ((US_CSR_TXEMPTY_Msk == (USART7_REGS->US_CSR & US_CSR_TXEMPTY_Msk)) == 0);
+    while (!(USART7_REGS->US_CSR & US_CSR_TXRDY_Msk));
 
     USART7_REGS->US_THR = (US_THR_TXCHR(data) & US_THR_TXCHR_Msk);
 }
@@ -251,7 +269,7 @@ bool FLEXCOM7_USART_TransmitComplete( void )
 {
     bool status = false;
 
-    if(US_CSR_TXEMPTY_Msk == (USART7_REGS->US_CSR & US_CSR_TXEMPTY_Msk))
+    if (USART7_REGS->US_CSR & US_CSR_TXEMPTY_Msk)
     {
         status = true;
     }
@@ -263,7 +281,7 @@ bool FLEXCOM7_USART_TransmitterIsReady( void )
 {
     bool status = false;
 
-    if(US_CSR_TXRDY_Msk == (USART7_REGS->US_CSR & US_CSR_TXRDY_Msk))
+    if (USART7_REGS->US_CSR & US_CSR_TXRDY_Msk)
     {
         status = true;
     }
@@ -275,7 +293,7 @@ bool FLEXCOM7_USART_ReceiverIsReady( void )
 {
     bool status = false;
 
-    if(US_CSR_RXRDY_Msk == (USART7_REGS->US_CSR & US_CSR_RXRDY_Msk))
+    if (USART7_REGS->US_CSR & US_CSR_RXRDY_Msk)
     {
         status = true;
     }
