@@ -73,7 +73,7 @@
 /*** DEVCFG1 ***/
 #pragma config FNOSC =      SPLL
 #pragma config DMTINTV =    WIN_127_128
-#pragma config FSOSCEN =    ON
+#pragma config FSOSCEN =    OFF
 #pragma config IESO =       ON
 #pragma config POSCMOD =    OFF
 #pragma config OSCIOFNC =   OFF
@@ -92,11 +92,6 @@
 #pragma config FPLLICLK =   PLL_FRC
 #pragma config FPLLMULT =   MUL_60
 #pragma config FPLLODIV =   DIV_4
-#pragma config DSBOREN =    ON
-#pragma config DSWDTPS =    DSPS32
-#pragma config DSWDTOSC =   LPRC
-#pragma config DSWDTEN =    OFF
-#pragma config FDSEN =      ON
 #pragma config BORSEL =     HIGH
 #pragma config UPLLEN =     OFF
 
@@ -153,6 +148,26 @@
 // *****************************************************************************
 // *****************************************************************************
 
+/*******************************************************************************
+  Function:
+    void STDIO_BufferModeSet ( void )
+
+  Summary:
+    Sets the buffering mode for stdin and stdout
+
+  Remarks:
+ ********************************************************************************/
+static void STDIO_BufferModeSet(void)
+{
+
+    /* Make stdin unbuffered */
+    setbuf(stdin, NULL);
+
+    /* Make stdout unbuffered */
+    setbuf(stdout, NULL);
+}
+
+
 
 
 /*******************************************************************************
@@ -167,8 +182,12 @@
 
 void SYS_Initialize ( void* data )
 {
+
     /* Start out with interrupts disabled before configuring any modules */
     __builtin_disable_interrupts();
+
+    STDIO_BufferModeSet();
+
 
   
     CLK_Initialize();
@@ -177,7 +196,7 @@ void SYS_Initialize ( void* data )
     __builtin_mtc0(16, 0,(__builtin_mfc0(16, 0) | 0x3));
 
     /* Configure Wait States and Prefetch */
-    CHECONbits.PFMWS = 3;
+    CHECONbits.PFMWS = 2;
     CHECONbits.PREFEN = 1;
 
 
