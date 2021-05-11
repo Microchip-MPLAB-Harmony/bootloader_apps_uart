@@ -1,0 +1,37 @@
+format_version: v1.0
+type: UniqueComponent
+attributes: {id: nvmctrl}
+children:
+- type: Symbols
+  children:
+  - type: Boolean
+    attributes: {id: INTERRUPT_ENABLE}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: uart_bootloader, value: 'false'}
+  - type: Integer
+    attributes: {id: NVM_RWS}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: nvmctrl, value: '5'}
+- type: Attachments
+  children:
+  - type: DirectCapability
+    attributes: {id: NVMCTRL_MEMORY}
+    children:
+    - type: Attributes
+      children:
+      - type: String
+        attributes: {id: targetComponentID}
+        children:
+        - {type: Value, value: uart_bootloader}
+      - type: String
+        attributes: {id: targetAttachmentID}
+        children:
+        - {type: Value, value: btl_MEMORY_dependency}
+- type: ElementPosition
+  attributes: {x: '25', y: '106', id: nvmctrl}
