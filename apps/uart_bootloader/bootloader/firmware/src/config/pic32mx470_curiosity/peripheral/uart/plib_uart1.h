@@ -69,6 +69,10 @@ void UART1_Initialize( void );
 
 bool UART1_SerialSetup( UART_SERIAL_SETUP *setup, uint32_t srcClkFreq );
 
+bool UART1_AutoBaudQuery( void );
+
+void UART1_AutoBaudSet( bool enable );
+
 bool UART1_Write( void *buffer, const size_t size );
 
 bool UART1_Read( void *buffer, const size_t size );
