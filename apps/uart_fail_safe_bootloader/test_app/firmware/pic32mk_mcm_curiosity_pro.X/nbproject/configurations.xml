@@ -9,6 +9,16 @@
                        displayName="pic32mk_mcm_curiosity_pro"
                        projectFiles="true">
           <logicalFolder name="f2" displayName="bsp" projectFiles="true">
+            <logicalFolder name="f1" displayName="clk" projectFiles="true">
+            </logicalFolder>
+            <logicalFolder name="f2" displayName="coretimer" projectFiles="true">
+            </logicalFolder>
+            <logicalFolder name="f3" displayName="evic" projectFiles="true">
+            </logicalFolder>
+            <logicalFolder name="f4" displayName="gpio" projectFiles="true">
+            </logicalFolder>
+            <logicalFolder name="f5" displayName="uart" projectFiles="true">
+            </logicalFolder>
             <itemPath>../src/config/pic32mk_mcm_curiosity_pro/bsp/bsp.h</itemPath>
           </logicalFolder>
           <logicalFolder name="f1" displayName="peripheral" projectFiles="true">
@@ -33,6 +43,8 @@
           <itemPath>../src/config/pic32mk_mcm_curiosity_pro/definitions.h</itemPath>
           <itemPath>../src/config/pic32mk_mcm_curiosity_pro/user.h</itemPath>
           <itemPath>../src/config/pic32mk_mcm_curiosity_pro/configuration.h</itemPath>
+          <itemPath>../src/config/pic32mk_mcm_curiosity_pro/device.h</itemPath>
+          <itemPath>../src/config/pic32mk_mcm_curiosity_pro/interrupts.h</itemPath>
         </logicalFolder>
       </logicalFolder>
       <logicalFolder name="f2" displayName="packs" projectFiles="true">
@@ -48,8 +60,7 @@
                    displayName="Important Files"
                    projectFiles="true">
       <itemPath>Makefile</itemPath>
-      <itemPath>../src/config/pic32mk_mcm_curiosity_pro/harmony.prj</itemPath>
-      <itemPath>../../../../../../mhc/../bootloader_apps_uart/apps/uart_fail_safe_bootloader/test_app/firmware/src/config/pic32mk_mcm_curiosity_pro/pic32mk_mcm_curiosity_pro.xml</itemPath>
+      <itemPath>../src/config/pic32mk_mcm_curiosity_pro/harmony-manifest-success.yml</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -64,6 +75,16 @@
                        displayName="pic32mk_mcm_curiosity_pro"
                        projectFiles="true">
           <logicalFolder name="f2" displayName="bsp" projectFiles="true">
+            <logicalFolder name="f1" displayName="clk" projectFiles="true">
+            </logicalFolder>
+            <logicalFolder name="f2" displayName="coretimer" projectFiles="true">
+            </logicalFolder>
+            <logicalFolder name="f3" displayName="evic" projectFiles="true">
+            </logicalFolder>
+            <logicalFolder name="f4" displayName="gpio" projectFiles="true">
+            </logicalFolder>
+            <logicalFolder name="f5" displayName="uart" projectFiles="true">
+            </logicalFolder>
             <itemPath>../src/config/pic32mk_mcm_curiosity_pro/bsp/bsp.c</itemPath>
           </logicalFolder>
           <logicalFolder name="f1" displayName="peripheral" projectFiles="true">
@@ -109,11 +130,11 @@
         <targetPluginBoard></targetPluginBoard>
         <platformTool>noID</platformTool>
         <languageToolchain>XC32</languageToolchain>
-        <languageToolchainVersion>2.41</languageToolchainVersion>
+        <languageToolchainVersion>3.00</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <packs>
-        <pack name="PIC32MK-MC_DFP" vendor="Microchip" version="1.4.94"/>
+        <pack name="PIC32MK-MC_DFP" vendor="Microchip" version="1.8.132"/>
       </packs>
       <ScriptingSettings>
       </ScriptingSettings>
@@ -134,6 +155,7 @@
       </compileType>
       <makeCustomizationType>
         <makeCustomizationPreStepEnabled>false</makeCustomizationPreStepEnabled>
+        <makeUseCleanTarget>false</makeUseCleanTarget>
         <makeCustomizationPreStep></makeCustomizationPreStep>
         <makeCustomizationPostStepEnabled>true</makeCustomizationPostStepEnabled>
         <makeCustomizationPostStep>${MP_CC_DIR}/xc32-objcopy -I ihex -O binary ${DISTDIR}/${PROJECTNAME}.${IMAGE_TYPE}.hex ${DISTDIR}/${PROJECTNAME}.${IMAGE_TYPE}.bin</makeCustomizationPostStep>
@@ -162,6 +184,7 @@
         <property key="preprocessor-macros" value=""/>
         <property key="strict-ansi" value="false"/>
         <property key="support-ansi" value="false"/>
+        <property key="tentative-definitions" value="-fno-common"/>
         <property key="toplevel-reordering" value=""/>
         <property key="unaligned-access" value=""/>
         <property key="use-cci" value="false"/>
@@ -193,6 +216,7 @@
       </C32-AS>
       <C32-CO>
         <property key="coverage-enable" value=""/>
+        <property key="stack-guidance" value="false"/>
       </C32-CO>
       <C32-LD>
         <property key="additional-options-use-response-files" value="false"/>
@@ -245,7 +269,8 @@
         <property key="enable-unroll-loops" value="false"/>
         <property key="exceptions" value="true"/>
         <property key="exclude-floating-point" value="false"/>
-        <property key="extra-include-directories" value=""/>
+        <property key="extra-include-directories"
+                  value="../src;../src/config/pic32mk_mcm_curiosity_pro;../src/packs/PIC32MK1024MCM100_DFP"/>
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="true"/>
@@ -273,6 +298,7 @@
         <property key="omit-pack-options" value="1"/>
         <property key="relaxed-math" value="false"/>
         <property key="save-temps" value="false"/>
+        <property key="stack-smashing" value=""/>
         <property key="wpo-lto" value="false"/>
       </C32Global>
       <PICkit3PlatformTool>

@@ -1,0 +1,6 @@
+format_version: v1.0
+type: UniqueComponent
+attributes: {id: core_timer}
+children:
+- type: ElementPosition
+  attributes: {x: '264', y: '88', id: core_timer}
