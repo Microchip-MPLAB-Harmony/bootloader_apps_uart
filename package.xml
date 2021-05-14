@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <Package name="bootloader_apps_uart">
     <Dependencies>
-        <Dependency name="bootloader" version="v3.4.1"/>
+        <Dependency name="bootloader" version="v3.5.0"/>
     </Dependencies>
 </Package>
