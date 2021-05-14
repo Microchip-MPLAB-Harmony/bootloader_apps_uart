@@ -1,17 +1,19 @@
 ---
 parent: Application Configurations
-title: PIC32M Application Configurations
+title: Application Configurations for MIPS based MCUs
 has_children: false
 has_toc: false
 ---
 
 [![MCHP](https://www.microchip.com/ResourcePackages/Microchip/assets/dist/images/logo.png)](https://www.microchip.com)
 
-# Configuring a PIC32M based Application to be bootloaded
+# Configuring an application to be bootloaded for MIPS based MCUs
+
+## Linker configurations for the application to be bootloaded
 
 ### Bootloader placement for various PIC32M product families
 
-The bootloader is placed in Boot Flash Memory (BFM) or Program Flash Memory (PFM) based on the size of the bootloader and available Boot flash memory on the device.
+The bootloader is placed in **Boot Flash Memory (BFM)** or **Program Flash Memory (PFM)** based on the size of the bootloader and available Boot flash memory on the device.
 
 - If the bootloader fits into the available BFM, it is placed in BFM. The user application can use the complete area of the program Flash memory.
 
@@ -19,10 +21,11 @@ The bootloader is placed in Boot Flash Memory (BFM) or Program Flash Memory (PFM
 
 - The following table shows the available Boot Flash memory and the placement of different bootloaders by product family. 
 
-![bootloader_placement](./images/bootloader_placement.png)
+    <p align="center">
+        <img src = "./images/bootloader_placement.png"/>
+    </p>
 
-
-## Setting Up the Application linker script
+## Setting up the Application linker script
 
 The linker script file of the application project has to be modified to place the vector table and reset handlers in program flash memory.
 
@@ -54,7 +57,7 @@ The linker script file of the application project has to be modified to place th
 - Updated linker scripts as explained above is shown here **as an example**
     - **Note: Cache related sections are not applicable for PIC32MK Devices**
 
-```
+```c
 PROVIDE(_vector_spacing = 0x0001);
 PROVIDE(_ebase_address = 0x9D000000);
 
@@ -132,7 +135,7 @@ kseg1_boot_mem_4B0      : ORIGIN = 0xBD0004B0, LENGTH = 0x1000 - 0x4B0
 - Updated linked scripts as explained above is shown here **as an example**.
     - Bootloader length **\<bootloader_length\>** in the below snippet needs to be replaced with size of the respective bootloader.
 
-```
+```c
 PROVIDE(_vector_spacing = 0x0001);
 PROVIDE(_ebase_address = 0x9D000000);
 
@@ -191,7 +194,7 @@ kseg1_boot_mem          : ORIGIN = 0xBD000000 + <bootloader_length>, LENGTH = 0x
 
 - Updated linked scripts as explained above is shown here **as an example.**
 
-```
+```c
 PROVIDE(_vector_spacing = 0x0001);
 PROVIDE(_ebase_address = 0x9D001000);
 
@@ -235,7 +238,7 @@ ASSERT (_vector_spacing == 0 || SIZEOF(.vector_1) <= (_vector_spacing << 5), "fu
 - Updated linked scripts as explained above is shown here **as an example.**
     - Bootloader length **\<bootloader_length\>** in the below snippet needs to be replaced with size of the respective bootloader.
 
-```
+```c
 PROVIDE(_vector_spacing = 0x0001);
 PROVIDE(_ebase_address = 0x9D000000 + <bootloader_length> + 0x1000);
 
@@ -270,11 +273,11 @@ ASSERT (_vector_spacing == 0 || SIZEOF(.vector_1) <= (_vector_spacing << 5), "fu
 
 ### Note
 
-- **As the Device configuration bits should be updated by bootloader only, the application linker script should not have any device configuration settings**
+- **The bootloader and the application must have the same device configuration bit settings. The Device configuration bit settings from the bootloader project will be updated by the programmer/debugger, Hence the application linker script should not have any device configuration bit settings. The application project will use the device configuration bit settings done by bootloader.**
 
 - **Device configurations and debug exception need to discarded from final hex file for the application project.**
 
-```
+```c
 /DISCARD/ : { *(._debug_exception) }
 /DISCARD/ : { *(.config_*) }
 ```
@@ -283,7 +286,7 @@ ASSERT (_vector_spacing == 0 || SIZEOF(.vector_1) <= (_vector_spacing << 5), "fu
 
 - **Data Memory Origin** and **Data Memory Length** values should be updated in linkerscript for reserving configured bytes from start of RAM to **trigger bootloader from firmware**
 
-```
+```c
 /* Reserve <trigger_len> Bytes to Store Bootloader Trigger Pattern */
 kseg0_data_mem       (w!x)  : ORIGIN = <ram_start> + <trigger_len>, LENGTH = <ram_length> - <trigger_len>
 ```
@@ -296,4 +299,7 @@ kseg0_data_mem       (w!x)  : ORIGIN = <ram_start> + <trigger_len>, LENGTH = <ra
 ${MP_CC_DIR}/xc32-objcopy -I ihex -O binary ${DISTDIR}/${PROJECTNAME}.${IMAGE_TYPE}.hex ${DISTDIR}/${PROJECTNAME}.${IMAGE_TYPE}.bin
     ```
 
-    ![application_config_post_build_script](./images/application_config_post_build_script.png)
+    <p align="center">
+        <img src = "./images/application_config_post_build_script.png"/>
+    </p>
+

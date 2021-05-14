@@ -21,18 +21,18 @@ To build the application, refer to the following table and open the project usin
 
 | Project Name      | Description                                    |
 | ----------------- | ---------------------------------------------- |
-| bootloader/firmware/pic32mk_mcj_curiosity_pro.X    | MPLABX Project for PIC32MK MCJ Curiosity Pro Development Board |
+| bootloader/firmware/pic32mk_mcj_curiosity_pro.X    | MPLABX Project for [PIC32MK MCJ Curiosity Pro](https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/DT100113) |
 
 ### Test Application
 
 | Project Name      | Description                                    |
 | ----------------- | ---------------------------------------------- |
-| test_app/firmware/pic32mk_mcj_curiosity_pro.X    | MPLABX Project for PIC32MK MCJ Curiosity Pro Development Board |
+| test_app/firmware/pic32mk_mcj_curiosity_pro.X    | MPLABX Project for [PIC32MK MCJ Curiosity Pro](https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/DT100113) |
 
-## Setting up PIC32MK MCJ Curiosity Pro Development Board
+## Setting up [PIC32MK MCJ Curiosity Pro](https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/DT100113)
 
 - Install an [USB UART click](https://www.mikroe.com/usb-uart-click) board on to the [mikroBUS Xplained Pro](https://www.microchip.com/developmenttools/ProductDetails/ATMBUSADAPTER-XPRO) board
-- Connect the [mikroBUS Xplained Pro](https://www.microchip.com/developmenttools/ProductDetails/ATMBUSADAPTER-XPRO) board to the J501 header of the PIC32MK MCJ Curiosity Pro Development Board
+- Connect the [mikroBUS Xplained Pro](https://www.microchip.com/developmenttools/ProductDetails/ATMBUSADAPTER-XPRO) board to the J501 header of the [PIC32MK MCJ Curiosity Pro](https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/DT100113)
 - Connect mini USB cable to the [USB UART click](https://www.mikroe.com/usb-uart-click) board. This will enumerate the USB to UART port
 - For programming, Connect micro USB cable to the 'Debug USB' connector(J1) on the board to the computer
 

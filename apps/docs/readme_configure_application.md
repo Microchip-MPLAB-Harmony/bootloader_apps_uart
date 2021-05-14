@@ -9,6 +9,6 @@ nav_order: 3
 
 # Configuring an Application to be bootloaded
 
-- To bootload a SAM based application refer to [SAM Application Configuration](./readme_configure_application_sam.md)
+- To bootload a CORTEX-M based application refer to [Application Configurations for CORTEX-M based MCUs](./readme_configure_application_sam.md)
 
-- To bootload a PIC32M based application refer to [PIC32M Application Configuration](./readme_configure_application_pic32m.md)
+- To bootload a MIPS based application refer to [Application Configurations for MIPS based MCUs](./readme_configure_application_pic32m.md)
