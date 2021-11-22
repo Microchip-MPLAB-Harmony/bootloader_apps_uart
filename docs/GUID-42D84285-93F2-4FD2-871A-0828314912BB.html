@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE11" /><meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.type" content="topic" />
+<meta name="DC.title" content="PIC32MK GP Development Kit: Building and Running the UART Bootloader applications" />
+<meta name="DC.relation" scheme="URI" content="GUID-2A9EAD6F-16A9-48AC-AB83-C48C263D2A5F.html" />
+<meta name="DC.format" content="XHTML" />
+<meta name="DC.identifier" content="pic32mk-gp-development-kit-building-and-running-the-uart-bootloader-applications" />
+<link rel="stylesheet" type="text/css" href="stylesheets/atmel.css" />
+<title>PIC32MK GP Development Kit: Building and Running the UART Bootloader applications</title>
+<meta name="Microsoft.Help.Id" content="GUID-FA810B32-056A-4A0B-9BB9-6F769ACD4D57-pic32mk-gp-development-kit-building-and-running-the-uart-bootloader-applications" />
+<meta name="Microsoft.Help.TocParent" content="GUID-FA810B32-056A-4A0B-9BB9-6F769ACD4D57" />
+<meta name="Microsoft.Help.TocOrder" content="0" />
+<meta name="Microsoft.Help.Locale" content="en-US" />
+<meta name="Microsoft.Help.TopicLocale" content="en-US" />
+<meta name="Microsoft.Help.DisplayVersion" content="MPLAB® Harmony Bootloader Application Examples for UART Reference A 11/2021" />
+<script language="javascript">
+       
+       if (window.parent.location.protocol != 'file:') {
+				document.addEventListener('click', function(e) {
+				    if (e.target) {
+               if (e.target.nodeName == "A" ) {
+                    if (!e.target.target) {
+                      e.preventDefault();
+                      e.stopPropagation();
+                              
+                      var origUrl = window.parent.location.href.substr(0, window.parent.location.href.indexOf("?"));
+                      if (origUrl.length === 0) {
+                          origUrl = window.parent.location.href;
+                      }
+                      var href= e.target.getAttribute("href");
+                      var parts = href.split("#");
+          
+                      var url = "";
+                      if (parts.length == 2 ) {
+                        if (!parts[0].length) {
+                            url = window.parent.location.search.replace('?','')
+                        } else {
+                            url = parts[0].replace('.html','');
+                        }
+                      } else {
+                        url = parts[0].replace('.html','');
+                      }
+
+                      if (parts.length == 2) {
+                          url += "#" + parts[1];
+                      }
+    
+                      window.parent.location.href = origUrl + "?" + url;
+
+                      return false;
+                    }
+               }
+            }
+				});
+			}
+
+		</script><script language="javascript">
+        function cpy(id, button) {
+        
+            var element = document.getElementById(id);
+            var content = element.getAttribute("content");
+            var textArea = document.createElement("textarea");
+            
+            // Place in the top-left corner of screen regardless of scroll position.
+            textArea.style.position = 'fixed';
+            textArea.style.top = 0;
+            textArea.style.left = 0;
+            
+            // Ensure it has a small width and height. Setting to 1px / 1em
+            // doesn't work as this gives a negative w/h on some browsers.
+            textArea.style.width = '2em';
+            textArea.style.height = '2em';
+            
+            // We don't need padding, reducing the size if it does flash render.
+            textArea.style.padding = 0;
+            
+            // Clean up any borders.
+            textArea.style.border = 'none';
+            textArea.style.outline = 'none';
+            textArea.style.boxShadow = 'none';
+            
+            // Avoid flash of the white box if rendered for any reason.
+            textArea.style.background = 'transparent';
+            
+            
+            textArea.value = content;
+            
+            document.body.appendChild(textArea);
+            textArea.focus();
+            textArea.select();
+            
+            try {
+               var successful = document.execCommand('copy');
+               var msg = successful ? 'successful' : 'unsuccessful';
+               if (!button.classList.contains("copied")){
+                  button.textContent = "Copied";
+                  button.classList.add("copied");
+                  setTimeout(function(){
+                    button.textContent = "Copy";
+                    button.classList.remove("copied");
+                  },1000);
+               }
+            } catch (err) {
+              console.log('Oops, unable to copy');
+            }
+            
+            document.body.removeChild(textArea);
+        }
+      </script><script language="javascript">
+          
+          // Add the MathML namespace to html
+          var html = document.getElementsByTagName("html")[0],
+          head = document.getElementsByTagName("head")[0];
+          
+          var mathJax = document.createElement("script");
+          mathJax.src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML";
+          head.appendChild(mathJax);
+          
+          html.setAttribute("xmlns:m","http://www.w3.org/1998/Math/MathML");
+          
+          function inIframe() { try { return window.self !== window.top; } catch (e) { return true; } }
+          
+          if (!inIframe()) { 
+          
+          var Default = "index.html?GUID-42D84285-93F2-4FD2-871A-0828314912BB"; 
+          
+          var displaylocation = "value" + window.location.href;
+          
+          var GUIDS = displaylocation.split('GUID');          
+          
+          if (displaylocation.indexOf('#GUID') != -1) {            
+          var First = GUIDS[1].split('.html');  
+          if (GUIDS[3]){First = GUIDS[2].split('.html');}
+          if (GUIDS[4]){First = GUIDS[3].split('.html');}
+          if (GUIDS[5]){First = GUIDS[4].split('.html');}
+          
+          var Second = GUIDS[2].split('#');   
+          if (GUIDS[3]){Second = GUIDS[3].split('#');}
+          if (GUIDS[4]){Second = GUIDS[4].split('#');}
+          if (GUIDS[5]){Second = GUIDS[5].split('#');}
+          
+          Default = "index.html?" + "GUID" + First[0] + "GUID" + Second[0];     
+          }                    
+          window.top.location = Default;
+          }       
+          
+        </script><style xml:space="">
+        
+          button.copy-code{
+            display:none;
+            padding:0.7em 1.4em;
+            margin:0 0.3em 0.3em 0;
+            border-radius:0.15em;
+            box-sizing: border-box;
+            text-decoration:none;
+            font-family:'Roboto',sans-serif;
+            text-transform:uppercase;
+            font-weight:400;
+            color:#FFFFFF;
+            background-color:#9c9c9c;
+            box-shadow:inset 0 -0.6em 0 -0.35em rgba(0,0,0,0.17);
+            text-align:center;
+            position:relative;
+            border: 0;
+            float: right;
+            border-radius: .5em;
+            cursor: pointer;
+          }
+          button.copy-code:active{
+            top:0.1em;
+          }
+          
+          pre:hover button.copy-code{
+            display: inline-block !important;
+          }
+          button.copy-code.copied {
+            cursor: default !important;
+          }
+          
+          
+          @media all and (max-width:30em){
+            button.copy-code{
+              display:block;
+              margin:0.4em auto;
+            }
+          }
+        
+        
+      </style><link rel="stylesheet" type="text/css" href="stylesheets/common-extended.css" /></head>
+<body id="pic32mk-gp-development-kit-building-and-running-the-uart-bootloader-applications">
+<h1 class="title topictitle1" id="ariaid-title1">PIC32MK GP Development Kit: Building and Running the UART Bootloader applications</h1><div class="body"><p class="p"><strong class="ph b">Downloading and building the application</strong></p>
+<p class="p">To clone or download this application from Github,go to the <a class="xref" href="https://github.com/Microchip-MPLAB-Harmony/bootloader_apps_uart" target="_blank">main page of this repository</a> and then click Clone button to clone this repo or download as zip file. This content can also be download using content manager by following <a class="xref" href="https://github.com/Microchip-MPLAB-Harmony/contentmanager/wiki" target="_blank">these instructions</a></p>
+<p class="p">Path of the application within the repository is <strong class="ph b">apps/uart_bootloader/</strong></p>
+<p class="p">To build the application, refer to the following table and open the project using its IDE.</p>
+<p class="p"><strong class="ph b">Bootloader Application</strong></p>
+
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" class="table" frame="border" border="1" rules="all"><col style="width:" /><col style="width:" /><thead class="thead" style="text-align:left;"><tr class="row"><th class="entry cellrowborder" style="vertical-align:middle;" id="d14497e37"><span>Project Name</span></th>
+<th class="entry cellrowborder" style="vertical-align:middle;" id="d14497e39"><span>Description</span></th>
+</tr>
+</thead>
+<tbody class="tbody"><tr class="row"><td class="entry cellrowborder" style="vertical-align:middle;" headers="d14497e37 "><span>bootloader/firmware/pic32mk_gp_db.X</span></td>
+<td class="entry cellrowborder" style="vertical-align:middle;" headers="d14497e39 "><span>MPLABX Project for <a class="xref" href="https://www.microchip.com/developmenttools/ProductDetails/dm320106" target="_blank">PIC32MK GP Development Kit</a></span></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="p"><strong class="ph b">Test Application</strong></p>
+
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" class="table" frame="border" border="1" rules="all"><col style="width:" /><col style="width:" /><thead class="thead" style="text-align:left;"><tr class="row"><th class="entry cellrowborder" style="vertical-align:middle;" id="d14497e59"><span>Project Name</span></th>
+<th class="entry cellrowborder" style="vertical-align:middle;" id="d14497e61"><span>Description</span></th>
+</tr>
+</thead>
+<tbody class="tbody"><tr class="row"><td class="entry cellrowborder" style="vertical-align:middle;" headers="d14497e59 "><span>test_app/firmware/pic32mk_gp_db.X</span></td>
+<td class="entry cellrowborder" style="vertical-align:middle;" headers="d14497e61 "><span>MPLABX Project for <a class="xref" href="https://www.microchip.com/developmenttools/ProductDetails/dm320106" target="_blank">PIC32MK GP Development Kit</a></span></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="p"><strong class="ph b">Setting up <a class="xref" href="https://www.microchip.com/developmenttools/ProductDetails/dm320106" target="_blank">PIC32MK GP Development Kit</a></strong></p>
+<ul class="ul"><li class="li"><p class="p">Connect a micro USB cable to the USB to UART port J25. This will enumerate as a COM port on the PC.</p>
+</li>
+<li class="li"><p class="p">For programming, Connect a micro USB cable to the USB DEBUG port J12</p>
+</li>
+</ul>
+<p class="p"><strong class="ph b">Setting up the host script</strong></p>
+<ul class="ul"><li class="li"><p class="p">Refer to <a class="xref" href="GUID-E9768065-2540-409B-AC12-3DA9417F01F5.html">Bootloader Host Script Help</a> for setting up the <strong class="ph b">btl_host.py</strong> utility used to send the application binary from host PC</p>
+</li>
+</ul>
+<p class="p"><strong class="ph b">Running the Application</strong></p>
+<ol class="ol"><li class="li"><span class="indent-level-default">1.</span><p class="p">Open the test application project <em class="ph i">test_app/firmware/pic32mk_gp_db.X</em> in the IDE</p>
+</li>
+<li class="li"><span class="indent-level-default">2.</span><p class="p">Build the project to generate the binary <strong class="ph b">(Do not program the binary)</strong></p>
+</li>
+<li class="li"><span class="indent-level-default">3.</span><p class="p">Open the bootloader project <em class="ph i">bootloader/firmware/pic32mk_gp_db.X</em> in the IDE</p>
+</li>
+<li class="li"><span class="indent-level-default">4.</span><p class="p">Build and program the application using the IDE</p>
+</li>
+<li class="li"><span class="indent-level-default">5.</span><p class="p">Run the <strong class="ph b">btl_host.py</strong> from command prompt to program the application binary</p>
+<pre class="pre codeblock"><button title="Copy Code" class="copy-code" onclick="cpy('d14497e130', this);">Copy</button><code id="d14497e130" content=" python &lt;harmony3_path&gt;/bootloader/tools/btl_host.py -v -i &lt;COM PORT&gt; -d pic32mk -a 0x9D000000 -f &lt;harmony3_path&gt;/bootloader_apps_uart/apps/uart_bootloader/test_app/firmware/pic32mk_gp_db.X/dist/pic32mk_gp_db/production/pic32mk_gp_db.X.production.bin&#xD;"> python &lt;harmony3_path&gt;/bootloader/tools/btl_host.py -v -i &lt;COM PORT&gt; -d pic32mk -a 0x9D000000 -f &lt;harmony3_path&gt;/bootloader_apps_uart/apps/uart_bootloader/test_app/firmware/pic32mk_gp_db.X/dist/pic32mk_gp_db/production/pic32mk_gp_db.X.production.bin&#xD;</code></pre></li>
+<li class="li"><span class="indent-level-default">6.</span><p class="p">Following snapshot shows output of successfully programming the test application</p>
+<ul class="ul"><li class="li"><p class="p"><strong class="ph b">Rebooting</strong> and <strong class="ph b">Reboot Done</strong> messages in below output signifies that bootloading is successful</p>
+</li>
+</ul>
+<br /><img class="image" src="GUID-9D45B2EF-7159-4DF7-BC6F-3C43C2113B07-low.png" alt="output" /><br /></li>
+<li class="li"><span class="indent-level-default">7.</span><p class="p">If above step is successful then the <strong class="ph b">LED3</strong> should start blinking</p>
+</li>
+<li class="li"><span class="indent-level-default">8.</span><p class="p">Open the Terminal application (Ex.:Tera Term) on the computer</p>
+</li>
+<li class="li"><span class="indent-level-default">9.</span><p class="p">Configure the serial port settings as follows:</p>
+<ul class="ul"><li class="li"><p class="p">Baud : 115200</p>
+</li>
+<li class="li"><p class="p">Data : 8 Bits</p>
+</li>
+<li class="li"><p class="p">Parity : None</p>
+</li>
+<li class="li"><p class="p">Stop : 1 Bit</p>
+</li>
+<li class="li"><p class="p">Flow Control : None</p>
+</li>
+</ul>
+</li>
+<li class="li"><span class="indent-level-default">10.</span><p class="p">Reset or Power cycle the device</p>
+</li>
+<li class="li"><span class="indent-level-default">11.</span><p class="p"><strong class="ph b">LED3</strong> should start blinking and you should see below output on the console</p>
+<br /><img class="image" src="GUID-8AF21138-F5D5-442D-AF4E-C633D606BD08-low.png" alt="output" /><br /></li>
+<li class="li"><span class="indent-level-default">12.</span><p class="p">Press and hold the Switch <strong class="ph b">S1</strong> to trigger Bootloader from test application and you should see below output</p>
+<br /><img class="image" src="GUID-DEA0E13D-969E-4A40-A120-7330F0C46FCE-low.png" alt="output" /><br /></li>
+<li class="li"><span class="indent-level-default">13.</span><p class="p">Repeat Steps 5-11 once and jump to Step-14.</p>
+<ul class="ul"><li class="li"><p class="p">This step is to verify that bootloader is running after triggering bootloader from test application in Step 12</p>
+</li>
+</ul>
+</li>
+<li class="li"><span class="indent-level-default">14.</span><p class="p"><strong class="ph b">Press and hold</strong> the Switch <strong class="ph b">S1</strong> and then press MCLR button or Power cycle the device to force trigger bootloader at startup</p>
+</li>
+<li class="li"><span class="indent-level-default">15.</span><p class="p">Repeat Steps 5-11 once</p>
+<ul class="ul"><li class="li"><p class="p">This step is to verify whether bootloader is triggered by switch press at reset</p>
+</li>
+</ul>
+</li>
+</ol>
+<p class="p"><strong class="ph b">Additional Steps (Optional)</strong></p>
+<ul class="ul"><li class="li"><p class="p">To bootload any other application refer to <a class="xref" href="GUID-3E6213D5-3312-49A9-A6C7-897B8AD57414.html">Configuring an application to be bootloaded for MIPS based MCUs</a></p>
+</li>
+</ul>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="GUID-2A9EAD6F-16A9-48AC-AB83-C48C263D2A5F.html">UART Bootloader</a></div>
+</div>
+</div></body>
+</html>

@@ -8,6 +8,16 @@ nav_order: 99
 
 # Microchip MPLAB® Harmony 3 Release Notes
 
+## UART Bootloader Applications Release v3.1.1
+
+- Updated Bootloader documentation to new format
+
+### Known Issues
+- No changes from v3.1.0
+
+### Development Tools
+- No changes from v3.1.0
+
 ## UART Bootloader Applications Release v3.1.0
 
 ### New Features
