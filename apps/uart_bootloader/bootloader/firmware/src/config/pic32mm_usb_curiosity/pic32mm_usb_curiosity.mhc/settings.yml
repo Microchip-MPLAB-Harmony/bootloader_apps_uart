@@ -1,0 +1,14 @@
+format_version: v1.0
+configName: pic32mm_usb_curiosity
+folderName: pic32mm_usb_curiosity
+frameworkPath: C:\projects\harmony_3
+processor: PIC32MM0256GPM064
+projectName: uart_bootloader_pic32mm_usb_curiosity
+settings:
+  PackageFilter: ''
+  FORCE_OPTIMIZATION: 'false'
+  GENERATE_BACKUP: 'true'
+  TRUSTZONE: 'false'
+  CMSISPath: dev_packs\arm\CMSIS\5.8.0
+  MERGE_STRATEGY: USER_ALL
+  DFPPath: dev_packs\Microchip\PIC32MM_GPM_DFP\1.3.50\atdf\PIC32MM0256GPM064.atdf
