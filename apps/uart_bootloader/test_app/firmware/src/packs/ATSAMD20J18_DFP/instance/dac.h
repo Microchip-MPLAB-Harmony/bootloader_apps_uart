@@ -1,7 +1,7 @@
-/**
- * \brief Instance header file for ATSAMD20J18
+/*
+ * Instance header file for ATSAMD20J18
  *
- * Copyright (c) 2021 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2022 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -26,7 +26,7 @@
 
 
 /* ========== Instance Parameter definitions for DAC peripheral ========== */
-#define DAC_GCLK_ID                              _UL_(26)   
-#define DAC_INSTANCE_ID                          _UL_(82)   
+#define DAC_GCLK_ID                              (26)       
+#define DAC_INSTANCE_ID                          (82)       
 
 #endif /* _SAMD20_DAC_INSTANCE_ */

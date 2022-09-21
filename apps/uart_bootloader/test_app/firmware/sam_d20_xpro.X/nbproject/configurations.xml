@@ -33,6 +33,8 @@
               <itemPath>../src/config/sam_d20_xpro/peripheral/evsys/plib_evsys.h</itemPath>
             </logicalFolder>
             <logicalFolder name="f6" displayName="nvic" projectFiles="true">
+              <logicalFolder name="f1" displayName="usart" projectFiles="true">
+              </logicalFolder>
               <itemPath>../src/config/sam_d20_xpro/peripheral/nvic/plib_nvic.h</itemPath>
             </logicalFolder>
             <logicalFolder name="f2" displayName="nvmctrl" projectFiles="true">
@@ -81,6 +83,7 @@
             <itemPath>../src/packs/ATSAMD20J18_DFP/component/sysctrl.h</itemPath>
             <itemPath>../src/packs/ATSAMD20J18_DFP/component/tc.h</itemPath>
             <itemPath>../src/packs/ATSAMD20J18_DFP/component/wdt.h</itemPath>
+            <itemPath>../src/packs/ATSAMD20J18_DFP/component/fuses.h</itemPath>
           </logicalFolder>
           <logicalFolder name="f3" displayName="instance" projectFiles="true">
             <itemPath>../src/packs/ATSAMD20J18_DFP/instance/ac.h</itemPath>
@@ -117,6 +120,7 @@
           </logicalFolder>
           <logicalFolder name="f2" displayName="pio" projectFiles="true">
             <itemPath>../src/packs/ATSAMD20J18_DFP/pio/samd20j18.h</itemPath>
+            <itemPath>../src/packs/ATSAMD20J18_DFP/instance/fuses.h</itemPath>
           </logicalFolder>
           <itemPath>../src/packs/ATSAMD20J18_DFP/device.h</itemPath>
           <itemPath>../src/packs/ATSAMD20J18_DFP/atsamd20j18.h</itemPath>
@@ -184,6 +188,8 @@
               <itemPath>../src/config/sam_d20_xpro/peripheral/evsys/plib_evsys.c</itemPath>
             </logicalFolder>
             <logicalFolder name="f6" displayName="nvic" projectFiles="true">
+              <logicalFolder name="f1" displayName="usart" projectFiles="true">
+              </logicalFolder>
               <itemPath>../src/config/sam_d20_xpro/peripheral/nvic/plib_nvic.c</itemPath>
             </logicalFolder>
             <logicalFolder name="f2" displayName="nvmctrl" projectFiles="true">
@@ -214,6 +220,7 @@
       </logicalFolder>
       <itemPath>../src/main.c</itemPath>
       <itemPath>../src/app.c</itemPath>
+      <itemPath>../src/config/sam_d20_xpro/pin_configurations.csv</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -234,6 +241,8 @@
       </logicalFolder>
       <itemPath>Makefile</itemPath>
       <itemPath>../src/config/sam_d20_xpro/harmony-manifest-success.yml</itemPath>
+      <itemPath>../src/config/sam_d20_xpro/pin_configurations.csv</itemPath>
+      <itemPath>uart_bootloader_test_app_sam_d20_xpro.mc3</itemPath>
     </logicalFolder>
   </logicalFolder>
   <sourceRootList>
@@ -310,6 +319,7 @@
       <C32>
         <property key="additional-warnings" value="true"/>
         <property key="addresss-attribute-use" value="false"/>
+        <property key="appendMe" value=""/>
         <property key="enable-app-io" value="false"/>
         <property key="enable-omit-frame-pointer" value="false"/>
         <property key="enable-symbols" value="true"/>
@@ -366,6 +376,7 @@
         <property key="additional-options-use-response-files" value="false"/>
         <property key="additional-options-write-sla" value="false"/>
         <property key="allocate-dinit" value="false"/>
+        <property key="appendMe" value="-DRAM_ORIGIN=0x20000010, -DRAM_LENGTH=0x7ff0"/>
         <property key="code-dinit" value="false"/>
         <property key="ebase-addr" value=""/>
         <property key="enable-check-sections" value="false"/>
@@ -406,6 +417,7 @@
       <C32CPP>
         <property key="additional-warnings" value="false"/>
         <property key="addresss-attribute-use" value="false"/>
+        <property key="appendMe" value=""/>
         <property key="check-new" value="false"/>
         <property key="eh-specs" value="true"/>
         <property key="enable-app-io" value="false"/>

@@ -21,20 +21,7 @@
  */
 
 /* file generated from device description version 2019-11-25T06:48:59Z */
-#ifndef _SAMD20_TC6_INSTANCE_
-#define _SAMD20_TC6_INSTANCE_
+#ifndef _SAMD20_FUSES_INSTANCE_
+#define _SAMD20_FUSES_INSTANCE_
 
-
-/* ========== Instance Parameter definitions for TC6 peripheral ========== */
-#define TC6_CC8_NUM                              (2)        
-#define TC6_CC16_NUM                             (2)        
-#define TC6_CC32_NUM                             (2)        
-#define TC6_DITHERING_EXT                        (0)        
-#define TC6_GCLK_ID                              (22)       
-#define TC6_MASTER                               (1)        
-#define TC6_OW_NUM                               (2)        
-#define TC6_PERIOD_EXT                           (0)        
-#define TC6_SHADOW_EXT                           (0)        
-#define TC6_INSTANCE_ID                          (78)       
-
-#endif /* _SAMD20_TC6_INSTANCE_ */
+#endif /* _SAMD20_FUSES_INSTANCE_ */

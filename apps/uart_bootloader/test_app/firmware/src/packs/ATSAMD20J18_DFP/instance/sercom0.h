@@ -1,7 +1,7 @@
-/**
- * \brief Instance header file for ATSAMD20J18
+/*
+ * Instance header file for ATSAMD20J18
  *
- * Copyright (c) 2021 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2022 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -26,10 +26,10 @@
 
 
 /* ========== Instance Parameter definitions for SERCOM0 peripheral ========== */
-#define SERCOM0_GCLK_ID_CORE                     _UL_(13)   
-#define SERCOM0_GCLK_ID_SLOW                     _UL_(12)   
-#define SERCOM0_INT_MSB                          _UL_(3)    
-#define SERCOM0_PMSB                             _UL_(3)    
-#define SERCOM0_INSTANCE_ID                      _UL_(66)   
+#define SERCOM0_GCLK_ID_CORE                     (13)       
+#define SERCOM0_GCLK_ID_SLOW                     (12)       
+#define SERCOM0_INT_MSB                          (3)        
+#define SERCOM0_PMSB                             (3)        
+#define SERCOM0_INSTANCE_ID                      (66)       
 
 #endif /* _SAMD20_SERCOM0_INSTANCE_ */
