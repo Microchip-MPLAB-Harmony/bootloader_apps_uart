@@ -33,6 +33,8 @@
               <itemPath>../src/config/sam_d11_xpro/peripheral/evsys/plib_evsys.h</itemPath>
             </logicalFolder>
             <logicalFolder name="f6" displayName="nvic" projectFiles="true">
+              <logicalFolder name="f1" displayName="usart" projectFiles="true">
+              </logicalFolder>
               <itemPath>../src/config/sam_d11_xpro/peripheral/nvic/plib_nvic.h</itemPath>
             </logicalFolder>
             <logicalFolder name="f1" displayName="nvmctrl" projectFiles="true">
@@ -86,6 +88,7 @@
             <itemPath>../src/packs/ATSAMD11D14AM_DFP/component/tcc.h</itemPath>
             <itemPath>../src/packs/ATSAMD11D14AM_DFP/component/usb.h</itemPath>
             <itemPath>../src/packs/ATSAMD11D14AM_DFP/component/wdt.h</itemPath>
+            <itemPath>../src/packs/ATSAMD11D14AM_DFP/component/fuses.h</itemPath>
           </logicalFolder>
           <logicalFolder name="f3" displayName="instance" projectFiles="true">
             <itemPath>../src/packs/ATSAMD11D14AM_DFP/instance/ac.h</itemPath>
@@ -118,6 +121,7 @@
           </logicalFolder>
           <logicalFolder name="f2" displayName="pio" projectFiles="true">
             <itemPath>../src/packs/ATSAMD11D14AM_DFP/pio/samd11d14am.h</itemPath>
+            <itemPath>../src/packs/ATSAMD11D14AM_DFP/instance/fuses.h</itemPath>
           </logicalFolder>
           <itemPath>../src/packs/ATSAMD11D14AM_DFP/device.h</itemPath>
           <itemPath>../src/packs/ATSAMD11D14AM_DFP/atsamd11d14am.h</itemPath>
@@ -160,6 +164,22 @@
       <logicalFolder name="f1" displayName="config" projectFiles="true">
         <logicalFolder name="f1" displayName="sam_d11_xpro" projectFiles="true">
           <logicalFolder name="f3" displayName="bsp" projectFiles="true">
+            <logicalFolder name="f1" displayName="clock" projectFiles="true">
+            </logicalFolder>
+            <logicalFolder name="f2" displayName="evsys" projectFiles="true">
+            </logicalFolder>
+            <logicalFolder name="f3" displayName="nvic" projectFiles="true">
+            </logicalFolder>
+            <logicalFolder name="f4" displayName="nvmctrl" projectFiles="true">
+            </logicalFolder>
+            <logicalFolder name="f5" displayName="port" projectFiles="true">
+            </logicalFolder>
+            <logicalFolder name="f6" displayName="sercom" projectFiles="true">
+              <logicalFolder name="f1" displayName="usart" projectFiles="true">
+              </logicalFolder>
+            </logicalFolder>
+            <logicalFolder name="f7" displayName="systick" projectFiles="true">
+            </logicalFolder>
             <itemPath>../src/config/sam_d11_xpro/bsp/bsp.c</itemPath>
           </logicalFolder>
           <logicalFolder name="f1" displayName="peripheral" projectFiles="true">
@@ -216,12 +236,15 @@
       </logicalFolder>
       <itemPath>../src/main.c</itemPath>
       <itemPath>../src/app_d11.c</itemPath>
+      <itemPath>../src/config/sam_d11_xpro/pin_configurations.csv</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
                    projectFiles="false">
       <itemPath>Makefile</itemPath>
       <itemPath>../src/config/sam_d11_xpro/harmony-manifest-success.yml</itemPath>
+      <itemPath>../src/config/sam_d11_xpro/pin_configurations.csv</itemPath>
+      <itemPath>uart_bootloader_test_app_sam_d11_xpro.mc3</itemPath>
     </logicalFolder>
   </logicalFolder>
   <sourceRootList>
@@ -298,6 +321,7 @@
       <C32>
         <property key="additional-warnings" value="true"/>
         <property key="addresss-attribute-use" value="false"/>
+        <property key="appendMe" value=""/>
         <property key="enable-app-io" value="false"/>
         <property key="enable-omit-frame-pointer" value="false"/>
         <property key="enable-symbols" value="true"/>
@@ -354,6 +378,7 @@
         <property key="additional-options-use-response-files" value="false"/>
         <property key="additional-options-write-sla" value="false"/>
         <property key="allocate-dinit" value="false"/>
+        <property key="appendMe" value="-DRAM_ORIGIN=0x20000010, -DRAM_LENGTH=0xff0"/>
         <property key="code-dinit" value="false"/>
         <property key="ebase-addr" value=""/>
         <property key="enable-check-sections" value="false"/>
@@ -394,6 +419,7 @@
       <C32CPP>
         <property key="additional-warnings" value="false"/>
         <property key="addresss-attribute-use" value="false"/>
+        <property key="appendMe" value=""/>
         <property key="check-new" value="false"/>
         <property key="eh-specs" value="true"/>
         <property key="enable-app-io" value="false"/>

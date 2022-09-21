@@ -1,7 +1,7 @@
-/**
- * \brief Instance header file for ATSAMD11D14AU
+/*
+ * Instance header file for ATSAMD11D14AU
  *
- * Copyright (c) 2021 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2022 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -26,8 +26,8 @@
 
 
 /* ========== Instance Parameter definitions for DAC peripheral ========== */
-#define DAC_DMAC_ID_EMPTY                        _UL_(19)   /* Index of DMAC EMPTY trigger */
-#define DAC_GCLK_ID                              _UL_(22)   /* Index of Generic Clock */
-#define DAC_INSTANCE_ID                          _UL_(74)   
+#define DAC_DMAC_ID_EMPTY                        (19)       /* Index of DMAC EMPTY trigger */
+#define DAC_GCLK_ID                              (22)       /* Index of Generic Clock */
+#define DAC_INSTANCE_ID                          (74)       
 
 #endif /* _SAMD11_DAC_INSTANCE_ */

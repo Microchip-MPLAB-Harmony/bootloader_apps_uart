@@ -1,7 +1,7 @@
-/**
- * \brief Instance header file for ATSAMD11D14AU
+/*
+ * Instance header file for ATSAMD11D14AU
  *
- * Copyright (c) 2021 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2022 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -26,7 +26,7 @@
 
 
 /* ========== Instance Parameter definitions for PAC2 peripheral ========== */
-#define PAC2_WPROT_DEFAULT_VAL                   _UL_(0x00001000) /* PAC protection mask at reset */
-#define PAC2_INSTANCE_ID                         _UL_(64)   
+#define PAC2_WPROT_DEFAULT_VAL                   (0x00001000) /* PAC protection mask at reset */
+#define PAC2_INSTANCE_ID                         (64)       
 
 #endif /* _SAMD11_PAC2_INSTANCE_ */

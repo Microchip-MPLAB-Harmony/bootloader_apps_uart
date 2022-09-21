@@ -1,7 +1,7 @@
-/**
- * \brief Instance header file for ATSAMD11D14AU
+/*
+ * Instance header file for ATSAMD11D14AU
  *
- * Copyright (c) 2021 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2022 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -26,14 +26,14 @@
 
 
 /* ========== Instance Parameter definitions for DMAC peripheral ========== */
-#define DMAC_CH_BITS                             _UL_(3)    /* Number of bits to select channel */
-#define DMAC_CH_NUM                              _UL_(6)    /* Number of channels */
-#define DMAC_EVIN_NUM                            _UL_(4)    /* Number of input events */
-#define DMAC_EVOUT_NUM                           _UL_(4)    /* Number of output events */
-#define DMAC_LVL_BITS                            _UL_(2)    /* Number of bit to select level priority */
-#define DMAC_LVL_NUM                             _UL_(4)    /* Enable priority level number */
-#define DMAC_TRIG_BITS                           _UL_(5)    /* Number of bits to select trigger source */
-#define DMAC_TRIG_NUM                            _UL_(20)   /* Number of peripheral triggers */
-#define DMAC_INSTANCE_ID                         _UL_(36)   
+#define DMAC_CH_BITS                             (3)        /* Number of bits to select channel */
+#define DMAC_CH_NUM                              (6)        /* Number of channels */
+#define DMAC_EVIN_NUM                            (4)        /* Number of input events */
+#define DMAC_EVOUT_NUM                           (4)        /* Number of output events */
+#define DMAC_LVL_BITS                            (2)        /* Number of bit to select level priority */
+#define DMAC_LVL_NUM                             (4)        /* Enable priority level number */
+#define DMAC_TRIG_BITS                           (5)        /* Number of bits to select trigger source */
+#define DMAC_TRIG_NUM                            (20)       /* Number of peripheral triggers */
+#define DMAC_INSTANCE_ID                         (36)       
 
 #endif /* _SAMD11_DMAC_INSTANCE_ */

@@ -52,7 +52,6 @@
 // Section: PORT Implementation
 // *****************************************************************************
 // *****************************************************************************
-
 // *****************************************************************************
 /* Function:
 
@@ -72,16 +71,19 @@
 void PORT_Initialize(void)
 {
    /************************** GROUP 0 Initialization *************************/
-   PORT_REGS->GROUP[0].PORT_DIR = 0x10000;
-   PORT_REGS->GROUP[0].PORT_OUT = 0x14000;
-   PORT_REGS->GROUP[0].PORT_PINCFG[10] = 0x1;
-   PORT_REGS->GROUP[0].PORT_PINCFG[11] = 0x1;
-   PORT_REGS->GROUP[0].PORT_PINCFG[14] = 0x6;
+   PORT_REGS->GROUP[0].PORT_DIR = 0x10000U;
+   PORT_REGS->GROUP[0].PORT_OUT = 0x14000U;
+   PORT_REGS->GROUP[0].PORT_PINCFG[10] = 0x1U;
+   PORT_REGS->GROUP[0].PORT_PINCFG[11] = 0x1U;
+   PORT_REGS->GROUP[0].PORT_PINCFG[14] = 0x6U;
+   PORT_REGS->GROUP[0].PORT_PINCFG[16] = 0x0U;
 
-   PORT_REGS->GROUP[0].PORT_PMUX[5] = 0x33;
+   PORT_REGS->GROUP[0].PORT_PMUX[5] = 0x33U;
+   PORT_REGS->GROUP[0].PORT_PMUX[7] = 0x0U;
+   PORT_REGS->GROUP[0].PORT_PMUX[8] = 0x0U;
+
 
 }
-
 // *****************************************************************************
 /* Function:
     uint32_t PORT_GroupRead(PORT_GROUP group)
@@ -291,7 +293,7 @@ void PORT_PinPeripheralFunctionConfig(PORT_PIN pin, PERIPHERAL_FUNCTION function
     PORT_GROUP group = GET_PORT_GROUP(pin);
     uint32_t pin_num = ((uint32_t)pin) & 0x1FU;
     uint32_t pinmux_val = (uint32_t)((port_group_registers_t*)group)->PORT_PMUX[(pin_num >> 1)];
-    
+
     /* For odd pins */
     if (0U != (pin_num & 0x01U))
     {
@@ -302,7 +304,7 @@ void PORT_PinPeripheralFunctionConfig(PORT_PIN pin, PERIPHERAL_FUNCTION function
         pinmux_val = (pinmux_val & ~0x0FU) | periph_func;
     }
     ((port_group_registers_t*)group)->PORT_PMUX[(pin_num >> 1)] = (uint8_t)pinmux_val;
-    
+
     /* Enable peripheral control of the pin */
     ((port_group_registers_t*)group)->PORT_PINCFG[pin_num] |= (uint8_t)PORT_PINCFG_PMUXEN_Msk;
 }
