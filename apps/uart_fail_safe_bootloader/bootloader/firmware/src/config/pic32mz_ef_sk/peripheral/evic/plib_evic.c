@@ -60,6 +60,11 @@ void EVIC_Initialize( void )
 
     /* Configure Shadow Register Set */
     PRISS = 0x76543210;
+
+    while (PRISS != 0x76543210)
+    {
+        /* Wait for PRISS value to take effect */
+    }
 }
 
 void EVIC_SourceEnable( INT_SOURCE source )
