@@ -63,9 +63,7 @@ void CMCC_EnableDCache (void );
 void CMCC_DisableDCache (void );
 void CMCC_EnableICache (void );
 void CMCC_DisableICache (void );
-
 void CMCC_InvalidateAll (void );
-
 #ifdef __cplusplus  // Provide C++ Compatibility
     }
 #endif

@@ -1,7 +1,7 @@
-/**
- * \brief Instance header file for ATSAMG55J19
+/*
+ * Instance header file for ATSAMG55J19
  *
- * Copyright (c) 2021 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2022 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,15 +20,15 @@
  *
  */
 
-/* file generated from device description version 2019-12-16T02:54:59Z */
+/* file generated from device description version 2022-03-22T03:45:07Z */
 #ifndef _SAMG55_FLEXCOM5_INSTANCE_
 #define _SAMG55_FLEXCOM5_INSTANCE_
 
 
 /* ========== Instance Parameter definitions for FLEXCOM5 peripheral ========== */
-#define FLEXCOM5_DMAC_ID_TX                      _UL_(27)   
-#define FLEXCOM5_DMAC_ID_RX                      _UL_(13)   
-#define FLEXCOM5_INSTANCE_ID                     _UL_(21)   
-#define FLEXCOM5_CLOCK_ID                        _UL_(21)   
+#define FLEXCOM5_DMAC_ID_TX                      (27)       
+#define FLEXCOM5_DMAC_ID_RX                      (13)       
+#define FLEXCOM5_INSTANCE_ID                     (21)       
+#define FLEXCOM5_CLOCK_ID                        (21)       
 
 #endif /* _SAMG55_FLEXCOM5_INSTANCE_ */

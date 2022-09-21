@@ -1,7 +1,7 @@
-/**
- * \brief Instance header file for ATSAMG55J19
+/*
+ * Instance header file for ATSAMG55J19
  *
- * Copyright (c) 2021 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2022 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,13 +20,13 @@
  *
  */
 
-/* file generated from device description version 2019-12-16T02:54:59Z */
+/* file generated from device description version 2022-03-22T03:45:07Z */
 #ifndef _SAMG55_SPI2_INSTANCE_
 #define _SAMG55_SPI2_INSTANCE_
 
 
 /* ========== Instance Parameter definitions for SPI2 peripheral ========== */
-#define SPI2_DMAC_ID_TX                          _UL_(22)   
-#define SPI2_DMAC_ID_RX                          _UL_(8)    
+#define SPI2_DMAC_ID_TX                          (22)       
+#define SPI2_DMAC_ID_RX                          (8)        
 
 #endif /* _SAMG55_SPI2_INSTANCE_ */

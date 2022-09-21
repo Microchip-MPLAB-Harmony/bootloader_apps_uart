@@ -68,7 +68,7 @@
 // *****************************************************************************
 // *****************************************************************************
 
-#define FLEXCOM7_USART_FrequencyGet()    (uint32_t)(119996416UL)
+#define FLEXCOM7_USART_FrequencyGet()    (uint32_t)(100007936UL)
 
 /****************************** FLEXCOM7 USART API *********************************/
 
@@ -86,12 +86,12 @@ uint8_t FLEXCOM7_USART_ReadByte( void );
 
 void FLEXCOM7_USART_WriteByte( uint8_t data );
 
-bool FLEXCOM7_USART_TransmitComplete( void );
-
 bool FLEXCOM7_USART_TransmitterIsReady( void );
 
 bool FLEXCOM7_USART_ReceiverIsReady( void );
 
+
+bool FLEXCOM7_USART_TransmitComplete( void );
 
 // DOM-IGNORE-BEGIN
 #ifdef __cplusplus  // Provide C++ Compatibility

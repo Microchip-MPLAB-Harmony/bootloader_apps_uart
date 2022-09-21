@@ -1,7 +1,7 @@
 /*--------------------------------------------------------------------------
  * MPLAB XC32 Compiler -  ATSAMG55J19 linker script
  * 
- * Copyright (c) 2021, Microchip Technology Inc. and its subsidiaries ("Microchip")
+ * Copyright (c) 2022, Microchip Technology Inc. and its subsidiaries ("Microchip")
  * All rights reserved.
  * 
  * This software is developed by Microchip Technology Inc. and its
@@ -77,7 +77,7 @@ ENTRY(__XC32_RESET_HANDLER_NAME)
 #elif (RAM_LENGTH > 0x28000)
 #  error RAM_LENGTH is greater than the max size of 0x28000
 #endif
-  
+
 
 /*************************************************************************
  * Memory-Region Definitions
@@ -88,12 +88,8 @@ MEMORY
 {
   rom (LRX) : ORIGIN = ROM_ORIGIN, LENGTH = ROM_LENGTH
   ram (WX!R) : ORIGIN = RAM_ORIGIN, LENGTH = RAM_LENGTH
-  config_D0000000 : ORIGIN = 0xD0000000, LENGTH = 0x4
-  config_D0000008 : ORIGIN = 0xD0000008, LENGTH = 0x4
-  config_D0000004 : ORIGIN = 0xD0000004, LENGTH = 0x4
 
 }
-
 /*************************************************************************
  * Output region definitions.
  * CODE_REGION defines the output region for .text/.rodata.
@@ -127,15 +123,6 @@ __ram_end = ORIGIN(ram) + LENGTH(ram);
  *************************************************************************/
 SECTIONS
 {
-    .config_D0000000 : {
-      KEEP(*(.config_D0000000))
-    } > config_D0000000
-    .config_D0000008 : {
-      KEEP(*(.config_D0000008))
-    } > config_D0000008
-    .config_D0000004 : {
-      KEEP(*(.config_D0000004))
-    } > config_D0000004
 
     /*
      * The linker moves the .vectors section into itcm when itcm is
@@ -214,6 +201,7 @@ SECTIONS
 
     . = ALIGN(4);
     _etext = .;
+
 
     /*
      *  Align here to ensure that the .bss section occupies space up to

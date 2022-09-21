@@ -1,7 +1,7 @@
-/**
- * \brief Component description for FLEXCOM
+/*
+ * Component description for FLEXCOM
  *
- * Copyright (c) 2021 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2022 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,7 +20,7 @@
  *
  */
 
-/* file generated from device description version 2019-12-16T02:54:59Z */
+/* file generated from device description version 2022-03-22T03:45:07Z */
 #ifndef _SAMG55_FLEXCOM_COMPONENT_H_
 #define _SAMG55_FLEXCOM_COMPONENT_H_
 
@@ -29,38 +29,38 @@
 /* ************************************************************************** */
 
 /* -------- FLEXCOM_MR : (FLEXCOM Offset: 0x00) (R/W 32) FLEXCOM Mode register -------- */
-#define FLEXCOM_MR_OPMODE_Pos                 _U_(0)                                               /**< (FLEXCOM_MR) FLEXCOM Operating Mode Position */
-#define FLEXCOM_MR_OPMODE_Msk                 (_U_(0x3) << FLEXCOM_MR_OPMODE_Pos)                  /**< (FLEXCOM_MR) FLEXCOM Operating Mode Mask */
-#define FLEXCOM_MR_OPMODE(value)              (FLEXCOM_MR_OPMODE_Msk & ((value) << FLEXCOM_MR_OPMODE_Pos))
-#define   FLEXCOM_MR_OPMODE_NO_COM_Val        _U_(0x0)                                             /**< (FLEXCOM_MR) No communication  */
-#define   FLEXCOM_MR_OPMODE_USART_Val         _U_(0x1)                                             /**< (FLEXCOM_MR) All related USART related protocols are selected (RS232, RS485, IrDA, ISO7816, LIN,)All SPI/TWI related registers are not accessible and have no impact on IOs.  */
-#define   FLEXCOM_MR_OPMODE_SPI_Val           _U_(0x2)                                             /**< (FLEXCOM_MR) SPI operating mode is selected.All USART/TWI related registers are not accessible and have no impact on IOs.  */
-#define   FLEXCOM_MR_OPMODE_TWI_Val           _U_(0x3)                                             /**< (FLEXCOM_MR) All related TWI protocols are selected (TWI, SMBUS). All USART/SPI related registers are not accessible and have no impact on IOs.  */
-#define FLEXCOM_MR_OPMODE_NO_COM              (FLEXCOM_MR_OPMODE_NO_COM_Val << FLEXCOM_MR_OPMODE_Pos) /**< (FLEXCOM_MR) No communication Position  */
-#define FLEXCOM_MR_OPMODE_USART               (FLEXCOM_MR_OPMODE_USART_Val << FLEXCOM_MR_OPMODE_Pos) /**< (FLEXCOM_MR) All related USART related protocols are selected (RS232, RS485, IrDA, ISO7816, LIN,)All SPI/TWI related registers are not accessible and have no impact on IOs. Position  */
-#define FLEXCOM_MR_OPMODE_SPI                 (FLEXCOM_MR_OPMODE_SPI_Val << FLEXCOM_MR_OPMODE_Pos) /**< (FLEXCOM_MR) SPI operating mode is selected.All USART/TWI related registers are not accessible and have no impact on IOs. Position  */
-#define FLEXCOM_MR_OPMODE_TWI                 (FLEXCOM_MR_OPMODE_TWI_Val << FLEXCOM_MR_OPMODE_Pos) /**< (FLEXCOM_MR) All related TWI protocols are selected (TWI, SMBUS). All USART/SPI related registers are not accessible and have no impact on IOs. Position  */
-#define FLEXCOM_MR_Msk                        _U_(0x00000003)                                      /**< (FLEXCOM_MR) Register Mask  */
+#define FLEXCOM_MR_OPMODE_Pos                 _UINT32_(0)                                          /* (FLEXCOM_MR) FLEXCOM Operating Mode Position */
+#define FLEXCOM_MR_OPMODE_Msk                 (_UINT32_(0x3) << FLEXCOM_MR_OPMODE_Pos)             /* (FLEXCOM_MR) FLEXCOM Operating Mode Mask */
+#define FLEXCOM_MR_OPMODE(value)              (FLEXCOM_MR_OPMODE_Msk & (_UINT32_(value) << FLEXCOM_MR_OPMODE_Pos)) /* Assigment of value for OPMODE in the FLEXCOM_MR register */
+#define   FLEXCOM_MR_OPMODE_NO_COM_Val        _UINT32_(0x0)                                        /* (FLEXCOM_MR) No communication  */
+#define   FLEXCOM_MR_OPMODE_USART_Val         _UINT32_(0x1)                                        /* (FLEXCOM_MR) All related USART related protocols are selected (RS232, RS485, IrDA, ISO7816, LIN,)All SPI/TWI related registers are not accessible and have no impact on IOs.  */
+#define   FLEXCOM_MR_OPMODE_SPI_Val           _UINT32_(0x2)                                        /* (FLEXCOM_MR) SPI operating mode is selected.All USART/TWI related registers are not accessible and have no impact on IOs.  */
+#define   FLEXCOM_MR_OPMODE_TWI_Val           _UINT32_(0x3)                                        /* (FLEXCOM_MR) All related TWI protocols are selected (TWI, SMBUS). All USART/SPI related registers are not accessible and have no impact on IOs.  */
+#define FLEXCOM_MR_OPMODE_NO_COM              (FLEXCOM_MR_OPMODE_NO_COM_Val << FLEXCOM_MR_OPMODE_Pos) /* (FLEXCOM_MR) No communication Position  */
+#define FLEXCOM_MR_OPMODE_USART               (FLEXCOM_MR_OPMODE_USART_Val << FLEXCOM_MR_OPMODE_Pos) /* (FLEXCOM_MR) All related USART related protocols are selected (RS232, RS485, IrDA, ISO7816, LIN,)All SPI/TWI related registers are not accessible and have no impact on IOs. Position  */
+#define FLEXCOM_MR_OPMODE_SPI                 (FLEXCOM_MR_OPMODE_SPI_Val << FLEXCOM_MR_OPMODE_Pos) /* (FLEXCOM_MR) SPI operating mode is selected.All USART/TWI related registers are not accessible and have no impact on IOs. Position  */
+#define FLEXCOM_MR_OPMODE_TWI                 (FLEXCOM_MR_OPMODE_TWI_Val << FLEXCOM_MR_OPMODE_Pos) /* (FLEXCOM_MR) All related TWI protocols are selected (TWI, SMBUS). All USART/SPI related registers are not accessible and have no impact on IOs. Position  */
+#define FLEXCOM_MR_Msk                        _UINT32_(0x00000003)                                 /* (FLEXCOM_MR) Register Mask  */
 
 
 /* -------- FLEXCOM_RHR : (FLEXCOM Offset: 0x10) ( R/ 32) FLEXCOM Receive Holding Register -------- */
-#define FLEXCOM_RHR_RXDATA_Pos                _U_(0)                                               /**< (FLEXCOM_RHR) Receive Data Position */
-#define FLEXCOM_RHR_RXDATA_Msk                (_U_(0xFFFF) << FLEXCOM_RHR_RXDATA_Pos)              /**< (FLEXCOM_RHR) Receive Data Mask */
-#define FLEXCOM_RHR_RXDATA(value)             (FLEXCOM_RHR_RXDATA_Msk & ((value) << FLEXCOM_RHR_RXDATA_Pos))
-#define FLEXCOM_RHR_Msk                       _U_(0x0000FFFF)                                      /**< (FLEXCOM_RHR) Register Mask  */
+#define FLEXCOM_RHR_RXDATA_Pos                _UINT32_(0)                                          /* (FLEXCOM_RHR) Receive Data Position */
+#define FLEXCOM_RHR_RXDATA_Msk                (_UINT32_(0xFFFF) << FLEXCOM_RHR_RXDATA_Pos)         /* (FLEXCOM_RHR) Receive Data Mask */
+#define FLEXCOM_RHR_RXDATA(value)             (FLEXCOM_RHR_RXDATA_Msk & (_UINT32_(value) << FLEXCOM_RHR_RXDATA_Pos)) /* Assigment of value for RXDATA in the FLEXCOM_RHR register */
+#define FLEXCOM_RHR_Msk                       _UINT32_(0x0000FFFF)                                 /* (FLEXCOM_RHR) Register Mask  */
 
 
 /* -------- FLEXCOM_THR : (FLEXCOM Offset: 0x20) (R/W 32) FLEXCOM Transmit Holding Register -------- */
-#define FLEXCOM_THR_TXDATA_Pos                _U_(0)                                               /**< (FLEXCOM_THR) Transmit Data Position */
-#define FLEXCOM_THR_TXDATA_Msk                (_U_(0xFFFF) << FLEXCOM_THR_TXDATA_Pos)              /**< (FLEXCOM_THR) Transmit Data Mask */
-#define FLEXCOM_THR_TXDATA(value)             (FLEXCOM_THR_TXDATA_Msk & ((value) << FLEXCOM_THR_TXDATA_Pos))
-#define FLEXCOM_THR_Msk                       _U_(0x0000FFFF)                                      /**< (FLEXCOM_THR) Register Mask  */
+#define FLEXCOM_THR_TXDATA_Pos                _UINT32_(0)                                          /* (FLEXCOM_THR) Transmit Data Position */
+#define FLEXCOM_THR_TXDATA_Msk                (_UINT32_(0xFFFF) << FLEXCOM_THR_TXDATA_Pos)         /* (FLEXCOM_THR) Transmit Data Mask */
+#define FLEXCOM_THR_TXDATA(value)             (FLEXCOM_THR_TXDATA_Msk & (_UINT32_(value) << FLEXCOM_THR_TXDATA_Pos)) /* Assigment of value for TXDATA in the FLEXCOM_THR register */
+#define FLEXCOM_THR_Msk                       _UINT32_(0x0000FFFF)                                 /* (FLEXCOM_THR) Register Mask  */
 
 
 /** \brief FLEXCOM register offsets definitions */
-#define FLEXCOM_MR_REG_OFST            (0x00)              /**< (FLEXCOM_MR) FLEXCOM Mode register Offset */
-#define FLEXCOM_RHR_REG_OFST           (0x10)              /**< (FLEXCOM_RHR) FLEXCOM Receive Holding Register Offset */
-#define FLEXCOM_THR_REG_OFST           (0x20)              /**< (FLEXCOM_THR) FLEXCOM Transmit Holding Register Offset */
+#define FLEXCOM_MR_REG_OFST            _UINT32_(0x00)      /* (FLEXCOM_MR) FLEXCOM Mode register Offset */
+#define FLEXCOM_RHR_REG_OFST           _UINT32_(0x10)      /* (FLEXCOM_RHR) FLEXCOM Receive Holding Register Offset */
+#define FLEXCOM_THR_REG_OFST           _UINT32_(0x20)      /* (FLEXCOM_THR) FLEXCOM Transmit Holding Register Offset */
 
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
 /** \brief FLEXCOM register API structure */

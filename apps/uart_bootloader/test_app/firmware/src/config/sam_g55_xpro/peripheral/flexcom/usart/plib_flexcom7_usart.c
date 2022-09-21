@@ -93,7 +93,7 @@ void FLEXCOM7_USART_Initialize( void )
     USART7_REGS->US_MR = ((US_MR_USCLKS_MCK) | US_MR_CHRL_8_BIT | US_MR_PAR_NO | US_MR_NBSTOP_1_BIT | (0 << US_MR_OVER_Pos));
 
     /* Configure FLEXCOM7 USART Baud Rate */
-    USART7_REGS->US_BRGR = US_BRGR_CD(65);
+    USART7_REGS->US_BRGR = US_BRGR_CD(54) | US_BRGR_FP(2);
 }
 
 FLEXCOM_USART_ERROR FLEXCOM7_USART_ErrorGet( void )
@@ -126,13 +126,29 @@ FLEXCOM_USART_ERROR FLEXCOM7_USART_ErrorGet( void )
     return errors;
 }
 
+static void FLEXCOM7_USART_BaudCalculate(uint32_t srcClkFreq, uint32_t reqBaud, uint8_t overSamp, uint32_t* cd, uint32_t* fp, uint32_t* baudError)
+{
+    uint32_t actualBaud = 0;
+
+    *cd = srcClkFreq / (reqBaud * 8 * (2 - overSamp));
+
+    if (*cd > 0)
+    {
+        *fp = ((srcClkFreq / (reqBaud * (2 - overSamp))) - ((*cd) * 8));
+        actualBaud = (srcClkFreq / (((*cd) * 8) + (*fp))) / (2 - overSamp);
+        *baudError = ((100 * actualBaud)/reqBaud) - 100;
+    }
+}
+
 bool FLEXCOM7_USART_SerialSetup( FLEXCOM_USART_SERIAL_SETUP *setup, uint32_t srcClkFreq )
 {
     uint32_t baud = 0;
-    uint32_t brgVal = 0;
     uint32_t overSampVal = 0;
     uint32_t usartMode;
+    uint32_t cd0, fp0, cd1, fp1, baudError0, baudError1;
     bool status = false;
+
+    cd0 = fp0 = cd1 = fp1 = baudError0 = baudError1 = 0;
 
     if (setup != NULL)
     {
@@ -143,26 +159,36 @@ bool FLEXCOM7_USART_SerialSetup( FLEXCOM_USART_SERIAL_SETUP *setup, uint32_t src
             srcClkFreq = FLEXCOM7_USART_FrequencyGet();
         }
 
-        /* Calculate BRG value */
-        if (srcClkFreq >= (16 * baud))
+        /* Calculate baud register values for 8x/16x oversampling values */
+
+        FLEXCOM7_USART_BaudCalculate(srcClkFreq, baud, 0, &cd0, &fp0, &baudError0);
+        FLEXCOM7_USART_BaudCalculate(srcClkFreq, baud, 1, &cd1, &fp1, &baudError1);
+
+        if ( !(cd0 > 0 && cd0 <= 65535) && !(cd1 > 0 && cd1 <= 65535) )
         {
-            brgVal = (srcClkFreq / (16 * baud));
-        }
-        else if (srcClkFreq >= (8 * baud))
-        {
-            brgVal = (srcClkFreq / (8 * baud));
-            overSampVal = (1 << US_MR_OVER_Pos) & US_MR_OVER_Msk;
-        }
-        else
-        {
-            /* The input clock source - srcClkFreq, is too low to generate the desired baud */
+            /* Requested baud cannot be generated with current clock settings */
             return status;
         }
 
-        if (brgVal > 65535)
+        if ( (cd0 > 0 && cd0 <= 65535) && (cd1 > 0 && cd1 <= 65535) )
         {
-            /* The requested baud is so low that the ratio of srcClkFreq to baud exceeds the 16-bit register value of CD register */
-            return status;
+            /* Requested baud can be generated with both 8x and 16x oversampling. Select the one with less % error. */
+            if (baudError1 < baudError0)
+            {
+                cd0 = cd1;
+                fp0 = fp1;
+                overSampVal = (1 << US_MR_OVER_Pos) & US_MR_OVER_Msk;
+            }
+        }
+        else
+        {
+            /* Requested baud can be generated with either with 8x oversampling or with 16x oversampling. Select valid one. */
+            if (cd1 > 0 && cd1 <= 65535)
+            {
+                cd0 = cd1;
+                fp0 = fp1;
+                overSampVal = (1 << US_MR_OVER_Pos) & US_MR_OVER_Msk;
+            }
         }
 
         /* Configure FLEXCOM7 USART mode */
@@ -171,7 +197,7 @@ bool FLEXCOM7_USART_SerialSetup( FLEXCOM_USART_SERIAL_SETUP *setup, uint32_t src
         USART7_REGS->US_MR = usartMode | ((uint32_t)setup->dataWidth | (uint32_t)setup->parity | (uint32_t)setup->stopBits | overSampVal);
 
         /* Configure FLEXCOM7 USART Baud Rate */
-        USART7_REGS->US_BRGR = US_BRGR_CD(brgVal);
+        USART7_REGS->US_BRGR = US_BRGR_CD(cd0) | US_BRGR_FP(fp0);
         status = true;
     }
 
@@ -265,18 +291,6 @@ void FLEXCOM7_USART_WriteByte( uint8_t data )
     USART7_REGS->US_THR = (US_THR_TXCHR(data) & US_THR_TXCHR_Msk);
 }
 
-bool FLEXCOM7_USART_TransmitComplete( void )
-{
-    bool status = false;
-
-    if (USART7_REGS->US_CSR & US_CSR_TXEMPTY_Msk)
-    {
-        status = true;
-    }
-
-    return status;
-}
-
 bool FLEXCOM7_USART_TransmitterIsReady( void )
 {
     bool status = false;
@@ -294,6 +308,18 @@ bool FLEXCOM7_USART_ReceiverIsReady( void )
     bool status = false;
 
     if (USART7_REGS->US_CSR & US_CSR_RXRDY_Msk)
+    {
+        status = true;
+    }
+
+    return status;
+}
+
+bool FLEXCOM7_USART_TransmitComplete( void )
+{
+    bool status = false;
+
+    if (USART7_REGS->US_CSR & US_CSR_TXEMPTY_Msk)
     {
         status = true;
     }

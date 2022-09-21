@@ -11,13 +11,6 @@ children:
       children:
       - type: User
         attributes: {value: '402000'}
-  - type: String
-    attributes: {id: CMCC_INSTANCE_NAME}
-    children:
-    - type: Values
-      children:
-      - type: Dynamic
-        attributes: {id: core, value: CMCC}
   - type: KeyValueSet
     attributes: {id: COMPILER_CHOICE}
     children:
@@ -77,7 +70,7 @@ children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: core, value: '119996416'}
+        attributes: {id: core, value: '100007936'}
   - type: Boolean
     attributes: {id: FLEXCOM7_INTERRUPT_ENABLE}
     children:
@@ -252,7 +245,7 @@ children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: core, value: '119996416'}
+        attributes: {id: core, value: '100007936'}
   - type: Hex
     attributes: {id: PIOA_OER_VALUE}
     children:
@@ -294,7 +287,7 @@ children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: core, value: '119996416'}
+        attributes: {id: core, value: '100007936'}
   - type: Hex
     attributes: {id: PMC_PCER0}
     children:
