@@ -1,7 +1,7 @@
-/**
- * \brief Instance header file for ATSAME70Q21B
+/*
+ * Instance header file for ATSAME70Q21B
  *
- * Copyright (c) 2021 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2022 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,21 +20,21 @@
  *
  */
 
-/* file generated from device description version 2020-11-26T11:12:57Z */
+/* file generated from device description version 2022-04-21T07:53:48Z */
 #ifndef _SAME70_ACC_INSTANCE_
 #define _SAME70_ACC_INSTANCE_
 
 
 /* ========== Instance Parameter definitions for ACC peripheral ========== */
-#define ACC_INSTANCE_ID                          _UL_(33)   
-#define ACC_CLOCK_ID                             _UL_(33)   
-#define ACC_HAS_PLUS_COMPARATOR_SELECTION        _UL_(1)    
-#define ACC_HAS_MINUS_COMPARATOR_SELECTION       _UL_(1)    
-#define ACC_HAS_INVERTED_COMPARATOR              _UL_(1)    
-#define ACC_HAS_EDGETYPE_SELECTION               _UL_(1)    
-#define ACC_HAS_INTERRUPTS                       _UL_(1)    
-#define ACC_HAS_CURRENT_SELECTION                _UL_(1)    
-#define ACC_HAS_HYSTERESIS                       _UL_(1)    
-#define ACC_HAS_FAULT_ENABLE                     _UL_(1)    
+#define ACC_INSTANCE_ID                          (33)       
+#define ACC_CLOCK_ID                             (33)       
+#define ACC_HAS_PLUS_COMPARATOR_SELECTION        (1)        
+#define ACC_HAS_MINUS_COMPARATOR_SELECTION       (1)        
+#define ACC_HAS_INVERTED_COMPARATOR              (1)        
+#define ACC_HAS_EDGETYPE_SELECTION               (1)        
+#define ACC_HAS_INTERRUPTS                       (1)        
+#define ACC_HAS_CURRENT_SELECTION                (1)        
+#define ACC_HAS_HYSTERESIS                       (1)        
+#define ACC_HAS_FAULT_ENABLE                     (1)        
 
 #endif /* _SAME70_ACC_INSTANCE_ */

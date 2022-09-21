@@ -61,6 +61,7 @@
 // *****************************************************************************
 // *****************************************************************************
 
+/* MISRA C-2012 Rule 8.6 deviated below. Deviation record ID -  H3_MISRAC_2012_R_8_6_DR_1 */
 extern uint32_t _stack;
 extern const H3DeviceVectors exception_table;
 
@@ -76,12 +77,11 @@ void __attribute__((optimize("-O1"),section(".text.Dummy_Handler"),long_call, no
     {
     }
 }
+
+/* MISRAC 2012 deviation block start */
+/* MISRA C-2012 Rule 8.6 deviated 71 times.  Deviation record ID -  H3_MISRAC_2012_R_8_6_DR_1 */
 /* Device vectors list dummy definition*/
-extern void MemoryManagement_Handler   ( void ) __attribute__((weak, alias("Dummy_Handler")));
-extern void BusFault_Handler           ( void ) __attribute__((weak, alias("Dummy_Handler")));
-extern void UsageFault_Handler         ( void ) __attribute__((weak, alias("Dummy_Handler")));
 extern void SVCall_Handler             ( void ) __attribute__((weak, alias("Dummy_Handler")));
-extern void DebugMonitor_Handler       ( void ) __attribute__((weak, alias("Dummy_Handler")));
 extern void PendSV_Handler             ( void ) __attribute__((weak, alias("Dummy_Handler")));
 extern void SUPC_Handler               ( void ) __attribute__((weak, alias("Dummy_Handler")));
 extern void RSTC_Handler               ( void ) __attribute__((weak, alias("Dummy_Handler")));
@@ -141,7 +141,6 @@ extern void XDMAC_Handler              ( void ) __attribute__((weak, alias("Dumm
 extern void ISI_Handler                ( void ) __attribute__((weak, alias("Dummy_Handler")));
 extern void PWM1_Handler               ( void ) __attribute__((weak, alias("Dummy_Handler")));
 extern void FPU_Handler                ( void ) __attribute__((weak, alias("Dummy_Handler")));
-extern void SDRAMC_Handler             ( void ) __attribute__((weak, alias("Dummy_Handler")));
 extern void RSWDT_Handler              ( void ) __attribute__((weak, alias("Dummy_Handler")));
 extern void CCW_Handler                ( void ) __attribute__((weak, alias("Dummy_Handler")));
 extern void CCF_Handler                ( void ) __attribute__((weak, alias("Dummy_Handler")));
@@ -155,6 +154,7 @@ extern void GMAC_Q4_Handler            ( void ) __attribute__((weak, alias("Dumm
 extern void GMAC_Q5_Handler            ( void ) __attribute__((weak, alias("Dummy_Handler")));
 
 
+/* MISRAC 2012 deviation block end */
 
 /* Multiple handlers for vector */
 
@@ -234,7 +234,6 @@ const H3DeviceVectors exception_table=
     .pfnISI_Handler                = ISI_Handler,
     .pfnPWM1_Handler               = PWM1_Handler,
     .pfnFPU_Handler                = FPU_Handler,
-    .pfnSDRAMC_Handler             = SDRAMC_Handler,
     .pfnRSWDT_Handler              = RSWDT_Handler,
     .pfnCCW_Handler                = CCW_Handler,
     .pfnCCF_Handler                = CCF_Handler,

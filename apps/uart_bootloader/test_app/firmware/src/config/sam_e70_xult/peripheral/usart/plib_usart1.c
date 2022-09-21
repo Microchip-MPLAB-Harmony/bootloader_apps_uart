@@ -103,7 +103,7 @@ USART_ERROR USART1_ErrorGet( void )
 
 bool USART1_SerialSetup( USART_SERIAL_SETUP *setup, uint32_t srcClkFreq )
 {
-    uint32_t baud = setup->baudRate;
+    uint32_t baud;
     uint32_t brgVal = 0;
     uint32_t overSampVal = 0;
     uint32_t usartMode;
@@ -112,6 +112,7 @@ bool USART1_SerialSetup( USART_SERIAL_SETUP *setup, uint32_t srcClkFreq )
     if (setup != NULL)
     {
         baud = setup->baudRate;
+
         if(srcClkFreq == 0)
         {
             srcClkFreq = USART1_FrequencyGet();
@@ -247,16 +248,6 @@ bool USART1_TransmitterIsReady( void )
     return false;
 }
 
-bool USART1_TransmitComplete( void )
-{
-    if(USART1_REGS->US_CSR & US_CSR_USART_TXEMPTY_Msk)
-    {
-        return true;
-    }
-
-    return false;
-}
-
 bool USART1_ReceiverIsReady( void )
 {
     if(USART1_REGS->US_CSR & US_CSR_USART_RXRDY_Msk)
@@ -267,4 +258,15 @@ bool USART1_ReceiverIsReady( void )
     return false;
 }
 
+
+
+bool USART1_TransmitComplete( void )
+{
+    if(USART1_REGS->US_CSR & US_CSR_USART_TXEMPTY_Msk)
+    {
+        return true;
+    }
+
+    return false;
+}
 
