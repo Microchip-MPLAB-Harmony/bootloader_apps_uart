@@ -1,7 +1,7 @@
-/**
- * \brief Instance header file for ATSAMD20J18
+/*
+ * Instance header file for ATSAMD20J18
  *
- * Copyright (c) 2021 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2022 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -26,15 +26,15 @@
 
 
 /* ========== Instance Parameter definitions for TC5 peripheral ========== */
-#define TC5_CC8_NUM                              _UL_(2)    
-#define TC5_CC16_NUM                             _UL_(2)    
-#define TC5_CC32_NUM                             _UL_(2)    
-#define TC5_DITHERING_EXT                        _UL_(0)    
-#define TC5_GCLK_ID                              _UL_(21)   
-#define TC5_MASTER                               _UL_(0)    
-#define TC5_OW_NUM                               _UL_(2)    
-#define TC5_PERIOD_EXT                           _UL_(0)    
-#define TC5_SHADOW_EXT                           _UL_(0)    
-#define TC5_INSTANCE_ID                          _UL_(77)   
+#define TC5_CC8_NUM                              (2)        
+#define TC5_CC16_NUM                             (2)        
+#define TC5_CC32_NUM                             (2)        
+#define TC5_DITHERING_EXT                        (0)        
+#define TC5_GCLK_ID                              (21)       
+#define TC5_MASTER                               (0)        
+#define TC5_OW_NUM                               (2)        
+#define TC5_PERIOD_EXT                           (0)        
+#define TC5_SHADOW_EXT                           (0)        
+#define TC5_INSTANCE_ID                          (77)       
 
 #endif /* _SAMD20_TC5_INSTANCE_ */

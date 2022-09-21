@@ -1,7 +1,7 @@
-/**
- * \brief Instance header file for ATSAMD20J18
+/*
+ * Instance header file for ATSAMD20J18
  *
- * Copyright (c) 2021 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2022 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -26,11 +26,11 @@
 
 
 /* ========== Instance Parameter definitions for AC peripheral ========== */
-#define AC_CMP_NUM                               _UL_(2)    /* Number of comparators */
-#define AC_GCLK_ID_ANA                           _UL_(25)   /* Index of Generic Clock for analog */
-#define AC_GCLK_ID_DIG                           _UL_(24)   /* Index of Generic Clock for digital */
-#define AC_NUM_CMP                               _UL_(2)    
-#define AC_PAIRS                                 _UL_(1)    /* Number of pairs of comparators */
-#define AC_INSTANCE_ID                           _UL_(81)   
+#define AC_CMP_NUM                               (2)        /* Number of comparators */
+#define AC_GCLK_ID_ANA                           (25)       /* Index of Generic Clock for analog */
+#define AC_GCLK_ID_DIG                           (24)       /* Index of Generic Clock for digital */
+#define AC_NUM_CMP                               (2)        
+#define AC_PAIRS                                 (1)        /* Number of pairs of comparators */
+#define AC_INSTANCE_ID                           (81)       
 
 #endif /* _SAMD20_AC_INSTANCE_ */
