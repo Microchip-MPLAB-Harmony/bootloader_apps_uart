@@ -21,12 +21,7 @@
  */
 
 /* file generated from device description version 2021-06-07T06:15:05Z */
-#ifndef _SAML21_OSC32KCTRL_INSTANCE_
-#define _SAML21_OSC32KCTRL_INSTANCE_
+#ifndef _SAML21_FUSES_INSTANCE_
+#define _SAML21_FUSES_INSTANCE_
 
-
-/* ========== Instance Parameter definitions for OSC32KCTRL peripheral ========== */
-#define OSC32KCTRL_OSC32K_COARSE_CALIB_MSB       (6)        
-#define OSC32KCTRL_INSTANCE_ID                   (4)        
-
-#endif /* _SAML21_OSC32KCTRL_INSTANCE_ */
+#endif /* _SAML21_FUSES_INSTANCE_ */

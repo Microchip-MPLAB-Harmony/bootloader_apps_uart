@@ -34,14 +34,15 @@ extern void _ram_end_(void);
 
 extern int main(void);
 
+
 /* Declaration of Reset handler (may be custom) */
 void __attribute__((noinline)) Reset_Handler(void);
 
 __attribute__ ((used, section(".vectors")))
 void (* const vectors[])(void) =
 {
-  &_ram_end_,
-  Reset_Handler,
+    &_ram_end_,
+    Reset_Handler,
 };
 
 /**
@@ -55,7 +56,9 @@ extern uint32_t _sbss, _ebss;
 
 void __attribute__((noinline, section(".romfunc.Reset_Handler"))) Reset_Handler(void)
 {
-    uint32_t *pSrc, *pDst;;
+
+    uint32_t *pSrc, *pDst;
+
 
     pSrc = (uint32_t *) &_etext; /* flash functions start after .text */
     pDst = (uint32_t *) &_sdata;  /* boundaries of .data area to init */
@@ -63,17 +66,11 @@ void __attribute__((noinline, section(".romfunc.Reset_Handler"))) Reset_Handler(
     /* Init .data */
     while (pDst < &_edata)
         *pDst++ = *pSrc++;
-    
+
     /* Init .bss */
     pDst = &_sbss;
     while (pDst < &_ebss)
       *pDst++ = 0;
-
-#  ifdef SCB_VTOR_TBLOFF_Msk
-    /*  Set the vector-table base address in FLASH */
-    pSrc = (uint32_t *) & _sfixed;
-    SCB->VTOR = ((uint32_t) pSrc & SCB_VTOR_TBLOFF_Msk);
-#  endif /* SCB_VTOR_TBLOFF_Msk */
 
 
      /* Branch to application's main function */

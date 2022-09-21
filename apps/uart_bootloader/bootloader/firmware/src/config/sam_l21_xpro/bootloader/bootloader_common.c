@@ -1,16 +1,14 @@
 /*******************************************************************************
-  System Initialization File
+  Bootloader Common Source File
 
   File Name:
-    initialization.c
+    bootloader_common.c
 
   Summary:
-    This file contains source code necessary to initialize the system.
+    This file contains common definitions and functions.
 
   Description:
-    This file contains source code necessary to initialize the system.  It
-    implements the "SYS_Initialize" function, defines the configuration bits,
-    and allocates any necessary global system resources,
+    This file contains common definitions and functions.
  *******************************************************************************/
 
 // DOM-IGNORE-BEGIN
@@ -40,111 +38,100 @@
 
 // *****************************************************************************
 // *****************************************************************************
-// Section: Included Files
+// Section: Include Files
 // *****************************************************************************
 // *****************************************************************************
-#include "definitions.h"
-#include "device.h"
 
-
-
-// ****************************************************************************
-// ****************************************************************************
-// Section: Configuration Bits
-// ****************************************************************************
-// ****************************************************************************
-#pragma config NVMCTRL_BOOTPROT = 0x7
-#pragma config NVMCTRL_EEPROM_SIZE = 0x7
-#pragma config BOD33USERLEVEL = 0x6U
-#pragma config BOD33_DIS = CLEAR
-#pragma config BOD33_ACTION = 0x0
-#pragma config WDT_ENABLE = CLEAR
-#pragma config WDT_ALWAYSON = CLEAR
-#pragma config WDT_PER = 0xB
-#pragma config WDT_WINDOW = 0xB
-#pragma config WDT_EWOFFSET = 0xB
-#pragma config WDT_WEN = CLEAR
-#pragma config BOD33_HYST = CLEAR
-#pragma config NVMCTRL_REGION_LOCKS = 0xffffU
-
-
-
+#include "bootloader_common.h"
 
 // *****************************************************************************
 // *****************************************************************************
-// Section: Driver Initialization Data
+// Section: Type Definitions
+// *****************************************************************************
+// *****************************************************************************
+
+/* Bootloader Major and Minor version sent for a Read Version command (MAJOR.MINOR)*/
+#define BTL_MAJOR_VERSION       3
+#define BTL_MINOR_VERSION       6
+
+// *****************************************************************************
+// *****************************************************************************
+// Section: Global objects
 // *****************************************************************************
 // *****************************************************************************
 
 
 // *****************************************************************************
 // *****************************************************************************
-// Section: System Data
-// *****************************************************************************
-// *****************************************************************************
-
-// *****************************************************************************
-// *****************************************************************************
-// Section: Library/Stack Initialization Data
+// Section: Bootloader Local Functions
 // *****************************************************************************
 // *****************************************************************************
 
 
 // *****************************************************************************
 // *****************************************************************************
-// Section: System Initialization
+// Section: Bootloader Global Functions
 // *****************************************************************************
 // *****************************************************************************
 
 
-
-// *****************************************************************************
-// *****************************************************************************
-// Section: Local initialization functions
-// *****************************************************************************
-// *****************************************************************************
-
-
-
-/*******************************************************************************
-  Function:
-    void SYS_Initialize ( void *data )
-
-  Summary:
-    Initializes the board, services, drivers, application and other modules.
-
-  Remarks:
-*/
-
-void SYS_Initialize ( void* data )
+bool __WEAK bootloader_Trigger(void)
 {
-    NVMCTRL_Initialize();
+    /* Function can be overriden with custom implementation */
+    return false;
+}
+
+void __WEAK SYS_DeInitialize( void *data )
+{
+    /* Function can be overriden with custom implementation */
+}
+
+uint16_t __WEAK bootloader_GetVersion( void )
+{
+    /* Function can be overriden with custom implementation */
+    uint16_t btlVersion = (((BTL_MAJOR_VERSION & 0xFF) << 8) | (BTL_MINOR_VERSION & 0xFF));
+
+    return btlVersion;
+}
 
 
-    PORT_Initialize();
 
-    if (bootloader_Trigger() == false)
+/* Function to Generate CRC using the device service unit peripheral on programmed data */
+uint32_t bootloader_CRCGenerate(uint32_t start_addr, uint32_t size)
+{
+    uint32_t crc  = 0xffffffff;
+
+    PAC_PeripheralProtectSetup (PAC_PERIPHERAL_DSU, PAC_PROTECTION_CLEAR);
+
+    DSU_CRCCalculate (start_addr, size, crc, &crc);
+
+    PAC_PeripheralProtectSetup (PAC_PERIPHERAL_DSU, PAC_PROTECTION_SET);
+
+    return crc;
+}
+
+/* Trigger a reset */
+void __NO_RETURN bootloader_TriggerReset(void)
+{
+    NVIC_SystemReset();
+}
+
+void run_Application(uint32_t address)
+{
+    uint32_t msp            = *(uint32_t *)(address);
+    uint32_t reset_vector   = *(uint32_t *)(address + 4);
+
+    if (msp == 0xffffffff)
     {
-        run_Application(APP_START_ADDRESS);
+        return;
     }
 
-    PM_Initialize();
+    /* Call Deinitialize routine to free any resources acquired by Bootloader */
+    SYS_DeInitialize(NULL);
 
-    CLOCK_Initialize();
+    __set_MSP(msp);
 
-    SERCOM3_USART_Initialize();
-
-    NVMCTRL_Initialize( );
-
-    EVSYS_Initialize();
-
-	SYSTICK_TimerInitialize();
-    PAC_Initialize();
-
-
-
-
-
-    NVIC_Initialize();
-
+    asm("bx %0"::"r" (reset_vector));
 }
+
+
