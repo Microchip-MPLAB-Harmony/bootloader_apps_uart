@@ -4,7 +4,7 @@
 
 
 project: bootloader
-creation_date: 2022-09-22T18:32:45.086+05:30[Asia/Calcutta]    # ISO 8601 format: https://www.w3.org/TR/NOTE-datetime
+creation_date: 2022-10-21T19:02:25.678+05:30[Asia/Calcutta]    # ISO 8601 format: https://www.w3.org/TR/NOTE-datetime
 operating_system: Windows 10
 mhc_mode: Standalone            # [IDE|Standalone|Headless]
 mhc_version: v3.8.5
@@ -13,7 +13,7 @@ plugin_version: NA        # if MPLAB X plugin only
 compiler: xc32
 
 modules:
-    - {name: "csp", version: "v3.13.1"}
-    - {name: "dev_packs", version: "v3.13.1"}
-    - {name: "bootloader", version: "unknown"}
+    - {name: "csp", version: "v3.14.0"}
+    - {name: "dev_packs", version: "v3.14.0"}
+    - {name: "bootloader", version: "v3.6.0"}
 

@@ -93,9 +93,8 @@ PROVIDE(_ebase_vector_offsets = 0x1000);
  * _SIMPLE_TLB_REFILL_EXCPT_ADDR  -- Simple TLB-Refill Exception Vector
  * _GEN_EXCPT_ADDR                -- General Exception Vector
  *************************************************************************/
-_RESET_ADDR                    = 0xBD000000;
-_SIMPLE_TLB_REFILL_EXCPT_ADDR  = _ebase_address + _ebase_vector_offsets + 0;
-_GEN_EXCPT_ADDR                = _ebase_address + _ebase_vector_offsets + 0x180;
+_RESET_ADDR                    = 0xBD000200;
+_GEN_EXCPT_ADDR                = _ebase_address + 0x180;
 
 /*************************************************************************
  * Memory Regions
@@ -110,6 +109,9 @@ _GEN_EXCPT_ADDR                = _ebase_address + _ebase_vector_offsets + 0x180;
 
 MEMORY
 {
+    /* Place the exceptions starting from _ebase_address as required by device specification */
+    kseg0_exception_mem (rx) : ORIGIN = 0x9D000000, LENGTH = 0x200
+
     /* All C files will be located here. Program Flash size of this device is 1MB
      * Program Flash Memory is reduced by Half(512KB) to support Dual Bank update.
      * Reserve 512 Bytes(ROW Size) of memory at the end of bank to store
@@ -117,7 +119,7 @@ MEMORY
      * update and run.
      */
     kseg0_program_mem  (rx) : ORIGIN = 0x9D001000, LENGTH = 0x80000 - 0x1000 - 512
-    kseg1_boot_mem          : ORIGIN = 0xBD000000, LENGTH = 0x480
+    kseg1_boot_mem          : ORIGIN = 0xBD000200, LENGTH = 0x480
 
     /* Reserve 16 Bytes to Store Bootloader Trigger Pattern */
     kseg0_data_mem     (w!x): ORIGIN = 0x80000000 + 16, LENGTH = 0x40000 - 16
@@ -138,10 +140,17 @@ SECTIONS
     KEEP(*(.reset.startup))
   } > kseg1_boot_mem
 
+ /* Fill 0xFF byte at start of _ebase_address */
+  .fill _ebase_address :
+  {
+    KEEP(*(.fill))
+    BYTE(0xFF)
+  } > kseg0_exception_mem
+
   .app_excpt _GEN_EXCPT_ADDR :
   {
     KEEP(*(.gen_handler))
-  } > kseg0_program_mem
+  } > kseg0_exception_mem
 
   /* Interrupt vector table with vector offsets */
   .vectors _ebase_address + _ebase_vector_offsets + 0x200 :

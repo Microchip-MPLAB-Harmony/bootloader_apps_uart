@@ -97,8 +97,10 @@ int main ( void )
     /* Initialize all modules */
     SYS_Initialize ( NULL );
 
-    bootloader_UART_Tasks();
-
+    while (true)
+    {
+        bootloader_UART_Tasks();
+    }
     /* Execution should not come here during normal operation */
     return ( EXIT_FAILURE );
 }

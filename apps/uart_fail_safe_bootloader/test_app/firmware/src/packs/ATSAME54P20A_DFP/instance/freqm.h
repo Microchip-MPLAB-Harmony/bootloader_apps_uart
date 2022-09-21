@@ -1,7 +1,7 @@
-/**
- * \brief Instance header file for ATSAME54P20A
+/*
+ * Instance header file for ATSAME54P20A
  *
- * Copyright (c) 2021 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2022 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,14 +20,14 @@
  *
  */
 
-/* file generated from device description version 2020-11-23T12:28:26Z */
+/* file generated from device description version 2022-02-14T14:27:35Z */
 #ifndef _SAME54_FREQM_INSTANCE_
 #define _SAME54_FREQM_INSTANCE_
 
 
 /* ========== Instance Parameter definitions for FREQM peripheral ========== */
-#define FREQM_GCLK_ID_MSR                        _UL_(5)    /* Index of measure generic clock */
-#define FREQM_GCLK_ID_REF                        _UL_(6)    /* Index of reference generic clock */
-#define FREQM_INSTANCE_ID                        _UL_(11)   
+#define FREQM_GCLK_ID_MSR                        (5)        /* Index of measure generic clock */
+#define FREQM_GCLK_ID_REF                        (6)        /* Index of reference generic clock */
+#define FREQM_INSTANCE_ID                        (11)       /* Instance index for FREQM */
 
 #endif /* _SAME54_FREQM_INSTANCE_ */
