@@ -1,16 +1,14 @@
 /*******************************************************************************
-  System Initialization File
+  Bootloader Common Source File
 
   File Name:
-    initialization.c
+    bootloader_common.c
 
   Summary:
-    This file contains source code necessary to initialize the system.
+    This file contains common definitions and functions.
 
   Description:
-    This file contains source code necessary to initialize the system.  It
-    implements the "SYS_Initialize" function, defines the configuration bits,
-    and allocates any necessary global system resources,
+    This file contains common definitions and functions.
  *******************************************************************************/
 
 // DOM-IGNORE-BEGIN
@@ -40,140 +38,134 @@
 
 // *****************************************************************************
 // *****************************************************************************
-// Section: Included Files
+// Section: Include Files
 // *****************************************************************************
 // *****************************************************************************
-#include "definitions.h"
-#include "device.h"
 
-
-
-// ****************************************************************************
-// ****************************************************************************
-// Section: Configuration Bits
-// ****************************************************************************
-// ****************************************************************************
-
-/*** DEVCFG0 ***/
-#pragma config DEBUG =      OFF
-#pragma config JTAGEN =     OFF
-#pragma config ICESEL =     ICS_PGx1
-#pragma config PWP =        OFF
-#pragma config BWP =        OFF
-#pragma config CP =         OFF
-
-
-/*** DEVCFG1 ***/
-#pragma config FNOSC =      FRCPLL
-#pragma config FPBDIV =     DIV_1
-#pragma config FSOSCEN =    OFF
-#pragma config IESO =       ON
-#pragma config POSCMOD =    OFF
-#pragma config OSCIOFNC =   OFF
-#pragma config FCKSM =      CSDCMD
-#pragma config WDTPS =      PS1048576
-#pragma config FWDTEN =     OFF
-#pragma config WINDIS =     OFF
-#pragma config FWDTWINSZ =  WINSZ_25
-
-
-/*** DEVCFG2 ***/
-#pragma config FPLLIDIV =   DIV_2
-#pragma config FPLLMUL =    MUL_24
-#pragma config FPLLODIV =   DIV_2
-#pragma config UPLLEN =     OFF
-#pragma config UPLLIDIV =   DIV_2
-
-/*** DEVCFG3 ***/
-#pragma config FVBUSONIO =  ON
-#pragma config USERID =     0xffff
-#pragma config PMDL1WAY =   ON
-#pragma config IOL1WAY =    ON
-#pragma config FUSBIDIO =   ON
-
-
-
-
+#include "bootloader_common.h"
 
 // *****************************************************************************
 // *****************************************************************************
-// Section: Driver Initialization Data
+// Section: Type Definitions
+// *****************************************************************************
+// *****************************************************************************
+
+/* Bootloader Major and Minor version sent for a Read Version command (MAJOR.MINOR)*/
+#define BTL_MAJOR_VERSION       3
+#define BTL_MINOR_VERSION       6
+
+#define WORD_ALIGN_MASK         (~(sizeof(uint32_t) - 1))
+
+// *****************************************************************************
+// *****************************************************************************
+// Section: Global objects
 // *****************************************************************************
 // *****************************************************************************
 
 
 // *****************************************************************************
 // *****************************************************************************
-// Section: System Data
-// *****************************************************************************
-// *****************************************************************************
-
-// *****************************************************************************
-// *****************************************************************************
-// Section: Library/Stack Initialization Data
+// Section: Bootloader Local Functions
 // *****************************************************************************
 // *****************************************************************************
 
 
 // *****************************************************************************
 // *****************************************************************************
-// Section: System Initialization
+// Section: Bootloader Global Functions
 // *****************************************************************************
 // *****************************************************************************
 
 
-
-// *****************************************************************************
-// *****************************************************************************
-// Section: Local initialization functions
-// *****************************************************************************
-// *****************************************************************************
-
-
-
-/*******************************************************************************
-  Function:
-    void SYS_Initialize ( void *data )
-
-  Summary:
-    Initializes the board, services, drivers, application and other modules.
-
-  Remarks:
- */
-
-void SYS_Initialize ( void* data )
+bool __WEAK bootloader_Trigger(void)
 {
-    /* Start out with interrupts disabled before configuring any modules */
-    __builtin_disable_interrupts();
+    /* Function can be overriden with custom implementation */
+    return false;
+}
 
-    CLK_Initialize();
+void __WEAK SYS_DeInitialize( void *data )
+{
+    /* Function can be overriden with custom implementation */
+}
 
-    /* Set the SRAM wait states to One */
-    BMXCONbits.BMXWSDRM = 1;
+uint16_t __WEAK bootloader_GetVersion( void )
+{
+    /* Function can be overriden with custom implementation */
+    uint16_t btlVersion = (((BTL_MAJOR_VERSION & 0xFF) << 8) | (BTL_MINOR_VERSION & 0xFF));
+
+    return btlVersion;
+}
 
 
 
+/* Function to Generate CRC by reading the firmware programmed into internal flash */
+uint32_t bootloader_CRCGenerate(uint32_t start_addr, uint32_t size)
+{
+    uint32_t   i, j, value;
+    uint32_t   crc_tab[256];
+    uint32_t   crc = 0xffffffff;
+    uint8_t    data;
 
-	GPIO_Initialize();
-
-
-
-    if (bootloader_Trigger() == false)
+    for (i = 0; i < 256; i++)
     {
-        run_Application(APP_JUMP_ADDRESS);
+        value = i;
+
+        for (j = 0; j < 8; j++)
+        {
+            if (value & 1)
+            {
+                value = (value >> 1) ^ 0xEDB88320;
+            }
+            else
+            {
+                value >>= 1;
+            }
+        }
+        crc_tab[i] = value;
     }
 
-    CORETIMER_Initialize();
-	UART2_Initialize();
+    for (i = 0; i < size; i++)
+    {
+        data = *(uint8_t *)KVA0_TO_KVA1((start_addr + i));
 
-    NVM_Initialize();
+        crc = crc_tab[(crc ^ data) & 0xff] ^ (crc >> 8);
+    }
 
-
-
-
-
-    EVIC_Initialize();
-
-
-
+    return crc;
 }
+
+
+/* Trigger a reset */
+void bootloader_TriggerReset(void)
+{
+    /* Perform system unlock sequence */
+    SYSKEY = 0x00000000;
+    SYSKEY = 0xAA996655;
+    SYSKEY = 0x556699AA;
+
+    RSWRSTSET = _RSWRST_SWRST_MASK;
+    (void)RSWRST;
+}
+
+void run_Application(uint32_t address)
+{
+    uint32_t jumpAddrVal = *(uint32_t *)(address & WORD_ALIGN_MASK);
+
+    void (*fptr)(void);
+
+    fptr = (void (*)(void))address;
+
+    if (jumpAddrVal == 0xffffffff)
+    {
+        return;
+    }
+
+    /* Call Deinitialize routine to free any resources acquired by Bootloader */
+    SYS_DeInitialize(NULL);
+
+    __builtin_disable_interrupts();
+
+    fptr();
+}
+
+

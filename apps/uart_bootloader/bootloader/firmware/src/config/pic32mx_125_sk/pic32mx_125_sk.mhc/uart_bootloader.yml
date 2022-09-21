@@ -5,6 +5,13 @@ children:
 - type: Symbols
   children:
   - type: String
+    attributes: {id: BTL_APP_JUMP_ADDRESS}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: uart_bootloader, value: 1d001000}
+  - type: String
     attributes: {id: BTL_SIZE}
     children:
     - type: Attributes
