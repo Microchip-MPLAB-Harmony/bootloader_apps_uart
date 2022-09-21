@@ -21,14 +21,7 @@
  */
 
 /* file generated from device description version 2020-11-19T13:00:12Z */
-#ifndef _SAMHA1_EIC_INSTANCE_
-#define _SAMHA1_EIC_INSTANCE_
+#ifndef _SAMHA1_FUSES_INSTANCE_
+#define _SAMHA1_FUSES_INSTANCE_
 
-
-/* ========== Instance Parameter definitions for EIC peripheral ========== */
-#define EIC_CONFIG_NUM                           (2)        /* Number of CONFIG registers */
-#define EIC_EXTINT_NUM                           (16)       /* Number of External Interrupts */
-#define EIC_GCLK_ID                              (5)        /* Index of Generic Clock */
-#define EIC_INSTANCE_ID                          (6)        
-
-#endif /* _SAMHA1_EIC_INSTANCE_ */
+#endif /* _SAMHA1_FUSES_INSTANCE_ */

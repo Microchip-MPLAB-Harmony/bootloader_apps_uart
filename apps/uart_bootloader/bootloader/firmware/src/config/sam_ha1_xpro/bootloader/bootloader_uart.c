@@ -2,7 +2,7 @@
   UART Bootloader Source File
 
   File Name:
-    bootloader.c
+    bootloader_uart.c
 
   Summary:
     This file contains source code necessary to execute UART bootloader.
@@ -45,6 +45,7 @@
 // *****************************************************************************
 
 #include "definitions.h"
+#include "bootloader_common.h"
 #include <device.h>
 
 // *****************************************************************************
@@ -52,16 +53,6 @@
 // Section: Type Definitions
 // *****************************************************************************
 // *****************************************************************************
-
-#define FLASH_START             (0x00000000UL)
-#define FLASH_LENGTH            (0x10000UL)
-#define PAGE_SIZE               (64UL)
-#define ERASE_BLOCK_SIZE        (256UL)
-#define PAGES_IN_ERASE_BLOCK    (ERASE_BLOCK_SIZE / PAGE_SIZE)
-
-#define BOOTLOADER_SIZE         2048
-
-#define APP_START_ADDRESS       (0x800UL)
 
 #define GUARD_OFFSET            0
 #define CMD_OFFSET              2
@@ -91,6 +82,7 @@ enum
     BL_CMD_DATA         = 0xa1,
     BL_CMD_VERIFY       = 0xa2,
     BL_CMD_RESET        = 0xa3,
+    BL_CMD_READ_VERSION = 0xa6,
 };
 
 enum
@@ -108,6 +100,8 @@ enum
 // *****************************************************************************
 // *****************************************************************************
 
+static uint8_t btl_guard[4] = {0x4D, 0x43, 0x48, 0x50};
+
 static uint32_t input_buffer[WORDS(OFFSET_SIZE + DATA_SIZE)];
 
 static uint32_t flash_data[WORDS(DATA_SIZE)];
@@ -115,33 +109,25 @@ static uint32_t flash_addr          = 0;
 
 static uint32_t unlock_begin        = 0;
 static uint32_t unlock_end          = 0;
+static uint32_t data_size           = 0;
 
 static uint8_t  input_command       = 0;
 
 static bool     packet_received     = false;
 static bool     flash_data_ready    = false;
 
+static bool     uartBLActive        = false;
+
+typedef bool (*FLASH_ERASE_FPTR)(uint32_t);
+
+typedef bool (*FLASH_WRITE_FPTR)(uint32_t*, uint32_t);
+
+
 // *****************************************************************************
 // *****************************************************************************
 // Section: Bootloader Local Functions
 // *****************************************************************************
 // *****************************************************************************
-
-/* Function to Generate CRC using the device service unit peripheral on programmed data */
-static uint32_t crc_generate(void)
-{
-    uint32_t addr = unlock_begin;
-    uint32_t size = unlock_end - unlock_begin;
-    uint32_t crc  = 0;
-
-    PAC_PeripheralProtectSetup (PAC_PERIPHERAL_DSU, PAC_PROTECTION_CLEAR);
-
-    DSU_CRCCalculate (addr, size, 0xffffffff, &crc);
-
-    PAC_PeripheralProtectSetup (PAC_PERIPHERAL_DSU, PAC_PROTECTION_SET);
-
-    return crc;
-}
 
 /* Function to receive application firmware via UART/USART */
 static void input_task(void)
@@ -168,13 +154,22 @@ static void input_task(void)
     if (SYSTICK_TimerPeriodHasExpired())
     {
         header_received = false;
+        ptr = 0;
     }
 
     if (header_received == false)
     {
         byte_buf[ptr++] = input_data;
 
-        if (ptr == HEADER_SIZE)
+        // Check for each guard byte and discard if mismatch
+        if (ptr <= GUARD_SIZE)
+        {
+            if (input_data != btl_guard[ptr-1])
+            {
+                ptr = 0;
+            }
+        }
+        else if (ptr == HEADER_SIZE)
         {
             if (input_buffer[GUARD_OFFSET] != BTL_GUARD)
             {
@@ -185,6 +180,7 @@ static void input_task(void)
                 size            = input_buffer[SIZE_OFFSET];
                 input_command   = (uint8_t)input_buffer[CMD_OFFSET];
                 header_received = true;
+                uartBLActive    = true;
             }
 
             ptr = 0;
@@ -199,6 +195,7 @@ static void input_task(void)
 
         if (ptr == size)
         {
+            data_size = size;
             ptr = 0;
             size = 0;
             packet_received = true;
@@ -240,7 +237,9 @@ static void command_task(void)
         if (unlock_begin <= flash_addr && flash_addr < unlock_end)
         {
             for (i = 0; i < WORDS(DATA_SIZE); i++)
+            {
                 flash_data[i] = input_buffer[i + DATA_OFFSET];
+            }
 
             flash_data_ready = true;
 
@@ -251,17 +250,30 @@ static void command_task(void)
             SERCOM1_USART_WriteByte(BL_RESP_ERROR);
         }
     }
+    else if (BL_CMD_READ_VERSION == input_command)
+    {
+        SERCOM1_USART_WriteByte(BL_RESP_OK);
+
+        uint16_t btlVersion = bootloader_GetVersion();
+
+        SERCOM1_USART_WriteByte(((btlVersion >> 8) & 0xFF));
+        SERCOM1_USART_WriteByte((btlVersion & 0xFF));
+    }
     else if (BL_CMD_VERIFY == input_command)
     {
         uint32_t crc        = input_buffer[CRC_OFFSET];
         uint32_t crc_gen    = 0;
 
-        crc_gen = crc_generate();
+        crc_gen = bootloader_CRCGenerate(unlock_begin, (unlock_end - unlock_begin));
 
         if (crc == crc_gen)
+        {
             SERCOM1_USART_WriteByte(BL_RESP_CRC_OK);
+        }
         else
+        {
             SERCOM1_USART_WriteByte(BL_RESP_CRC_FAIL);
+        }
     }
     else if (BL_CMD_RESET == input_command)
     {
@@ -269,7 +281,7 @@ static void command_task(void)
 
         while(SERCOM1_USART_TransmitComplete() == false);
 
-        NVIC_SystemReset();
+        bootloader_TriggerReset();
     }
     else
     {
@@ -279,36 +291,53 @@ static void command_task(void)
     packet_received = false;
 }
 
+
 /* Function to program received application firmware data into internal flash */
 static void flash_task(void)
 {
     uint32_t addr       = flash_addr;
-    uint32_t page       = 0;
+    uint32_t bytes_written   = 0;
     uint32_t write_idx  = 0;
+
+    // data_size = Actual data bytes to write + Address 4 Bytes
+    uint32_t bytes_to_write = (data_size - 4);
+
+    FLASH_ERASE_FPTR flash_erase_fptr = (FLASH_ERASE_FPTR)NVMCTRL_RowErase;
+    FLASH_WRITE_FPTR flash_write_fptr = (FLASH_WRITE_FPTR)NVMCTRL_PageWrite;
 
     // Lock region size is always bigger than the row size
     NVMCTRL_RegionUnlock(addr);
-
+    /* Receive Next Bytes while waiting for memory to be ready */
     while(NVMCTRL_IsBusy() == true)
-        input_task();
-
-    /* Erase the Current sector */
-    NVMCTRL_RowErase(addr);
-
-    /* Receive Next Bytes while waiting for erase to complete */
-    while(NVMCTRL_IsBusy() == true)
-        input_task();
-
-    for (page = 0; page < PAGES_IN_ERASE_BLOCK; page++)
     {
-        NVMCTRL_PageWrite(&flash_data[write_idx], addr);
+        input_task();
+    
+    }
+    /* Erase the Current sector */
+    flash_erase_fptr(addr);
 
+    /* Receive Next Bytes while waiting for memory to be ready */
+    while(NVMCTRL_IsBusy() == true)
+    {
+        input_task();
+    
+    }
+
+    for (bytes_written = 0; bytes_written < bytes_to_write; bytes_written += PAGE_SIZE)
+    {
+        flash_write_fptr(&flash_data[write_idx], addr);
+
+        /* Receive Next Bytes while waiting for memory to be ready */
         while(NVMCTRL_IsBusy() == true)
+        {
             input_task();
+        
+        }
 
         addr += PAGE_SIZE;
         write_idx += WORDS(PAGE_SIZE);
     }
+
 
     flash_data_ready = false;
 }
@@ -319,36 +348,20 @@ static void flash_task(void)
 // *****************************************************************************
 // *****************************************************************************
 
-void run_Application(void)
+void bootloader_UART_Tasks(void)
 {
-    uint32_t msp            = *(uint32_t *)(APP_START_ADDRESS);
-    uint32_t reset_vector   = *(uint32_t *)(APP_START_ADDRESS + 4);
 
-    if (msp == 0xffffffff)
-    {
-        return;
-    }
-
-    __set_MSP(msp);
-
-    asm("bx %0"::"r" (reset_vector));
-}
-
-bool __WEAK bootloader_Trigger(void)
-{
-    /* Function can be overriden with custom implementation */
-    return false;
-}
-
-void bootloader_Tasks(void)
-{
-    while (1)
+    do
     {
         input_task();
 
         if (flash_data_ready)
+        {
             flash_task();
+        }
         else if (packet_received)
+        {
             command_task();
-    }
+        }
+    } while (uartBLActive);
 }

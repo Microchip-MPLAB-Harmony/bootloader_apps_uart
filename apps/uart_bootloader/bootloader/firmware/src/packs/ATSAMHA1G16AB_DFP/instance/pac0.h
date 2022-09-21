@@ -1,7 +1,7 @@
-/**
- * \brief Instance header file for ATSAMHA1G16AB
+/*
+ * Instance header file for ATSAMHA1G17AB
  *
- * Copyright (c) 2021 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2022 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,13 +20,13 @@
  *
  */
 
-/* file generated from device description version 2019-11-25T06:58:39Z */
+/* file generated from device description version 2020-11-19T13:00:12Z */
 #ifndef _SAMHA1_PAC0_INSTANCE_
 #define _SAMHA1_PAC0_INSTANCE_
 
 
 /* ========== Instance Parameter definitions for PAC0 peripheral ========== */
-#define PAC0_WPROT_DEFAULT_VAL                   _UL_(0x00000000) /* PAC protection mask at reset */
-#define PAC0_INSTANCE_ID                         _UL_(0)    
+#define PAC0_WPROT_DEFAULT_VAL                   (0x00000000) /* PAC protection mask at reset */
+#define PAC0_INSTANCE_ID                         (0)        
 
 #endif /* _SAMHA1_PAC0_INSTANCE_ */

@@ -1,7 +1,7 @@
-/**
- * \brief Instance header file for ATSAMHA1G16AB
+/*
+ * Instance header file for ATSAMHA1G17AB
  *
- * Copyright (c) 2021 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2022 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,17 +20,17 @@
  *
  */
 
-/* file generated from device description version 2019-11-25T06:58:39Z */
+/* file generated from device description version 2020-11-19T13:00:12Z */
 #ifndef _SAMHA1_SERCOM3_INSTANCE_
 #define _SAMHA1_SERCOM3_INSTANCE_
 
 
 /* ========== Instance Parameter definitions for SERCOM3 peripheral ========== */
-#define SERCOM3_DMAC_ID_RX                       _UL_(7)    /* Index of DMA RX trigger */
-#define SERCOM3_DMAC_ID_TX                       _UL_(8)    /* Index of DMA TX trigger */
-#define SERCOM3_GCLK_ID_CORE                     _UL_(23)   /* Index of Generic Clock for Core */
-#define SERCOM3_GCLK_ID_SLOW                     _UL_(19)   /* Index of Generic Clock for SMbus timeout */
-#define SERCOM3_INT_MSB                          _UL_(6)    
-#define SERCOM3_INSTANCE_ID                      _UL_(69)   
+#define SERCOM3_DMAC_ID_RX                       (7)        /* Index of DMA RX trigger */
+#define SERCOM3_DMAC_ID_TX                       (8)        /* Index of DMA TX trigger */
+#define SERCOM3_GCLK_ID_CORE                     (23)       /* Index of Generic Clock for Core */
+#define SERCOM3_GCLK_ID_SLOW                     (19)       /* Index of Generic Clock for SMbus timeout */
+#define SERCOM3_INT_MSB                          (6)        
+#define SERCOM3_INSTANCE_ID                      (69)       
 
 #endif /* _SAMHA1_SERCOM3_INSTANCE_ */
