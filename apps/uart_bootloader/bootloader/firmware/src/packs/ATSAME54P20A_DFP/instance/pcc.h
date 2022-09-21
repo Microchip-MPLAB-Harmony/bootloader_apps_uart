@@ -1,7 +1,7 @@
-/**
- * \brief Instance header file for ATSAME54P20A
+/*
+ * Instance header file for ATSAME54P20A
  *
- * Copyright (c) 2021 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2022 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,14 +20,14 @@
  *
  */
 
-/* file generated from device description version 2020-11-23T12:28:26Z */
+/* file generated from device description version 2022-02-14T14:27:35Z */
 #ifndef _SAME54_PCC_INSTANCE_
 #define _SAME54_PCC_INSTANCE_
 
 
 /* ========== Instance Parameter definitions for PCC peripheral ========== */
-#define PCC_DATA_SIZE                            _UL_(14)   
-#define PCC_DMAC_ID_RX                           _UL_(80)   
-#define PCC_INSTANCE_ID                          _UL_(107)  
+#define PCC_DATA_SIZE                            (14)       
+#define PCC_DMAC_ID_RX                           (80)       
+#define PCC_INSTANCE_ID                          (107)      /* Instance index for PCC */
 
 #endif /* _SAME54_PCC_INSTANCE_ */
