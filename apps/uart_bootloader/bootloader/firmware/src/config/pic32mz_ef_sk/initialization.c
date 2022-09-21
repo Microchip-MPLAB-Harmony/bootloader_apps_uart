@@ -165,7 +165,6 @@ void SYS_Initialize ( void* data )
     __builtin_disable_interrupts();
 
     CLK_Initialize();
-    
     /* Configure Prefetch, Wait States and ECC */
     PRECONbits.PREFEN = 3;
     PRECONbits.PFMWS = 3;
@@ -179,7 +178,7 @@ void SYS_Initialize ( void* data )
 
     if (bootloader_Trigger() == false)
     {
-        run_Application();
+        run_Application(APP_JUMP_ADDRESS);
     }
 
     CORETIMER_Initialize();
