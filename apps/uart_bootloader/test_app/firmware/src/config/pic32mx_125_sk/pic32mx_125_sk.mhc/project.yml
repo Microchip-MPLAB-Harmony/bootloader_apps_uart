@@ -20,13 +20,13 @@ files:
   security: NON_SECURE
   type: SOURCE
   userChecksum: 4BBDE3B7B0DAEE2CA5A8F519001D5BFF
-- generatedChecksum: 1ABAE844E48EA8F7AC00231973E98F49
+- generatedChecksum: 46E6BC233FA73F54B84DA807266AA50B
   logicalPath: config/pic32mx_125_sk
   name: initialization.c
   physicalPath: ''
   security: NON_SECURE
   type: SOURCE
-  userChecksum: 1ABAE844E48EA8F7AC00231973E98F49
+  userChecksum: 46E6BC233FA73F54B84DA807266AA50B
 - generatedChecksum: CDE5BCC6CEA2D57AF1B637918874FD32
   logicalPath: config/pic32mx_125_sk
   name: interrupts.c
@@ -62,20 +62,20 @@ files:
   security: NON_SECURE
   type: SOURCE
   userChecksum: 36F718A0C383C0856EB1DE4DEA41B4D5
-- generatedChecksum: D65656C8A45412F4B34B8D56E6CC0B60
+- generatedChecksum: 5018A4C5FBCC51178C9BAE7ECC8016C3
   logicalPath: config/pic32mx_125_sk/peripheral/gpio
   name: plib_gpio.c
   physicalPath: peripheral/gpio
   security: NON_SECURE
   type: SOURCE
-  userChecksum: D65656C8A45412F4B34B8D56E6CC0B60
-- generatedChecksum: 5733E7E141B78CCE3D7F5714E6ACA902
+  userChecksum: 5018A4C5FBCC51178C9BAE7ECC8016C3
+- generatedChecksum: DCC19E5D4D4B9D96C1AACD58C618F415
   logicalPath: config/pic32mx_125_sk/peripheral/uart
   name: plib_uart2.c
   physicalPath: peripheral/uart
   security: NON_SECURE
   type: SOURCE
-  userChecksum: 5733E7E141B78CCE3D7F5714E6ACA902
+  userChecksum: DCC19E5D4D4B9D96C1AACD58C618F415
 - generatedChecksum: DE51BB8F6FDBC39FB049CB2A14E56B25
   logicalPath: config/pic32mx_125_sk
   name: tasks.c
@@ -83,13 +83,13 @@ files:
   security: NON_SECURE
   type: SOURCE
   userChecksum: DE51BB8F6FDBC39FB049CB2A14E56B25
-- generatedChecksum: CD1794BE8A9148BA4C835E811CBD7164
+- generatedChecksum: F8E5A602361062C584BFD545E44A2C6F
   logicalPath: config/pic32mx_125_sk/stdio
   name: xc32_monitor.c
   physicalPath: stdio
   security: NON_SECURE
   type: SOURCE
-  userChecksum: CD1794BE8A9148BA4C835E811CBD7164
+  userChecksum: F8E5A602361062C584BFD545E44A2C6F
 - generatedChecksum: null
   logicalPath: ''
   name: app.h
@@ -104,13 +104,13 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: 91DEF69BECBD431E7EDDC04D3B113000
-- generatedChecksum: 76016C9804D6DE17B74C92D82294562E
+- generatedChecksum: 7A852268CAA1F0FBB9E75D327532882A
   logicalPath: config/pic32mx_125_sk
   name: configuration.h
   physicalPath: ''
   security: NON_SECURE
   type: HEADER
-  userChecksum: 76016C9804D6DE17B74C92D82294562E
+  userChecksum: 7A852268CAA1F0FBB9E75D327532882A
 - generatedChecksum: 3BDEB3FF807741B562D1A87CB1DF5EF5
   logicalPath: config/pic32mx_125_sk
   name: definitions.h
@@ -139,13 +139,13 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: 7066CC390335CF75126E2A50C46E3BDD
-- generatedChecksum: 7922CFE1F1A38EDFE2430801745A0983
+- generatedChecksum: D63E6878A267634FBB837D7F3F790D96
   logicalPath: config/pic32mx_125_sk/peripheral/coretimer
   name: plib_coretimer.h
   physicalPath: peripheral/coretimer
   security: NON_SECURE
   type: HEADER
-  userChecksum: 7922CFE1F1A38EDFE2430801745A0983
+  userChecksum: D63E6878A267634FBB837D7F3F790D96
 - generatedChecksum: 3D139289B450ACEE365DCF48273BA6C9
   logicalPath: config/pic32mx_125_sk/peripheral/evic
   name: plib_evic.h
@@ -174,13 +174,13 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: 91611515A95D92B82B7F4064C16D122B
-- generatedChecksum: 2C8543317B3F067432097AB9BD3E8672
+- generatedChecksum: 7DC91D6D376C98802C9C2990432DE9B7
   logicalPath: config/pic32mx_125_sk
   name: toolchain_specifics.h
   physicalPath: ''
   security: NON_SECURE
   type: HEADER
-  userChecksum: 2C8543317B3F067432097AB9BD3E8672
+  userChecksum: 7DC91D6D376C98802C9C2990432DE9B7
 - generatedChecksum: null
   logicalPath: config/pic32mx_125_sk
   name: user.h
@@ -196,7 +196,7 @@ settings:
   delimiter: ;
   key: extra-include-directories
   security: NON_SECURE
-  value: ../src;../src/config/pic32mx_125_sk;../src/packs/PIC32MX570F512L_DFP;
+  value: ../src;../src/config/pic32mx_125_sk;
 - append: false
   category: C32
   delimiter: ''
@@ -226,7 +226,7 @@ settings:
   delimiter: ;
   key: extra-include-directories
   security: NON_SECURE
-  value: ../src;../src/config/pic32mx_125_sk;../src/packs/PIC32MX570F512L_DFP;
+  value: ../src;../src/config/pic32mx_125_sk;
 - append: false
   category: C32CPP
   delimiter: ''

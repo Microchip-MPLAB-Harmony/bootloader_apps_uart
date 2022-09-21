@@ -98,16 +98,15 @@ bool UART2_SerialSetup( UART_SERIAL_SETUP *setup, uint32_t srcClkFreq )
 {
     bool status = false;
     uint32_t baud;
-    int32_t brgValHigh = 0;
-    int32_t brgValLow = 0;
-    uint32_t brgVal = 0;
-    uint32_t uartMode;
+    uint32_t status_ctrl;
+    bool brgh = 0;
+    int32_t uxbrg = 0;
 
     if (setup != NULL)
     {
         baud = setup->baudRate;
 
-        if (baud == 0)
+        if ((baud == 0) || ((setup->dataWidth == UART_DATA_9_BIT) && (setup->parity != UART_PARITY_NONE)))
         {
             return status;
         }
@@ -118,54 +117,48 @@ bool UART2_SerialSetup( UART_SERIAL_SETUP *setup, uint32_t srcClkFreq )
         }
 
         /* Calculate BRG value */
-        brgValLow = (((srcClkFreq >> 4) + (baud >> 1)) / baud ) - 1;
-        brgValHigh = (((srcClkFreq >> 2) + (baud >> 1)) / baud ) - 1;
-
-        /* Check if the baud value can be set with low baud settings */
-        if((brgValLow >= 0) && (brgValLow <= UINT16_MAX))
+        if (brgh == 0)
         {
-            brgVal =  brgValLow;
-            U2MODECLR = _U2MODE_BRGH_MASK;
-        }
-        else if ((brgValHigh >= 0) && (brgValHigh <= UINT16_MAX))
-        {
-            brgVal = brgValHigh;
-            U2MODESET = _U2MODE_BRGH_MASK;
+            uxbrg = (((srcClkFreq >> 4) + (baud >> 1)) / baud ) - 1;
         }
         else
+        {
+            uxbrg = (((srcClkFreq >> 2) + (baud >> 1)) / baud ) - 1;
+        }
+
+        /* Check if the baud value can be set with low baud settings */
+        if((uxbrg < 0) || (uxbrg > UINT16_MAX))
         {
             return status;
         }
 
+        /* Turn OFF UART2. Save UTXEN, URXEN and UTXBRK bits as these are cleared upon disabling UART */
+
+        status_ctrl = U2STA & (_U2STA_UTXEN_MASK | _U2STA_URXEN_MASK | _U2STA_UTXBRK_MASK);
+
+        U2MODECLR = _U2MODE_ON_MASK;
+
         if(setup->dataWidth == UART_DATA_9_BIT)
         {
-            if(setup->parity != UART_PARITY_NONE)
-            {
-               return status;
-            }
-            else
-            {
-               /* Configure UART2 mode */
-               uartMode = U2MODE;
-               uartMode &= ~_U2MODE_PDSEL_MASK;
-               U2MODE = uartMode | setup->dataWidth;
-            }
+            /* Configure UART2 mode */
+            U2MODE = (U2MODE & (~_U2MODE_PDSEL_MASK)) | setup->dataWidth;
         }
         else
         {
             /* Configure UART2 mode */
-            uartMode = U2MODE;
-            uartMode &= ~_U2MODE_PDSEL_MASK;
-            U2MODE = uartMode | setup->parity ;
+            U2MODE = (U2MODE & (~_U2MODE_PDSEL_MASK)) | setup->parity;
         }
 
         /* Configure UART2 mode */
-        uartMode = U2MODE;
-        uartMode &= ~_U2MODE_STSEL_MASK;
-        U2MODE = uartMode | setup->stopBits ;
+        U2MODE = (U2MODE & (~_U2MODE_STSEL_MASK)) | setup->stopBits;
 
         /* Configure UART2 Baud Rate */
-        U2BRG = brgVal;
+        U2BRG = uxbrg;
+
+        U2MODESET = _U2MODE_ON_MASK;
+
+        /* Re-enable UTXEN, URXEN and UTXBRK. */
+        U2STASET = status_ctrl;
 
         status = true;
     }
@@ -307,18 +300,6 @@ bool UART2_TransmitterIsReady( void )
     return status;
 }
 
-bool UART2_TransmitComplete( void )
-{
-    bool transmitComplete = false;
-
-    if((U2STA & _U2STA_TRMT_MASK))
-    {
-        transmitComplete = true;
-    }
-
-    return transmitComplete;
-}
-
 int UART2_ReadByte( void )
 {
     return(U2RXREG);
@@ -334,4 +315,16 @@ bool UART2_ReceiverIsReady( void )
     }
 
     return status;
+}
+
+bool UART2_TransmitComplete( void )
+{
+    bool transmitComplete = false;
+
+    if((U2STA & _U2STA_TRMT_MASK))
+    {
+        transmitComplete = true;
+    }
+
+    return transmitComplete;
 }
