@@ -1,20 +1,4 @@
-/*******************************************************************************
-  Interface definition of EVSYS PLIB.
-
-  Company:
-    Microchip Technology Inc.
-
-  File Name:
-    plib_evsys.h
-
-  Summary:
-    Interface definition of the Event System Plib (EVSYS).
-
-  Description:
-    This file defines the interface for the EVSYS Plib.
-    It allows user to setup event generators and users.
-*******************************************************************************/
-
+// DOM-IGNORE-BEGIN
 /*******************************************************************************
 * Copyright (C) 2018 Microchip Technology Inc. and its subsidiaries.
 *
@@ -37,32 +21,41 @@
 * ANY WAY RELATED TO THIS SOFTWARE WILL NOT EXCEED THE AMOUNT OF FEES, IF ANY,
 * THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
 *******************************************************************************/
+// DOM-IGNORE-END
 
-#ifndef EVSYS_H    // Guards against multiple inclusion
-#define EVSYS_H
+#include <stdio.h>
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <stdbool.h>
+#include "device.h" /* for ARM CMSIS __BKPT() */
 
-#include "device.h"
-#include <stdint.h>
-#include <stddef.h>
-
-#ifdef __cplusplus // Provide C++ Compatibility
- extern "C" {
+#ifdef __cplusplus
+extern "C" {
 #endif
 
 
-// *****************************************************************************
-// *****************************************************************************
-// Section: Interface
-// *****************************************************************************
-// *****************************************************************************
+/* MISRAC 2012 deviation block start */
+/* MISRA C-2012 Rule 21.2 deviated twice.  Deviation record ID -  H3_MISRAC_2012_R_21_2_DR_1 */
+/* Harmony specific
+ * We implement only the syscalls we want over the stubs provided by libpic32c
+ */
+extern void _exit(int status);
 
-
-
-/***************************** EVSYS API *******************************/
-void EVSYS_Initialize( void );
-
-#ifdef __cplusplus // Provide C++ Compatibility
- }
+void _exit(int status)
+{
+    /* Software breakpoint */
+#ifdef __DEBUG
+    __BKPT(0);
 #endif
 
+    /* halt CPU */
+    while (true)
+    {
+    }
+}
+
+#ifdef __cplusplus
+}
 #endif
+
+/* MISRAC 2012 deviation block end */
