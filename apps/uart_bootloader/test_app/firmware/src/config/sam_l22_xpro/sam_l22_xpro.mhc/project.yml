@@ -20,27 +20,27 @@ files:
   security: NON_SECURE
   type: SOURCE
   userChecksum: 0D18A719A1E40A8875895284967F66D0
-- generatedChecksum: 464DA3529BBC73E37655AF8B2DFC0C48
+- generatedChecksum: 7A2810F1AD08A20B2BE65C33FFBBE76F
   logicalPath: config/sam_l22_xpro
   name: initialization.c
   physicalPath: ''
   security: NON_SECURE
   type: SOURCE
-  userChecksum: 464DA3529BBC73E37655AF8B2DFC0C48
-- generatedChecksum: 784E292AD21C5D3394F697526DA5A467
+  userChecksum: 7A2810F1AD08A20B2BE65C33FFBBE76F
+- generatedChecksum: 2AFB0C7A497BFC3835CF9E4A9BF47531
   logicalPath: config/sam_l22_xpro
   name: interrupts.c
   physicalPath: ''
   security: NON_SECURE
   type: SOURCE
-  userChecksum: 784E292AD21C5D3394F697526DA5A467
-- generatedChecksum: 6513F2461B8F476B68CA73906086047F
+  userChecksum: 2AFB0C7A497BFC3835CF9E4A9BF47531
+- generatedChecksum: 2CDCA8CDF135BDEB85FDFC0A2A991C0B
   logicalPath: config/sam_l22_xpro
   name: libc_syscalls.c
   physicalPath: ''
   security: NON_SECURE
   type: SOURCE
-  userChecksum: 6513F2461B8F476B68CA73906086047F
+  userChecksum: 2CDCA8CDF135BDEB85FDFC0A2A991C0B
 - generatedChecksum: null
   logicalPath: ''
   name: main.c
@@ -48,13 +48,13 @@ files:
   security: NON_SECURE
   type: SOURCE
   userChecksum: null
-- generatedChecksum: 4A07E0553FECFCB27F8AAF6D8BCE34BB
+- generatedChecksum: CC3CEDC29496F07826F77870FA47A8EE
   logicalPath: config/sam_l22_xpro/peripheral/clock
   name: plib_clock.c
   physicalPath: peripheral/clock
   security: NON_SECURE
   type: SOURCE
-  userChecksum: 4A07E0553FECFCB27F8AAF6D8BCE34BB
+  userChecksum: CC3CEDC29496F07826F77870FA47A8EE
 - generatedChecksum: C3ECDED3D6301DB0DE622293ED615D21
   logicalPath: config/sam_l22_xpro/peripheral/evsys
   name: plib_evsys.c
@@ -62,55 +62,55 @@ files:
   security: NON_SECURE
   type: SOURCE
   userChecksum: C3ECDED3D6301DB0DE622293ED615D21
-- generatedChecksum: D984FDA7A2C6E878F8BFA27EF0A658A6
+- generatedChecksum: 0584562578824DEC56CCBFBF23608F64
   logicalPath: config/sam_l22_xpro/peripheral/nvic
   name: plib_nvic.c
   physicalPath: peripheral/nvic
   security: NON_SECURE
   type: SOURCE
-  userChecksum: D984FDA7A2C6E878F8BFA27EF0A658A6
-- generatedChecksum: 941B9AE0E1B48C2EF9733942726D7AE8
+  userChecksum: 0584562578824DEC56CCBFBF23608F64
+- generatedChecksum: B005D95A2E8DC507A37F4E75A00675CB
   logicalPath: config/sam_l22_xpro/peripheral/nvmctrl
   name: plib_nvmctrl.c
   physicalPath: peripheral/nvmctrl
   security: NON_SECURE
   type: SOURCE
-  userChecksum: 941B9AE0E1B48C2EF9733942726D7AE8
-- generatedChecksum: 2530DE80CE68B09752AB85A1DA53C9AC
+  userChecksum: B005D95A2E8DC507A37F4E75A00675CB
+- generatedChecksum: DB644EA1D5C2056B39916D5B693DE962
   logicalPath: config/sam_l22_xpro/peripheral/pm
   name: plib_pm.c
   physicalPath: peripheral/pm
   security: NON_SECURE
   type: SOURCE
-  userChecksum: 2530DE80CE68B09752AB85A1DA53C9AC
-- generatedChecksum: D8AAC3F13ED7CCF7C0B6379E34015BCE
+  userChecksum: DB644EA1D5C2056B39916D5B693DE962
+- generatedChecksum: 5B1F922C396F2096A801228C2BA1A7CA
   logicalPath: config/sam_l22_xpro/peripheral/port
   name: plib_port.c
   physicalPath: peripheral/port
   security: NON_SECURE
   type: SOURCE
-  userChecksum: D8AAC3F13ED7CCF7C0B6379E34015BCE
-- generatedChecksum: 2336D6CEAFBC0508D398BCD3904B9F52
+  userChecksum: 5B1F922C396F2096A801228C2BA1A7CA
+- generatedChecksum: 9AF1398B06D8AFB78E21DF702BEAE831
   logicalPath: config/sam_l22_xpro/peripheral/sercom/usart
   name: plib_sercom4_usart.c
   physicalPath: peripheral/sercom/usart
   security: NON_SECURE
   type: SOURCE
-  userChecksum: 2336D6CEAFBC0508D398BCD3904B9F52
-- generatedChecksum: 5F8CE704F69D255E66668AD0F13D8D15
+  userChecksum: 9AF1398B06D8AFB78E21DF702BEAE831
+- generatedChecksum: 3651EAC41BFC224D55FC7A434EEA4722
   logicalPath: config/sam_l22_xpro/peripheral/systick
   name: plib_systick.c
   physicalPath: peripheral/systick
   security: NON_SECURE
   type: SOURCE
-  userChecksum: 5F8CE704F69D255E66668AD0F13D8D15
-- generatedChecksum: 2645E564BD945DAED1424FD8D7B39330
+  userChecksum: 3651EAC41BFC224D55FC7A434EEA4722
+- generatedChecksum: 64C7B09EBF0E16AC27EFD31B52FDDDF8
   logicalPath: config/sam_l22_xpro
   name: startup_xc32.c
   physicalPath: ''
   security: NON_SECURE
   type: SOURCE
-  userChecksum: 2645E564BD945DAED1424FD8D7B39330
+  userChecksum: 64C7B09EBF0E16AC27EFD31B52FDDDF8
 - generatedChecksum: DE51BB8F6FDBC39FB049CB2A14E56B25
   logicalPath: config/sam_l22_xpro
   name: tasks.c
@@ -118,55 +118,55 @@ files:
   security: NON_SECURE
   type: SOURCE
   userChecksum: DE51BB8F6FDBC39FB049CB2A14E56B25
-- generatedChecksum: AA403AD844B062620F3DDD8AB6DAD668
+- generatedChecksum: 30822068AFE4E04C7F8CDE7D30F3F378
   logicalPath: config/sam_l22_xpro/stdio
   name: xc32_monitor.c
   physicalPath: stdio
   security: NON_SECURE
   type: SOURCE
-  userChecksum: AA403AD844B062620F3DDD8AB6DAD668
-- generatedChecksum: 35ED666453C931B47C0E9D03880EA39C
+  userChecksum: 30822068AFE4E04C7F8CDE7D30F3F378
+- generatedChecksum: 7A28BBAC44F12636AA9836D70C6F42EF
   logicalPath: packs/ATSAML22N18A_DFP/component
   name: ac.h
   physicalPath: ../../packs/ATSAML22N18A_DFP/component
   security: NON_SECURE
   type: HEADER
-  userChecksum: 35ED666453C931B47C0E9D03880EA39C
-- generatedChecksum: B092122C4AB52A949C84D19252D9821B
+  userChecksum: 7A28BBAC44F12636AA9836D70C6F42EF
+- generatedChecksum: E5A0B199EE676DB586CA8E30320D4991
   logicalPath: packs/ATSAML22N18A_DFP/instance
   name: ac.h
   physicalPath: ../../packs/ATSAML22N18A_DFP/instance
   security: NON_SECURE
   type: HEADER
-  userChecksum: B092122C4AB52A949C84D19252D9821B
-- generatedChecksum: F0EE360C243AB3D379594E3305E73986
+  userChecksum: E5A0B199EE676DB586CA8E30320D4991
+- generatedChecksum: 8FB07E62501847215D3D2C4592718732
   logicalPath: packs/ATSAML22N18A_DFP/component
   name: adc.h
   physicalPath: ../../packs/ATSAML22N18A_DFP/component
   security: NON_SECURE
   type: HEADER
-  userChecksum: F0EE360C243AB3D379594E3305E73986
-- generatedChecksum: 6F19D5F397045260395581373D2FE199
+  userChecksum: 8FB07E62501847215D3D2C4592718732
+- generatedChecksum: F1C04A72899065B88C5C782C5ABC5BB1
   logicalPath: packs/ATSAML22N18A_DFP/instance
   name: adc.h
   physicalPath: ../../packs/ATSAML22N18A_DFP/instance
   security: NON_SECURE
   type: HEADER
-  userChecksum: 6F19D5F397045260395581373D2FE199
-- generatedChecksum: 1DCF4923AB7E2D8322A84D92BAA55E4E
+  userChecksum: F1C04A72899065B88C5C782C5ABC5BB1
+- generatedChecksum: 03CD6E2A5CC8A90DAB4B0157737730CA
   logicalPath: packs/ATSAML22N18A_DFP/component
   name: aes.h
   physicalPath: ../../packs/ATSAML22N18A_DFP/component
   security: NON_SECURE
   type: HEADER
-  userChecksum: 1DCF4923AB7E2D8322A84D92BAA55E4E
-- generatedChecksum: FC5CF31826AFED80CBD7FE284507C43C
+  userChecksum: 03CD6E2A5CC8A90DAB4B0157737730CA
+- generatedChecksum: 96159F92CE03B6DAE2CA39C59FF27FC6
   logicalPath: packs/ATSAML22N18A_DFP/instance
   name: aes.h
   physicalPath: ../../packs/ATSAML22N18A_DFP/instance
   security: NON_SECURE
   type: HEADER
-  userChecksum: FC5CF31826AFED80CBD7FE284507C43C
+  userChecksum: 96159F92CE03B6DAE2CA39C59FF27FC6
 - generatedChecksum: null
   logicalPath: ''
   name: app.h
@@ -181,48 +181,48 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: AE6470834F64CBBACE0C18185BBFF26F
-- generatedChecksum: 01B82424BC59A54620F7E9E0DB808EBB
+- generatedChecksum: 14F1AD56D242EFD0AF76849C6ADFECC4
   logicalPath: packs/CMSIS/CMSIS/Core/Include
   name: cachel1_armv7.h
   physicalPath: ../../packs/CMSIS/CMSIS/Core/Include
   security: NON_SECURE
   type: HEADER
-  userChecksum: 01B82424BC59A54620F7E9E0DB808EBB
-- generatedChecksum: 7C8707E812302E036ED0F4DD40B9CF62
+  userChecksum: 14F1AD56D242EFD0AF76849C6ADFECC4
+- generatedChecksum: D60DF5355CD06FAEA4601C63B57957A3
   logicalPath: packs/ATSAML22N18A_DFP/component
   name: ccl.h
   physicalPath: ../../packs/ATSAML22N18A_DFP/component
   security: NON_SECURE
   type: HEADER
-  userChecksum: 7C8707E812302E036ED0F4DD40B9CF62
-- generatedChecksum: AC70162B5708F09CF2422761292273DC
+  userChecksum: D60DF5355CD06FAEA4601C63B57957A3
+- generatedChecksum: DA9BAF40D9014B18AC0F4429A4E59F2A
   logicalPath: packs/ATSAML22N18A_DFP/instance
   name: ccl.h
   physicalPath: ../../packs/ATSAML22N18A_DFP/instance
   security: NON_SECURE
   type: HEADER
-  userChecksum: AC70162B5708F09CF2422761292273DC
-- generatedChecksum: 00A88E28C299A373117BC4D5B9E80C80
+  userChecksum: DA9BAF40D9014B18AC0F4429A4E59F2A
+- generatedChecksum: B79C08E0901948AD04D944B4BCE1B60D
   logicalPath: packs/CMSIS/CMSIS/Core/Include
   name: cmsis_armcc.h
   physicalPath: ../../packs/CMSIS/CMSIS/Core/Include
   security: NON_SECURE
   type: HEADER
-  userChecksum: 00A88E28C299A373117BC4D5B9E80C80
-- generatedChecksum: 734DF6998F09B2D22A4D9FE1D544FDFC
+  userChecksum: B79C08E0901948AD04D944B4BCE1B60D
+- generatedChecksum: 6B4E2EBA8708D9E04E6136F29460ACB9
   logicalPath: packs/CMSIS/CMSIS/Core/Include
   name: cmsis_armclang.h
   physicalPath: ../../packs/CMSIS/CMSIS/Core/Include
   security: NON_SECURE
   type: HEADER
-  userChecksum: 734DF6998F09B2D22A4D9FE1D544FDFC
-- generatedChecksum: 5D653BEFE5E6B1D00AB3682CE5D24C11
+  userChecksum: 6B4E2EBA8708D9E04E6136F29460ACB9
+- generatedChecksum: 415E22EBE7A3BACE87240A7F16492C46
   logicalPath: packs/CMSIS/CMSIS/Core/Include
   name: cmsis_armclang_ltm.h
   physicalPath: ../../packs/CMSIS/CMSIS/Core/Include
   security: NON_SECURE
   type: HEADER
-  userChecksum: 5D653BEFE5E6B1D00AB3682CE5D24C11
+  userChecksum: 415E22EBE7A3BACE87240A7F16492C46
 - generatedChecksum: 60385A5C6C9882B5D30709A1F6EAEC35
   logicalPath: packs/CMSIS/CMSIS/Core/Include
   name: cmsis_compiler.h
@@ -230,20 +230,20 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: 60385A5C6C9882B5D30709A1F6EAEC35
-- generatedChecksum: 42E8B722917508A3A9373D13AD827ED6
+- generatedChecksum: 4DC978B079559EB044AFD32A57768238
   logicalPath: packs/CMSIS/CMSIS/Core/Include
   name: cmsis_gcc.h
   physicalPath: ../../packs/CMSIS/CMSIS/Core/Include
   security: NON_SECURE
   type: HEADER
-  userChecksum: 42E8B722917508A3A9373D13AD827ED6
-- generatedChecksum: 376D5C7FD29CAA507ACB1AAB8746B1AD
+  userChecksum: 4DC978B079559EB044AFD32A57768238
+- generatedChecksum: 11521476050CAC6C1F3A91A5BB5DBB9A
   logicalPath: packs/CMSIS/CMSIS/Core/Include
   name: cmsis_iccarm.h
   physicalPath: ../../packs/CMSIS/CMSIS/Core/Include
   security: NON_SECURE
   type: HEADER
-  userChecksum: 376D5C7FD29CAA507ACB1AAB8746B1AD
+  userChecksum: 11521476050CAC6C1F3A91A5BB5DBB9A
 - generatedChecksum: 52F91AC0727F2311EDA0E3BAA7719A9F
   logicalPath: packs/CMSIS/CMSIS/Core/Include
   name: cmsis_version.h
@@ -251,13 +251,13 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: 52F91AC0727F2311EDA0E3BAA7719A9F
-- generatedChecksum: 76016C9804D6DE17B74C92D82294562E
+- generatedChecksum: 7A852268CAA1F0FBB9E75D327532882A
   logicalPath: config/sam_l22_xpro
   name: configuration.h
   physicalPath: ''
   security: NON_SECURE
   type: HEADER
-  userChecksum: 76016C9804D6DE17B74C92D82294562E
+  userChecksum: 7A852268CAA1F0FBB9E75D327532882A
 - generatedChecksum: CCBD23918BE14943EA128B0D552031C5
   logicalPath: packs/CMSIS/CMSIS/Core/Include
   name: core_cm0plus.h
@@ -286,97 +286,111 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: 85D3482D395C59BDFF268B01940CDDDE
-- generatedChecksum: 45BDCA2B56A7C5AFEC0963DCE08C04B9
+- generatedChecksum: BAF0B462C47907F37DDDA4EC33E3C2E5
   logicalPath: config/sam_l22_xpro
   name: device_vectors.h
   physicalPath: ''
   security: NON_SECURE
   type: HEADER
-  userChecksum: 45BDCA2B56A7C5AFEC0963DCE08C04B9
-- generatedChecksum: EF533C7B971D81004AFB9A36CD330DF7
+  userChecksum: BAF0B462C47907F37DDDA4EC33E3C2E5
+- generatedChecksum: DF329A06BF08B715D2184DE6A94F9F15
   logicalPath: packs/ATSAML22N18A_DFP/component
   name: dmac.h
   physicalPath: ../../packs/ATSAML22N18A_DFP/component
   security: NON_SECURE
   type: HEADER
-  userChecksum: EF533C7B971D81004AFB9A36CD330DF7
-- generatedChecksum: 5CF6E4538D99974C364810A03E3D8616
+  userChecksum: DF329A06BF08B715D2184DE6A94F9F15
+- generatedChecksum: 0120ADF28866453A8F59147B94B65519
   logicalPath: packs/ATSAML22N18A_DFP/instance
   name: dmac.h
   physicalPath: ../../packs/ATSAML22N18A_DFP/instance
   security: NON_SECURE
   type: HEADER
-  userChecksum: 5CF6E4538D99974C364810A03E3D8616
-- generatedChecksum: AD126351834367D9D0EA084B73BA7D99
+  userChecksum: 0120ADF28866453A8F59147B94B65519
+- generatedChecksum: 6CA2F4434C009E478891E8B873DCEED0
   logicalPath: packs/ATSAML22N18A_DFP/component
   name: dsu.h
   physicalPath: ../../packs/ATSAML22N18A_DFP/component
   security: NON_SECURE
   type: HEADER
-  userChecksum: AD126351834367D9D0EA084B73BA7D99
-- generatedChecksum: 86B94C09AB40190B8B900839E2685922
+  userChecksum: 6CA2F4434C009E478891E8B873DCEED0
+- generatedChecksum: 62C329D2FF04DAF4DBBB6A2F0F72FCE3
   logicalPath: packs/ATSAML22N18A_DFP/instance
   name: dsu.h
   physicalPath: ../../packs/ATSAML22N18A_DFP/instance
   security: NON_SECURE
   type: HEADER
-  userChecksum: 86B94C09AB40190B8B900839E2685922
-- generatedChecksum: BB51A4E489C145C8C451BFE445774647
+  userChecksum: 62C329D2FF04DAF4DBBB6A2F0F72FCE3
+- generatedChecksum: 509B0C61682CDCDDADE6ED6D91CD7B51
   logicalPath: packs/ATSAML22N18A_DFP/component
   name: eic.h
   physicalPath: ../../packs/ATSAML22N18A_DFP/component
   security: NON_SECURE
   type: HEADER
-  userChecksum: BB51A4E489C145C8C451BFE445774647
-- generatedChecksum: AB46F69537FAFDD5AC45BC866928DD8B
+  userChecksum: 509B0C61682CDCDDADE6ED6D91CD7B51
+- generatedChecksum: 15CCC4D57A16F40C69F6822D821EA23C
   logicalPath: packs/ATSAML22N18A_DFP/instance
   name: eic.h
   physicalPath: ../../packs/ATSAML22N18A_DFP/instance
   security: NON_SECURE
   type: HEADER
-  userChecksum: AB46F69537FAFDD5AC45BC866928DD8B
-- generatedChecksum: 1CA5AA4E05835D2BBD0A1E501EDFCB1E
+  userChecksum: 15CCC4D57A16F40C69F6822D821EA23C
+- generatedChecksum: 1E15EA28CE924FD5F93A2A054E831F1D
   logicalPath: packs/ATSAML22N18A_DFP/component
   name: evsys.h
   physicalPath: ../../packs/ATSAML22N18A_DFP/component
   security: NON_SECURE
   type: HEADER
-  userChecksum: 1CA5AA4E05835D2BBD0A1E501EDFCB1E
-- generatedChecksum: B562AD7C74589C096BEB33B1465E178D
+  userChecksum: 1E15EA28CE924FD5F93A2A054E831F1D
+- generatedChecksum: 270A1B5D47B8AC728D3DDB8CC3D21E9C
   logicalPath: packs/ATSAML22N18A_DFP/instance
   name: evsys.h
   physicalPath: ../../packs/ATSAML22N18A_DFP/instance
   security: NON_SECURE
   type: HEADER
-  userChecksum: B562AD7C74589C096BEB33B1465E178D
-- generatedChecksum: 411699EE38760C1B2F9B3E4AD8B5003A
+  userChecksum: 270A1B5D47B8AC728D3DDB8CC3D21E9C
+- generatedChecksum: 3CEEB11554D29BD9E3EA3D6D44251D87
   logicalPath: packs/ATSAML22N18A_DFP/component
   name: freqm.h
   physicalPath: ../../packs/ATSAML22N18A_DFP/component
   security: NON_SECURE
   type: HEADER
-  userChecksum: 411699EE38760C1B2F9B3E4AD8B5003A
-- generatedChecksum: E7C76ECF62A3ADDF4D339C51FC511C91
+  userChecksum: 3CEEB11554D29BD9E3EA3D6D44251D87
+- generatedChecksum: 29224C3AE550550ADB61DF4A4BFC010D
   logicalPath: packs/ATSAML22N18A_DFP/instance
   name: freqm.h
   physicalPath: ../../packs/ATSAML22N18A_DFP/instance
   security: NON_SECURE
   type: HEADER
-  userChecksum: E7C76ECF62A3ADDF4D339C51FC511C91
-- generatedChecksum: 98A6F4E64DEFEDD3189B60B9BC710F08
+  userChecksum: 29224C3AE550550ADB61DF4A4BFC010D
+- generatedChecksum: DE7ADD28790F13E70762BFDDCE0DFD1C
+  logicalPath: packs/ATSAML22N18A_DFP/component
+  name: fuses.h
+  physicalPath: ../../packs/ATSAML22N18A_DFP/component
+  security: NON_SECURE
+  type: HEADER
+  userChecksum: DE7ADD28790F13E70762BFDDCE0DFD1C
+- generatedChecksum: F13A70B0D3194847900CE62A1BC1748C
+  logicalPath: packs/ATSAML22N18A_DFP/instance
+  name: fuses.h
+  physicalPath: ../../packs/ATSAML22N18A_DFP/instance
+  security: NON_SECURE
+  type: HEADER
+  userChecksum: F13A70B0D3194847900CE62A1BC1748C
+- generatedChecksum: 69E52A1B78CE8E57BF479EDDDB0293E1
   logicalPath: packs/ATSAML22N18A_DFP/component
   name: gclk.h
   physicalPath: ../../packs/ATSAML22N18A_DFP/component
   security: NON_SECURE
   type: HEADER
-  userChecksum: 98A6F4E64DEFEDD3189B60B9BC710F08
-- generatedChecksum: A81ABC80AD1127D477051E59238A73AA
+  userChecksum: 69E52A1B78CE8E57BF479EDDDB0293E1
+- generatedChecksum: 22B214C99EE996E46E2490253BF1A66F
   logicalPath: packs/ATSAML22N18A_DFP/instance
   name: gclk.h
   physicalPath: ../../packs/ATSAML22N18A_DFP/instance
   security: NON_SECURE
   type: HEADER
-  userChecksum: A81ABC80AD1127D477051E59238A73AA
+  userChecksum: 22B214C99EE996E46E2490253BF1A66F
 - generatedChecksum: 1E07BC3325BEBDB43F4166188D9E3E5D
   logicalPath: config/sam_l22_xpro
   name: interrupts.h
@@ -384,97 +398,97 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: 1E07BC3325BEBDB43F4166188D9E3E5D
-- generatedChecksum: 21EDCE6BF3D8F81AF1161D4514A50D31
+- generatedChecksum: B4D52712F50781A22089A08F54E40803
   logicalPath: packs/ATSAML22N18A_DFP/component
   name: mclk.h
   physicalPath: ../../packs/ATSAML22N18A_DFP/component
   security: NON_SECURE
   type: HEADER
-  userChecksum: 21EDCE6BF3D8F81AF1161D4514A50D31
-- generatedChecksum: E242BC3FA2A5F7C8E05E32975CC2F39A
+  userChecksum: B4D52712F50781A22089A08F54E40803
+- generatedChecksum: DE1723E46D77ABCBA1D92B371B898B85
   logicalPath: packs/ATSAML22N18A_DFP/instance
   name: mclk.h
   physicalPath: ../../packs/ATSAML22N18A_DFP/instance
   security: NON_SECURE
   type: HEADER
-  userChecksum: E242BC3FA2A5F7C8E05E32975CC2F39A
-- generatedChecksum: B96ADDA2C111E73B26EBA5E7B4498912
+  userChecksum: DE1723E46D77ABCBA1D92B371B898B85
+- generatedChecksum: 47E760D36E42A7B436306A9CB4E72A0E
   logicalPath: packs/CMSIS/CMSIS/Core/Include
   name: mpu_armv7.h
   physicalPath: ../../packs/CMSIS/CMSIS/Core/Include
   security: NON_SECURE
   type: HEADER
-  userChecksum: B96ADDA2C111E73B26EBA5E7B4498912
-- generatedChecksum: 2841C33EF6C93716EB6EF70BC196ADA0
+  userChecksum: 47E760D36E42A7B436306A9CB4E72A0E
+- generatedChecksum: 37DD40D2C8EC7AB005BC9C3BBD98BAE4
   logicalPath: packs/ATSAML22N18A_DFP/component
   name: mtb.h
   physicalPath: ../../packs/ATSAML22N18A_DFP/component
   security: NON_SECURE
   type: HEADER
-  userChecksum: 2841C33EF6C93716EB6EF70BC196ADA0
-- generatedChecksum: 411F5CA561936232FF2703F208F6CBCD
+  userChecksum: 37DD40D2C8EC7AB005BC9C3BBD98BAE4
+- generatedChecksum: 8FC90F8CC48429C64B7E5F3B00F446C1
   logicalPath: packs/ATSAML22N18A_DFP/instance
   name: mtb.h
   physicalPath: ../../packs/ATSAML22N18A_DFP/instance
   security: NON_SECURE
   type: HEADER
-  userChecksum: 411F5CA561936232FF2703F208F6CBCD
-- generatedChecksum: 2603BA9DE5C3CA6594EC0AE73E9B7E4B
+  userChecksum: 8FC90F8CC48429C64B7E5F3B00F446C1
+- generatedChecksum: CF734A3C38DD642B933EC1270985B520
   logicalPath: packs/ATSAML22N18A_DFP/component
   name: nvmctrl.h
   physicalPath: ../../packs/ATSAML22N18A_DFP/component
   security: NON_SECURE
   type: HEADER
-  userChecksum: 2603BA9DE5C3CA6594EC0AE73E9B7E4B
-- generatedChecksum: DD1DEDD9C9D6ED11E9FA9808467A5F67
+  userChecksum: CF734A3C38DD642B933EC1270985B520
+- generatedChecksum: DAE5DBEC5D48F040E01DEA7547868DF4
   logicalPath: packs/ATSAML22N18A_DFP/instance
   name: nvmctrl.h
   physicalPath: ../../packs/ATSAML22N18A_DFP/instance
   security: NON_SECURE
   type: HEADER
-  userChecksum: DD1DEDD9C9D6ED11E9FA9808467A5F67
-- generatedChecksum: E3E0809C23D11885D64D189FC407CA5F
+  userChecksum: DAE5DBEC5D48F040E01DEA7547868DF4
+- generatedChecksum: 3AF2F37F2702242FA0410F5ADA49F65F
   logicalPath: packs/ATSAML22N18A_DFP/component
   name: osc32kctrl.h
   physicalPath: ../../packs/ATSAML22N18A_DFP/component
   security: NON_SECURE
   type: HEADER
-  userChecksum: E3E0809C23D11885D64D189FC407CA5F
-- generatedChecksum: F7CC4DC9F1EE692B94D27D4CBC100F19
+  userChecksum: 3AF2F37F2702242FA0410F5ADA49F65F
+- generatedChecksum: 079CEE723ED2201CC65DED88B06717B9
   logicalPath: packs/ATSAML22N18A_DFP/instance
   name: osc32kctrl.h
   physicalPath: ../../packs/ATSAML22N18A_DFP/instance
   security: NON_SECURE
   type: HEADER
-  userChecksum: F7CC4DC9F1EE692B94D27D4CBC100F19
-- generatedChecksum: EC00F894329BE2577F6C313915105E19
+  userChecksum: 079CEE723ED2201CC65DED88B06717B9
+- generatedChecksum: 1098D9D085E7AB024BEF76605F41CF7A
   logicalPath: packs/ATSAML22N18A_DFP/component
   name: oscctrl.h
   physicalPath: ../../packs/ATSAML22N18A_DFP/component
   security: NON_SECURE
   type: HEADER
-  userChecksum: EC00F894329BE2577F6C313915105E19
-- generatedChecksum: 0B8FB5D4DFD9D6FAC242D0BFC4243E31
+  userChecksum: 1098D9D085E7AB024BEF76605F41CF7A
+- generatedChecksum: DCCD72151EA9DC8DD0CA7A3C725F221E
   logicalPath: packs/ATSAML22N18A_DFP/instance
   name: oscctrl.h
   physicalPath: ../../packs/ATSAML22N18A_DFP/instance
   security: NON_SECURE
   type: HEADER
-  userChecksum: 0B8FB5D4DFD9D6FAC242D0BFC4243E31
-- generatedChecksum: CEFE890A5B6F83FDB9B80F6FB005920D
+  userChecksum: DCCD72151EA9DC8DD0CA7A3C725F221E
+- generatedChecksum: 387966E40A40B4541F3C6199F398B96E
   logicalPath: packs/ATSAML22N18A_DFP/component
   name: pac.h
   physicalPath: ../../packs/ATSAML22N18A_DFP/component
   security: NON_SECURE
   type: HEADER
-  userChecksum: CEFE890A5B6F83FDB9B80F6FB005920D
-- generatedChecksum: 0BED617B1A92EE7536E24EFA5D639028
+  userChecksum: 387966E40A40B4541F3C6199F398B96E
+- generatedChecksum: 09E0E51D1121556534DB6FFC0282BF79
   logicalPath: packs/ATSAML22N18A_DFP/instance
   name: pac.h
   physicalPath: ../../packs/ATSAML22N18A_DFP/instance
   security: NON_SECURE
   type: HEADER
-  userChecksum: 0BED617B1A92EE7536E24EFA5D639028
+  userChecksum: 09E0E51D1121556534DB6FFC0282BF79
 - generatedChecksum: BB4FAC4F00C0D5A94EC40CE92DE7B515
   logicalPath: config/sam_l22_xpro/peripheral/clock
   name: plib_clock.h
@@ -496,13 +510,13 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: 55ECCC7FA71BD15B46EF80DC0515ED7A
-- generatedChecksum: C7FA7CF30AF942DFE939176BCD4062DD
+- generatedChecksum: 61E9143D5D7C5573DC567E0474B23452
   logicalPath: config/sam_l22_xpro/peripheral/nvmctrl
   name: plib_nvmctrl.h
   physicalPath: peripheral/nvmctrl
   security: NON_SECURE
   type: HEADER
-  userChecksum: C7FA7CF30AF942DFE939176BCD4062DD
+  userChecksum: 61E9143D5D7C5573DC567E0474B23452
 - generatedChecksum: 2C6F9BA1BFA523200ED784A7D4FC3C81
   logicalPath: config/sam_l22_xpro/peripheral/pm
   name: plib_pm.h
@@ -517,272 +531,272 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: F151D3AC841B616459A1C70AC2EF1AF6
-- generatedChecksum: 836D6A8A79834B231BEE1A6A092D730A
+- generatedChecksum: A29DEA334B3E6E5FFB7BEA5AFC00D976
   logicalPath: config/sam_l22_xpro/peripheral/sercom/usart
   name: plib_sercom4_usart.h
   physicalPath: peripheral/sercom/usart
   security: NON_SECURE
   type: HEADER
-  userChecksum: 836D6A8A79834B231BEE1A6A092D730A
-- generatedChecksum: 6F9F9CBBFEDEC8784446F157BB625E1C
+  userChecksum: A29DEA334B3E6E5FFB7BEA5AFC00D976
+- generatedChecksum: 63CAB47DCDFFA547090FA01C1599F9DF
   logicalPath: config/sam_l22_xpro/peripheral/sercom/usart
   name: plib_sercom_usart_common.h
   physicalPath: peripheral/sercom/usart
   security: NON_SECURE
   type: HEADER
-  userChecksum: 6F9F9CBBFEDEC8784446F157BB625E1C
-- generatedChecksum: 44B17CD1B961DEE23AA2AB441D1C5533
+  userChecksum: 63CAB47DCDFFA547090FA01C1599F9DF
+- generatedChecksum: 94D9F3EA19337842C84FFC2D8BEA58EA
   logicalPath: config/sam_l22_xpro/peripheral/systick
   name: plib_systick.h
   physicalPath: peripheral/systick
   security: NON_SECURE
   type: HEADER
-  userChecksum: 44B17CD1B961DEE23AA2AB441D1C5533
-- generatedChecksum: D1E724612F285B3201360FD2DF206DB4
+  userChecksum: 94D9F3EA19337842C84FFC2D8BEA58EA
+- generatedChecksum: 143A15DFAE5281279E3C3D5806FFE5A2
   logicalPath: packs/ATSAML22N18A_DFP/component
   name: pm.h
   physicalPath: ../../packs/ATSAML22N18A_DFP/component
   security: NON_SECURE
   type: HEADER
-  userChecksum: D1E724612F285B3201360FD2DF206DB4
-- generatedChecksum: 2751BDD881F85A2A45BDB816F21F2F00
+  userChecksum: 143A15DFAE5281279E3C3D5806FFE5A2
+- generatedChecksum: F5AC799C5278B1D4AF71C6D0B7E1BD99
   logicalPath: packs/ATSAML22N18A_DFP/instance
   name: pm.h
   physicalPath: ../../packs/ATSAML22N18A_DFP/instance
   security: NON_SECURE
   type: HEADER
-  userChecksum: 2751BDD881F85A2A45BDB816F21F2F00
-- generatedChecksum: 85E697861532FDBB19EC7375231A4DF1
+  userChecksum: F5AC799C5278B1D4AF71C6D0B7E1BD99
+- generatedChecksum: FF6C7CF20A814806DEFDE166FC502B9F
   logicalPath: packs/ATSAML22N18A_DFP/component
   name: port.h
   physicalPath: ../../packs/ATSAML22N18A_DFP/component
   security: NON_SECURE
   type: HEADER
-  userChecksum: 85E697861532FDBB19EC7375231A4DF1
-- generatedChecksum: 5BB3CA4C1E894F00DB8A2A08C543E4A0
+  userChecksum: FF6C7CF20A814806DEFDE166FC502B9F
+- generatedChecksum: 34DD171C283808271F0015E440A12246
   logicalPath: packs/ATSAML22N18A_DFP/instance
   name: port.h
   physicalPath: ../../packs/ATSAML22N18A_DFP/instance
   security: NON_SECURE
   type: HEADER
-  userChecksum: 5BB3CA4C1E894F00DB8A2A08C543E4A0
-- generatedChecksum: 13149987A474B9C0FA7B3E815BD18E85
+  userChecksum: 34DD171C283808271F0015E440A12246
+- generatedChecksum: 7FBB15A0432181DB9152970556DFDCC2
   logicalPath: packs/ATSAML22N18A_DFP/component
   name: ptc.h
   physicalPath: ../../packs/ATSAML22N18A_DFP/component
   security: NON_SECURE
   type: HEADER
-  userChecksum: 13149987A474B9C0FA7B3E815BD18E85
-- generatedChecksum: 7605706A70BBF6103C9530B1DFCDD675
+  userChecksum: 7FBB15A0432181DB9152970556DFDCC2
+- generatedChecksum: DDC4C338157669F64F8411490AB3F1E6
   logicalPath: packs/ATSAML22N18A_DFP/instance
   name: ptc.h
   physicalPath: ../../packs/ATSAML22N18A_DFP/instance
   security: NON_SECURE
   type: HEADER
-  userChecksum: 7605706A70BBF6103C9530B1DFCDD675
-- generatedChecksum: 786B523E1FB41E23BEADFA05B16D5105
+  userChecksum: DDC4C338157669F64F8411490AB3F1E6
+- generatedChecksum: E6B3CD9B0546FA1AD39CC9B8E28358BD
   logicalPath: packs/ATSAML22N18A_DFP/component
   name: rstc.h
   physicalPath: ../../packs/ATSAML22N18A_DFP/component
   security: NON_SECURE
   type: HEADER
-  userChecksum: 786B523E1FB41E23BEADFA05B16D5105
-- generatedChecksum: A017996BC5D13BE9F6296C5EE80EAD1F
+  userChecksum: E6B3CD9B0546FA1AD39CC9B8E28358BD
+- generatedChecksum: 4EEE5B642113D3E8687920A3ED69E9DA
   logicalPath: packs/ATSAML22N18A_DFP/instance
   name: rstc.h
   physicalPath: ../../packs/ATSAML22N18A_DFP/instance
   security: NON_SECURE
   type: HEADER
-  userChecksum: A017996BC5D13BE9F6296C5EE80EAD1F
-- generatedChecksum: 0D92006CBD8D0EBB81A21D76754EF0F1
+  userChecksum: 4EEE5B642113D3E8687920A3ED69E9DA
+- generatedChecksum: F864F99D60B54729F4E7AEE1512881BE
   logicalPath: packs/ATSAML22N18A_DFP/component
   name: rtc.h
   physicalPath: ../../packs/ATSAML22N18A_DFP/component
   security: NON_SECURE
   type: HEADER
-  userChecksum: 0D92006CBD8D0EBB81A21D76754EF0F1
-- generatedChecksum: DFE05B526CC227E9447E1EBE3E6219BC
+  userChecksum: F864F99D60B54729F4E7AEE1512881BE
+- generatedChecksum: B20FAFD8DCF831C06C8DB694B842497E
   logicalPath: packs/ATSAML22N18A_DFP/instance
   name: rtc.h
   physicalPath: ../../packs/ATSAML22N18A_DFP/instance
   security: NON_SECURE
   type: HEADER
-  userChecksum: DFE05B526CC227E9447E1EBE3E6219BC
-- generatedChecksum: A77CDF942BCEB0A88C6A8175D571F7B6
+  userChecksum: B20FAFD8DCF831C06C8DB694B842497E
+- generatedChecksum: C407D37EEB66D4BB0FE957E30647D7FB
   logicalPath: packs/ATSAML22N18A_DFP
   name: saml22n18a.h
   physicalPath: ../../packs/ATSAML22N18A_DFP
   security: NON_SECURE
   type: HEADER
-  userChecksum: A77CDF942BCEB0A88C6A8175D571F7B6
-- generatedChecksum: 3386010D328732C526DF7B3AAD7ABDC9
+  userChecksum: C407D37EEB66D4BB0FE957E30647D7FB
+- generatedChecksum: FD17367FF71AF462B8A647A99EEAFCDB
   logicalPath: packs/ATSAML22N18A_DFP/pio
   name: saml22n18a.h
   physicalPath: ../../packs/ATSAML22N18A_DFP/pio
   security: NON_SECURE
   type: HEADER
-  userChecksum: 3386010D328732C526DF7B3AAD7ABDC9
-- generatedChecksum: DDE5F4A20AA248FE55D32E04BD1B8D82
+  userChecksum: FD17367FF71AF462B8A647A99EEAFCDB
+- generatedChecksum: AC3E60D112E5ED13887C004C0E732AC3
   logicalPath: packs/ATSAML22N18A_DFP/component
   name: sercom.h
   physicalPath: ../../packs/ATSAML22N18A_DFP/component
   security: NON_SECURE
   type: HEADER
-  userChecksum: DDE5F4A20AA248FE55D32E04BD1B8D82
-- generatedChecksum: C50ED31EA8B07F0CBF37B24B3F7DD47D
+  userChecksum: AC3E60D112E5ED13887C004C0E732AC3
+- generatedChecksum: BCB4151227D1695B9B0E803889ACADF1
   logicalPath: packs/ATSAML22N18A_DFP/instance
   name: sercom0.h
   physicalPath: ../../packs/ATSAML22N18A_DFP/instance
   security: NON_SECURE
   type: HEADER
-  userChecksum: C50ED31EA8B07F0CBF37B24B3F7DD47D
-- generatedChecksum: 63752A25B11EC341847E2558EC8F435C
+  userChecksum: BCB4151227D1695B9B0E803889ACADF1
+- generatedChecksum: 65D06326799A83513E79490CE4373886
   logicalPath: packs/ATSAML22N18A_DFP/instance
   name: sercom1.h
   physicalPath: ../../packs/ATSAML22N18A_DFP/instance
   security: NON_SECURE
   type: HEADER
-  userChecksum: 63752A25B11EC341847E2558EC8F435C
-- generatedChecksum: 41CAF394071C716EA6283263BEA3459B
+  userChecksum: 65D06326799A83513E79490CE4373886
+- generatedChecksum: 3C995A38B602519A7C9D09D16886E151
   logicalPath: packs/ATSAML22N18A_DFP/instance
   name: sercom2.h
   physicalPath: ../../packs/ATSAML22N18A_DFP/instance
   security: NON_SECURE
   type: HEADER
-  userChecksum: 41CAF394071C716EA6283263BEA3459B
-- generatedChecksum: 1E09EAC988DA594B29275B29B5D6B28F
+  userChecksum: 3C995A38B602519A7C9D09D16886E151
+- generatedChecksum: 7130CA9826CDC3599A616DE17814530D
   logicalPath: packs/ATSAML22N18A_DFP/instance
   name: sercom3.h
   physicalPath: ../../packs/ATSAML22N18A_DFP/instance
   security: NON_SECURE
   type: HEADER
-  userChecksum: 1E09EAC988DA594B29275B29B5D6B28F
-- generatedChecksum: 4FE0235FD4EDE761EDED7B12086F6A40
+  userChecksum: 7130CA9826CDC3599A616DE17814530D
+- generatedChecksum: 592FC8EFA1D791A885E704651B281CA3
   logicalPath: packs/ATSAML22N18A_DFP/instance
   name: sercom4.h
   physicalPath: ../../packs/ATSAML22N18A_DFP/instance
   security: NON_SECURE
   type: HEADER
-  userChecksum: 4FE0235FD4EDE761EDED7B12086F6A40
-- generatedChecksum: 8C7A076869F92BD4F76EE81F4BCB1D5F
+  userChecksum: 592FC8EFA1D791A885E704651B281CA3
+- generatedChecksum: 6F0DF530BDAAFD937574ACACDAF9C58E
   logicalPath: packs/ATSAML22N18A_DFP/instance
   name: sercom5.h
   physicalPath: ../../packs/ATSAML22N18A_DFP/instance
   security: NON_SECURE
   type: HEADER
-  userChecksum: 8C7A076869F92BD4F76EE81F4BCB1D5F
-- generatedChecksum: 7C6FE68039B8623B502EA770B23D52DD
+  userChecksum: 6F0DF530BDAAFD937574ACACDAF9C58E
+- generatedChecksum: 60CDE40DBC5A817011B779433A4312C3
   logicalPath: packs/ATSAML22N18A_DFP/component
   name: slcd.h
   physicalPath: ../../packs/ATSAML22N18A_DFP/component
   security: NON_SECURE
   type: HEADER
-  userChecksum: 7C6FE68039B8623B502EA770B23D52DD
-- generatedChecksum: 73BAC055C9027F32D097C92AA20382FA
+  userChecksum: 60CDE40DBC5A817011B779433A4312C3
+- generatedChecksum: 7E68ED908E15617FB3501E929EC7E8BB
   logicalPath: packs/ATSAML22N18A_DFP/instance
   name: slcd.h
   physicalPath: ../../packs/ATSAML22N18A_DFP/instance
   security: NON_SECURE
   type: HEADER
-  userChecksum: 73BAC055C9027F32D097C92AA20382FA
-- generatedChecksum: 7E925E89DAE5851E9770984CA8306E73
+  userChecksum: 7E68ED908E15617FB3501E929EC7E8BB
+- generatedChecksum: E3385030C3842B649C427CCB931083D2
   logicalPath: packs/ATSAML22N18A_DFP/component
   name: supc.h
   physicalPath: ../../packs/ATSAML22N18A_DFP/component
   security: NON_SECURE
   type: HEADER
-  userChecksum: 7E925E89DAE5851E9770984CA8306E73
-- generatedChecksum: A4EAF2A26446766548488BFD36BCBB47
+  userChecksum: E3385030C3842B649C427CCB931083D2
+- generatedChecksum: DEFDB798FD8EA34ABFD393C1AA331B05
   logicalPath: packs/ATSAML22N18A_DFP/instance
   name: supc.h
   physicalPath: ../../packs/ATSAML22N18A_DFP/instance
   security: NON_SECURE
   type: HEADER
-  userChecksum: A4EAF2A26446766548488BFD36BCBB47
-- generatedChecksum: 7DB42933B94D6CC0F36936C7D4CB4061
+  userChecksum: DEFDB798FD8EA34ABFD393C1AA331B05
+- generatedChecksum: 05B94E9D462ACFF85F3605A5061A3F77
   logicalPath: packs/ATSAML22N18A_DFP/component
   name: tc.h
   physicalPath: ../../packs/ATSAML22N18A_DFP/component
   security: NON_SECURE
   type: HEADER
-  userChecksum: 7DB42933B94D6CC0F36936C7D4CB4061
-- generatedChecksum: 42AD620908A2D7A1A9E5997F2DF27E62
+  userChecksum: 05B94E9D462ACFF85F3605A5061A3F77
+- generatedChecksum: 6426D06C63B0A4FDC49A33146CE67141
   logicalPath: packs/ATSAML22N18A_DFP/instance
   name: tc0.h
   physicalPath: ../../packs/ATSAML22N18A_DFP/instance
   security: NON_SECURE
   type: HEADER
-  userChecksum: 42AD620908A2D7A1A9E5997F2DF27E62
-- generatedChecksum: 9DA3DCE7F47E7BFD6B3A6AE322417938
+  userChecksum: 6426D06C63B0A4FDC49A33146CE67141
+- generatedChecksum: 0BBF694C8BC50ECCB6FCB1B2BC9BFA2B
   logicalPath: packs/ATSAML22N18A_DFP/instance
   name: tc1.h
   physicalPath: ../../packs/ATSAML22N18A_DFP/instance
   security: NON_SECURE
   type: HEADER
-  userChecksum: 9DA3DCE7F47E7BFD6B3A6AE322417938
-- generatedChecksum: 95434CC248F002E8DAE3F76291A7F207
+  userChecksum: 0BBF694C8BC50ECCB6FCB1B2BC9BFA2B
+- generatedChecksum: 124A8543BA6ADA66C26CB2FD5CFDE6BC
   logicalPath: packs/ATSAML22N18A_DFP/instance
   name: tc2.h
   physicalPath: ../../packs/ATSAML22N18A_DFP/instance
   security: NON_SECURE
   type: HEADER
-  userChecksum: 95434CC248F002E8DAE3F76291A7F207
-- generatedChecksum: EA720C17E143704221B4548281CC38E6
+  userChecksum: 124A8543BA6ADA66C26CB2FD5CFDE6BC
+- generatedChecksum: 390B9BF7284638BFBA359EA2D355FB44
   logicalPath: packs/ATSAML22N18A_DFP/instance
   name: tc3.h
   physicalPath: ../../packs/ATSAML22N18A_DFP/instance
   security: NON_SECURE
   type: HEADER
-  userChecksum: EA720C17E143704221B4548281CC38E6
-- generatedChecksum: 904AFD10D36C59A1603AEAA07A5FBD85
+  userChecksum: 390B9BF7284638BFBA359EA2D355FB44
+- generatedChecksum: F56EF8216F36EC4E8E726D646B3C3EC5
   logicalPath: packs/ATSAML22N18A_DFP/component
   name: tcc.h
   physicalPath: ../../packs/ATSAML22N18A_DFP/component
   security: NON_SECURE
   type: HEADER
-  userChecksum: 904AFD10D36C59A1603AEAA07A5FBD85
-- generatedChecksum: 26032608006D1A1427889B0D650B74CA
+  userChecksum: F56EF8216F36EC4E8E726D646B3C3EC5
+- generatedChecksum: A785CA6B5A20ECA91011CCC1B974B473
   logicalPath: packs/ATSAML22N18A_DFP/instance
   name: tcc0.h
   physicalPath: ../../packs/ATSAML22N18A_DFP/instance
   security: NON_SECURE
   type: HEADER
-  userChecksum: 26032608006D1A1427889B0D650B74CA
-- generatedChecksum: 20E829A99B86C2889E4E2E536161C27A
+  userChecksum: A785CA6B5A20ECA91011CCC1B974B473
+- generatedChecksum: 5A6CE947CB477E5554790DE371B7FBAB
   logicalPath: config/sam_l22_xpro
   name: toolchain_specifics.h
   physicalPath: ''
   security: NON_SECURE
   type: HEADER
-  userChecksum: 20E829A99B86C2889E4E2E536161C27A
-- generatedChecksum: 4CE4A91F8660FB6ACFD47BEA2B62E407
+  userChecksum: 5A6CE947CB477E5554790DE371B7FBAB
+- generatedChecksum: BC25BD6ABA6F1910FE9B936391731A4C
   logicalPath: packs/ATSAML22N18A_DFP/component
   name: trng.h
   physicalPath: ../../packs/ATSAML22N18A_DFP/component
   security: NON_SECURE
   type: HEADER
-  userChecksum: 4CE4A91F8660FB6ACFD47BEA2B62E407
-- generatedChecksum: 1E9C4AA46168AA3B0F5E4F305910F63C
+  userChecksum: BC25BD6ABA6F1910FE9B936391731A4C
+- generatedChecksum: 301D4175FB39365B8FE2E3AF5197C324
   logicalPath: packs/ATSAML22N18A_DFP/instance
   name: trng.h
   physicalPath: ../../packs/ATSAML22N18A_DFP/instance
   security: NON_SECURE
   type: HEADER
-  userChecksum: 1E9C4AA46168AA3B0F5E4F305910F63C
-- generatedChecksum: B8A40C8C937D4FEB0D912C97A42C221A
+  userChecksum: 301D4175FB39365B8FE2E3AF5197C324
+- generatedChecksum: 0F666C83E119C0A875013FE27FB11D69
   logicalPath: packs/ATSAML22N18A_DFP/component
   name: usb.h
   physicalPath: ../../packs/ATSAML22N18A_DFP/component
   security: NON_SECURE
   type: HEADER
-  userChecksum: B8A40C8C937D4FEB0D912C97A42C221A
-- generatedChecksum: 54D452F6EFB0B54884151BB83F5A103C
+  userChecksum: 0F666C83E119C0A875013FE27FB11D69
+- generatedChecksum: 92BD6206C54CBFB7933CF03AE3F1FE2D
   logicalPath: packs/ATSAML22N18A_DFP/instance
   name: usb.h
   physicalPath: ../../packs/ATSAML22N18A_DFP/instance
   security: NON_SECURE
   type: HEADER
-  userChecksum: 54D452F6EFB0B54884151BB83F5A103C
+  userChecksum: 92BD6206C54CBFB7933CF03AE3F1FE2D
 - generatedChecksum: null
   logicalPath: config/sam_l22_xpro
   name: user.h
@@ -790,27 +804,34 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: null
-- generatedChecksum: CBD1A72301F61345F52E1A82E3D0C664
+- generatedChecksum: 7C16D836DDEF36A83BAC6D0AC8B7B84E
   logicalPath: packs/ATSAML22N18A_DFP/component
   name: wdt.h
   physicalPath: ../../packs/ATSAML22N18A_DFP/component
   security: NON_SECURE
   type: HEADER
-  userChecksum: CBD1A72301F61345F52E1A82E3D0C664
-- generatedChecksum: E072E437E7D53DC2EAAE651C6C4A70C7
+  userChecksum: 7C16D836DDEF36A83BAC6D0AC8B7B84E
+- generatedChecksum: 7CC9879D412E217BF9C79329FE077A6D
   logicalPath: packs/ATSAML22N18A_DFP/instance
   name: wdt.h
   physicalPath: ../../packs/ATSAML22N18A_DFP/instance
   security: NON_SECURE
   type: HEADER
-  userChecksum: E072E437E7D53DC2EAAE651C6C4A70C7
-- generatedChecksum: 8FFD202DC13CD03572C2966985A74B6E
+  userChecksum: 7CC9879D412E217BF9C79329FE077A6D
+- generatedChecksum: 388CB939EDEF00E13587D315F50BA872
   logicalPath: config/sam_l22_xpro
   name: ATSAML22N18A.ld
   physicalPath: ''
   security: NON_SECURE
   type: LINKER
-  userChecksum: 8FFD202DC13CD03572C2966985A74B6E
+  userChecksum: 388CB939EDEF00E13587D315F50BA872
+- generatedChecksum: 56FE9898B16B0ACCD3131B80992B403A
+  logicalPath: ''
+  name: pin_configurations.csv
+  physicalPath: ''
+  security: NON_SECURE
+  type: IMPORTANT
+  userChecksum: 56FE9898B16B0ACCD3131B80992B403A
 format_version: v1.0
 libraries: []
 settings:
