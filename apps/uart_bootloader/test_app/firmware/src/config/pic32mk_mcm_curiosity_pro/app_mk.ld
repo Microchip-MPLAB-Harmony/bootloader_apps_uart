@@ -1,6 +1,6 @@
 /*--------------------------------------------------------------------------
- * MPLAB XC Compiler -  PIC32MK MCM linker script
- * Build date : Jan 26 2021
+ * MPLAB XC Compiler -  PIC32MK MCA linker script
+ * Build date : Nov 02 2021
  * 
  * Copyright (c) 2021, Microchip Technology Inc. and its subsidiaries ("Microchip")
  * All rights reserved.
@@ -82,7 +82,7 @@ OPTIONAL("vector_offset_init.o")
 PROVIDE(_vector_spacing = 0x0001);
 PROVIDE(_ebase_address = 0x9D000000);
 
-/* Place the vector table and other exceptions after the device reset code. */
+/* Place the vector table after the device reset code. */
 PROVIDE(_ebase_vector_offsets = 0x1000);
 
 /*************************************************************************
@@ -93,9 +93,9 @@ PROVIDE(_ebase_vector_offsets = 0x1000);
  * _SIMPLE_TLB_REFILL_EXCPT_ADDR  -- Simple TLB-Refill Exception Vector
  * _GEN_EXCPT_ADDR                -- General Exception Vector
  *************************************************************************/
-_RESET_ADDR                    = 0xBD000000;
-_SIMPLE_TLB_REFILL_EXCPT_ADDR  = _ebase_address + _ebase_vector_offsets + 0;
-_GEN_EXCPT_ADDR                = _ebase_address + _ebase_vector_offsets + 0x180;
+_RESET_ADDR                    = 0xBD000200;
+_SIMPLE_TLB_REFILL_EXCPT_ADDR  = _ebase_address + 0;
+_GEN_EXCPT_ADDR                = _ebase_address + 0x180;
 
 /*************************************************************************
  * Memory Regions
@@ -110,12 +110,16 @@ _GEN_EXCPT_ADDR                = _ebase_address + _ebase_vector_offsets + 0x180;
 
 MEMORY
 {
+    /* Place the exceptions starting from _ebase_address as required by device specification */
+    kseg0_exception_mem (rx) : ORIGIN = 0x9D000000, LENGTH = 0x200
+
+    kseg1_boot_mem           : ORIGIN = 0xBD000200, LENGTH = 0x1000 - 0x200
+
     /* All C files will be located here */
-    kseg0_program_mem  (rx) : ORIGIN = 0x9D001000, LENGTH = 0x100000 - 0x1000
-    kseg1_boot_mem          : ORIGIN = 0xBD000000, LENGTH = 0x480
+    kseg0_program_mem   (rx) : ORIGIN = 0x9D001000, LENGTH = 0x20000 - 0x1000
 
     /* Reserve 16 Bytes to Store Bootloader Trigger Pattern */
-    kseg0_data_mem     (w!x): ORIGIN = 0x80000000 + 16, LENGTH = 0x40000 - 16
+    kseg0_data_mem     (w!x): ORIGIN = 0x80000000 + 16, LENGTH = 0x8000 - 16
 
     sfrs                    : ORIGIN = 0xBF800000, LENGTH = 0x100000
 }
@@ -136,7 +140,7 @@ SECTIONS
   .app_excpt _GEN_EXCPT_ADDR :
   {
     KEEP(*(.gen_handler))
-  } > kseg0_program_mem
+  } > kseg0_exception_mem 
 
   /* Interrupt vector table with vector offsets */
   .vectors _ebase_address + _ebase_vector_offsets + 0x200 :
