@@ -76,46 +76,6 @@ void __attribute__((noreturn)) HardFault_Handler(void)
    }
 }
 
-void __attribute__((noreturn)) DebugMonitor_Handler(void)
-{
-#if defined(__DEBUG) || defined(__DEBUG_D) && defined(__XC32)
-   __builtin_software_breakpoint();
-#endif
-   while (true)
-   {
-   }
-}
-
-void __attribute__((noreturn)) MemoryManagement_Handler(void)
-{
-#if defined(__DEBUG) || defined(__DEBUG_D) && defined(__XC32)
-   __builtin_software_breakpoint();
-#endif
-   while (true)
-   {
-   }
-}
-
-void __attribute__((noreturn)) BusFault_Handler(void)
-{
-#if defined(__DEBUG) || defined(__DEBUG_D) && defined(__XC32)
-   __builtin_software_breakpoint();
-#endif
-   while (true)
-   {
-   }
-}
-
-void __attribute__((noreturn)) UsageFault_Handler(void)
-{
-#if defined(__DEBUG) || defined(__DEBUG_D) && defined(__XC32)
-   __builtin_software_breakpoint();
-#endif
-   while (true)
-   {
-   }
-}
 /*******************************************************************************
  End of File
  */
-
