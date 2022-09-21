@@ -1,8 +1,8 @@
 /*******************************************************************************
-  Bootloader Header File
+  UART Bootloader Header File
 
   File Name:
-    bootloader.h
+    bootloader_uart.h
 
   Summary:
     This file contains Interface definitions of bootloder
@@ -36,17 +36,14 @@
  *******************************************************************************/
 // DOM-IGNORE-END
 
-#ifndef BOOTLOADER_H
-#define BOOTLOADER_H
+#ifndef BOOTLOADER_UART_H
+#define BOOTLOADER_UART_H
 
 #include <stdint.h>
 #include <stdbool.h>
+#include "bootloader_common.h"
 
 #include "sys/kmem.h"
-
-#define BTL_TRIGGER_RAM_START   KVA0_TO_KVA1(0x80000000)
-
-#define BTL_TRIGGER_LEN         16
 
 // *****************************************************************************
 /* Function:
@@ -78,7 +75,7 @@
 
         if (bootloader_Trigger() == false)
         {
-            run_Application();
+            run_Application(APP_JUMP_ADDRESS);
         }
 
     </code>
@@ -86,112 +83,11 @@
 void bootloader_ProgramFlashBankSelect( void );
 
 
-// *****************************************************************************
-/* Function:
-    bool bootloader_Trigger( void );
 
-Summary:
-    Checks if Bootloader has to be executed at startup.
-
-Description:
-    This function can be used to check for a External HW trigger or Internal firmware
-    trigger to execute bootloader at startup.
-
-    This check should happen before any system resources are initialized apart for PORT
-    as the same system resource can be Re-initialized by the application if bootloader jumps
-    to it and may cause issues.
-
-    - <b>External Trigger: </b>
-        Is achieved by triggering the selected GPIO_PIN in bootloader configuration
-        in MHC.
-    - <b>Firmware Trigger: </b>
-        Application firmware which wants to execute bootloader at startup needs to
-        fill first 16 bytes of ram location with bootloader request pattern.
-
-        <code>
-            uint32_t *sram = (uint32_t *)RAM_START_ADDRESS;
-
-            sram[0] = 0x5048434D;
-            sram[1] = 0x5048434D;
-            sram[2] = 0x5048434D;
-            sram[3] = 0x5048434D;
-        </code>
-
-Precondition:
-    PORT/PIO Initialize must have been called.
-
-Parameters:
-    None.
-
-Returns:
-    - True  : If any of trigger is detected.
-    - False : If no trigger is detected..
-
-Example:
-    <code>
-
-        NVMCTRL_Initialize();
-
-        PORT_Initialize();
-
-        if (bootloader_Trigger() == false)
-        {
-            run_Application();
-        }
-
-        CLOCK_Initialize();
-
-    </code>
-*/
-bool bootloader_Trigger( void );
 
 // *****************************************************************************
 /* Function:
-    void run_Application( void );
-
-Summary:
-    Runs the programmed application at startup.
-
-Description:
-    This function can be used to run programmed application though bootloader at startup.
-
-    If the first 4Bytes of Application Memory is not 0xFFFFFFFF then it jumps to
-    the application start address to run the application programmed through bootloader and
-    never returns.
-
-    If the first 4Bytes of Application Memory is 0xFFFFFFFF then it returns from function
-    and executes bootloader for accepting a new application firmware.
-
-Precondition:
-    bootloader_Trigger() must be called to check for bootloader triggers at startup.
-
-Parameters:
-    None.
-
-Returns:
-    None
-
-Example:
-    <code>
-
-        NVMCTRL_Initialize();
-
-        PORT_Initialize();
-
-        if (bootloader_Trigger() == false)
-        {
-            run_Application();
-        }
-
-        CLOCK_Initialize();
-
-    </code>
-*/
-void run_Application( void );
-
-// *****************************************************************************
-/* Function:
-    void bootloader_Tasks( void );
+    void bootloader_UART_Tasks( void )
 
  Summary:
     Starts bootloader execution.
@@ -226,10 +122,10 @@ void run_Application( void );
  Example:
     <code>
 
-        bootloader_Tasks();
+        bootloader_UART_Tasks();
 
     </code>
 */
-void bootloader_Tasks( void );
+void bootloader_UART_Tasks( void );
 
-#endif
+#endif  //BOOTLOADER_UART_H

@@ -1,18 +1,25 @@
 files:
-- generatedChecksum: 4E9E8854DE08F7260DA3133126FE588D
+- generatedChecksum: 5BF304055682D273FA2698CC51265613
   logicalPath: config/pic32mz_das_sk/bootloader
-  name: bootloader.c
+  name: bootloader_common.c
   physicalPath: bootloader
   security: NON_SECURE
   type: SOURCE
-  userChecksum: 4E9E8854DE08F7260DA3133126FE588D
-- generatedChecksum: 8CA658D359176EF12F1A5B451FADBCDF
+  userChecksum: 5BF304055682D273FA2698CC51265613
+- generatedChecksum: CBBC2794ACD6F35476BC3D70AA014608
+  logicalPath: config/pic32mz_das_sk/bootloader
+  name: bootloader_uart.c
+  physicalPath: bootloader
+  security: NON_SECURE
+  type: SOURCE
+  userChecksum: CBBC2794ACD6F35476BC3D70AA014608
+- generatedChecksum: E2D6AE10927328688F2478A9B4FA0566
   logicalPath: config/pic32mz_das_sk
   name: initialization.c
   physicalPath: ''
   security: NON_SECURE
   type: SOURCE
-  userChecksum: 8CA658D359176EF12F1A5B451FADBCDF
+  userChecksum: E2D6AE10927328688F2478A9B4FA0566
 - generatedChecksum: null
   logicalPath: ''
   name: main.c
@@ -34,20 +41,20 @@ files:
   security: NON_SECURE
   type: SOURCE
   userChecksum: F8BB2BAA74068083A80E6E229BBCF3E3
-- generatedChecksum: ED6722C1169FEA2DA1F15D907F42AA46
+- generatedChecksum: B78784342D92F137A0446EBC260A199D
   logicalPath: config/pic32mz_das_sk/peripheral/evic
   name: plib_evic.c
   physicalPath: peripheral/evic
   security: NON_SECURE
   type: SOURCE
-  userChecksum: ED6722C1169FEA2DA1F15D907F42AA46
-- generatedChecksum: E808C3AABCB5272274D6460B591C70F7
+  userChecksum: B78784342D92F137A0446EBC260A199D
+- generatedChecksum: AB6884E52D3C3F590AD668926393D682
   logicalPath: config/pic32mz_das_sk/peripheral/gpio
   name: plib_gpio.c
   physicalPath: peripheral/gpio
   security: NON_SECURE
   type: SOURCE
-  userChecksum: E808C3AABCB5272274D6460B591C70F7
+  userChecksum: AB6884E52D3C3F590AD668926393D682
 - generatedChecksum: CA41C0116AA86AA82F796A658ADFE1E7
   logicalPath: config/pic32mz_das_sk/peripheral/nvm
   name: plib_nvm.c
@@ -55,27 +62,34 @@ files:
   security: NON_SECURE
   type: SOURCE
   userChecksum: CA41C0116AA86AA82F796A658ADFE1E7
-- generatedChecksum: D71E3D2674B82EDB91245FD382C63A7B
+- generatedChecksum: 6EEAD941F5979497535D0CA5CFA8B216
   logicalPath: config/pic32mz_das_sk/peripheral/uart
   name: plib_uart2.c
   physicalPath: peripheral/uart
   security: NON_SECURE
   type: SOURCE
-  userChecksum: D71E3D2674B82EDB91245FD382C63A7B
-- generatedChecksum: 58140E8F912D1489907E3FD52F32A81D
+  userChecksum: 6EEAD941F5979497535D0CA5CFA8B216
+- generatedChecksum: AA6BD86B01A632B20CF046CA9BD36DD1
   logicalPath: config/pic32mz_das_sk/bootloader
-  name: bootloader.h
+  name: bootloader_common.h
   physicalPath: bootloader
   security: NON_SECURE
   type: HEADER
-  userChecksum: 58140E8F912D1489907E3FD52F32A81D
-- generatedChecksum: B3139CD1D17E593734EC178F90ECB280
+  userChecksum: AA6BD86B01A632B20CF046CA9BD36DD1
+- generatedChecksum: D07AF5892FB3AA1C5BD5F95C46B9CD46
+  logicalPath: config/pic32mz_das_sk/bootloader
+  name: bootloader_uart.h
+  physicalPath: bootloader
+  security: NON_SECURE
+  type: HEADER
+  userChecksum: D07AF5892FB3AA1C5BD5F95C46B9CD46
+- generatedChecksum: DAD7B1B0A3268980A0C2C7B275E06357
   logicalPath: config/pic32mz_das_sk
   name: definitions.h
   physicalPath: ''
   security: NON_SECURE
   type: HEADER
-  userChecksum: B3139CD1D17E593734EC178F90ECB280
+  userChecksum: DAD7B1B0A3268980A0C2C7B275E06357
 - generatedChecksum: E189C26B2269F8DE46033CCD0621958D
   logicalPath: config/pic32mz_das_sk
   name: device.h
@@ -90,13 +104,13 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: 7066CC390335CF75126E2A50C46E3BDD
-- generatedChecksum: C28AA8F266DD056E96DCBE0761337241
+- generatedChecksum: 0EA600D4DBA17C02F74FD5C7BE8F56B0
   logicalPath: config/pic32mz_das_sk/peripheral/coretimer
   name: plib_coretimer.h
   physicalPath: peripheral/coretimer
   security: NON_SECURE
   type: HEADER
-  userChecksum: C28AA8F266DD056E96DCBE0761337241
+  userChecksum: 0EA600D4DBA17C02F74FD5C7BE8F56B0
 - generatedChecksum: 44A9EFA06536DE1713738D859242B11C
   logicalPath: config/pic32mz_das_sk/peripheral/evic
   name: plib_evic.h
@@ -104,13 +118,13 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: 44A9EFA06536DE1713738D859242B11C
-- generatedChecksum: 42B841913DDC4BC7A33C164C58CBDDC0
+- generatedChecksum: 440AD876678D153BB1B00905DF0DFB2C
   logicalPath: config/pic32mz_das_sk/peripheral/gpio
   name: plib_gpio.h
   physicalPath: peripheral/gpio
   security: NON_SECURE
   type: HEADER
-  userChecksum: 42B841913DDC4BC7A33C164C58CBDDC0
+  userChecksum: 440AD876678D153BB1B00905DF0DFB2C
 - generatedChecksum: 42ECD2217FBCF58E950E691EEB8D7E11
   logicalPath: config/pic32mz_das_sk/peripheral/nvm
   name: plib_nvm.h
@@ -132,20 +146,20 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: 67EEAF539A53B6B8FD7B600ACCB3F3CA
-- generatedChecksum: FA212DEAE39D4E86EF4E6CB440610FE9
+- generatedChecksum: CAC44960D20AEC03CF4B325A1CD2877C
   logicalPath: config/pic32mz_das_sk
   name: toolchain_specifics.h
   physicalPath: ''
   security: NON_SECURE
   type: HEADER
-  userChecksum: FA212DEAE39D4E86EF4E6CB440610FE9
-- generatedChecksum: 402DB5F533A3433D0A4364659DF0A9A1
+  userChecksum: CAC44960D20AEC03CF4B325A1CD2877C
+- generatedChecksum: 48A8B64F6D1256A107A4960792CC8F24
   logicalPath: ''
   name: btl.ld
   physicalPath: ''
   security: NON_SECURE
   type: LINKER
-  userChecksum: 402DB5F533A3433D0A4364659DF0A9A1
+  userChecksum: 48A8B64F6D1256A107A4960792CC8F24
 format_version: v1.0
 libraries: []
 settings:
@@ -154,7 +168,7 @@ settings:
   delimiter: ;
   key: extra-include-directories
   security: NON_SECURE
-  value: ../src;../src/config/pic32mz_das_sk;../src/packs/PIC32MZ2064DAS169_DFP;
+  value: ../src;../src/config/pic32mz_das_sk;
 - append: false
   category: C32
   delimiter: ''
@@ -184,7 +198,7 @@ settings:
   delimiter: ;
   key: extra-include-directories
   security: NON_SECURE
-  value: ../src;../src/config/pic32mz_das_sk;../src/packs/PIC32MZ2064DAS169_DFP;
+  value: ../src;../src/config/pic32mz_das_sk;
 - append: false
   category: C32CPP
   delimiter: ''
