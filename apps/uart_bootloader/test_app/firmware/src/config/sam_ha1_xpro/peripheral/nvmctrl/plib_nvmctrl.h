@@ -76,26 +76,35 @@
 #define NVMCTRL_RWWEEPROM_PAGESIZE         (64U)
 #define NVMCTRL_RWWEEPROM_ROWSIZE          (256U)
 
+#define NVMCTRL_USERROW_START_ADDRESS     (0x00804000U)
+#define NVMCTRL_USERROW_SIZE              (0x100U)
+#define NVMCTRL_USERROW_PAGESIZE          (64U)
 
 #define NVMCTRL_ERROR_NONE 0x0U
 #define NVMCTRL_ERROR_PROG 0x4U
 #define NVMCTRL_ERROR_LOCK 0x8U
 #define NVMCTRL_ERROR_NVM 0x10U
 
-typedef uint32_t NVMCTRL_ERROR;
+typedef uint16_t NVMCTRL_ERROR;
 
 
 void NVMCTRL_Initialize(void);
 
-bool NVMCTRL_Read( uint32_t *data, uint32_t length, uint32_t address );
+bool NVMCTRL_Read( uint32_t *data, uint32_t length, const uint32_t address );
 
-bool NVMCTRL_PageWrite( uint32_t* data, uint32_t address );
+bool NVMCTRL_PageWrite( uint32_t *data, const uint32_t address );
+
+
+bool NVMCTRL_PageBufferWrite( uint32_t *data, const uint32_t address);
+
+bool NVMCTRL_PageBufferCommit( const uint32_t address);
+
 
 bool NVMCTRL_RowErase( uint32_t address );
 
 bool NVMCTRL_RWWEEPROM_Read( uint32_t *data, uint32_t length, const uint32_t address );
 
-bool NVMCTRL_RWWEEPROM_PageWrite( uint32_t* data, uint32_t address );
+bool NVMCTRL_RWWEEPROM_PageWrite ( uint32_t *data, const uint32_t address );
 
 bool NVMCTRL_RWWEEPROM_RowErase ( uint32_t address );
 
@@ -107,6 +116,12 @@ void NVMCTRL_RegionLock (uint32_t address);
 
 void NVMCTRL_RegionUnlock (uint32_t address);
 
+void NVMCTRL_SecurityBitSet(void);
+
+
+bool NVMCTRL_USER_ROW_PageWrite( uint32_t *data, const uint32_t address );
+
+bool NVMCTRL_USER_ROW_RowErase( uint32_t address );
 
 void NVMCTRL_CacheInvalidate ( void );
 
