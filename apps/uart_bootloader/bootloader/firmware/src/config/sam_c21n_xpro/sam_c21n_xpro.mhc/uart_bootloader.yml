@@ -4,6 +4,22 @@ attributes: {id: uart_bootloader}
 children:
 - type: Symbols
   children:
+  - type: Boolean
+    attributes: {id: BTL_FUSE_PROGRAM_ENABLE}
+    children:
+    - type: Attributes
+      children:
+      - type: Boolean
+        attributes: {id: visible}
+        children:
+        - {type: Value, value: 'true'}
+  - type: Integer
+    attributes: {id: BTL_MEM_START_ADDR}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: uart_bootloader, value: '0'}
   - type: String
     attributes: {id: BTL_SIZE}
     children:
