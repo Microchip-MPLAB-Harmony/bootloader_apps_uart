@@ -43,10 +43,10 @@
 #include "device.h"
 #include "peripheral/cmcc/plib_cmcc.h"
 
+
 void CMCC_Disable (void )
 {
     CMCC_REGS->CMCC_CTRL &=(~CMCC_CTRL_CEN_Msk);
-
     while((CMCC_REGS->CMCC_SR & CMCC_SR_CSTS_Msk) == CMCC_SR_CSTS_Msk)
     {
         /*Wait for the operation to complete*/
@@ -97,6 +97,7 @@ void CMCC_DisableDCache (void )
     CMCC_REGS->CMCC_CTRL = (CMCC_CTRL_CEN_Msk);
 }
 
+
 void CMCC_InvalidateAll (void )
 {
     CMCC_REGS->CMCC_CTRL &= (~CMCC_CTRL_CEN_Msk);
@@ -107,5 +108,3 @@ void CMCC_InvalidateAll (void )
     CMCC_REGS->CMCC_MAINT0 = CMCC_MAINT0_INVALL_Msk;
     CMCC_REGS->CMCC_CTRL = (CMCC_CTRL_CEN_Msk);
 }
-
-

@@ -1,16 +1,14 @@
 /*******************************************************************************
-  System Initialization File
+  Bootloader Common Source File
 
   File Name:
-    initialization.c
+    bootloader_common.c
 
   Summary:
-    This file contains source code necessary to initialize the system.
+    This file contains common definitions and functions.
 
   Description:
-    This file contains source code necessary to initialize the system.  It
-    implements the "SYS_Initialize" function, defines the configuration bits,
-    and allocates any necessary global system resources,
+    This file contains common definitions and functions.
  *******************************************************************************/
 
 // DOM-IGNORE-BEGIN
@@ -40,95 +38,123 @@
 
 // *****************************************************************************
 // *****************************************************************************
-// Section: Included Files
+// Section: Include Files
 // *****************************************************************************
 // *****************************************************************************
-#include "definitions.h"
-#include "device.h"
 
-
-
-// ****************************************************************************
-// ****************************************************************************
-// Section: Configuration Bits
-// ****************************************************************************
-// ****************************************************************************
-#pragma config SECURITY_BIT = CLEAR
-#pragma config BOOT_MODE = SET
-
-
-
+#include "bootloader_common.h"
 
 // *****************************************************************************
 // *****************************************************************************
-// Section: Driver Initialization Data
+// Section: Type Definitions
+// *****************************************************************************
+// *****************************************************************************
+
+/* Bootloader Major and Minor version sent for a Read Version command (MAJOR.MINOR)*/
+#define BTL_MAJOR_VERSION       3
+#define BTL_MINOR_VERSION       6
+
+// *****************************************************************************
+// *****************************************************************************
+// Section: Global objects
 // *****************************************************************************
 // *****************************************************************************
 
 
 // *****************************************************************************
 // *****************************************************************************
-// Section: System Data
-// *****************************************************************************
-// *****************************************************************************
-
-// *****************************************************************************
-// *****************************************************************************
-// Section: Library/Stack Initialization Data
+// Section: Bootloader Local Functions
 // *****************************************************************************
 // *****************************************************************************
 
 
 // *****************************************************************************
 // *****************************************************************************
-// Section: System Initialization
+// Section: Bootloader Global Functions
 // *****************************************************************************
 // *****************************************************************************
 
 
-
-// *****************************************************************************
-// *****************************************************************************
-// Section: Local initialization functions
-// *****************************************************************************
-// *****************************************************************************
-
-
-
-/*******************************************************************************
-  Function:
-    void SYS_Initialize ( void *data )
-
-  Summary:
-    Initializes the board, services, drivers, application and other modules.
-
-  Remarks:
-*/
-
-void SYS_Initialize ( void* data )
+bool __WEAK bootloader_Trigger(void)
 {
-    EFC_Initialize();
+    /* Function can be overriden with custom implementation */
+    return false;
+}
 
-    CLOCK_Initialize();
+void __WEAK SYS_DeInitialize( void *data )
+{
+    /* Function can be overriden with custom implementation */
+}
 
-    PIO_Initialize();
+uint16_t __WEAK bootloader_GetVersion( void )
+{
+    /* Function can be overriden with custom implementation */
+    uint16_t btlVersion = (((BTL_MAJOR_VERSION & 0xFF) << 8) | (BTL_MINOR_VERSION & 0xFF));
 
-    if (bootloader_Trigger() == false)
+    return btlVersion;
+}
+
+
+
+/* Function to Generate CRC by reading the firmware programmed into internal flash */
+uint32_t bootloader_CRCGenerate(uint32_t start_addr, uint32_t size)
+{
+    uint32_t   i, j, value;
+    uint32_t   crc_tab[256];
+    uint32_t   crc = 0xffffffff;
+    uint8_t    data;
+
+    for (i = 0; i < 256; i++)
     {
-        run_Application(APP_START_ADDRESS);
+        value = i;
+
+        for (j = 0; j < 8; j++)
+        {
+            if (value & 1)
+            {
+                value = (value >> 1) ^ 0xEDB88320;
+            }
+            else
+            {
+                value >>= 1;
+            }
+        }
+        crc_tab[i] = value;
     }
 
+    for (i = 0; i < size; i++)
+    {
+        data = *(uint8_t *)(start_addr + i);
 
+        crc = crc_tab[(crc ^ data) & 0xff] ^ (crc >> 8);
+    }
 
-    FLEXCOM7_USART_Initialize();
-
-	SYSTICK_TimerInitialize();
-	WDT_REGS->WDT_MR = WDT_MR_WDDIS_Msk; 		// Disable WDT 
-
-
-
-
-
-    NVIC_Initialize();
-
+    return crc;
 }
+
+
+/* Trigger a reset */
+void __NO_RETURN bootloader_TriggerReset(void)
+{
+    NVIC_SystemReset();
+}
+
+void run_Application(uint32_t address)
+{
+    uint32_t msp            = *(uint32_t *)(address);
+    uint32_t reset_vector   = *(uint32_t *)(address + 4);
+
+    if (msp == 0xffffffff)
+    {
+        return;
+    }
+
+    /* Call Deinitialize routine to free any resources acquired by Bootloader */
+    SYS_DeInitialize(NULL);
+
+    __set_MSP(msp);
+
+    asm("bx %0"::"r" (reset_vector));
+}
+
+

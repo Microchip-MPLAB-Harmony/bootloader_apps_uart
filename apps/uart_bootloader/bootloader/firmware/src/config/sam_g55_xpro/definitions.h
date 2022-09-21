@@ -49,7 +49,7 @@
 #include <stddef.h>
 #include <stdbool.h>
 #include "peripheral/flexcom/usart/plib_flexcom7_usart.h"
-#include "bootloader/bootloader.h"
+#include "bootloader/bootloader_uart.h"
 #include "peripheral/pio/plib_pio.h"
 #include "peripheral/clock/plib_clock.h"
 #include "peripheral/nvic/plib_nvic.h"
@@ -66,7 +66,7 @@ extern "C" {
 // DOM-IGNORE-END
 
 /* CPU clock frequency */
-#define CPU_CLOCK_FREQUENCY 119996416
+#define CPU_CLOCK_FREQUENCY 100007936
 
 // *****************************************************************************
 // *****************************************************************************

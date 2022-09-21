@@ -58,7 +58,6 @@ extern "C" {
 
 void CLOCK_Initialize (void);
 
-
 #ifdef __cplusplus // Provide C++ Compatibility
 }
 #endif

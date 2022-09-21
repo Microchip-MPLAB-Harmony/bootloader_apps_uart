@@ -27,13 +27,6 @@ children:
       children:
       - type: Dynamic
         attributes: {id: uart_bootloader, value: '402000'}
-  - type: String
-    attributes: {id: CMCC_INSTANCE_NAME}
-    children:
-    - type: Values
-      children:
-      - type: Dynamic
-        attributes: {id: core, value: CMCC}
   - type: KeyValueSet
     attributes: {id: COMPILER_CHOICE}
     children:
@@ -197,7 +190,7 @@ children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: core, value: '119996416'}
+        attributes: {id: core, value: '100007936'}
   - type: Boolean
     attributes: {id: FLEXCOM7_INTERRUPT_ENABLE}
     children:
@@ -235,6 +228,13 @@ children:
         attributes: {id: enabled}
         children:
         - {type: Value, value: 'false'}
+  - type: Boolean
+    attributes: {id: INSTRUCTION_CACHE_ENABLE}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: uart_bootloader, value: 'false'}
   - type: File
     attributes: {id: INTERRUPTS_C}
     children:
@@ -517,7 +517,7 @@ children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: core, value: '119996416'}
+        attributes: {id: core, value: '100007936'}
   - type: Hex
     attributes: {id: PIOA_DRIVER_VALUE}
     children:
@@ -573,7 +573,7 @@ children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: core, value: '119996416'}
+        attributes: {id: core, value: '100007936'}
   - type: Hex
     attributes: {id: PMC_PCER0}
     children:
@@ -632,7 +632,7 @@ children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: core, value: '0xB7199A'}
+        attributes: {id: core, value: '0x98999A'}
   - type: Float
     attributes: {id: SYSTICK_PERIOD_MS}
     children:

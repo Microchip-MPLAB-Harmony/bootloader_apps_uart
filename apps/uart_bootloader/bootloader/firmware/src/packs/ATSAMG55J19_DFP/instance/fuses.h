@@ -21,7 +21,7 @@
  */
 
 /* file generated from device description version 2022-03-22T03:45:07Z */
-#ifndef _SAMG55_GPBR_INSTANCE_
-#define _SAMG55_GPBR_INSTANCE_
+#ifndef _SAMG55_FUSES_INSTANCE_
+#define _SAMG55_FUSES_INSTANCE_
 
-#endif /* _SAMG55_GPBR_INSTANCE_ */
+#endif /* _SAMG55_FUSES_INSTANCE_ */
