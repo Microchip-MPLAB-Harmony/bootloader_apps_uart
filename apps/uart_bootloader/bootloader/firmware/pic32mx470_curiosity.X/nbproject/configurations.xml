@@ -19,7 +19,6 @@
             </logicalFolder>
             <logicalFolder name="f6" displayName="uart" projectFiles="true">
             </logicalFolder>
-            <itemPath>../src/config/pic32mx470_curiosity/bootloader/bootloader.h</itemPath>
           </logicalFolder>
           <logicalFolder name="f1" displayName="peripheral" projectFiles="true">
             <logicalFolder name="f3" displayName="clk" projectFiles="true">
@@ -41,6 +40,8 @@
               <itemPath>../src/config/pic32mx470_curiosity/peripheral/uart/plib_uart_common.h</itemPath>
               <itemPath>../src/config/pic32mx470_curiosity/peripheral/uart/plib_uart1.h</itemPath>
             </logicalFolder>
+            <itemPath>../src/config/pic32mx470_curiosity/bootloader/bootloader_uart.h</itemPath>
+            <itemPath>../src/config/pic32mx470_curiosity/bootloader/bootloader_common.h</itemPath>
           </logicalFolder>
           <itemPath>../src/config/pic32mx470_curiosity/toolchain_specifics.h</itemPath>
           <itemPath>../src/config/pic32mx470_curiosity/definitions.h</itemPath>
@@ -76,7 +77,6 @@
             </logicalFolder>
             <logicalFolder name="f6" displayName="uart" projectFiles="true">
             </logicalFolder>
-            <itemPath>../src/config/pic32mx470_curiosity/bootloader/bootloader.c</itemPath>
           </logicalFolder>
           <logicalFolder name="f1" displayName="peripheral" projectFiles="true">
             <logicalFolder name="f3" displayName="clk" projectFiles="true">
@@ -97,6 +97,8 @@
             <logicalFolder name="f2" displayName="uart" projectFiles="true">
               <itemPath>../src/config/pic32mx470_curiosity/peripheral/uart/plib_uart1.c</itemPath>
             </logicalFolder>
+            <itemPath>../src/config/pic32mx470_curiosity/bootloader/bootloader_uart.c</itemPath>
+            <itemPath>../src/config/pic32mx470_curiosity/bootloader/bootloader_common.c</itemPath>
           </logicalFolder>
           <itemPath>../src/config/pic32mx470_curiosity/initialization.c</itemPath>
         </logicalFolder>
@@ -108,6 +110,7 @@
                    projectFiles="false">
       <itemPath>Makefile</itemPath>
       <itemPath>../src/config/pic32mx470_curiosity/harmony-manifest-success.yml</itemPath>
+      <itemPath>uart_bootloader_pic32mx470_curiosity.mc3</itemPath>
     </logicalFolder>
   </logicalFolder>
   <sourceRootList>
@@ -165,7 +168,7 @@
         <property key="enable-unroll-loops" value="false"/>
         <property key="exclude-floating-point" value="false"/>
         <property key="extra-include-directories"
-                  value="../src;../src/config/pic32mx470_curiosity;../src/packs/PIC32MX470F512H_DFP"/>
+                  value="../src;../src/config/pic32mx470_curiosity"/>
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="true"/>
@@ -263,7 +266,7 @@
         <property key="exceptions" value="true"/>
         <property key="exclude-floating-point" value="false"/>
         <property key="extra-include-directories"
-                  value="../src;../src/config/pic32mx470_curiosity;../src/packs/PIC32MX470F512H_DFP"/>
+                  value="../src;../src/config/pic32mx470_curiosity"/>
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="true"/>

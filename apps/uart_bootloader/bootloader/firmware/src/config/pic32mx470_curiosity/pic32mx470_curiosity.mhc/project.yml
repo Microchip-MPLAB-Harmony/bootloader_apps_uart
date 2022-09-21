@@ -1,18 +1,25 @@
 files:
-- generatedChecksum: 405D1571E172DE95A482A6501152C585
+- generatedChecksum: 0FC266630D823D6E97A456B198551090
   logicalPath: config/pic32mx470_curiosity/bootloader
-  name: bootloader.c
+  name: bootloader_common.c
   physicalPath: bootloader
   security: NON_SECURE
   type: SOURCE
-  userChecksum: 405D1571E172DE95A482A6501152C585
-- generatedChecksum: 333E6CF41367BEA1134430E16D0B8D86
+  userChecksum: 0FC266630D823D6E97A456B198551090
+- generatedChecksum: 29D46E48F8EF5513E7FCABD0936D45FE
+  logicalPath: config/pic32mx470_curiosity/bootloader
+  name: bootloader_uart.c
+  physicalPath: bootloader
+  security: NON_SECURE
+  type: SOURCE
+  userChecksum: 29D46E48F8EF5513E7FCABD0936D45FE
+- generatedChecksum: B4BE1890B93A4259F21F47336AC42C15
   logicalPath: config/pic32mx470_curiosity
   name: initialization.c
   physicalPath: ''
   security: NON_SECURE
   type: SOURCE
-  userChecksum: 333E6CF41367BEA1134430E16D0B8D86
+  userChecksum: B4BE1890B93A4259F21F47336AC42C15
 - generatedChecksum: null
   logicalPath: ''
   name: main.c
@@ -41,13 +48,13 @@ files:
   security: NON_SECURE
   type: SOURCE
   userChecksum: 36F718A0C383C0856EB1DE4DEA41B4D5
-- generatedChecksum: 0A83A47A38F4BBAF83E80C6051F62D03
+- generatedChecksum: 261153CDBE17BF1A8859FA7524CF6969
   logicalPath: config/pic32mx470_curiosity/peripheral/gpio
   name: plib_gpio.c
   physicalPath: peripheral/gpio
   security: NON_SECURE
   type: SOURCE
-  userChecksum: 0A83A47A38F4BBAF83E80C6051F62D03
+  userChecksum: 261153CDBE17BF1A8859FA7524CF6969
 - generatedChecksum: 6BA90EB347ECD368824D77A76F44C819
   logicalPath: config/pic32mx470_curiosity/peripheral/nvm
   name: plib_nvm.c
@@ -55,27 +62,34 @@ files:
   security: NON_SECURE
   type: SOURCE
   userChecksum: 6BA90EB347ECD368824D77A76F44C819
-- generatedChecksum: 7839BF01CED9432B7210B376E179A787
+- generatedChecksum: 78D882820F55A497D8EE7262E1184A3F
   logicalPath: config/pic32mx470_curiosity/peripheral/uart
   name: plib_uart1.c
   physicalPath: peripheral/uart
   security: NON_SECURE
   type: SOURCE
-  userChecksum: 7839BF01CED9432B7210B376E179A787
-- generatedChecksum: 678A5D88C0B4D56340890BE222A8EF42
+  userChecksum: 78D882820F55A497D8EE7262E1184A3F
+- generatedChecksum: 553E10AA129718BCC4122AD30C0B78A0
   logicalPath: config/pic32mx470_curiosity/bootloader
-  name: bootloader.h
+  name: bootloader_common.h
   physicalPath: bootloader
   security: NON_SECURE
   type: HEADER
-  userChecksum: 678A5D88C0B4D56340890BE222A8EF42
-- generatedChecksum: 85239FE3C05C3E92EA880970A1436137
+  userChecksum: 553E10AA129718BCC4122AD30C0B78A0
+- generatedChecksum: 3CF7D2ECF3C52793025B04D689A1B433
+  logicalPath: config/pic32mx470_curiosity/bootloader
+  name: bootloader_uart.h
+  physicalPath: bootloader
+  security: NON_SECURE
+  type: HEADER
+  userChecksum: 3CF7D2ECF3C52793025B04D689A1B433
+- generatedChecksum: 3DEDB404411E6CA788C7F146D9C9DC55
   logicalPath: config/pic32mx470_curiosity
   name: definitions.h
   physicalPath: ''
   security: NON_SECURE
   type: HEADER
-  userChecksum: 85239FE3C05C3E92EA880970A1436137
+  userChecksum: 3DEDB404411E6CA788C7F146D9C9DC55
 - generatedChecksum: E189C26B2269F8DE46033CCD0621958D
   logicalPath: config/pic32mx470_curiosity
   name: device.h
@@ -90,13 +104,13 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: 7066CC390335CF75126E2A50C46E3BDD
-- generatedChecksum: 5DE1AC6D326779855BFCE7A6BC3E22D2
+- generatedChecksum: C9591F8126D956F31100408015A41568
   logicalPath: config/pic32mx470_curiosity/peripheral/coretimer
   name: plib_coretimer.h
   physicalPath: peripheral/coretimer
   security: NON_SECURE
   type: HEADER
-  userChecksum: 5DE1AC6D326779855BFCE7A6BC3E22D2
+  userChecksum: C9591F8126D956F31100408015A41568
 - generatedChecksum: A2CC849C687144A046545E8CF6188343
   logicalPath: config/pic32mx470_curiosity/peripheral/evic
   name: plib_evic.h
@@ -132,13 +146,13 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: 91611515A95D92B82B7F4064C16D122B
-- generatedChecksum: 2C8543317B3F067432097AB9BD3E8672
+- generatedChecksum: 7DC91D6D376C98802C9C2990432DE9B7
   logicalPath: config/pic32mx470_curiosity
   name: toolchain_specifics.h
   physicalPath: ''
   security: NON_SECURE
   type: HEADER
-  userChecksum: 2C8543317B3F067432097AB9BD3E8672
+  userChecksum: 7DC91D6D376C98802C9C2990432DE9B7
 - generatedChecksum: 0BC0CE3D1D2CD999B98F403672142430
   logicalPath: ''
   name: btl.ld
@@ -154,7 +168,7 @@ settings:
   delimiter: ;
   key: extra-include-directories
   security: NON_SECURE
-  value: ../src;../src/config/pic32mx470_curiosity;../src/packs/PIC32MX470F512H_DFP;
+  value: ../src;../src/config/pic32mx470_curiosity;
 - append: false
   category: C32
   delimiter: ''
@@ -184,7 +198,7 @@ settings:
   delimiter: ;
   key: extra-include-directories
   security: NON_SECURE
-  value: ../src;../src/config/pic32mx470_curiosity;../src/packs/PIC32MX470F512H_DFP;
+  value: ../src;../src/config/pic32mx470_curiosity;
 - append: false
   category: C32CPP
   delimiter: ''
