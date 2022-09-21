@@ -6,7 +6,7 @@
                    projectFiles="true">
       <logicalFolder name="f1" displayName="config" projectFiles="true">
         <logicalFolder name="f1" displayName="sam_da1_xpro" projectFiles="true">
-          <logicalFolder name="f2" displayName="bootloader" projectFiles="true">
+          <logicalFolder name="f1" displayName="bootloader" projectFiles="true">
             <logicalFolder name="f1" displayName="clock" projectFiles="true">
             </logicalFolder>
             <logicalFolder name="f2" displayName="dsu" projectFiles="true">
@@ -27,37 +27,38 @@
             </logicalFolder>
             <logicalFolder name="f9" displayName="systick" projectFiles="true">
             </logicalFolder>
-            <itemPath>../src/config/sam_da1_xpro/bootloader/bootloader.h</itemPath>
+            <itemPath>../src/config/sam_da1_xpro/bootloader/bootloader_uart.h</itemPath>
+            <itemPath>../src/config/sam_da1_xpro/bootloader/bootloader_common.h</itemPath>
           </logicalFolder>
-          <logicalFolder name="f1" displayName="peripheral" projectFiles="true">
-            <logicalFolder name="f5" displayName="clock" projectFiles="true">
+          <logicalFolder name="f2" displayName="peripheral" projectFiles="true">
+            <logicalFolder name="f1" displayName="clock" projectFiles="true">
               <itemPath>../src/config/sam_da1_xpro/peripheral/clock/plib_clock.h</itemPath>
             </logicalFolder>
-            <logicalFolder name="f9" displayName="dsu" projectFiles="true">
+            <logicalFolder name="f2" displayName="dsu" projectFiles="true">
               <itemPath>../src/config/sam_da1_xpro/peripheral/dsu/plib_dsu.h</itemPath>
             </logicalFolder>
             <logicalFolder name="f3" displayName="evsys" projectFiles="true">
               <itemPath>../src/config/sam_da1_xpro/peripheral/evsys/plib_evsys.h</itemPath>
             </logicalFolder>
-            <logicalFolder name="f6" displayName="nvic" projectFiles="true">
+            <logicalFolder name="f4" displayName="nvic" projectFiles="true">
               <itemPath>../src/config/sam_da1_xpro/peripheral/nvic/plib_nvic.h</itemPath>
             </logicalFolder>
-            <logicalFolder name="f2" displayName="nvmctrl" projectFiles="true">
+            <logicalFolder name="f5" displayName="nvmctrl" projectFiles="true">
               <itemPath>../src/config/sam_da1_xpro/peripheral/nvmctrl/plib_nvmctrl.h</itemPath>
             </logicalFolder>
-            <logicalFolder name="f8" displayName="pac" projectFiles="true">
+            <logicalFolder name="f6" displayName="pac" projectFiles="true">
               <itemPath>../src/config/sam_da1_xpro/peripheral/pac/plib_pac.h</itemPath>
             </logicalFolder>
-            <logicalFolder name="f4" displayName="port" projectFiles="true">
+            <logicalFolder name="f7" displayName="port" projectFiles="true">
               <itemPath>../src/config/sam_da1_xpro/peripheral/port/plib_port.h</itemPath>
             </logicalFolder>
-            <logicalFolder name="f1" displayName="sercom" projectFiles="true">
+            <logicalFolder name="f8" displayName="sercom" projectFiles="true">
               <logicalFolder name="f1" displayName="usart" projectFiles="true">
                 <itemPath>../src/config/sam_da1_xpro/peripheral/sercom/usart/plib_sercom3_usart.h</itemPath>
                 <itemPath>../src/config/sam_da1_xpro/peripheral/sercom/usart/plib_sercom_usart_common.h</itemPath>
               </logicalFolder>
             </logicalFolder>
-            <logicalFolder name="f7" displayName="systick" projectFiles="true">
+            <logicalFolder name="f9" displayName="systick" projectFiles="true">
               <itemPath>../src/config/sam_da1_xpro/peripheral/systick/plib_systick.h</itemPath>
             </logicalFolder>
           </logicalFolder>
@@ -94,8 +95,9 @@
             <itemPath>../src/packs/ATSAMDA1J16B_DFP/component/tcc.h</itemPath>
             <itemPath>../src/packs/ATSAMDA1J16B_DFP/component/usb.h</itemPath>
             <itemPath>../src/packs/ATSAMDA1J16B_DFP/component/wdt.h</itemPath>
+            <itemPath>../src/packs/ATSAMDA1J16B_DFP/component/fuses.h</itemPath>
           </logicalFolder>
-          <logicalFolder name="f3" displayName="instance" projectFiles="true">
+          <logicalFolder name="f2" displayName="instance" projectFiles="true">
             <itemPath>../src/packs/ATSAMDA1J16B_DFP/instance/ac.h</itemPath>
             <itemPath>../src/packs/ATSAMDA1J16B_DFP/instance/adc.h</itemPath>
             <itemPath>../src/packs/ATSAMDA1J16B_DFP/instance/dac.h</itemPath>
@@ -132,8 +134,9 @@
             <itemPath>../src/packs/ATSAMDA1J16B_DFP/instance/tcc2.h</itemPath>
             <itemPath>../src/packs/ATSAMDA1J16B_DFP/instance/usb.h</itemPath>
             <itemPath>../src/packs/ATSAMDA1J16B_DFP/instance/wdt.h</itemPath>
+            <itemPath>../src/packs/ATSAMDA1J16B_DFP/instance/fuses.h</itemPath>
           </logicalFolder>
-          <logicalFolder name="f2" displayName="pio" projectFiles="true">
+          <logicalFolder name="f3" displayName="pio" projectFiles="true">
             <itemPath>../src/packs/ATSAMDA1J16B_DFP/pio/samda1j16b.h</itemPath>
           </logicalFolder>
           <itemPath>../src/packs/ATSAMDA1J16B_DFP/device.h</itemPath>
@@ -161,6 +164,14 @@
         </logicalFolder>
       </logicalFolder>
     </logicalFolder>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="true">
+      <itemPath>Makefile</itemPath>
+      <itemPath>../src/config/sam_da1_xpro/harmony-manifest-success.yml</itemPath>
+      <itemPath>../src/config/sam_da1_xpro/pin_configurations.csv</itemPath>
+      <itemPath>uart_bootloader_sam_da1_xpro.mc3</itemPath>
+    </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
                    projectFiles="true">
@@ -171,7 +182,7 @@
                    projectFiles="true">
       <logicalFolder name="f1" displayName="config" projectFiles="true">
         <logicalFolder name="f1" displayName="sam_da1_xpro" projectFiles="true">
-          <logicalFolder name="f2" displayName="bootloader" projectFiles="true">
+          <logicalFolder name="f1" displayName="bootloader" projectFiles="true">
             <logicalFolder name="f1" displayName="clock" projectFiles="true">
             </logicalFolder>
             <logicalFolder name="f2" displayName="dsu" projectFiles="true">
@@ -192,50 +203,46 @@
             </logicalFolder>
             <logicalFolder name="f9" displayName="systick" projectFiles="true">
             </logicalFolder>
-            <itemPath>../src/config/sam_da1_xpro/bootloader/bootloader.c</itemPath>
+            <itemPath>../src/config/sam_da1_xpro/bootloader/bootloader_uart.c</itemPath>
+            <itemPath>../src/config/sam_da1_xpro/bootloader/bootloader_common.c</itemPath>
           </logicalFolder>
-          <logicalFolder name="f1" displayName="peripheral" projectFiles="true">
-            <logicalFolder name="f5" displayName="clock" projectFiles="true">
+          <logicalFolder name="f2" displayName="peripheral" projectFiles="true">
+            <logicalFolder name="f1" displayName="clock" projectFiles="true">
               <itemPath>../src/config/sam_da1_xpro/peripheral/clock/plib_clock.c</itemPath>
             </logicalFolder>
-            <logicalFolder name="f9" displayName="dsu" projectFiles="true">
+            <logicalFolder name="f2" displayName="dsu" projectFiles="true">
               <itemPath>../src/config/sam_da1_xpro/peripheral/dsu/plib_dsu.c</itemPath>
             </logicalFolder>
             <logicalFolder name="f3" displayName="evsys" projectFiles="true">
               <itemPath>../src/config/sam_da1_xpro/peripheral/evsys/plib_evsys.c</itemPath>
             </logicalFolder>
-            <logicalFolder name="f6" displayName="nvic" projectFiles="true">
+            <logicalFolder name="f4" displayName="nvic" projectFiles="true">
               <itemPath>../src/config/sam_da1_xpro/peripheral/nvic/plib_nvic.c</itemPath>
             </logicalFolder>
-            <logicalFolder name="f2" displayName="nvmctrl" projectFiles="true">
+            <logicalFolder name="f5" displayName="nvmctrl" projectFiles="true">
               <itemPath>../src/config/sam_da1_xpro/peripheral/nvmctrl/plib_nvmctrl.c</itemPath>
             </logicalFolder>
-            <logicalFolder name="f8" displayName="pac" projectFiles="true">
+            <logicalFolder name="f6" displayName="pac" projectFiles="true">
               <itemPath>../src/config/sam_da1_xpro/peripheral/pac/plib_pac.c</itemPath>
             </logicalFolder>
-            <logicalFolder name="f4" displayName="port" projectFiles="true">
+            <logicalFolder name="f7" displayName="port" projectFiles="true">
               <itemPath>../src/config/sam_da1_xpro/peripheral/port/plib_port.c</itemPath>
             </logicalFolder>
-            <logicalFolder name="f1" displayName="sercom" projectFiles="true">
+            <logicalFolder name="f8" displayName="sercom" projectFiles="true">
               <logicalFolder name="f1" displayName="usart" projectFiles="true">
                 <itemPath>../src/config/sam_da1_xpro/peripheral/sercom/usart/plib_sercom3_usart.c</itemPath>
               </logicalFolder>
             </logicalFolder>
-            <logicalFolder name="f7" displayName="systick" projectFiles="true">
+            <logicalFolder name="f9" displayName="systick" projectFiles="true">
               <itemPath>../src/config/sam_da1_xpro/peripheral/systick/plib_systick.c</itemPath>
             </logicalFolder>
           </logicalFolder>
           <itemPath>../src/config/sam_da1_xpro/startup_xc32.c</itemPath>
           <itemPath>../src/config/sam_da1_xpro/initialization.c</itemPath>
+          <itemPath>../src/config/sam_da1_xpro/libc_syscalls.c</itemPath>
         </logicalFolder>
       </logicalFolder>
       <itemPath>../src/main.c</itemPath>
-    </logicalFolder>
-    <logicalFolder name="ExternalFiles"
-                   displayName="Important Files"
-                   projectFiles="false">
-      <itemPath>Makefile</itemPath>
-      <itemPath>../src/config/sam_da1_xpro/harmony-manifest-success.yml</itemPath>
     </logicalFolder>
   </logicalFolder>
   <sourceRootList>
@@ -312,6 +319,7 @@
       <C32>
         <property key="additional-warnings" value="true"/>
         <property key="addresss-attribute-use" value="false"/>
+        <property key="appendMe" value=""/>
         <property key="enable-app-io" value="false"/>
         <property key="enable-omit-frame-pointer" value="false"/>
         <property key="enable-symbols" value="true"/>
@@ -368,6 +376,7 @@
         <property key="additional-options-use-response-files" value="false"/>
         <property key="additional-options-write-sla" value="false"/>
         <property key="allocate-dinit" value="false"/>
+        <property key="appendMe" value=""/>
         <property key="code-dinit" value="false"/>
         <property key="ebase-addr" value=""/>
         <property key="enable-check-sections" value="false"/>
@@ -407,6 +416,7 @@
       <C32CPP>
         <property key="additional-warnings" value="false"/>
         <property key="addresss-attribute-use" value="false"/>
+        <property key="appendMe" value=""/>
         <property key="check-new" value="false"/>
         <property key="eh-specs" value="true"/>
         <property key="enable-app-io" value="false"/>
@@ -1008,6 +1018,8 @@
         <property key="memories.programmemory.ranges" value="0-ffff"/>
         <property key="memories.rww" value="true"/>
         <property key="poweroptions.powerenable" value="false"/>
+        <property key="programmerToGoFilePath"
+                  value="E:/projects/h3_bootloader/bootloader_apps_uart/apps/uart_bootloader/bootloader/firmware/sam_da1_xpro.X/debug/sam_da1_xpro/sam_da1_xpro_ptg"/>
         <property key="programoptions.eraseb4program" value="true"/>
         <property key="programoptions.preservedataflash" value="false"/>
         <property key="programoptions.preservedataflash.ranges"
