@@ -1,18 +1,25 @@
 files:
-- generatedChecksum: C81996A62735D1982734D5802C1F1DC8
+- generatedChecksum: 0FC266630D823D6E97A456B198551090
   logicalPath: config/pic32mk_gp_db/bootloader
-  name: bootloader.c
+  name: bootloader_common.c
   physicalPath: bootloader
   security: NON_SECURE
   type: SOURCE
-  userChecksum: C81996A62735D1982734D5802C1F1DC8
-- generatedChecksum: BF8C8AC2538CC48552759DF4EA385990
+  userChecksum: 0FC266630D823D6E97A456B198551090
+- generatedChecksum: E3BE5AB6AFEF1F9399CDF9BE41F13E3A
+  logicalPath: config/pic32mk_gp_db/bootloader
+  name: bootloader_uart.c
+  physicalPath: bootloader
+  security: NON_SECURE
+  type: SOURCE
+  userChecksum: E3BE5AB6AFEF1F9399CDF9BE41F13E3A
+- generatedChecksum: 4F69016F3CFD57923C0FD031432DF141
   logicalPath: config/pic32mk_gp_db
   name: initialization.c
   physicalPath: ''
   security: NON_SECURE
   type: SOURCE
-  userChecksum: BF8C8AC2538CC48552759DF4EA385990
+  userChecksum: 4F69016F3CFD57923C0FD031432DF141
 - generatedChecksum: null
   logicalPath: ''
   name: main.c
@@ -34,20 +41,20 @@ files:
   security: NON_SECURE
   type: SOURCE
   userChecksum: F8BB2BAA74068083A80E6E229BBCF3E3
-- generatedChecksum: 71E5ACC69F93C73A5A6A0357AC92D694
+- generatedChecksum: 8E9EE5960C0D8BED72BFAA700981C57F
   logicalPath: config/pic32mk_gp_db/peripheral/evic
   name: plib_evic.c
   physicalPath: peripheral/evic
   security: NON_SECURE
   type: SOURCE
-  userChecksum: 71E5ACC69F93C73A5A6A0357AC92D694
-- generatedChecksum: 330B0F80D43744384EF4BF9B266F12F9
+  userChecksum: 8E9EE5960C0D8BED72BFAA700981C57F
+- generatedChecksum: 67218AA0D758467163D81C1A40A7110C
   logicalPath: config/pic32mk_gp_db/peripheral/gpio
   name: plib_gpio.c
   physicalPath: peripheral/gpio
   security: NON_SECURE
   type: SOURCE
-  userChecksum: 330B0F80D43744384EF4BF9B266F12F9
+  userChecksum: 67218AA0D758467163D81C1A40A7110C
 - generatedChecksum: EC7B2897D8D8DE100A38DE1269321B28
   logicalPath: config/pic32mk_gp_db/peripheral/nvm
   name: plib_nvm.c
@@ -55,27 +62,34 @@ files:
   security: NON_SECURE
   type: SOURCE
   userChecksum: EC7B2897D8D8DE100A38DE1269321B28
-- generatedChecksum: 171F05807BE1DA35533DFD415B32C57E
+- generatedChecksum: 36C0078FDD71E3F1055491459AFCF7F2
   logicalPath: config/pic32mk_gp_db/peripheral/uart
   name: plib_uart6.c
   physicalPath: peripheral/uart
   security: NON_SECURE
   type: SOURCE
-  userChecksum: 171F05807BE1DA35533DFD415B32C57E
-- generatedChecksum: 5C6769BE2DE6D43EC80B53DAEB0374E2
+  userChecksum: 36C0078FDD71E3F1055491459AFCF7F2
+- generatedChecksum: 385B37DF767719B46864EE853790A768
   logicalPath: config/pic32mk_gp_db/bootloader
-  name: bootloader.h
+  name: bootloader_common.h
   physicalPath: bootloader
   security: NON_SECURE
   type: HEADER
-  userChecksum: 5C6769BE2DE6D43EC80B53DAEB0374E2
-- generatedChecksum: B7CCEBF5371E7EE198AB8DFEB9DD48D0
+  userChecksum: 385B37DF767719B46864EE853790A768
+- generatedChecksum: 3CF7D2ECF3C52793025B04D689A1B433
+  logicalPath: config/pic32mk_gp_db/bootloader
+  name: bootloader_uart.h
+  physicalPath: bootloader
+  security: NON_SECURE
+  type: HEADER
+  userChecksum: 3CF7D2ECF3C52793025B04D689A1B433
+- generatedChecksum: DA6E18D7239EDDDA557BC49BF703D2D7
   logicalPath: config/pic32mk_gp_db
   name: definitions.h
   physicalPath: ''
   security: NON_SECURE
   type: HEADER
-  userChecksum: B7CCEBF5371E7EE198AB8DFEB9DD48D0
+  userChecksum: DA6E18D7239EDDDA557BC49BF703D2D7
 - generatedChecksum: E189C26B2269F8DE46033CCD0621958D
   logicalPath: config/pic32mk_gp_db
   name: device.h
@@ -90,13 +104,13 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: 7066CC390335CF75126E2A50C46E3BDD
-- generatedChecksum: 848286252841AFE9AEEC10E0CD784605
+- generatedChecksum: E117D25137D333D9E62C091362100BB0
   logicalPath: config/pic32mk_gp_db/peripheral/coretimer
   name: plib_coretimer.h
   physicalPath: peripheral/coretimer
   security: NON_SECURE
   type: HEADER
-  userChecksum: 848286252841AFE9AEEC10E0CD784605
+  userChecksum: E117D25137D333D9E62C091362100BB0
 - generatedChecksum: F666CF132ECA91F43C2A25389BA2AC28
   logicalPath: config/pic32mk_gp_db/peripheral/evic
   name: plib_evic.h
@@ -104,13 +118,13 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: F666CF132ECA91F43C2A25389BA2AC28
-- generatedChecksum: 3F4D88024295E18890A2307BA410BB78
+- generatedChecksum: D7A89E3B6BF3AC8088E2303CF2341018
   logicalPath: config/pic32mk_gp_db/peripheral/gpio
   name: plib_gpio.h
   physicalPath: peripheral/gpio
   security: NON_SECURE
   type: HEADER
-  userChecksum: 3F4D88024295E18890A2307BA410BB78
+  userChecksum: D7A89E3B6BF3AC8088E2303CF2341018
 - generatedChecksum: 424DB524DA8BA2685FF1AE0433D744CC
   logicalPath: config/pic32mk_gp_db/peripheral/nvm
   name: plib_nvm.h
@@ -132,20 +146,20 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: 67EEAF539A53B6B8FD7B600ACCB3F3CA
-- generatedChecksum: 2C8543317B3F067432097AB9BD3E8672
+- generatedChecksum: 7DC91D6D376C98802C9C2990432DE9B7
   logicalPath: config/pic32mk_gp_db
   name: toolchain_specifics.h
   physicalPath: ''
   security: NON_SECURE
   type: HEADER
-  userChecksum: 2C8543317B3F067432097AB9BD3E8672
-- generatedChecksum: 65B894CC06C104DD70E694BC6231A2DC
+  userChecksum: 7DC91D6D376C98802C9C2990432DE9B7
+- generatedChecksum: 2DB2863881BAC6C9A15DC6B9884B7D76
   logicalPath: ''
   name: btl.ld
   physicalPath: ''
   security: NON_SECURE
   type: LINKER
-  userChecksum: 65B894CC06C104DD70E694BC6231A2DC
+  userChecksum: 2DB2863881BAC6C9A15DC6B9884B7D76
 format_version: v1.0
 libraries: []
 settings:
@@ -154,7 +168,7 @@ settings:
   delimiter: ;
   key: extra-include-directories
   security: NON_SECURE
-  value: ../src;../src/config/pic32mk_gp_db;../src/packs/PIC32MK1024GPE100_DFP;
+  value: ../src;../src/config/pic32mk_gp_db;
 - append: false
   category: C32
   delimiter: ''
@@ -184,7 +198,7 @@ settings:
   delimiter: ;
   key: extra-include-directories
   security: NON_SECURE
-  value: ../src;../src/config/pic32mk_gp_db;../src/packs/PIC32MK1024GPE100_DFP;
+  value: ../src;../src/config/pic32mk_gp_db;
 - append: false
   category: C32CPP
   delimiter: ''

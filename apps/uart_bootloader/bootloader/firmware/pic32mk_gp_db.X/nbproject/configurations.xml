@@ -19,7 +19,6 @@
             </logicalFolder>
             <logicalFolder name="f6" displayName="uart" projectFiles="true">
             </logicalFolder>
-            <itemPath>../src/config/pic32mk_gp_db/bootloader/bootloader.h</itemPath>
           </logicalFolder>
           <logicalFolder name="f1" displayName="peripheral" projectFiles="true">
             <logicalFolder name="f2" displayName="clk" projectFiles="true">
@@ -41,6 +40,8 @@
               <itemPath>../src/config/pic32mk_gp_db/peripheral/uart/plib_uart_common.h</itemPath>
               <itemPath>../src/config/pic32mk_gp_db/peripheral/uart/plib_uart6.h</itemPath>
             </logicalFolder>
+            <itemPath>../src/config/pic32mk_gp_db/bootloader/bootloader_uart.h</itemPath>
+            <itemPath>../src/config/pic32mk_gp_db/bootloader/bootloader_common.h</itemPath>
           </logicalFolder>
           <itemPath>../src/config/pic32mk_gp_db/toolchain_specifics.h</itemPath>
           <itemPath>../src/config/pic32mk_gp_db/definitions.h</itemPath>
@@ -60,6 +61,7 @@
                    projectFiles="true">
       <itemPath>Makefile</itemPath>
       <itemPath>../src/config/pic32mk_gp_db/harmony-manifest-success.yml</itemPath>
+      <itemPath>uart_bootloader_pic32mk_gp_db.mc3</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -84,7 +86,6 @@
             </logicalFolder>
             <logicalFolder name="f6" displayName="uart" projectFiles="true">
             </logicalFolder>
-            <itemPath>../src/config/pic32mk_gp_db/bootloader/bootloader.c</itemPath>
           </logicalFolder>
           <logicalFolder name="f1" displayName="peripheral" projectFiles="true">
             <logicalFolder name="f2" displayName="clk" projectFiles="true">
@@ -105,8 +106,11 @@
             <logicalFolder name="f6" displayName="uart" projectFiles="true">
               <itemPath>../src/config/pic32mk_gp_db/peripheral/uart/plib_uart6.c</itemPath>
             </logicalFolder>
+            <itemPath>../src/config/pic32mk_gp_db/bootloader/bootloader_uart.c</itemPath>
+            <itemPath>../src/config/pic32mk_gp_db/bootloader/bootloader_common.c</itemPath>
           </logicalFolder>
           <itemPath>../src/config/pic32mk_gp_db/initialization.c</itemPath>
+          <itemPath>../src/config/pic32mk_gp_db/exceptions.c</itemPath>
         </logicalFolder>
       </logicalFolder>
       <itemPath>../src/main.c</itemPath>
@@ -123,13 +127,13 @@
         <targetDevice>PIC32MK1024GPE100</targetDevice>
         <targetHeader></targetHeader>
         <targetPluginBoard></targetPluginBoard>
-        <platformTool>PKOBSKDEPlatformTool</platformTool>
+        <platformTool>noID</platformTool>
         <languageToolchain>XC32</languageToolchain>
-        <languageToolchainVersion>3.00</languageToolchainVersion>
+        <languageToolchainVersion>4.10</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <packs>
-        <pack name="PIC32MK-GP_DFP" vendor="Microchip" version="1.5.130"/>
+        <pack name="PIC32MK-GP_DFP" vendor="Microchip" version="1.6.144"/>
       </packs>
       <ScriptingSettings>
       </ScriptingSettings>
@@ -167,7 +171,7 @@
         <property key="enable-unroll-loops" value="false"/>
         <property key="exclude-floating-point" value="false"/>
         <property key="extra-include-directories"
-                  value="../src;../src/config/pic32mk_gp_db;../src/packs/PIC32MK1024GPE100_DFP"/>
+                  value="../src;../src/config/pic32mk_gp_db"/>
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="true"/>
@@ -265,7 +269,7 @@
         <property key="exceptions" value="true"/>
         <property key="exclude-floating-point" value="false"/>
         <property key="extra-include-directories"
-                  value="../src;../src/config/pic32mk_gp_db;../src/packs/PIC32MK1024GPE100_DFP"/>
+                  value="../src;../src/config/pic32mk_gp_db"/>
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="true"/>
@@ -363,6 +367,9 @@
         <property key="ToolFirmwareFilePath"
                   value="Press to browse for a specific firmware version"/>
         <property key="ToolFirmwareOption.UseLatestFirmware" value="true"/>
+        <property key="debugoptions.debug-startup" value="Use system settings"/>
+        <property key="debugoptions.reset-behaviour" value="Use system settings"/>
+        <property key="lastid" value=""/>
         <property key="memories.configurationmemory" value="true"/>
         <property key="memories.dataflash" value="true"/>
         <property key="memories.eeprom" value="true"/>
@@ -388,6 +395,9 @@
         <property key="ToolFirmwareFilePath"
                   value="Press to browse for a specific firmware version"/>
         <property key="ToolFirmwareOption.UseLatestFirmware" value="true"/>
+        <property key="debugoptions.debug-startup" value="Use system settings"/>
+        <property key="debugoptions.reset-behaviour" value="Use system settings"/>
+        <property key="lastid" value=""/>
         <property key="memories.configurationmemory" value="true"/>
         <property key="memories.dataflash" value="true"/>
         <property key="memories.eeprom" value="true"/>
