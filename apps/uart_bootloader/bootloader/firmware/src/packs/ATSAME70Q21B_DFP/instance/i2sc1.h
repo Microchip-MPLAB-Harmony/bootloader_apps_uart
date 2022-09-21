@@ -1,7 +1,7 @@
-/**
- * \brief Instance header file for ATSAME70Q21B
+/*
+ * Instance header file for ATSAME70Q21B
  *
- * Copyright (c) 2021 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2022 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,17 +20,17 @@
  *
  */
 
-/* file generated from device description version 2020-11-26T11:12:57Z */
+/* file generated from device description version 2022-04-21T07:53:48Z */
 #ifndef _SAME70_I2SC1_INSTANCE_
 #define _SAME70_I2SC1_INSTANCE_
 
 
 /* ========== Instance Parameter definitions for I2SC1 peripheral ========== */
-#define I2SC1_INSTANCE_ID                        _UL_(70)   
-#define I2SC1_CLOCK_ID                           _UL_(70)   
-#define I2SC1_DMAC_ID_TX_LEFT                    _UL_(46)   
-#define I2SC1_DMAC_ID_RX_LEFT                    _UL_(47)   
-#define I2SC1_DMAC_ID_TX_RIGHT                   _UL_(50)   
-#define I2SC1_DMAC_ID_RX_RIGHT                   _UL_(51)   
+#define I2SC1_INSTANCE_ID                        (70)       
+#define I2SC1_CLOCK_ID                           (70)       
+#define I2SC1_DMAC_ID_TX_LEFT                    (46)       
+#define I2SC1_DMAC_ID_RX_LEFT                    (47)       
+#define I2SC1_DMAC_ID_TX_RIGHT                   (50)       
+#define I2SC1_DMAC_ID_RX_RIGHT                   (51)       
 
 #endif /* _SAME70_I2SC1_INSTANCE_ */

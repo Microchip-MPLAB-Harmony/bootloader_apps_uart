@@ -48,7 +48,7 @@
 #include <stdint.h>
 #include <stddef.h>
 #include <stdbool.h>
-#include "bootloader/bootloader.h"
+#include "bootloader/bootloader_uart.h"
 #include "peripheral/clk/plib_clk.h"
 #include "peripheral/pio/plib_pio.h"
 #include "peripheral/nvic/plib_nvic.h"

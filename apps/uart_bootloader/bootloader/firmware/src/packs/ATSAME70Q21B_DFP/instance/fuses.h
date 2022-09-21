@@ -21,21 +21,7 @@
  */
 
 /* file generated from device description version 2022-04-21T07:53:48Z */
-#ifndef _SAME70_PWM1_INSTANCE_
-#define _SAME70_PWM1_INSTANCE_
+#ifndef _SAME70_FUSES_INSTANCE_
+#define _SAME70_FUSES_INSTANCE_
 
-
-/* ========== Instance Parameter definitions for PWM1 peripheral ========== */
-#define PWM1_DMAC_ID_TX                          (39)       
-#define PWM1_INSTANCE_ID                         (60)       
-#define PWM1_CLOCK_ID                            (60)       
-#define PWM1_FAULT_PWM_ID0                       (0x0)      /* Fault 0 - PWM0_PWMFI0 Input pin */
-#define PWM1_FAULT_PWM_ID1                       (0x1)      /* Fault 1 - PWM0_PWMFI1 Input pin */
-#define PWM1_FAULT_PWM_ID2                       (0x2)      /* Fault 2 - PWM0_PWMFI2 Input pin */
-#define PWM1_FAULT_PWM_ID3                       (0x3)      /* Fault 3 - MAIN_OSC_PMC */
-#define PWM1_FAULT_PWM_ID4                       (0x4)      /* Fault 4 - AFEC0 */
-#define PWM1_FAULT_PWM_ID5                       (0x5)      /* Fault 5 - AFEC1 */
-#define PWM1_FAULT_PWM_ID6                       (0x6)      /* Fault 6 - ACC */
-#define PWM1_FAULT_PWM_ID7                       (0x7)      /* Fault 7 - TC1 */
-
-#endif /* _SAME70_PWM1_INSTANCE_ */
+#endif /* _SAME70_FUSES_INSTANCE_ */
