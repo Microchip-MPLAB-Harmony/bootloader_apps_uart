@@ -21,11 +21,7 @@
  */
 
 /* file generated from device description version 2019-11-25T07:00:47Z */
-#ifndef _SAMD11_MTB_INSTANCE_
-#define _SAMD11_MTB_INSTANCE_
+#ifndef _SAMD11_FUSES_INSTANCE_
+#define _SAMD11_FUSES_INSTANCE_
 
-
-/* ========== Instance Parameter definitions for MTB peripheral ========== */
-#define MTB_INSTANCE_ID                          (38)       
-
-#endif /* _SAMD11_MTB_INSTANCE_ */
+#endif /* _SAMD11_FUSES_INSTANCE_ */

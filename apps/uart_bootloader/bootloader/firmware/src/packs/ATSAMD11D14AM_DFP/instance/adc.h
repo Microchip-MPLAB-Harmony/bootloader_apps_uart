@@ -1,7 +1,7 @@
-/**
- * \brief Instance header file for ATSAMD11D14AU
+/*
+ * Instance header file for ATSAMD11D14AU
  *
- * Copyright (c) 2021 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2022 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -26,11 +26,11 @@
 
 
 /* ========== Instance Parameter definitions for ADC peripheral ========== */
-#define ADC_DMAC_ID_RESRDY                       _UL_(18)   /* Index of DMA RESRDY trigger */
-#define ADC_EXTCHANNEL_MSB                       _UL_(9)    /* Number of external channels */
-#define ADC_GCLK_ID                              _UL_(19)   /* Index of Generic Clock */
-#define ADC_RESULT_BITS                          _UL_(16)   /* Size of RESULT.RESULT bitfield */
-#define ADC_RESULT_MSB                           _UL_(15)   /* Size of Result */
-#define ADC_INSTANCE_ID                          _UL_(72)   
+#define ADC_DMAC_ID_RESRDY                       (18)       /* Index of DMA RESRDY trigger */
+#define ADC_EXTCHANNEL_MSB                       (9)        /* Number of external channels */
+#define ADC_GCLK_ID                              (19)       /* Index of Generic Clock */
+#define ADC_RESULT_BITS                          (16)       /* Size of RESULT.RESULT bitfield */
+#define ADC_RESULT_MSB                           (15)       /* Size of Result */
+#define ADC_INSTANCE_ID                          (72)       
 
 #endif /* _SAMD11_ADC_INSTANCE_ */

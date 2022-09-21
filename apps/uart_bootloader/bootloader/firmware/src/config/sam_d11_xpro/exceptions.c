@@ -1,20 +1,20 @@
 /*******************************************************************************
-  Interface definition of EVSYS PLIB.
-
-  Company:
-    Microchip Technology Inc.
+  System Exceptions File
 
   File Name:
-    plib_evsys.h
+    exceptions.c
 
   Summary:
-    Interface definition of the Event System Plib (EVSYS).
+    This file contains a function which overrides the default _weak_ exception
+    handlers provided by the interrupt.c file.
 
   Description:
-    This file defines the interface for the EVSYS Plib.
-    It allows user to setup event generators and users.
-*******************************************************************************/
+    This file redefines the default _weak_  exception handler with a more debug
+    friendly one. If an unexpected exception occurs the code will stop in a
+    while(1) loop.
+ *******************************************************************************/
 
+// DOM-IGNORE-BEGIN
 /*******************************************************************************
 * Copyright (C) 2018 Microchip Technology Inc. and its subsidiaries.
 *
@@ -37,32 +37,43 @@
 * ANY WAY RELATED TO THIS SOFTWARE WILL NOT EXCEED THE AMOUNT OF FEES, IF ANY,
 * THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
 *******************************************************************************/
+// DOM-IGNORE-END
 
-#ifndef EVSYS_H    // Guards against multiple inclusion
-#define EVSYS_H
+// *****************************************************************************
+// *****************************************************************************
+// Section: Included Files
+// *****************************************************************************
+// *****************************************************************************
+#include "definitions.h"
 
-#include "device.h"
-#include <stdint.h>
-#include <stddef.h>
+// *****************************************************************************
+// *****************************************************************************
+// Section: Exception Handling Routine
+// *****************************************************************************
+// *****************************************************************************
 
-#ifdef __cplusplus // Provide C++ Compatibility
- extern "C" {
+/* Brief default interrupt handlers for core IRQs.*/
+
+void __attribute__((noreturn)) NonMaskableInt_Handler(void)
+{
+#if defined(__DEBUG) || defined(__DEBUG_D) && defined(__XC32)
+    __builtin_software_breakpoint();
 #endif
+    while (true)
+    {
+    }
+}
 
-
-// *****************************************************************************
-// *****************************************************************************
-// Section: Interface
-// *****************************************************************************
-// *****************************************************************************
-
-
-
-/***************************** EVSYS API *******************************/
-void EVSYS_Initialize( void );
-
-#ifdef __cplusplus // Provide C++ Compatibility
- }
+void __attribute__((noreturn)) HardFault_Handler(void)
+{
+#if defined(__DEBUG) || defined(__DEBUG_D) && defined(__XC32)
+   __builtin_software_breakpoint();
 #endif
+   while (true)
+   {
+   }
+}
 
-#endif
+/*******************************************************************************
+ End of File
+ */
