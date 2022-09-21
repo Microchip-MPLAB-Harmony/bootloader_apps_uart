@@ -1,7 +1,7 @@
-/**
- * \brief Instance header file for PIC32CM1216MC00048
+/*
+ * Instance header file for PIC32CM1216MC00048
  *
- * Copyright (c) 2021 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2022 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,16 +20,16 @@
  *
  */
 
-/* file generated from device description version 2020-08-13T21:04:01Z */
+/* file generated from device description version 2021-03-23T20:32:05Z */
 #ifndef _PIC32CMMC00_CCL_INSTANCE_
 #define _PIC32CMMC00_CCL_INSTANCE_
 
 
 /* ========== Instance Parameter definitions for CCL peripheral ========== */
-#define CCL_GCLK_ID                              _UL_(32)   /* GCLK index for CCL */
-#define CCL_IO_NUM                               _UL_(12)   /* Numer of input pins */
-#define CCL_LUT_NUM                              _UL_(4)    /* Number of LUT in a CCL */
-#define CCL_SEQ_NUM                              _UL_(2)    /* Number of SEQ in a CCL */
-#define CCL_INSTANCE_ID                          _UL_(87)   /* Instance index for CCL */
+#define CCL_GCLK_ID                              (32)       /* GCLK index for CCL */
+#define CCL_IO_NUM                               (12)       /* Numer of input pins */
+#define CCL_LUT_NUM                              (4)        /* Number of LUT in a CCL */
+#define CCL_SEQ_NUM                              (2)        /* Number of SEQ in a CCL */
+#define CCL_INSTANCE_ID                          (87)       /* Instance index for CCL */
 
 #endif /* _PIC32CMMC00_CCL_INSTANCE_ */

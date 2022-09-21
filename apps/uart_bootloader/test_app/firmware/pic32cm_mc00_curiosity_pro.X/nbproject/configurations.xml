@@ -100,6 +100,7 @@
             <itemPath>../src/packs/PIC32CM1216MC00048_DFP/component/tcc.h</itemPath>
             <itemPath>../src/packs/PIC32CM1216MC00048_DFP/component/tsens.h</itemPath>
             <itemPath>../src/packs/PIC32CM1216MC00048_DFP/component/wdt.h</itemPath>
+            <itemPath>../src/packs/PIC32CM1216MC00048_DFP/component/fuses.h</itemPath>
           </logicalFolder>
           <logicalFolder name="f2" displayName="instance" projectFiles="true">
             <itemPath>../src/packs/PIC32CM1216MC00048_DFP/instance/ac.h</itemPath>
@@ -142,6 +143,7 @@
             <itemPath>../src/packs/PIC32CM1216MC00048_DFP/instance/tcc2.h</itemPath>
             <itemPath>../src/packs/PIC32CM1216MC00048_DFP/instance/tsens.h</itemPath>
             <itemPath>../src/packs/PIC32CM1216MC00048_DFP/instance/wdt.h</itemPath>
+            <itemPath>../src/packs/PIC32CM1216MC00048_DFP/instance/fuses.h</itemPath>
           </logicalFolder>
           <logicalFolder name="f3" displayName="pio" projectFiles="true">
             <itemPath>../src/packs/PIC32CM1216MC00048_DFP/pio/pic32cm1216mc00048.h</itemPath>
@@ -172,6 +174,8 @@
       </logicalFolder>
       <itemPath>Makefile</itemPath>
       <itemPath>../src/config/pic32cm_mc00_curiosity_pro/harmony-manifest-success.yml</itemPath>
+      <itemPath>../src/config/pic32cm_mc00_curiosity_pro/pin_configurations.csv</itemPath>
+      <itemPath>uart_bootloader_test_app_pic32cm_mc00_curiosity_pro.mc3</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -308,6 +312,7 @@
       <C32>
         <property key="additional-warnings" value="true"/>
         <property key="addresss-attribute-use" value="false"/>
+        <property key="appendMe" value=""/>
         <property key="enable-app-io" value="false"/>
         <property key="enable-omit-frame-pointer" value="false"/>
         <property key="enable-symbols" value="true"/>
@@ -364,6 +369,7 @@
         <property key="additional-options-use-response-files" value="false"/>
         <property key="additional-options-write-sla" value="false"/>
         <property key="allocate-dinit" value="false"/>
+        <property key="appendMe" value="-DRAM_ORIGIN=0x20000010, -DRAM_LENGTH=0x3ff0"/>
         <property key="code-dinit" value="false"/>
         <property key="ebase-addr" value=""/>
         <property key="enable-check-sections" value="false"/>
@@ -404,6 +410,7 @@
       <C32CPP>
         <property key="additional-warnings" value="false"/>
         <property key="addresss-attribute-use" value="false"/>
+        <property key="appendMe" value=""/>
         <property key="check-new" value="false"/>
         <property key="eh-specs" value="true"/>
         <property key="enable-app-io" value="false"/>

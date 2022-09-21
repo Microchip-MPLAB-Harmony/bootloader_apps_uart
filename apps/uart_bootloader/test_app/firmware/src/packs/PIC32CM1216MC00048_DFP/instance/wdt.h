@@ -1,7 +1,7 @@
-/**
- * \brief Instance header file for PIC32CM1216MC00048
+/*
+ * Instance header file for PIC32CM1216MC00048
  *
- * Copyright (c) 2021 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2022 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,12 +20,12 @@
  *
  */
 
-/* file generated from device description version 2020-08-13T21:04:01Z */
+/* file generated from device description version 2021-03-23T20:32:05Z */
 #ifndef _PIC32CMMC00_WDT_INSTANCE_
 #define _PIC32CMMC00_WDT_INSTANCE_
 
 
 /* ========== Instance Parameter definitions for WDT peripheral ========== */
-#define WDT_INSTANCE_ID                          _UL_(8)    /* Instance index for WDT */
+#define WDT_INSTANCE_ID                          (8)        /* Instance index for WDT */
 
 #endif /* _PIC32CMMC00_WDT_INSTANCE_ */

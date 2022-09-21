@@ -21,13 +21,7 @@
  */
 
 /* file generated from device description version 2021-03-23T20:32:05Z */
-#ifndef _PIC32CMMC00_DAC_INSTANCE_
-#define _PIC32CMMC00_DAC_INSTANCE_
+#ifndef _PIC32CMMC00_FUSES_INSTANCE_
+#define _PIC32CMMC00_FUSES_INSTANCE_
 
-
-/* ========== Instance Parameter definitions for DAC peripheral ========== */
-#define DAC_DMAC_ID_EMPTY                        (39)       /* Index of DMA EMPTY trigger */
-#define DAC_GCLK_ID                              (31)       
-#define DAC_INSTANCE_ID                          (85)       /* Instance index for DAC */
-
-#endif /* _PIC32CMMC00_DAC_INSTANCE_ */
+#endif /* _PIC32CMMC00_FUSES_INSTANCE_ */
