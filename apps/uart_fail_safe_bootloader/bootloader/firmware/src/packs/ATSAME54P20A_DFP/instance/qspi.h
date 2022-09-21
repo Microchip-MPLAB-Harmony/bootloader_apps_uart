@@ -1,7 +1,7 @@
-/**
- * \brief Instance header file for ATSAME54P20A
+/*
+ * Instance header file for ATSAME54P20A
  *
- * Copyright (c) 2021 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2022 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,16 +20,16 @@
  *
  */
 
-/* file generated from device description version 2020-11-23T12:28:26Z */
+/* file generated from device description version 2022-02-14T14:27:35Z */
 #ifndef _SAME54_QSPI_INSTANCE_
 #define _SAME54_QSPI_INSTANCE_
 
 
 /* ========== Instance Parameter definitions for QSPI peripheral ========== */
-#define QSPI_DMAC_ID_RX                          _UL_(83)   
-#define QSPI_DMAC_ID_TX                          _UL_(84)   
-#define QSPI_HADDR_MSB                           _UL_(23)   
-#define QSPI_OCMS                                _UL_(1)    
-#define QSPI_INSTANCE_ID                         _UL_(77)   
+#define QSPI_DMAC_ID_RX                          (83)       
+#define QSPI_DMAC_ID_TX                          (84)       
+#define QSPI_HADDR_MSB                           (23)       
+#define QSPI_OCMS                                (1)        
+#define QSPI_INSTANCE_ID                         (77)       /* Instance index for QSPI */
 
 #endif /* _SAME54_QSPI_INSTANCE_ */

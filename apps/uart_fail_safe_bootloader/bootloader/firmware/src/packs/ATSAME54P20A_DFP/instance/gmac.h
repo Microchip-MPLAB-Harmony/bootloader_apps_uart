@@ -1,7 +1,7 @@
-/**
- * \brief Instance header file for ATSAME54P20A
+/*
+ * Instance header file for ATSAME54P20A
  *
- * Copyright (c) 2021 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2022 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,12 +20,12 @@
  *
  */
 
-/* file generated from device description version 2020-11-23T12:28:26Z */
+/* file generated from device description version 2022-02-14T14:27:35Z */
 #ifndef _SAME54_GMAC_INSTANCE_
 #define _SAME54_GMAC_INSTANCE_
 
 
 /* ========== Instance Parameter definitions for GMAC peripheral ========== */
-#define GMAC_INSTANCE_ID                         _UL_(66)   
+#define GMAC_INSTANCE_ID                         (66)       /* Instance index for GMAC */
 
 #endif /* _SAME54_GMAC_INSTANCE_ */

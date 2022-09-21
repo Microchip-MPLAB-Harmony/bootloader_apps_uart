@@ -4,18 +4,18 @@
 	"content": {
 		"metaDataVersion": "1.1.0",
 		"name": "com.microchip.mcu32.mplabx.project.bootloader_apps_uart_uart_fail_safe_bootloader_sam_e54_xpro",
-		"version": "3.1.0",
+		"version": "3.2.0",
 		"displayName": "UART Fail Safe Bootloader Example for SAM D5x/E5x Family",
 		"projectName": "uart_fail_safe_bootloader_sam_e54_xpro",
 		"shortDescription": "This example application shows how to use the Bootloader Library to bootload an application on device having dual flash bank feature using UART protocol.",
 		"ide": {
 			"name": "MPLABX",
-			"semverRange": ">=5.50.0"
+			"semverRange": ">=6.00.0"
 		},
 		"compiler": [
 			{
 				"name": "XC32",
-				"semverRange": ">=3.00.0"
+				"semverRange": ">=4.10.0"
 			}
 		],
 		"dfp": {
@@ -24,7 +24,7 @@
 		},
 		"configurator": {
 			"name": "MHC",
-			"semverRange": ">=3.7.2"
+			"semverRange": ">=3.8.5"
 		},
 		"device": {
 			"metaDataVersion": "1.0.0",
