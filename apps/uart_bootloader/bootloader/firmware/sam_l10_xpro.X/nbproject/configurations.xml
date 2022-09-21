@@ -7,7 +7,28 @@
       <logicalFolder name="f1" displayName="config" projectFiles="true">
         <logicalFolder name="f1" displayName="sam_l10_xpro" projectFiles="true">
           <logicalFolder name="f1" displayName="bootloader" projectFiles="true">
-            <itemPath>../src/config/sam_l10_xpro/bootloader/bootloader.h</itemPath>
+            <logicalFolder name="f1" displayName="clock" projectFiles="true">
+            </logicalFolder>
+            <logicalFolder name="f2" displayName="dsu" projectFiles="true">
+            </logicalFolder>
+            <logicalFolder name="f3" displayName="evsys" projectFiles="true">
+            </logicalFolder>
+            <logicalFolder name="f4" displayName="nvic" projectFiles="true">
+            </logicalFolder>
+            <logicalFolder name="f5" displayName="nvmctrl" projectFiles="true">
+            </logicalFolder>
+            <logicalFolder name="f6" displayName="pac" projectFiles="true">
+            </logicalFolder>
+            <logicalFolder name="f7" displayName="pm" projectFiles="true">
+            </logicalFolder>
+            <logicalFolder name="f8" displayName="port" projectFiles="true">
+            </logicalFolder>
+            <logicalFolder name="f9" displayName="sercom" projectFiles="true">
+              <logicalFolder name="f1" displayName="usart" projectFiles="true">
+              </logicalFolder>
+            </logicalFolder>
+            <logicalFolder name="f10" displayName="systick" projectFiles="true">
+            </logicalFolder>
           </logicalFolder>
           <logicalFolder name="f2" displayName="peripheral" projectFiles="true">
             <logicalFolder name="f1" displayName="clock" projectFiles="true">
@@ -43,6 +64,8 @@
             <logicalFolder name="f10" displayName="systick" projectFiles="true">
               <itemPath>../src/config/sam_l10_xpro/peripheral/systick/plib_systick.h</itemPath>
             </logicalFolder>
+            <itemPath>../src/config/sam_l10_xpro/bootloader/bootloader_uart.h</itemPath>
+            <itemPath>../src/config/sam_l10_xpro/bootloader/bootloader_common.h</itemPath>
           </logicalFolder>
           <itemPath>../src/config/sam_l10_xpro/device_cache.h</itemPath>
           <itemPath>../src/config/sam_l10_xpro/toolchain_specifics.h</itemPath>
@@ -82,6 +105,7 @@
             <itemPath>../src/packs/ATSAML10E16A_DFP/component/tram.h</itemPath>
             <itemPath>../src/packs/ATSAML10E16A_DFP/component/trng.h</itemPath>
             <itemPath>../src/packs/ATSAML10E16A_DFP/component/wdt.h</itemPath>
+            <itemPath>../src/packs/ATSAML10E16A_DFP/component/fuses.h</itemPath>
           </logicalFolder>
           <logicalFolder name="f3" displayName="instance" projectFiles="true">
             <itemPath>../src/packs/ATSAML10E16A_DFP/instance/ac.h</itemPath>
@@ -119,6 +143,7 @@
           </logicalFolder>
           <logicalFolder name="f2" displayName="pio" projectFiles="true">
             <itemPath>../src/packs/ATSAML10E16A_DFP/pio/saml10e16a.h</itemPath>
+            <itemPath>../src/packs/ATSAML10E16A_DFP/instance/fuses.h</itemPath>
           </logicalFolder>
           <itemPath>../src/packs/ATSAML10E16A_DFP/saml10e16a.h</itemPath>
         </logicalFolder>
@@ -148,6 +173,8 @@
                    projectFiles="true">
       <itemPath>Makefile</itemPath>
       <itemPath>../src/config/sam_l10_xpro/harmony-manifest-success.yml</itemPath>
+      <itemPath>../src/config/sam_l10_xpro/pin_configurations.csv</itemPath>
+      <itemPath>uart_bootloader_sam_l10_xpro.mc3</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -160,7 +187,28 @@
       <logicalFolder name="f1" displayName="config" projectFiles="true">
         <logicalFolder name="f1" displayName="sam_l10_xpro" projectFiles="true">
           <logicalFolder name="f1" displayName="bootloader" projectFiles="true">
-            <itemPath>../src/config/sam_l10_xpro/bootloader/bootloader.c</itemPath>
+            <logicalFolder name="f1" displayName="clock" projectFiles="true">
+            </logicalFolder>
+            <logicalFolder name="f2" displayName="dsu" projectFiles="true">
+            </logicalFolder>
+            <logicalFolder name="f3" displayName="evsys" projectFiles="true">
+            </logicalFolder>
+            <logicalFolder name="f4" displayName="nvic" projectFiles="true">
+            </logicalFolder>
+            <logicalFolder name="f5" displayName="nvmctrl" projectFiles="true">
+            </logicalFolder>
+            <logicalFolder name="f6" displayName="pac" projectFiles="true">
+            </logicalFolder>
+            <logicalFolder name="f7" displayName="pm" projectFiles="true">
+            </logicalFolder>
+            <logicalFolder name="f8" displayName="port" projectFiles="true">
+            </logicalFolder>
+            <logicalFolder name="f9" displayName="sercom" projectFiles="true">
+              <logicalFolder name="f1" displayName="usart" projectFiles="true">
+              </logicalFolder>
+            </logicalFolder>
+            <logicalFolder name="f10" displayName="systick" projectFiles="true">
+            </logicalFolder>
           </logicalFolder>
           <logicalFolder name="f2" displayName="peripheral" projectFiles="true">
             <logicalFolder name="f1" displayName="clock" projectFiles="true">
@@ -195,6 +243,8 @@
             <logicalFolder name="f10" displayName="systick" projectFiles="true">
               <itemPath>../src/config/sam_l10_xpro/peripheral/systick/plib_systick.c</itemPath>
             </logicalFolder>
+            <itemPath>../src/config/sam_l10_xpro/bootloader/bootloader_uart.c</itemPath>
+            <itemPath>../src/config/sam_l10_xpro/bootloader/bootloader_common.c</itemPath>
           </logicalFolder>
           <itemPath>../src/config/sam_l10_xpro/initialization.c</itemPath>
           <itemPath>../src/config/sam_l10_xpro/startup_xc32.c</itemPath>
@@ -277,6 +327,7 @@
       <C32>
         <property key="additional-warnings" value="true"/>
         <property key="addresss-attribute-use" value="false"/>
+        <property key="appendMe" value=""/>
         <property key="enable-app-io" value="false"/>
         <property key="enable-omit-frame-pointer" value="false"/>
         <property key="enable-symbols" value="true"/>
@@ -333,6 +384,7 @@
         <property key="additional-options-use-response-files" value="false"/>
         <property key="additional-options-write-sla" value="false"/>
         <property key="allocate-dinit" value="false"/>
+        <property key="appendMe" value=""/>
         <property key="code-dinit" value="false"/>
         <property key="ebase-addr" value=""/>
         <property key="enable-check-sections" value="false"/>
@@ -372,6 +424,7 @@
       <C32CPP>
         <property key="additional-warnings" value="false"/>
         <property key="addresss-attribute-use" value="false"/>
+        <property key="appendMe" value=""/>
         <property key="check-new" value="false"/>
         <property key="eh-specs" value="true"/>
         <property key="enable-app-io" value="false"/>

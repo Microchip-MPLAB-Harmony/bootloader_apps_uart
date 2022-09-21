@@ -1,7 +1,7 @@
-/**
- * \brief Instance header file for ATSAML10E16A
+/*
+ * Instance header file for ATSAML10E16A
  *
- * Copyright (c) 2021 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2022 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,12 +20,12 @@
  *
  */
 
-/* file generated from device description version 2020-11-19T07:18:13Z */
+/* file generated from device description version 2021-06-28T12:20:34Z */
 #ifndef _SAML10_TRNG_INSTANCE_
 #define _SAML10_TRNG_INSTANCE_
 
 
 /* ========== Instance Parameter definitions for TRNG peripheral ========== */
-#define TRNG_INSTANCE_ID                         _UL_(74)   
+#define TRNG_INSTANCE_ID                         (74)       
 
 #endif /* _SAML10_TRNG_INSTANCE_ */

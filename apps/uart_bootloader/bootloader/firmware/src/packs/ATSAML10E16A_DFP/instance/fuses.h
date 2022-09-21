@@ -21,17 +21,7 @@
  */
 
 /* file generated from device description version 2021-06-28T12:20:34Z */
-#ifndef _SAML10_ADC_INSTANCE_
-#define _SAML10_ADC_INSTANCE_
+#ifndef _SAML10_FUSES_INSTANCE_
+#define _SAML10_FUSES_INSTANCE_
 
-
-/* ========== Instance Parameter definitions for ADC peripheral ========== */
-#define ADC_DMAC_ID_RESRDY                       (19)       /* index of DMA RESRDY trigger */
-#define ADC_EXTCHANNEL_MSB                       (9)        /* Number of external channels */
-#define ADC_GCLK_ID                              (16)       /* index of Generic Clock */
-#define ADC_INT_CH30                             (1)        /* Select OPAMP or CTAT on Channel 30 */
-#define ADC_MASTER_SLAVE_MODE                    (0)        /* ADC Master/Slave Mode */
-#define ADC_INSTANCE_ID                          (71)       
-#define ADC_LOAD_CALIB                           (1)        /* CALIB register to be loaded from NVM */
-
-#endif /* _SAML10_ADC_INSTANCE_ */
+#endif /* _SAML10_FUSES_INSTANCE_ */
