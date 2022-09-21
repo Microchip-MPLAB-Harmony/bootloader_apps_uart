@@ -1,7 +1,7 @@
-/**
- * \brief Instance header file for ATSAME54P20A
+/*
+ * Instance header file for ATSAME54P20A
  *
- * Copyright (c) 2021 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2022 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,17 +20,17 @@
  *
  */
 
-/* file generated from device description version 2020-11-23T12:28:26Z */
+/* file generated from device description version 2022-02-14T14:27:35Z */
 #ifndef _SAME54_EIC_INSTANCE_
 #define _SAME54_EIC_INSTANCE_
 
 
 /* ========== Instance Parameter definitions for EIC peripheral ========== */
-#define EIC_EXTINT_NUM                           _UL_(16)   /* Number of external interrupts */
-#define EIC_GCLK_ID                              _UL_(4)    /* Generic Clock index */
-#define EIC_NUMBER_OF_CONFIG_REGS                _UL_(2)    /* Number of CONFIG registers */
-#define EIC_NUMBER_OF_DPRESCALER_REGS            _UL_(2)    /* Number of DPRESCALER pin groups */
-#define EIC_NUMBER_OF_INTERRUPTS                 _UL_(16)   /* Number of external interrupts (obsolete) */
-#define EIC_INSTANCE_ID                          _UL_(10)   
+#define EIC_EXTINT_NUM                           (16)       /* Number of external interrupts */
+#define EIC_GCLK_ID                              (4)        /* Generic Clock index */
+#define EIC_NUMBER_OF_CONFIG_REGS                (2)        /* Number of CONFIG registers */
+#define EIC_NUMBER_OF_DPRESCALER_REGS            (2)        /* Number of DPRESCALER pin groups */
+#define EIC_NUMBER_OF_INTERRUPTS                 (16)       /* Number of external interrupts (obsolete) */
+#define EIC_INSTANCE_ID                          (10)       /* Instance index for EIC */
 
 #endif /* _SAME54_EIC_INSTANCE_ */
