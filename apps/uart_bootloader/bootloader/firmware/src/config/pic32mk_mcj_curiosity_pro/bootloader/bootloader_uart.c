@@ -2,7 +2,7 @@
   UART Bootloader Source File
 
   File Name:
-    bootloader.c
+    bootloader_uart.c
 
   Summary:
     This file contains source code necessary to execute UART bootloader.
@@ -38,18 +38,21 @@
  *******************************************************************************/
 // DOM-IGNORE-END
 
+// *****************************************************************************
+// *****************************************************************************
+// Section: Include Files
+// *****************************************************************************
+// *****************************************************************************
+
 #include "definitions.h"
+#include "bootloader_common.h"
 #include <device.h>
 
-#define FLASH_START             (0x9d000000UL)
-#define FLASH_LENGTH            (0x80000UL)
-#define PAGE_SIZE               (512UL)
-#define ERASE_BLOCK_SIZE        (4096UL)
-#define PAGES_IN_ERASE_BLOCK    (ERASE_BLOCK_SIZE / PAGE_SIZE)
-
-#define BOOTLOADER_SIZE         8192
-
-#define APP_START_ADDRESS       (PA_TO_KVA0(0x1d000000UL))
+// *****************************************************************************
+// *****************************************************************************
+// Section: Type Definitions
+// *****************************************************************************
+// *****************************************************************************
 
 #define GUARD_OFFSET            0
 #define CMD_OFFSET              2
@@ -76,12 +79,14 @@
 /* Compare Value to achieve a 100Ms Delay */
 #define TIMER_COMPARE_VALUE     (CORE_TIMER_FREQUENCY / 10)
 
+
 enum
 {
     BL_CMD_UNLOCK       = 0xa0,
     BL_CMD_DATA         = 0xa1,
     BL_CMD_VERIFY       = 0xa2,
     BL_CMD_RESET        = 0xa3,
+    BL_CMD_READ_VERSION = 0xa6,
 };
 
 enum
@@ -93,6 +98,14 @@ enum
     BL_RESP_CRC_FAIL    = 0x54,
 };
 
+// *****************************************************************************
+// *****************************************************************************
+// Section: Global objects
+// *****************************************************************************
+// *****************************************************************************
+
+static uint8_t btl_guard[4] = {0x4D, 0x43, 0x48, 0x50};
+
 static uint32_t CACHE_ALIGN input_buffer[WORDS(OFFSET_SIZE + DATA_SIZE)];
 
 static uint32_t CACHE_ALIGN flash_data[WORDS(DATA_SIZE)];
@@ -101,64 +114,16 @@ static uint32_t flash_addr          = 0;
 
 static uint32_t unlock_begin        = 0;
 static uint32_t unlock_end          = 0;
+static uint32_t data_size           = 0;
 
 static uint8_t  input_command       = 0;
 
 static bool     packet_received     = false;
 static bool     flash_data_ready    = false;
 
+static bool     uartBLInitDone      = false;
 
-/* Function to Send the final response for reset command and trigger a reset */
-static void trigger_Reset(void)
-{
-    UART2_WriteByte(BL_RESP_OK);
-
-    while(UART2_TransmitComplete() == false);
-
-    /* Perform system unlock sequence */ 
-    SYSKEY = 0x00000000;
-    SYSKEY = 0xAA996655;
-    SYSKEY = 0x556699AA;
-
-    RSWRSTSET = _RSWRST_SWRST_MASK;
-    (void)RSWRST;
-}
-
-/* Function to Generate CRC by reading the firmware programmed into internal flash */
-static uint32_t crc_generate(void)
-{
-    uint32_t   i, j, value;
-    uint32_t   crc_tab[256];
-    uint32_t   size    = unlock_end - unlock_begin;
-    uint32_t   crc     = 0xffffffff;
-    uint8_t    data;
-
-    for (i = 0; i < 256; i++)
-    {
-        value = i;
-
-        for (j = 0; j < 8; j++)
-        {
-            if (value & 1)
-            {
-                value = (value >> 1) ^ 0xEDB88320;
-            }
-            else
-            {
-                value >>= 1;
-            }
-        }
-        crc_tab[i] = value;
-    }
-
-    for (i = 0; i < size; i++)
-    {
-        data = *(uint8_t *)KVA0_TO_KVA1((unlock_begin + i));
-
-        crc = crc_tab[(crc ^ data) & 0xff] ^ (crc >> 8);
-    }
-    return crc;
-}
+static bool     uartBLActive        = false;
 
 /* Function to receive application firmware via UART/USART */
 static void input_task(void)
@@ -185,13 +150,22 @@ static void input_task(void)
     if (CORETIMER_CompareHasExpired())
     {
         header_received = false;
+        ptr = 0;
     }
 
     if (header_received == false)
     {
         byte_buf[ptr++] = input_data;
 
-        if (ptr == HEADER_SIZE)
+        // Check for each guard byte and discard if mismatch
+        if (ptr <= GUARD_SIZE)
+        {
+            if (input_data != btl_guard[ptr-1])
+            {
+                ptr = 0;
+            }
+        }
+        else if (ptr == HEADER_SIZE)
         {
             if (input_buffer[GUARD_OFFSET] != BTL_GUARD)
             {
@@ -202,6 +176,10 @@ static void input_task(void)
                 size            = input_buffer[SIZE_OFFSET];
                 input_command   = (uint8_t)input_buffer[CMD_OFFSET];
                 header_received = true;
+                uartBLActive    = true;
+
+                /* Disable global interrupts */
+                __builtin_disable_interrupts();
             }
 
             ptr = 0;
@@ -216,6 +194,7 @@ static void input_task(void)
 
         if (ptr == size)
         {
+            data_size = size;
             ptr = 0;
             size = 0;
             packet_received = true;
@@ -257,7 +236,9 @@ static void command_task(void)
         if (unlock_begin <= flash_addr && flash_addr < unlock_end)
         {
             for (i = 0; i < WORDS(DATA_SIZE); i++)
+            {
                 flash_data[i] = input_buffer[i + DATA_OFFSET];
+            }
 
             flash_data_ready = true;
         }
@@ -266,21 +247,38 @@ static void command_task(void)
             UART2_WriteByte(BL_RESP_ERROR);
         }
     }
+    else if (BL_CMD_READ_VERSION == input_command)
+    {
+        UART2_WriteByte(BL_RESP_OK);
+
+        uint16_t btlVersion = bootloader_GetVersion();
+
+        UART2_WriteByte(((btlVersion >> 8) & 0xFF));
+        UART2_WriteByte((btlVersion & 0xFF));
+    }
     else if (BL_CMD_VERIFY == input_command)
     {
         uint32_t crc        = input_buffer[CRC_OFFSET];
         uint32_t crc_gen    = 0;
 
-        crc_gen = crc_generate();
+        crc_gen = bootloader_CRCGenerate(unlock_begin, (unlock_end - unlock_begin));
 
         if (crc == crc_gen)
+        {
             UART2_WriteByte(BL_RESP_CRC_OK);
+        }
         else
+        {
             UART2_WriteByte(BL_RESP_CRC_FAIL);
+        }
     }
     else if (BL_CMD_RESET == input_command)
     {
-        trigger_Reset();
+        UART2_WriteByte(BL_RESP_OK);
+
+        while(UART2_TransmitComplete() == false);
+
+        bootloader_TriggerReset();
     }
     else
     {
@@ -294,8 +292,11 @@ static void command_task(void)
 static void flash_task(void)
 {
     uint32_t addr       = flash_addr;
-    uint32_t page       = 0;
+    uint32_t bytes_written   = 0;
     uint32_t write_idx  = 0;
+
+    // data_size = Actual data bytes to write + Address 4 Bytes
+    uint32_t bytes_to_write = (data_size - 4);
 
 
     /* Erase the Current sector */
@@ -304,7 +305,7 @@ static void flash_task(void)
     /* Wait for erase to complete */
     while(NVM_IsBusy() == true);
 
-    for (page = 0; page < PAGES_IN_ERASE_BLOCK; page++)
+    for (bytes_written = 0; bytes_written < bytes_to_write; bytes_written += PAGE_SIZE)
     {
         NVM_RowWrite(&flash_data[write_idx], addr);
 
@@ -319,40 +320,32 @@ static void flash_task(void)
     UART2_WriteByte(BL_RESP_OK);
 }
 
-void run_Application(void)
+// *****************************************************************************
+// *****************************************************************************
+// Section: Bootloader Global Functions
+// *****************************************************************************
+// *****************************************************************************
+
+void bootloader_UART_Tasks(void)
 {
-    uint32_t msp            = *(uint32_t *)(APP_START_ADDRESS);
-
-    void (*fptr)(void);
-
-    /* Set default to APP_RESET_ADDRESS */
-    fptr = (void (*)(void))APP_START_ADDRESS;
-
-    if (msp == 0xffffffff)
+    if (uartBLInitDone == false)
     {
-        return;
+        CORETIMER_CompareSet(TIMER_COMPARE_VALUE);
+
+        uartBLInitDone = true;
     }
 
-    fptr();
-}
-
-bool __WEAK bootloader_Trigger(void)
-{
-    /* Function can be overriden with custom implementation */
-    return false;
-}
-
-void bootloader_Tasks(void)
-{
-    CORETIMER_CompareSet(TIMER_COMPARE_VALUE);
-
-    while (1)
+    do
     {
         input_task();
 
         if (flash_data_ready)
+        {
             flash_task();
+        }
         else if (packet_received)
+        {
             command_task();
-    }
+        }
+    } while (uartBLActive);
 }
