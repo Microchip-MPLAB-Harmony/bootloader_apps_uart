@@ -1,7 +1,7 @@
-/**
- * \brief Instance header file for PIC32CM1216MC00048
+/*
+ * Instance header file for PIC32CM1216MC00048
  *
- * Copyright (c) 2021 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2022 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,17 +20,17 @@
  *
  */
 
-/* file generated from device description version 2020-08-13T21:04:01Z */
+/* file generated from device description version 2021-03-23T20:32:05Z */
 #ifndef _PIC32CMMC00_OSCCTRL_INSTANCE_
 #define _PIC32CMMC00_OSCCTRL_INSTANCE_
 
 
 /* ========== Instance Parameter definitions for OSCCTRL peripheral ========== */
-#define OSCCTRL_GCLK_ID_FDPLL                    _UL_(0)    /* Index of Generic Clock for DPLL */
-#define OSCCTRL_GCLK_ID_FDPLL32K                 _UL_(1)    /* Index of Generic Clock for DPLL 32K */
-#define OSCCTRL_FDPLL_VERSION                    _UL_(0x211) 
-#define OSCCTRL_OSC48M_VERSION                   _UL_(0x101) 
-#define OSCCTRL_XOSC_VERSION                     _UL_(0x201) 
-#define OSCCTRL_INSTANCE_ID                      _UL_(4)    /* Instance index for OSCCTRL */
+#define OSCCTRL_GCLK_ID_FDPLL                    (0)        /* Index of Generic Clock for DPLL */
+#define OSCCTRL_GCLK_ID_FDPLL32K                 (1)        /* Index of Generic Clock for DPLL 32K */
+#define OSCCTRL_FDPLL_VERSION                    (0x211)    
+#define OSCCTRL_OSC48M_VERSION                   (0x101)    
+#define OSCCTRL_XOSC_VERSION                     (0x201)    
+#define OSCCTRL_INSTANCE_ID                      (4)        /* Instance index for OSCCTRL */
 
 #endif /* _PIC32CMMC00_OSCCTRL_INSTANCE_ */

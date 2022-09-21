@@ -1,7 +1,7 @@
-/**
- * \brief Instance header file for PIC32CM1216MC00048
+/*
+ * Instance header file for PIC32CM1216MC00048
  *
- * Copyright (c) 2021 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2022 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,18 +20,18 @@
  *
  */
 
-/* file generated from device description version 2020-08-13T21:04:01Z */
+/* file generated from device description version 2021-03-23T20:32:05Z */
 #ifndef _PIC32CMMC00_PORT_INSTANCE_
 #define _PIC32CMMC00_PORT_INSTANCE_
 
 
 /* ========== Instance Parameter definitions for PORT peripheral ========== */
-#define PORT_BITS                                _UL_(56)   
-#define PORT_DRVSTR                              _UL_(1)    /* DRVSTR supported */
-#define PORT_EV_NUM                              _UL_(4)    
-#define PORT_GROUPS                              _UL_(2)    
-#define PORT_ODRAIN                              _UL_(0)    /* ODRAIN supported */
-#define PORT_SLEWLIM                             _UL_(0)    /* SLEWLIM supported */
-#define PORT_INSTANCE_ID                         _UL_(32)   /* Instance index for PORT */
+#define PORT_BITS                                (56)       
+#define PORT_DRVSTR                              (1)        /* DRVSTR supported */
+#define PORT_EV_NUM                              (4)        
+#define PORT_GROUPS                              (2)        
+#define PORT_ODRAIN                              (0)        /* ODRAIN supported */
+#define PORT_SLEWLIM                             (0)        /* SLEWLIM supported */
+#define PORT_INSTANCE_ID                         (32)       /* Instance index for PORT */
 
 #endif /* _PIC32CMMC00_PORT_INSTANCE_ */

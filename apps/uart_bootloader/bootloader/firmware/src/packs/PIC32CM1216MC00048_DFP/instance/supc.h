@@ -1,7 +1,7 @@
-/**
- * \brief Instance header file for PIC32CM1216MC00048
+/*
+ * Instance header file for PIC32CM1216MC00048
  *
- * Copyright (c) 2021 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2022 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,15 +20,15 @@
  *
  */
 
-/* file generated from device description version 2020-08-13T21:04:01Z */
+/* file generated from device description version 2021-03-23T20:32:05Z */
 #ifndef _PIC32CMMC00_SUPC_INSTANCE_
 #define _PIC32CMMC00_SUPC_INSTANCE_
 
 
 /* ========== Instance Parameter definitions for SUPC peripheral ========== */
-#define SUPC_BODCORE_CALIB_MSB                   _UL_(5)    
-#define SUPC_BODVDD_CALIB_MSB                    _UL_(5)    
-#define SUPC_SUPC_OUT_NUM_MSB                    _UL_(1)    /* MSB of backup output pad Number */
-#define SUPC_INSTANCE_ID                         _UL_(6)    /* Instance index for SUPC */
+#define SUPC_BODCORE_CALIB_MSB                   (5)        
+#define SUPC_BODVDD_CALIB_MSB                    (5)        
+#define SUPC_OUT_NUM_MSB                         (1)        /* MSB of backup output pad Number */
+#define SUPC_INSTANCE_ID                         (6)        /* Instance index for SUPC */
 
 #endif /* _PIC32CMMC00_SUPC_INSTANCE_ */

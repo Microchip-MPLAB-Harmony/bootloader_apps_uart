@@ -1,7 +1,7 @@
-/**
- * \brief Instance header file for PIC32CM1216MC00048
+/*
+ * Instance header file for PIC32CM1216MC00048
  *
- * Copyright (c) 2021 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2022 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,14 +20,14 @@
  *
  */
 
-/* file generated from device description version 2020-08-13T21:04:01Z */
+/* file generated from device description version 2021-03-23T20:32:05Z */
 #ifndef _PIC32CMMC00_PDEC_INSTANCE_
 #define _PIC32CMMC00_PDEC_INSTANCE_
 
 
 /* ========== Instance Parameter definitions for PDEC peripheral ========== */
-#define PDEC_CC_NUM                              _UL_(2)    /* Number of Compare Channels units */
-#define PDEC_GCLK_ID                             _UL_(34)   /* GCLK Index */
-#define PDEC_INSTANCE_ID                         _UL_(90)   /* Instance index for PDEC */
+#define PDEC_CC_NUM                              (2)        /* Number of Compare Channels units */
+#define PDEC_GCLK_ID                             (34)       /* GCLK Index */
+#define PDEC_INSTANCE_ID                         (90)       /* Instance index for PDEC */
 
 #endif /* _PIC32CMMC00_PDEC_INSTANCE_ */
