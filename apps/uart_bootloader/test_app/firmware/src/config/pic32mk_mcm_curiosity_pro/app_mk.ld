@@ -137,13 +137,20 @@ SECTIONS
     KEEP(*(.reset.startup))
   } > kseg1_boot_mem
 
+ /* Fill 0xFF byte at start of _ebase_address */
+  .fill _ebase_address :
+  {
+    KEEP(*(.fill))
+    BYTE(0xFF)
+  } > kseg0_exception_mem
+
   .app_excpt _GEN_EXCPT_ADDR :
   {
     KEEP(*(.gen_handler))
   } > kseg0_exception_mem 
 
   /* Interrupt vector table with vector offsets */
-  .vectors _ebase_address + _ebase_vector_offsets + 0x200 :
+  .vectors _ebase_address + _ebase_vector_offsets :
   {
     /*  Symbol __vector_offset_n points to .vector_n if it exists, 
      *  otherwise points to the default handler. The

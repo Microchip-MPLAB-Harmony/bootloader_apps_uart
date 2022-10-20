@@ -54,6 +54,8 @@ The following list provides links to documentation on how to build and run UART 
 
 -   **[PIC32MK MCM Curiosity Pro Development Board: Building and Running the UART Bootloader applications](../../docs/GUID-DDBFDA79-86F5-4F5A-B8CD-AB394574F8CF.md)**  
 
+-   **[PIC32MM USB Curiosity Pro Development Board: Building and Running the UART Bootloader applications](../../docs/GUID-2BD25F8D-D735-4A7D-AE9A-B00C2EF5A69E.md)**
+
 -   **[PIC32MX 1/2/5 Starter Kit: Building and Running the UART Bootloader applications](../../docs/GUID-AEAD41EE-0D73-4B4B-B70D-B68E9468CA78.md)**  
 
 -   **[PIC32MX Curiosity Development Board: Building and Running the UART Bootloader applications](../../docs/GUID-AC56DC8B-E361-4197-905E-9B7B4C6CA40E.md)**  

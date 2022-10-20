@@ -4,8 +4,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
-<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE11" /><meta name="copyright" content="(C) Copyright 2021" />
-<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE11" /><meta name="copyright" content="(C) Copyright 2022" />
+<meta name="DC.rights.owner" content="(C) Copyright 2022" />
 <meta name="DC.type" content="topic" />
 <meta name="DC.title" content="Bootloader Host Script Help" />
 <meta name="DC.relation" scheme="URI" content="GUID-FF183F68-D719-491F-A013-76044AD83756.html" />
@@ -61,10 +61,9 @@
 			}
 
 		</script><script language="javascript">
-        function cpy(id, button) {
-        
-            var element = document.getElementById(id);
-            var content = element.getAttribute("content");
+         
+         function copyContent(content, button) {
+         
             var textArea = document.createElement("textarea");
             
             // Place in the top-left corner of screen regardless of scroll position.
@@ -88,7 +87,6 @@
             // Avoid flash of the white box if rendered for any reason.
             textArea.style.background = 'transparent';
             
-            
             textArea.value = content;
             
             document.body.appendChild(textArea);
@@ -102,16 +100,49 @@
                   button.textContent = "Copied";
                   button.classList.add("copied");
                   setTimeout(function(){
-                    button.textContent = "Copy";
-                    button.classList.remove("copied");
+                     button.textContent = "Copy";
+                     button.classList.remove("copied");
                   },1000);
                }
             } catch (err) {
-              console.log('Oops, unable to copy');
+               console.log('Oops, unable to copy');
             }
             
             document.body.removeChild(textArea);
-        }
+         }
+         
+         function cpy(id, button) {
+            var element = document.getElementById(id);
+            var content = element.getAttribute("content");
+            
+            copyContent(content, button);
+         }
+         
+         document.addEventListener("DOMContentLoaded", function(event) {
+            document.querySelectorAll(".codeblock").forEach(function(elem) {
+               elem.style.position = "relative";
+               var copy = document.createElement("button");
+               copy.textContent = "Copy";
+               copy.setAttribute("class", "copy-code");
+               
+               var content = elem.textContent;
+               
+               copy.addEventListener("click", function(){
+                  copyContent(content, copy);
+               });
+               
+               elem.addEventListener("mouseenter", function(evt){
+                  elem.prepend(copy);
+               });
+            });
+            
+            document.querySelectorAll(".codeblock").forEach(function(elem) {
+               elem.addEventListener("mouseleave", function(evt){
+                  document.querySelector(".copy-code").remove();
+               });
+            });
+         });
+         
       </script><script language="javascript">
           
           // Add the MathML namespace to html
@@ -150,7 +181,7 @@
           window.top.location = Default;
           }       
           
-        </script><style xml:space="">
+        </script><link rel="stylesheet" type="text/css" href="syntax-highlight.css" /><style xml:space="">
         
           button.copy-code{
             display:none;
@@ -192,7 +223,7 @@
           }
         
         
-      </style><link rel="stylesheet" type="text/css" href="stylesheets/common-extended.css" /></head>
+      </style><link rel="stylesheet" type="text/css" href="syntax-highlight.css" /></head>
 <body id="bootloader-host-script-help">
 <h1 class="title topictitle1" id="ariaid-title1">Bootloader Host Script Help</h1><div class="body"><p class="p">This document describes the usage of <strong class="ph b">btl_host.py</strong> host script</p>
 <p class="p">Path of the tool in bootloader repository is <strong class="ph b">tools/btl_host.py</strong></p>
@@ -200,7 +231,7 @@
 <ul class="ul"><li class="li"><p class="p">The Script is compatible with <strong class="ph b">Python 3.x</strong> and higher</p>
 </li>
 <li class="li"><p class="p">It requires pyserial package to communicate with device over UART. Use below command to install the pyserial package</p>
-<pre class="pre codeblock"><button title="Copy Code" class="copy-code" onclick="cpy('d5588e32', this);">Copy</button><code id="d5588e32" content="pip3 install pyserial&#xD;">pip3 install pyserial&#xD;</code></pre></li>
+<pre class="pre codeblock"><code id="d5666e32" content="pip3 install pyserial&#xD;">pip3 install pyserial&#xD;</code></pre></li>
 </ul>
 <p class="p"><strong class="ph b">Description</strong></p>
 <ul class="ul"><li class="li"><p class="p">This host script should be used to communicate with the Bootloader running on the device via <strong class="ph b">UART interface</strong></p>
@@ -216,13 +247,13 @@
 </ul>
 <p class="p"><strong class="ph b">Usage Examples</strong></p>
 <p class="p"><strong class="ph b">Below is the syntax to show help menu for the script</strong></p>
-<pre class="pre codeblock"><button title="Copy Code" class="copy-code" onclick="cpy('d5588e68', this);">Copy</button><code id="d5588e68" content="python &lt;harmony3_path&gt;/bootloader/tools/btl_host.py --help">python &lt;harmony3_path&gt;/bootloader/tools/btl_host.py --help</code></pre><br /><img class="image" src="GUID-CF3E2CCE-43F4-476E-B05B-52E357EEC69A-low.png" alt="btl_host_help_menu" /><br /><p class="p"><strong class="ph b">Bootloader basic mode syntax and example</strong></p>
+<pre class="pre codeblock"><code id="d5666e68" content="python &lt;harmony3_path&gt;/bootloader/tools/btl_host.py --help">python &lt;harmony3_path&gt;/bootloader/tools/btl_host.py --help</code></pre><br /><img class="image" src="GUID-CF3E2CCE-43F4-476E-B05B-52E357EEC69A-low.png" alt="btl_host_help_menu" /><br /><p class="p"><strong class="ph b">Bootloader basic mode syntax and example</strong></p>
 <p class="p">Below syntax and example can be used to program a binary and send a <strong class="ph b">Reset command</strong></p>
-<pre class="pre codeblock"><button title="Copy Code" class="copy-code" onclick="cpy('d5588e81', this);">Copy</button><code id="d5588e81" content="python &lt;harmony3_path&gt;/bootloader/tools/btl_host.py -v -i &lt;COM PORT&gt; -d &lt;Device Name&gt; -a &lt;address&gt; -f &lt;Application_binary_path&gt;">python &lt;harmony3_path&gt;/bootloader/tools/btl_host.py -v -i &lt;COM PORT&gt; -d &lt;Device Name&gt; -a &lt;address&gt; -f &lt;Application_binary_path&gt;</code></pre><pre class="pre codeblock language-c"><button title="Copy Code" class="copy-code" onclick="cpy('d5588e83', this);">Copy</button><code id="d5588e83" content="python &lt;harmony3_path&gt;/bootloader/tools/btl_host.py -v -i COM18 -d same5x -a 0x2000 -f &lt;harmony3_path&gt;/bootloader_apps_uart/apps/uart_bootloader/test_app/firmware/sam_e54_xpro.X/dist/sam_e54_xpro/production/sam_e54_xpro.X.production.bin">python <span class="ph token operator">&lt;</span>harmony3_path<span class="ph token operator">&gt;</span><span class="ph token operator">/</span>bootloader<span class="ph token operator">/</span>tools<span class="ph token operator">/</span>btl_host<span class="ph token punctuation">.</span>py <span class="ph token operator">-</span>v <span class="ph token operator">-</span>i COM18 <span class="ph token operator">-</span>d same5x <span class="ph token operator">-</span>a <span class="ph token number">0x2000</span> <span class="ph token operator">-</span>f <span class="ph token operator">&lt;</span>harmony3_path<span class="ph token operator">&gt;</span><span class="ph token operator">/</span>bootloader_apps_uart<span class="ph token operator">/</span>apps<span class="ph token operator">/</span>uart_bootloader<span class="ph token operator">/</span>test_app<span class="ph token operator">/</span>firmware<span class="ph token operator">/</span>sam_e54_xpro<span class="ph token punctuation">.</span>X<span class="ph token operator">/</span>dist<span class="ph token operator">/</span>sam_e54_xpro<span class="ph token operator">/</span>production<span class="ph token operator">/</span>sam_e54_xpro<span class="ph token punctuation">.</span>X<span class="ph token punctuation">.</span>production<span class="ph token punctuation">.</span>bin</code></pre><br /><img class="image" src="GUID-9D45B2EF-7159-4DF7-BC6F-3C43C2113B07-low.png" alt="btl_host_output" /><br /><p class="p"><strong class="ph b">Bootloader Fail Safe Update mode syntax and example</strong></p>
+<pre class="pre codeblock"><code id="d5666e81" content="python &lt;harmony3_path&gt;/bootloader/tools/btl_host.py -v -i &lt;COM PORT&gt; -d &lt;Device Name&gt; -a &lt;address&gt; -f &lt;Application_binary_path&gt;">python &lt;harmony3_path&gt;/bootloader/tools/btl_host.py -v -i &lt;COM PORT&gt; -d &lt;Device Name&gt; -a &lt;address&gt; -f &lt;Application_binary_path&gt;</code></pre><pre class="pre codeblock c">python &lt;harmony3_path&gt;/bootloader/tools/btl_host.py -v -i COM18 -d same5x -a <span class="hl-number">0x2000</span> -f &lt;harmony3_path&gt;/bootloader_apps_uart/apps/uart_bootloader/test_app/firmware/sam_e54_xpro.X/dist/sam_e54_xpro/production/sam_e54_xpro.X.production.bin</pre><br /><img class="image" src="GUID-9D45B2EF-7159-4DF7-BC6F-3C43C2113B07-low.png" alt="btl_host_output" /><br /><p class="p"><strong class="ph b">Bootloader Fail Safe Update mode syntax and example</strong></p>
 <p class="p">Below syntax and example can be used to program a binary in <strong class="ph b">Inactive Bank</strong> and send a <strong class="ph b">Swap Bank and Reset command</strong></p>
-<pre class="pre codeblock"><button title="Copy Code" class="copy-code" onclick="cpy('d5588e184', this);">Copy</button><code id="d5588e184" content="python &lt;harmony3_path&gt;/bootloader/tools/btl_host.py -v -s -i &lt;COM PORT&gt; -d &lt;Device Name&gt; -a &lt;Inactive Bank address&gt; -f &lt;Path to application binary&gt;">python &lt;harmony3_path&gt;/bootloader/tools/btl_host.py -v -s -i &lt;COM PORT&gt; -d &lt;Device Name&gt; -a &lt;Inactive Bank address&gt; -f &lt;Path to application binary&gt;</code></pre><p class="p"><strong class="ph b">Example to send Bootloader binary in inactive bank</strong></p>
-<pre class="pre codeblock language-c"><button title="Copy Code" class="copy-code" onclick="cpy('d5588e189', this);">Copy</button><code id="d5588e189" content="python &lt;harmony3_path&gt;/bootloader/tools/btl_host.py -v -s -i COM18 -d same5x -a 0x80000 -f &lt;harmony3_path&gt;/bootloader_apps_uart/apps/uart_fail_safe_bootloader/bootloader/firmware/sam_e54_xpro.X/dist/sam_e54_xpro/production/sam_e54_xpro.X.production.bin">python <span class="ph token operator">&lt;</span>harmony3_path<span class="ph token operator">&gt;</span><span class="ph token operator">/</span>bootloader<span class="ph token operator">/</span>tools<span class="ph token operator">/</span>btl_host<span class="ph token punctuation">.</span>py <span class="ph token operator">-</span>v <span class="ph token operator">-</span>s <span class="ph token operator">-</span>i COM18 <span class="ph token operator">-</span>d same5x <span class="ph token operator">-</span>a <span class="ph token number">0x80000</span> <span class="ph token operator">-</span>f <span class="ph token operator">&lt;</span>harmony3_path<span class="ph token operator">&gt;</span><span class="ph token operator">/</span>bootloader_apps_uart<span class="ph token operator">/</span>apps<span class="ph token operator">/</span>uart_fail_safe_bootloader<span class="ph token operator">/</span>bootloader<span class="ph token operator">/</span>firmware<span class="ph token operator">/</span>sam_e54_xpro<span class="ph token punctuation">.</span>X<span class="ph token operator">/</span>dist<span class="ph token operator">/</span>sam_e54_xpro<span class="ph token operator">/</span>production<span class="ph token operator">/</span>sam_e54_xpro<span class="ph token punctuation">.</span>X<span class="ph token punctuation">.</span>production<span class="ph token punctuation">.</span>bin</code></pre><p class="p"><strong class="ph b">Example to send Application binary in inactive bank</strong></p>
-<pre class="pre codeblock language-c"><button title="Copy Code" class="copy-code" onclick="cpy('d5588e283', this);">Copy</button><code id="d5588e283" content="python &lt;harmony3_path&gt;/bootloader/tools/btl_host.py -v -s -i COM18 -d same5x -a 0x82000 -f &lt;harmony3_path&gt;/bootloader_apps_uart/apps/uart_fail_safe_bootloader/test_app/firmware/sam_e54_xpro.X/dist/sam_e54_xpro/production/sam_e54_xpro.X.production.bin">python <span class="ph token operator">&lt;</span>harmony3_path<span class="ph token operator">&gt;</span><span class="ph token operator">/</span>bootloader<span class="ph token operator">/</span>tools<span class="ph token operator">/</span>btl_host<span class="ph token punctuation">.</span>py <span class="ph token operator">-</span>v <span class="ph token operator">-</span>s <span class="ph token operator">-</span>i COM18 <span class="ph token operator">-</span>d same5x <span class="ph token operator">-</span>a <span class="ph token number">0x82000</span> <span class="ph token operator">-</span>f <span class="ph token operator">&lt;</span>harmony3_path<span class="ph token operator">&gt;</span><span class="ph token operator">/</span>bootloader_apps_uart<span class="ph token operator">/</span>apps<span class="ph token operator">/</span>uart_fail_safe_bootloader<span class="ph token operator">/</span>test_app<span class="ph token operator">/</span>firmware<span class="ph token operator">/</span>sam_e54_xpro<span class="ph token punctuation">.</span>X<span class="ph token operator">/</span>dist<span class="ph token operator">/</span>sam_e54_xpro<span class="ph token operator">/</span>production<span class="ph token operator">/</span>sam_e54_xpro<span class="ph token punctuation">.</span>X<span class="ph token punctuation">.</span>production<span class="ph token punctuation">.</span>bin</code></pre><br /><img class="image" src="GUID-B367FCAD-1CB9-4E48-90C5-AD32D7CB2DC9-low.png" alt="btl_host_swap_bank_output" /><br /></div>
+<pre class="pre codeblock"><code id="d5666e98" content="python &lt;harmony3_path&gt;/bootloader/tools/btl_host.py -v -s -i &lt;COM PORT&gt; -d &lt;Device Name&gt; -a &lt;Inactive Bank address&gt; -f &lt;Path to application binary&gt;">python &lt;harmony3_path&gt;/bootloader/tools/btl_host.py -v -s -i &lt;COM PORT&gt; -d &lt;Device Name&gt; -a &lt;Inactive Bank address&gt; -f &lt;Path to application binary&gt;</code></pre><p class="p"><strong class="ph b">Example to send Bootloader binary in inactive bank</strong></p>
+<pre class="pre codeblock c">python &lt;harmony3_path&gt;/bootloader/tools/btl_host.py -v -s -i COM18 -d same5x -a <span class="hl-number">0x80000</span> -f &lt;harmony3_path&gt;/bootloader_apps_uart/apps/uart_fail_safe_bootloader/bootloader/firmware/sam_e54_xpro.X/dist/sam_e54_xpro/production/sam_e54_xpro.X.production.bin</pre><p class="p"><strong class="ph b">Example to send Application binary in inactive bank</strong></p>
+<pre class="pre codeblock c">python &lt;harmony3_path&gt;/bootloader/tools/btl_host.py -v -s -i COM18 -d same5x -a <span class="hl-number">0x82000</span> -f &lt;harmony3_path&gt;/bootloader_apps_uart/apps/uart_fail_safe_bootloader/test_app/firmware/sam_e54_xpro.X/dist/sam_e54_xpro/production/sam_e54_xpro.X.production.bin</pre><br /><img class="image" src="GUID-B367FCAD-1CB9-4E48-90C5-AD32D7CB2DC9-low.png" alt="btl_host_swap_bank_output" /><br /></div>
 <div class="related-links">
 <div class="familylinks">
 <div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="GUID-FF183F68-D719-491F-A013-76044AD83756.html">UART Bootloader Tools Help</a></div>

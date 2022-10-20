@@ -67,19 +67,16 @@
 #define NVM_FLASH_ROWSIZE          (1024U)
 #define NVM_FLASH_PAGESIZE         (4096U)
 
+/* No error */
+#define   NVM_ERROR_NONE       ( 0x0U )
 
-typedef enum
-{
-    /* No error */
-    NVM_ERROR_NONE = 0x0,
+/* NVM write error */
+#define    NVM_ERROR_WRITE     ( _NVMCON_WRERR_MASK )
 
-    /* NVM write error */
-    NVM_ERROR_WRITE = _NVMCON_WRERR_MASK,
+/* NVM Low Voltage Detect error */
+#define    NVM_ERROR_LOWVOLTAGE ( _NVMCON_LVDERR_MASK )
 
-    /* NVM Low Voltage Detect error */
-    NVM_ERROR_LOWVOLTAGE = _NVMCON_LVDERR_MASK,
-
-} NVM_ERROR;
+typedef uint32_t NVM_ERROR;
 
 
 

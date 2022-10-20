@@ -67,7 +67,12 @@
 
 #endif
 // DOM-IGNORE-END
-void SYS_PMU_MLDO_TRIM(void);
+
+#define PIC32MZW1_B0 0xA4
+#define PIC32MZW1_A1 0x8C
+#define CORE_TIMER_FREQ 100000000
+
+void PMU_Initialize(void);
  
 // *****************************************************************************
 // *****************************************************************************

@@ -13,8 +13,8 @@ plugin_version: NA        # if MPLAB X plugin only
 compiler: xc32
 
 modules:
-    - {name: "csp", version: "v3.13.1"}
+    - {name: "csp", version: "v3.14.0"}
     - {name: "core", version: "v3.11.1"}
-    - {name: "dev_packs", version: "v3.13.1"}
+    - {name: "dev_packs", version: "v3.14.0"}
     - {name: "bsp", version: "v3.13.0"}
 

@@ -96,10 +96,10 @@ PROVIDE(_ebase_vector_offsets = 0x1000);
  * _CACHE_ERR_EXCPT_ADDR          -- Cache-error Exception Vector
  * _GEN_EXCPT_ADDR                -- General Exception Vector
  *************************************************************************/
-_RESET_ADDR                    = 0xBD000000;
-_SIMPLE_TLB_REFILL_EXCPT_ADDR  = _ebase_address + _ebase_vector_offsets + 0;
-_CACHE_ERR_EXCPT_ADDR          = _ebase_address + _ebase_vector_offsets + 0x100;
-_GEN_EXCPT_ADDR                = _ebase_address + _ebase_vector_offsets + 0x180;
+_RESET_ADDR                    = 0xBD000200;
+_SIMPLE_TLB_REFILL_EXCPT_ADDR  = _ebase_address + 0;
+_CACHE_ERR_EXCPT_ADDR          = _ebase_address + 0x100;
+_GEN_EXCPT_ADDR                = _ebase_address + 0x180;
 
 /*************************************************************************
  * Memory Regions
@@ -114,10 +114,13 @@ _GEN_EXCPT_ADDR                = _ebase_address + _ebase_vector_offsets + 0x180;
 
 MEMORY
 {
+    /* Place the exceptions starting from _ebase_address as required by device specification */
+    kseg0_exception_mem (rx) : ORIGIN = 0x9D000000, LENGTH = 0x200
+
     /* All C files will be located here */
     kseg0_program_mem  (rx) : ORIGIN = 0x9D001000, LENGTH = 0x200000 - 0x1000
-    kseg1_boot_mem          : ORIGIN = 0xBD000000, LENGTH = 0x480
-    kseg1_boot_mem_4B0      : ORIGIN = 0xBD0004B0, LENGTH = 0x1000 - 0x4B0
+    kseg1_boot_mem          : ORIGIN = 0xBD000200, LENGTH = 0x480
+    kseg1_boot_mem_4B0      : ORIGIN = 0xBD0006B0, LENGTH = 0x1000 - 0x6B0
 
     /* Reserve 16 Bytes to Store Bootloader Trigger Pattern */
     kseg0_data_mem       (w!x)  : ORIGIN = 0x80000000 + 16, LENGTH = 0xA0000 - 16
@@ -151,20 +154,20 @@ SECTIONS
   .simple_tlb_refill_excpt _SIMPLE_TLB_REFILL_EXCPT_ADDR :
   {
     KEEP(*(.simple_tlb_refill_vector))
-  } > kseg0_program_mem
+  } > kseg0_exception_mem
 
   .cache_err_excpt _CACHE_ERR_EXCPT_ADDR :
   {
     KEEP(*(.cache_err_vector))
-  } > kseg0_program_mem
+  } > kseg0_exception_mem
 
   .app_excpt _GEN_EXCPT_ADDR :
   {
     KEEP(*(.gen_handler))
-  } > kseg0_program_mem
+  } > kseg0_exception_mem
 
   /* Interrupt vector table with vector offsets */
-  .vectors _ebase_address + _ebase_vector_offsets + 0x200 :
+  .vectors _ebase_address + _ebase_vector_offsets :
   {
     /*  Symbol __vector_offset_n points to .vector_n if it exists, 
      *  otherwise points to the default handler. The

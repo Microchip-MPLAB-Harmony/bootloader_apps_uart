@@ -59,19 +59,6 @@ children:
       children:
       - type: Dynamic
         attributes: {id: uart1, value: '8'}
-  - type: Boolean
-    attributes: {id: USART_INTERRUPT_MODE}
-    children:
-    - type: Attributes
-      children:
-      - type: String
-        attributes: {id: label}
-        children:
-        - {type: Value, value: '---'}
-    - type: Values
-      children:
-      - type: Dynamic
-        attributes: {id: stdio, value: 'false'}
 - type: Attachments
   children:
   - type: DirectCapability
@@ -88,4 +75,4 @@ children:
         children:
         - {type: Value, value: UART}
 - type: ElementPosition
-  attributes: {x: '24', y: '186', id: uart1}
+  attributes: {x: '560', y: '20', id: uart1}

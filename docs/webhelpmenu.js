@@ -208,7 +208,7 @@ function findInFileSequence(guid)
     if (Array.isArray(FileSequence)) {
         return FileSequence.filter(function(file) {
             return file.indexOf(guid) > -1;
-        }).pop();
+        }).shift();
     }
     return false;
 }

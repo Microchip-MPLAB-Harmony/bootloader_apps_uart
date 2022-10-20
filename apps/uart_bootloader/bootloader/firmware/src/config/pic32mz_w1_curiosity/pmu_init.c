@@ -2,14 +2,14 @@
   PIC32MZW1 PMU MLDO TRIMMING
 
   File Name:
-    sys_pmu_mldo_trim.c
+    pmu_init.c
 
   Summary:
-    PIC32MZW1 boot time PMU MLDO mode Configuration.
+    PIC32MZW1 boot time PMU mode and output Configuration.
 
   Description:
-    This interface helps configure the PMU in MLDO only mode and also trim
-    the voltages in this mode to the operating range.
+    This interface helps configure the PMU in either DC-DC/MLDO mode and also trim
+    the voltages in the corresponding mode to the operating range.
 
  *******************************************************************************/
 
@@ -47,6 +47,7 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 // PMU related defines
 #define BUCKCFG1_ADDR 0x14
 #define BUCKCFG2_ADDR 0x15
+#define BUCKCFG3_ADDR 0x16
 #define MLDOCFG1_ADDR 0x17
 #define MLDOCFG2_ADDR 0x18
 #define SPI_CMD_OFFSET 24
@@ -55,6 +56,7 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 #define MLDO_ISENSE_CONFIG 0xC07
 #define MLDO_ENABLE 0x00000A80
 #define BUCK_PBYPASS_ENABLE 0x4
+#define BUCK_SCP_TUNE 0x10
 #define MLDOCFG1_DEFAULT_VAL 0x180
 #define PMU_STATUS_SPIRDY 0x80
 #define VREG1_BITS 0x0000001F
@@ -63,9 +65,19 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 #define VREG4_BITS 0x1F000000
 #define CORE_TIMER_FREQ 100000000
 
+#define PIC32MZW1_B0 0xA4
+#define PIC32MZW1_A1 0x8C
+#define PMUSPI_BUCKCFG1_DEFAULT_VAL     0x5480
+#define PMUSPI_BUCKCFG2_DEFAULT_VAL     0x8C28
+#define PMUSPI_BUCKCFG3_DEFAULT_VAL     0x00C8
+#define PMUSPI_MLDOCFG1_DEFAULT_VAL     0x0287
+#define PMUSPI_MLDOCFG2_DEFAULT_VAL     0x0280
+#define MLDO_HW_BP_EN 0x4
+
 //Flash Area housing the PMU calibration values
 unsigned int *otp_buckcfg1_data = (unsigned int *)0xBFC56FE8;
 unsigned int *otp_buckcfg2_data = (unsigned int *) 0xBFC56FEC;
+unsigned int *otp_buckcfg3_data = (unsigned int *) 0xBFC56FF0;
 unsigned int *otp_mldocfg1_data = (unsigned int *) 0xBFC56FF4;
 unsigned int *otp_mldocfg2_data = (unsigned int *) 0xBFC56FF8;
 unsigned int *otp_treg3_data = (unsigned int *)0xBFC56FFC;
@@ -73,6 +85,10 @@ unsigned int *otp_treg3_data = (unsigned int *)0xBFC56FFC;
 unsigned int *spi_status_reg = (unsigned int *)0xBF813E04;
 unsigned int *spi_cntrl_reg = (unsigned int *)0xBF813E00;
 unsigned int *pmu_cmode_reg = (unsigned int *)0xBF813E20;
+
+unsigned int M_BUCKEN, M_MLDOEN, M_BUCKMODE;
+unsigned int S_BUCKEN, S_MLDOEN, S_BUCKMODE;
+unsigned int O_BUCKEN, O_MLDOEN, O_BUCKMODE, OVEREN;
 
 static void DelayMs ( uint32_t delay_ms)
 {
@@ -89,7 +105,7 @@ static unsigned int SYS_PMU_SPI_READ(unsigned int spi_addr)
     int status = 0;
     reg_val = (1 << SPI_CMD_OFFSET) | (spi_addr << SPI_ADDR_OFFSET) ;
     *spi_cntrl_reg = reg_val;
-    DelayMs(20);
+    DelayMs(5);
 
     while (1)
     {
@@ -98,7 +114,6 @@ static unsigned int SYS_PMU_SPI_READ(unsigned int spi_addr)
             break;
     }
     spi_val = ((status & PMU_SPI_READ_MASK) >> SPI_ADDR_OFFSET);
-    DelayMs(20);
     return spi_val;
 }
 
@@ -109,14 +124,13 @@ static void SYS_PMU_SPI_WRITE(unsigned int spi_addr, unsigned int reg_val)
     reg_val &= 0xFFFF;
     spi_val = (spi_addr << SPI_ADDR_OFFSET) | reg_val;
     *spi_cntrl_reg = spi_val;
-    DelayMs(20);
+    DelayMs(5);
     while (1)
     {
         status = *spi_status_reg;
         if (status & PMU_STATUS_SPIRDY)
             break;
     }
-    DelayMs(20);
 }
 
 /*This function will configure the PMU with
@@ -141,12 +155,112 @@ static void SYS_PMU_SPI_WRITE(unsigned int spi_addr, unsigned int reg_val)
  * Configure VREGPLL1[28:24] in the TREG3 register
  */
 
-void SYS_PMU_MLDO_TRIM(void)
+void PMU_Initialize(void)
 {
-    unsigned int nvm_flash_data;
-    unsigned int mldocfg1, mldocfg2, buckcfg1;
+    unsigned int nvm_flash_data, otp_treg_val;
+    unsigned int mldocfg1, mldocfg2, buckcfg1, buckcfg2, buckcfg3;
     unsigned int vreg1, vreg2, vreg3, vreg4;
 
+    if(((DEVID & 0x0FF00000) >> 20) == PIC32MZW1_B0)
+    {
+       if ((RCONbits.BOR == 1) || (RCONbits.POR == 1))
+       {
+        // SPI Cock (Max=20M), SRC=System(PB1), Div=5
+        // Buck Clock SRC=FRC, DIV=8
+        // BACWD=0, restriction due to BUG (SG407-110)
+        // BACWD=1, is efficient on time but intermittent failures due to (SG407-110) bug
+        PMUCLKCTRL = 0x00004885;
+
+        buckcfg1 = *otp_buckcfg1_data;
+        if((buckcfg1 == 0x00000000) || (buckcfg1 == 0xFFFFFFFF))
+        buckcfg1 = PMUSPI_BUCKCFG1_DEFAULT_VAL;
+
+        SYS_PMU_SPI_WRITE(BUCKCFG1_ADDR, buckcfg1);
+
+        buckcfg2 = *otp_buckcfg2_data;
+        if((buckcfg2 == 0x00000000) || (buckcfg2 == 0xFFFFFFFF))
+            buckcfg2 = PMUSPI_BUCKCFG2_DEFAULT_VAL;
+
+        SYS_PMU_SPI_WRITE(BUCKCFG2_ADDR, buckcfg2);
+
+
+        buckcfg3 = *otp_buckcfg3_data;
+        if((buckcfg3 == 0x00000000) || (buckcfg3 == 0xFFFFFFFF))
+            buckcfg3 = PMUSPI_BUCKCFG3_DEFAULT_VAL;
+
+        SYS_PMU_SPI_WRITE(BUCKCFG3_ADDR, buckcfg3);
+
+        mldocfg1 = *otp_mldocfg1_data;
+        if((mldocfg1 == 0x00000000) || (mldocfg1 == 0xFFFFFFFF)) {
+            mldocfg1 = PMUSPI_MLDOCFG1_DEFAULT_VAL;
+        }
+        SYS_PMU_SPI_WRITE(MLDOCFG1_ADDR, mldocfg1);
+
+        mldocfg2 = *otp_mldocfg2_data;
+        if((mldocfg2 == 0x00000000) || (mldocfg2 == 0xFFFFFFFF)) {
+            mldocfg2 = PMUSPI_MLDOCFG2_DEFAULT_VAL;
+        }
+        SYS_PMU_SPI_WRITE(MLDOCFG2_ADDR, mldocfg2);
+		SYS_PMU_SPI_READ(MLDOCFG2_ADDR);
+
+        otp_treg_val = *otp_treg3_data;
+        if((otp_treg_val == 0xFFFFFFFF) || (otp_treg_val == 0x00000000))
+        {
+            otp_treg_val = TREG_DEFAULT;
+        }
+        vreg4 = otp_treg_val & VREG1_BITS;
+        vreg3 = (otp_treg_val & VREG2_BITS) >> 8;
+        vreg2 = (otp_treg_val & VREG3_BITS) >> 16;
+        vreg1 = (otp_treg_val & VREG4_BITS) >> 24;
+
+        // Mission mode PMU Mode #1 register
+
+        M_BUCKEN = 1;
+        M_MLDOEN = 0;
+        M_BUCKMODE = 1; // PMU-Buck PWM Mode
+        PMUMODECTRL1 = ((M_BUCKEN << 31) | (M_MLDOEN << 30) | (M_BUCKMODE << 29) |
+                (vreg1 << 24) | (vreg2 <<16) | (vreg3 << 8) | vreg4);
+
+        // Sleep mode PMU Mode #2 register
+        // TODO - When available, use the Sleep Mode Calibration values
+        S_BUCKEN = 1;
+        S_MLDOEN = 0;
+        S_BUCKMODE = 0; // PMU-Buck PSM Mode
+        PMUMODECTRL2 = ((S_BUCKEN << 31) | (S_MLDOEN << 30) | (S_BUCKMODE << 29) |
+                (vreg1 << 24) | (vreg2 <<16) | (vreg3 << 8) | vreg4);
+
+         // For HUT Code keeping the PMU in SW Override Mode
+        // OVEREN = 1, triggers the mode change
+        O_BUCKEN = 1;
+        O_MLDOEN = 0;
+        O_BUCKMODE = 1;
+        OVEREN = 1; // PMU-Buck PWM Mode
+        PMUOVERCTRL = ((O_BUCKEN << 31) | (O_MLDOEN << 30) | (O_BUCKMODE << 29) |
+                (OVEREN << 23) | (vreg1 << 24) | (vreg2 <<16) | (vreg3 << 8) | vreg4);
+
+        // Trigger PMU Mode Change, with CLKCTRL.BACWD=0
+        PMUOVERCTRLbits.PHWC = 0;
+
+        // Poll for Buck switching to be complete
+        while (!((PMUCMODEbits.CBUCKEN) && (PMUCMODEbits.CBUCKMODE) && !(PMUCMODEbits.CMLDOEN)));
+
+        // Post process the Buck switching if Calibration values are not present
+        // VTUNE[3:0]=0x0 if no calibration
+        buckcfg1 = *otp_buckcfg1_data;
+        if((buckcfg1 == 0x00000000) || (buckcfg1 == 0xFFFFFFFF)) {
+            SYS_PMU_SPI_WRITE(BUCKCFG1_ADDR, (SYS_PMU_SPI_READ(BUCKCFG1_ADDR) & 0xEBFF));
+        }
+
+        // BUCKCFG2 0x8C28 - If no calibration, we need to update buk_scp_tune at the least to 2?b10, so update it o 0x8D28
+        buckcfg2 = *otp_buckcfg2_data;
+        if((buckcfg2 == 0x00000000) || (buckcfg2 == 0xFFFFFFFF)) {
+            SYS_PMU_SPI_WRITE(BUCKCFG2_ADDR, (SYS_PMU_SPI_READ(BUCKCFG2_ADDR) | BUCK_SCP_TUNE));
+        }
+
+       }
+    }
+    else if(((DEVID & 0x0FF00000) >> 20) == PIC32MZW1_A1)
+    {
     //PMU_MLDO_Cfg()
     {
         //Read MLDOCFG1 Value
@@ -209,5 +323,6 @@ void SYS_PMU_MLDO_TRIM(void)
 
         PMUOVERCTRLbits.PHWC = 0;	//Disable Power-up HW Control
         PMUOVERCTRLbits.OVEREN = 1;	//set override enable bit
+        }
     }
 }

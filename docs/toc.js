@@ -134,25 +134,42 @@ function selectOpenedTopic() {
                     search = search.split('#')[1];
                 }
             }
-            var currentTopic = window.parent.frames.contentwin.document.head.querySelector("meta[name='DC.identifier']").getAttribute('content');
+
+            var currentTopic = window.parent.frames.contentwin.document.head.querySelector("meta[name='DC.identifier']");
+            if (currentTopic) {
+                currentTopic = currentTopic.getAttribute('content');
+            }
             
             var file = FileSequence[0];
-            if (currentTopic.indexOf(search) == -1) {
+            if (currentTopic && currentTopic.indexOf(search) == -1) {
                 file = findInFileSequence(search);
             } else {
                 file = findInFileSequence(currentTopic);
             }
 
-
             var navItem = window.parent.navigationwin.document.querySelector("[href='" + file + "']");
+            if (!navItem) {
+                if (file && file.indexOf('#') > -1) {
+                    var firstPart = file.split('#')[0];
+                    navItem = window.parent.navigationwin.document.querySelector("[href='" + firstPart + "']");
+                }
+            }
             
+            if (!navItem) {
+                var parts = window.parent.location.href.substr(window.parent.location.href.indexOf("?")).replace('?','').split('#');
+                var fullUrl = parts[0] + ".html" + "#" + parts[1];
+                navItem = window.parent.navigationwin.document.querySelector("[href='" + fullUrl + "']");
+            }
+
+
             // Add support for bookmap
             var param = window.parent.location.href.substr(window.parent.location.href.indexOf("?") + 1);		
             var param2 = param.split("#");  
             if (param2[1]){  
                 locString = param2[0] + ".html#" + param2[1];        
-                navItem = window.parent.navigationwin.document.querySelector("[href='" + file + "']");
+                navItem = window.parent.navigationwin.document.querySelector("[href='" + locString + "']");
             } 
+
             if (navItem) {
                 highlight(navItem);
             } else {
@@ -162,7 +179,7 @@ function selectOpenedTopic() {
                     highlight(firstItem);
                 }
             }
-        } catch (e) { }
+        } catch (e) {}
         //addEventListenerContentWindow();
     }, 1000);
 }
@@ -257,7 +274,7 @@ function findInFileSequence(guid)
     if (Array.isArray(FileSequence)) {
         return FileSequence.filter(function(file) {
             return file.indexOf(guid) > -1;
-        }).pop();
+        }).shift();
     }
     return false;
 }

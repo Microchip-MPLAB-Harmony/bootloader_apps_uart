@@ -13,6 +13,6 @@ plugin_version: v3.8.5        # if MPLAB X plugin only
 compiler: XC32 (4.10)
 
 modules:
-    - {name: "csp", version: "v3.13.1"}
-    - {name: "dev_packs", version: "v3.13.1"}
+    - {name: "csp", version: "v3.14.0"}
+    - {name: "dev_packs", version: "v3.14.0"}
     - {name: "bootloader", version: "v3.6.0"}

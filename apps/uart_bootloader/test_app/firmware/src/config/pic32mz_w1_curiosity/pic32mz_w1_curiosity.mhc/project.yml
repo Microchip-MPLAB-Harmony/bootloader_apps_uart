@@ -41,13 +41,13 @@ files:
   security: NON_SECURE
   type: SOURCE
   userChecksum: null
-- generatedChecksum: CE1E44F6EBBAE0C07D7A5D2512BC92EC
+- generatedChecksum: 3E075ACBE1EB702964A1F36C28753C69
   logicalPath: config/pic32mz_w1_curiosity/peripheral/clk
   name: plib_clk.c
   physicalPath: peripheral/clk
   security: NON_SECURE
   type: SOURCE
-  userChecksum: CE1E44F6EBBAE0C07D7A5D2512BC92EC
+  userChecksum: 3E075ACBE1EB702964A1F36C28753C69
 - generatedChecksum: F8BB2BAA74068083A80E6E229BBCF3E3
   logicalPath: config/pic32mz_w1_curiosity/peripheral/coretimer
   name: plib_coretimer.c
