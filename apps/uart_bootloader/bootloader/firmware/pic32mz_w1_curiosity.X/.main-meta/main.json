@@ -23,7 +23,7 @@
 			"semverRange": "1.2.153"
 		},
 		"configurator": {
-			"name": "MHC",
+			"name": "MCC",
 			"semverRange": ">=3.7.2"
 		},
 		"device": {
@@ -56,7 +56,7 @@
 			"Bootloader"
 		],
 		"keywords": [
-			"MHC",
+			"MCC",
 			"Harmony",
 			"Bootloader",
 			"UART",

@@ -1,0 +1,14 @@
+package:
+  format-version: "1.0.0"
+  name: "bootloader_apps_uart"
+  version: "v3.2.0"
+  type: "application"
+  status: "production"
+  required: true
+
+  dependencies:
+    - name: "bootloader"
+      type: "package"
+      version: "v3.6.0"
+
+

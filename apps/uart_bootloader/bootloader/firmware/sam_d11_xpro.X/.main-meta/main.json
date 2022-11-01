@@ -19,12 +19,12 @@
 			}
 		],
 		"dfp": {
-			"name": "CMSIS",
-			"semverRange": "^5.4.0"
+			"name": "SAMD11_DFP",
+			"semverRange": "^2.6.76"
 		},
 		"configurator": {
-			"name": "MHC",
-			"semverRange": ">=3.8.5"
+			"name": "MCC",
+			"semverRange": ">=5.1.17"
 		},
 		"device": {
 			"metaDataVersion": "1.0.0",
@@ -56,7 +56,7 @@
 			"Bootloader"
 		],
 		"keywords": [
-			"MHC",
+			"MCC",
 			"Harmony",
 			"Bootloader",
 			"UART",

@@ -1,277 +1,271 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE html
-  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-
-<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE11" /><meta name="copyright" content="(C) Copyright 2022" />
-<meta name="DC.rights.owner" content="(C) Copyright 2022" />
-<meta name="DC.type" content="topic" />
-<meta name="DC.title" content="Configuring an application to be bootloaded for CORTEX-M based MCUs" />
-<meta name="DC.relation" scheme="URI" content="GUID-1533B544-211D-4FA3-A80B-B55B97CB0311.html" />
-<meta name="DC.format" content="XHTML" />
-<meta name="DC.identifier" content="configuring-an-application-to-be-bootloaded-for-cortex-m-based-mcus" />
-<link rel="stylesheet" type="text/css" href="stylesheets/atmel.css" />
-<title>Configuring an application to be bootloaded for CORTEX-M based MCUs</title>
-<meta name="Microsoft.Help.Id" content="GUID-FA810B32-056A-4A0B-9BB9-6F769ACD4D57-configuring-an-application-to-be-bootloaded-for-cortex-m-based-mcus" />
-<meta name="Microsoft.Help.TocParent" content="GUID-FA810B32-056A-4A0B-9BB9-6F769ACD4D57" />
-<meta name="Microsoft.Help.TocOrder" content="0" />
-<meta name="Microsoft.Help.Locale" content="en-US" />
-<meta name="Microsoft.Help.TopicLocale" content="en-US" />
-<meta name="Microsoft.Help.DisplayVersion" content="MPLAB® Harmony Bootloader Application Examples for UART Reference A 11/2021" />
-<script language="javascript">
-       
-       if (window.parent.location.protocol != 'file:') {
-				document.addEventListener('click', function(e) {
-				    if (e.target) {
-               if (e.target.nodeName == "A" ) {
-                    if (!e.target.target) {
-                      e.preventDefault();
-                      e.stopPropagation();
-                              
-                      var origUrl = window.parent.location.href.substr(0, window.parent.location.href.indexOf("?"));
-                      if (origUrl.length === 0) {
-                          origUrl = window.parent.location.href;
-                      }
-                      var href= e.target.getAttribute("href");
-                      var parts = href.split("#");
-          
-                      var url = "";
-                      if (parts.length == 2 ) {
-                        if (!parts[0].length) {
-                            url = window.parent.location.search.replace('?','')
-                        } else {
-                            url = parts[0].replace('.html','');
-                        }
-                      } else {
-                        url = parts[0].replace('.html','');
-                      }
-
-                      if (parts.length == 2) {
-                          url += "#" + parts[1];
-                      }
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us" data-whc_version="24.1">
+    <head><link rel="shortcut icon" href="oxygen-webhelp\template\resources/images/favicon.ico"/><link rel="icon" href="oxygen-webhelp\template\resources/images/favicon.ico"/><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta name="description" content="Application settings in MCC system configuration Launch MCC for the application project to be configured Select system component from the project graph and configure the below highlighted settings ..."/><meta name="copyright" content="(C) Copyright 2022"/><meta name="DC.rights.owner" content="(C) Copyright 2022"/><meta name="DC.type" content="topic"/><meta name="DC.relation" content="GUID-1533B544-211D-4FA3-A80B-B55B97CB0311.md"/><meta name="DC.format" content="HTML5"/><meta name="DC.identifier" content="configuring-an-application-to-be-bootloaded-for-cortex-m-based-mcus"/><title>1.4.2 Configuring an application to be bootloaded for CORTEX-M based MCUs</title><!--  Generated with Oxygen version 24.1, build number 2022062014.  --><meta name="wh-path2root" content=""/><meta name="wh-toc-id" content="&lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?&gt;&lt;?workdir /D:\InfoShare\Data\Publish\Data\ixybkp4tiz4\work\temp?&gt;&lt;?workdir-uri file:/D:/InfoShare/Data/Publish/Data/ixybkp4tiz4/work/temp/?&gt;&lt;?path2project?&gt;&lt;?path2project-uri ./?&gt;&lt;?path2rootmap-uri ./?&gt;&lt;topic xmlns:ditaarch=&#34;http://dita.oasis-open.org/architecture/2005/&#34; xmlns:dita-ot=&#34;http://dita-ot.sourceforge.net/ns/201007/dita-ot&#34; class=&#34;- topic/topic &#34; ditaarch:DITAArchVersion=&#34;1.2&#34; domains=&#34;(topic hi-d) (topic ut-d) (topic indexing-d) (topic hazard-d) (topic abbrev-d) (topic pr-d) (topic sw-d) (topic ui-d)&#34; id=&#34;configuring-an-application-to-be-bootloaded-for-cortex-m-based-mcus&#34; xtrf=&#34;file:/D:/InfoShare/Data/Publish/Data/ixybkp4tiz4/work/1/en-US/GUID-CC123855-6D3C-458D-8A42-C73711B21E4F.md&#34; xtrc=&#34;topic:1;182:3&#34; specializations=&#34;&#34;&gt;&lt;title class=&#34;- topic/title &#34; xtrf=&#34;file:/D:/InfoShare/Data/Publish/Data/ixybkp4tiz4/work/1/en-US/GUID-CC123855-6D3C-458D-8A42-C73711B21E4F.md&#34; xtrc=&#34;title:1;182:3&#34;&gt;Configuring an application to be bootloaded for CORTEX-M based MCUs&lt;/title&gt;&lt;body class=&#34;- topic/body &#34; xtrf=&#34;file:/D:/InfoShare/Data/Publish/Data/ixybkp4tiz4/work/1/en-US/GUID-CC123855-6D3C-458D-8A42-C73711B21E4F.md&#34; xtrc=&#34;body:1;182:3&#34;&gt;&lt;p class=&#34;- topic/p &#34; xtrf=&#34;file:/D:/InfoShare/Data/Publish/Data/ixybkp4tiz4/work/1/en-US/GUID-CC123855-6D3C-458D-8A42-C73711B21E4F.md&#34; xtrc=&#34;p:1;182:3&#34;&gt;&lt;b class=&#34;+ topic/ph hi-d/b &#34; xtrf=&#34;file:/D:/InfoShare/Data/Publish/Data/ixybkp4tiz4/work/1/en-US/GUID-CC123855-6D3C-458D-8A42-C73711B21E4F.md&#34; xtrc=&#34;b:1;182:3&#34;&gt;Application settings in MCC system configuration&lt;/b&gt;&lt;/p&gt;&lt;ol class=&#34;- topic/ol &#34; xtrf=&#34;file:/D:/InfoShare/Data/Publish/Data/ixybkp4tiz4/work/1/en-US/GUID-CC123855-6D3C-458D-8A42-C73711B21E4F.md&#34; xtrc=&#34;ol:1;182:3&#34;&gt;&lt;li class=&#34;- topic/li &#34; xtrf=&#34;file:/D:/InfoShare/Data/Publish/Data/ixybkp4tiz4/work/1/en-US/GUID-CC123855-6D3C-458D-8A42-C73711B21E4F.md&#34; xtrc=&#34;li:1;182:3&#34;&gt;&lt;p class=&#34;- topic/p &#34; xtrf=&#34;file:/D:/InfoShare/Data/Publish/Data/ixybkp4tiz4/work/1/en-US/GUID-CC123855-6D3C-458D-8A42-C73711B21E4F.md&#34; xtrc=&#34;p:2;182:3&#34;&gt;Launch MCC for the application project to be configured&lt;/p&gt;&lt;/li&gt;&lt;li class=&#34;- topic/li &#34; xtrf=&#34;file:/D:/InfoShare/Data/Publish/Data/ixybkp4tiz4/work/1/en-US/GUID-CC123855-6D3C-458D-8A42-C73711B21E4F.md&#34; xtrc=&#34;li:2;182:3&#34;&gt;&lt;p class=&#34;- topic/p &#34; xtrf=&#34;file:/D:/InfoShare/Data/Publish/Data/ixybkp4tiz4/work/1/en-US/GUID-CC123855-6D3C-458D-8A42-C73711B21E4F.md&#34; xtrc=&#34;p:3;182:3&#34;&gt;Select &lt;b class=&#34;+ topic/ph hi-d/b &#34; xtrf=&#34;file:/D:/InfoShare/Data/Publish/Data/ixybkp4tiz4/work/1/en-US/GUID-CC123855-6D3C-458D-8A42-C73711B21E4F.md&#34; xtrc=&#34;b:2;182:3&#34;&gt;system&lt;/b&gt; component from the project graph and configure the below highlighted settings&lt;/p&gt;&lt;/li&gt;&lt;/ol&gt;&lt;image class=&#34;- topic/image &#34; href=&#34;GUID-81999D08-3DA0-42E0-98EB-26FCB8E75741-low.png&#34; placement=&#34;break&#34; xtrf=&#34;file:/D:/InfoShare/Data/Publish/Data/ixybkp4tiz4/work/1/en-US/GUID-CC123855-6D3C-458D-8A42-C73711B21E4F.md&#34; xtrc=&#34;image:1;182:3&#34; dita-ot:image-width=&#34;817&#34; dita-ot:image-height=&#34;420&#34; dita-ot:horizontal-dpi=&#34;96&#34; dita-ot:vertical-dpi=&#34;96&#34;&gt;&lt;alt class=&#34;- topic/alt &#34; xtrf=&#34;file:/D:/InfoShare/Data/Publish/Data/ixybkp4tiz4/work/1/en-US/GUID-CC123855-6D3C-458D-8A42-C73711B21E4F.md&#34; xtrc=&#34;alt:1;182:3&#34;&gt;application_config_mhc_setting&lt;/alt&gt;&lt;/image&gt;&lt;ol class=&#34;- topic/ol &#34; xtrf=&#34;file:/D:/InfoShare/Data/Publish/Data/ixybkp4tiz4/work/1/en-US/GUID-CC123855-6D3C-458D-8A42-C73711B21E4F.md&#34; xtrc=&#34;ol:2;182:3&#34;&gt;&lt;li class=&#34;- topic/li &#34; xtrf=&#34;file:/D:/InfoShare/Data/Publish/Data/ixybkp4tiz4/work/1/en-US/GUID-CC123855-6D3C-458D-8A42-C73711B21E4F.md&#34; xtrc=&#34;li:3;182:3&#34;&gt;&lt;p class=&#34;- topic/p &#34; xtrf=&#34;file:/D:/InfoShare/Data/Publish/Data/ixybkp4tiz4/work/1/en-US/GUID-CC123855-6D3C-458D-8A42-C73711B21E4F.md&#34; xtrc=&#34;p:4;182:3&#34;&gt;Disable Fuse Settings:&lt;/p&gt;&lt;ul class=&#34;- topic/ul &#34; xtrf=&#34;file:/D:/InfoShare/Data/Publish/Data/ixybkp4tiz4/work/1/en-US/GUID-CC123855-6D3C-458D-8A42-C73711B21E4F.md&#34; xtrc=&#34;ul:1;182:3&#34;&gt;&lt;li class=&#34;- topic/li &#34; xtrf=&#34;file:/D:/InfoShare/Data/Publish/Data/ixybkp4tiz4/work/1/en-US/GUID-CC123855-6D3C-458D-8A42-C73711B21E4F.md&#34; xtrc=&#34;li:4;182:3&#34;&gt;&lt;p class=&#34;- topic/p &#34; xtrf=&#34;file:/D:/InfoShare/Data/Publish/Data/ixybkp4tiz4/work/1/en-US/GUID-CC123855-6D3C-458D-8A42-C73711B21E4F.md&#34; xtrc=&#34;p:5;182:3&#34;&gt;Fuse settings needs to be disabled for the application which will be boot-loaded as the fuse settings are supposed to be programmed through programming tool from bootloader code. Also the fuse settings are not programmable through firmware&lt;/p&gt;&lt;/li&gt;&lt;li class=&#34;- topic/li &#34; xtrf=&#34;file:/D:/InfoShare/Data/Publish/Data/ixybkp4tiz4/work/1/en-US/GUID-CC123855-6D3C-458D-8A42-C73711B21E4F.md&#34; xtrc=&#34;li:5;182:3&#34;&gt;&lt;p class=&#34;- topic/p &#34; xtrf=&#34;file:/D:/InfoShare/Data/Publish/Data/ixybkp4tiz4/work/1/en-US/GUID-CC123855-6D3C-458D-8A42-C73711B21E4F.md&#34; xtrc=&#34;p:6;182:3&#34;&gt;Enabling the fuse settings also increases the size of the binary when generated through the hex file&lt;/p&gt;&lt;/li&gt;&lt;li class=&#34;- topic/li &#34; xtrf=&#34;file:/D:/InfoShare/Data/Publish/Data/ixybkp4tiz4/work/1/en-US/GUID-CC123855-6D3C-458D-8A42-C73711B21E4F.md&#34; xtrc=&#34;li:6;182:3&#34;&gt;&lt;p class=&#34;- topic/p &#34; xtrf=&#34;file:/D:/InfoShare/Data/Publish/Data/ixybkp4tiz4/work/1/en-US/GUID-CC123855-6D3C-458D-8A42-C73711B21E4F.md&#34; xtrc=&#34;p:7;182:3&#34;&gt;When updating the bootloader itself, make sure that the fuse settings for the bootloader application are also disabled&lt;/p&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;li class=&#34;- topic/li &#34; xtrf=&#34;file:/D:/InfoShare/Data/Publish/Data/ixybkp4tiz4/work/1/en-US/GUID-CC123855-6D3C-458D-8A42-C73711B21E4F.md&#34; xtrc=&#34;li:7;182:3&#34;&gt;&lt;p class=&#34;- topic/p &#34; xtrf=&#34;file:/D:/InfoShare/Data/Publish/Data/ixybkp4tiz4/work/1/en-US/GUID-CC123855-6D3C-458D-8A42-C73711B21E4F.md&#34; xtrc=&#34;p:8;182:3&#34;&gt;Specify the Application Start Address:&lt;/p&gt;&lt;ul class=&#34;- topic/ul &#34; xtrf=&#34;file:/D:/InfoShare/Data/Publish/Data/ixybkp4tiz4/work/1/en-US/GUID-CC123855-6D3C-458D-8A42-C73711B21E4F.md&#34; xtrc=&#34;ul:2;182:3&#34;&gt;&lt;li class=&#34;- topic/li &#34; xtrf=&#34;file:/D:/InfoShare/Data/Publish/Data/ixybkp4tiz4/work/1/en-US/GUID-CC123855-6D3C-458D-8A42-C73711B21E4F.md&#34; xtrc=&#34;li:8;182:3&#34;&gt;&lt;p class=&#34;- topic/p &#34; xtrf=&#34;file:/D:/InfoShare/Data/Publish/Data/ixybkp4tiz4/work/1/en-US/GUID-CC123855-6D3C-458D-8A42-C73711B21E4F.md&#34; xtrc=&#34;p:9;182:3&#34;&gt;Specify the Start address from where the application will run under the &lt;b class=&#34;+ topic/ph hi-d/b &#34; xtrf=&#34;file:/D:/InfoShare/Data/Publish/Data/ixybkp4tiz4/work/1/en-US/GUID-CC123855-6D3C-458D-8A42-C73711B21E4F.md&#34; xtrc=&#34;b:3;182:3&#34;&gt;Application Start Address (Hex)&lt;/b&gt; option in System block in MCC.&lt;/p&gt;&lt;/li&gt;&lt;li class=&#34;- topic/li &#34; xtrf=&#34;file:/D:/InfoShare/Data/Publish/Data/ixybkp4tiz4/work/1/en-US/GUID-CC123855-6D3C-458D-8A42-C73711B21E4F.md&#34; xtrc=&#34;li:9;182:3&#34;&gt;&lt;p class=&#34;- topic/p &#34; xtrf=&#34;file:/D:/InfoShare/Data/Publish/Data/ixybkp4tiz4/work/1/en-US/GUID-CC123855-6D3C-458D-8A42-C73711B21E4F.md&#34; xtrc=&#34;p:10;182:3&#34;&gt;This value should be equal to or greater than the bootloader size and must be aligned to the erase unit size on that device.&lt;/p&gt;&lt;/li&gt;&lt;li class=&#34;- topic/li &#34; xtrf=&#34;file:/D:/InfoShare/Data/Publish/Data/ixybkp4tiz4/work/1/en-US/GUID-CC123855-6D3C-458D-8A42-C73711B21E4F.md&#34; xtrc=&#34;li:10;182:3&#34;&gt;&lt;p class=&#34;- topic/p &#34; xtrf=&#34;file:/D:/InfoShare/Data/Publish/Data/ixybkp4tiz4/work/1/en-US/GUID-CC123855-6D3C-458D-8A42-C73711B21E4F.md&#34; xtrc=&#34;p:11;182:3&#34;&gt;As this value will be used by bootloader to Jump to application at device reset it should match the value provided to bootloader code&lt;/p&gt;&lt;/li&gt;&lt;li class=&#34;- topic/li &#34; xtrf=&#34;file:/D:/InfoShare/Data/Publish/Data/ixybkp4tiz4/work/1/en-US/GUID-CC123855-6D3C-458D-8A42-C73711B21E4F.md&#34; xtrc=&#34;li:11;182:3&#34;&gt;&lt;p class=&#34;- topic/p &#34; xtrf=&#34;file:/D:/InfoShare/Data/Publish/Data/ixybkp4tiz4/work/1/en-US/GUID-CC123855-6D3C-458D-8A42-C73711B21E4F.md&#34; xtrc=&#34;p:12;182:3&#34;&gt;The &lt;b class=&#34;+ topic/ph hi-d/b &#34; xtrf=&#34;file:/D:/InfoShare/Data/Publish/Data/ixybkp4tiz4/work/1/en-US/GUID-CC123855-6D3C-458D-8A42-C73711B21E4F.md&#34; xtrc=&#34;b:4;182:3&#34;&gt;Application Start Address (Hex)&lt;/b&gt; will be used to generate XC32 compiler settings to place the code at intended address&lt;/p&gt;&lt;/li&gt;&lt;li class=&#34;- topic/li &#34; xtrf=&#34;file:/D:/InfoShare/Data/Publish/Data/ixybkp4tiz4/work/1/en-US/GUID-CC123855-6D3C-458D-8A42-C73711B21E4F.md&#34; xtrc=&#34;li:12;182:3&#34;&gt;&lt;p class=&#34;- topic/p &#34; xtrf=&#34;file:/D:/InfoShare/Data/Publish/Data/ixybkp4tiz4/work/1/en-US/GUID-CC123855-6D3C-458D-8A42-C73711B21E4F.md&#34; xtrc=&#34;p:13;182:3&#34;&gt;After the project is regenerated, the ROM_ORIGIN and ROM_LENGTH are the XC32 linker variables which will be overridden with value provided for &lt;b class=&#34;+ topic/ph hi-d/b &#34; xtrf=&#34;file:/D:/InfoShare/Data/Publish/Data/ixybkp4tiz4/work/1/en-US/GUID-CC123855-6D3C-458D-8A42-C73711B21E4F.md&#34; xtrc=&#34;b:5;182:3&#34;&gt;Application Start Address (Hex)&lt;/b&gt; and can be verified under Options for xc32-ld in Project Properties in MPLABX IDE as shown below.&lt;/p&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/ol&gt;&lt;image class=&#34;- topic/image &#34; href=&#34;GUID-8D39F6E2-823C-466E-8C71-1B0E33426459-low.png&#34; placement=&#34;break&#34; xtrf=&#34;file:/D:/InfoShare/Data/Publish/Data/ixybkp4tiz4/work/1/en-US/GUID-CC123855-6D3C-458D-8A42-C73711B21E4F.md&#34; xtrc=&#34;image:2;182:3&#34; dita-ot:image-width=&#34;719&#34; dita-ot:image-height=&#34;400&#34; dita-ot:horizontal-dpi=&#34;96&#34; dita-ot:vertical-dpi=&#34;96&#34;&gt;&lt;alt class=&#34;- topic/alt &#34; xtrf=&#34;file:/D:/InfoShare/Data/Publish/Data/ixybkp4tiz4/work/1/en-US/GUID-CC123855-6D3C-458D-8A42-C73711B21E4F.md&#34; xtrc=&#34;alt:2;182:3&#34;&gt;application_config_xc32_ld_rom&lt;/alt&gt;&lt;/image&gt;&lt;p class=&#34;- topic/p &#34; xtrf=&#34;file:/D:/InfoShare/Data/Publish/Data/ixybkp4tiz4/work/1/en-US/GUID-CC123855-6D3C-458D-8A42-C73711B21E4F.md&#34; xtrc=&#34;p:14;182:3&#34;&gt;&lt;b class=&#34;+ topic/ph hi-d/b &#34; xtrf=&#34;file:/D:/InfoShare/Data/Publish/Data/ixybkp4tiz4/work/1/en-US/GUID-CC123855-6D3C-458D-8A42-C73711B21E4F.md&#34; xtrc=&#34;b:6;182:3&#34;&gt;MPLAB X Settings&lt;/b&gt;&lt;/p&gt;&lt;ul class=&#34;- topic/ul &#34; xtrf=&#34;file:/D:/InfoShare/Data/Publish/Data/ixybkp4tiz4/work/1/en-US/GUID-CC123855-6D3C-458D-8A42-C73711B21E4F.md&#34; xtrc=&#34;ul:3;182:3&#34;&gt;&lt;li class=&#34;- topic/li &#34; xtrf=&#34;file:/D:/InfoShare/Data/Publish/Data/ixybkp4tiz4/work/1/en-US/GUID-CC123855-6D3C-458D-8A42-C73711B21E4F.md&#34; xtrc=&#34;li:13;182:3&#34;&gt;&lt;p class=&#34;- topic/p &#34; xtrf=&#34;file:/D:/InfoShare/Data/Publish/Data/ixybkp4tiz4/work/1/en-US/GUID-CC123855-6D3C-458D-8A42-C73711B21E4F.md&#34; xtrc=&#34;p:15;182:3&#34;&gt;Specifying post build option to automatically generate the binary file from hex file once the build is complete&lt;/p&gt;&lt;codeblock class=&#34;+ topic/pre pr-d/codeblock &#34; xml:space=&#34;preserve&#34; xtrf=&#34;file:/D:/InfoShare/Data/Publish/Data/ixybkp4tiz4/work/1/en-US/GUID-CC123855-6D3C-458D-8A42-C73711B21E4F.md&#34; xtrc=&#34;codeblock:1;182:3&#34;/&gt;&lt;/li&gt;&lt;/ul&gt;&lt;p class=&#34;- topic/p &#34; xtrf=&#34;file:/D:/InfoShare/Data/Publish/Data/ixybkp4tiz4/work/1/en-US/GUID-CC123855-6D3C-458D-8A42-C73711B21E4F.md&#34; xtrc=&#34;p:16;182:3&#34;&gt;${MP_CC_DIR}/xc32-objcopy -I ihex -O binary ${DISTDIR}/${PROJECTNAME}.${IMAGE_TYPE}.hex ${DISTDIR}/${PROJECTNAME}.${IMAGE_TYPE}.bin ```&lt;/p&gt;&lt;image class=&#34;- topic/image &#34; href=&#34;GUID-F52E21DD-7413-4618-A9D9-509C0DF4E71D-low.png&#34; placement=&#34;break&#34; xtrf=&#34;file:/D:/InfoShare/Data/Publish/Data/ixybkp4tiz4/work/1/en-US/GUID-CC123855-6D3C-458D-8A42-C73711B21E4F.md&#34; xtrc=&#34;image:3;182:3&#34; dita-ot:image-width=&#34;782&#34; dita-ot:image-height=&#34;429&#34; dita-ot:horizontal-dpi=&#34;96&#34; dita-ot:vertical-dpi=&#34;96&#34;&gt;&lt;alt class=&#34;- topic/alt &#34; xtrf=&#34;file:/D:/InfoShare/Data/Publish/Data/ixybkp4tiz4/work/1/en-US/GUID-CC123855-6D3C-458D-8A42-C73711B21E4F.md&#34; xtrc=&#34;alt:3;182:3&#34;&gt;application_config_post_build_script&lt;/alt&gt;&lt;/image&gt;&lt;p class=&#34;- topic/p &#34; xtrf=&#34;file:/D:/InfoShare/Data/Publish/Data/ixybkp4tiz4/work/1/en-US/GUID-CC123855-6D3C-458D-8A42-C73711B21E4F.md&#34; xtrc=&#34;p:17;182:3&#34;&gt;&lt;b class=&#34;+ topic/ph hi-d/b &#34; xtrf=&#34;file:/D:/InfoShare/Data/Publish/Data/ixybkp4tiz4/work/1/en-US/GUID-CC123855-6D3C-458D-8A42-C73711B21E4F.md&#34; xtrc=&#34;b:7;182:3&#34;&gt;Additional settings (Optional)&lt;/b&gt;&lt;/p&gt;&lt;ul class=&#34;- topic/ul &#34; xtrf=&#34;file:/D:/InfoShare/Data/Publish/Data/ixybkp4tiz4/work/1/en-US/GUID-CC123855-6D3C-458D-8A42-C73711B21E4F.md&#34; xtrc=&#34;ul:4;182:3&#34;&gt;&lt;li class=&#34;- topic/li &#34; xtrf=&#34;file:/D:/InfoShare/Data/Publish/Data/ixybkp4tiz4/work/1/en-US/GUID-CC123855-6D3C-458D-8A42-C73711B21E4F.md&#34; xtrc=&#34;li:14;182:3&#34;&gt;&lt;p class=&#34;- topic/p &#34; xtrf=&#34;file:/D:/InfoShare/Data/Publish/Data/ixybkp4tiz4/work/1/en-US/GUID-CC123855-6D3C-458D-8A42-C73711B21E4F.md&#34; xtrc=&#34;p:18;182:3&#34;&gt;&lt;b class=&#34;+ topic/ph hi-d/b &#34; xtrf=&#34;file:/D:/InfoShare/Data/Publish/Data/ixybkp4tiz4/work/1/en-US/GUID-CC123855-6D3C-458D-8A42-C73711B21E4F.md&#34; xtrc=&#34;b:8;182:3&#34;&gt;RAM_ORIGIN&lt;/b&gt; and &lt;b class=&#34;+ topic/ph hi-d/b &#34; xtrf=&#34;file:/D:/InfoShare/Data/Publish/Data/ixybkp4tiz4/work/1/en-US/GUID-CC123855-6D3C-458D-8A42-C73711B21E4F.md&#34; xtrc=&#34;b:9;182:3&#34;&gt;RAM_LENGTH&lt;/b&gt; values should be provided for reserving configured bytes from start of RAM to &lt;b class=&#34;+ topic/ph hi-d/b &#34; xtrf=&#34;file:/D:/InfoShare/Data/Publish/Data/ixybkp4tiz4/work/1/en-US/GUID-CC123855-6D3C-458D-8A42-C73711B21E4F.md&#34; xtrc=&#34;b:10;182:3&#34;&gt;trigger bootloader from firmware&lt;/b&gt;&lt;/p&gt;&lt;/li&gt;&lt;li class=&#34;- topic/li &#34; xtrf=&#34;file:/D:/InfoShare/Data/Publish/Data/ixybkp4tiz4/work/1/en-US/GUID-CC123855-6D3C-458D-8A42-C73711B21E4F.md&#34; xtrc=&#34;li:15;182:3&#34;&gt;&lt;p class=&#34;- topic/p &#34; xtrf=&#34;file:/D:/InfoShare/Data/Publish/Data/ixybkp4tiz4/work/1/en-US/GUID-CC123855-6D3C-458D-8A42-C73711B21E4F.md&#34; xtrc=&#34;p:19;182:3&#34;&gt;Under Project Properties, expand options for xc32-ld and define the values for &lt;b class=&#34;+ topic/ph hi-d/b &#34; xtrf=&#34;file:/D:/InfoShare/Data/Publish/Data/ixybkp4tiz4/work/1/en-US/GUID-CC123855-6D3C-458D-8A42-C73711B21E4F.md&#34; xtrc=&#34;b:11;182:3&#34;&gt;RAM_ORIGIN&lt;/b&gt; and &lt;b class=&#34;+ topic/ph hi-d/b &#34; xtrf=&#34;file:/D:/InfoShare/Data/Publish/Data/ixybkp4tiz4/work/1/en-US/GUID-CC123855-6D3C-458D-8A42-C73711B21E4F.md&#34; xtrc=&#34;b:12;182:3&#34;&gt;RAM_LENGTH&lt;/b&gt; under Additional options&lt;/p&gt;&lt;/li&gt;&lt;li class=&#34;- topic/li &#34; xtrf=&#34;file:/D:/InfoShare/Data/Publish/Data/ixybkp4tiz4/work/1/en-US/GUID-CC123855-6D3C-458D-8A42-C73711B21E4F.md&#34; xtrc=&#34;li:16;182:3&#34;&gt;&lt;p class=&#34;- topic/p &#34; xtrf=&#34;file:/D:/InfoShare/Data/Publish/Data/ixybkp4tiz4/work/1/en-US/GUID-CC123855-6D3C-458D-8A42-C73711B21E4F.md&#34; xtrc=&#34;p:20;182:3&#34;&gt;This is optional and can be ignored if not required&lt;/p&gt;&lt;/li&gt;&lt;/ul&gt;&lt;image class=&#34;- topic/image &#34; href=&#34;GUID-7BE7FC9E-92E5-4CD8-9320-2D907D7ADF13-low.png&#34; placement=&#34;break&#34; xtrf=&#34;file:/D:/InfoShare/Data/Publish/Data/ixybkp4tiz4/work/1/en-US/GUID-CC123855-6D3C-458D-8A42-C73711B21E4F.md&#34; xtrc=&#34;image:4;182:3&#34; dita-ot:image-width=&#34;719&#34; dita-ot:image-height=&#34;584&#34; dita-ot:horizontal-dpi=&#34;96&#34; dita-ot:vertical-dpi=&#34;96&#34;&gt;&lt;alt class=&#34;- topic/alt &#34; xtrf=&#34;file:/D:/InfoShare/Data/Publish/Data/ixybkp4tiz4/work/1/en-US/GUID-CC123855-6D3C-458D-8A42-C73711B21E4F.md&#34; xtrc=&#34;alt:4;182:3&#34;&gt;application_config_xc32_ld_ram&lt;/alt&gt;&lt;/image&gt;&lt;/body&gt;&lt;related-links class=&#34;- topic/related-links &#34;&gt;&lt;linkpool class=&#34;- topic/linkpool &#34; mapkeyref=&#34;GUID-F106473B-6078-4EBC-BC30-AAB4409711EA&#34; xtrc=&#34;topicref:36;3:6497&#34; xtrf=&#34;file:/D:/InfoShare/Data/Publish/Data/ixybkp4tiz4/work/1/en-US/GUID-F106473B-6078-4EBC-BC30-AAB4409711EA.ditamap&#34;&gt;&lt;link class=&#34;- topic/link &#34; format=&#34;dita&#34; href=&#34;GUID-1533B544-211D-4FA3-A80B-B55B97CB0311.md&#34; mapclass=&#34;- map/topicref &#34; role=&#34;parent&#34; scope=&#34;local&#34; type=&#34;topic&#34; xtrc=&#34;topicref:34;3:6216&#34; xtrf=&#34;file:/D:/InfoShare/Data/Publish/Data/ixybkp4tiz4/work/1/en-US/GUID-F106473B-6078-4EBC-BC30-AAB4409711EA.ditamap&#34;&gt;&lt;?ditaot usertext?&gt;&lt;linktext class=&#34;- topic/linktext &#34;&gt;&lt;?ditaot gentext?&gt;Configuring an Application to be bootloaded&lt;/linktext&gt;&lt;/link&gt;&lt;/linkpool&gt;&lt;/related-links&gt;&lt;/topic&gt;"/><meta name="wh-source-relpath" content="GUID-CC123855-6D3C-458D-8A42-C73711B21E4F.md"/><meta name="wh-out-relpath" content="GUID-CC123855-6D3C-458D-8A42-C73711B21E4F.html"/>
+    <!-- Latest compiled and minified Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="./oxygen-webhelp/lib/bootstrap/css/bootstrap.min.css"/>
     
-                      window.parent.location.href = origUrl + "?" + url;
+    <link rel="stylesheet" href="./oxygen-webhelp/lib/jquery-ui/jquery-ui.min.css"/>
+    
+    <!-- Template default styles  -->
+    <link rel="stylesheet" type="text/css" href="./oxygen-webhelp/app/topic-page.css?buildId=2022062014"/>
+    
+    
+    <script src="./oxygen-webhelp/lib/jquery/jquery-3.5.1.min.js"></script>
+    
+    <script data-main="./oxygen-webhelp/app/topic-page.js" src="./oxygen-webhelp/lib/requirejs/require.js"></script>
+<link rel="stylesheet" type="text/css" href="oxygen-webhelp/template/microchip.css?buildId=2022062014"/><link rel="stylesheet" type="text/css" href="oxygen-webhelp/template/notes.css?buildId=2022062014"/>
+<script src="mchp-context-help.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,300" rel="stylesheet" type="text/css"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" async="" type="text/javascript"></script>
+</head>
 
-                      return false;
-                    }
-               }
-            }
-				});
-			}
+    <body id="configuring-an-application-to-be-bootloaded-for-cortex-m-based-mcus" class="wh_topic_page frmBody">
+        <a href="#wh_topic_body" class="sr-only sr-only-focusable">
+            Jump to main content
+        </a>
+        
+        
+        
+        
+        <header class="navbar navbar-default wh_header">
+    <div class="container-fluid">
+        <div class="wh_header_flex_container navbar-nav navbar-expand-md navbar-dark">
+            <div class="wh_logo_and_publication_title_container">
+                <div class="wh_logo_and_publication_title">
+                    
+                    <a href="index.html" class=" wh_logo d-none d-sm-block "><img src="oxygen-webhelp\template\resources/images/microchip.png" alt="MPLAB® Harmony Bootloader Application Examples for UART "/></a>
+                    <div class=" wh_publication_title "><a href="index.html">MPLAB® Harmony Bootloader Application Examples for UART </a></div>
+                    
+                </div>
+                
+                
+            </div>
 
-		</script><script language="javascript">
-         
-         function copyContent(content, button) {
-         
-            var textArea = document.createElement("textarea");
-            
-            // Place in the top-left corner of screen regardless of scroll position.
-            textArea.style.position = 'fixed';
-            textArea.style.top = 0;
-            textArea.style.left = 0;
-            
-            // Ensure it has a small width and height. Setting to 1px / 1em
-            // doesn't work as this gives a negative w/h on some browsers.
-            textArea.style.width = '2em';
-            textArea.style.height = '2em';
-            
-            // We don't need padding, reducing the size if it does flash render.
-            textArea.style.padding = 0;
-            
-            // Clean up any borders.
-            textArea.style.border = 'none';
-            textArea.style.outline = 'none';
-            textArea.style.boxShadow = 'none';
-            
-            // Avoid flash of the white box if rendered for any reason.
-            textArea.style.background = 'transparent';
-            
-            textArea.value = content;
-            
-            document.body.appendChild(textArea);
-            textArea.focus();
-            textArea.select();
-            
-            try {
-               var successful = document.execCommand('copy');
-               var msg = successful ? 'successful' : 'unsuccessful';
-               if (!button.classList.contains("copied")){
-                  button.textContent = "Copied";
-                  button.classList.add("copied");
-                  setTimeout(function(){
-                     button.textContent = "Copy";
-                     button.classList.remove("copied");
-                  },1000);
-               }
-            } catch (err) {
-               console.log('Oops, unable to copy');
-            }
-            
-            document.body.removeChild(textArea);
-         }
-         
-         function cpy(id, button) {
-            var element = document.getElementById(id);
-            var content = element.getAttribute("content");
-            
-            copyContent(content, button);
-         }
-         
-         document.addEventListener("DOMContentLoaded", function(event) {
-            document.querySelectorAll(".codeblock").forEach(function(elem) {
-               elem.style.position = "relative";
-               var copy = document.createElement("button");
-               copy.textContent = "Copy";
-               copy.setAttribute("class", "copy-code");
-               
-               var content = elem.textContent;
-               
-               copy.addEventListener("click", function(){
-                  copyContent(content, copy);
-               });
-               
-               elem.addEventListener("mouseenter", function(evt){
-                  elem.prepend(copy);
-               });
-            });
-            
-            document.querySelectorAll(".codeblock").forEach(function(elem) {
-               elem.addEventListener("mouseleave", function(evt){
-                  document.querySelector(".copy-code").remove();
-               });
-            });
-         });
-         
-      </script><script language="javascript">
-          
-          // Add the MathML namespace to html
-          var html = document.getElementsByTagName("html")[0],
-          head = document.getElementsByTagName("head")[0];
-          
-          var mathJax = document.createElement("script");
-          mathJax.src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML";
-          head.appendChild(mathJax);
-          
-          html.setAttribute("xmlns:m","http://www.w3.org/1998/Math/MathML");
-          
-          function inIframe() { try { return window.self !== window.top; } catch (e) { return true; } }
-          
-          if (!inIframe()) { 
-          
-          var Default = "index.html?GUID-CC123855-6D3C-458D-8A42-C73711B21E4F"; 
-          
-          var displaylocation = "value" + window.location.href;
-          
-          var GUIDS = displaylocation.split('GUID');          
-          
-          if (displaylocation.indexOf('#GUID') != -1) {            
-          var First = GUIDS[1].split('.html');  
-          if (GUIDS[3]){First = GUIDS[2].split('.html');}
-          if (GUIDS[4]){First = GUIDS[3].split('.html');}
-          if (GUIDS[5]){First = GUIDS[4].split('.html');}
-          
-          var Second = GUIDS[2].split('#');   
-          if (GUIDS[3]){Second = GUIDS[3].split('#');}
-          if (GUIDS[4]){Second = GUIDS[4].split('#');}
-          if (GUIDS[5]){Second = GUIDS[5].split('#');}
-          
-          Default = "index.html?" + "GUID" + First[0] + "GUID" + Second[0];     
-          }                    
-          window.top.location = Default;
-          }       
-          
-        </script><link rel="stylesheet" type="text/css" href="syntax-highlight.css" /><style xml:space="">
-        
-          button.copy-code{
-            display:none;
-            padding:0.7em 1.4em;
-            margin:0 0.3em 0.3em 0;
-            border-radius:0.15em;
-            box-sizing: border-box;
-            text-decoration:none;
-            font-family:'Roboto',sans-serif;
-            text-transform:uppercase;
-            font-weight:400;
-            color:#FFFFFF;
-            background-color:#9c9c9c;
-            box-shadow:inset 0 -0.6em 0 -0.35em rgba(0,0,0,0.17);
-            text-align:center;
-            position:relative;
-            border: 0;
-            float: right;
-            border-radius: .5em;
-            cursor: pointer;
-          }
-          button.copy-code:active{
-            top:0.1em;
-          }
-          
-          pre:hover button.copy-code{
-            display: inline-block !important;
-          }
-          button.copy-code.copied {
-            cursor: default !important;
-          }
-          
-          
-          @media all and (max-width:30em){
-            button.copy-code{
-              display:block;
-              margin:0.4em auto;
-            }
-          }
+            <div class="wh_top_menu_and_indexterms_link collapse navbar-collapse" id="wh_top_menu_and_indexterms_link">
+                
+                
+                
+                
+            </div>
+        </div>
+    </div>
+</header>
         
         
-      </style><link rel="stylesheet" type="text/css" href="syntax-highlight.css" /></head>
-<body id="configuring-an-application-to-be-bootloaded-for-cortex-m-based-mcus">
-<h1 class="title topictitle1" id="ariaid-title1">Configuring an application to be bootloaded for CORTEX-M based MCUs</h1><div class="body"><p class="p"><strong class="ph b">Application settings in MHC system configuration</strong></p>
-<ol class="ol"><li class="li"><span class="indent-level-default">1.</span><p class="p">Launch MHC for the application project to be configured</p>
-</li>
-<li class="li"><span class="indent-level-default">2.</span><p class="p">Select <strong class="ph b">system</strong> component from the project graph and configure the below highlighted settings</p>
-</li>
-</ol>
-<br /><img class="image" src="GUID-81999D08-3DA0-42E0-98EB-26FCB8E75741-low.png" alt="application_config_mhc_setting" /><br /><ol class="ol"><li class="li"><span class="indent-level-default">1.</span><p class="p">Disable Fuse Settings:</p>
-<ul class="ul"><li class="li"><p class="p">Fuse settings needs to be disabled for the application which will be boot-loaded as the fuse settings are supposed to be programmed through programming tool from bootloader code. Also the fuse settings are not programmable through firmware</p>
-</li>
-<li class="li"><p class="p">Enabling the fuse settings also increases the size of the binary when generated through the hex file</p>
-</li>
-<li class="li"><p class="p">When updating the bootloader itself, make sure that the fuse settings for the bootloader application are also disabled</p>
-</li>
-</ul>
-</li>
-<li class="li"><span class="indent-level-default">2.</span><p class="p">Specify the Application Start Address:</p>
-<ul class="ul"><li class="li"><p class="p">Specify the Start address from where the application will run under the <strong class="ph b">Application Start Address (Hex)</strong> option in System block in MHC.</p>
-</li>
-<li class="li"><p class="p">This value should be equal to or greater than the bootloader size and must be aligned to the erase unit size on that device.</p>
-</li>
-<li class="li"><p class="p">As this value will be used by bootloader to Jump to application at device reset it should match the value provided to bootloader code</p>
-</li>
-<li class="li"><p class="p">The <strong class="ph b">Application Start Address (Hex)</strong> will be used to generate XC32 compiler settings to place the code at intended address</p>
-</li>
-<li class="li"><p class="p">After the project is regenerated, the ROM_ORIGIN and ROM_LENGTH are the XC32 linker variables which will be overridden with value provided for <strong class="ph b">Application Start Address (Hex)</strong> and can be verified under Options for xc32-ld in Project Properties in MPLABX IDE as shown below.</p>
-</li>
-</ul>
-</li>
-</ol>
-<br /><img class="image" src="GUID-8D39F6E2-823C-466E-8C71-1B0E33426459-low.png" alt="application_config_xc32_ld_rom" /><br /><p class="p"><strong class="ph b">MPLAB X Settings</strong></p>
-<ul class="ul"><li class="li"><p class="p">Specifying post build option to automatically generate the binary file from hex file once the build is complete</p>
-<pre class="pre codeblock"><code id="d14084e78" content=""></code></pre></li>
-</ul>
-<p class="p">${MP_CC_DIR}/xc32-objcopy -I ihex -O binary ${DISTDIR}/${PROJECTNAME}.${IMAGE_TYPE}.hex ${DISTDIR}/${PROJECTNAME}.${IMAGE_TYPE}.bin
-```</p>
-<br /><img class="image" src="GUID-F52E21DD-7413-4618-A9D9-509C0DF4E71D-low.png" alt="application_config_post_build_script" /><br /><p class="p"><strong class="ph b">Additional settings (Optional)</strong></p>
-<ul class="ul"><li class="li"><p class="p"><strong class="ph b">RAM_ORIGIN</strong> and <strong class="ph b">RAM_LENGTH</strong> values should be provided for reserving configured bytes from start of RAM to <strong class="ph b">trigger bootloader from firmware</strong></p>
-</li>
-<li class="li"><p class="p">Under Project Properties, expand options for xc32-ld and define the values for <strong class="ph b">RAM_ORIGIN</strong> and <strong class="ph b">RAM_LENGTH</strong> under Additional options</p>
-</li>
-<li class="li"><p class="p">This is optional and can be ignored if not required</p>
-</li>
-</ul>
-<br /><img class="image" src="GUID-7BE7FC9E-92E5-4CD8-9320-2D907D7ADF13-low.png" alt="application_config_xc32_ld_ram" /><br /></div>
-<div class="related-links">
-<div class="familylinks">
-<div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="GUID-1533B544-211D-4FA3-A80B-B55B97CB0311.html">Configuring an Application to be bootloaded</a></div>
+         
+        
+        <div class=" wh_search_input navbar-form wh_topic_page_search search " role="form">
+            
+            
+            
+            <form id="searchForm" method="get" role="search" action="search.html"><div><input type="search" placeholder="Search " class="wh_search_textfield" id="textToSearch" name="searchQuery" aria-label="Search query" required="required"/><button type="submit" class="wh_search_button" aria-label="Search"><span class="search_input_text">Search</span></button></div></form>
+            
+            <div class="mchp-color-stripe-grid-container">
+  <div class="mchp-main-bar mchp-orange-bar"></div>
+  <div class="mchp-main-bar mchp-blue-bar"></div>
+  <div class="mchp-main-bar mchp-green-bar"></div>
 </div>
-</div></body>
+            
+        </div>
+        
+        <div class="container-fluid" id="wh_topic_container">
+            <div class="row">
+
+                <nav class="wh_tools d-print-none navbar-expand-md" aria-label="Tools">
+                    
+                    <div data-tooltip-position="bottom" class=" wh_breadcrumb "><ol class="d-print-none"><li><span class="home"><a href="index.html"><span>Home</span></a></span></li><li><div class="topicref" data-id="mplab-harmony-bootloader-application-examples-for-uart"><div class="title"><a href="GUID-B72472E8-6E25-4036-8A27-70D70540E725.html"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">1</ph>
+MPLAB® Harmony Bootloader Application Examples for UART</a></div></div></li><li><div class="topicref" data-id="configuring-an-application-to-be-bootloaded"><div class="title"><a href="GUID-1533B544-211D-4FA3-A80B-B55B97CB0311.html"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">1.4</ph>
+Configuring an Application to be bootloaded</a></div></div></li><li class="active"><div class="topicref" data-id="configuring-an-application-to-be-bootloaded-for-cortex-m-based-mcus"><div class="title"><a href="GUID-CC123855-6D3C-458D-8A42-C73711B21E4F.html"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">1.4.2</ph>
+Configuring an application to be bootloaded for CORTEX-M based MCUs</a></div></div></li></ol></div>
+                    
+                    
+                    
+                    <div class="wh_right_tools">
+                        <button class="wh_hide_highlight" aria-label="Toggle search highlights" title="Toggle search highlights"></button>
+                        <button class="webhelp_expand_collapse_sections" data-next-state="collapsed" aria-label="Collapse sections" title="Collapse sections"></button>
+                        
+                        
+                        
+                        
+                        <div class=" wh_print_link print d-none d-md-inline-block "><button onClick="window.print()" title="Print this page" aria-label="Print this page"></button></div>
+                        
+                        <button type="button" id="wh_toc_button" class="custom-toggler navbar-toggler collapsed wh_toggle_button navbar-light" aria-expanded="false" aria-label="Toggle publishing table of content" aria-controls="wh_publication_toc">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                    </div>
+                    
+                </nav>
+            </div>
+            
+            
+            
+            
+            <div class="wh_content_area">
+                <div class="row">
+                    
+                        <nav id="wh_publication_toc" class="col-lg-3 col-md-3 col-sm-12 d-md-block d-none d-print-none" aria-label="Table of Contents Container">
+                            <div id="wh_publication_toc_content">
+		                        
+                            	<div class=" wh_publication_toc " data-tooltip-position="right"><span class="expand-button-action-labels"><span id="button-expand-action" role="button" aria-label="Expand"></span><span id="button-collapse-action" role="button" aria-label="Collapse"></span><span id="button-pending-action" role="button" aria-label="Pending"></span></span><ul role="tree" aria-label="Table of Contents"><li role="treeitem" aria-expanded="true"><div data-tocid="mplab-harmony-bootloader-application-examples-for-uart-d495e9" class="topicref" data-id="mplab-harmony-bootloader-application-examples-for-uart" data-state="expanded"><span role="button" tabindex="0" aria-labelledby="button-collapse-action mplab-harmony-bootloader-application-examples-for-uart-d495e9-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-B72472E8-6E25-4036-8A27-70D70540E725.html" id="mplab-harmony-bootloader-application-examples-for-uart-d495e9-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">1</ph>
+MPLAB® Harmony Bootloader Application Examples for UART</a></div></div><ul role="group" class="navbar-nav nav-list"><li role="treeitem" aria-expanded="false"><div data-tocid="uart-bootloader-d495e17" class="topicref" data-id="uart-bootloader" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action uart-bootloader-d495e17-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-2A9EAD6F-16A9-48AC-AB83-C48C263D2A5F.html" id="uart-bootloader-d495e17-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">1.1</ph>
+UART Bootloader</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="uart-fail-safe-bootloader-d495e203" class="topicref" data-id="uart-fail-safe-bootloader" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action uart-fail-safe-bootloader-d495e203-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-A8350647-8A43-43D5-8813-E9E69F137E7E.html" id="uart-fail-safe-bootloader-d495e203-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">1.2</ph>
+UART Fail Safe Bootloader</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="uart-bootloader-tools-help-d495e251" class="topicref" data-id="uart-bootloader-tools-help" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action uart-bootloader-tools-help-d495e251-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-FF183F68-D719-491F-A013-76044AD83756.html" id="uart-bootloader-tools-help-d495e251-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">1.3</ph>
+UART Bootloader Tools Help</a></div></div></li><li role="treeitem" aria-expanded="true"><div data-tocid="configuring-an-application-to-be-bootloaded-d495e275" class="topicref" data-id="configuring-an-application-to-be-bootloaded" data-state="expanded"><span role="button" tabindex="0" aria-labelledby="button-collapse-action configuring-an-application-to-be-bootloaded-d495e275-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-1533B544-211D-4FA3-A80B-B55B97CB0311.html" id="configuring-an-application-to-be-bootloaded-d495e275-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">1.4</ph>
+Configuring an Application to be bootloaded</a></div></div><ul role="group" class="navbar-nav nav-list"><li role="treeitem"><div data-tocid="configuring-an-application-to-be-bootloaded-for-mips-based-mcus-d495e283" class="topicref" data-id="configuring-an-application-to-be-bootloaded-for-mips-based-mcus" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-3E6213D5-3312-49A9-A6C7-897B8AD57414.html" id="configuring-an-application-to-be-bootloaded-for-mips-based-mcus-d495e283-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">1.4.1</ph>
+Configuring an application to be bootloaded for MIPS based MCUs</a></div></div></li><li role="treeitem" class="active"><div data-tocid="configuring-an-application-to-be-bootloaded-for-cortex-m-based-mcus-d495e291" class="topicref" data-id="configuring-an-application-to-be-bootloaded-for-cortex-m-based-mcus" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-CC123855-6D3C-458D-8A42-C73711B21E4F.html" id="configuring-an-application-to-be-bootloaded-for-cortex-m-based-mcus-d495e291-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">1.4.2</ph>
+Configuring an application to be bootloaded for CORTEX-M based MCUs</a></div></div></li></ul></li></ul></li></ul></div>
+		                        
+                            </div>
+                        </nav>
+                    
+                    
+                    <div class="col-lg-9 col-md-9 col-sm-12" id="wh_topic_body">
+                        <button id="wh_close_publication_toc_button" class="close-toc-button d-none" aria-label="Toggle publishing table of content" aria-controls="wh_publication_toc" aria-expanded="true">
+                            <span class="close-toc-icon-container">
+                                <span class="close-toc-icon"></span>     
+                            </span>
+                        </button>
+                        
+                        
+                        <div class=" wh_topic_content body "><main role="main"><article role="article" aria-labelledby="ariaid-title1"><h1 class="- topic/title title topictitle1" id="ariaid-title1">1.4.2 Configuring an application to be bootloaded for CORTEX-M based MCUs</h1><div class="- topic/body body"><p class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Application settings in MCC system configuration</strong></p><ol class="- topic/ol ol"><li class="- topic/li li"><p class="- topic/p p">Launch MCC for the application project to be configured</p></li><li class="- topic/li li"><p class="- topic/p p">Select <strong class="+ topic/ph hi-d/b ph b">system</strong> component from the project graph and configure the below highlighted settings</p></li></ol><img class="- topic/image image break" src="GUID-81999D08-3DA0-42E0-98EB-26FCB8E75741-low.png" alt="application_config_mhc_setting"/><ol class="- topic/ol ol"><li class="- topic/li li"><p class="- topic/p p">Disable Fuse Settings:</p><ul class="- topic/ul ul"><li class="- topic/li li"><p class="- topic/p p">Fuse settings needs to be disabled for the application which will be boot-loaded as the fuse settings are supposed to be programmed through programming tool from bootloader code. Also the fuse settings are not programmable through firmware</p></li><li class="- topic/li li"><p class="- topic/p p">Enabling the fuse settings also increases the size of the binary when generated through the hex file</p></li><li class="- topic/li li"><p class="- topic/p p">When updating the bootloader itself, make sure that the fuse settings for the bootloader application are also disabled</p></li></ul></li><li class="- topic/li li"><p class="- topic/p p">Specify the Application Start Address:</p><ul class="- topic/ul ul"><li class="- topic/li li"><p class="- topic/p p">Specify the Start address from where the application will run under the <strong class="+ topic/ph hi-d/b ph b">Application Start Address (Hex)</strong> option in System block in MCC.</p></li><li class="- topic/li li"><p class="- topic/p p">This value should be equal to or greater than the bootloader size and must be aligned to the erase unit size on that device.</p></li><li class="- topic/li li"><p class="- topic/p p">As this value will be used by bootloader to Jump to application at device reset it should match the value provided to bootloader code</p></li><li class="- topic/li li"><p class="- topic/p p">The <strong class="+ topic/ph hi-d/b ph b">Application Start Address (Hex)</strong> will be used to generate XC32 compiler settings to place the code at intended address</p></li><li class="- topic/li li"><p class="- topic/p p">After the project is regenerated, the ROM_ORIGIN and ROM_LENGTH are the XC32 linker variables which will be overridden with value provided for <strong class="+ topic/ph hi-d/b ph b">Application Start Address (Hex)</strong> and can be verified under Options for xc32-ld in Project Properties in MPLABX IDE as shown below.</p></li></ul></li></ol><img class="- topic/image image break" src="GUID-8D39F6E2-823C-466E-8C71-1B0E33426459-low.png" alt="application_config_xc32_ld_rom"/><p class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">MPLAB X Settings</strong></p><ul class="- topic/ul ul"><li class="- topic/li li"><p class="- topic/p p">Specifying post build option to automatically generate the binary file from hex file once the build is complete</p><pre class="+ topic/pre pr-d/codeblock pre codeblock"><code></code></pre></li></ul><p class="- topic/p p">${MP_CC_DIR}/xc32-objcopy -I ihex -O binary ${DISTDIR}/${PROJECTNAME}.${IMAGE_TYPE}.hex ${DISTDIR}/${PROJECTNAME}.${IMAGE_TYPE}.bin
+```</p><img class="- topic/image image break" src="GUID-F52E21DD-7413-4618-A9D9-509C0DF4E71D-low.png" alt="application_config_post_build_script"/><p class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Additional settings (Optional)</strong></p><ul class="- topic/ul ul"><li class="- topic/li li"><p class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">RAM_ORIGIN</strong> and <strong class="+ topic/ph hi-d/b ph b">RAM_LENGTH</strong> values should be provided for reserving configured bytes from start of RAM to <strong class="+ topic/ph hi-d/b ph b">trigger bootloader from firmware</strong></p></li><li class="- topic/li li"><p class="- topic/p p">Under Project Properties, expand options for xc32-ld and define the values for <strong class="+ topic/ph hi-d/b ph b">RAM_ORIGIN</strong> and <strong class="+ topic/ph hi-d/b ph b">RAM_LENGTH</strong> under Additional options</p></li><li class="- topic/li li"><p class="- topic/p p">This is optional and can be ignored if not required</p></li></ul><img class="- topic/image image break" src="GUID-7BE7FC9E-92E5-4CD8-9320-2D907D7ADF13-low.png" alt="application_config_xc32_ld_ram"/></div></article></main></div>
+                        
+                        
+                        
+                        
+                        
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            
+            
+        </div> 
+        <footer class="navbar navbar-default wh_footer">
+  <div class=" footer-container mx-auto ">
+    <div class="footer">
+  <div class="mchp-wh-footer">
+    <div class="mchp-footer">
+      <div class="mchp-footer-tier1">
+        <div class="spacer"></div>
+        <div class="mchp-footer-container">
+          <div class="mchp-footer-links mchp-social-media-links">
+            <div class="mchp-component-items">
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.facebook.com/pages/Microchip-Technology-Inc/20320981741" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip Facebook" src="oxygen-webhelp/template/resources/images/201016-corp-facebook.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.linkedin.com/company/microchip-technology" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip LinkedIn" src="oxygen-webhelp/template/resources/images/201016-corp-linkedin.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://twitter.com/MicrochipTech" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip Twitter" src="oxygen-webhelp/template/resources/images/201016-corp-twitter.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.youtube.com/user/MicrochipTechnology" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip YouTube" src="oxygen-webhelp/template/resources/images/201016-corp-youtube.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.instagram.com/microchiptechnologyinc/" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip Instagram" src="oxygen-webhelp/template/resources/images/201016-corp-instagram.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.weibo.com/microchiptech" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip Weibo" src="oxygen-webhelp/template/resources/images/201016-corp-weibo.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.microchip.com/en-us/about/blog" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip Blog" src="oxygen-webhelp/template/resources/images/201016-corp-blog.png"/>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="mchp-footer-links">
+            <div class="mchp-component-items">
+              <div class="mchp-component-item">
+                <div class="link">
+                  <a href="https://www.microchip.com/about-us/contact-us" class="mchp-link__link">Contact</a>
+                  <span class="mchp-link__separator">|</span>
+                </div>
+              </div>
+              <div class="mchp-component-item ">
+                <div class="link">
+                  <a href="https://www.microchip.com/en-us/about/legal-information" class="mchp-link__link">Legal</a>
+                  <span class="mchp-link__separator">|</span>
+                </div>
+              </div>
+              <div class="mchp-component-item ">
+                <div class="link">
+                  <a href="https://www.microchip.com/en-us/about/legal-information/privacy-policy" class="mchp-link__link">Privacy Policy</a>
+                  <span class="mchp-link__separator">|</span>
+                </div>
+              </div>
+              <div class="mchp-component-item ">
+                <div class="link">
+                  <a href="https://www.microchip.com/en-us/about/legal-information/microchip-cookie-statement" class="mchp-link__link">Cookies</a>
+                  <span class="mchp-link__separator">|</span>
+                </div>
+              </div>
+              <div class="mchp-component-item">
+                <div class="link">
+                  <a href="https://careers.microchip.com/" class="mchp-link__link">Careers</a>
+                  <span class="mchp-link__separator"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="mchp-footer-newsletter">
+            <div class="cmp-text">
+              <p>Stay on the leading edge with our blog</p>
+            </div>
+            <div class="mchp-button-wrapper">
+              <a role="button" href="https://www.microchip.com/en-us/about/blog" class="mchp-button mchp-button-regular solid">
+                <span class="mchp-button__span">MicroSolutions</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="graphic">
+          <img src="oxygen-webhelp/template/resources/images/footer-graphic.png"/>
+        </div>
+      </div>
+      <div class="mchp-footer-tier2">
+        <p class="mchp-copyright">© Copyright 1998-2022 Microchip Technology Inc. All rights reserved.</p>
+      </div>
+    </div>
+  </div>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async="true" src="https://www.googletagmanager.com/gtag/js?id=UA-2724382-19"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];  
+    function gtag(){dataLayer.push(arguments);}  
+    gtag('js', new Date());   
+    gtag('config', 'UA-2724382-19');
+  </script>
+</div>
+  </div>
+</footer>
+        
+        <div id="go2top" class="d-print-none">
+            <span class="oxy-icon oxy-icon-up"></span>
+        </div>
+        
+        <div id="modal_img_large" class="modal">
+            <span class="close oxy-icon oxy-icon-remove"></span>
+            <div id="modal_img_container"></div>
+            <div id="caption"></div>
+        </div>
+        
+        
+        
+    </body>
 </html>
