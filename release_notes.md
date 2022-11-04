@@ -51,10 +51,10 @@ nav_order: 99
 
 ### Development Tools
 
-- [MPLAB® X IDE v6.00](https://www.microchip.com/mplab/mplab-x-ide)
+- [MPLAB® X IDE v6.05](https://www.microchip.com/mplab/mplab-x-ide)
 - MPLAB® X IDE plug-ins:
   - MPLAB® Code Configurator (MCC) v5.1.17
-- [MPLAB® XC32 C/C++ Compiler v4.10](https://www.microchip.com/mplab/compilers)
+- [MPLAB® XC32 C/C++ Compiler v4.20](https://www.microchip.com/mplab/compilers)
 
 
 ## UART Bootloader Applications Release v3.1.1
