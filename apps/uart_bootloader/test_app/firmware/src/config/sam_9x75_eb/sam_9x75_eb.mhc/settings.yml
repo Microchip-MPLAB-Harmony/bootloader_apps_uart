@@ -1,0 +1,14 @@
+format_version: v1.0
+configName: sam_9x75_eb
+folderName: sam_9x75_eb
+frameworkPath: C:\h3
+processor: SAM9X75
+projectName: sam_9x75_eb
+settings:
+  PackageFilter: ''
+  FORCE_OPTIMIZATION: 'false'
+  GENERATE_BACKUP: 'true'
+  TRUSTZONE: 'false'
+  CMSISPath: dev_packs\arm\CMSIS\5.8.0
+  MERGE_STRATEGY: USER_ALL
+  DFPPath: dev_packs\Microchip\SAM9X7_DFP\1.1.120\atdf\SAM9X75.atdf
