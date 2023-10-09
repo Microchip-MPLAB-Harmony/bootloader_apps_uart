@@ -1,0 +1,14 @@
+format_version: v1.0
+configName: sam_9x60_curiosity
+folderName: sam_9x60_curiosity
+frameworkPath: C:\h3
+processor: SAM9X60D1G
+projectName: sam_9x60_curiosity
+settings:
+  PackageFilter: ''
+  FORCE_OPTIMIZATION: 'false'
+  GENERATE_BACKUP: 'true'
+  TRUSTZONE: 'false'
+  CMSISPath: dev_packs\arm\CMSIS\5.8.0
+  MERGE_STRATEGY: USER_ALL
+  DFPPath: dev_packs\Microchip\SAM9X6_DFP\1.7.85\atdf\SAM9X60D1G.atdf
