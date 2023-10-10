@@ -405,6 +405,11 @@
         <pack name="SAMA7G5_DFP" vendor="Microchip" version="1.1.173"/>
       </packs>
       <ScriptingSettings>
+        <ScriptingSetting key="boot.load_adr" value=""/>
+        <ScriptingSetting key="boot.use" value="true"/>
+        <ScriptingSetting key="boot.entry_adr" value=""/>
+        <ScriptingSetting key="boot.path" value="${ProjectDir}\..\..\..\..\deps\at91bootstrap_binaries_sam_a7g5_ek\at91bootstrap.elf"/>
+        <ScriptingSetting key="boot.prj" value=""/>
       </ScriptingSettings>
       <compileType>
         <linkerTool>
