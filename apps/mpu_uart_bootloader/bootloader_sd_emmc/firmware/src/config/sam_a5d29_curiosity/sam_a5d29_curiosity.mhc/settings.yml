@@ -1,0 +1,14 @@
+format_version: v1.0
+configName: sam_a5d29_curiosity
+folderName: sam_a5d29_curiosity
+frameworkPath: C:\h3
+processor: ATSAMA5D29
+projectName: sam_a5d29_curiosity
+settings:
+  PackageFilter: ''
+  FORCE_OPTIMIZATION: 'false'
+  GENERATE_BACKUP: 'true'
+  TRUSTZONE: 'false'
+  CMSISPath: dev_packs\arm\CMSIS\5.8.0
+  MERGE_STRATEGY: USER_ALL
+  DFPPath: dev_packs\Microchip\SAMA5D2_DFP\1.9.106\atdf\ATSAMA5D29.atdf
