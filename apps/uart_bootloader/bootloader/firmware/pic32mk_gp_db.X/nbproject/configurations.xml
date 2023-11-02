@@ -110,7 +110,6 @@
             <itemPath>../src/config/pic32mk_gp_db/bootloader/bootloader_common.c</itemPath>
           </logicalFolder>
           <itemPath>../src/config/pic32mk_gp_db/initialization.c</itemPath>
-          <itemPath>../src/config/pic32mk_gp_db/exceptions.c</itemPath>
         </logicalFolder>
       </logicalFolder>
       <itemPath>../src/main.c</itemPath>

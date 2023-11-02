@@ -1,27 +1,19 @@
 /*******************************************************************************
- System Tasks File
+  Bootloader Interrupt Header File
 
   File Name:
-    tasks.c
+    bootloader_interrupt.h
 
   Summary:
-    This file contains source code necessary to maintain system's polled tasks.
+    This file contains function prototype declarations.
 
   Description:
-    This file contains source code necessary to maintain system's polled tasks.
-    It implements the "SYS_Tasks" function that calls the individual "Tasks"
-    functions for all polled MPLAB Harmony modules in the system.
-
-  Remarks:
-    This file requires access to the systemObjects global data structure that
-    contains the object handles to all MPLAB Harmony module objects executing
-    polled in the system.  These handles are passed into the individual module
-    "Tasks" functions to identify the instance of the module to maintain.
+    This file contains function prototype declarations.
  *******************************************************************************/
 
 // DOM-IGNORE-BEGIN
 /*******************************************************************************
-* Copyright (C) 2018 Microchip Technology Inc. and its subsidiaries.
+* Copyright (C) 2023 Microchip Technology Inc. and its subsidiaries.
 *
 * Subject to your compliance with these terms, you may use Microchip software
 * and any derivatives exclusively with Microchip products. It is your
@@ -46,50 +38,14 @@
 
 // *****************************************************************************
 // *****************************************************************************
-// Section: Included Files
+// Section: Include Files
 // *****************************************************************************
 // *****************************************************************************
 
-#include "configuration.h"
-#include "definitions.h"
+#ifndef BOOTLOADER_INTERRUPT_H
+#define BOOTLOADER_INTERRUPT_H
 
+void NonMaskableInt_Handler(void);
+void HardFault_Handler(void);
 
-
-
-// *****************************************************************************
-// *****************************************************************************
-// Section: System "Tasks" Routine
-// *****************************************************************************
-// *****************************************************************************
-
-/*******************************************************************************
-  Function:
-    void SYS_Tasks ( void )
-
-  Remarks:
-    See prototype in system/common/sys_module.h.
-*/
-void SYS_Tasks ( void )
-{
-    /* Maintain system services */
-    
-
-    /* Maintain Device Drivers */
-    
-
-    /* Maintain Middleware & Other Libraries */
-    
-
-    /* Maintain the application's state machine. */
-        /* Call Application task APP. */
-    APP_Tasks();
-
-
-
-
-}
-
-/*******************************************************************************
- End of File
- */
-
+#endif      //BOOTLOADER_INTERRUPT_H

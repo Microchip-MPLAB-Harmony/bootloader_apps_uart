@@ -110,7 +110,6 @@
             <itemPath>../src/config/pic32mz_das_sk/bootloader/bootloader_common.c</itemPath>
           </logicalFolder>
           <itemPath>../src/config/pic32mz_das_sk/initialization.c</itemPath>
-          <itemPath>../src/config/pic32mz_das_sk/exceptions.c</itemPath>
         </logicalFolder>
       </logicalFolder>
       <itemPath>../src/main.c</itemPath>
@@ -401,6 +400,7 @@
         <property key="ToolFirmwareOption.UseLatestFirmware" value="true"/>
         <property key="debugoptions.debug-startup" value="Use system settings"/>
         <property key="debugoptions.reset-behaviour" value="Use system settings"/>
+        <property key="firmware.download.all" value="false"/>
         <property key="lastid" value=""/>
         <property key="memories.configurationmemory" value="true"/>
         <property key="memories.dataflash" value="true"/>

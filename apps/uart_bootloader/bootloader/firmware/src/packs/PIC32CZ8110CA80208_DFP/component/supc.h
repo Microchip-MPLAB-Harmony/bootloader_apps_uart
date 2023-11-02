@@ -1,7 +1,7 @@
 /*
  * Component description for SUPC
  *
- * Copyright (c) 2022 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2023 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,7 +20,7 @@
  *
  */
 
-/* file generated from device description version 2022-03-14T05:06:26Z */
+/* file generated from device description version 2023-05-18T19:14:05Z */
 #ifndef _PIC32CZCA80_SUPC_COMPONENT_H_
 #define _PIC32CZCA80_SUPC_COMPONENT_H_
 
@@ -207,7 +207,7 @@
 
 
 /* -------- SUPC_VREGCTRL : (SUPC Offset: 0x1C) (R/W 32) VREG Control -------- */
-#define SUPC_VREGCTRL_RESETVALUE              _UINT32_(0x30)                                       /*  (SUPC_VREGCTRL) VREG Control  Reset Value */
+#define SUPC_VREGCTRL_RESETVALUE              _UINT32_(0x00)                                       /*  (SUPC_VREGCTRL) VREG Control  Reset Value */
 
 #define SUPC_VREGCTRL_VREGOUT_Pos             _UINT32_(0)                                          /* (SUPC_VREGCTRL) VREG Output Control in RUN mode only. Enable by production fuse by CALSUPC.VREGOUTEN Position */
 #define SUPC_VREGCTRL_VREGOUT_Msk             (_UINT32_(0x3) << SUPC_VREGCTRL_VREGOUT_Pos)         /* (SUPC_VREGCTRL) VREG Output Control in RUN mode only. Enable by production fuse by CALSUPC.VREGOUTEN Mask */
@@ -225,20 +225,12 @@
 #define   SUPC_VREGCTRL_OFFSTDBY_ON_Val       _UINT32_(0x1)                                        /* (SUPC_VREGCTRL) In standby mode, VREGSW1,2,3 are ON  */
 #define SUPC_VREGCTRL_OFFSTDBY_OFF            (SUPC_VREGCTRL_OFFSTDBY_OFF_Val << SUPC_VREGCTRL_OFFSTDBY_Pos) /* (SUPC_VREGCTRL) In standby mode, VREGSW1,2,3 are OFF Position  */
 #define SUPC_VREGCTRL_OFFSTDBY_ON             (SUPC_VREGCTRL_OFFSTDBY_ON_Val << SUPC_VREGCTRL_OFFSTDBY_Pos) /* (SUPC_VREGCTRL) In standby mode, VREGSW1,2,3 are ON Position  */
-#define SUPC_VREGCTRL_LVSTDBY_Pos             _UINT32_(4)                                          /* (SUPC_VREGCTRL) Low Voltage Standby Enable Position */
-#define SUPC_VREGCTRL_LVSTDBY_Msk             (_UINT32_(0x1) << SUPC_VREGCTRL_LVSTDBY_Pos)         /* (SUPC_VREGCTRL) Low Voltage Standby Enable Mask */
-#define SUPC_VREGCTRL_LVSTDBY(value)          (SUPC_VREGCTRL_LVSTDBY_Msk & (_UINT32_(value) << SUPC_VREGCTRL_LVSTDBY_Pos)) /* Assigment of value for LVSTDBY in the SUPC_VREGCTRL register */
-#define   SUPC_VREGCTRL_LVSTDBY_1p2v_Val      _UINT32_(0x0)                                        /* (SUPC_VREGCTRL) In standby mode, VDDCORE_BU, VDDCORE_RAM, VDDCORE_SW and optionnaly VDDCOREUSB/PLL are set to 1.2v.  */
-#define   SUPC_VREGCTRL_LVSTDBY_0p8v_Val      _UINT32_(0x1)                                        /* (SUPC_VREGCTRL) In standby mode, VDDCORE_BU, VDDCORE_RAM, VDDCORE_SW and optionnaly VDDCOREUSB/PLL are set to 0.8v.  */
-#define SUPC_VREGCTRL_LVSTDBY_1p2v            (SUPC_VREGCTRL_LVSTDBY_1p2v_Val << SUPC_VREGCTRL_LVSTDBY_Pos) /* (SUPC_VREGCTRL) In standby mode, VDDCORE_BU, VDDCORE_RAM, VDDCORE_SW and optionnaly VDDCOREUSB/PLL are set to 1.2v. Position  */
-#define SUPC_VREGCTRL_LVSTDBY_0p8v            (SUPC_VREGCTRL_LVSTDBY_0p8v_Val << SUPC_VREGCTRL_LVSTDBY_Pos) /* (SUPC_VREGCTRL) In standby mode, VDDCORE_BU, VDDCORE_RAM, VDDCORE_SW and optionnaly VDDCOREUSB/PLL are set to 0.8v. Position  */
-#define SUPC_VREGCTRL_LVHIB_Pos               _UINT32_(5)                                          /* (SUPC_VREGCTRL) Low Voltage Hibernate Enable Position */
-#define SUPC_VREGCTRL_LVHIB_Msk               (_UINT32_(0x1) << SUPC_VREGCTRL_LVHIB_Pos)           /* (SUPC_VREGCTRL) Low Voltage Hibernate Enable Mask */
-#define SUPC_VREGCTRL_LVHIB(value)            (SUPC_VREGCTRL_LVHIB_Msk & (_UINT32_(value) << SUPC_VREGCTRL_LVHIB_Pos)) /* Assigment of value for LVHIB in the SUPC_VREGCTRL register */
-#define   SUPC_VREGCTRL_LVHIB_1p2v_Val        _UINT32_(0x0)                                        /* (SUPC_VREGCTRL) In Hibernate mode, VDDCORE_BU and VDDCORE_RAM are set to 1.2v.  */
-#define   SUPC_VREGCTRL_LVHIB_0p8v_Val        _UINT32_(0x1)                                        /* (SUPC_VREGCTRL) In Hibernate mode, VDDCORE_BU and VDDCORE_RAM are set to 0.8v  */
-#define SUPC_VREGCTRL_LVHIB_1p2v              (SUPC_VREGCTRL_LVHIB_1p2v_Val << SUPC_VREGCTRL_LVHIB_Pos) /* (SUPC_VREGCTRL) In Hibernate mode, VDDCORE_BU and VDDCORE_RAM are set to 1.2v. Position  */
-#define SUPC_VREGCTRL_LVHIB_0p8v              (SUPC_VREGCTRL_LVHIB_0p8v_Val << SUPC_VREGCTRL_LVHIB_Pos) /* (SUPC_VREGCTRL) In Hibernate mode, VDDCORE_BU and VDDCORE_RAM are set to 0.8v Position  */
+#define SUPC_VREGCTRL_SRAM_VLD_Pos            _UINT32_(4)                                          /* (SUPC_VREGCTRL) SRAM Valid Status Bit Position */
+#define SUPC_VREGCTRL_SRAM_VLD_Msk            (_UINT32_(0x1) << SUPC_VREGCTRL_SRAM_VLD_Pos)        /* (SUPC_VREGCTRL) SRAM Valid Status Bit Mask */
+#define SUPC_VREGCTRL_SRAM_VLD(value)         (SUPC_VREGCTRL_SRAM_VLD_Msk & (_UINT32_(value) << SUPC_VREGCTRL_SRAM_VLD_Pos)) /* Assigment of value for SRAM_VLD in the SUPC_VREGCTRL register */
+#define SUPC_VREGCTRL_BKUP_VLD_Pos            _UINT32_(5)                                          /* (SUPC_VREGCTRL) Backup Valid Status Bit Position */
+#define SUPC_VREGCTRL_BKUP_VLD_Msk            (_UINT32_(0x1) << SUPC_VREGCTRL_BKUP_VLD_Pos)        /* (SUPC_VREGCTRL) Backup Valid Status Bit Mask */
+#define SUPC_VREGCTRL_BKUP_VLD(value)         (SUPC_VREGCTRL_BKUP_VLD_Msk & (_UINT32_(value) << SUPC_VREGCTRL_BKUP_VLD_Pos)) /* Assigment of value for BKUP_VLD in the SUPC_VREGCTRL register */
 #define SUPC_VREGCTRL_CPEN_Pos                _UINT32_(8)                                          /* (SUPC_VREGCTRL) Charge Pump Enable and Auto-enable. Position */
 #define SUPC_VREGCTRL_CPEN_Msk                (_UINT32_(0x7) << SUPC_VREGCTRL_CPEN_Pos)            /* (SUPC_VREGCTRL) Charge Pump Enable and Auto-enable. Mask */
 #define SUPC_VREGCTRL_CPEN(value)             (SUPC_VREGCTRL_CPEN_Msk & (_UINT32_(value) << SUPC_VREGCTRL_CPEN_Pos)) /* Assigment of value for CPEN in the SUPC_VREGCTRL register */

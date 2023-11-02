@@ -297,9 +297,9 @@ typedef struct H3DeviceVectorsTag
   pfn_handler_t pfnSDMMC1_Handler;                  /* 212 SD/MMC Host Controller Interrupt 1 */
   pfn_handler_t pfnUSBHS0_Handler;                  /* 213 High Speed USB Interrupt 0 */
   pfn_handler_t pfnUSBHS1_Handler;                  /* 214 High Speed USB Interrupt 1 */
-  pfn_handler_t pfnHSM_TAMPER_Handler;              /* 215 Hardware Security Module Tamper Interrupt */
-  pfn_handler_t pfnHSM_TXINT_Handler;               /* 216 Hardware Security Module Transmit Interrupt */
-  pfn_handler_t pfnHSM_RXINT_Handler;               /* 217 Hardware Security Module Receive Interrupt */
+  pfn_handler_t pfnReserved215;
+  pfn_handler_t pfnReserved216;
+  pfn_handler_t pfnReserved217;
   pfn_handler_t pfnMLB_GENERAL_Handler;             /* 218 Media Local Bus General Interrupt */
   pfn_handler_t pfnMLB_BUSREQ_Handler;              /* 219 Media Local Bus Request Interrupt */
   pfn_handler_t pfnCM7H_CTIIRQ_0_Handler;           /* 220 Cross Trigger Interface Interrupt 0 */

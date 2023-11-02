@@ -39,7 +39,6 @@
 *******************************************************************************/
 
 #include "device.h"
-#include "interrupts.h"
 #include "plib_systick.h"
 
 

@@ -639,40 +639,6 @@ typedef enum
 // *****************************************************************************
 // *****************************************************************************
 // *****************************************************************************
-/* Function:
-    void PORT_Initialize(void)
-
-  Summary:
-    Initializes the PORT Library.
-
-  Description:
-    This function initializes all ports and pins as configured in the
-    MHC Pin Manager.
-
-  Precondition:
-    None.
-
-  Parameters:
-    None.
-
-  Returns:
-    None.
-
-  Example:
-    <code>
-
-    PORT_Initialize();
-
-    </code>
-
-  Remarks:
-    The function should be called once before calling any other PORTS PLIB
-    functions.
-*/
-
-void PORT_Initialize(void);
-
-// *****************************************************************************
 // *****************************************************************************
 // Section: PORT APIs which operates on multiple pins of a group
 // *****************************************************************************
