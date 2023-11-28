@@ -1,20 +1,20 @@
 /*******************************************************************************
-  NVIC PLIB Implementation
+  Board Support Package Implementation
 
   Company:
     Microchip Technology Inc.
 
   File Name:
-    plib_nvic.c
+    bsp.c
 
   Summary:
-    NVIC PLIB Source File
+    Board Support Package implementation.
 
   Description:
-    None
-
+    This file contains routines that implement the board support package
 *******************************************************************************/
 
+// DOM-IGNORE-BEGIN
 /*******************************************************************************
 * Copyright (C) 2018 Microchip Technology Inc. and its subsidiaries.
 *
@@ -37,68 +37,50 @@
 * ANY WAY RELATED TO THIS SOFTWARE WILL NOT EXCEED THE AMOUNT OF FEES, IF ANY,
 * THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
 *******************************************************************************/
-
-#include "device.h"
-#include "plib_nvic.h"
-
+// DOM-IGNORE-END
 
 // *****************************************************************************
 // *****************************************************************************
-// Section: NVIC Implementation
+// Section: Included Files
 // *****************************************************************************
 // *****************************************************************************
 
-void NVIC_Initialize( void )
+#include "bsp.h"
+
+// *****************************************************************************
+// *****************************************************************************
+// *****************************************************************************
+// Section: Interface Routines
+// *****************************************************************************
+// *****************************************************************************
+
+// *****************************************************************************
+/* Function:
+    void BSP_Initialize(void)
+
+  Summary:
+    Performs the necessary actions to initialize a board
+
+  Description:
+    This function initializes the LED, Switch and other ports on the board.
+    This function must be called by the user before using any APIs present in
+    this BSP.
+
+  Remarks:
+    Refer to bsp.h for usage information.
+*/
+
+void BSP_Initialize(void )
 {
-    /* Priority 0 to 7 and no sub-priority. 0 is the highest priority */
-    NVIC_SetPriorityGrouping( 0x00 );
 
-    /* Enable NVIC Controller */
-    __DMB();
-    __enable_irq();
 
-    /* Enable the interrupt sources and configure the priorities as configured
-     * from within the "Interrupt Manager" of MHC. */
+    /* Switch off LEDs */
+    LED0_Off();
+    LED1_Off();
 
-    /* Enable Usage fault */
-    SCB->SHCSR |= (SCB_SHCSR_USGFAULTENA_Msk);
-    /* Trap divide by zero */
-    SCB->CCR   |= SCB_CCR_DIV_0_TRP_Msk;
-
-    /* Enable Bus fault */
-    SCB->SHCSR |= (SCB_SHCSR_BUSFAULTENA_Msk);
-
-    /* Enable memory management fault */
-    SCB->SHCSR |= (SCB_SHCSR_MEMFAULTENA_Msk);
 
 }
 
-void NVIC_INT_Enable( void )
-{
-    __DMB();
-    __enable_irq();
-}
-
-bool NVIC_INT_Disable( void )
-{
-    bool processorStatus = (__get_PRIMASK() == 0U);
-
-    __disable_irq();
-    __DMB();
-
-    return processorStatus;
-}
-
-void NVIC_INT_Restore( bool state )
-{
-    if( state == true )
-    {
-        __DMB();
-        __enable_irq();
-    }
-    else
-    {
-        __disable_irq();
-        __DMB();
-    }
-}
+/*******************************************************************************
+ End of File
+*/

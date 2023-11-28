@@ -1,17 +1,22 @@
 /*******************************************************************************
-  System Initialization File
+  System Configuration Header
 
   File Name:
-    initialization.c
+    configuration.h
 
   Summary:
-    This file contains source code necessary to initialize the system.
+    Build-time configuration header for the system defined by this project.
 
   Description:
-    This file contains source code necessary to initialize the system.  It
-    implements the "SYS_Initialize" function, defines the configuration bits,
-    and allocates any necessary global system resources,
- *******************************************************************************/
+    An MPLAB Project may have multiple configurations.  This file defines the
+    build-time options for a single configuration.
+
+  Remarks:
+    This configuration header must not define any prototypes or data
+    definitions (or include any files that do).  It only provides macro
+    definitions for build-time configuration options
+
+*******************************************************************************/
 
 // DOM-IGNORE-BEGIN
 /*******************************************************************************
@@ -35,56 +40,35 @@
 * FULLEST EXTENT ALLOWED BY LAW, MICROCHIP'S TOTAL LIABILITY ON ALL CLAIMS IN
 * ANY WAY RELATED TO THIS SOFTWARE WILL NOT EXCEED THE AMOUNT OF FEES, IF ANY,
 * THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
- *******************************************************************************/
+*******************************************************************************/
 // DOM-IGNORE-END
+
+#ifndef CONFIGURATION_H
+#define CONFIGURATION_H
 
 // *****************************************************************************
 // *****************************************************************************
 // Section: Included Files
 // *****************************************************************************
 // *****************************************************************************
-#include "configuration.h"
-#include "definitions.h"
+/*  This section Includes other configuration headers necessary to completely
+    define this configuration.
+*/
+
+#include "user.h"
 #include "device.h"
 
+// DOM-IGNORE-BEGIN
+#ifdef __cplusplus  // Provide C++ Compatibility
 
-// ****************************************************************************
-// ****************************************************************************
-// Section: Configuration Bits
-// ****************************************************************************
-// ****************************************************************************
+extern "C" {
 
-
-
+#endif
+// DOM-IGNORE-END
 
 // *****************************************************************************
 // *****************************************************************************
-// Section: Driver Initialization Data
-// *****************************************************************************
-// *****************************************************************************
-/* Following MISRA-C rules are deviated in the below code block */
-/* MISRA C-2012 Rule 11.1 */
-/* MISRA C-2012 Rule 11.3 */
-/* MISRA C-2012 Rule 11.8 */
-
-
-
-// *****************************************************************************
-// *****************************************************************************
-// Section: System Data
-// *****************************************************************************
-// *****************************************************************************
-
-// *****************************************************************************
-// *****************************************************************************
-// Section: Library/Stack Initialization Data
-// *****************************************************************************
-// *****************************************************************************
-
-
-// *****************************************************************************
-// *****************************************************************************
-// Section: System Initialization
+// Section: System Configuration
 // *****************************************************************************
 // *****************************************************************************
 
@@ -92,87 +76,39 @@
 
 // *****************************************************************************
 // *****************************************************************************
-// Section: Local initialization functions
+// Section: System Service Configuration
 // *****************************************************************************
 // *****************************************************************************
 
-/*******************************************************************************
-  Function:
-    void STDIO_BufferModeSet ( void )
 
-  Summary:
-    Sets the buffering mode for stdin and stdout
+// *****************************************************************************
+// *****************************************************************************
+// Section: Driver Configuration
+// *****************************************************************************
+// *****************************************************************************
 
-  Remarks:
- ********************************************************************************/
-static void STDIO_BufferModeSet(void)
-{
-    /* MISRAC 2012 deviation block start */
-    /* MISRA C-2012 Rule 21.6 deviated 2 times in this file.  Deviation record ID -  H3_MISRAC_2012_R_21_6_DR_3 */
 
-    /* Make stdin unbuffered */
-    setbuf(stdin, NULL);
+// *****************************************************************************
+// *****************************************************************************
+// Section: Middleware & Other Library Configuration
+// *****************************************************************************
+// *****************************************************************************
 
-    /* Make stdout unbuffered */
-    setbuf(stdout, NULL);
+
+// *****************************************************************************
+// *****************************************************************************
+// Section: Application Configuration
+// *****************************************************************************
+// *****************************************************************************
+
+
+//DOM-IGNORE-BEGIN
+#ifdef __cplusplus
 }
+#endif
+//DOM-IGNORE-END
 
-
-/* MISRAC 2012 deviation block end */
-
-/*******************************************************************************
-  Function:
-    void SYS_Initialize ( void *data )
-
-  Summary:
-    Initializes the board, services, drivers, application and other modules.
-
-  Remarks:
- */
-
-void SYS_Initialize ( void* data )
-{
-
-    /* MISRAC 2012 deviation block start */
-    /* MISRA C-2012 Rule 2.2 deviated in this file.  Deviation record ID -  H3_MISRAC_2012_R_2_2_DR_1 */
-
-    STDIO_BufferModeSet();
-
-
-  
-    PORT_Initialize();
-
-    CLOCK_Initialize();
-
-
-
-
-    SERCOM1_USART_Initialize();
-
-    EVSYS_Initialize();
-
-	SYSTICK_TimerInitialize();
-	BSP_Initialize();
-
-
-    /* MISRAC 2012 deviation block start */
-    /* Following MISRA-C rules deviated in this block  */
-    /* MISRA C-2012 Rule 11.3 - Deviation record ID - H3_MISRAC_2012_R_11_3_DR_1 */
-    /* MISRA C-2012 Rule 11.8 - Deviation record ID - H3_MISRAC_2012_R_11_8_DR_1 */
-
-
-
-
-    /* MISRAC 2012 deviation block end */
-    APP_Initialize();
-
-
-    NVIC_Initialize();
-
-
-    /* MISRAC 2012 deviation block end */
-}
-
+#endif // CONFIGURATION_H
 /*******************************************************************************
  End of File
 */

@@ -52,9 +52,9 @@ Pin Number,Pin ID,Custom Name,Function,Mode, Direction,Latch,Pull Up,Pull Down,O
 59,PB20,,Available,,,,,,No,FAST
 62,PB04,,Available,,,,,,No,FAST
 63,PB05,,Available,,,,,,No,FAST
-66,PB21,,Available,,,,,,No,FAST
+66,PB21,LED0,LED_AL,Digital,Out,High,,,No,FAST
 67,PB06,,Available,,,,,,No,FAST
-68,PB22,,Available,,,,,,No,FAST
+68,PB22,LED1,LED_AL,Digital,Out,High,,,No,FAST
 69,PB23,,Available,,,,,,No,FAST
 70,PB07,,Available,,,,,,No,FAST
 71,PB08,,Available,,,,,,No,FAST
@@ -75,7 +75,7 @@ Pin Number,Pin ID,Custom Name,Function,Mode, Direction,Latch,Pull Up,Pull Down,O
 90,PF08,,Available,,,,,,No,FAST
 91,PB30,,Available,,,,,,No,FAST
 92,PB31,,Available,,,,,,No,FAST
-93,PB24,,Available,,,,,,No,FAST
+93,PB24,SWITCH0,SWITCH_AL,Digital,In,n/a,Yes,No,No,FAST
 94,PB25,,Available,,,,,,No,FAST
 95,PB26,,Available,,,,,,No,FAST
 96,PB12,,Available,,,,,,No,FAST
@@ -89,14 +89,14 @@ Pin Number,Pin ID,Custom Name,Function,Mode, Direction,Latch,Pull Up,Pull Down,O
 107,PC01,,Available,,,,,,No,FAST
 108,PC02,,Available,,,,,,No,FAST
 109,PC03,,Available,,,,,,No,FAST
-110,PC04,,Available,,,,,,No,FAST
+110,PC04,,SERCOM1_PAD0,Digital,High Impedance,n/a,No,No,No,FAST
 113,PC05,,Available,,,,,,No,FAST
 114,PC06,,Available,,,,,,No,FAST
 115,PC21,,Available,,,,,,No,FAST
 116,PC22,,Available,,,,,,No,FAST
-117,PC07,,Available,,,,,,No,FAST
+117,PC07,,SERCOM1_PAD3,Digital,High Impedance,n/a,No,No,No,FAST
 118,PC08,,Available,,,,,,No,FAST
-119,PC23,,Available,,,,,,No,FAST
+119,PC23,SWITCH1,SWITCH_AL,Digital,In,n/a,Yes,No,No,FAST
 120,PC24,,Available,,,,,,No,FAST
 121,PC09,,Available,,,,,,No,FAST
 122,PC25,,Available,,,,,,No,FAST

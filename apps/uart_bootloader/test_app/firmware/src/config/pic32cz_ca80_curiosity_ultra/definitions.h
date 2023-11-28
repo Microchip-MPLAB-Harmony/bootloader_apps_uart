@@ -50,12 +50,16 @@
 #include <stdbool.h>
 #include <stdio.h>
 #include "peripheral/sercom/usart/plib_sercom1_usart.h"
-#include "peripheral/fcw/plib_fcw.h"
 #include "peripheral/evsys/plib_evsys.h"
 #include "peripheral/port/plib_port.h"
 #include "peripheral/clock/plib_clock.h"
 #include "peripheral/nvic/plib_nvic.h"
+#include "peripheral/systick/plib_systick.h"
+#include "bsp/bsp.h"
 #include "system/cache/sys_cache.h"
+#include "app.h"
+
+
 
 // DOM-IGNORE-BEGIN
 #ifdef __cplusplus  // Provide C++ Compatibility
@@ -121,8 +125,46 @@ extern "C" {
 
 void SYS_Initialize( void *data );
 
-/* Nullify SYS_Tasks() if only PLIBs are used. */
-#define     SYS_Tasks()
+// *****************************************************************************
+/* System Tasks Function
+
+Function:
+    void SYS_Tasks ( void );
+
+Summary:
+    Function that performs all polled system tasks.
+
+Description:
+    This function performs all polled system tasks by calling the state machine
+    "tasks" functions for all polled modules in the system, including drivers,
+    services, middleware and applications.
+
+Precondition:
+    The SYS_Initialize function must have been called and completed.
+
+Parameters:
+    None.
+
+Returns:
+    None.
+
+Example:
+    <code>
+    SYS_Initialize ( NULL );
+
+    while ( true )
+    {
+        SYS_Tasks ( );
+    }
+    </code>
+
+Remarks:
+    If the module is interrupt driven, the system will call this routine from
+    an interrupt context.
+*/
+
+void SYS_Tasks ( void );
+
 
 // *****************************************************************************
 // *****************************************************************************

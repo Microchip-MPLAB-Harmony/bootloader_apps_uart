@@ -1,22 +1,24 @@
 /*******************************************************************************
-  NVIC PLIB Implementation
-
-  Company:
-    Microchip Technology Inc.
+  User Configuration Header
 
   File Name:
-    plib_nvic.c
+    user.h
 
   Summary:
-    NVIC PLIB Source File
+    Build-time configuration header for the user defined by this project.
 
   Description:
-    None
+    An MPLAB Project may have multiple configurations.  This file defines the
+    build-time options for a single configuration.
+
+  Remarks:
+    It only provides macro definitions for build-time configuration options
 
 *******************************************************************************/
 
+// DOM-IGNORE-BEGIN
 /*******************************************************************************
-* Copyright (C) 2018 Microchip Technology Inc. and its subsidiaries.
+* Copyright (C) 2019 Microchip Technology Inc. and its subsidiaries.
 *
 * Subject to your compliance with these terms, you may use Microchip software
 * and any derivatives exclusively with Microchip products. It is your
@@ -36,69 +38,51 @@
 * FULLEST EXTENT ALLOWED BY LAW, MICROCHIP'S TOTAL LIABILITY ON ALL CLAIMS IN
 * ANY WAY RELATED TO THIS SOFTWARE WILL NOT EXCEED THE AMOUNT OF FEES, IF ANY,
 * THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
-*******************************************************************************/
+ *******************************************************************************/
+// DOM-IGNORE-END
 
-#include "device.h"
-#include "plib_nvic.h"
+#ifndef USER_H
+#define USER_H
 
+#include "bsp/bsp.h"
+
+// DOM-IGNORE-BEGIN
+#ifdef __cplusplus  // Provide C++ Compatibility
+
+extern "C" {
+
+#endif
+// DOM-IGNORE-END
 
 // *****************************************************************************
 // *****************************************************************************
-// Section: NVIC Implementation
+// Section: User Configuration macros
 // *****************************************************************************
 // *****************************************************************************
+#define LED_ON()        LED1_On()
+#define LED_OFF()       LED1_Off()
+#define LED_TOGGLE()    LED1_Toggle()
 
-void NVIC_Initialize( void )
+#define SWITCH_GET()    SWITCH0_Get()
+#define SWITCH_PRESSED  SWITCH0_STATE_PRESSED
+    
+#define APP_TIMER_START     SYSTICK_TimerStart
+#define APP_TIMER_DelayMs   SYSTICK_DelayMs
+
+#define BTL_TRIGGER_RAM_START  0x20020000U
+
+static inline void APP_SystemReset( void )
 {
-    /* Priority 0 to 7 and no sub-priority. 0 is the highest priority */
-    NVIC_SetPriorityGrouping( 0x00 );
-
-    /* Enable NVIC Controller */
-    __DMB();
-    __enable_irq();
-
-    /* Enable the interrupt sources and configure the priorities as configured
-     * from within the "Interrupt Manager" of MHC. */
-
-    /* Enable Usage fault */
-    SCB->SHCSR |= (SCB_SHCSR_USGFAULTENA_Msk);
-    /* Trap divide by zero */
-    SCB->CCR   |= SCB_CCR_DIV_0_TRP_Msk;
-
-    /* Enable Bus fault */
-    SCB->SHCSR |= (SCB_SHCSR_BUSFAULTENA_Msk);
-
-    /* Enable memory management fault */
-    SCB->SHCSR |= (SCB_SHCSR_MEMFAULTENA_Msk);
-
+    NVIC_SystemReset();
 }
 
-void NVIC_INT_Enable( void )
-{
-    __DMB();
-    __enable_irq();
+//DOM-IGNORE-BEGIN
+#ifdef __cplusplus
 }
+#endif
+//DOM-IGNORE-END
 
-bool NVIC_INT_Disable( void )
-{
-    bool processorStatus = (__get_PRIMASK() == 0U);
-
-    __disable_irq();
-    __DMB();
-
-    return processorStatus;
-}
-
-void NVIC_INT_Restore( bool state )
-{
-    if( state == true )
-    {
-        __DMB();
-        __enable_irq();
-    }
-    else
-    {
-        __disable_irq();
-        __DMB();
-    }
-}
+#endif // USER_H
+/*******************************************************************************
+ End of File
+*/

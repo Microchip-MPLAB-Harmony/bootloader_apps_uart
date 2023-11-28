@@ -38,6 +38,7 @@
 * THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
 *******************************************************************************/
 #include <stddef.h>
+#include "definitions.h"
 
 extern int read(int handle, void *buffer, unsigned int len);
 extern int write(int handle, void * buffer, size_t count);
@@ -45,10 +46,28 @@ extern int write(int handle, void * buffer, size_t count);
 
 int read(int handle, void *buffer, unsigned int len)
 {
-   return -1;
+    int nChars = 0;
+    bool success = false;
+    if ((handle == 0)  && (len > 0U))
+    {
+        do
+        {
+            success = SERCOM1_USART_Read(buffer, 1);
+        }while( !success);
+        nChars = 1;
+    }
+    return nChars;
 }
 
 int write(int handle, void * buffer, size_t count)
 {
-   return -1;
+   bool success = false;
+   if (handle == 1)
+   {
+       do
+       {
+           success = SERCOM1_USART_Write(buffer, count);
+       }while( !success);
+   }
+   return (int)count;
 }

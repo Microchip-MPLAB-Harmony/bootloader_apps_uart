@@ -3,18 +3,12 @@
     <type>com.microchip.mplab.nbide.embedded.makeproject</type>
     <configuration>
         <data xmlns="http://www.netbeans.org/ns/make-project/1">
-            <name>pic32cz_ca80_curiosity_ultra</name>
-            <creation-uuid>8d749a50-e7e3-4381-b1d8-44d72dc1dd2e</creation-uuid>
+            <name>uart_bootloader_test_app_pic32cz_ca80_curiosity_ultra</name>
+            <creation-uuid>3912f3cb-74c1-49be-8555-882ced2df58a</creation-uuid>
             <make-project-type>0</make-project-type>
             <sourceEncoding>ISO-8859-1</sourceEncoding>
-            <c-extensions>c</c-extensions>
-            <cpp-extensions/>
-            <header-extensions>h</header-extensions>
-            <asminc-extensions/>
             <make-dep-projects/>
-            <sourceRootList>
-                <sourceRootElem>../src</sourceRootElem>
-            </sourceRootList>
+            <sourceRootList/>
             <confList>
                 <confElem>
                     <name>pic32cz_ca80_curiosity_ultra</name>
