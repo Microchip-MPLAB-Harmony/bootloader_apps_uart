@@ -49,6 +49,7 @@
 #include <stddef.h>
 #include <stdbool.h>
 #include "peripheral/fcw/plib_fcw.h"
+#include "peripheral/sercom/usart/plib_sercom1_usart.h"
 #include "peripheral/evsys/plib_evsys.h"
 #include "bootloader/bootloader_uart.h"
 #include "peripheral/port/plib_port.h"
@@ -56,7 +57,6 @@
 #include "peripheral/nvic/plib_nvic.h"
 #include "peripheral/systick/plib_systick.h"
 #include "peripheral/pac/plib_pac.h"
-#include "peripheral/sercom/usart/plib_sercom5_usart.h"
 #include "peripheral/dsu/plib_dsu.h"
 #include "peripheral/fcr/plib_fcr.h"
 

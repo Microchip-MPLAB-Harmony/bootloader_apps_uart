@@ -73,8 +73,8 @@
 // *****************************************************************************
 // *****************************************************************************
 
-/* MISRA C-2012 Rule 8.6 deviated below. Deviation record ID -
-   H3_MISRAC_2012_R_8_6_DR_1 */
+/* MISRA C-2012 Rule 8.6 and 5.8 deviated below. Deviation record ID -
+   H3_MISRAC_2012_R_8_6_DR_1, H3_MISRAC_2012_R_5_8_DR_1 */
 bool __WEAK bootloader_Trigger(void)
 {
     /* Function can be overriden with custom implementation */
@@ -104,7 +104,7 @@ uint32_t bootloader_CRCGenerate(uint32_t start_addr, uint32_t size)
 {
     uint32_t crc  = 0xffffffffU;
 
-    FCR_CRCCalculate(start_addr, size, 0xFFFFFFFFU, &crc);
+    (void)FCR_CRCCalculate(start_addr, size, 0xFFFFFFFFU, &crc);
 
     return crc;
 }

@@ -119,7 +119,7 @@ static bool     uartBLActive        = false;
 
 typedef bool (*FLASH_ERASE_FPTR)(uint32_t address);
 
-typedef bool (*FLASH_WRITE_FPTR)(uint32_t* data, uint32_t const address);
+typedef bool (*FLASH_WRITE_FPTR)(uint32_t* data, uint32_t address);
 
 
 // *****************************************************************************
@@ -142,12 +142,12 @@ static void input_task(void)
         return;
     }
 
-    if (SERCOM5_USART_ReceiverIsReady() == false)
+    if (SERCOM1_USART_ReceiverIsReady() == false)
     {
         return;
     }
 
-    input_data = (uint8_t)SERCOM5_USART_ReadByte();
+    input_data = (uint8_t)SERCOM1_USART_ReadByte();
 
     /* Check if 100 ms have elapsed */
     if (SYSTICK_TimerPeriodHasExpired())
@@ -173,7 +173,7 @@ static void input_task(void)
         {
             if (input_buffer[GUARD_OFFSET] != BTL_GUARD)
             {
-                SERCOM5_USART_WriteByte(BL_RESP_ERROR);
+                SERCOM1_USART_WriteByte(BL_RESP_ERROR);
             }
             else
             {
@@ -230,13 +230,13 @@ static void command_task(void)
         {
             unlock_begin = begin;
             unlock_end = end;
-            SERCOM5_USART_WriteByte(BL_RESP_OK);
+            SERCOM1_USART_WriteByte(BL_RESP_OK);
         }
         else
         {
             unlock_begin = 0;
             unlock_end = 0;
-            SERCOM5_USART_WriteByte(BL_RESP_ERROR);
+            SERCOM1_USART_WriteByte(BL_RESP_ERROR);
         }
     }
     else if (BL_CMD_DATA == input_command)
@@ -252,23 +252,23 @@ static void command_task(void)
 
             flash_data_ready = true;
 
-            SERCOM5_USART_WriteByte(BL_RESP_OK);
+            SERCOM1_USART_WriteByte(BL_RESP_OK);
         }
         else
         {
-            SERCOM5_USART_WriteByte(BL_RESP_ERROR);
+            SERCOM1_USART_WriteByte(BL_RESP_ERROR);
         }
     }
     else if (BL_CMD_READ_VERSION == input_command)
     {
-        SERCOM5_USART_WriteByte(BL_RESP_OK);
+        SERCOM1_USART_WriteByte(BL_RESP_OK);
 
         uint16_t btlVersion = bootloader_GetVersion();
         uint16_t btlVer = ((btlVersion >> 8U) & 0xFFU);
 
-        SERCOM5_USART_WriteByte((int)btlVer);
+        SERCOM1_USART_WriteByte((int)btlVer);
         btlVer = (btlVersion & 0xFFU);
-        SERCOM5_USART_WriteByte((int)btlVer);
+        SERCOM1_USART_WriteByte((int)btlVer);
     }
     else if (BL_CMD_VERIFY == input_command)
     {
@@ -279,18 +279,18 @@ static void command_task(void)
 
         if (crc == crc_gen)
         {
-            SERCOM5_USART_WriteByte(BL_RESP_CRC_OK);
+            SERCOM1_USART_WriteByte(BL_RESP_CRC_OK);
         }
         else
         {
-            SERCOM5_USART_WriteByte(BL_RESP_CRC_FAIL);
+            SERCOM1_USART_WriteByte(BL_RESP_CRC_FAIL);
         }
     }
     else if (BL_CMD_RESET == input_command)
     {
-        SERCOM5_USART_WriteByte(BL_RESP_OK);
+        SERCOM1_USART_WriteByte(BL_RESP_OK);
 
-        while(SERCOM5_USART_TransmitComplete() == false)
+        while(SERCOM1_USART_TransmitComplete() == false)
         {
             /* Nothing to do */
         }
@@ -299,7 +299,7 @@ static void command_task(void)
     }
     else
     {
-        SERCOM5_USART_WriteByte(BL_RESP_INVALID);
+        SERCOM1_USART_WriteByte(BL_RESP_INVALID);
     }
 
     packet_received = false;

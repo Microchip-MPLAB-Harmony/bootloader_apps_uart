@@ -89,12 +89,12 @@ Pin Number,Pin ID,Custom Name,Function,Mode, Direction,Latch,Pull Up,Pull Down,O
 107,PC01,,Available,,,,,,No,FAST
 108,PC02,,Available,,,,,,No,FAST
 109,PC03,,Available,,,,,,No,FAST
-110,PC04,,Available,,,,,,No,FAST
+110,PC04,,SERCOM1_PAD0,Digital,In/Out,Low,,,No,FAST
 113,PC05,,Available,,,,,,No,FAST
 114,PC06,,Available,,,,,,No,FAST
 115,PC21,,Available,,,,,,No,FAST
 116,PC22,,Available,,,,,,No,FAST
-117,PC07,,Available,,,,,,No,FAST
+117,PC07,,SERCOM1_PAD3,Digital,High Impedance,n/a,No,No,No,FAST
 118,PC08,,Available,,,,,,No,FAST
 119,PC23,,Available,,,,,,No,FAST
 120,PC24,,Available,,,,,,No,FAST

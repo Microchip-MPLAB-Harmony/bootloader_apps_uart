@@ -40,8 +40,8 @@
             </logicalFolder>
             <logicalFolder name="sercom" displayName="sercom" projectFiles="true">
               <logicalFolder name="usart" displayName="usart" projectFiles="true">
-                <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/peripheral/sercom/usart/plib_sercom5_usart.h</itemPath>
                 <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/peripheral/sercom/usart/plib_sercom_usart_common.h</itemPath>
+                <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/peripheral/sercom/usart/plib_sercom1_usart.h</itemPath>
               </logicalFolder>
             </logicalFolder>
             <logicalFolder name="systick" displayName="systick" projectFiles="true">
@@ -192,13 +192,7 @@
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
                    projectFiles="true">
-      <logicalFolder name="config" displayName="config" projectFiles="true">
-        <logicalFolder name="pic32cz_ca80_curiosity_ultra"
-                       displayName="pic32cz_ca80_curiosity_ultra"
-                       projectFiles="true">
-          <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/PIC32CZ8110CA80208.ld</itemPath>
-        </logicalFolder>
-      </logicalFolder>
+      <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/btl.ld</itemPath>
     </logicalFolder>
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
@@ -238,7 +232,7 @@
             </logicalFolder>
             <logicalFolder name="sercom" displayName="sercom" projectFiles="true">
               <logicalFolder name="usart" displayName="usart" projectFiles="true">
-                <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/peripheral/sercom/usart/plib_sercom5_usart.c</itemPath>
+                <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/peripheral/sercom/usart/plib_sercom1_usart.c</itemPath>
               </logicalFolder>
             </logicalFolder>
             <logicalFolder name="systick" displayName="systick" projectFiles="true">
@@ -246,6 +240,7 @@
             </logicalFolder>
           </logicalFolder>
           <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/initialization.c</itemPath>
+          <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/startup_xc32.c</itemPath>
         </logicalFolder>
       </logicalFolder>
       <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/pin_configurations.csv</itemPath>
@@ -320,8 +315,8 @@
         <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="true"/>
         <property key="make-warnings-into-errors" value="true"/>
-        <property key="optimization-level" value=""/>
-        <property key="place-data-into-section" value="true"/>
+        <property key="optimization-level" value="-O2"/>
+        <property key="place-data-into-section" value="false"/>
         <property key="post-instruction-scheduling" value="default"/>
         <property key="pre-instruction-scheduling" value="default"/>
         <property key="preprocessor-macros" value=""/>
@@ -389,7 +384,7 @@
         <property key="linker-symbols" value=""/>
         <property key="map-file" value="${DISTDIR}/${PROJECTNAME}.${IMAGE_TYPE}.map"/>
         <property key="no-device-startup-code" value="true"/>
-        <property key="no-startup-files" value="false"/>
+        <property key="no-startup-files" value="true"/>
         <property key="oXC32ld-extra-opts" value=""/>
         <property key="optimization-level" value=""/>
         <property key="preprocessor-macros" value=""/>

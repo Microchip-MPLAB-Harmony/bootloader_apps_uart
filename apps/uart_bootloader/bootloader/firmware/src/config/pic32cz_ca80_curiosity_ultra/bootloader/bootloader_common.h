@@ -67,12 +67,9 @@
 #define FLASH_END_ADDRESS                       (FLASH_START + FLASH_LENGTH)
 
 
-#define APP_START_ADDRESS                       (0xc002000U)
+#define APP_START_ADDRESS                       (0xc000000U)
 
 
-#define BTL_TRIGGER_RAM_START                   0x20020000
-
-#define BTL_TRIGGER_LEN                         16
 
 // *****************************************************************************
 
@@ -124,6 +121,8 @@ Example:
 */
 uint16_t bootloader_GetVersion( void );
 
+/* MISRA C-2012 Rule 5.8 deviated below. Deviation record ID -
+   H3_MISRAC_2012_R_5_8_DR_1 */
 // *****************************************************************************
 /* Function:
     bool bootloader_Trigger( void );
