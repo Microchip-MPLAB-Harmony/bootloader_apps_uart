@@ -58,33 +58,32 @@
 #define CMD_OFFSET              2
 #define ADDR_OFFSET             0
 #define SIZE_OFFSET             1
-#define DATA_OFFSET             1
+#define DATA_OFFSET             1U
 #define CRC_OFFSET              0
 
-#define CMD_SIZE                1
-#define GUARD_SIZE              4
-#define SIZE_SIZE               4
+#define CMD_SIZE                1U
+#define GUARD_SIZE              4U
+#define SIZE_SIZE               4U
 #define OFFSET_SIZE             4
 #define CRC_SIZE                4
 #define HEADER_SIZE             (GUARD_SIZE + SIZE_SIZE + CMD_SIZE)
 #define DATA_SIZE               ERASE_BLOCK_SIZE
 
-#define WORDS(x)                ((int)((x) / sizeof(uint32_t)))
+#define WORDS(x)                ((uint32_t)((x) / sizeof(uint32_t)))
 
-#define OFFSET_ALIGN_MASK       (~ERASE_BLOCK_SIZE + 1)
-#define SIZE_ALIGN_MASK         (~PAGE_SIZE + 1)
+#define OFFSET_ALIGN_MASK       (~ERASE_BLOCK_SIZE + 1U)
+#define SIZE_ALIGN_MASK         (~PAGE_SIZE + 1U)
 
 #define BTL_GUARD               (0x5048434DUL)
 
-enum
-{
-    BL_CMD_UNLOCK       = 0xa0,
-    BL_CMD_DATA         = 0xa1,
-    BL_CMD_VERIFY       = 0xa2,
-    BL_CMD_RESET        = 0xa3,
-    BL_CMD_BKSWAP_RESET = 0xa4,
-    BL_CMD_READ_VERSION = 0xa6,
-};
+
+#define    BL_CMD_UNLOCK       0xa0U
+#define    BL_CMD_DATA         0xa1U
+#define    BL_CMD_VERIFY       0xa2U
+#define    BL_CMD_RESET        0xa3U
+#define    BL_CMD_BKSWAP_RESET 0xa4U
+#define    BL_CMD_READ_VERSION 0xa6U
+
 
 enum
 {
@@ -119,9 +118,9 @@ static bool     flash_data_ready    = false;
 
 static bool     uartBLActive        = false;
 
-typedef bool (*FLASH_ERASE_FPTR)(uint32_t);
+typedef bool (*FLASH_ERASE_FPTR)(uint32_t address);
 
-typedef bool (*FLASH_WRITE_FPTR)(uint32_t*, uint32_t);
+typedef bool (*FLASH_WRITE_FPTR)(const uint32_t* data, const uint32_t address);
 
 
 // *****************************************************************************
@@ -149,7 +148,7 @@ static void input_task(void)
         return;
     }
 
-    input_data = SERCOM2_USART_ReadByte();
+    input_data = (uint8_t)SERCOM2_USART_ReadByte();
 
     /* Check if 100 ms have elapsed */
     if (SYSTICK_TimerPeriodHasExpired())
@@ -160,12 +159,13 @@ static void input_task(void)
 
     if (header_received == false)
     {
-        byte_buf[ptr++] = input_data;
+        byte_buf[ptr] = input_data;
+        ptr++;
 
         // Check for each guard byte and discard if mismatch
         if (ptr <= GUARD_SIZE)
         {
-            if (input_data != btl_guard[ptr-1])
+            if (input_data != btl_guard[ptr-1U])
             {
                 ptr = 0;
             }
@@ -186,6 +186,11 @@ static void input_task(void)
 
             ptr = 0;
         }
+        else
+        {
+            /* Nothing to do */
+        }
+
     }
     else if (header_received == true)
     {
@@ -202,6 +207,10 @@ static void input_task(void)
             packet_received = true;
             header_received = false;
         }
+    }
+    else
+    {
+        /* Nothing to do */
     }
 
     SYSTICK_TimerRestart();
@@ -256,9 +265,11 @@ static void command_task(void)
         SERCOM2_USART_WriteByte(BL_RESP_OK);
 
         uint16_t btlVersion = bootloader_GetVersion();
+        uint16_t btlVer = ((btlVersion >> 8U) & 0xFFU);
 
-        SERCOM2_USART_WriteByte(((btlVersion >> 8) & 0xFF));
-        SERCOM2_USART_WriteByte((btlVersion & 0xFF));
+        SERCOM2_USART_WriteByte((int)btlVer);
+        btlVer = (btlVersion & 0xFFU);
+        SERCOM2_USART_WriteByte((int)btlVer);
     }
     else if (BL_CMD_VERIFY == input_command)
     {
@@ -280,7 +291,10 @@ static void command_task(void)
     {
         SERCOM2_USART_WriteByte(BL_RESP_OK);
 
-        while(SERCOM2_USART_TransmitComplete() == false);
+        while(SERCOM2_USART_TransmitComplete() == false)
+        {
+            /* Nothing to do */
+        }
 
         bootloader_TriggerReset();
     }
@@ -288,7 +302,10 @@ static void command_task(void)
     {
         SERCOM2_USART_WriteByte(BL_RESP_OK);
 
-        while(SERCOM2_USART_TransmitComplete() == false);
+        while(SERCOM2_USART_TransmitComplete() == false)
+        {
+            /* Nothing to do */
+        }
 
         NVMCTRL_BankSwap();
     }
@@ -309,12 +326,11 @@ static void flash_task(void)
     uint32_t write_idx  = 0;
 
     // data_size = Actual data bytes to write + Address 4 Bytes
-    uint32_t bytes_to_write = (data_size - 4);
+    uint32_t bytes_to_write = (data_size - 4U);
 
     FLASH_ERASE_FPTR flash_erase_fptr = (FLASH_ERASE_FPTR)NVMCTRL_BlockErase;
     FLASH_WRITE_FPTR flash_write_fptr = (FLASH_WRITE_FPTR)NVMCTRL_PageWrite;
 
-    // Lock region size is always bigger than the row size
     NVMCTRL_RegionUnlock(addr);
     /* Receive Next Bytes while waiting for memory to be ready */
     while(NVMCTRL_IsBusy() == true)
@@ -323,7 +339,7 @@ static void flash_task(void)
     
     }
     /* Erase the Current sector */
-    flash_erase_fptr(addr);
+    (void) flash_erase_fptr(addr);
 
     /* Receive Next Bytes while waiting for memory to be ready */
     while(NVMCTRL_IsBusy() == true)
@@ -334,7 +350,7 @@ static void flash_task(void)
 
     for (bytes_written = 0; bytes_written < bytes_to_write; bytes_written += PAGE_SIZE)
     {
-        flash_write_fptr(&flash_data[write_idx], addr);
+        (void) flash_write_fptr(&flash_data[write_idx], addr);
 
         /* Receive Next Bytes while waiting for memory to be ready */
         while(NVMCTRL_IsBusy() == true)
@@ -371,6 +387,10 @@ void bootloader_UART_Tasks(void)
         else if (packet_received)
         {
             command_task();
+        }
+        else
+        {
+            /* Nothing to do */
         }
     } while (uartBLActive);
 }
