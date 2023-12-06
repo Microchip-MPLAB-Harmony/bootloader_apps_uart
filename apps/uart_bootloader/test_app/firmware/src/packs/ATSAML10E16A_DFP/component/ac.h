@@ -1,7 +1,7 @@
 /*
  * Component description for AC
  *
- * Copyright (c) 2022 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2023 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,7 +20,7 @@
  *
  */
 
-/* file generated from device description version 2021-06-28T12:20:34Z */
+/* file generated from device description version 2023-04-12T14:18:35Z */
 #ifndef _SAML10_AC_COMPONENT_H_
 #define _SAML10_AC_COMPONENT_H_
 
@@ -270,8 +270,7 @@
 #define   AC_COMPCTRL_MUXNEG_GND_Val          _UINT32_(0x4)                                        /* (AC_COMPCTRL) Ground  */
 #define   AC_COMPCTRL_MUXNEG_VSCALE_Val       _UINT32_(0x5)                                        /* (AC_COMPCTRL) VDD scaler  */
 #define   AC_COMPCTRL_MUXNEG_BANDGAP_Val      _UINT32_(0x6)                                        /* (AC_COMPCTRL) Internal bandgap voltage  */
-#define   AC_COMPCTRL_MUXNEG_OPAMP_Val        _UINT32_(0x7)                                        /* (AC_COMPCTRL) OPAMP output (on AC1)  */
-#define   AC_COMPCTRL_MUXNEG_DAC_Val          _UINT32_(0x7)                                        /* (AC_COMPCTRL) DAC output (on AC0)  */
+#define   AC_COMPCTRL_MUXNEG_OPAMP_DAC_Val    _UINT32_(0x7)                                        /* (AC_COMPCTRL) DAC output (COMP0)/OPAMP2 output(COMP1)  */
 #define AC_COMPCTRL_MUXNEG_PIN0               (AC_COMPCTRL_MUXNEG_PIN0_Val << AC_COMPCTRL_MUXNEG_Pos) /* (AC_COMPCTRL) I/O pin 0 Position  */
 #define AC_COMPCTRL_MUXNEG_PIN1               (AC_COMPCTRL_MUXNEG_PIN1_Val << AC_COMPCTRL_MUXNEG_Pos) /* (AC_COMPCTRL) I/O pin 1 Position  */
 #define AC_COMPCTRL_MUXNEG_PIN2               (AC_COMPCTRL_MUXNEG_PIN2_Val << AC_COMPCTRL_MUXNEG_Pos) /* (AC_COMPCTRL) I/O pin 2 Position  */
@@ -279,8 +278,7 @@
 #define AC_COMPCTRL_MUXNEG_GND                (AC_COMPCTRL_MUXNEG_GND_Val << AC_COMPCTRL_MUXNEG_Pos) /* (AC_COMPCTRL) Ground Position  */
 #define AC_COMPCTRL_MUXNEG_VSCALE             (AC_COMPCTRL_MUXNEG_VSCALE_Val << AC_COMPCTRL_MUXNEG_Pos) /* (AC_COMPCTRL) VDD scaler Position  */
 #define AC_COMPCTRL_MUXNEG_BANDGAP            (AC_COMPCTRL_MUXNEG_BANDGAP_Val << AC_COMPCTRL_MUXNEG_Pos) /* (AC_COMPCTRL) Internal bandgap voltage Position  */
-#define AC_COMPCTRL_MUXNEG_OPAMP              (AC_COMPCTRL_MUXNEG_OPAMP_Val << AC_COMPCTRL_MUXNEG_Pos) /* (AC_COMPCTRL) OPAMP output (on AC1) Position  */
-#define AC_COMPCTRL_MUXNEG_DAC                (AC_COMPCTRL_MUXNEG_DAC_Val << AC_COMPCTRL_MUXNEG_Pos) /* (AC_COMPCTRL) DAC output (on AC0) Position  */
+#define AC_COMPCTRL_MUXNEG_OPAMP_DAC          (AC_COMPCTRL_MUXNEG_OPAMP_DAC_Val << AC_COMPCTRL_MUXNEG_Pos) /* (AC_COMPCTRL) DAC output (COMP0)/OPAMP2 output(COMP1) Position  */
 #define AC_COMPCTRL_MUXPOS_Pos                _UINT32_(12)                                         /* (AC_COMPCTRL) Positive Input Mux Selection Position */
 #define AC_COMPCTRL_MUXPOS_Msk                (_UINT32_(0x7) << AC_COMPCTRL_MUXPOS_Pos)            /* (AC_COMPCTRL) Positive Input Mux Selection Mask */
 #define AC_COMPCTRL_MUXPOS(value)             (AC_COMPCTRL_MUXPOS_Msk & (_UINT32_(value) << AC_COMPCTRL_MUXPOS_Pos)) /* Assigment of value for MUXPOS in the AC_COMPCTRL register */

@@ -1,7 +1,7 @@
 /*
  * Component description for OPAMP
  *
- * Copyright (c) 2022 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2023 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,7 +20,7 @@
  *
  */
 
-/* file generated from device description version 2021-06-28T12:20:34Z */
+/* file generated from device description version 2023-04-12T14:18:35Z */
 #ifndef _SAML10_OPAMP_COMPONENT_H_
 #define _SAML10_OPAMP_COMPONENT_H_
 
@@ -299,7 +299,7 @@
 #define   OPAMP_OPAMPCTRL2_MUXPOS_OA0POS_Val  _UINT32_(0x5)                                        /* (OPAMP_OPAMPCTRL2) Positive I/O pin OPA0  */
 #define   OPAMP_OPAMPCTRL2_MUXPOS_OA1POS_Val  _UINT32_(0x6)                                        /* (OPAMP_OPAMPCTRL2) Positive I/O pin OPA1  */
 #define   OPAMP_OPAMPCTRL2_MUXPOS_OA0TAP_Val  _UINT32_(0x7)                                        /* (OPAMP_OPAMPCTRL2) OPAMP0 Resistor Ladder Taps  */
-#define   OPAMP_OPAMPCTRL2_MUXPOS_RES3TAP_Val _UINT32_(0x7)                                        /* (OPAMP_OPAMPCTRL2) Resistor ladder 3 taps  */
+#define   OPAMP_OPAMPCTRL2_MUXPOS_RES3TAP_Val _UINT32_(0x8)                                        /* (OPAMP_OPAMPCTRL2) Resistor ladder 3 taps  */
 #define OPAMP_OPAMPCTRL2_MUXPOS_OA2POS        (OPAMP_OPAMPCTRL2_MUXPOS_OA2POS_Val << OPAMP_OPAMPCTRL2_MUXPOS_Pos) /* (OPAMP_OPAMPCTRL2) Positive I/O pin Position  */
 #define OPAMP_OPAMPCTRL2_MUXPOS_OA2TAP        (OPAMP_OPAMPCTRL2_MUXPOS_OA2TAP_Val << OPAMP_OPAMPCTRL2_MUXPOS_Pos) /* (OPAMP_OPAMPCTRL2) Resistor ladder 2 taps Position  */
 #define OPAMP_OPAMPCTRL2_MUXPOS_REFERENCE_DAC (OPAMP_OPAMPCTRL2_MUXPOS_REFERENCE_DAC_Val << OPAMP_OPAMPCTRL2_MUXPOS_Pos) /* (OPAMP_OPAMPCTRL2) REFERENCE or DAC output Position  */

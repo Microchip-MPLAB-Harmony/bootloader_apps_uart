@@ -1,7 +1,7 @@
 /*
  * Header file for ATSAML10E16A
  *
- * Copyright (c) 2022 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2023 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,7 +20,7 @@
  *
  */
 
-/* File generated from device description version 2021-06-28T12:20:34Z */
+/* File generated from device description version 2023-04-12T14:18:35Z */
 #ifndef _SAML10E16A_H_
 #define _SAML10E16A_H_
 
@@ -82,11 +82,11 @@ typedef enum IRQn
   SysTick_IRQn              =  -1, /* -1  System Tick Timer                   */
 
 /******  SAML10E16A specific Interrupt Numbers ***********************************/
-  PM_IRQn                   =   0, /* 0   Shared between MCLK OSCCTRL OSC32KCTRL PM SUPC (PM) */
-  OSC32KCTRL_IRQn           =   0, /* 0   Shared between MCLK OSCCTRL OSC32KCTRL PM SUPC (OSC32KCTRL) */
-  SUPC_IRQn                 =   0, /* 0   Shared between MCLK OSCCTRL OSC32KCTRL PM SUPC (SUPC) */
   MCLK_IRQn                 =   0, /* 0   Shared between MCLK OSCCTRL OSC32KCTRL PM SUPC (MCLK) */
+  OSC32KCTRL_IRQn           =   0, /* 0   Shared between MCLK OSCCTRL OSC32KCTRL PM SUPC (OSC32KCTRL) */
   OSCCTRL_IRQn              =   0, /* 0   Shared between MCLK OSCCTRL OSC32KCTRL PM SUPC (OSCCTRL) */
+  PM_IRQn                   =   0, /* 0   Shared between MCLK OSCCTRL OSC32KCTRL PM SUPC (PM) */
+  SUPC_IRQn                 =   0, /* 0   Shared between MCLK OSCCTRL OSC32KCTRL PM SUPC (SUPC) */
   WDT_IRQn                  =   1, /* 1   Watchdog Timer (WDT)                */
   RTC_IRQn                  =   2, /* 2   Real-Time Counter (RTC)             */
   EIC_EXTINT_0_IRQn         =   3, /* 3   External Interrupt Controller (EIC) */

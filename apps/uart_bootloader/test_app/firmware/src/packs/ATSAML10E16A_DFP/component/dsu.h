@@ -1,7 +1,7 @@
 /*
  * Component description for DSU
  *
- * Copyright (c) 2022 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2023 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,7 +20,7 @@
  *
  */
 
-/* file generated from device description version 2021-06-28T12:20:34Z */
+/* file generated from device description version 2023-04-12T14:18:35Z */
 #ifndef _SAML10_DSU_COMPONENT_H_
 #define _SAML10_DSU_COMPONENT_H_
 
@@ -158,21 +158,15 @@
 #define DSU_DID_SERIES_Pos                    _UINT32_(16)                                         /* (DSU_DID) Series Position */
 #define DSU_DID_SERIES_Msk                    (_UINT32_(0x3F) << DSU_DID_SERIES_Pos)               /* (DSU_DID) Series Mask */
 #define DSU_DID_SERIES(value)                 (DSU_DID_SERIES_Msk & (_UINT32_(value) << DSU_DID_SERIES_Pos)) /* Assigment of value for SERIES in the DSU_DID register */
-#define   DSU_DID_SERIES_0_Val                _UINT32_(0x0)                                        /* (DSU_DID) Cortex-M0+ processor, basic feature set  */
-#define   DSU_DID_SERIES_1_Val                _UINT32_(0x1)                                        /* (DSU_DID) Cortex-M0+ processor, USB  */
-#define   DSU_DID_SERIES_3_Val                _UINT32_(0x3)                                        /* (DSU_DID) SAM L11  */
-#define   DSU_DID_SERIES_4_Val                _UINT32_(0x4)                                        /* (DSU_DID) SAM L10  */
-#define DSU_DID_SERIES_0                      (DSU_DID_SERIES_0_Val << DSU_DID_SERIES_Pos)         /* (DSU_DID) Cortex-M0+ processor, basic feature set Position  */
-#define DSU_DID_SERIES_1                      (DSU_DID_SERIES_1_Val << DSU_DID_SERIES_Pos)         /* (DSU_DID) Cortex-M0+ processor, USB Position  */
-#define DSU_DID_SERIES_3                      (DSU_DID_SERIES_3_Val << DSU_DID_SERIES_Pos)         /* (DSU_DID) SAM L11 Position  */
-#define DSU_DID_SERIES_4                      (DSU_DID_SERIES_4_Val << DSU_DID_SERIES_Pos)         /* (DSU_DID) SAM L10 Position  */
+#define   DSU_DID_SERIES_SAM_L11_Val          _UINT32_(0x3)                                        /* (DSU_DID) SAM L11  */
+#define   DSU_DID_SERIES_SAM_L10_Val          _UINT32_(0x4)                                        /* (DSU_DID) SAM L10  */
+#define DSU_DID_SERIES_SAM_L11                (DSU_DID_SERIES_SAM_L11_Val << DSU_DID_SERIES_Pos)   /* (DSU_DID) SAM L11 Position  */
+#define DSU_DID_SERIES_SAM_L10                (DSU_DID_SERIES_SAM_L10_Val << DSU_DID_SERIES_Pos)   /* (DSU_DID) SAM L10 Position  */
 #define DSU_DID_FAMILY_Pos                    _UINT32_(23)                                         /* (DSU_DID) Family Position */
 #define DSU_DID_FAMILY_Msk                    (_UINT32_(0x1F) << DSU_DID_FAMILY_Pos)               /* (DSU_DID) Family Mask */
 #define DSU_DID_FAMILY(value)                 (DSU_DID_FAMILY_Msk & (_UINT32_(value) << DSU_DID_FAMILY_Pos)) /* Assigment of value for FAMILY in the DSU_DID register */
-#define   DSU_DID_FAMILY_0_Val                _UINT32_(0x0)                                        /* (DSU_DID) General purpose microcontroller  */
-#define   DSU_DID_FAMILY_1_Val                _UINT32_(0x1)                                        /* (DSU_DID) PicoPower  */
-#define DSU_DID_FAMILY_0                      (DSU_DID_FAMILY_0_Val << DSU_DID_FAMILY_Pos)         /* (DSU_DID) General purpose microcontroller Position  */
-#define DSU_DID_FAMILY_1                      (DSU_DID_FAMILY_1_Val << DSU_DID_FAMILY_Pos)         /* (DSU_DID) PicoPower Position  */
+#define   DSU_DID_FAMILY_SAML_Val             _UINT32_(0x1)                                        /* (DSU_DID) Ultra Low Power Microcontroller  */
+#define DSU_DID_FAMILY_SAML                   (DSU_DID_FAMILY_SAML_Val << DSU_DID_FAMILY_Pos)      /* (DSU_DID) Ultra Low Power Microcontroller Position  */
 #define DSU_DID_PROCESSOR_Pos                 _UINT32_(28)                                         /* (DSU_DID) Processor Position */
 #define DSU_DID_PROCESSOR_Msk                 (_UINT32_(0xF) << DSU_DID_PROCESSOR_Pos)             /* (DSU_DID) Processor Mask */
 #define DSU_DID_PROCESSOR(value)              (DSU_DID_PROCESSOR_Msk & (_UINT32_(value) << DSU_DID_PROCESSOR_Pos)) /* Assigment of value for PROCESSOR in the DSU_DID register */

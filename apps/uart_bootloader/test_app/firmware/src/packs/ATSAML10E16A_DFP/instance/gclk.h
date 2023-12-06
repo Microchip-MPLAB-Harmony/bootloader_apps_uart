@@ -1,7 +1,7 @@
 /*
  * Instance header file for ATSAML10E16A
  *
- * Copyright (c) 2022 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2023 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,7 +20,7 @@
  *
  */
 
-/* file generated from device description version 2021-06-28T12:20:34Z */
+/* file generated from device description version 2023-04-12T14:18:35Z */
 #ifndef _SAML10_GCLK_INSTANCE_
 #define _SAML10_GCLK_INSTANCE_
 
@@ -31,9 +31,9 @@
 #define GCLK_GEN_NUM                             (5)        /* Number of Generic Clock Generators */
 #define GCLK_GEN_NUM_MSB                         (4)        /* Number of Generic Clock Generators - 1 */
 #define GCLK_GEN_SOURCE_NUM_MSB                  (7)        /* Number of Generic Clock Sources - 1 */
+#define GCLK_INSTANCE_ID                         (7)        
 #define GCLK_NUM                                 (21)       /* Number of Generic Clock Users */
 #define GCLK_SOURCE_BITS                         (3)        
 #define GCLK_SOURCE_NUM                          (8)        /* Number of Generic Clock Sources */
-#define GCLK_INSTANCE_ID                         (7)        
 
 #endif /* _SAML10_GCLK_INSTANCE_ */
