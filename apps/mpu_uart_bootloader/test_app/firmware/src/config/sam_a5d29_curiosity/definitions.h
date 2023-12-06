@@ -49,8 +49,8 @@
 #include <stddef.h>
 #include <stdbool.h>
 #include <stdio.h>
-#include "peripheral/pit/plib_pit.h"
 #include "peripheral/uart/plib_uart0.h"
+#include "peripheral/pit/plib_pit.h"
 #include "peripheral/mmu/plib_mmu.h"
 #include "peripheral/matrix/plib_matrix.h"
 #include "peripheral/clk/plib_clk.h"

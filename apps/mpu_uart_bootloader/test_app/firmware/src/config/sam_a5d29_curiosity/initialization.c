@@ -145,9 +145,9 @@ void SYS_Initialize ( void* data )
 
 
 
-	PIT_TimerInitialize();
-
 	UART0_Initialize();
+
+	PIT_TimerInitialize();
 
     Matrix_Initialize();
 
