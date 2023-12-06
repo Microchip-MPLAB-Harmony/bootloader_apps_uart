@@ -10,4 +10,4 @@ settings:
   GENERATE_BACKUP: 'true'
   CMSISPath: .\dev_packs\arm\CMSIS\5.6.0
   MERGE_STRATEGY: USER_ALL
-  DFPPath: .\dev_packs\Microchip\SAML21_DFP\3.2.54\saml21b\atdf\ATSAML21J18B.atdf
+  DFPPath: SAML21_DFP\3.7.217

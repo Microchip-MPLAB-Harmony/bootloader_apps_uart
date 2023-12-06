@@ -1,5 +1,19 @@
 /*******************************************************************************
-* Copyright (C) 2019 Microchip Technology Inc. and its subsidiaries.
+  Bootloader Interrupt Header File
+
+  File Name:
+    bootloader_interrupt.h
+
+  Summary:
+    This file contains function prototype declarations.
+
+  Description:
+    This file contains function prototype declarations.
+ *******************************************************************************/
+
+// DOM-IGNORE-BEGIN
+/*******************************************************************************
+* Copyright (C) 2023 Microchip Technology Inc. and its subsidiaries.
 *
 * Subject to your compliance with these terms, you may use Microchip software
 * and any derivatives exclusively with Microchip products. It is your
@@ -19,43 +33,19 @@
 * FULLEST EXTENT ALLOWED BY LAW, MICROCHIP'S TOTAL LIABILITY ON ALL CLAIMS IN
 * ANY WAY RELATED TO THIS SOFTWARE WILL NOT EXCEED THE AMOUNT OF FEES, IF ANY,
 * THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
-*******************************************************************************/
+ *******************************************************************************/
+// DOM-IGNORE-END
 
-#ifndef TOOLCHAIN_SPECIFICS_H
-#define TOOLCHAIN_SPECIFICS_H
+// *****************************************************************************
+// *****************************************************************************
+// Section: Include Files
+// *****************************************************************************
+// *****************************************************************************
 
-#ifdef __cplusplus  // Provide C++ Compatibility
-extern "C" {
-#endif
+#ifndef BOOTLOADER_INTERRUPT_H
+#define BOOTLOADER_INTERRUPT_H
 
-#pragma GCC diagnostic push
-#ifndef __cplusplus
-   #pragma GCC diagnostic ignored "-Wnested-externs"
-#endif
-#pragma GCC diagnostic ignored "-Wsign-conversion"
-#pragma GCC diagnostic ignored "-Wattributes"
-#pragma GCC diagnostic ignored "-Wundef"
-#include "cmsis_compiler.h"
-#pragma GCC diagnostic pop
+void NonMaskableInt_Handler(void);
+void HardFault_Handler(void);
 
-#include <sys/types.h>
-
-#define NO_INIT        __attribute__((section(".no_init")))
-#define SECTION(a)     __attribute__((__section__(a)))
-
-#define CACHE_LINE_SIZE    (4u)
-#define CACHE_ALIGN
-
-#define CACHE_ALIGNED_SIZE_GET(size)     ((size) + ((((size) % (CACHE_LINE_SIZE))!= 0U)? ((CACHE_LINE_SIZE) - ((size) % (CACHE_LINE_SIZE))) : (0U)))
-
-#ifndef FORMAT_ATTRIBUTE
-   #define FORMAT_ATTRIBUTE(archetype, string_index, first_to_check)  __attribute__ ((format (archetype, string_index, first_to_check)))
-#endif
-
-
-#ifdef __cplusplus
-}
-#endif
-
-#endif // end of header
-
+#endif      //BOOTLOADER_INTERRUPT_H
