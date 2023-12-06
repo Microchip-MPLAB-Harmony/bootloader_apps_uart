@@ -74,7 +74,7 @@ static void DFLL_Initialize( void )
     }
 
     /* Load Calibration Value */
-    uint8_t calibCoarse = (uint8_t)(((*(uint32_t*)0x806024U) >> 26U ) & 0x3fU);
+    uint8_t calibCoarse = (uint8_t)(((*((uint32_t*)0x00806020U + 1U)) >> 26U ) & 0x3fU);
     calibCoarse = (((calibCoarse) == 0x3FU) ? 0x1FU : (calibCoarse));
 
     SYSCTRL_REGS->SYSCTRL_DFLLVAL = SYSCTRL_DFLLVAL_COARSE((uint32_t)calibCoarse) | SYSCTRL_DFLLVAL_FINE((uint32_t)512U);
@@ -91,6 +91,7 @@ static void DFLL_Initialize( void )
     {
         /* Waiting for DFLL to be ready */
     }
+    
 }
 
 
@@ -104,6 +105,7 @@ static void GCLK0_Initialize( void )
         /* wait for the Generator 0 synchronization */
     }
 }
+
 
 void CLOCK_Initialize( void )
 {
