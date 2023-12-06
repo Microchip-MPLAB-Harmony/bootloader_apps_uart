@@ -1,5 +1,6 @@
+// DOM-IGNORE-BEGIN
 /*******************************************************************************
-* Copyright (C) 2019 Microchip Technology Inc. and its subsidiaries.
+* Copyright (C) 2018 Microchip Technology Inc. and its subsidiaries.
 *
 * Subject to your compliance with these terms, you may use Microchip software
 * and any derivatives exclusively with Microchip products. It is your
@@ -20,42 +21,41 @@
 * ANY WAY RELATED TO THIS SOFTWARE WILL NOT EXCEED THE AMOUNT OF FEES, IF ANY,
 * THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
 *******************************************************************************/
+// DOM-IGNORE-END
 
-#ifndef TOOLCHAIN_SPECIFICS_H
-#define TOOLCHAIN_SPECIFICS_H
+#include <stdio.h>
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <stdbool.h>
+#include "device.h" /* for ARM CMSIS __BKPT() */
 
-#ifdef __cplusplus  // Provide C++ Compatibility
+#ifdef __cplusplus
 extern "C" {
 #endif
 
-#pragma GCC diagnostic push
-#ifndef __cplusplus
-   #pragma GCC diagnostic ignored "-Wnested-externs"
-#endif
-#pragma GCC diagnostic ignored "-Wsign-conversion"
-#pragma GCC diagnostic ignored "-Wattributes"
-#pragma GCC diagnostic ignored "-Wundef"
-#include "cmsis_compiler.h"
-#pragma GCC diagnostic pop
 
-#include <sys/types.h>
+/* MISRAC 2012 deviation block start */
+/* MISRA C-2012 Rule 21.2 deviated twice.  Deviation record ID -  H3_MISRAC_2012_R_21_2_DR_1 */
+/* Harmony specific
+ * We implement only the syscalls we want over the stubs provided by libpic32c
+ */
+extern void _exit(int status);
 
-#define NO_INIT        __attribute__((section(".no_init")))
-#define SECTION(a)     __attribute__((__section__(a)))
-
-#define CACHE_LINE_SIZE    (32u)
-#define CACHE_ALIGN        __ALIGNED(CACHE_LINE_SIZE)
-
-#define CACHE_ALIGNED_SIZE_GET(size)     ((size) + ((((size) % (CACHE_LINE_SIZE))!= 0U)? ((CACHE_LINE_SIZE) - ((size) % (CACHE_LINE_SIZE))) : (0U)))
-
-#ifndef FORMAT_ATTRIBUTE
-   #define FORMAT_ATTRIBUTE(archetype, string_index, first_to_check)  __attribute__ ((format (archetype, string_index, first_to_check)))
+void _exit(int status)
+{
+    /* Software breakpoint */
+#ifdef __DEBUG
+    __BKPT(0);
 #endif
 
+    /* halt CPU */
+    while (true)
+    {
+    }
+}
 
 #ifdef __cplusplus
 }
 #endif
 
-#endif // end of header
-
+/* MISRAC 2012 deviation block end */
