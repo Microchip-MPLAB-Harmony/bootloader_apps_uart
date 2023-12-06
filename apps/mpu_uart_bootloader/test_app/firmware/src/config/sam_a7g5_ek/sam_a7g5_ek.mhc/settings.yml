@@ -1,6 +1,6 @@
-format_version: v1.0
 configName: sam_a7g5_ek
 folderName: sam_a7g5_ek
+format_version: v1.0
 frameworkPath: C:\h3
 processor: SAMA7G54
 projectName: sam_a7g5_ek
@@ -11,4 +11,4 @@ settings:
   TRUSTZONE: 'false'
   CMSISPath: dev_packs\arm\CMSIS\5.8.0
   MERGE_STRATEGY: USER_ALL
-  DFPPath: dev_packs\Microchip\SAMA7G5_DFP\1.2.178\atdf\SAMA7G54.atdf
+  DFPPath: SAMA7G5_DFP\1.2.178
