@@ -65,28 +65,28 @@
 #define BOOTLOADER_SIZE                         8192
 
 /* Starting location of Bootloader in Inactive bank */
-#define INACTIVE_BANK_OFFSET                    (FLASH_LENGTH / 2)
+#define INACTIVE_BANK_OFFSET                    (FLASH_LENGTH / 2U)
 
 #define INACTIVE_BANK_START                     (FLASH_START + INACTIVE_BANK_OFFSET)
 
 #define FLASH_END_ADDRESS                       (INACTIVE_BANK_START + INACTIVE_BANK_OFFSET)
 
 
-#define APP_START_ADDRESS                       ((uint32_t)(PA_TO_KVA0(0x1d000000UL)))
-#define APP_JUMP_ADDRESS                        ((uint32_t)(PA_TO_KVA0(0x1d000200UL)))
+#define APP_START_ADDRESS                       ((uint32_t)(PA_TO_KVA0(0x1d000000U)))
+#define APP_JUMP_ADDRESS                        ((uint32_t)(PA_TO_KVA0(0x1d000200U)))
 
 
 #define LOWER_FLASH_START                       (FLASH_START)
-#define LOWER_FLASH_SERIAL_START                (LOWER_FLASH_START + (FLASH_LENGTH / 2) - PAGE_SIZE)
-#define LOWER_FLASH_SERIAL_SECTOR               (LOWER_FLASH_START + (FLASH_LENGTH / 2) - ERASE_BLOCK_SIZE)
+#define LOWER_FLASH_SERIAL_START                (LOWER_FLASH_START + (FLASH_LENGTH / 2U) - PAGE_SIZE)
+#define LOWER_FLASH_SERIAL_SECTOR               (LOWER_FLASH_START + (FLASH_LENGTH / 2U) - ERASE_BLOCK_SIZE)
 
 #define UPPER_FLASH_START                       INACTIVE_BANK_START
 #define UPPER_FLASH_SERIAL_START                (FLASH_END_ADDRESS - PAGE_SIZE)
 #define UPPER_FLASH_SERIAL_SECTOR               (FLASH_END_ADDRESS - ERASE_BLOCK_SIZE)
 
-#define FLASH_SERIAL_PROLOGUE                   0xDEADBEEF
-#define FLASH_SERIAL_EPILOGUE                   0xBEEFDEAD
-#define FLASH_SERIAL_CLEAR                      0xFFFFFFFF
+#define FLASH_SERIAL_PROLOGUE                   0xDEADBEEFU
+#define FLASH_SERIAL_EPILOGUE                   0xBEEFDEADU
+#define FLASH_SERIAL_CLEAR                      0xFFFFFFFFU
 
 #define LOWER_FLASH_SERIAL_READ                 ((T_FLASH_SERIAL *)KVA0_TO_KVA1(LOWER_FLASH_SERIAL_START))
 #define UPPER_FLASH_SERIAL_READ                 ((T_FLASH_SERIAL *)KVA0_TO_KVA1(UPPER_FLASH_SERIAL_START))
@@ -113,6 +113,11 @@ typedef struct
 #define BTL_TRIGGER_LEN                         16
 
 // *****************************************************************************
+/* MISRA C-2012 Rule 5.8 deviated below. Deviation record ID -
+   H3_MISRAC_2012_R_5_8_DR_1 */
+
+void SYS_DeInitialize( void *data );
+
 /* Function:
     uint16_t bootloader_GetVersion( void );
 
@@ -144,10 +149,9 @@ Returns:
 
 Example:
     <code>
-
-    // Bootloader Major and Minor version sent for a Read Version command (MAJOR.MINOR)
-    #define BTL_MAJOR_VERSION       3
-    #define BTL_MINOR_VERSION       6
+    
+    #define BTL_MAJOR_VERSION       3U
+    #define BTL_MINOR_VERSION       7U
 
     uint16_t bootloader_GetVersion( void )
     {
@@ -292,16 +296,15 @@ Example:
 
         appImageStartAddr = 0x00002000;
         appImageSize = 0x8000;
-
-        // receivedCRC is populated based on the Verify command received from the host
+        
 
         if (bootloader_CRCGenerate(appImageStartAddr, appImageSize) != receivedCRC)
         {
-            // CRC mismatch
+            
         }
         else
         {
-            // CRC matches
+            
         }
 
     </code>
@@ -330,8 +333,7 @@ Returns:
     None
 
 Example:
-    <code>
-        // Make sure all transfers are complete before resetting the device
+    <code>        
 
         bootloader_TriggerReset();
 
