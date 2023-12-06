@@ -85,9 +85,9 @@
 void CLK_Initialize( void )
 {
     /* unlock system for clock configuration */
-    SYSKEY = 0x00000000;
-    SYSKEY = 0xAA996655;
-    SYSKEY = 0x556699AA;
+    SYSKEY = 0x00000000U;
+    SYSKEY = 0xAA996655U;
+    SYSKEY = 0x556699AAU;
 
 
   
@@ -95,15 +95,15 @@ void CLK_Initialize( void )
     /* Peripheral Module Disable Configuration */
 
 
-    PMD1 = 0x1001;
-    PMD2 = 0x3;
-    PMD3 = 0x1ff01ff;
-    PMD4 = 0x1ff;
-    PMD5 = 0x301f3f3d;
-    PMD6 = 0x10830001;
-    PMD7 = 0x500000;
+    PMD1 = 0x1001U;
+    PMD2 = 0x3U;
+    PMD3 = 0x1ff01ffU;
+    PMD4 = 0x1ffU;
+    PMD5 = 0x301f3f3dU;
+    PMD6 = 0x10830001U;
+    PMD7 = 0x500000U;
 
 
     /* Lock system since done with clock configuration */
-    SYSKEY = 0x33333333;
+    SYSKEY = 0x33333333U;
 }
