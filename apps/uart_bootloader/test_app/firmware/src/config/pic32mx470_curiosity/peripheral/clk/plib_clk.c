@@ -86,16 +86,19 @@ void CLK_Initialize( void )
 {
 
     /* Code for fuse settings can be found in "initialization.c" */
-    
+
 
     /* Wait for PLL to be locked */
-    while(!OSCCONbits.SLOCK);
+    while(OSCCONbits.SLOCK == 0U)
+                 {
+                      /* Nothing to do */
+                 }
 
     /* Peripheral Module Disable Configuration */
-    PMD1 = 0x1101;
-    PMD2 = 0x3;
-    PMD3 = 0x1f001f;
-    PMD4 = 0x1f;
-    PMD5 = 0x103031e;
-    PMD6 = 0x10001;
+    PMD1 = 0x1101U;
+    PMD2 = 0x3U;
+    PMD3 = 0x1f001fU;
+    PMD4 = 0x1fU;
+    PMD5 = 0x103031eU;
+    PMD6 = 0x10001U;
 }

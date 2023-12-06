@@ -40,8 +40,8 @@
 *******************************************************************************/
 // DOM-IGNORE-END
 
-#ifndef _BSP_H
-#define _BSP_H
+#ifndef BSP_H
+#define BSP_H
 
 // *****************************************************************************
 // *****************************************************************************
@@ -60,36 +60,39 @@
 // Section: BSP Macros
 // *****************************************************************************
 // *****************************************************************************
+#define pic32mx470_curiosity
+#define BSP_NAME             "pic32mx470_curiosity"
+
 /*** LED Macros for LED2 ***/
-#define LED2_Toggle() (LATEINV = (1<<6))
+#define LED2_Toggle() (LATEINV = (1UL<<6))
 #define LED2_Get() ((PORTE >> 6) & 0x1)
-#define LED2_On() (LATESET = (1<<6))
-#define LED2_Off() (LATECLR = (1<<6))
+#define LED2_On() (LATESET = (1UL<<6))
+#define LED2_Off() (LATECLR = (1UL<<6))
 /*** LED Macros for LED3 ***/
-#define LED3_Toggle() (LATEINV = (1<<7))
+#define LED3_Toggle() (LATEINV = (1UL<<7))
 #define LED3_Get() ((PORTE >> 7) & 0x1)
-#define LED3_On() (LATESET = (1<<7))
-#define LED3_Off() (LATECLR = (1<<7))
+#define LED3_On() (LATESET = (1UL<<7))
+#define LED3_Off() (LATECLR = (1UL<<7))
 /*** LED Macros for RGB_LED_GREEN ***/
-#define RGB_LED_GREEN_Toggle() (LATBINV = (1<<3))
+#define RGB_LED_GREEN_Toggle() (LATBINV = (1UL<<3))
 #define RGB_LED_GREEN_Get() ((PORTB >> 3) & 0x1)
-#define RGB_LED_GREEN_On() (LATBCLR = (1<<3))
-#define RGB_LED_GREEN_Off() (LATBSET = (1<<3))
+#define RGB_LED_GREEN_On() (LATBCLR = (1UL<<3))
+#define RGB_LED_GREEN_Off() (LATBSET = (1UL<<3))
 /*** LED Macros for RGB_LED_BLUE ***/
-#define RGB_LED_BLUE_Toggle() (LATBINV = (1<<2))
+#define RGB_LED_BLUE_Toggle() (LATBINV = (1UL<<2))
 #define RGB_LED_BLUE_Get() ((PORTB >> 2) & 0x1)
-#define RGB_LED_BLUE_On() (LATBCLR = (1<<2))
-#define RGB_LED_BLUE_Off() (LATBSET = (1<<2))
+#define RGB_LED_BLUE_On() (LATBCLR = (1UL<<2))
+#define RGB_LED_BLUE_Off() (LATBSET = (1UL<<2))
 /*** LED Macros for RGB_LED_RED ***/
-#define RGB_LED_RED_Toggle() (LATBINV = (1<<10))
+#define RGB_LED_RED_Toggle() (LATBINV = (1UL<<10))
 #define RGB_LED_RED_Get() ((PORTB >> 10) & 0x1)
-#define RGB_LED_RED_On() (LATBCLR = (1<<10))
-#define RGB_LED_RED_Off() (LATBSET = (1<<10))
+#define RGB_LED_RED_On() (LATBCLR = (1UL<<10))
+#define RGB_LED_RED_Off() (LATBSET = (1UL<<10))
 /*** LED Macros for LED1 ***/
-#define LED1_Toggle() (LATEINV = (1<<4))
+#define LED1_Toggle() (LATEINV = (1UL<<4))
 #define LED1_Get() ((PORTE >> 4) & 0x1)
-#define LED1_On() (LATESET = (1<<4))
-#define LED1_Off() (LATECLR = (1<<4))
+#define LED1_On() (LATESET = (1UL<<4))
+#define LED1_Off() (LATECLR = (1UL<<4))
 /*** SWITCH Macros for SWITCH1 ***/
 #define SWITCH1_Get() ((PORTD >> 6) & 0x1)
 #define SWITCH1_STATE_PRESSED 0
@@ -127,7 +130,6 @@
 
   Example:
     <code>
-    //Initialize the BSP
     BSP_Initialize();
     </code>
 
@@ -137,7 +139,7 @@
 
 void BSP_Initialize(void);
 
-#endif // _BSP_H
+#endif // BSP_H
 
 /*******************************************************************************
  End of File
