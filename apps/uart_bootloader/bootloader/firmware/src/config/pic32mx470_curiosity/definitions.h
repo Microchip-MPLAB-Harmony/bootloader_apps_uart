@@ -64,6 +64,12 @@ extern "C" {
 #endif
 // DOM-IGNORE-END
 
+/* Device Information */
+#define DEVICE_NAME			 "PIC32MX470F512H"
+#define DEVICE_ARCH			 "MIPS"
+#define DEVICE_FAMILY		 "PIC32MX1185"
+#define DEVICE_SERIES		 "PIC32MX"
+
 /* CPU clock frequency */
 #define CPU_CLOCK_FREQUENCY 96000000
 

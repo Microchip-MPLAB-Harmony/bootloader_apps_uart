@@ -58,15 +58,15 @@ void static UART1_ErrorClear( void )
     if(errors != UART_ERROR_NONE)
     {
         /* If it's a overrun error then clear it to flush FIFO */
-        if(U1STA & _U1STA_OERR_MASK)
+        if((U1STA & _U1STA_OERR_MASK) != 0U)
         {
             U1STACLR = _U1STA_OERR_MASK;
         }
 
         /* Read existing error bytes from FIFO to clear parity and framing error flags */
-        while(U1STA & _U1STA_URXDA_MASK)
+        while((U1STA & _U1STA_URXDA_MASK) != 0U)
         {
-            dummyData = U1RXREG;
+            dummyData = (uint8_t)U1RXREG;
         }
 
     }
@@ -99,35 +99,33 @@ bool UART1_SerialSetup( UART_SERIAL_SETUP *setup, uint32_t srcClkFreq )
     bool status = false;
     uint32_t baud;
     uint32_t status_ctrl;
-    bool brgh = 0;
-    int32_t uxbrg = 0;
+    uint32_t uxbrg = 0;
 
     if (setup != NULL)
     {
         baud = setup->baudRate;
 
-        if ((baud == 0) || ((setup->dataWidth == UART_DATA_9_BIT) && (setup->parity != UART_PARITY_NONE)))
+        if ((baud == 0U) || ((setup->dataWidth == UART_DATA_9_BIT) && (setup->parity != UART_PARITY_NONE)))
         {
             return status;
         }
 
-        if(srcClkFreq == 0)
+        if(srcClkFreq == 0U)
         {
             srcClkFreq = UART1_FrequencyGet();
         }
 
         /* Calculate BRG value */
-        if (brgh == 0)
+        uxbrg = (((srcClkFreq >> 4) + (baud >> 1)) / baud);
+        /* Check if the baud value can be set with low baud settings */
+        if (uxbrg < 1U)
         {
-            uxbrg = (((srcClkFreq >> 4) + (baud >> 1)) / baud ) - 1;
-        }
-        else
-        {
-            uxbrg = (((srcClkFreq >> 2) + (baud >> 1)) / baud ) - 1;
+            return status;
         }
 
-        /* Check if the baud value can be set with low baud settings */
-        if((uxbrg < 0) || (uxbrg > UINT16_MAX))
+        uxbrg -= 1U;
+
+        if (uxbrg > UINT16_MAX)
         {
             return status;
         }
@@ -157,7 +155,7 @@ bool UART1_SerialSetup( UART_SERIAL_SETUP *setup, uint32_t srcClkFreq )
 
         U1MODESET = _U1MODE_ON_MASK;
 
-        /* Re-enable UTXEN, URXEN and UTXBRK. */
+        /* Restore UTXEN, URXEN and UTXBRK bits. */
         U1STASET = status_ctrl;
 
         status = true;
@@ -168,10 +166,13 @@ bool UART1_SerialSetup( UART_SERIAL_SETUP *setup, uint32_t srcClkFreq )
 
 bool UART1_AutoBaudQuery( void )
 {
-    if(U1MODE & _U1MODE_ABAUD_MASK)
-        return true;
-    else
-        return false;
+    bool autobaudqcheck = false;
+    if((U1MODE & _U1MODE_ABAUD_MASK) != 0U)
+    {
+
+       autobaudqcheck = true;
+    }
+    return autobaudqcheck;
 }
 
 void UART1_AutoBaudSet( bool enable )
@@ -188,36 +189,38 @@ void UART1_AutoBaudSet( bool enable )
 bool UART1_Read(void* buffer, const size_t size )
 {
     bool status = false;
-    uint8_t* lBuffer = (uint8_t* )buffer;
     uint32_t errorStatus = 0;
     size_t processedSize = 0;
 
-    if(lBuffer != NULL)
+    if(buffer != NULL)
     {
+
         /* Clear error flags and flush out error data that may have been received when no active request was pending */
         UART1_ErrorClear();
 
         while( size > processedSize )
         {
-            while(!(U1STA & _U1STA_URXDA_MASK));
+            while((U1STA & _U1STA_URXDA_MASK) == 0U)
+            {
+                /* Wait for receiver to be ready */
+            }
 
             /* Error status */
             errorStatus = (U1STA & (_U1STA_OERR_MASK | _U1STA_FERR_MASK | _U1STA_PERR_MASK));
 
-            if(errorStatus != 0)
+            if(errorStatus != 0U)
             {
                 break;
             }
             if (( U1MODE & (_U1MODE_PDSEL0_MASK | _U1MODE_PDSEL1_MASK)) == (_U1MODE_PDSEL0_MASK | _U1MODE_PDSEL1_MASK))
             {
                 /* 9-bit mode */
-                *(uint16_t*)lBuffer = (U1RXREG );
-                lBuffer += 2;
+                ((uint16_t*)(buffer))[processedSize] = (uint16_t)(U1RXREG );
             }
             else
             {
                 /* 8-bit mode */
-                *lBuffer++ = (U1RXREG );
+                ((uint8_t*)(buffer))[processedSize] = (uint8_t)(U1RXREG);
             }
 
             processedSize++;
@@ -235,26 +238,27 @@ bool UART1_Read(void* buffer, const size_t size )
 bool UART1_Write( void* buffer, const size_t size )
 {
     bool status = false;
-    uint8_t* lBuffer = (uint8_t*)buffer;
     size_t processedSize = 0;
 
-    if(lBuffer != NULL)
+    if(buffer != NULL)
     {
         while( size > processedSize )
         {
             /* Wait while TX buffer is full */
-            while (U1STA & _U1STA_UTXBF_MASK);
+            while ((U1STA & _U1STA_UTXBF_MASK) != 0U)
+            {
+                /* Wait for transmitter to be ready */
+            }
 
             if (( U1MODE & (_U1MODE_PDSEL0_MASK | _U1MODE_PDSEL1_MASK)) == (_U1MODE_PDSEL0_MASK | _U1MODE_PDSEL1_MASK))
             {
                 /* 9-bit mode */
-                U1TXREG = *(uint16_t*)lBuffer;
-                lBuffer += 2;
+                U1TXREG = ((uint16_t*)(buffer))[processedSize];
             }
             else
             {
                 /* 8-bit mode */
-                U1TXREG = *lBuffer++;
+                U1TXREG = ((uint8_t*)(buffer))[processedSize];
             }
 
             processedSize++;
@@ -270,7 +274,7 @@ UART_ERROR UART1_ErrorGet( void )
 {
     UART_ERROR errors = UART_ERROR_NONE;
 
-    errors = (UART_ERROR)(U1STA & (_U1STA_OERR_MASK | _U1STA_FERR_MASK | _U1STA_PERR_MASK));
+    errors = (U1STA & (_U1STA_OERR_MASK | _U1STA_FERR_MASK | _U1STA_PERR_MASK));
 
     if(errors != UART_ERROR_NONE)
     {
@@ -283,16 +287,19 @@ UART_ERROR UART1_ErrorGet( void )
 
 void UART1_WriteByte(int data)
 {
-    while ((U1STA & _U1STA_UTXBF_MASK));
+    while (((U1STA & _U1STA_UTXBF_MASK) != 0U))
+    {
+        /* Do Nothing */
+    }
 
-    U1TXREG = data;
+    U1TXREG = (uint32_t)data;
 }
 
 bool UART1_TransmitterIsReady( void )
 {
     bool status = false;
 
-    if(!(U1STA & _U1STA_UTXBF_MASK))
+    if((U1STA & _U1STA_UTXBF_MASK) == 0U)
     {
         status = true;
     }
@@ -302,7 +309,7 @@ bool UART1_TransmitterIsReady( void )
 
 int UART1_ReadByte( void )
 {
-    return(U1RXREG);
+    return (int)(U1RXREG);
 }
 
 bool UART1_ReceiverIsReady( void )
@@ -321,7 +328,7 @@ bool UART1_TransmitComplete( void )
 {
     bool transmitComplete = false;
 
-    if((U1STA & _U1STA_TRMT_MASK))
+    if((U1STA & _U1STA_TRMT_MASK) != 0U)
     {
         transmitComplete = true;
     }
