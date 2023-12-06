@@ -48,14 +48,14 @@
 #include <stdint.h>
 #include <stddef.h>
 #include <stdbool.h>
+#include "driver/sdmmc/drv_sdmmc.h"
+#include "bootloader/bootloader_uart.h"
 #include "system/fs/sys_fs.h"
 #include "system/fs/sys_fs_media_manager.h"
 #include "system/fs/sys_fs_fat_interface.h"
 #include "system/fs/fat_fs/file_system/ff.h"
 #include "system/fs/fat_fs/file_system/ffconf.h"
 #include "system/fs/fat_fs/hardware_access/diskio.h"
-#include "driver/sdmmc/drv_sdmmc.h"
-#include "bootloader/bootloader_uart.h"
 #include "peripheral/uart/plib_uart0.h"
 #include "peripheral/mmu/plib_mmu.h"
 #include "peripheral/matrix/plib_matrix.h"
@@ -64,10 +64,10 @@
 #include "peripheral/aic/plib_aic.h"
 #include "peripheral/sdmmc/plib_sdmmc0.h"
 #include "peripheral/tc/plib_tc0.h"
+#include "system/time/sys_time.h"
 #include "system/int/sys_int.h"
 #include "osal/osal.h"
 #include "system/debug/sys_debug.h"
-#include "system/time/sys_time.h"
 #include "app.h"
 
 
