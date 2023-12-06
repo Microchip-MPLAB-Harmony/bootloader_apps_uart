@@ -51,12 +51,12 @@
 #include "peripheral/nvmctrl/plib_nvmctrl.h"
 #include "peripheral/evsys/plib_evsys.h"
 #include "bootloader/bootloader_uart.h"
-#include "peripheral/pm/plib_pm.h"
 #include "peripheral/port/plib_port.h"
 #include "peripheral/clock/plib_clock.h"
 #include "peripheral/nvic/plib_nvic.h"
 #include "peripheral/systick/plib_systick.h"
 #include "peripheral/pac/plib_pac.h"
+#include "peripheral/pm/plib_pm.h"
 #include "peripheral/sercom/usart/plib_sercom4_usart.h"
 #include "peripheral/dsu/plib_dsu.h"
 
@@ -67,6 +67,12 @@ extern "C" {
 
 #endif
 // DOM-IGNORE-END
+
+/* Device Information */
+#define DEVICE_NAME			 "ATSAML22N18A"
+#define DEVICE_ARCH			 "CORTEX-M0PLUS"
+#define DEVICE_FAMILY		 "SAML"
+#define DEVICE_SERIES		 "SAML22"
 
 /* CPU clock frequency */
 #define CPU_CLOCK_FREQUENCY 32000000
