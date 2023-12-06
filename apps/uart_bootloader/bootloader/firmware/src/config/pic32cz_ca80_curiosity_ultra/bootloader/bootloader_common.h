@@ -70,8 +70,13 @@
 #define APP_START_ADDRESS                       (0xc000000U)
 
 
+#define BTL_TRIGGER_RAM_START                   0x20020000
+
+#define BTL_TRIGGER_LEN                         16
 
 // *****************************************************************************
+/* MISRA C-2012 Rule 5.8 deviated below. Deviation record ID -
+   H3_MISRAC_2012_R_5_8_DR_1 */
 
 void SYS_DeInitialize( void *data );
 
@@ -107,8 +112,8 @@ Returns:
 Example:
     <code>
     
-    #define BTL_MAJOR_VERSION       3
-    #define BTL_MINOR_VERSION       6
+    #define BTL_MAJOR_VERSION       3U
+    #define BTL_MINOR_VERSION       7U
 
     uint16_t bootloader_GetVersion( void )
     {
@@ -121,8 +126,6 @@ Example:
 */
 uint16_t bootloader_GetVersion( void );
 
-/* MISRA C-2012 Rule 5.8 deviated below. Deviation record ID -
-   H3_MISRAC_2012_R_5_8_DR_1 */
 // *****************************************************************************
 /* Function:
     bool bootloader_Trigger( void );

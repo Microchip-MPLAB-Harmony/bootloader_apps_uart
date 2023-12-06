@@ -61,17 +61,21 @@ extern uint32_t _sbss, _ebss;
 
 void __attribute__((noinline, section(".romfunc.Reset_Handler"))) Reset_Handler(void)
 {
-    register uint64_t *pFlexRam;
-   
+    register uint32_t count;
+/* MISRAC 2012 deviation block start */
+/* MISRA C-2012 Rule 18.1 deviated 1 times. Deviation record ID -  H3_MISRAC_2012_R_18_1_DR_1 */
+    register uint64_t *pFlexRam = (uint64_t*)(uintptr_t)&_sdata;
+
     // FlexRAM initialization loop (to handle ECC properly)
     // we need to initialize all of RAM with 64 bit aligned writes
-    for (pFlexRam = (uint64_t*)&_sdata ; pFlexRam < ((uint64_t*)(&_ram_end_)) ; pFlexRam++)
+    for (count = 0U; count < (((uint32_t)&_ram_end_ - (uint32_t)&_sdata) / 8U); count++)
     {
-        *pFlexRam = 0;
+        pFlexRam[count] = 0U;
     }
-    
+
     __DSB();
     __ISB();
+/* MISRAC 2012 deviation block end */
 
     uint32_t *pSrc, *pDst;
     uintptr_t src, dst;
@@ -83,7 +87,7 @@ void __attribute__((noinline, section(".romfunc.Reset_Handler"))) Reset_Handler(
     pDst = (uint32_t *)dst;      /* boundaries of .data area to init */
 
     /* Init .data */
-    for (uint32_t count = 0U; count < (((uint32_t)&_edata - (uint32_t)dst) / 4U); count++)
+    for (count = 0U; count < (((uint32_t)&_edata - (uint32_t)dst) / 4U); count++)
     {
         pDst[count] = pSrc[count];
     }
@@ -91,7 +95,7 @@ void __attribute__((noinline, section(".romfunc.Reset_Handler"))) Reset_Handler(
     /* Init .bss */
     dst = (uintptr_t)&_sbss;
     pDst = (uint32_t *)dst;
-    for (uint32_t count = 0U; count < (((uint32_t)&_ebss - (uint32_t)dst) / 4U); count++)
+    for (count = 0U; count < (((uint32_t)&_ebss - (uint32_t)dst) / 4U); count++)
     {
         pDst[count] = 0U;
     }

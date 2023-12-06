@@ -332,9 +332,9 @@ void SYS_Initialize ( void* data )
 
     CLOCK_Initialize();
 
-    FCW_Initialize();
-
     SERCOM1_USART_Initialize();
+
+    FCW_Initialize();
 
     EVSYS_Initialize();
 
