@@ -40,8 +40,8 @@
 *******************************************************************************/
 // DOM-IGNORE-END
 
-#ifndef _BSP_H
-#define _BSP_H
+#ifndef BSP_H
+#define BSP_H
 
 // *****************************************************************************
 // *****************************************************************************
@@ -60,21 +60,24 @@
 // Section: BSP Macros
 // *****************************************************************************
 // *****************************************************************************
+#define pic32mx_usb_sk3
+#define BSP_NAME             "pic32mx_usb_sk3"
+
 /*** LED Macros for LED1 ***/
-#define LED1_Toggle() (LATDINV = (1<<0))
+#define LED1_Toggle() (LATDINV = (1UL<<0))
 #define LED1_Get() ((PORTD >> 0) & 0x1)
-#define LED1_On() (LATDSET = (1<<0))
-#define LED1_Off() (LATDCLR = (1<<0))
+#define LED1_On() (LATDSET = (1UL<<0))
+#define LED1_Off() (LATDCLR = (1UL<<0))
 /*** LED Macros for LED2 ***/
-#define LED2_Toggle() (LATDINV = (1<<1))
+#define LED2_Toggle() (LATDINV = (1UL<<1))
 #define LED2_Get() ((PORTD >> 1) & 0x1)
-#define LED2_On() (LATDSET = (1<<1))
-#define LED2_Off() (LATDCLR = (1<<1))
+#define LED2_On() (LATDSET = (1UL<<1))
+#define LED2_Off() (LATDCLR = (1UL<<1))
 /*** LED Macros for LED3 ***/
-#define LED3_Toggle() (LATDINV = (1<<2))
+#define LED3_Toggle() (LATDINV = (1UL<<2))
 #define LED3_Get() ((PORTD >> 2) & 0x1)
-#define LED3_On() (LATDSET = (1<<2))
-#define LED3_Off() (LATDCLR = (1<<2))
+#define LED3_On() (LATDSET = (1UL<<2))
+#define LED3_Off() (LATDCLR = (1UL<<2))
 /*** SWITCH Macros for SWITCH3 ***/
 #define SWITCH3_Get() ((PORTD >> 13) & 0x1)
 #define SWITCH3_STATE_PRESSED 0
@@ -120,7 +123,6 @@
 
   Example:
     <code>
-    //Initialize the BSP
     BSP_Initialize();
     </code>
 
@@ -130,7 +132,7 @@
 
 void BSP_Initialize(void);
 
-#endif // _BSP_H
+#endif // BSP_H
 
 /*******************************************************************************
  End of File

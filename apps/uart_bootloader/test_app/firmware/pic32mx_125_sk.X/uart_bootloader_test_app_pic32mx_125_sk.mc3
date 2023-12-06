@@ -1,4 +1,4 @@
-<config configName="pic32mx_125_sk" projectName="uart_bootloader_test_app_pic32mx_125_sk" configVersion="1.1" device="PIC32MX570F512L" deviceLibraryClass="com.microchip.mcc.harmony.Harmony3Library" coreVersion="5.4.11">
+<config configName="pic32mx_125_sk" projectName="uart_bootloader_test_app_pic32mx_125_sk" configVersion="1.1" device="PIC32MX570F512L" deviceLibraryClass="com.microchip.mcc.harmony.Harmony3Library" coreVersion="5.6.1">
    <usedPackages class="java.util.ArrayList">
       <package packageName="bsp" version="3.13.0" contentType="HARMONY">
          <modules class="java.util.ArrayList"/>
@@ -44,7 +44,7 @@
       </entry>
    </usedClasses>
    <usedLibraries class="java.util.ArrayList">
-      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.1.3"/>
+      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.4.0"/>
    </usedLibraries>
    <tokenMap class="java.util.TreeMap">
       <entry>
@@ -1372,46 +1372,86 @@
 </value>
       </entry>
    </tokenMap>
-   <generatedFileHashHistoryMap class="java.util.HashMap">
+   <generatedFileHashHistoryMap class="java.util.TreeMap">
       <entry>
-         <file>..\src\config\pic32mx_125_sk\bsp\bsp.h</file>
-         <hash>d15b13637e9694ef0678e03f7d6c3f97a8e6615c792bb1621d0fb0ab21894645</hash>
+         <file>..\src\app.c</file>
+         <hash>632c78c323cb9f8c6359f20337440c08f8461eb4b0304552b6a3cfd5c4052620</hash>
       </entry>
       <entry>
-         <file>..\src\config\pic32mx_125_sk\configuration.h</file>
-         <hash>321175fed312776d5e0da9d63da1fca0673933ab0298c1d9a4aeb32cf5873639</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\pic32mx_125_sk\device.h</file>
-         <hash>10ec93c43a7b158a129ae05bd8f4a59ff5bcf3d0f3f062fdd64c374bc2d42099</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\pic32mx_125_sk\peripheral\coretimer\plib_coretimer.h</file>
-         <hash>819d45cf3f9a9b37025c6264e59d5f866a5693c9e35b76003efbee5c293d63fc</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\pic32mx_125_sk\peripheral\clk\plib_clk.h</file>
-         <hash>aeb73e24e5a518024b1c3f7dce953a5cbacead08f55e80ae465fc8d2e522e477</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\pic32mx_125_sk\peripheral\uart\plib_uart2.c</file>
-         <hash>9c15e8834533bcbe11a56d80d4e218738f99630f0af81b1b2440c067df4545d4</hash>
+         <file>..\src\app.h</file>
+         <hash>8e35d8509552a4d1d6e6f123ad75694cf784a707f7dac592ed33b55121aa8e28</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx_125_sk\bsp\bsp.c</file>
          <hash>9359a3559e2ada22752465e4d372cd65f481e1875cd14b827c88a323e5ea36d0</hash>
       </entry>
       <entry>
+         <file>..\src\config\pic32mx_125_sk\bsp\bsp.h</file>
+         <hash>aa648dccd27235b0b8f629fcdca615772bd437a6e0684cc65cfc4f73042af1a2</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32mx_125_sk\configuration.h</file>
+         <hash>321175fed312776d5e0da9d63da1fca0673933ab0298c1d9a4aeb32cf5873639</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32mx_125_sk\definitions.h</file>
+         <hash>5f28ba51714bbce9e17b6338662d98321b92f04256ff2580a468b40513f1bac1</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32mx_125_sk\device.h</file>
+         <hash>10ec93c43a7b158a129ae05bd8f4a59ff5bcf3d0f3f062fdd64c374bc2d42099</hash>
+      </entry>
+      <entry>
          <file>..\src\config\pic32mx_125_sk\exceptions.c</file>
-         <hash>95f85ed420907afcd5b4d9fbac78f98c61fa943ffac2c86b7124fa75da774271</hash>
+         <hash>7c1b9a2e42598d51c643984260a4b0d966a18f1ad97cc90d166aa9a4311ab6af</hash>
       </entry>
       <entry>
-         <file>..\src\config\pic32mx_125_sk\user.h</file>
-         <hash>451e0878e9fcf6cf9fab046c1452ea662757988346c7f39e6bc98478ca25f995</hash>
+         <file>..\src\config\pic32mx_125_sk\initialization.c</file>
+         <hash>140af21d9721f7837972ed299db51fcc5000b36dee5631d72429321f7c996bdb</hash>
       </entry>
       <entry>
-         <file>..\src\config\pic32mx_125_sk\tasks.c</file>
-         <hash>fef67f1a3984e2d93fc35edcdf1a53dd426162db6d47cba992fc49f8660df833</hash>
+         <file>..\src\config\pic32mx_125_sk\interrupts.c</file>
+         <hash>78dae1eb2814001083c177580ff5afdf938304ca9b465dd83c8a5cd806b3f5fa</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32mx_125_sk\interrupts.h</file>
+         <hash>759cce8ff415eadadd85a74232a5023d73e8859a4556ef4beb93c2cfd4b8d8ef</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32mx_125_sk\peripheral\clk\plib_clk.c</file>
+         <hash>edb61c4c1f6f7a46bed86c3a90789d684a2bff94f4388b0227f5d23ac18386f2</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32mx_125_sk\peripheral\clk\plib_clk.h</file>
+         <hash>35384f2e13e59b7190bf77f6996baf3ea2377ec42df94979a6f793326def5255</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32mx_125_sk\peripheral\coretimer\plib_coretimer.c</file>
+         <hash>fffd0d46d7d9a9ed96d7946c68d1f0084d5c1d0248ccbabc72b28b1767f902a1</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32mx_125_sk\peripheral\coretimer\plib_coretimer.h</file>
+         <hash>033ad1bc584c137c6fc67ad542e999090d31ebbc6a74e04b8dd2d8257a57e21f</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32mx_125_sk\peripheral\evic\plib_evic.c</file>
+         <hash>9f7449415a719bfe60947c2bdb3144245cfc400cf06861ccbfe6df6b81f4fb20</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32mx_125_sk\peripheral\evic\plib_evic.h</file>
+         <hash>82360f1bd4ab436161392cd7bf86db3a253c512474116a0103877926a9512b64</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32mx_125_sk\peripheral\gpio\plib_gpio.c</file>
+         <hash>624050d18806b5085fd493833e7c012b03da7895f823fc62303e732f9634b848</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32mx_125_sk\peripheral\gpio\plib_gpio.h</file>
+         <hash>a8c343c1d81647387bcc225aa2e6879e780dc9017c2df5bd9475ac334173756c</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32mx_125_sk\peripheral\uart\plib_uart2.c</file>
+         <hash>ec33a91c222deee479762109055142d15c8b81600fbcef525440f287401254dc</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx_125_sk\peripheral\uart\plib_uart2.h</file>
@@ -1419,67 +1459,31 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mx_125_sk\peripheral\uart\plib_uart_common.h</file>
-         <hash>c218c6173a59f6dff90ca776b4bf86cc2a856fa7e3272fb08dd42921ef56b24b</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\pic32mx_125_sk\interrupts.c</file>
-         <hash>6cc0c97c241ee66b3138c1631553844c78a4774155e547cea2a7efe41fc27b7c</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\pic32mx_125_sk\peripheral\gpio\plib_gpio.h</file>
-         <hash>b29108bf963c18f1fbf9ed4427918b3db8866b2be26a810fffdbc1aa5b84f08d</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\pic32mx_125_sk\peripheral\clk\plib_clk.c</file>
-         <hash>b2b86a5ca2228e544e94601874aaa153edbea191d535fc7adfe0b6e12555b811</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\pic32mx_125_sk\peripheral\evic\plib_evic.h</file>
-         <hash>6e024f55010f02283aa178a47f8597e938381688da413c6b3feab444d9c5f3f1</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\pic32mx_125_sk\peripheral\evic\plib_evic.c</file>
-         <hash>23711bc9f29b171e2ce58404ded7cc8e8516eb6829086742682e529185de5989</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\pic32mx_125_sk\peripheral\gpio\plib_gpio.c</file>
-         <hash>6370c29c1e933c34bf505b27864eba51d2734e659059d62b8bddbc4de0c7fd34</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\pic32mx_125_sk\toolchain_specifics.h</file>
-         <hash>9dfc75809b6eb23cee342231de51f6b382f8f7eabf8a939539cf44c0da32acbc</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\pic32mx_125_sk\definitions.h</file>
-         <hash>93ceb3917340363e92502460ad21b72c917fa8157bb9fd66ccf1c9c0c60b4275</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\pic32mx_125_sk\initialization.c</file>
-         <hash>2bf67108696009290232ec34220135749a2a68521809dad7fda9f48f0550e602</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\pic32mx_125_sk\peripheral\coretimer\plib_coretimer.c</file>
-         <hash>a251b491fd77af23390ad159696ca3feedb4f76c79a8e11104003614e1db7adf</hash>
+         <hash>b87295faadae4157d5880e22970f89094f2b51e1866930040a90ba49c6b29797</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx_125_sk\stdio\xc32_monitor.c</file>
-         <hash>02b7c5343c9797c6ffb7d442e0b10098bcfb84deb476c7ceacf79787713ebeca</hash>
+         <hash>ebf5bb594a90f0fa360e2a086014a3d15ce37ed290e46e94aa1e4bf9b5610146</hash>
       </entry>
       <entry>
-         <file>..\src\app.h</file>
-         <hash>8e35d8509552a4d1d6e6f123ad75694cf784a707f7dac592ed33b55121aa8e28</hash>
+         <file>..\src\config\pic32mx_125_sk\sys_tasks.h</file>
+         <hash>21f254f497a18a024cd00128d06c4776c2643f867a460c1ba9880a7dd41a8d56</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32mx_125_sk\tasks.c</file>
+         <hash>36364a39e784157f4aac281dfecc1f19be971c9935e6299a6f37a78cd98d1d46</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32mx_125_sk\toolchain_specifics.h</file>
+         <hash>b4de6e02e3e48c62f7ba233405ffdf6ef31bb971d1a7b49efa1676f45cabc1ac</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32mx_125_sk\user.h</file>
+         <hash>451e0878e9fcf6cf9fab046c1452ea662757988346c7f39e6bc98478ca25f995</hash>
       </entry>
       <entry>
          <file>..\src\main.c</file>
          <hash>d3c233d419e6304bfacbafc18cc68c0f5c26e365f23b20ea40ccfac458f664c5</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\pic32mx_125_sk\interrupts.h</file>
-         <hash>91abdb8d191ae865fc6082f30783c3d6cca8aa8d5aca823a7fb2cc65e3a57d24</hash>
-      </entry>
-      <entry>
-         <file>..\src\app.c</file>
-         <hash>632c78c323cb9f8c6359f20337440c08f8461eb4b0304552b6a3cfd5c4052620</hash>
       </entry>
    </generatedFileHashHistoryMap>
 </config>
