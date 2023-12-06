@@ -1,6 +1,6 @@
-format_version: v1.0
 configName: wbz451_curiosity
 folderName: wbz451_curiosity
+format_version: v1.0
 frameworkPath: C:\Users\I76597\h3-BB
 processor: WBZ451
 projectName: wbz451_curiosity
@@ -11,4 +11,4 @@ settings:
   TRUSTZONE: 'false'
   CMSISPath: dev_packs\arm\CMSIS\5.8.0
   MERGE_STRATEGY: USER_ALL
-  DFPPath: dev_packs\Microchip\PIC32CX-BZ_DFP\1.2.230\WBZ451\atdf\WBZ451.atdf
+  DFPPath: PIC32CX-BZ_DFP\1.2.230

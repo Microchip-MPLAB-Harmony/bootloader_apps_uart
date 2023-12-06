@@ -61,6 +61,7 @@ extern uint32_t _sbss, _ebss;
 
 void __attribute__((noinline, section(".romfunc.Reset_Handler"))) Reset_Handler(void)
 {
+    register uint32_t count;
 
     uint32_t *pSrc, *pDst;
     uintptr_t src, dst;
@@ -72,7 +73,7 @@ void __attribute__((noinline, section(".romfunc.Reset_Handler"))) Reset_Handler(
     pDst = (uint32_t *)dst;      /* boundaries of .data area to init */
 
     /* Init .data */
-    for (uint32_t count = 0U; count < (((uint32_t)&_edata - (uint32_t)dst) / 4U); count++)
+    for (count = 0U; count < (((uint32_t)&_edata - (uint32_t)dst) / 4U); count++)
     {
         pDst[count] = pSrc[count];
     }
@@ -80,7 +81,7 @@ void __attribute__((noinline, section(".romfunc.Reset_Handler"))) Reset_Handler(
     /* Init .bss */
     dst = (uintptr_t)&_sbss;
     pDst = (uint32_t *)dst;
-    for (uint32_t count = 0U; count < (((uint32_t)&_ebss - (uint32_t)dst) / 4U); count++)
+    for (count = 0U; count < (((uint32_t)&_ebss - (uint32_t)dst) / 4U); count++)
     {
         pDst[count] = 0U;
     }
