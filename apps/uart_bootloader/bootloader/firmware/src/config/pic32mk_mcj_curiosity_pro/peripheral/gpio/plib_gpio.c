@@ -45,6 +45,7 @@
 
 
 
+
 /******************************************************************************
   Function:
     GPIO_Initialize ( void )
@@ -59,22 +60,22 @@ void GPIO_Initialize ( void )
 {
 
     /* PORTA Initialization */
-    ANSELACLR = 0x4000U; /* Digital Mode Enable */
     /* PORTB Initialization */
     CNPUBSET = 0x100U; /* Pull-Up Enable */
     /* PORTC Initialization */
     /* PORTD Initialization */
     /* PORTE Initialization */
+    ANSELECLR = 0x1U; /* Digital Mode Enable */
     /* PORTF Initialization */
     /* PORTG Initialization */
-    ANSELGCLR = 0x200U; /* Digital Mode Enable */
+    ANSELGCLR = 0x100U; /* Digital Mode Enable */
 
 
     /* PPS Input Remapping */
-    U2RXR = 13;
+    U1RXR = 10;
 
     /* PPS Output Remapping */
-    RPG9R = 2;
+    RPE0R = 1;
 
 
 }

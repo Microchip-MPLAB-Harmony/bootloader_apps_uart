@@ -42,7 +42,7 @@
             </logicalFolder>
             <logicalFolder name="f6" displayName="uart" projectFiles="true">
               <itemPath>../src/config/pic32mk_mcj_curiosity_pro/peripheral/uart/plib_uart_common.h</itemPath>
-              <itemPath>../src/config/pic32mk_mcj_curiosity_pro/peripheral/uart/plib_uart2.h</itemPath>
+              <itemPath>../src/config/pic32mk_mcj_curiosity_pro/peripheral/uart/plib_uart1.h</itemPath>
             </logicalFolder>
           </logicalFolder>
           <itemPath>../src/config/pic32mk_mcj_curiosity_pro/toolchain_specifics.h</itemPath>
@@ -109,8 +109,8 @@
             <logicalFolder name="f5" displayName="nvm" projectFiles="true">
               <itemPath>../src/config/pic32mk_mcj_curiosity_pro/peripheral/nvm/plib_nvm.c</itemPath>
             </logicalFolder>
-            <logicalFolder name="f6" displayName="uart" projectFiles="true">
-              <itemPath>../src/config/pic32mk_mcj_curiosity_pro/peripheral/uart/plib_uart2.c</itemPath>
+            <logicalFolder name="uart" displayName="uart" projectFiles="true">
+              <itemPath>../src/config/pic32mk_mcj_curiosity_pro/peripheral/uart/plib_uart1.c</itemPath>
             </logicalFolder>
           </logicalFolder>
           <itemPath>../src/config/pic32mk_mcj_curiosity_pro/initialization.c</itemPath>
@@ -132,11 +132,11 @@
         <targetPluginBoard></targetPluginBoard>
         <platformTool>pkob4hybrid</platformTool>
         <languageToolchain>XC32</languageToolchain>
-        <languageToolchainVersion>3.00</languageToolchainVersion>
+        <languageToolchainVersion>4.35</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <packs>
-        <pack name="PIC32MK-MC_DFP" vendor="Microchip" version="1.8.132"/>
+        <pack name="PIC32MK-MC_DFP" vendor="Microchip" version="1.11.151"/>
       </packs>
       <ScriptingSettings>
       </ScriptingSettings>
