@@ -1,6 +1,6 @@
-format_version: v1.0
 configName: sam_9x60_curiosity
 folderName: sam_9x60_curiosity
+format_version: v1.0
 frameworkPath: C:\h3
 processor: SAM9X60D1G
 projectName: sam_9x60_curiosity
@@ -11,4 +11,4 @@ settings:
   TRUSTZONE: 'false'
   CMSISPath: dev_packs\arm\CMSIS\5.8.0
   MERGE_STRATEGY: USER_ALL
-  DFPPath: dev_packs\Microchip\SAM9X6_DFP\1.7.85\atdf\SAM9X60D1G.atdf
+  DFPPath: SAM9X6_DFP\1.7.85
