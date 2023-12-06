@@ -50,7 +50,7 @@
 #include <stdbool.h>
 #include <stdio.h>
 #include "peripheral/coretimer/plib_coretimer.h"
-#include "peripheral/uart/plib_uart2.h"
+#include "peripheral/uart/plib_uart1.h"
 #include "peripheral/clk/plib_clk.h"
 #include "peripheral/gpio/plib_gpio.h"
 #include "peripheral/evic/plib_evic.h"
@@ -66,6 +66,12 @@ extern "C" {
 
 #endif
 // DOM-IGNORE-END
+
+/* Device Information */
+#define DEVICE_NAME			 "PIC32MK0512MCJ064"
+#define DEVICE_ARCH			 "MIPS"
+#define DEVICE_FAMILY		 "PIC32MK1570"
+#define DEVICE_SERIES		 "PIC32MK"
 
 /* CPU clock frequency */
 #define CPU_CLOCK_FREQUENCY 120000000

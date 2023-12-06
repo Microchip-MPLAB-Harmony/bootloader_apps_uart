@@ -42,6 +42,8 @@
 //DOM-IGNORE-END
 
 #include "plib_gpio.h"
+#include "interrupts.h"
+
 
 
 
@@ -61,7 +63,6 @@ void GPIO_Initialize ( void )
     /* PORTA Initialization */
     LATA = 0x400U; /* Initial Latch Value */
     TRISACLR = 0x400U; /* Direction Control */
-    ANSELACLR = 0x4000U; /* Digital Mode Enable */
     /* PORTB Initialization */
     ANSELBCLR = 0x100U; /* Digital Mode Enable */
     /* PORTC Initialization */
@@ -69,10 +70,10 @@ void GPIO_Initialize ( void )
     /* PORTE Initialization */
     LATE = 0x2000U; /* Initial Latch Value */
     TRISECLR = 0x2000U; /* Direction Control */
-    ANSELECLR = 0x2000U; /* Digital Mode Enable */
+    ANSELECLR = 0x2001U; /* Digital Mode Enable */
     /* PORTF Initialization */
     /* PORTG Initialization */
-    ANSELGCLR = 0x200U; /* Digital Mode Enable */
+    ANSELGCLR = 0x100U; /* Digital Mode Enable */
 
     /* Unlock system for PPS configuration */
     SYSKEY = 0x00000000U;
@@ -82,10 +83,10 @@ void GPIO_Initialize ( void )
     CFGCONbits.IOLOCK = 0U;
 
     /* PPS Input Remapping */
-    U2RXR = 13;
+    U1RXR = 10;
 
     /* PPS Output Remapping */
-    RPG9R = 2;
+    RPE0R = 1;
 
         /* Lock back the system after PPS configuration */
     CFGCONbits.IOLOCK = 1U;
