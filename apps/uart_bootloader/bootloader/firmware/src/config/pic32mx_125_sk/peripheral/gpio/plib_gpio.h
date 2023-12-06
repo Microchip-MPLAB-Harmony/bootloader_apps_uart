@@ -88,17 +88,14 @@
     Not all ports are available on all devices.  Refer to the specific
     device data sheet to determine which ports are supported.
 */
-
-typedef enum
-{
-    GPIO_PORT_A = 0,
-    GPIO_PORT_B = 1,
-    GPIO_PORT_C = 2,
-    GPIO_PORT_D = 3,
-    GPIO_PORT_E = 4,
-    GPIO_PORT_F = 5,
-    GPIO_PORT_G = 6,
-} GPIO_PORT;
+#define    GPIO_PORT_A  (0U)
+#define    GPIO_PORT_B  (1U)
+#define    GPIO_PORT_C  (2U)
+#define    GPIO_PORT_D  (3U)
+#define    GPIO_PORT_E  (4U)
+#define    GPIO_PORT_F  (5U)
+#define    GPIO_PORT_G  (6U)
+typedef uint32_t GPIO_PORT;
 
 // *****************************************************************************
 /* GPIO Port Pins
@@ -116,96 +113,93 @@ typedef enum
     Not all pins are available on all devices.  Refer to the specific
     device data sheet to determine which pins are supported.
 */
-
-typedef enum
-{
-    GPIO_PIN_RA0 = 0,
-    GPIO_PIN_RA1 = 1,
-    GPIO_PIN_RA2 = 2,
-    GPIO_PIN_RA3 = 3,
-    GPIO_PIN_RA4 = 4,
-    GPIO_PIN_RA5 = 5,
-    GPIO_PIN_RA6 = 6,
-    GPIO_PIN_RA7 = 7,
-    GPIO_PIN_RA9 = 9,
-    GPIO_PIN_RA10 = 10,
-    GPIO_PIN_RA14 = 14,
-    GPIO_PIN_RA15 = 15,
-    GPIO_PIN_RB0 = 16,
-    GPIO_PIN_RB1 = 17,
-    GPIO_PIN_RB2 = 18,
-    GPIO_PIN_RB3 = 19,
-    GPIO_PIN_RB4 = 20,
-    GPIO_PIN_RB5 = 21,
-    GPIO_PIN_RB6 = 22,
-    GPIO_PIN_RB7 = 23,
-    GPIO_PIN_RB8 = 24,
-    GPIO_PIN_RB9 = 25,
-    GPIO_PIN_RB10 = 26,
-    GPIO_PIN_RB11 = 27,
-    GPIO_PIN_RB12 = 28,
-    GPIO_PIN_RB13 = 29,
-    GPIO_PIN_RB14 = 30,
-    GPIO_PIN_RB15 = 31,
-    GPIO_PIN_RC1 = 33,
-    GPIO_PIN_RC2 = 34,
-    GPIO_PIN_RC3 = 35,
-    GPIO_PIN_RC4 = 36,
-    GPIO_PIN_RC12 = 44,
-    GPIO_PIN_RC13 = 45,
-    GPIO_PIN_RC14 = 46,
-    GPIO_PIN_RC15 = 47,
-    GPIO_PIN_RD0 = 48,
-    GPIO_PIN_RD1 = 49,
-    GPIO_PIN_RD2 = 50,
-    GPIO_PIN_RD3 = 51,
-    GPIO_PIN_RD4 = 52,
-    GPIO_PIN_RD5 = 53,
-    GPIO_PIN_RD6 = 54,
-    GPIO_PIN_RD7 = 55,
-    GPIO_PIN_RD8 = 56,
-    GPIO_PIN_RD9 = 57,
-    GPIO_PIN_RD10 = 58,
-    GPIO_PIN_RD11 = 59,
-    GPIO_PIN_RD12 = 60,
-    GPIO_PIN_RD13 = 61,
-    GPIO_PIN_RD14 = 62,
-    GPIO_PIN_RD15 = 63,
-    GPIO_PIN_RE0 = 64,
-    GPIO_PIN_RE1 = 65,
-    GPIO_PIN_RE2 = 66,
-    GPIO_PIN_RE3 = 67,
-    GPIO_PIN_RE4 = 68,
-    GPIO_PIN_RE5 = 69,
-    GPIO_PIN_RE6 = 70,
-    GPIO_PIN_RE7 = 71,
-    GPIO_PIN_RE8 = 72,
-    GPIO_PIN_RE9 = 73,
-    GPIO_PIN_RF0 = 80,
-    GPIO_PIN_RF1 = 81,
-    GPIO_PIN_RF2 = 82,
-    GPIO_PIN_RF3 = 83,
-    GPIO_PIN_RF4 = 84,
-    GPIO_PIN_RF5 = 85,
-    GPIO_PIN_RF8 = 88,
-    GPIO_PIN_RF12 = 92,
-    GPIO_PIN_RF13 = 93,
-    GPIO_PIN_RG0 = 96,
-    GPIO_PIN_RG1 = 97,
-    GPIO_PIN_RG6 = 102,
-    GPIO_PIN_RG7 = 103,
-    GPIO_PIN_RG8 = 104,
-    GPIO_PIN_RG9 = 105,
-    GPIO_PIN_RG12 = 108,
-    GPIO_PIN_RG13 = 109,
-    GPIO_PIN_RG14 = 110,
-    GPIO_PIN_RG15 = 111,
+#define    GPIO_PIN_RA0  (0U)
+#define    GPIO_PIN_RA1  (1U)
+#define    GPIO_PIN_RA2  (2U)
+#define    GPIO_PIN_RA3  (3U)
+#define    GPIO_PIN_RA4  (4U)
+#define    GPIO_PIN_RA5  (5U)
+#define    GPIO_PIN_RA6  (6U)
+#define    GPIO_PIN_RA7  (7U)
+#define    GPIO_PIN_RA9  (9U)
+#define    GPIO_PIN_RA10  (10U)
+#define    GPIO_PIN_RA14  (14U)
+#define    GPIO_PIN_RA15  (15U)
+#define    GPIO_PIN_RB0  (16U)
+#define    GPIO_PIN_RB1  (17U)
+#define    GPIO_PIN_RB2  (18U)
+#define    GPIO_PIN_RB3  (19U)
+#define    GPIO_PIN_RB4  (20U)
+#define    GPIO_PIN_RB5  (21U)
+#define    GPIO_PIN_RB6  (22U)
+#define    GPIO_PIN_RB7  (23U)
+#define    GPIO_PIN_RB8  (24U)
+#define    GPIO_PIN_RB9  (25U)
+#define    GPIO_PIN_RB10  (26U)
+#define    GPIO_PIN_RB11  (27U)
+#define    GPIO_PIN_RB12  (28U)
+#define    GPIO_PIN_RB13  (29U)
+#define    GPIO_PIN_RB14  (30U)
+#define    GPIO_PIN_RB15  (31U)
+#define    GPIO_PIN_RC1  (33U)
+#define    GPIO_PIN_RC2  (34U)
+#define    GPIO_PIN_RC3  (35U)
+#define    GPIO_PIN_RC4  (36U)
+#define    GPIO_PIN_RC12  (44U)
+#define    GPIO_PIN_RC13  (45U)
+#define    GPIO_PIN_RC14  (46U)
+#define    GPIO_PIN_RC15  (47U)
+#define    GPIO_PIN_RD0  (48U)
+#define    GPIO_PIN_RD1  (49U)
+#define    GPIO_PIN_RD2  (50U)
+#define    GPIO_PIN_RD3  (51U)
+#define    GPIO_PIN_RD4  (52U)
+#define    GPIO_PIN_RD5  (53U)
+#define    GPIO_PIN_RD6  (54U)
+#define    GPIO_PIN_RD7  (55U)
+#define    GPIO_PIN_RD8  (56U)
+#define    GPIO_PIN_RD9  (57U)
+#define    GPIO_PIN_RD10  (58U)
+#define    GPIO_PIN_RD11  (59U)
+#define    GPIO_PIN_RD12  (60U)
+#define    GPIO_PIN_RD13  (61U)
+#define    GPIO_PIN_RD14  (62U)
+#define    GPIO_PIN_RD15  (63U)
+#define    GPIO_PIN_RE0  (64U)
+#define    GPIO_PIN_RE1  (65U)
+#define    GPIO_PIN_RE2  (66U)
+#define    GPIO_PIN_RE3  (67U)
+#define    GPIO_PIN_RE4  (68U)
+#define    GPIO_PIN_RE5  (69U)
+#define    GPIO_PIN_RE6  (70U)
+#define    GPIO_PIN_RE7  (71U)
+#define    GPIO_PIN_RE8  (72U)
+#define    GPIO_PIN_RE9  (73U)
+#define    GPIO_PIN_RF0  (80U)
+#define    GPIO_PIN_RF1  (81U)
+#define    GPIO_PIN_RF2  (82U)
+#define    GPIO_PIN_RF3  (83U)
+#define    GPIO_PIN_RF4  (84U)
+#define    GPIO_PIN_RF5  (85U)
+#define    GPIO_PIN_RF8  (88U)
+#define    GPIO_PIN_RF12  (92U)
+#define    GPIO_PIN_RF13  (93U)
+#define    GPIO_PIN_RG0  (96U)
+#define    GPIO_PIN_RG1  (97U)
+#define    GPIO_PIN_RG6  (102U)
+#define    GPIO_PIN_RG7  (103U)
+#define    GPIO_PIN_RG8  (104U)
+#define    GPIO_PIN_RG9  (105U)
+#define    GPIO_PIN_RG12  (108U)
+#define    GPIO_PIN_RG13  (109U)
+#define    GPIO_PIN_RG14  (110U)
+#define    GPIO_PIN_RG15  (111U)
 
     /* This element should not be used in any of the GPIO APIs.
        It will be used by other modules or application to denote that none of the GPIO Pin is used */
-    GPIO_PIN_NONE = -1
+#define    GPIO_PIN_NONE    (-1)
 
-} GPIO_PIN;
+typedef uint32_t GPIO_PIN;
 
 
 void GPIO_Initialize(void);
@@ -240,42 +234,42 @@ void GPIO_PortOutputEnable(GPIO_PORT port, uint32_t mask);
 
 static inline void GPIO_PinWrite(GPIO_PIN pin, bool value)
 {
-    GPIO_PortWrite((GPIO_PORT)(pin>>4), (uint32_t)(0x1) << (pin & 0xF), (uint32_t)(value) << (pin & 0xF));
+    GPIO_PortWrite((GPIO_PORT)(pin>>4), (uint32_t)(0x1) << (pin & 0xFU), (uint32_t)(value) << (pin & 0xFU));
 }
 
 static inline bool GPIO_PinRead(GPIO_PIN pin)
 {
-    return (bool)(((GPIO_PortRead((GPIO_PORT)(pin>>4))) >> (pin & 0xF)) & 0x1);
+    return (bool)(((GPIO_PortRead((GPIO_PORT)(pin>>4))) >> (pin & 0xFU)) & 0x1U);
 }
 
 static inline bool GPIO_PinLatchRead(GPIO_PIN pin)
 {
-    return (bool)((GPIO_PortLatchRead((GPIO_PORT)(pin>>4)) >> (pin & 0xF)) & 0x1);
+    return (bool)((GPIO_PortLatchRead((GPIO_PORT)(pin>>4)) >> (pin & 0xFU)) & 0x1U);
 }
 
 static inline void GPIO_PinToggle(GPIO_PIN pin)
 {
-    GPIO_PortToggle((GPIO_PORT)(pin>>4), 0x1 << (pin & 0xF));
+    GPIO_PortToggle((GPIO_PORT)(pin>>4), 0x1UL << (pin & 0xFU));
 }
 
 static inline void GPIO_PinSet(GPIO_PIN pin)
 {
-    GPIO_PortSet((GPIO_PORT)(pin>>4), 0x1 << (pin & 0xF));
+    GPIO_PortSet((GPIO_PORT)(pin>>4), 0x1UL << (pin & 0xFU));
 }
 
 static inline void GPIO_PinClear(GPIO_PIN pin)
 {
-    GPIO_PortClear((GPIO_PORT)(pin>>4), 0x1 << (pin & 0xF));
+    GPIO_PortClear((GPIO_PORT)(pin>>4), 0x1UL << (pin & 0xFU));
 }
 
 static inline void GPIO_PinInputEnable(GPIO_PIN pin)
 {
-    GPIO_PortInputEnable((GPIO_PORT)(pin>>4), 0x1 << (pin & 0xF));
+    GPIO_PortInputEnable((GPIO_PORT)(pin>>4), 0x1UL << (pin & 0xFU));
 }
 
 static inline void GPIO_PinOutputEnable(GPIO_PIN pin)
 {
-    GPIO_PortOutputEnable((GPIO_PORT)(pin>>4), 0x1 << (pin & 0xF));
+    GPIO_PortOutputEnable((GPIO_PORT)(pin>>4), 0x1UL << (pin & 0xFU));
 }
 
 
