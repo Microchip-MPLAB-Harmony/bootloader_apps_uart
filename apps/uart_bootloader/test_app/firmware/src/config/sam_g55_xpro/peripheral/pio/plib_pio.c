@@ -62,26 +62,26 @@ void PIO_Initialize ( void )
 
     /************************ PIO A Initialization ************************/
     /* PORTA Peripheral Function Selection */
-    ((pio_registers_t*)PIO_PORT_A)->PIO_ABCDSR[0]= 0x18000000;
-    ((pio_registers_t*)PIO_PORT_A)->PIO_ABCDSR[1]= 0x0;
+    ((pio_registers_t*)PIO_PORT_A)->PIO_ABCDSR[0]= 0x18000000U;
+    ((pio_registers_t*)PIO_PORT_A)->PIO_ABCDSR[1]= 0x0U;
     /* PORTA PIO Disable and Peripheral Enable*/
-    ((pio_registers_t*)PIO_PORT_A)->PIO_PDR = 0x18000000;
-    ((pio_registers_t*)PIO_PORT_A)->PIO_PER = ~0x18000000;
+    ((pio_registers_t*)PIO_PORT_A)->PIO_PDR = 0x18000000U;
+    ((pio_registers_t*)PIO_PORT_A)->PIO_PER = ~0x18000000U;
     ((pio_registers_t*)PIO_PORT_A)->PIO_MDDR = 0xFFFFFFFFU;
     /* PORTA Pull Up Enable/Disable as per MHC selection */
     ((pio_registers_t*)PIO_PORT_A)->PIO_PUDR = ~0x4U;
-    ((pio_registers_t*)PIO_PORT_A)->PIO_PUER = 0x4;
+    ((pio_registers_t*)PIO_PORT_A)->PIO_PUER = 0x4U;
     /* PORTA Pull Down Enable/Disable as per MHC selection */
     ((pio_registers_t*)PIO_PORT_A)->PIO_PPDDR = 0xFFFFFFFFU;
     /* PORTA Output Write Enable */
     ((pio_registers_t*)PIO_PORT_A)->PIO_OWER = PIO_OWER_Msk;
     /* PORTA Output Direction Enable */
-    ((pio_registers_t*)PIO_PORT_A)->PIO_OER = 0x40;
+    ((pio_registers_t*)PIO_PORT_A)->PIO_OER = 0x40U;
     ((pio_registers_t*)PIO_PORT_A)->PIO_ODR = ~0x40U;
     /* Initialize PORTA pin state */
-    ((pio_registers_t*)PIO_PORT_A)->PIO_ODSR = 0x44;
+    ((pio_registers_t*)PIO_PORT_A)->PIO_ODSR = 0x44U;
     /* PORTA drive control */
-    ((pio_registers_t*)PIO_PORT_A)->PIO_DRIVER = 0x0;
+    ((pio_registers_t*)PIO_PORT_A)->PIO_DRIVER = 0x0U;
 
     /************************ PIO B Initialization ************************/
     ((pio_registers_t*)PIO_PORT_B)->PIO_PER = 0xFFFFFFFFU;
@@ -93,12 +93,12 @@ void PIO_Initialize ( void )
     /* PORTB Output Write Enable */
     ((pio_registers_t*)PIO_PORT_B)->PIO_OWER = PIO_OWER_Msk;
     /* PORTB Output Direction Enable */
-    ((pio_registers_t*)PIO_PORT_B)->PIO_OER = 0x0;
+    ((pio_registers_t*)PIO_PORT_B)->PIO_OER = 0x0U;
     ((pio_registers_t*)PIO_PORT_B)->PIO_ODR = ~0x0U;
     /* Initialize PORTB pin state */
-    ((pio_registers_t*)PIO_PORT_B)->PIO_ODSR = 0x0;
+    ((pio_registers_t*)PIO_PORT_B)->PIO_ODSR = 0x0U;
     /* PORTB drive control */
-    ((pio_registers_t*)PIO_PORT_B)->PIO_DRIVER = 0x0;
+    ((pio_registers_t*)PIO_PORT_B)->PIO_DRIVER = 0x0U;
 
 }
 
