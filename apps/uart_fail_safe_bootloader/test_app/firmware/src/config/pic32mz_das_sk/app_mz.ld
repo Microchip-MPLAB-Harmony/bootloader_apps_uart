@@ -123,9 +123,9 @@ MEMORY
      * serial number used by bootloader to decide which program flash bank to
      * update and run.
      */
-    kseg0_program_mem  (rx) : ORIGIN = 0x9D001000, LENGTH = 0x100000 - 0x1000 - 2048
+    kseg0_program_mem  (rx) : ORIGIN = 0x9D001200, LENGTH = 0x100000 - 0x1200 - 2048
     kseg1_boot_mem          : ORIGIN = 0xBD000200, LENGTH = 0x480
-    kseg1_boot_mem_4B0      : ORIGIN = 0xBD0006B0, LENGTH = 0x1000 - 0x6B0
+    kseg1_boot_mem_4B0      : ORIGIN = 0xBD0006B0, LENGTH = 0x1000 - 0x4B0
 
     /* Reserve 16 Bytes to Store Bootloader Trigger Pattern */
     kseg0_data_mem       (w!x)  : ORIGIN = 0x80000000 + 16, LENGTH = 0xA0000 - 16
@@ -172,7 +172,7 @@ SECTIONS
   } > kseg0_exception_mem
 
   /* Interrupt vector table with vector offsets */
-  .vectors _ebase_address + _ebase_vector_offsets :
+  .vectors _ebase_address + _ebase_vector_offsets + 0x200:
   {
     /*  Symbol __vector_offset_n points to .vector_n if it exists, 
      *  otherwise points to the default handler. The
