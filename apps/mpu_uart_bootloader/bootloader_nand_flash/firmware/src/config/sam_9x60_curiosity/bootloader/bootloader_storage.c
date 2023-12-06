@@ -46,6 +46,7 @@
 #include <string.h>
 #include "configuration.h"
 #include "bootloader/bootloader_uart.h"
+#include "bootloader_storage.h"
 
 
 typedef struct
@@ -117,9 +118,9 @@ void bootloader_Storage_Read(void)
     blockNum = btlData.extMemoryMetaDataAddr / btlData.geometry.blockSize;
     pageNum = ((btlData.extMemoryMetaDataAddr / btlData.geometry.pageSize) % (btlData.geometry.blockSize / btlData.geometry.pageSize));
 
-    DRV_NAND_FLASH_SkipBlock_PageRead(btlData.handle, blockNum, pageNum, fileBuffer, 0, false);
+    (void)DRV_NAND_FLASH_SkipBlock_PageRead(btlData.handle, (uint16_t)blockNum, (uint16_t)pageNum, fileBuffer, NULL, false);
 
-    imageSize = *((uint32_t *)fileBuffer);
+    imageSize = *((uint32_t *)(uintptr_t)fileBuffer);
 
     if (imageSize != 0xFFFFFFFFU)
     {
@@ -128,9 +129,9 @@ void bootloader_Storage_Read(void)
 
         do
         {
-            status = DRV_NAND_FLASH_SkipBlock_PageRead(btlData.handle, blockNum, pageNum, fileBuffer, 0, false);
+            status = DRV_NAND_FLASH_SkipBlock_PageRead(btlData.handle, (uint16_t)blockNum, (uint16_t)pageNum, fileBuffer, NULL, false);
 
-            memcpy((void *)btlData.progAddr, fileBuffer, btlData.geometry.pageSize);
+            (void)memcpy((uint8_t *)btlData.progAddr, fileBuffer, btlData.geometry.pageSize);
 
             btlData.progAddr += btlData.geometry.pageSize;
             readLen += btlData.geometry.pageSize;
@@ -167,10 +168,10 @@ bool bootloader_Storage_Write(bool imageStartFlag, void *buffer, size_t size)
 
     if ((memoryAddr % btlData.geometry.blockSize) == 0U)
     {
-        DRV_NAND_FLASH_SkipBlock_BlockErase(btlData.handle, blockNum, false);
+        (void)DRV_NAND_FLASH_SkipBlock_BlockErase(btlData.handle, (uint16_t)blockNum, false);
     }
 
-    status = DRV_NAND_FLASH_SkipBlock_PageWrite(btlData.handle, blockNum, pageNum, buffer, 0, false);
+    status = DRV_NAND_FLASH_SkipBlock_PageWrite(btlData.handle, (uint16_t)blockNum, (uint16_t)pageNum, buffer, NULL, false);
 
     memoryAddr += btlData.geometry.pageSize;
 
@@ -193,7 +194,7 @@ bool bootloader_Storage_CRC_Verify(uint32_t crc)
     imageSize = btlData.extMemoryImageSize;
     do
     {
-        DRV_NAND_FLASH_SkipBlock_PageRead(btlData.handle, blockNum, pageNum, fileBuffer, 0, false);
+        (void)DRV_NAND_FLASH_SkipBlock_PageRead(btlData.handle, (uint16_t)blockNum, (uint16_t)pageNum, fileBuffer, NULL, false);
 
         if (imageSize >= btlData.geometry.pageSize)
         {
@@ -215,13 +216,13 @@ bool bootloader_Storage_CRC_Verify(uint32_t crc)
             blockNum = btlData.extMemoryMetaDataAddr / btlData.geometry.blockSize;
             pageNum = ((btlData.extMemoryMetaDataAddr / btlData.geometry.pageSize) % (btlData.geometry.blockSize / btlData.geometry.pageSize));
 
-            memcpy(fileBuffer, (uint8_t *)&btlData.extMemoryImageSize, sizeof(btlData.extMemoryImageSize));
+            (void)memcpy(fileBuffer, (uint8_t *)&btlData.extMemoryImageSize, sizeof(btlData.extMemoryImageSize));
 
             if ((btlData.extMemoryMetaDataAddr % btlData.geometry.blockSize) == 0U)
             {
-                DRV_NAND_FLASH_SkipBlock_BlockErase(btlData.handle, blockNum, false);
+                (void)DRV_NAND_FLASH_SkipBlock_BlockErase(btlData.handle, (uint16_t)blockNum, false);
             }
-            DRV_NAND_FLASH_SkipBlock_PageWrite(btlData.handle, blockNum, pageNum, fileBuffer, 0, false);
+            (void)DRV_NAND_FLASH_SkipBlock_PageWrite(btlData.handle, (uint16_t)blockNum, (uint16_t)pageNum, fileBuffer, NULL, false);
             break;
         }
 
