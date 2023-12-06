@@ -58,37 +58,34 @@
 #define CMD_OFFSET              2
 #define ADDR_OFFSET             0
 #define SIZE_OFFSET             1
-#define DATA_OFFSET             1
+#define DATA_OFFSET             1U
 #define CRC_OFFSET              0
 
-#define CMD_SIZE                1
-#define GUARD_SIZE              4
-#define SIZE_SIZE               4
+#define CMD_SIZE                1U
+#define GUARD_SIZE              4U
+#define SIZE_SIZE               4U
 #define OFFSET_SIZE             4
 #define CRC_SIZE                4
 #define HEADER_SIZE             (GUARD_SIZE + SIZE_SIZE + CMD_SIZE)
 #define DATA_SIZE               ERASE_BLOCK_SIZE
 
-#define WORDS(x)                ((int)((x) / sizeof(uint32_t)))
+#define WORDS(x)                ((uint32_t)((x) / sizeof(uint32_t)))
 
-#define OFFSET_ALIGN_MASK       (~ERASE_BLOCK_SIZE + 1)
-#define SIZE_ALIGN_MASK         (~PAGE_SIZE + 1)
+#define OFFSET_ALIGN_MASK       (~ERASE_BLOCK_SIZE + 1U)
+#define SIZE_ALIGN_MASK         (~PAGE_SIZE + 1U)
 
 #define BTL_GUARD               (0x5048434DUL)
 
 /* Compare Value to achieve a 100Ms Delay */
-#define TIMER_COMPARE_VALUE     (CORE_TIMER_FREQUENCY / 10)
+#define TIMER_COMPARE_VALUE     (CORE_TIMER_FREQUENCY / 10U)
 
 
-enum
-{
-    BL_CMD_UNLOCK       = 0xa0,
-    BL_CMD_DATA         = 0xa1,
-    BL_CMD_VERIFY       = 0xa2,
-    BL_CMD_RESET        = 0xa3,
-    BL_CMD_BKSWAP_RESET = 0xa4,
-    BL_CMD_READ_VERSION = 0xa6,
-};
+#define    BL_CMD_UNLOCK       0xa0U
+#define    BL_CMD_DATA         0xa1U
+#define    BL_CMD_VERIFY       0xa2U
+#define    BL_CMD_RESET        0xa3U
+#define    BL_CMD_BKSWAP_RESET 0xa4U
+#define    BL_CMD_READ_VERSION 0xa6U
 
 enum
 {
@@ -145,7 +142,7 @@ static void input_task(void)
         return;
     }
 
-    input_data = UART6_ReadByte();
+    input_data = (uint8_t)UART6_ReadByte();
 
     /* Check if 100 ms have elapsed */
     if (CORETIMER_CompareHasExpired())
@@ -161,7 +158,7 @@ static void input_task(void)
         // Check for each guard byte and discard if mismatch
         if (ptr <= GUARD_SIZE)
         {
-            if (input_data != btl_guard[ptr-1])
+            if (input_data != btl_guard[ptr-1U])
             {
                 ptr = 0;
             }
@@ -180,17 +177,22 @@ static void input_task(void)
                 uartBLActive    = true;
 
                 /* Disable global interrupts */
-                __builtin_disable_interrupts();
+                (void) __builtin_disable_interrupts();
             }
 
             ptr = 0;
+        }
+        else
+        {
+            /* Nothing to do */
         }
     }
     else if (header_received == true)
     {
         if (ptr < size)
         {
-            byte_buf[ptr++] = input_data;
+            byte_buf[ptr] = input_data;
+            ptr++;
         }
 
         if (ptr == size)
@@ -201,6 +203,10 @@ static void input_task(void)
             packet_received = true;
             header_received = false;
         }
+    }
+    else
+    {
+        /* Nothing to do */
     }
 
     CORETIMER_Start();
@@ -253,9 +259,11 @@ static void command_task(void)
         UART6_WriteByte(BL_RESP_OK);
 
         uint16_t btlVersion = bootloader_GetVersion();
+        uint16_t btlVer = ((btlVersion >> 8U) & 0xFFU);
 
-        UART6_WriteByte(((btlVersion >> 8) & 0xFF));
-        UART6_WriteByte((btlVersion & 0xFF));
+        UART6_WriteByte((int)btlVer);
+        btlVer = (btlVersion & 0xFFU);
+        UART6_WriteByte((int)btlVer);
     }
     else if (BL_CMD_VERIFY == input_command)
     {
@@ -277,7 +285,10 @@ static void command_task(void)
     {
         UART6_WriteByte(BL_RESP_OK);
 
-        while(UART6_TransmitComplete() == false);
+        while(UART6_TransmitComplete() == false)
+        {
+           /* Nothing to do */
+        }
 
         bootloader_TriggerReset();
     }
@@ -287,7 +298,10 @@ static void command_task(void)
 
         UART6_WriteByte(BL_RESP_OK);
 
-        while(UART6_TransmitComplete() == false);
+        while(UART6_TransmitComplete() == false)
+        {
+            /* Nothing to do */
+        }
 
         bootloader_TriggerReset();
     }
@@ -307,7 +321,7 @@ static void flash_task(void)
     uint32_t write_idx  = 0;
 
     // data_size = Actual data bytes to write + Address 4 Bytes
-    uint32_t bytes_to_write = (data_size - 4);
+    uint32_t bytes_to_write = (data_size - 4U);
 
     if (addr == LOWER_FLASH_SERIAL_SECTOR)
     {
@@ -324,18 +338,28 @@ static void flash_task(void)
     {
         bootloader_SetUpperFlashSerialErased(true);
     }
+    else
+    {
+        /* Nothing to do */
+    }
 
     /* Erase the Current sector */
-    NVM_PageErase(addr);
+    (void) NVM_PageErase(addr);
 
     /* Wait for erase to complete */
-    while(NVM_IsBusy() == true);
+    while(NVM_IsBusy() == true)
+    {
+        /* Nothing to do */
+    }
 
     for (bytes_written = 0; bytes_written < bytes_to_write; bytes_written += PAGE_SIZE)
     {
-        NVM_RowWrite(&flash_data[write_idx], addr);
+        (void) NVM_RowWrite(&flash_data[write_idx], addr);
 
-        while(NVM_IsBusy() == true);
+        while(NVM_IsBusy() == true)
+        {
+        /* Nothing to do */
+        }
 
         addr += PAGE_SIZE;
         write_idx += WORDS(PAGE_SIZE);
@@ -372,6 +396,10 @@ void bootloader_UART_Tasks(void)
         else if (packet_received)
         {
             command_task();
+        }
+        else
+        {
+            /* Nothing to do */
         }
     } while (uartBLActive);
 }
