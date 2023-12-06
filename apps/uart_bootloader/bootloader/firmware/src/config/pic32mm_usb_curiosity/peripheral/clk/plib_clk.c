@@ -85,12 +85,12 @@
 void CLK_Initialize( void )
 {
     /* unlock system for clock configuration */
-    SYSKEY = 0x00000000;
-    SYSKEY = 0xAA996655;
-    SYSKEY = 0x556699AA;
+    SYSKEY = 0x00000000U;
+    SYSKEY = 0xAA996655U;
+    SYSKEY = 0x556699AAU;
 
     /* Even though SPLL is selected in FNOSC, Harmony generates #pragma code as FRCDIV, not as SPLL, in "initilization.c".
-    * Switching to SPLL is done here after appropriate setting of SPLLCON register. 
+    * Switching to SPLL is done here after appropriate setting of SPLLCON register.
     * This is done to ensure we don't end-up changing PLL setting when it is ON. */
 
     /* Configure SPLL */
@@ -98,21 +98,27 @@ void CLK_Initialize( void )
     SPLLCON = 0x10080;
 
     /* Now switch to the PLL source */
-    OSCCON = OSCCON | 0x00000101;    //NOSC = SPLL, initiate clock switch (OSWEN = 1)
-    
+    OSCCON = OSCCON | 0x00000101U;    //NOSC = SPLL, initiate clock switch (OSWEN = 1)
+
     /* Wait for PLL to be ready and clock switching operation to complete */
-    while(!CLKSTATbits.SPLLRDY || !CLKSTATbits.SPDIVRDY || OSCCONbits.OSWEN);
+    uint32_t status = CLKSTATbits.SPLLRDY;
+    status |= CLKSTATbits.SPDIVRDY;
+    while((OSCCONbits.OSWEN != 0U) || (status == 0U))
+    {
+        status = CLKSTATbits.SPLLRDY;
+        status |= CLKSTATbits.SPDIVRDY;
+    }
 
   
     /* Peripheral Module Disable Configuration */
-    PMD1 = 0x101001;
-    PMD2 = 0xf000007;
-    PMD3 = 0x1ff00;
-    PMD4 = 0x7;
-    PMD5 = 0x1070703;
-    PMD6 = 0x1;
-    PMD7 = 0x0;
+    PMD1 = 0x101001U;
+    PMD2 = 0xf000007U;
+    PMD3 = 0x1ff00U;
+    PMD4 = 0x7U;
+    PMD5 = 0x1070703U;
+    PMD6 = 0x1U;
+    PMD7 = 0x0U;
 
     /* Lock system since done with clock configuration */
-    SYSKEY = 0x33333333;
+    SYSKEY = 0x33333333U;
 }

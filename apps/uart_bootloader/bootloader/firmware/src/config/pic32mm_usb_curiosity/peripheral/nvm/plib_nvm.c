@@ -50,6 +50,7 @@
 #include <string.h>
 #include "sys/kmem.h"
 #include "plib_nvm.h"
+#include "interrupts.h"
 
 /* ************************************************************************** */
 /* ************************************************************************** */
@@ -98,9 +99,9 @@ typedef enum
 static void NVM_WriteUnlockSequence( void )
 {
     // Write the unlock key sequence
-    NVMKEY = 0x0;
-    NVMKEY = NVM_UNLOCK_KEY1;
-    NVMKEY = NVM_UNLOCK_KEY2;
+    NVMKEY = 0x0U;
+    NVMKEY = (uint32_t)NVM_UNLOCK_KEY1;
+    NVMKEY = (uint32_t)NVM_UNLOCK_KEY2;
 }
 
 static void NVM_StartOperationAtAddress( uint32_t address,  NVM_OPERATION_MODE operation )
@@ -157,16 +158,18 @@ void NVM_Initialize( void )
 
 bool NVM_Read( uint32_t *data, uint32_t length, const uint32_t address )
 {
-    memcpy((void *)data, (void *)KVA0_TO_KVA1(address), length);
+    /* MISRA C-2012 Rule 11.6 violated 1 time below. Deviation record ID - H3_MISRAC_2012_R_11_6_DR_1*/
+    (void)memcpy(data, (uint32_t*)KVA0_TO_KVA1(address), length);
 
     return true;
 }
 
 bool NVM_DoubleWordWrite( uint32_t *data, uint32_t address )
 {
-   NVMDATA0 = *(data++);
-   NVMDATA1 = *(data++);
-
+   NVMDATA0 = *data;
+   data++;
+   NVMDATA1 = *data;
+   data++;
    NVM_StartOperationAtAddress( address,  DOUBLE_WORD_PROGRAM_OPERATION);
 
    return true;
@@ -196,7 +199,7 @@ NVM_ERROR NVM_ErrorGet( void )
 
 bool NVM_IsBusy( void )
 {
-    return (bool)NVMCONbits.WR;
+    return (NVMCONbits.WR != 0U);
 }
 
 void NVM_ProgramFlashWriteProtect( uint32_t address )
