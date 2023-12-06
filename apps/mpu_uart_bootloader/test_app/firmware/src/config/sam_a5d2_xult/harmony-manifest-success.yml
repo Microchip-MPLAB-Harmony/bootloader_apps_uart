@@ -4,18 +4,15 @@
 
 
 project: test_app
-creation_date: 2023-07-05T09:09:05.645+05:30[Asia/Calcutta]    # ISO 8601 format: https://www.w3.org/TR/NOTE-datetime
+creation_date: 2023-12-06T19:52:37.565+05:30[Asia/Calcutta]    # ISO 8601 format: https://www.w3.org/TR/NOTE-datetime
 operating_system: Windows 10
 mcc_mode: IDE            # [IDE|Standalone|Headless]
-mcc_version: v5.3.0
-mcc_core_version: v5.5.0
-mplabx_version: v6.05        # if MPLAB X plugin only
-harmony_version: v1.3.2
-compiler: XC32 (v4.21) 
+mcc_version: v5.4.1
+mcc_core_version: v5.6.1
+mplabx_version: v6.15        # if MPLAB X plugin only
+harmony_version: v1.4.0
+compiler: XC32 (v4.35)
 
 modules:
-    - {name: "csp", version: "v3.17.0-10-g384ca03"}
-    - {name: "core", version: "v3.13.0-6-ge1dca3c"}
-    - {name: "dev_packs", version: "v3.17.0-18-gf496296"}
-    - {name: "bsp", version: "v3.16.0"}
-
+    - {name: "CMSIS_5", version: "5.8.0"}
+    - {name: "bsp", version: "v3.17.0"}
