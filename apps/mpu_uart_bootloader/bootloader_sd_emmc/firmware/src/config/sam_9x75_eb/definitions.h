@@ -64,10 +64,10 @@
 #include "peripheral/tc/plib_tc0.h"
 #include "peripheral/dbgu/plib_dbgu.h"
 #include "bsp/bsp.h"
+#include "system/time/sys_time.h"
 #include "system/int/sys_int.h"
 #include "osal/osal.h"
 #include "system/debug/sys_debug.h"
-#include "system/time/sys_time.h"
 #include "app.h"
 
 
