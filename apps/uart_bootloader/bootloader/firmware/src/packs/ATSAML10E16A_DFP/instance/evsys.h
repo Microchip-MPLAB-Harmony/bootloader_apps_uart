@@ -1,7 +1,7 @@
 /*
  * Instance header file for ATSAML10E16A
  *
- * Copyright (c) 2022 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2023 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,7 +20,7 @@
  *
  */
 
-/* file generated from device description version 2021-06-28T12:20:34Z */
+/* file generated from device description version 2023-04-12T14:18:35Z */
 #ifndef _SAML10_EVSYS_INSTANCE_
 #define _SAML10_EVSYS_INSTANCE_
 
@@ -35,12 +35,12 @@
 #define EVSYS_GCLK_ID_3                          (9)        /* Index of Generic Clock 3 */
 #define EVSYS_GENERATORS                         (49)       /* Total Number of Event Generators */
 #define EVSYS_GENERATORS_BITS                    (6)        /* Number of bits to select Event Generator */
+#define EVSYS_INSTANCE_ID                        (64)       
 #define EVSYS_SECURE_IMPLEMENTED                 (1)        /* Secure Channels/Users supported? */
 #define EVSYS_SYNCH_NUM                          (4)        /* Number of Synchronous Channels */
 #define EVSYS_SYNCH_NUM_BITS                     (2)        /* Number of bits to select Synchronous Channels */
 #define EVSYS_USERS                              (23)       /* Total Number of Event Users */
 #define EVSYS_USERS_BITS                         (5)        /* Number of bits to select Event User */
 #define EVSYS_USERS_GROUPS                       (1)        /* Number of 32-user groups */
-#define EVSYS_INSTANCE_ID                        (64)       
 
 #endif /* _SAML10_EVSYS_INSTANCE_ */

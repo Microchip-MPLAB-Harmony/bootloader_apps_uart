@@ -1,7 +1,7 @@
 /*
  * Instance header file for ATSAML10E16A
  *
- * Copyright (c) 2022 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2023 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,7 +20,7 @@
  *
  */
 
-/* file generated from device description version 2021-06-28T12:20:34Z */
+/* file generated from device description version 2023-04-12T14:18:35Z */
 #ifndef _SAML10_PORT_INSTANCE_
 #define _SAML10_PORT_INSTANCE_
 
@@ -30,11 +30,11 @@
 #define PORT_DRVSTR                              (1)        /* DRVSTR supported */
 #define PORT_EV_NUM                              (4)        
 #define PORT_GROUPS                              (1)        
+#define PORT_INSTANCE_ID                         (12)       
 #define PORT_MSB                                 (31)       
 #define PORT_ODRAIN                              (0)        /* ODRAIN supported */
 #define PORT_PPP_IMPLEMENTED                     (0)        /* IOBUS2 implemented? */
 #define PORT_SECURE_IMPLEMENTED                  (1)        /* Secure I/Os supported? */
 #define PORT_SLEWLIM                             (0)        /* SLEWLIM supported */
-#define PORT_INSTANCE_ID                         (12)       
 
 #endif /* _SAML10_PORT_INSTANCE_ */

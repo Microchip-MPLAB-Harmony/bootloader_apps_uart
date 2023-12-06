@@ -177,7 +177,7 @@ SECTIONS
         __bss_end__ = .;
         _ebss = . ;
         _ezero = .;
-    } > ram
+    } > ram AT > ram
 
     . = ALIGN(4);
     _end = . ;

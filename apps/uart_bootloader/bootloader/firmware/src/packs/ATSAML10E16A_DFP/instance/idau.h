@@ -1,7 +1,7 @@
 /*
  * Instance header file for ATSAML10E16A
  *
- * Copyright (c) 2022 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2023 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,17 +20,17 @@
  *
  */
 
-/* file generated from device description version 2021-06-28T12:20:34Z */
+/* file generated from device description version 2023-04-12T14:18:35Z */
 #ifndef _SAML10_IDAU_INSTANCE_
 #define _SAML10_IDAU_INSTANCE_
 
 
 /* ========== Instance Parameter definitions for IDAU peripheral ========== */
 #define IDAU_GRANULARITY_BOOTPROT                (0x100)    /* BOOTPROT region granularity */
+#define IDAU_INSTANCE_ID                         (32)       
 #define IDAU_REGION_BOOTROM                      (0x09)     /* Boot ROM region number */
 #define IDAU_REGION_IOBUS                        (0x00)     /* IOBUS region number (invalid) */
 #define IDAU_REGION_OTHER                        (0x00)     /* Others region number (invalid) */
 #define IDAU_REGION_PERIPHERALS                  (0x00)     /* Peripherals region number (invalid) */
-#define IDAU_INSTANCE_ID                         (32)       
 
 #endif /* _SAML10_IDAU_INSTANCE_ */
