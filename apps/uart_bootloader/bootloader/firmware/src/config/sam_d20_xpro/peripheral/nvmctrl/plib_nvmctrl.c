@@ -50,6 +50,7 @@
 #include <string.h>
 #include "plib_nvmctrl.h"
 
+
 // *****************************************************************************
 // *****************************************************************************
 // Section: NVMCTRL Implementation
@@ -75,7 +76,7 @@ bool NVMCTRL_Read( uint32_t *data, uint32_t length, const uint32_t address )
 
 bool NVMCTRL_PageBufferWrite( uint32_t *data, const uint32_t address)
 {
-    uint32_t i = 0U;
+    uint32_t i;
     uint32_t * paddress = (uint32_t *)address;
 
     /* writing 32-bit data into the given address */
@@ -104,7 +105,7 @@ bool NVMCTRL_PageBufferCommit( const uint32_t address)
 
 bool NVMCTRL_PageWrite( uint32_t *data, const uint32_t address )
 {
-    uint32_t i = 0U;
+    uint32_t i;
     uint32_t * paddress = (uint32_t *)address;
 
     /* writing 32-bit data into the given address */
@@ -134,7 +135,7 @@ bool NVMCTRL_RowErase( uint32_t address )
 
 bool NVMCTRL_USER_ROW_PageWrite( uint32_t *data, const uint32_t address )
 {
-    uint32_t i = 0U;
+    uint32_t i;
     uint32_t * paddress = (uint32_t *)address;
     bool pagewrite_val = false;
 
@@ -178,7 +179,7 @@ bool NVMCTRL_USER_ROW_RowErase( uint32_t address )
 
 NVMCTRL_ERROR NVMCTRL_ErrorGet( void )
 {
-    uint16_t nvm_error = 0;
+    uint16_t nvm_error;
 
     /* Get the error bits set */
     nvm_error = (NVMCTRL_REGS->NVMCTRL_STATUS & (NVMCTRL_STATUS_NVME_Msk | NVMCTRL_STATUS_LOCKE_Msk | NVMCTRL_STATUS_PROGE_Msk));
