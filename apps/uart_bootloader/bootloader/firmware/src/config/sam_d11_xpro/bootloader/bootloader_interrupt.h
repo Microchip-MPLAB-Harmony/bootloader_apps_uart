@@ -1,22 +1,19 @@
 /*******************************************************************************
-  System Exceptions File
+  Bootloader Interrupt Header File
 
   File Name:
-    exceptions.c
+    bootloader_interrupt.h
 
   Summary:
-    This file contains a function which overrides the default _weak_ exception
-    handlers provided by the interrupt.c file.
+    This file contains function prototype declarations.
 
   Description:
-    This file redefines the default _weak_  exception handler with a more debug
-    friendly one. If an unexpected exception occurs the code will stop in a
-    while(1) loop.
+    This file contains function prototype declarations.
  *******************************************************************************/
 
 // DOM-IGNORE-BEGIN
 /*******************************************************************************
-* Copyright (C) 2018 Microchip Technology Inc. and its subsidiaries.
+* Copyright (C) 2023 Microchip Technology Inc. and its subsidiaries.
 *
 * Subject to your compliance with these terms, you may use Microchip software
 * and any derivatives exclusively with Microchip products. It is your
@@ -36,44 +33,19 @@
 * FULLEST EXTENT ALLOWED BY LAW, MICROCHIP'S TOTAL LIABILITY ON ALL CLAIMS IN
 * ANY WAY RELATED TO THIS SOFTWARE WILL NOT EXCEED THE AMOUNT OF FEES, IF ANY,
 * THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
-*******************************************************************************/
+ *******************************************************************************/
 // DOM-IGNORE-END
 
 // *****************************************************************************
 // *****************************************************************************
-// Section: Included Files
-// *****************************************************************************
-// *****************************************************************************
-#include "definitions.h"
-
-// *****************************************************************************
-// *****************************************************************************
-// Section: Exception Handling Routine
+// Section: Include Files
 // *****************************************************************************
 // *****************************************************************************
 
-/* Brief default interrupt handlers for core IRQs.*/
+#ifndef BOOTLOADER_INTERRUPT_H
+#define BOOTLOADER_INTERRUPT_H
 
-void __attribute__((noreturn)) NonMaskableInt_Handler(void)
-{
-#if defined(__DEBUG) || defined(__DEBUG_D) && defined(__XC32)
-    __builtin_software_breakpoint();
-#endif
-    while (true)
-    {
-    }
-}
+void NonMaskableInt_Handler(void);
+void HardFault_Handler(void);
 
-void __attribute__((noreturn)) HardFault_Handler(void)
-{
-#if defined(__DEBUG) || defined(__DEBUG_D) && defined(__XC32)
-   __builtin_software_breakpoint();
-#endif
-   while (true)
-   {
-   }
-}
-
-/*******************************************************************************
- End of File
- */
+#endif      //BOOTLOADER_INTERRUPT_H

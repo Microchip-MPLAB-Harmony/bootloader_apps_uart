@@ -226,7 +226,6 @@
           <itemPath>../src/config/sam_d11_xpro/startup_xc32.c</itemPath>
           <itemPath>../src/config/sam_d11_xpro/initialization.c</itemPath>
           <itemPath>../src/config/sam_d11_xpro/libc_syscalls.c</itemPath>
-          <itemPath>../src/config/sam_d11_xpro/exceptions.c</itemPath>
         </logicalFolder>
       </logicalFolder>
       <itemPath>../src/main.c</itemPath>
@@ -254,11 +253,11 @@
         <targetPluginBoard></targetPluginBoard>
         <platformTool>EdbgTool</platformTool>
         <languageToolchain>XC32</languageToolchain>
-        <languageToolchainVersion>3.00</languageToolchainVersion>
+        <languageToolchainVersion>4.35</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <packs>
-        <pack name="SAMD11_DFP" vendor="Microchip" version="2.4.56"/>
+        <pack name="SAMD11_DFP" vendor="Microchip" version="2.6.76"/>
         <pack name="CMSIS" vendor="ARM" version="5.4.0"/>
       </packs>
       <ScriptingSettings>
