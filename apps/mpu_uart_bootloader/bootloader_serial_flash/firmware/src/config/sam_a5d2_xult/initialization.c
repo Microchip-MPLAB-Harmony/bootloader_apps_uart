@@ -138,9 +138,9 @@ void SYS_Initialize ( void* data )
 
 
 
-	BSP_Initialize();
     QSPI0_Initialize();
 
+	BSP_Initialize();
 	UART1_Initialize();
 
     Matrix_Initialize();

@@ -55,12 +55,15 @@
 // *****************************************************************************
 // *****************************************************************************
 
-#define BOOTLOADER_SIZE                         131072
-#define BOOTLOADER_START_ADDRESS                (0x26F00000UL)
-#define APP_START_ADDRESS                       (0x21000000UL)
+#define BOOTLOADER_SIZE                         131072U
+#define BOOTLOADER_START_ADDRESS                (0x26F00000U)
+#define APP_START_ADDRESS                       (0x21000000U)
 #define PAGE_SIZE                               DRV_MX25L_PAGE_SIZE
 
 // *****************************************************************************
+
+void SYS_DeInitialize( void *data );
+
 /* Function:
     uint16_t bootloader_GetVersion( void );
 
@@ -93,13 +96,12 @@ Returns:
 Example:
     <code>
 
-    // Bootloader Major and Minor version sent for a Read Version command (MAJOR.MINOR)
-    #define BTL_MAJOR_VERSION       3
-    #define BTL_MINOR_VERSION       6
+    #define BTL_MAJOR_VERSION       3U
+    #define BTL_MINOR_VERSION       7U
 
     uint16_t bootloader_GetVersion( void )
     {
-        uint16_t btlVersion = (((BTL_MAJOR_VERSION & 0xFF) << 8) | (BTL_MINOR_VERSION & 0xFF));
+        uint16_t btlVersion = (((BTL_MAJOR_VERSION & (uint16_t)0xFFU) << 8) | (BTL_MINOR_VERSION & (uint16_t)0xFFU));
 
         return btlVersion;
     }
@@ -108,6 +110,8 @@ Example:
 */
 uint16_t bootloader_GetVersion( void );
 
+/* MISRA C-2012 Rule 5.8 deviated below. Deviation record ID -
+   H3_MISRAC_2012_R_5_8_DR_1 */
 // *****************************************************************************
 /* Function:
     bool bootloader_Trigger( void );
@@ -268,7 +272,6 @@ Returns:
 
 Example:
     <code>
-        // Make sure all transfers are complete before resetting the device
 
         bootloader_TriggerReset();
 

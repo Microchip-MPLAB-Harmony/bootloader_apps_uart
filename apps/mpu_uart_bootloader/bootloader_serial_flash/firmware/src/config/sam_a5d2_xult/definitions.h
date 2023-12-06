@@ -48,8 +48,8 @@
 #include <stdint.h>
 #include <stddef.h>
 #include <stdbool.h>
-#include "bsp/bsp.h"
 #include "peripheral/qspi/plib_qspi0.h"
+#include "bsp/bsp.h"
 #include "peripheral/uart/plib_uart1.h"
 #include "driver/mx25l/drv_mx25l.h"
 #include "bootloader/bootloader_uart.h"
