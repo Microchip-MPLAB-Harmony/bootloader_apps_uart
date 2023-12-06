@@ -40,8 +40,8 @@
 *******************************************************************************/
 // DOM-IGNORE-END
 
-#ifndef _BSP_H
-#define _BSP_H
+#ifndef BSP_H
+#define BSP_H
 
 // *****************************************************************************
 // *****************************************************************************
@@ -60,16 +60,19 @@
 // Section: BSP Macros
 // *****************************************************************************
 // *****************************************************************************
+#define pic32mz_w1_curiosity
+#define BSP_NAME             "pic32mz_w1_curiosity"
+
 /*** LED Macros for LED_RED ***/
-#define LED_RED_Toggle() (LATKINV = (1U<<1))
+#define LED_RED_Toggle() (LATKINV = (1UL<<1))
 #define LED_RED_Get() ((PORTK >> 1) & 0x1U)
-#define LED_RED_On() (LATKSET = (1U<<1))
-#define LED_RED_Off() (LATKCLR = (1U<<1))
+#define LED_RED_On() (LATKSET = (1UL<<1))
+#define LED_RED_Off() (LATKCLR = (1UL<<1))
 /*** LED Macros for LED_GREEN ***/
-#define LED_GREEN_Toggle() (LATKINV = (1U<<3))
+#define LED_GREEN_Toggle() (LATKINV = (1UL<<3))
 #define LED_GREEN_Get() ((PORTK >> 3) & 0x1U)
-#define LED_GREEN_On() (LATKSET = (1U<<3))
-#define LED_GREEN_Off() (LATKCLR = (1U<<3))
+#define LED_GREEN_On() (LATKSET = (1UL<<3))
+#define LED_GREEN_Off() (LATKCLR = (1UL<<3))
 /*** SWITCH Macros for SWITCH1 ***/
 #define SWITCH1_Get() ((PORTA >> 10) & 0x1U)
 #define SWITCH1_STATE_PRESSED 0U
@@ -107,7 +110,6 @@
 
   Example:
     <code>
-    //Initialize the BSP
     BSP_Initialize();
     </code>
 
@@ -117,7 +119,7 @@
 
 void BSP_Initialize(void);
 
-#endif // _BSP_H
+#endif // BSP_H
 
 /*******************************************************************************
  End of File
