@@ -46,6 +46,7 @@
 #include <string.h>
 #include "configuration.h"
 #include "bootloader/bootloader_uart.h"
+#include "bootloader_storage.h"
 
 typedef enum
 {
@@ -146,7 +147,7 @@ void bootloader_Storage_Read(void)
     (void)DRV_SST26_Read(btlData.handle, fileBuffer, PAGE_SIZE, btlData.extMemoryMetaDataAddr);
     (void)bootloader_WaitForXferComplete();
 
-    imageSize = *((uint32_t *)fileBuffer);
+    imageSize = *((uint32_t *)(uintptr_t)fileBuffer);
 
     if (imageSize != 0xFFFFFFFFU)
     {
@@ -156,7 +157,7 @@ void bootloader_Storage_Read(void)
         {
             status = DRV_SST26_Read(btlData.handle, fileBuffer, PAGE_SIZE, memoryAddr);
             (void)bootloader_WaitForXferComplete();
-            memcpy((void *)btlData.progAddr, fileBuffer, PAGE_SIZE);
+            (void)memcpy((uint8_t *)btlData.progAddr, fileBuffer, PAGE_SIZE);
 
             btlData.progAddr += PAGE_SIZE;
             readLen += PAGE_SIZE;
@@ -233,7 +234,7 @@ bool bootloader_Storage_CRC_Verify(uint32_t crc)
             status = true;
             memoryAddr = btlData.extMemoryMetaDataAddr;
 
-            memcpy(fileBuffer, (uint8_t *)&btlData.extMemoryImageSize, sizeof(btlData.extMemoryImageSize));
+            (void)memcpy(fileBuffer, (uint8_t *)&btlData.extMemoryImageSize, sizeof(btlData.extMemoryImageSize));
 
             if ((memoryAddr % btlData.geometry.erase_blockSize) == 0U)
             {
