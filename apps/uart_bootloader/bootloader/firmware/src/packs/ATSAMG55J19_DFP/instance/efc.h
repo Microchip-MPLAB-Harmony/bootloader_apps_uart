@@ -1,7 +1,7 @@
 /*
  * Instance header file for ATSAMG55J19
  *
- * Copyright (c) 2022 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2023 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,15 +20,15 @@
  *
  */
 
-/* file generated from device description version 2022-03-22T03:45:07Z */
+/* file generated from device description version 2023-04-11T10:29:29Z */
 #ifndef _SAMG55_EFC_INSTANCE_
 #define _SAMG55_EFC_INSTANCE_
 
 
 /* ========== Instance Parameter definitions for EFC peripheral ========== */
 #define EFC_FLASH_SIZE                           (524288)   
-#define EFC_PAGE_SIZE                            (512)      
-#define EFC_PAGES_PR_REGION                      (16)       
 #define EFC_INSTANCE_ID                          (6)        
+#define EFC_PAGES_PR_REGION                      (16)       
+#define EFC_PAGE_SIZE                            (512)      
 
 #endif /* _SAMG55_EFC_INSTANCE_ */

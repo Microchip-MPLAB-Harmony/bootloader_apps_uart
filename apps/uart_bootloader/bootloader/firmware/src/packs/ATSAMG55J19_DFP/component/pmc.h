@@ -1,7 +1,7 @@
 /*
  * Component description for PMC
  *
- * Copyright (c) 2022 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2023 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,7 +20,7 @@
  *
  */
 
-/* file generated from device description version 2022-03-22T03:45:07Z */
+/* file generated from device description version 2023-04-11T10:29:29Z */
 #ifndef _SAMG55_PMC_COMPONENT_H_
 #define _SAMG55_PMC_COMPONENT_H_
 
@@ -140,6 +140,9 @@
 #define PMC_SCSR_PCK(value)                   (PMC_SCSR_PCK_Msk & (_UINT32_(value) << PMC_SCSR_PCK_Pos)) 
 
 /* -------- PMC_PCER0 : (PMC Offset: 0x10) ( /W 32) Peripheral Clock Enable Register 0 -------- */
+#define PMC_PCER0_PID7_Pos                    _UINT32_(7)                                          /* (PMC_PCER0) Peripheral Clock 7 Enable Position */
+#define PMC_PCER0_PID7_Msk                    (_UINT32_(0x1) << PMC_PCER0_PID7_Pos)                /* (PMC_PCER0) Peripheral Clock 7 Enable Mask */
+#define PMC_PCER0_PID7(value)                 (PMC_PCER0_PID7_Msk & (_UINT32_(value) << PMC_PCER0_PID7_Pos)) /* Assigment of value for PID7 in the PMC_PCER0 register */
 #define PMC_PCER0_PID8_Pos                    _UINT32_(8)                                          /* (PMC_PCER0) Peripheral Clock 8 Enable Position */
 #define PMC_PCER0_PID8_Msk                    (_UINT32_(0x1) << PMC_PCER0_PID8_Pos)                /* (PMC_PCER0) Peripheral Clock 8 Enable Mask */
 #define PMC_PCER0_PID8(value)                 (PMC_PCER0_PID8_Msk & (_UINT32_(value) << PMC_PCER0_PID8_Pos)) /* Assigment of value for PID8 in the PMC_PCER0 register */
@@ -206,13 +209,16 @@
 #define PMC_PCER0_PID29_Pos                   _UINT32_(29)                                         /* (PMC_PCER0) Peripheral Clock 29 Enable Position */
 #define PMC_PCER0_PID29_Msk                   (_UINT32_(0x1) << PMC_PCER0_PID29_Pos)               /* (PMC_PCER0) Peripheral Clock 29 Enable Mask */
 #define PMC_PCER0_PID29(value)                (PMC_PCER0_PID29_Msk & (_UINT32_(value) << PMC_PCER0_PID29_Pos)) /* Assigment of value for PID29 in the PMC_PCER0 register */
-#define PMC_PCER0_Msk                         _UINT32_(0x3FFFFF00)                                 /* (PMC_PCER0) Register Mask  */
+#define PMC_PCER0_Msk                         _UINT32_(0x3FFFFF80)                                 /* (PMC_PCER0) Register Mask  */
 
-#define PMC_PCER0_PID_Pos                     _UINT32_(8)                                          /* (PMC_PCER0 Position) Peripheral Clock 29 Enable */
-#define PMC_PCER0_PID_Msk                     (_UINT32_(0x3FFFFF) << PMC_PCER0_PID_Pos)            /* (PMC_PCER0 Mask) PID */
+#define PMC_PCER0_PID_Pos                     _UINT32_(7)                                          /* (PMC_PCER0 Position) Peripheral Clock 29 Enable */
+#define PMC_PCER0_PID_Msk                     (_UINT32_(0x7FFFFF) << PMC_PCER0_PID_Pos)            /* (PMC_PCER0 Mask) PID */
 #define PMC_PCER0_PID(value)                  (PMC_PCER0_PID_Msk & (_UINT32_(value) << PMC_PCER0_PID_Pos)) 
 
 /* -------- PMC_PCDR0 : (PMC Offset: 0x14) ( /W 32) Peripheral Clock Disable Register 0 -------- */
+#define PMC_PCDR0_PID7_Pos                    _UINT32_(7)                                          /* (PMC_PCDR0) Peripheral Clock 7 Disable Position */
+#define PMC_PCDR0_PID7_Msk                    (_UINT32_(0x1) << PMC_PCDR0_PID7_Pos)                /* (PMC_PCDR0) Peripheral Clock 7 Disable Mask */
+#define PMC_PCDR0_PID7(value)                 (PMC_PCDR0_PID7_Msk & (_UINT32_(value) << PMC_PCDR0_PID7_Pos)) /* Assigment of value for PID7 in the PMC_PCDR0 register */
 #define PMC_PCDR0_PID8_Pos                    _UINT32_(8)                                          /* (PMC_PCDR0) Peripheral Clock 8 Disable Position */
 #define PMC_PCDR0_PID8_Msk                    (_UINT32_(0x1) << PMC_PCDR0_PID8_Pos)                /* (PMC_PCDR0) Peripheral Clock 8 Disable Mask */
 #define PMC_PCDR0_PID8(value)                 (PMC_PCDR0_PID8_Msk & (_UINT32_(value) << PMC_PCDR0_PID8_Pos)) /* Assigment of value for PID8 in the PMC_PCDR0 register */
@@ -279,13 +285,16 @@
 #define PMC_PCDR0_PID29_Pos                   _UINT32_(29)                                         /* (PMC_PCDR0) Peripheral Clock 29 Disable Position */
 #define PMC_PCDR0_PID29_Msk                   (_UINT32_(0x1) << PMC_PCDR0_PID29_Pos)               /* (PMC_PCDR0) Peripheral Clock 29 Disable Mask */
 #define PMC_PCDR0_PID29(value)                (PMC_PCDR0_PID29_Msk & (_UINT32_(value) << PMC_PCDR0_PID29_Pos)) /* Assigment of value for PID29 in the PMC_PCDR0 register */
-#define PMC_PCDR0_Msk                         _UINT32_(0x3FFFFF00)                                 /* (PMC_PCDR0) Register Mask  */
+#define PMC_PCDR0_Msk                         _UINT32_(0x3FFFFF80)                                 /* (PMC_PCDR0) Register Mask  */
 
-#define PMC_PCDR0_PID_Pos                     _UINT32_(8)                                          /* (PMC_PCDR0 Position) Peripheral Clock 29 Disable */
-#define PMC_PCDR0_PID_Msk                     (_UINT32_(0x3FFFFF) << PMC_PCDR0_PID_Pos)            /* (PMC_PCDR0 Mask) PID */
+#define PMC_PCDR0_PID_Pos                     _UINT32_(7)                                          /* (PMC_PCDR0 Position) Peripheral Clock 29 Disable */
+#define PMC_PCDR0_PID_Msk                     (_UINT32_(0x7FFFFF) << PMC_PCDR0_PID_Pos)            /* (PMC_PCDR0 Mask) PID */
 #define PMC_PCDR0_PID(value)                  (PMC_PCDR0_PID_Msk & (_UINT32_(value) << PMC_PCDR0_PID_Pos)) 
 
 /* -------- PMC_PCSR0 : (PMC Offset: 0x18) ( R/ 32) Peripheral Clock Status Register 0 -------- */
+#define PMC_PCSR0_PID7_Pos                    _UINT32_(7)                                          /* (PMC_PCSR0) Peripheral Clock 7 Status Position */
+#define PMC_PCSR0_PID7_Msk                    (_UINT32_(0x1) << PMC_PCSR0_PID7_Pos)                /* (PMC_PCSR0) Peripheral Clock 7 Status Mask */
+#define PMC_PCSR0_PID7(value)                 (PMC_PCSR0_PID7_Msk & (_UINT32_(value) << PMC_PCSR0_PID7_Pos)) /* Assigment of value for PID7 in the PMC_PCSR0 register */
 #define PMC_PCSR0_PID8_Pos                    _UINT32_(8)                                          /* (PMC_PCSR0) Peripheral Clock 8 Status Position */
 #define PMC_PCSR0_PID8_Msk                    (_UINT32_(0x1) << PMC_PCSR0_PID8_Pos)                /* (PMC_PCSR0) Peripheral Clock 8 Status Mask */
 #define PMC_PCSR0_PID8(value)                 (PMC_PCSR0_PID8_Msk & (_UINT32_(value) << PMC_PCSR0_PID8_Pos)) /* Assigment of value for PID8 in the PMC_PCSR0 register */
@@ -352,10 +361,10 @@
 #define PMC_PCSR0_PID29_Pos                   _UINT32_(29)                                         /* (PMC_PCSR0) Peripheral Clock 29 Status Position */
 #define PMC_PCSR0_PID29_Msk                   (_UINT32_(0x1) << PMC_PCSR0_PID29_Pos)               /* (PMC_PCSR0) Peripheral Clock 29 Status Mask */
 #define PMC_PCSR0_PID29(value)                (PMC_PCSR0_PID29_Msk & (_UINT32_(value) << PMC_PCSR0_PID29_Pos)) /* Assigment of value for PID29 in the PMC_PCSR0 register */
-#define PMC_PCSR0_Msk                         _UINT32_(0x3FFFFF00)                                 /* (PMC_PCSR0) Register Mask  */
+#define PMC_PCSR0_Msk                         _UINT32_(0x3FFFFF80)                                 /* (PMC_PCSR0) Register Mask  */
 
-#define PMC_PCSR0_PID_Pos                     _UINT32_(8)                                          /* (PMC_PCSR0 Position) Peripheral Clock 29 Status */
-#define PMC_PCSR0_PID_Msk                     (_UINT32_(0x3FFFFF) << PMC_PCSR0_PID_Pos)            /* (PMC_PCSR0 Mask) PID */
+#define PMC_PCSR0_PID_Pos                     _UINT32_(7)                                          /* (PMC_PCSR0 Position) Peripheral Clock 29 Status */
+#define PMC_PCSR0_PID_Msk                     (_UINT32_(0x7FFFFF) << PMC_PCSR0_PID_Pos)            /* (PMC_PCSR0 Mask) PID */
 #define PMC_PCSR0_PID(value)                  (PMC_PCSR0_PID_Msk & (_UINT32_(value) << PMC_PCSR0_PID_Pos)) 
 
 /* -------- CKGR_MOR : (PMC Offset: 0x20) (R/W 32) Main Oscillator Register -------- */
