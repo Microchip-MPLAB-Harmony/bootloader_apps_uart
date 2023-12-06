@@ -48,8 +48,8 @@
 #include <stdint.h>
 #include <stddef.h>
 #include <stdbool.h>
-#include "bootloader/bootloader_uart.h"
 #include "driver/sdmmc/drv_sdmmc.h"
+#include "bootloader/bootloader_uart.h"
 #include "peripheral/dwdt/plib_dwdt.h"
 #include "peripheral/clk/plib_clk.h"
 #include "peripheral/gic/plib_gic.h"

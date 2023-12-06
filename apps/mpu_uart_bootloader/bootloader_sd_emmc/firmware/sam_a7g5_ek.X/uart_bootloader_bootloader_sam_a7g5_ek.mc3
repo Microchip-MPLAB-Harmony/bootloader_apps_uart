@@ -1,4 +1,4 @@
-<config configName="sam_a7g5_ek" projectName="uart_bootloader_bootloader_sam_a7g5_ek" configVersion="1.1" device="SAMA7G54" deviceLibraryClass="com.microchip.mcc.harmony.Harmony3Library" coreVersion="5.5.0">
+<config configName="sam_a7g5_ek" projectName="uart_bootloader_bootloader_sam_a7g5_ek" configVersion="1.1" device="SAMA7G54" deviceLibraryClass="com.microchip.mcc.harmony.Harmony3Library" coreVersion="5.6.1">
    <usedPackages class="java.util.ArrayList"/>
    <usedClasses class="java.util.TreeMap">
       <entry>
@@ -55,7 +55,7 @@
       </entry>
    </usedClasses>
    <usedLibraries class="java.util.ArrayList">
-      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.3.2"/>
+      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.4.0"/>
    </usedLibraries>
    <tokenMap class="java.util.TreeMap">
       <entry>
@@ -9440,15 +9440,6 @@
 </value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="uart_bootloader" name="BTL_RAM_START"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;uart_bootloader&gt;
-  &lt;uart_bootloader dnOrder=&quot;0&quot; id=&quot;BTL_RAM_START&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
-  &lt;/uart_bootloader&gt;
-&lt;/uart_bootloader&gt;
-</value>
-      </entry>
-      <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="uart_bootloader" name="BTL_SIZE"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;uart_bootloader&gt;
   &lt;uart_bootloader dnOrder=&quot;0&quot; id=&quot;BTL_SIZE&quot;&gt;
@@ -9461,24 +9452,6 @@
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="uart_bootloader" name="BTL_START"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;uart_bootloader&gt;
   &lt;uart_bootloader dnOrder=&quot;0&quot; id=&quot;BTL_START&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
-  &lt;/uart_bootloader&gt;
-&lt;/uart_bootloader&gt;
-</value>
-      </entry>
-      <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="uart_bootloader" name="BTL_TRIGGER_ENABLE"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;uart_bootloader&gt;
-  &lt;uart_bootloader dnOrder=&quot;0&quot; id=&quot;BTL_TRIGGER_ENABLE&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
-  &lt;/uart_bootloader&gt;
-&lt;/uart_bootloader&gt;
-</value>
-      </entry>
-      <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="uart_bootloader" name="BTL_TRIGGER_LEN"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;uart_bootloader&gt;
-  &lt;uart_bootloader dnOrder=&quot;0&quot; id=&quot;BTL_TRIGGER_LEN&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;/&gt;
   &lt;/uart_bootloader&gt;
 &lt;/uart_bootloader&gt;
@@ -9505,86 +9478,102 @@
 </value>
       </entry>
    </tokenMap>
-   <generatedFileHashHistoryMap class="java.util.HashMap">
+   <generatedFileHashHistoryMap class="java.util.TreeMap">
       <entry>
-         <file>..\src\config\sam_a7g5_ek\osal\osal.h</file>
-         <hash>8404fbe44807fa0484ffb38843a72cb9af8e31c9c30bd1b2594e609b8ea317d9</hash>
+         <file>..\src\app.c</file>
+         <hash>632c78c323cb9f8c6359f20337440c08f8461eb4b0304552b6a3cfd5c4052620</hash>
       </entry>
       <entry>
-         <file>..\src\packs\SAMA7G54_DFP\component\nicgpv.h</file>
-         <hash>b4c58caa4680c25c91b2ba14122463b401f5fbe2b3362c1f95b93c6d52ac26a3</hash>
+         <file>..\src\app.h</file>
+         <hash>8e35d8509552a4d1d6e6f123ad75694cf784a707f7dac592ed33b55121aa8e28</hash>
       </entry>
       <entry>
-         <file>..\src\packs\SAMA7G54_DFP\instance\sha.h</file>
-         <hash>900e99e4971e928121146a40b432007bf04d78526492f0ccf1d24068261c6a72</hash>
+         <file>..\src\config\sam_a7g5_ek\bootloader\bootloader_common.c</file>
+         <hash>4fed29a33e0f817eb38a4cb25f55434941e9d91de1d4494876cace8449ff328e</hash>
       </entry>
       <entry>
-         <file>..\src\config\sam_a7g5_ek\system\debug\sys_debug.h</file>
-         <hash>bc6fa321b0be542d074e4564065b7fd69f52556486ac3d892d315b51c434f9ec</hash>
+         <file>..\src\config\sam_a7g5_ek\bootloader\bootloader_common.h</file>
+         <hash>fc6af3fbeeb94e68c05af57067aeb8857d8c0631069315ce2c8d71e3cd5193a9</hash>
       </entry>
       <entry>
-         <file>..\src\packs\CMSIS\CMSIS\Core_A\Include\cmsis_iccarm.h</file>
-         <hash>aede1a5428f7b7f4de414f596a2b2b8b1e38a94b7f9762a094ea6d88a7ea5729</hash>
+         <file>..\src\config\sam_a7g5_ek\bootloader\bootloader_storage.c</file>
+         <hash>8f2a3cfd2707a707d4b4308fdcb64d5d30ec4da5f2436342b8e3f79d6d5f222f</hash>
       </entry>
       <entry>
-         <file>..\src\config\sam_a7g5_ek\system\time\src\sys_time_local.h</file>
-         <hash>df56f970664902417d798760e44978cf4b84c108cf0761647a383e91db76980c</hash>
+         <file>..\src\config\sam_a7g5_ek\bootloader\bootloader_storage.h</file>
+         <hash>306e0b8d62c2708754bb7853dab8da206ae7db9f9911d60b68bfe0bb229a2882</hash>
       </entry>
       <entry>
-         <file>..\src\packs\SAMA7G54_DFP\component\rtt.h</file>
-         <hash>faad1c84a59becb0e0914b0157334f0c9114f4f70c5a69741177099f1221a197</hash>
+         <file>..\src\config\sam_a7g5_ek\bootloader\bootloader_uart.c</file>
+         <hash>0d83f584b1682ddda0384cf328dc1b5f89b6de1fd1e56e2b21da6149975e358c</hash>
       </entry>
       <entry>
-         <file>..\src\config\sam_a7g5_ek\system\fs\src\sys_fs.c</file>
-         <hash>9fddd0e0f98f78690226049c454d1f1f05f1b24f89b37da043f7fd2522a49502</hash>
+         <file>..\src\config\sam_a7g5_ek\bootloader\bootloader_uart.h</file>
+         <hash>be04b89cce61ec9f05d343b6b6807fee2ed9576b2351f3da114194023903d606</hash>
       </entry>
       <entry>
-         <file>..\src\config\sam_a7g5_ek\osal\osal_definitions.h</file>
-         <hash>5f0a2513a093b6d228e2b50646b204923a82047335a47f3d35a2938309ab6f37</hash>
+         <file>..\src\config\sam_a7g5_ek\bsp\bsp.c</file>
+         <hash>01c58e967b09b30368ece36ae4874a48c69738d6fa6301ea59fd33a3e817b157</hash>
       </entry>
       <entry>
-         <file>..\src\packs\SAMA7G54_DFP\instance\flexcom6.h</file>
-         <hash>d89567b8930eb002d8cc1d7f47394113675d44f7d24e041b1d0244541722a8cf</hash>
+         <file>..\src\config\sam_a7g5_ek\bsp\bsp.h</file>
+         <hash>9aa82746cd6d90fab1ea1d01e402e43b4d487cbce27722e07935352ee2ae2be3</hash>
       </entry>
       <entry>
-         <file>..\src\config\sam_a7g5_ek\system\int\sys_int.h</file>
-         <hash>dc104ae181fd5309e1bb42896246644fae95915a8e639b23ecfccc8840850274</hash>
+         <file>..\src\config\sam_a7g5_ek\configuration.h</file>
+         <hash>2b6d63b471ff02bcb54cb19ab643b90d99c0aa90a977a131101d18ca47aabab9</hash>
       </entry>
       <entry>
-         <file>..\src\packs\SAMA7G54_DFP\instance\tzpm.h</file>
-         <hash>72f76e69f7551d05125c325f3ed782f6e1b422fa8c60c263a763cabb590da8f2</hash>
+         <file>..\src\config\sam_a7g5_ek\cstartup.S</file>
+         <hash>b7ac8fe140922db2917983068a65ba16df7cd36c5a6b1a6977bcb830e2ad89a9</hash>
       </entry>
       <entry>
-         <file>..\src\packs\SAMA7G54_DFP\instance\spdifrx.h</file>
-         <hash>29d38a63547063e6820a4763d2d0c24c9189f2aa12e41aa68f99a046a4c31f6f</hash>
+         <file>..\src\config\sam_a7g5_ek\ddr.ld</file>
+         <hash>c6454caab96febd03c6d9b487b502898fc4b492529c39a8441137c7b5feb4118</hash>
       </entry>
       <entry>
-         <file>..\src\packs\SAMA7G54_DFP\instance\tzaesbs.h</file>
-         <hash>9a54f4cbd03d631af86879f824867d39e3f9f81ec6e293504ad6b26ad576d532</hash>
+         <file>..\src\config\sam_a7g5_ek\definitions.h</file>
+         <hash>8a6089b1ff46abafbb55b44fad72554880bb86f208b37967a02329524c436199</hash>
       </entry>
       <entry>
-         <file>..\src\packs\SAMA7G54_DFP\component\uddrc.h</file>
-         <hash>6f86dbcee471c741677cb35bae1b479285aa3f750eb08b48fb61a91b4904c16e</hash>
+         <file>..\src\config\sam_a7g5_ek\device.h</file>
+         <hash>1cda4d9666f35d5b9f93c28332742ec8ac2368573b111c13615f6e07b6c9432c</hash>
       </entry>
       <entry>
-         <file>..\src\packs\SAMA7G54_DFP\instance\i2smcc1.h</file>
-         <hash>85278f344e0efb5a720980cb26f0dc4c9aeb1d0769489dcbfae744bdeeeb5fb1</hash>
+         <file>..\src\config\sam_a7g5_ek\device_cache.h</file>
+         <hash>554e5c179b8fb79fc3783af6b7e61d9c61cd2b75ad8b797c73190256951d32f6</hash>
       </entry>
       <entry>
-         <file>..\src\config\sam_a7g5_ek\system\system_module.h</file>
-         <hash>96c74368801b0a7aaa25aec3ec2cb0d483250385f103ffc1ff64089b4ca2c6d9</hash>
+         <file>..\src\config\sam_a7g5_ek\driver\driver.h</file>
+         <hash>042fdd289460dbddb8e805850af7e3ac9aea95468e37414959781ebc5b2f454d</hash>
       </entry>
       <entry>
-         <file>..\src\packs\SAMA7G54_DFP\instance\rstc.h</file>
-         <hash>c4bb9873d3a6d17944d5b1fd57b62ef5cf4d600ab8977ac547ea244106195a21</hash>
+         <file>..\src\config\sam_a7g5_ek\driver\driver_common.h</file>
+         <hash>5217965f6720b4fdf717e99ce9df4f2c9fbd82bbbc9655847166d1eefa806fee</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\sam_a7g5_ek\driver\sdmmc\drv_sdmmc.h</file>
+         <hash>697acb93f32d8f9c5fb4987da5587233adf62a9b331fb30a195d1c788455339d</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\sam_a7g5_ek\driver\sdmmc\drv_sdmmc_definitions.h</file>
+         <hash>4917f65a8afb9ae28e08fab862bfba969b892990b1d1039f1d03d66edcaa826e</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\sam_a7g5_ek\driver\sdmmc\src\drv_sdmmc.c</file>
+         <hash>bdd8c5fdc0a46544b6915464dc275025042dcb46e5719ff05d0eb8d1fcb10289</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a7g5_ek\driver\sdmmc\src\drv_sdmmc_file_system.c</file>
          <hash>d9ccc4228377cc80f855b932d5205c03cf168edf09f05fadf4e3931e1d8822d0</hash>
       </entry>
       <entry>
-         <file>..\src\packs\SAMA7G54_DFP\component\tcpc.h</file>
-         <hash>649ceddc55169817efc52529eff3df3bf8f27a2c7fe3e6113c36b2d109ca8887</hash>
+         <file>..\src\config\sam_a7g5_ek\driver\sdmmc\src\drv_sdmmc_file_system.h</file>
+         <hash>3f80d1ef387e9ea48674dd721d301fe0e273ab00870b800ba28a1af40c8cdebd</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\sam_a7g5_ek\driver\sdmmc\src\drv_sdmmc_local.h</file>
+         <hash>07a772675d632648815baef0ed90e60b3038a6aedf7dc989042357f93367b0c1</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a7g5_ek\fault_handlers.c</file>
@@ -9595,148 +9584,32 @@
          <hash>de7583032f5a1bfe931fc4bb6518d3ed8cfaed403cc4ef3154e40de401f13db2</hash>
       </entry>
       <entry>
-         <file>..\src\config\sam_a7g5_ek\system\fs\fat_fs\file_system\ff.c</file>
-         <hash>09f73618c1ac3bd9736650439be337fbfe49018a1db7205126fcbfde1e384a0f</hash>
+         <file>..\src\config\sam_a7g5_ek\interrupts.c</file>
+         <hash>2e4fd2149b55e6a0c22ad46ada24e99c2557ba3c4b74707dfdc29eea5a043cb3</hash>
       </entry>
       <entry>
-         <file>..\src\config\sam_a7g5_ek\device.h</file>
-         <hash>1cda4d9666f35d5b9f93c28332742ec8ac2368573b111c13615f6e07b6c9432c</hash>
+         <file>..\src\config\sam_a7g5_ek\interrupts.h</file>
+         <hash>2789affa176dbd7b278121245ac2845c90081a37a0491895b7bdd1c2096ada23</hash>
       </entry>
       <entry>
-         <file>..\src\config\sam_a7g5_ek\system\fs\fat_fs\file_system\ff.h</file>
-         <hash>2906f8255a58097a83011b023f09dfa602c04c2d154c39a9e35fcb48823940ac</hash>
+         <file>..\src\config\sam_a7g5_ek\osal\osal.h</file>
+         <hash>8404fbe44807fa0484ffb38843a72cb9af8e31c9c30bd1b2594e609b8ea317d9</hash>
       </entry>
       <entry>
-         <file>..\src\main_sama_arm9.c</file>
-         <hash>d3c233d419e6304bfacbafc18cc68c0f5c26e365f23b20ea40ccfac458f664c5</hash>
+         <file>..\src\config\sam_a7g5_ek\osal\osal_definitions.h</file>
+         <hash>5f0a2513a093b6d228e2b50646b204923a82047335a47f3d35a2938309ab6f37</hash>
       </entry>
       <entry>
-         <file>..\src\config\sam_a7g5_ek\system\fs\sys_fs_media_manager.h</file>
-         <hash>2f7c76d5a40a41594e86a831470c67d7aeec5b6e540fb967518ce095fe6da271</hash>
+         <file>..\src\config\sam_a7g5_ek\osal\osal_impl_basic.h</file>
+         <hash>67ce72d34fd1e4dee0b6937fa026ab2c7bd285f82a24da09742c68333adaf0fc</hash>
       </entry>
       <entry>
-         <file>..\src\packs\SAMA7G54_DFP\component\sha.h</file>
-         <hash>ca73a8fb35bf9e90af22b77e5ef44dd8ec96df4da4e566d8f941f1d7009d8ecc</hash>
+         <file>..\src\config\sam_a7g5_ek\peripheral\clk\plib_clk.c</file>
+         <hash>3fbe2cd6567d7f791eda323498628be106c66fb1d0ea475b53776e48edc4fee7</hash>
       </entry>
       <entry>
-         <file>..\src\packs\SAMA7G54_DFP\instance\gmac1.h</file>
-         <hash>ca4a31acfcee582108b5233c2447e4379f422861ab015e0d77c6ecb8ac884842</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\sam_a7g5_ek\peripheral\tc\plib_tc0.c</file>
-         <hash>8afe137642d9992256a72cdcd78d0292be20925f0ce2b2c697b418d351060127</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\sam_a7g5_ek\ddr.ld</file>
-         <hash>c6454caab96febd03c6d9b487b502898fc4b492529c39a8441137c7b5feb4118</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\SAMA7G54_DFP\instance\flexcom5.h</file>
-         <hash>8a990c56a288878cd48bdb01555a9f58dce61e6c2304bf182e2927c47ffef10f</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\sam_a7g5_ek\peripheral\tc\plib_tc0.h</file>
-         <hash>79afe8007b0060db79e911ca3574ac588005761cabfd42c574d779bb71615a7d</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\SAMA7G54_DFP\component\gpbr.h</file>
-         <hash>549ad5a4161e6c62a4a3c6c420915111d5a2e92c6bd78f0538bdf313cea7eccc</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\sam_a7g5_ek\driver\sdmmc\src\drv_sdmmc_file_system.h</file>
-         <hash>3f80d1ef387e9ea48674dd721d301fe0e273ab00870b800ba28a1af40c8cdebd</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\SAMA7G54_DFP\instance\hsmc.h</file>
-         <hash>000c6d8a3ec2e711e651ca7cc72730b8f8bd430f8d2a243593d83c1b7bd6f0fc</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\sam_a7g5_ek\peripheral\tc\plib_tc_common.h</file>
-         <hash>aa07077b6355fa1dc9e938cb4def1c725bffddf452ffc55e4f982f83d3988a9e</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\sam_a7g5_ek\driver\sdmmc\src\drv_sdmmc.c</file>
-         <hash>bdd8c5fdc0a46544b6915464dc275025042dcb46e5719ff05d0eb8d1fcb10289</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\SAMA7G54_DFP\component\adc.h</file>
-         <hash>b04de75532dbcb2ac5c2588907226c660bf63264be3172641f409c7784a046ee</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\SAMA7G54_DFP\component\spdiftx.h</file>
-         <hash>fa73063030f143572e89b011d49ee20d7402e82594d901127cb5d9a050de933e</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\SAMA7G54_DFP\instance\xdmac2.h</file>
-         <hash>96ab96147087e26053ca063c7eeddd48669a7519f667fbee64654a413686a9ef</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\sam_a7g5_ek\stdio\xc32_monitor.c</file>
-         <hash>858f8710d4287200a5ee7f3b3ad7c24f505aed9c05c16956ab0ff9f7bb162a6a</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\SAMA7G54_DFP\instance\adc.h</file>
-         <hash>1b7985efbc57d77a5e52590e8afbe406c7db75e0c71feb4a4f733775292705c8</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\SAMA7G54_DFP\instance\i2smcc0.h</file>
-         <hash>14a317f6a81b31801d21d2bb4c120c2649bbaed4dbfed3e66243783d7373645a</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\SAMA7G54_DFP\component\pwm.h</file>
-         <hash>24a63bf3a42689516ccd09ae390046380687149a000b7315018fa1e9db2bdbc6</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\sam_a7g5_ek\bsp\bsp.c</file>
-         <hash>01c58e967b09b30368ece36ae4874a48c69738d6fa6301ea59fd33a3e817b157</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\sam_a7g5_ek\toolchain_specifics.h</file>
-         <hash>6a9af1e683d2794186c9c57169950fb13e7ebff09b63ce75cd3702405da4b88b</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\SAMA7G54_DFP\instance\matrix.h</file>
-         <hash>9afba2adf1c0ec14bb1536b0c4a72e6d41e031c5a57ad8f7ab95115ce89569f9</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\SAMA7G54_DFP\instance\pwm.h</file>
-         <hash>8c78e0aed14f5ca05367a082ee46e561db8033d6ba63e6af72dec9943bcfd098</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\sam_a7g5_ek\bsp\bsp.h</file>
-         <hash>9aa82746cd6d90fab1ea1d01e402e43b4d487cbce27722e07935352ee2ae2be3</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\sam_a7g5_ek\user.h</file>
-         <hash>451e0878e9fcf6cf9fab046c1452ea662757988346c7f39e6bc98478ca25f995</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\SAMA7G54_DFP\component\tzaesbasc.h</file>
-         <hash>37b92f7d7efee658ffddd31624ff09cfc070e66acf3cb6268b2bbfaeee6a5ee3</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\sam_a7g5_ek\system\int\src\sys_int.c</file>
-         <hash>e629992f48374b748126f9969ea5f9a31748b76935ce6a3a487ef7ddb82eb1a4</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\SAMA7G54_DFP\component\dwdt.h</file>
-         <hash>63159712039786b9f1cc105a4e82665b8fe2fe1c02edd6fbd9f5d4d363d388b2</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\SAMA7G54_DFP\instance\mcan0.h</file>
-         <hash>39dd339ef300c91a306af71bd640b3a3f850bd812eee8748098dab7c1e28e83c</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\SAMA7G54_DFP\instance\csi2dc.h</file>
-         <hash>11985c5a060b48834c84b6651930e8f31fdc384cf7494a99cbfbde6ee136521b</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\sam_a7g5_ek\peripheral\sdmmc\plib_sdmmc_common.h</file>
-         <hash>c8693c2b48d12e81468827118033749902c15d2ff29044c878587fd933322909</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\SAMA7G54_DFP\component\sdmmc.h</file>
-         <hash>d1b92cd4d60446374165ac98acbb8442e63667747ad09460857ab40ecf6ab294</hash>
+         <file>..\src\config\sam_a7g5_ek\peripheral\clk\plib_clk.h</file>
+         <hash>06fbd033b79a7ff727b633eaab93fac303dfe769b7c63b8700ab424e2b313717</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a7g5_ek\peripheral\dwdt\plib_dwdt.c</file>
@@ -9747,132 +9620,48 @@
          <hash>ccca95133d642b39a30d6fff8e4841b1711f56a5e76bda74f52e6587c4696a4d</hash>
       </entry>
       <entry>
-         <file>..\src\packs\SAMA7G54_DFP\instance\acc.h</file>
-         <hash>c3f39c964c55ebd909d8008e0c5a72fd098bbb15b67f2a2a766b9f872e42693c</hash>
+         <file>..\src\config\sam_a7g5_ek\peripheral\flexcom\usart\plib_flexcom3_usart.c</file>
+         <hash>69f3c134a281a610a2a7a2c3ecd80591c51a068f570df0cb5f7ebf3878c0aa12</hash>
       </entry>
       <entry>
-         <file>..\src\packs\SAMA7G54_DFP\instance\flexcom4.h</file>
-         <hash>faad6478999fcb8cc087719f06692f60fb63fb4f3682121415d27e3ea5db71e7</hash>
+         <file>..\src\config\sam_a7g5_ek\peripheral\flexcom\usart\plib_flexcom3_usart.h</file>
+         <hash>fc5df6ad9d3b7964cea378dfb20fca1062e79fe3cda41f2254048ad99139651a</hash>
       </entry>
       <entry>
-         <file>..\src\config\sam_a7g5_ek\driver\sdmmc\src\drv_sdmmc_local.h</file>
-         <hash>07a772675d632648815baef0ed90e60b3038a6aedf7dc989042357f93367b0c1</hash>
+         <file>..\src\config\sam_a7g5_ek\peripheral\flexcom\usart\plib_flexcom_usart_local.h</file>
+         <hash>d7d8e1bab1992fd5471cbee03dfbe206d761d9e622c721c08f3546ef7d335b64</hash>
       </entry>
       <entry>
-         <file>..\src\config\sam_a7g5_ek\system\system_common.h</file>
-         <hash>c9f34bd226f8efab12f5766e77f8355996cd0430b50e0f6ee30258664c494984</hash>
+         <file>..\src\config\sam_a7g5_ek\peripheral\gic\plib_gic.c</file>
+         <hash>190affae772e4af31d5f6e946fe5c79d638036b3710d879b2bd6dc429827bf71</hash>
       </entry>
       <entry>
-         <file>..\src\packs\SAMA7G54_DFP\component\bsc.h</file>
-         <hash>19eac4d8d0386036811e0354cee70483411efd91b44b4fc41e06d6127409077f</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\SAMA7G54_DFP\component\tc.h</file>
-         <hash>b388749c8ef97d2c2c23b2040f5feef2e1256f707148a329e8bdcf4c4b6d5a10</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\sam_a7g5_ek\bootloader\bootloader_storage.c</file>
-         <hash>e2c0ce5b2648f43a7c178cd53375791ba12c14239a284338ab160a4ac084df39</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\SAMA7G54_DFP\component\tzpm.h</file>
-         <hash>0a7531ad8434d807dcb467aa4759fba8d562f67caf7f1e12ed01c0ef2131790d</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\SAMA7G54_DFP\instance\pit64b0.h</file>
-         <hash>56ef5d7f7c68ef13749763eb004475bdd697b635aa46c0a4e0ff145ca5a67abe</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\SAMA7G54_DFP\instance\syscwp.h</file>
-         <hash>63bb0c0e4c0c90c71266590ddd5e52f41330c479c837b9f0ea2897f09f0bc3ac</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\SAMA7G54_DFP\instance\tc0.h</file>
-         <hash>eb1990b69a946f512cb85e62d2768f7fe609fa56fae8da5a84619d9513194cd0</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\SAMA7G54_DFP\instance\xdmac1.h</file>
-         <hash>5fc815c7f5676c4e7111829c2888376c31faf6acbccd6b77ef41da8e570bb39f</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\SAMA7G54_DFP\component\icm.h</file>
-         <hash>1cdc78a7f1120373aef00a83b8d5219b5a8a610e88fe680bc116a5f0d8818a4d</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\SAMA7G54_DFP\instance\tzc.h</file>
-         <hash>55931744dd174d3cf37d012997fd953c9844efedb80e3858486b79ca53b77a02</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\SAMA7G54_DFP\component\spdifrx.h</file>
-         <hash>08184cbaa4ed8d05e8eb3a8b3a8e3103e6fb50d34b81d7cbd90876eb5b10799e</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\SAMA7G54_DFP\instance\qspi0.h</file>
-         <hash>b783a2b24631b1a2e5922dcbe6098c88d9cbf30e00822bb053a121426b8069dd</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\SAMA7G54_DFP\component\matrix.h</file>
-         <hash>7ef6f4c84685d968531cbf6445479bcff16b3516979be48b3979dc27b322ebeb</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\sam_a7g5_ek\system\system.h</file>
-         <hash>2b75f8e370e5cb2c54f70da7351ee149f0d5a7673e700f39b373099716b31b55</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\SAMA7G54_DFP\component\flexcom.h</file>
-         <hash>a91a5464284c7cd86c1b1bc69ebf37be4a9b4b748b42b8f8ea85538bef1f9166</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\sam_a7g5_ek\bootloader\bootloader_storage.h</file>
-         <hash>306e0b8d62c2708754bb7853dab8da206ae7db9f9911d60b68bfe0bb229a2882</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\SAMA7G54_DFP\component\asrc.h</file>
-         <hash>040903d6223f9492ee9241c3cd36e238d4c37bcc9a4a319e48d3ffa6f49fae03</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\SAMA7G54_DFP\component\csi.h</file>
-         <hash>3d2d52be7212301f82b231516a7b5300bd2d6dad8faec5f0c81812503273972a</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\sam_a7g5_ek\system\fs\sys_fs_fat_interface.h</file>
-         <hash>8abf10cb082958d08f5cf3210694cef73fdb6fa9b6a641e00da547cbcec0719b</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\SAMA7G54_DFP\sama7g54.h</file>
-         <hash>fe0c2b8c985689f188aa1381df1e885de8365b97d4b58dac6ce777ab074d7ebe</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\sam_a7g5_ek\peripheral\mmu\plib_mmu.h</file>
-         <hash>cb4d9542a1b940dd7483d2ad911dd95f39de6b1b71ca722e4b12e239ae7fe894</hash>
+         <file>..\src\config\sam_a7g5_ek\peripheral\gic\plib_gic.h</file>
+         <hash>92e447d1cb7ee981d456921c05de673482ee64824249201bb7543836b59386bb</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a7g5_ek\peripheral\matrix\plib_matrix.c</file>
          <hash>04d438b6f545ae39e19e4302688ae964398595dd736bb12bf4484a52e172bc5b</hash>
       </entry>
       <entry>
-         <file>..\src\packs\SAMA7G54_DFP\component\xdmac.h</file>
-         <hash>70804f2986d63ca7881b901fbda95d5aa6af23d8421f990340287b6c896c5a1a</hash>
+         <file>..\src\config\sam_a7g5_ek\peripheral\matrix\plib_matrix.h</file>
+         <hash>4ebf5fea5954b681c5b33da921c7819ecea341d41a31eddaa8b6e1a410e55f32</hash>
       </entry>
       <entry>
-         <file>..\src\config\sam_a7g5_ek\driver\sdmmc\drv_sdmmc_definitions.h</file>
-         <hash>4917f65a8afb9ae28e08fab862bfba969b892990b1d1039f1d03d66edcaa826e</hash>
+         <file>..\src\config\sam_a7g5_ek\peripheral\mmu\plib_mmu.c</file>
+         <hash>e59f24fd24180a639a2eb487ced9991163846b3e1be2678a75d255cde143c43f</hash>
       </entry>
       <entry>
-         <file>..\src\packs\SAMA7G54_DFP\component\trng.h</file>
-         <hash>d41aebeac25919132b76f74cabdba90b76e5c75e9b222e279b473538ae42edda</hash>
+         <file>..\src\config\sam_a7g5_ek\peripheral\mmu\plib_mmu.h</file>
+         <hash>cb4d9542a1b940dd7483d2ad911dd95f39de6b1b71ca722e4b12e239ae7fe894</hash>
       </entry>
       <entry>
-         <file>..\src\packs\SAMA7G54_DFP\component\acc.h</file>
-         <hash>ddb14eb8fc88f70ad17ca9acddc390a7cb5fd570fcb315f2c5623207bcc74839</hash>
+         <file>..\src\config\sam_a7g5_ek\peripheral\pio\plib_pio.c</file>
+         <hash>da56381270a0c61ced0e9144bba7dcd07b6fea9a300f95f59f0fbe5551bc9be2</hash>
       </entry>
       <entry>
-         <file>..\src\packs\SAMA7G54_DFP\instance\secumod.h</file>
-         <hash>26eab4306f302fce117f672e4ddaec752c3322884d3f0faec39541723b7ed466</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\SAMA7G54_DFP\instance\uhphs_ohci.h</file>
-         <hash>ea6c192f625a57fa10ab86771a7731dea5a55cde502bcaf003593587242bca5b</hash>
+         <file>..\src\config\sam_a7g5_ek\peripheral\pio\plib_pio.h</file>
+         <hash>070bc4afa20db0ae0581c11e4afc2975f83a51ee7e0b6f23cae84510d42a9bba</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a7g5_ek\peripheral\sdmmc\plib_sdmmc1.c</file>
@@ -9883,580 +9672,764 @@
          <hash>e482af5422f3afb1659041783dc6b1d3e02719da3a48dd7da02849fa85295f0c</hash>
       </entry>
       <entry>
-         <file>..\src\packs\SAMA7G54_DFP\instance\mcan1.h</file>
-         <hash>fb93f576b17cfab3c2264d68dc3765b7cecb9c1567c81f19caa18765b9fce8b7</hash>
+         <file>..\src\config\sam_a7g5_ek\peripheral\sdmmc\plib_sdmmc_common.h</file>
+         <hash>c8693c2b48d12e81468827118033749902c15d2ff29044c878587fd933322909</hash>
       </entry>
       <entry>
-         <file>..\src\packs\SAMA7G54_DFP\instance\ssc0.h</file>
-         <hash>6a931ca6932b8cd382ed2287f4f64b62d024f9c3765a79428108f88aa4afc7cd</hash>
+         <file>..\src\config\sam_a7g5_ek\peripheral\tc\plib_tc0.c</file>
+         <hash>8afe137642d9992256a72cdcd78d0292be20925f0ce2b2c697b418d351060127</hash>
       </entry>
       <entry>
-         <file>..\src\config\sam_a7g5_ek\peripheral\mmu\plib_mmu.c</file>
-         <hash>e59f24fd24180a639a2eb487ced9991163846b3e1be2678a75d255cde143c43f</hash>
+         <file>..\src\config\sam_a7g5_ek\peripheral\tc\plib_tc0.h</file>
+         <hash>79afe8007b0060db79e911ca3574ac588005761cabfd42c574d779bb71615a7d</hash>
       </entry>
       <entry>
-         <file>..\src\config\sam_a7g5_ek\peripheral\matrix\plib_matrix.h</file>
-         <hash>4ebf5fea5954b681c5b33da921c7819ecea341d41a31eddaa8b6e1a410e55f32</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\SAMA7G54_DFP\component\ssc.h</file>
-         <hash>0bbf7b4aae2b65520c099cb8595314a58310b3b8ba05d3b370314734add585dc</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\SAMA7G54_DFP\instance\icm.h</file>
-         <hash>ef4a6e8dd5fdc2ac2f1acd63d014553172850310c1a3bb4e0fe05f5bb0a1ee95</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\sam_a7g5_ek\system\fs\fat_fs\file_system\ffconf.h</file>
-         <hash>eb42d88a772858dbd895386063ff6fa76df37a06bf8ee6da1bf3a43a8d9584e4</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\SAMA7G54_DFP\component\uhphs.h</file>
-         <hash>8a9da768b1b9952080a98e98157cbd8289ed99a5bdfc7171c3c3a91115eedb5e</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\CMSIS\CMSIS\Core_A\Include\core_ca.h</file>
-         <hash>ba65df987ecd6e3692f49eda2a6be74d4e1f0a9a3595e7c15c9812c360591f85</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\CMSIS\CMSIS\Core_A\Include\cmsis_cp15.h</file>
-         <hash>5d0183058de6b2245dc949f13bb736cd1e8fe154fa76b643f9fb8947c1b3ee04</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\SAMA7G54_DFP\instance\flexcom3.h</file>
-         <hash>931f90c1cc5c3bc5fe905eb22b0a7cd8e368a4f257798d79f873a29ee38e2ab5</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\SAMA7G54_DFP\instance\flexcom11.h</file>
-         <hash>736bf158f713fea69226edcfea373a22f0e0d89a3be7116e193bd6844694f90a</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\sam_a7g5_ek\system\time\sys_time.h</file>
-         <hash>6357468f7670698b16bfb6439d9919ed38eba99d4f03277a8b43ac34586fa1b3</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\SAMA7G54_DFP\instance\pit64b1.h</file>
-         <hash>59fd1e3281df790730811e270c31ec3af3baee91dde5e5336c97e0a99a761835</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\sam_a7g5_ek\system\fs\src\sys_fs_local.h</file>
-         <hash>7e7721693694ecc133d6772321cad1337c0a2209b7457b9351dda3a01cb129b1</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\SAMA7G54_DFP\component\secumod.h</file>
-         <hash>b0d8bf6d3eec1d130944f1583e2801f48b47517cabdd5015df731cde0e4a4bdf</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\SAMA7G54_DFP\instance\tc1.h</file>
-         <hash>29abb2a83689a637dffe5f2d5bdf3a3313cabe41ebb052cf800bf7b18702ea22</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\SAMA7G54_DFP\instance\xdmac0.h</file>
-         <hash>71f0df91c350628b24124eb9ebcd511276fbdce670eeffaba2934636224a8993</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\sam_a7g5_ek\driver\sdmmc\drv_sdmmc.h</file>
-         <hash>697acb93f32d8f9c5fb4987da5587233adf62a9b331fb30a195d1c788455339d</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\SAMA7G54_DFP\instance\cpkcc.h</file>
-         <hash>ec00dafed23ed77bd8d22c3ce4fb5a4205807060c72e6a3bf308a6dad2c9ce82</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\SAMA7G54_DFP\component\rstc.h</file>
-         <hash>0eae2e4edc9804754a69d315257080a58ea305cbbf3d09517e436be5c54c752f</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\sam_a7g5_ek\system\fs\src\sys_fs_media_manager_local.h</file>
-         <hash>5d471f0372ec41b3ef362ad533beede076e4e959274e57221ed229b996d7231e</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\SAMA7G54_DFP\component\gmac.h</file>
-         <hash>86bd582acce7759b3f337e8b7a8a43de22740d36f9bf60a891eb7a1696b02359</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\SAMA7G54_DFP\instance\pmc.h</file>
-         <hash>a57df91f2f1692b285755f22c5b3f66e98956aeed003e921fbd7a617424b578b</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\sam_a7g5_ek\system\system_media.h</file>
-         <hash>e61ba67015cfba6a7425d077cd2c633ba9989218bbe585078efe2face729401f</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\SAMA7G54_DFP\instance\mcan2.h</file>
-         <hash>acc127c77c0df6e6e3c0ea5241d9a5a2e2efd6d330d8a234b5923916c00581f2</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\sam_a7g5_ek\peripheral\clk\plib_clk.c</file>
-         <hash>3fbe2cd6567d7f791eda323498628be106c66fb1d0ea475b53776e48edc4fee7</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\SAMA7G54_DFP\instance\chipid.h</file>
-         <hash>ce9be9b105b2b7164fe09bafe6212f094db4991591d6ec2701c6c0c3767429c2</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\sam_a7g5_ek\driver\driver.h</file>
-         <hash>042fdd289460dbddb8e805850af7e3ac9aea95468e37414959781ebc5b2f454d</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\SAMA7G54_DFP\component\smc.h</file>
-         <hash>0cbf236595d1ec106dbdcdcbf7629038b63186071ad20d68f79b9423bf244d6b</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\SAMA7G54_DFP\instance\ssc1.h</file>
-         <hash>7e9b1d9bb132e77f131a7601279bb68209c4081b5e18e717ddac1b8dd25fc00b</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\sam_a7g5_ek\peripheral\clk\plib_clk.h</file>
-         <hash>06fbd033b79a7ff727b633eaab93fac303dfe769b7c63b8700ab424e2b313717</hash>
+         <file>..\src\config\sam_a7g5_ek\peripheral\tc\plib_tc_common.h</file>
+         <hash>aa07077b6355fa1dc9e938cb4def1c725bffddf452ffc55e4f982f83d3988a9e</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a7g5_ek\pin_configurations.csv</file>
          <hash>e51c716d35761a8a5251492465b4b9691fb0042e3c653df950f1546ce6e8ea68</hash>
       </entry>
       <entry>
-         <file>..\src\packs\SAMA7G54_DFP\component\sckc.h</file>
-         <hash>a4904cf98971d53938e27228200850bf8eed97b681925e3f7b4318d5534fc3fc</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\SAMA7G54_DFP\component\sfrbu.h</file>
-         <hash>479950b38e6f8ae8f17feb3a1c46b773a41a9bc2db2806c26f24d9b02d522e7d</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\sam_a7g5_ek\cstartup.S</file>
-         <hash>b7ac8fe140922db2917983068a65ba16df7cd36c5a6b1a6977bcb830e2ad89a9</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\SAMA7G54_DFP\instance\tzaesbasc.h</file>
-         <hash>3db31d864c4ac3eb9fe72fec97be80b66f58595ed00b9647055475caf3595f23</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\SAMA7G54_DFP\instance\bsc.h</file>
-         <hash>d67b1693c06c4539e9975a5a9fef07e5aed456cc435192ea6d7392e603ee8899</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\sam_a7g5_ek\tasks.c</file>
-         <hash>df087307dd34a1f156280940f151828d253e544f9f35987df23dc80dda2f2c65</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\SAMA7G54_DFP\instance\sfr.h</file>
-         <hash>0804d50637f47ac78fab386b6d2348e331ddcfb342add2ffe5a1fedb6e5d9263</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\SAMA7G54_DFP\instance\flexcom10.h</file>
-         <hash>8bf0cc41cb6ba65d06c6cb612bc1d8c176e6044959100c752cc14da952cc20fa</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\SAMA7G54_DFP\instance\flexcom2.h</file>
-         <hash>5426c389a7dba80618cc685e3ead0d89e3b1f28ea48c7ede65589cb3a86e8a7c</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\SAMA7G54_DFP\instance\sdmmc1.h</file>
-         <hash>c3943a5e77cf4d354a514c527a45b57d1bb547db08a71893bf89a5461564b347</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\sam_a7g5_ek\configuration.h</file>
-         <hash>2b6d63b471ff02bcb54cb19ab643b90d99c0aa90a977a131101d18ca47aabab9</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\sam_a7g5_ek\interrupts.c</file>
-         <hash>2e4fd2149b55e6a0c22ad46ada24e99c2557ba3c4b74707dfdc29eea5a043cb3</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\sam_a7g5_ek\definitions.h</file>
-         <hash>ff625e9809f0a9ec4282e880a4e3f2165053b9b9461711de23e610e05f5b2305</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\SAMA7G54_DFP\instance\pit64b2.h</file>
-         <hash>6b804e2a0fd6b75d1804bb005b7c2d424368a01a4a4ff46074cc9e93d3587909</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\SAMA7G54_DFP\component\cpkcc.h</file>
-         <hash>9dc17fbcf1f11cff3c0298478ea55be816f0a45a5b634d47814d81b278b435d5</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\sam_a7g5_ek\interrupts.h</file>
-         <hash>2789affa176dbd7b278121245ac2845c90081a37a0491895b7bdd1c2096ada23</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\SAMA7G54_DFP\component\ddr3phy.h</file>
-         <hash>47e0e045979c35888489fb7c88020e4ffab2f7098341f3d1e052a04847f41305</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\SAMA7G54_DFP\component\mcan.h</file>
-         <hash>abd07a02af27becc6dfbc9de6aa3bf2e97eb16951c0f906f32c1c52bc33375aa</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\sam_a7g5_ek\system\fs\fat_fs\file_system\ffunicode.c</file>
-         <hash>3f1632c1f1e64b0b683b0d7e51341b9870728f398604869dd8211f1819509a8e</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\sam_a7g5_ek\peripheral\flexcom\usart\plib_flexcom_usart_local.h</file>
-         <hash>d7d8e1bab1992fd5471cbee03dfbe206d761d9e622c721c08f3546ef7d335b64</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\sam_a7g5_ek\system\fs\src\sys_fs_fat_interface.c</file>
-         <hash>c7873a18d6d2ee9cb2eb1bf9c678dfc6c22837d4c22e5c3bcbf30507b3aa125f</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\SAMA7G54_DFP\component\tdes.h</file>
-         <hash>286fae535375632a03405f7457c4e3558a90f885f7434ddf2b6ad435454470df</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\SAMA7G54_DFP\instance\csi.h</file>
-         <hash>6816e4231437a71d2de1fbf6e5cb642cb495790e7f44beb3e52b8bead26c2f0d</hash>
-      </entry>
-      <entry>
-         <file>..\src\app.h</file>
-         <hash>8e35d8509552a4d1d6e6f123ad75694cf784a707f7dac592ed33b55121aa8e28</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\SAMA7G54_DFP\instance\dwdt.h</file>
-         <hash>8ac8c4e6dff311eeda4989e174f9b43776ce2eca9238c7231ba5dca80350b506</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\sam_a7g5_ek\system\time\sys_time_definitions.h</file>
-         <hash>46537746b1d12ece6b682c9be1c8f3f219663c638c21a51a973762b7b393afe6</hash>
-      </entry>
-      <entry>
-         <file>..\src\app.c</file>
-         <hash>632c78c323cb9f8c6359f20337440c08f8461eb4b0304552b6a3cfd5c4052620</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\SAMA7G54_DFP\instance\ddrumctl.h</file>
-         <hash>559390fc1254b60f798d89380e191f3d1f078b9ad80cbd9daa3bbf2ebd456df4</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\SAMA7G54_DFP\component\i2smcc.h</file>
-         <hash>7aa849cd89e391db64b831641de5161561f5bebce65590f75c1872ccffb52c8d</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\SAMA7G54_DFP\component\isc.h</file>
-         <hash>f429eb35a28d0ebeee910c05f7857dda8583e75ba15fc34b8a225c83b4e69d77</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\SAMA7G54_DFP\component\sfr.h</file>
-         <hash>e6659a06fd97ed15b73bfb1764761bf58ec1019edce0151dc2a3d86d0c4d2ea3</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\SAMA7G54_DFP\instance\mcan3.h</file>
-         <hash>ccd984a97744eb3790f29a6a5c1ff8475d1363c36e16b8185d5c9e41f61547ed</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\SAMA7G54_DFP\component\shdwc.h</file>
-         <hash>bb265ef0054f474a6c70fa4cde4558d4ca71d94de7d9136eed959c1cf4992f13</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\SAMA7G54_DFP\instance\pdmc0.h</file>
-         <hash>f6df479f955b2dc0eaf77cba9e89a64858adf84be5961b1bf8d2ae82067e64f4</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\SAMA7G54_DFP\component\tzaesb.h</file>
-         <hash>15e2b9489ef7cd745cb74f5dc117f1ac8947ecaff1190c2fd485957acd1fb6eb</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\CMSIS\CMSIS\Core_A\Include\cmsis_gcc.h</file>
-         <hash>a720d18d2dd2921d8fe308d21c1f2e9c8174549ec1a34447927db3dcc9505aa9</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\SAMA7G54_DFP\instance\flexcom9.h</file>
-         <hash>72ff9cf4006a48e0c4a07a0808140c66571bb77f660f28579f45126be9205b4c</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\SAMA7G54_DFP\instance\ddrpubl.h</file>
-         <hash>453bd18c3a57fcc341baf062d60f286433ea7cab626b72b43b7e8f7df2207e7b</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\SAMA7G54_DFP\instance\otpc.h</file>
-         <hash>93f4c8da20972c7e5a85f71608152c94f81a94f5f3af8a87e1bec0083236fb14</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\SAMA7G54_DFP\component\eic.h</file>
-         <hash>6af63d0bc56b1bca32e7caf2733dba4119bf520b7c34c283874e7b2979e8f69c</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\SAMA7G54_DFP\component\tzc.h</file>
-         <hash>1db71bad1e3f2713e8cbb981c6914d8c9d06d30de30878909dd183d17e9849f2</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\SAMA7G54_DFP\instance\shdwc.h</file>
-         <hash>2249bdc3ae3b39185dceb6a2005093f1be1711c465a4cf80936ff262a08bf5c6</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\SAMA7G54_DFP\instance\flexcom1.h</file>
-         <hash>67e110cece17d112d93de54dcea52a09336b511297a9d93aaa45d4f178294fcb</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\SAMA7G54_DFP\instance\sdmmc2.h</file>
-         <hash>75755aad4cf04aa2afc100eb1b0ffb96369eee231c328a54402a26f77499f2d5</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\SAMA7G54_DFP\instance\tcpcb.h</file>
-         <hash>f0a9bed670090bd0279971c3fa55524156010a1eacc7e121f23add1e077de69c</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\sam_a7g5_ek\peripheral\flexcom\usart\plib_flexcom3_usart.h</file>
-         <hash>fc5df6ad9d3b7964cea378dfb20fca1062e79fe3cda41f2254048ad99139651a</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\SAMA7G54_DFP\instance\pit64b3.h</file>
-         <hash>f48bf28fd5594deed4190264bd877eecacaead6d9545f9f75c10fb9464a4d9b7</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\SAMA7G54_DFP\instance\spdiftx.h</file>
-         <hash>22afa0e5c0e1808821e9bf35107b954df9b1a8babff61b755c055765acd66ccb</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\SAMA7G54_DFP\component\chipid.h</file>
-         <hash>9e7606598b6ece635495c56ad0e929875fc970ca520e2b03299d982da3d3e014</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\CMSIS\CMSIS\Core_A\Include\cmsis_compiler.h</file>
-         <hash>5f314774edbd044865df8c2c2c98242bfa8ee8e671559b110d1e139776f45b7f</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\SAMA7G54_DFP\instance\gpbr.h</file>
-         <hash>15ac766728d2c4ebd6fbd787e19a020526c6cfd833acee3b48533a848bf932e5</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\SAMA7G54_DFP\instance\qspi1.h</file>
-         <hash>a8df2c1af92f3e7423942a047d49317156986650f3b0f549914c3bdb93e02424</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\SAMA7G54_DFP\instance\isc.h</file>
-         <hash>2b46ee9e803be84c8f91f9926aa9dbe8f31559b26279564da0c225a9a9447e2c</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\sam_a7g5_ek\peripheral\flexcom\usart\plib_flexcom3_usart.c</file>
-         <hash>69f3c134a281a610a2a7a2c3ecd80591c51a068f570df0cb5f7ebf3878c0aa12</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\sam_a7g5_ek\bootloader\bootloader_common.h</file>
-         <hash>268d210b1500cd763830785b202583bfd532c0d8fb8f5c9ecdd20ec4c44f836c</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\sam_a7g5_ek\peripheral\pio\plib_pio.c</file>
-         <hash>da56381270a0c61ced0e9144bba7dcd07b6fea9a300f95f59f0fbe5551bc9be2</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\SAMA7G54_DFP\instance\pdmc1.h</file>
-         <hash>e863fb04bc11fd0ac7bd5cbe7117dffdad2e183f0b390b2e73298543fb335193</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\SAMA7G54_DFP\instance\udphsa.h</file>
-         <hash>f295e5a4e48982d2648a341d7ef52c22ecb46b03574a4d734045bb088ad5929c</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\sam_a7g5_ek\peripheral\pio\plib_pio.h</file>
-         <hash>070bc4afa20db0ae0581c11e4afc2975f83a51ee7e0b6f23cae84510d42a9bba</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\sam_a7g5_ek\bootloader\bootloader_common.c</file>
-         <hash>e555dbf572c3f9417efccf598427699f26cfe138711cdad9caba9cccc9cb6114</hash>
+         <file>..\src\config\sam_a7g5_ek\stdio\xc32_monitor.c</file>
+         <hash>858f8710d4287200a5ee7f3b3ad7c24f505aed9c05c16956ab0ff9f7bb162a6a</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a7g5_ek\sys_tasks.h</file>
          <hash>21f254f497a18a024cd00128d06c4776c2643f867a460c1ba9880a7dd41a8d56</hash>
       </entry>
       <entry>
-         <file>..\src\packs\SAMA7G54_DFP\instance\rtc.h</file>
-         <hash>b49ffc3da96365768cb34fafd7c3d38ee9d804dbd61ee6aba1be561f2cdf4064</hash>
+         <file>..\src\config\sam_a7g5_ek\system\debug\sys_debug.h</file>
+         <hash>bc6fa321b0be542d074e4564065b7fd69f52556486ac3d892d315b51c434f9ec</hash>
       </entry>
       <entry>
-         <file>..\src\packs\SAMA7G54_DFP\component\syscwp.h</file>
-         <hash>683a5602f288e23cc986f49bd6c7efdd18a266e18a6b6bf3dd6ce893c629b42c</hash>
+         <file>..\src\config\sam_a7g5_ek\system\fs\fat_fs\file_system\ff.c</file>
+         <hash>09f73618c1ac3bd9736650439be337fbfe49018a1db7205126fcbfde1e384a0f</hash>
       </entry>
       <entry>
-         <file>..\src\packs\SAMA7G54_DFP\instance\mcan4.h</file>
-         <hash>9d7855507dd08d938a309ef03d85a00646a0c15a078c6c2eeae96e6853131fce</hash>
+         <file>..\src\config\sam_a7g5_ek\system\fs\fat_fs\file_system\ff.h</file>
+         <hash>2906f8255a58097a83011b023f09dfa602c04c2d154c39a9e35fcb48823940ac</hash>
       </entry>
       <entry>
-         <file>..\src\packs\SAMA7G54_DFP\instance\sckc.h</file>
-         <hash>73ebc49138b685d03047413b3b305d7aac7dca7d0d9a74d9fa3c29e4cd7ddd39</hash>
+         <file>..\src\config\sam_a7g5_ek\system\fs\fat_fs\file_system\ffconf.h</file>
+         <hash>eb42d88a772858dbd895386063ff6fa76df37a06bf8ee6da1bf3a43a8d9584e4</hash>
       </entry>
       <entry>
-         <file>..\src\config\sam_a7g5_ek\driver\driver_common.h</file>
-         <hash>5217965f6720b4fdf717e99ce9df4f2c9fbd82bbbc9655847166d1eefa806fee</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\sam_a7g5_ek\system\time\src\sys_time.c</file>
-         <hash>fa2d85ab967b80157caf8483f6e28a23b12b548844a1d80f2fef760cd9b99271</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\sam_a7g5_ek\bootloader\bootloader_uart.c</file>
-         <hash>1f6d0b62d7eb3a0e0c37d2908b1bdcc929c244c884cd1f21c4a2e835297deaea</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\SAMA7G54_DFP\instance\flexcom8.h</file>
-         <hash>f69059e3069bbc59bcb4ba137fd9b60931c199dde881c052f9fabbd837636ded</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\SAMA7G54_DFP\component\pdmc.h</file>
-         <hash>ac3c030bc7896ef57bf29a9e20d5064c90f35a6ff2e093b89aef1a9ff46b5a7c</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\SAMA7G54_DFP\component\csi2dc.h</file>
-         <hash>937f453628836f7b91fa059a42324de67b682e3a6da0ab68730a820ea8f1e77f</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\SAMA7G54_DFP\instance\gmac0.h</file>
-         <hash>00b78d0816818247284e87ba5380d1fc0707f7594b573d4f674417242852778e</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\sam_a7g5_ek\device_cache.h</file>
-         <hash>554e5c179b8fb79fc3783af6b7e61d9c61cd2b75ad8b797c73190256951d32f6</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\SAMA7G54_DFP\component\uhpfs.h</file>
-         <hash>b332372b8c281f17547a11357e004b20a9540b78d27a96fa8b367dd1f1ff9689</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\SAMA7G54_DFP\instance\flexcom0.h</file>
-         <hash>0cc9814ab261e8e4f984258e3a80001cc7a31ec64334d6c4cc2bca47330e0a2a</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\SAMA7G54_DFP\instance\eic.h</file>
-         <hash>0f96f4223f863a05114c46e327ed2dcd76f91673c7ae5cf18f56479a6a3b58bb</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\sam_a7g5_ek\bootloader\bootloader_uart.h</file>
-         <hash>be04b89cce61ec9f05d343b6b6807fee2ed9576b2351f3da114194023903d606</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\SAMA7G54_DFP\instance\uhphs_ehci.h</file>
-         <hash>99a7514ce963cb7056bbdcd0042cbbb9d2b2b0a3baf23c2efcbd6f9ba9120028</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\SAMA7G54_DFP\instance\tcpca.h</file>
-         <hash>57fce9bddddae6bb06184879b9298ad7167fc67926c779bc85d426c688c9fca2</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\SAMA7G54_DFP\instance\pit64b4.h</file>
-         <hash>26f19d855010e3907344a945e54b0df5cad302e4313bec1b8f39637ecf33dab2</hash>
+         <file>..\src\config\sam_a7g5_ek\system\fs\fat_fs\file_system\ffunicode.c</file>
+         <hash>3f1632c1f1e64b0b683b0d7e51341b9870728f398604869dd8211f1819509a8e</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a7g5_ek\system\fs\fat_fs\hardware_access\diskio.c</file>
          <hash>6d15dd1dac3895d4d29d454ea90c45d4d8d9870de85d06c2795f4221a51d956d</hash>
       </entry>
       <entry>
-         <file>..\src\packs\SAMA7G54_DFP\instance\sfrbu.h</file>
-         <hash>113af8ed98b2f3b76f1d3a68954df4113bb3c932786f27e8e6d29cb7284f9971</hash>
+         <file>..\src\config\sam_a7g5_ek\system\fs\fat_fs\hardware_access\diskio.h</file>
+         <hash>eabe00adfe80de32df0b75244c230f3a04dbc27cb29b1d418cef549e3e7a9ec2</hash>
       </entry>
       <entry>
-         <file>..\src\packs\SAMA7G54_DFP\component\pmc.h</file>
-         <hash>80b0fc00ff3a3db65d4772d6228a5fc226b1eda56a0f841fd1dc805bb9025c59</hash>
+         <file>..\src\config\sam_a7g5_ek\system\fs\src\sys_fs.c</file>
+         <hash>9fddd0e0f98f78690226049c454d1f1f05f1b24f89b37da043f7fd2522a49502</hash>
       </entry>
       <entry>
-         <file>..\src\packs\SAMA7G54_DFP\instance\pio.h</file>
-         <hash>b8b4f0e377beab7be98b4d7f6cfc8c4513e70863ec26c9ed9ec38fd0c2871d93</hash>
+         <file>..\src\config\sam_a7g5_ek\system\fs\src\sys_fs_fat_interface.c</file>
+         <hash>c7873a18d6d2ee9cb2eb1bf9c678dfc6c22837d4c22e5c3bcbf30507b3aa125f</hash>
       </entry>
       <entry>
-         <file>..\src\config\sam_a7g5_ek\peripheral\gic\plib_gic.h</file>
-         <hash>92e447d1cb7ee981d456921c05de673482ee64824249201bb7543836b59386bb</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\SAMA7G54_DFP\instance\rtt.h</file>
-         <hash>dc7489a4b38bc175e96cbe30299d5888f2a4c27f11ab2f62f5db7ef832cf7473</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\SAMA7G54_DFP\component\pit64b.h</file>
-         <hash>ed5b0a66e60a2b897151400aef80232ce8a25ab22f8f2ba4eff72352c4696226</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\SAMA7G54_DFP\instance\udphsb.h</file>
-         <hash>03de50f768d2d9896810650ab962fec1df84a4635e0ea466c9dd9397bdc9411d</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\sam_a7g5_ek\osal\osal_impl_basic.h</file>
-         <hash>67ce72d34fd1e4dee0b6937fa026ab2c7bd285f82a24da09742c68333adaf0fc</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\sam_a7g5_ek\peripheral\gic\plib_gic.c</file>
-         <hash>190affae772e4af31d5f6e946fe5c79d638036b3710d879b2bd6dc429827bf71</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\SAMA7G54_DFP\component\qspi.h</file>
-         <hash>41e2f8d3bf78f57d30b3bd3bf7dbf3ad631fc142ed42900537b16bce373f1547</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\sam_a7g5_ek\system\fs\sys_fs.h</file>
-         <hash>4ca0bf61b93d1b4335bad8755bfeeed6dfda8a7eb3f2eabfcd9239a0b78e01af</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\SAMA7G54_DFP\component\pio.h</file>
-         <hash>68482694713b896d4b8d33262a9d609721a6a50179e69cba3aa4d2e2251997b6</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\SAMA7G54_DFP\instance\mcan5.h</file>
-         <hash>68eec39df6e4fe6662d6b255bff2150da4d201d8a0abff0847ff06e6e24e452e</hash>
+         <file>..\src\config\sam_a7g5_ek\system\fs\src\sys_fs_local.h</file>
+         <hash>7e7721693694ecc133d6772321cad1337c0a2209b7457b9351dda3a01cb129b1</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a7g5_ek\system\fs\src\sys_fs_media_manager.c</file>
          <hash>cde01f958746b2590eb6a3bed91714b3857d939e87a0885f972e6de4c118fea4</hash>
       </entry>
       <entry>
-         <file>..\src\packs\SAMA7G54_DFP\instance\asrc.h</file>
-         <hash>d4f1270b263623cc7e1b2ef50940c5c9d279e4b5bf6e5391a14241687f46eda3</hash>
+         <file>..\src\config\sam_a7g5_ek\system\fs\src\sys_fs_media_manager_local.h</file>
+         <hash>5d471f0372ec41b3ef362ad533beede076e4e959274e57221ed229b996d7231e</hash>
       </entry>
       <entry>
-         <file>..\src\packs\SAMA7G54_DFP\instance\flexcom7.h</file>
-         <hash>65b6a3f3ea28d0755fe8ac85e6dbcc32c534dc1ae3d8961129ceed70088ad6de</hash>
+         <file>..\src\config\sam_a7g5_ek\system\fs\sys_fs.h</file>
+         <hash>4ca0bf61b93d1b4335bad8755bfeeed6dfda8a7eb3f2eabfcd9239a0b78e01af</hash>
       </entry>
       <entry>
-         <file>..\src\packs\SAMA7G54_DFP\component\udphs.h</file>
-         <hash>4fcd7ecbfcededf49dfe854ed8b223797c257bf4f67e450e94e019a4d1f6ad9b</hash>
+         <file>..\src\config\sam_a7g5_ek\system\fs\sys_fs_fat_interface.h</file>
+         <hash>8abf10cb082958d08f5cf3210694cef73fdb6fa9b6a641e00da547cbcec0719b</hash>
       </entry>
       <entry>
-         <file>..\src\config\sam_a7g5_ek\system\fs\fat_fs\hardware_access\diskio.h</file>
-         <hash>eabe00adfe80de32df0b75244c230f3a04dbc27cb29b1d418cef549e3e7a9ec2</hash>
+         <file>..\src\config\sam_a7g5_ek\system\fs\sys_fs_media_manager.h</file>
+         <hash>2f7c76d5a40a41594e86a831470c67d7aeec5b6e540fb967518ce095fe6da271</hash>
       </entry>
       <entry>
-         <file>..\src\packs\SAMA7G54_DFP\instance\sdmmc0.h</file>
-         <hash>3c1035b03887b1099e9fd3e2eb59b925e142506cd338b6f1344b5f000f799bfb</hash>
+         <file>..\src\config\sam_a7g5_ek\system\int\src\sys_int.c</file>
+         <hash>e629992f48374b748126f9969ea5f9a31748b76935ce6a3a487ef7ddb82eb1a4</hash>
       </entry>
       <entry>
-         <file>..\src\packs\SAMA7G54_DFP\instance\trng.h</file>
-         <hash>1c1b8441e2307db8f645866817ee77dde82cdfd044cedd8117d9439a28940801</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\SAMA7G54_DFP\component\otpc.h</file>
-         <hash>3815d0e5386d9c6cee5a0e4227748257ef86ee938bdbab3dd10c3972392578f2</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\SAMA7G54_DFP\instance\aes.h</file>
-         <hash>6044182bb1a9006f23e68c83223d0ce66089e0dd5b3f75c8c88452e0313be5f6</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\SAMA7G54_DFP\instance\nicgpv.h</file>
-         <hash>5a22d6fa361a2822075fea3d2ff19653fdb0d5dab9eb78cbe8d57e927a48648a</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\SAMA7G54_DFP\instance\tzaesbns.h</file>
-         <hash>13ff8babc9b73df21a19ee0cf0396017c14917fb14281ccd487211026e9d8559</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\SAMA7G54_DFP\instance\pit64b5.h</file>
-         <hash>d4b6701d09fc1738ec536097652f4547c2bec4b29e8313b539c1cbb4c47de526</hash>
-      </entry>
-      <entry>
-         <file>..\src\packs\SAMA7G54_DFP\pio\sama7g54.h</file>
-         <hash>e3539cbfc4a5af98b4ad0b9a431fc0ccd3098f9d34c989295bee390a4ecaffe5</hash>
+         <file>..\src\config\sam_a7g5_ek\system\int\sys_int.h</file>
+         <hash>dc104ae181fd5309e1bb42896246644fae95915a8e639b23ecfccc8840850274</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a7g5_ek\system\int\sys_int_mapping.h</file>
          <hash>18bbdbca4fbaf47ea61802504ec5b460cd9e082bd758aa6ec306ab3beca743fd</hash>
       </entry>
       <entry>
+         <file>..\src\config\sam_a7g5_ek\system\system.h</file>
+         <hash>2b75f8e370e5cb2c54f70da7351ee149f0d5a7673e700f39b373099716b31b55</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\sam_a7g5_ek\system\system_common.h</file>
+         <hash>c9f34bd226f8efab12f5766e77f8355996cd0430b50e0f6ee30258664c494984</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\sam_a7g5_ek\system\system_media.h</file>
+         <hash>e61ba67015cfba6a7425d077cd2c633ba9989218bbe585078efe2face729401f</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\sam_a7g5_ek\system\system_module.h</file>
+         <hash>96c74368801b0a7aaa25aec3ec2cb0d483250385f103ffc1ff64089b4ca2c6d9</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\sam_a7g5_ek\system\time\src\sys_time.c</file>
+         <hash>fa2d85ab967b80157caf8483f6e28a23b12b548844a1d80f2fef760cd9b99271</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\sam_a7g5_ek\system\time\src\sys_time_local.h</file>
+         <hash>df56f970664902417d798760e44978cf4b84c108cf0761647a383e91db76980c</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\sam_a7g5_ek\system\time\sys_time.h</file>
+         <hash>6357468f7670698b16bfb6439d9919ed38eba99d4f03277a8b43ac34586fa1b3</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\sam_a7g5_ek\system\time\sys_time_definitions.h</file>
+         <hash>46537746b1d12ece6b682c9be1c8f3f219663c638c21a51a973762b7b393afe6</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\sam_a7g5_ek\tasks.c</file>
+         <hash>df087307dd34a1f156280940f151828d253e544f9f35987df23dc80dda2f2c65</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\sam_a7g5_ek\toolchain_specifics.h</file>
+         <hash>6a9af1e683d2794186c9c57169950fb13e7ebff09b63ce75cd3702405da4b88b</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\sam_a7g5_ek\user.h</file>
+         <hash>451e0878e9fcf6cf9fab046c1452ea662757988346c7f39e6bc98478ca25f995</hash>
+      </entry>
+      <entry>
+         <file>..\src\main_sama_arm9.c</file>
+         <hash>d3c233d419e6304bfacbafc18cc68c0f5c26e365f23b20ea40ccfac458f664c5</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\CMSIS\CMSIS\Core_A\Include\cmsis_compiler.h</file>
+         <hash>5f314774edbd044865df8c2c2c98242bfa8ee8e671559b110d1e139776f45b7f</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\CMSIS\CMSIS\Core_A\Include\cmsis_cp15.h</file>
+         <hash>5d0183058de6b2245dc949f13bb736cd1e8fe154fa76b643f9fb8947c1b3ee04</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\CMSIS\CMSIS\Core_A\Include\cmsis_gcc.h</file>
+         <hash>a720d18d2dd2921d8fe308d21c1f2e9c8174549ec1a34447927db3dcc9505aa9</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\CMSIS\CMSIS\Core_A\Include\cmsis_iccarm.h</file>
+         <hash>aede1a5428f7b7f4de414f596a2b2b8b1e38a94b7f9762a094ea6d88a7ea5729</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\CMSIS\CMSIS\Core_A\Include\core_ca.h</file>
+         <hash>ba65df987ecd6e3692f49eda2a6be74d4e1f0a9a3595e7c15c9812c360591f85</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAMA7G54_DFP\component\acc.h</file>
+         <hash>ddb14eb8fc88f70ad17ca9acddc390a7cb5fd570fcb315f2c5623207bcc74839</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAMA7G54_DFP\component\adc.h</file>
+         <hash>b04de75532dbcb2ac5c2588907226c660bf63264be3172641f409c7784a046ee</hash>
+      </entry>
+      <entry>
          <file>..\src\packs\SAMA7G54_DFP\component\aes.h</file>
          <hash>745ecd579adca68b386442fdb607518ccd354a0b13df34031a84bca6bd5e85ca</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAMA7G54_DFP\component\asrc.h</file>
+         <hash>040903d6223f9492ee9241c3cd36e238d4c37bcc9a4a319e48d3ffa6f49fae03</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAMA7G54_DFP\component\bsc.h</file>
+         <hash>19eac4d8d0386036811e0354cee70483411efd91b44b4fc41e06d6127409077f</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAMA7G54_DFP\component\chipid.h</file>
+         <hash>9e7606598b6ece635495c56ad0e929875fc970ca520e2b03299d982da3d3e014</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAMA7G54_DFP\component\cpkcc.h</file>
+         <hash>9dc17fbcf1f11cff3c0298478ea55be816f0a45a5b634d47814d81b278b435d5</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAMA7G54_DFP\component\csi.h</file>
+         <hash>3d2d52be7212301f82b231516a7b5300bd2d6dad8faec5f0c81812503273972a</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAMA7G54_DFP\component\csi2dc.h</file>
+         <hash>937f453628836f7b91fa059a42324de67b682e3a6da0ab68730a820ea8f1e77f</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAMA7G54_DFP\component\ddr3phy.h</file>
+         <hash>47e0e045979c35888489fb7c88020e4ffab2f7098341f3d1e052a04847f41305</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAMA7G54_DFP\component\dwdt.h</file>
+         <hash>63159712039786b9f1cc105a4e82665b8fe2fe1c02edd6fbd9f5d4d363d388b2</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAMA7G54_DFP\component\eic.h</file>
+         <hash>6af63d0bc56b1bca32e7caf2733dba4119bf520b7c34c283874e7b2979e8f69c</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAMA7G54_DFP\component\flexcom.h</file>
+         <hash>a91a5464284c7cd86c1b1bc69ebf37be4a9b4b748b42b8f8ea85538bef1f9166</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAMA7G54_DFP\component\gmac.h</file>
+         <hash>86bd582acce7759b3f337e8b7a8a43de22740d36f9bf60a891eb7a1696b02359</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAMA7G54_DFP\component\gpbr.h</file>
+         <hash>549ad5a4161e6c62a4a3c6c420915111d5a2e92c6bd78f0538bdf313cea7eccc</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAMA7G54_DFP\component\i2smcc.h</file>
+         <hash>7aa849cd89e391db64b831641de5161561f5bebce65590f75c1872ccffb52c8d</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAMA7G54_DFP\component\icm.h</file>
+         <hash>1cdc78a7f1120373aef00a83b8d5219b5a8a610e88fe680bc116a5f0d8818a4d</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAMA7G54_DFP\component\isc.h</file>
+         <hash>f429eb35a28d0ebeee910c05f7857dda8583e75ba15fc34b8a225c83b4e69d77</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAMA7G54_DFP\component\matrix.h</file>
+         <hash>7ef6f4c84685d968531cbf6445479bcff16b3516979be48b3979dc27b322ebeb</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAMA7G54_DFP\component\mcan.h</file>
+         <hash>abd07a02af27becc6dfbc9de6aa3bf2e97eb16951c0f906f32c1c52bc33375aa</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAMA7G54_DFP\component\nicgpv.h</file>
+         <hash>b4c58caa4680c25c91b2ba14122463b401f5fbe2b3362c1f95b93c6d52ac26a3</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAMA7G54_DFP\component\otpc.h</file>
+         <hash>3815d0e5386d9c6cee5a0e4227748257ef86ee938bdbab3dd10c3972392578f2</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAMA7G54_DFP\component\pdmc.h</file>
+         <hash>ac3c030bc7896ef57bf29a9e20d5064c90f35a6ff2e093b89aef1a9ff46b5a7c</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAMA7G54_DFP\component\pio.h</file>
+         <hash>68482694713b896d4b8d33262a9d609721a6a50179e69cba3aa4d2e2251997b6</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAMA7G54_DFP\component\pit64b.h</file>
+         <hash>ed5b0a66e60a2b897151400aef80232ce8a25ab22f8f2ba4eff72352c4696226</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAMA7G54_DFP\component\pmc.h</file>
+         <hash>80b0fc00ff3a3db65d4772d6228a5fc226b1eda56a0f841fd1dc805bb9025c59</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAMA7G54_DFP\component\pwm.h</file>
+         <hash>24a63bf3a42689516ccd09ae390046380687149a000b7315018fa1e9db2bdbc6</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAMA7G54_DFP\component\qspi.h</file>
+         <hash>41e2f8d3bf78f57d30b3bd3bf7dbf3ad631fc142ed42900537b16bce373f1547</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAMA7G54_DFP\component\rstc.h</file>
+         <hash>0eae2e4edc9804754a69d315257080a58ea305cbbf3d09517e436be5c54c752f</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAMA7G54_DFP\component\rtc.h</file>
          <hash>8fda94e3867992b8997a93aabf4c9529811ec2f46acb408d1367015c62212736</hash>
       </entry>
       <entry>
+         <file>..\src\packs\SAMA7G54_DFP\component\rtt.h</file>
+         <hash>faad1c84a59becb0e0914b0157334f0c9114f4f70c5a69741177099f1221a197</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAMA7G54_DFP\component\sckc.h</file>
+         <hash>a4904cf98971d53938e27228200850bf8eed97b681925e3f7b4318d5534fc3fc</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAMA7G54_DFP\component\sdmmc.h</file>
+         <hash>d1b92cd4d60446374165ac98acbb8442e63667747ad09460857ab40ecf6ab294</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAMA7G54_DFP\component\secumod.h</file>
+         <hash>b0d8bf6d3eec1d130944f1583e2801f48b47517cabdd5015df731cde0e4a4bdf</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAMA7G54_DFP\component\sfr.h</file>
+         <hash>e6659a06fd97ed15b73bfb1764761bf58ec1019edce0151dc2a3d86d0c4d2ea3</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAMA7G54_DFP\component\sfrbu.h</file>
+         <hash>479950b38e6f8ae8f17feb3a1c46b773a41a9bc2db2806c26f24d9b02d522e7d</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAMA7G54_DFP\component\sha.h</file>
+         <hash>ca73a8fb35bf9e90af22b77e5ef44dd8ec96df4da4e566d8f941f1d7009d8ecc</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAMA7G54_DFP\component\shdwc.h</file>
+         <hash>bb265ef0054f474a6c70fa4cde4558d4ca71d94de7d9136eed959c1cf4992f13</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAMA7G54_DFP\component\smc.h</file>
+         <hash>0cbf236595d1ec106dbdcdcbf7629038b63186071ad20d68f79b9423bf244d6b</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAMA7G54_DFP\component\spdifrx.h</file>
+         <hash>08184cbaa4ed8d05e8eb3a8b3a8e3103e6fb50d34b81d7cbd90876eb5b10799e</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAMA7G54_DFP\component\spdiftx.h</file>
+         <hash>fa73063030f143572e89b011d49ee20d7402e82594d901127cb5d9a050de933e</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAMA7G54_DFP\component\ssc.h</file>
+         <hash>0bbf7b4aae2b65520c099cb8595314a58310b3b8ba05d3b370314734add585dc</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAMA7G54_DFP\component\syscwp.h</file>
+         <hash>683a5602f288e23cc986f49bd6c7efdd18a266e18a6b6bf3dd6ce893c629b42c</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAMA7G54_DFP\component\tc.h</file>
+         <hash>b388749c8ef97d2c2c23b2040f5feef2e1256f707148a329e8bdcf4c4b6d5a10</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAMA7G54_DFP\component\tcpc.h</file>
+         <hash>649ceddc55169817efc52529eff3df3bf8f27a2c7fe3e6113c36b2d109ca8887</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAMA7G54_DFP\component\tdes.h</file>
+         <hash>286fae535375632a03405f7457c4e3558a90f885f7434ddf2b6ad435454470df</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAMA7G54_DFP\component\trng.h</file>
+         <hash>d41aebeac25919132b76f74cabdba90b76e5c75e9b222e279b473538ae42edda</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAMA7G54_DFP\component\tzaesb.h</file>
+         <hash>15e2b9489ef7cd745cb74f5dc117f1ac8947ecaff1190c2fd485957acd1fb6eb</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAMA7G54_DFP\component\tzaesbasc.h</file>
+         <hash>37b92f7d7efee658ffddd31624ff09cfc070e66acf3cb6268b2bbfaeee6a5ee3</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAMA7G54_DFP\component\tzc.h</file>
+         <hash>1db71bad1e3f2713e8cbb981c6914d8c9d06d30de30878909dd183d17e9849f2</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAMA7G54_DFP\component\tzpm.h</file>
+         <hash>0a7531ad8434d807dcb467aa4759fba8d562f67caf7f1e12ed01c0ef2131790d</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAMA7G54_DFP\component\uddrc.h</file>
+         <hash>6f86dbcee471c741677cb35bae1b479285aa3f750eb08b48fb61a91b4904c16e</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAMA7G54_DFP\component\udphs.h</file>
+         <hash>4fcd7ecbfcededf49dfe854ed8b223797c257bf4f67e450e94e019a4d1f6ad9b</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAMA7G54_DFP\component\uhpfs.h</file>
+         <hash>b332372b8c281f17547a11357e004b20a9540b78d27a96fa8b367dd1f1ff9689</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAMA7G54_DFP\component\uhphs.h</file>
+         <hash>8a9da768b1b9952080a98e98157cbd8289ed99a5bdfc7171c3c3a91115eedb5e</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAMA7G54_DFP\component\xdmac.h</file>
+         <hash>70804f2986d63ca7881b901fbda95d5aa6af23d8421f990340287b6c896c5a1a</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAMA7G54_DFP\instance\acc.h</file>
+         <hash>c3f39c964c55ebd909d8008e0c5a72fd098bbb15b67f2a2a766b9f872e42693c</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAMA7G54_DFP\instance\adc.h</file>
+         <hash>1b7985efbc57d77a5e52590e8afbe406c7db75e0c71feb4a4f733775292705c8</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAMA7G54_DFP\instance\aes.h</file>
+         <hash>6044182bb1a9006f23e68c83223d0ce66089e0dd5b3f75c8c88452e0313be5f6</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAMA7G54_DFP\instance\asrc.h</file>
+         <hash>d4f1270b263623cc7e1b2ef50940c5c9d279e4b5bf6e5391a14241687f46eda3</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAMA7G54_DFP\instance\bsc.h</file>
+         <hash>d67b1693c06c4539e9975a5a9fef07e5aed456cc435192ea6d7392e603ee8899</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAMA7G54_DFP\instance\chipid.h</file>
+         <hash>ce9be9b105b2b7164fe09bafe6212f094db4991591d6ec2701c6c0c3767429c2</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAMA7G54_DFP\instance\cpkcc.h</file>
+         <hash>ec00dafed23ed77bd8d22c3ce4fb5a4205807060c72e6a3bf308a6dad2c9ce82</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAMA7G54_DFP\instance\csi.h</file>
+         <hash>6816e4231437a71d2de1fbf6e5cb642cb495790e7f44beb3e52b8bead26c2f0d</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAMA7G54_DFP\instance\csi2dc.h</file>
+         <hash>11985c5a060b48834c84b6651930e8f31fdc384cf7494a99cbfbde6ee136521b</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAMA7G54_DFP\instance\ddrpubl.h</file>
+         <hash>453bd18c3a57fcc341baf062d60f286433ea7cab626b72b43b7e8f7df2207e7b</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAMA7G54_DFP\instance\ddrumctl.h</file>
+         <hash>559390fc1254b60f798d89380e191f3d1f078b9ad80cbd9daa3bbf2ebd456df4</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAMA7G54_DFP\instance\dwdt.h</file>
+         <hash>8ac8c4e6dff311eeda4989e174f9b43776ce2eca9238c7231ba5dca80350b506</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAMA7G54_DFP\instance\eic.h</file>
+         <hash>0f96f4223f863a05114c46e327ed2dcd76f91673c7ae5cf18f56479a6a3b58bb</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAMA7G54_DFP\instance\flexcom0.h</file>
+         <hash>0cc9814ab261e8e4f984258e3a80001cc7a31ec64334d6c4cc2bca47330e0a2a</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAMA7G54_DFP\instance\flexcom1.h</file>
+         <hash>67e110cece17d112d93de54dcea52a09336b511297a9d93aaa45d4f178294fcb</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAMA7G54_DFP\instance\flexcom10.h</file>
+         <hash>8bf0cc41cb6ba65d06c6cb612bc1d8c176e6044959100c752cc14da952cc20fa</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAMA7G54_DFP\instance\flexcom11.h</file>
+         <hash>736bf158f713fea69226edcfea373a22f0e0d89a3be7116e193bd6844694f90a</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAMA7G54_DFP\instance\flexcom2.h</file>
+         <hash>5426c389a7dba80618cc685e3ead0d89e3b1f28ea48c7ede65589cb3a86e8a7c</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAMA7G54_DFP\instance\flexcom3.h</file>
+         <hash>931f90c1cc5c3bc5fe905eb22b0a7cd8e368a4f257798d79f873a29ee38e2ab5</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAMA7G54_DFP\instance\flexcom4.h</file>
+         <hash>faad6478999fcb8cc087719f06692f60fb63fb4f3682121415d27e3ea5db71e7</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAMA7G54_DFP\instance\flexcom5.h</file>
+         <hash>8a990c56a288878cd48bdb01555a9f58dce61e6c2304bf182e2927c47ffef10f</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAMA7G54_DFP\instance\flexcom6.h</file>
+         <hash>d89567b8930eb002d8cc1d7f47394113675d44f7d24e041b1d0244541722a8cf</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAMA7G54_DFP\instance\flexcom7.h</file>
+         <hash>65b6a3f3ea28d0755fe8ac85e6dbcc32c534dc1ae3d8961129ceed70088ad6de</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAMA7G54_DFP\instance\flexcom8.h</file>
+         <hash>f69059e3069bbc59bcb4ba137fd9b60931c199dde881c052f9fabbd837636ded</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAMA7G54_DFP\instance\flexcom9.h</file>
+         <hash>72ff9cf4006a48e0c4a07a0808140c66571bb77f660f28579f45126be9205b4c</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAMA7G54_DFP\instance\gmac0.h</file>
+         <hash>00b78d0816818247284e87ba5380d1fc0707f7594b573d4f674417242852778e</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAMA7G54_DFP\instance\gmac1.h</file>
+         <hash>ca4a31acfcee582108b5233c2447e4379f422861ab015e0d77c6ecb8ac884842</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAMA7G54_DFP\instance\gpbr.h</file>
+         <hash>15ac766728d2c4ebd6fbd787e19a020526c6cfd833acee3b48533a848bf932e5</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAMA7G54_DFP\instance\hsmc.h</file>
+         <hash>000c6d8a3ec2e711e651ca7cc72730b8f8bd430f8d2a243593d83c1b7bd6f0fc</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAMA7G54_DFP\instance\i2smcc0.h</file>
+         <hash>14a317f6a81b31801d21d2bb4c120c2649bbaed4dbfed3e66243783d7373645a</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAMA7G54_DFP\instance\i2smcc1.h</file>
+         <hash>85278f344e0efb5a720980cb26f0dc4c9aeb1d0769489dcbfae744bdeeeb5fb1</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAMA7G54_DFP\instance\icm.h</file>
+         <hash>ef4a6e8dd5fdc2ac2f1acd63d014553172850310c1a3bb4e0fe05f5bb0a1ee95</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAMA7G54_DFP\instance\isc.h</file>
+         <hash>2b46ee9e803be84c8f91f9926aa9dbe8f31559b26279564da0c225a9a9447e2c</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAMA7G54_DFP\instance\matrix.h</file>
+         <hash>9afba2adf1c0ec14bb1536b0c4a72e6d41e031c5a57ad8f7ab95115ce89569f9</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAMA7G54_DFP\instance\mcan0.h</file>
+         <hash>39dd339ef300c91a306af71bd640b3a3f850bd812eee8748098dab7c1e28e83c</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAMA7G54_DFP\instance\mcan1.h</file>
+         <hash>fb93f576b17cfab3c2264d68dc3765b7cecb9c1567c81f19caa18765b9fce8b7</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAMA7G54_DFP\instance\mcan2.h</file>
+         <hash>acc127c77c0df6e6e3c0ea5241d9a5a2e2efd6d330d8a234b5923916c00581f2</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAMA7G54_DFP\instance\mcan3.h</file>
+         <hash>ccd984a97744eb3790f29a6a5c1ff8475d1363c36e16b8185d5c9e41f61547ed</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAMA7G54_DFP\instance\mcan4.h</file>
+         <hash>9d7855507dd08d938a309ef03d85a00646a0c15a078c6c2eeae96e6853131fce</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAMA7G54_DFP\instance\mcan5.h</file>
+         <hash>68eec39df6e4fe6662d6b255bff2150da4d201d8a0abff0847ff06e6e24e452e</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAMA7G54_DFP\instance\nicgpv.h</file>
+         <hash>5a22d6fa361a2822075fea3d2ff19653fdb0d5dab9eb78cbe8d57e927a48648a</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAMA7G54_DFP\instance\otpc.h</file>
+         <hash>93f4c8da20972c7e5a85f71608152c94f81a94f5f3af8a87e1bec0083236fb14</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAMA7G54_DFP\instance\pdmc0.h</file>
+         <hash>f6df479f955b2dc0eaf77cba9e89a64858adf84be5961b1bf8d2ae82067e64f4</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAMA7G54_DFP\instance\pdmc1.h</file>
+         <hash>e863fb04bc11fd0ac7bd5cbe7117dffdad2e183f0b390b2e73298543fb335193</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAMA7G54_DFP\instance\pio.h</file>
+         <hash>b8b4f0e377beab7be98b4d7f6cfc8c4513e70863ec26c9ed9ec38fd0c2871d93</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAMA7G54_DFP\instance\pit64b0.h</file>
+         <hash>56ef5d7f7c68ef13749763eb004475bdd697b635aa46c0a4e0ff145ca5a67abe</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAMA7G54_DFP\instance\pit64b1.h</file>
+         <hash>59fd1e3281df790730811e270c31ec3af3baee91dde5e5336c97e0a99a761835</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAMA7G54_DFP\instance\pit64b2.h</file>
+         <hash>6b804e2a0fd6b75d1804bb005b7c2d424368a01a4a4ff46074cc9e93d3587909</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAMA7G54_DFP\instance\pit64b3.h</file>
+         <hash>f48bf28fd5594deed4190264bd877eecacaead6d9545f9f75c10fb9464a4d9b7</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAMA7G54_DFP\instance\pit64b4.h</file>
+         <hash>26f19d855010e3907344a945e54b0df5cad302e4313bec1b8f39637ecf33dab2</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAMA7G54_DFP\instance\pit64b5.h</file>
+         <hash>d4b6701d09fc1738ec536097652f4547c2bec4b29e8313b539c1cbb4c47de526</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAMA7G54_DFP\instance\pmc.h</file>
+         <hash>a57df91f2f1692b285755f22c5b3f66e98956aeed003e921fbd7a617424b578b</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAMA7G54_DFP\instance\pwm.h</file>
+         <hash>8c78e0aed14f5ca05367a082ee46e561db8033d6ba63e6af72dec9943bcfd098</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAMA7G54_DFP\instance\qspi0.h</file>
+         <hash>b783a2b24631b1a2e5922dcbe6098c88d9cbf30e00822bb053a121426b8069dd</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAMA7G54_DFP\instance\qspi1.h</file>
+         <hash>a8df2c1af92f3e7423942a047d49317156986650f3b0f549914c3bdb93e02424</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAMA7G54_DFP\instance\rstc.h</file>
+         <hash>c4bb9873d3a6d17944d5b1fd57b62ef5cf4d600ab8977ac547ea244106195a21</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAMA7G54_DFP\instance\rtc.h</file>
+         <hash>b49ffc3da96365768cb34fafd7c3d38ee9d804dbd61ee6aba1be561f2cdf4064</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAMA7G54_DFP\instance\rtt.h</file>
+         <hash>dc7489a4b38bc175e96cbe30299d5888f2a4c27f11ab2f62f5db7ef832cf7473</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAMA7G54_DFP\instance\sckc.h</file>
+         <hash>73ebc49138b685d03047413b3b305d7aac7dca7d0d9a74d9fa3c29e4cd7ddd39</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAMA7G54_DFP\instance\sdmmc0.h</file>
+         <hash>3c1035b03887b1099e9fd3e2eb59b925e142506cd338b6f1344b5f000f799bfb</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAMA7G54_DFP\instance\sdmmc1.h</file>
+         <hash>c3943a5e77cf4d354a514c527a45b57d1bb547db08a71893bf89a5461564b347</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAMA7G54_DFP\instance\sdmmc2.h</file>
+         <hash>75755aad4cf04aa2afc100eb1b0ffb96369eee231c328a54402a26f77499f2d5</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAMA7G54_DFP\instance\secumod.h</file>
+         <hash>26eab4306f302fce117f672e4ddaec752c3322884d3f0faec39541723b7ed466</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAMA7G54_DFP\instance\sfr.h</file>
+         <hash>0804d50637f47ac78fab386b6d2348e331ddcfb342add2ffe5a1fedb6e5d9263</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAMA7G54_DFP\instance\sfrbu.h</file>
+         <hash>113af8ed98b2f3b76f1d3a68954df4113bb3c932786f27e8e6d29cb7284f9971</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAMA7G54_DFP\instance\sha.h</file>
+         <hash>900e99e4971e928121146a40b432007bf04d78526492f0ccf1d24068261c6a72</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAMA7G54_DFP\instance\shdwc.h</file>
+         <hash>2249bdc3ae3b39185dceb6a2005093f1be1711c465a4cf80936ff262a08bf5c6</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAMA7G54_DFP\instance\spdifrx.h</file>
+         <hash>29d38a63547063e6820a4763d2d0c24c9189f2aa12e41aa68f99a046a4c31f6f</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAMA7G54_DFP\instance\spdiftx.h</file>
+         <hash>22afa0e5c0e1808821e9bf35107b954df9b1a8babff61b755c055765acd66ccb</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAMA7G54_DFP\instance\ssc0.h</file>
+         <hash>6a931ca6932b8cd382ed2287f4f64b62d024f9c3765a79428108f88aa4afc7cd</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAMA7G54_DFP\instance\ssc1.h</file>
+         <hash>7e9b1d9bb132e77f131a7601279bb68209c4081b5e18e717ddac1b8dd25fc00b</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAMA7G54_DFP\instance\syscwp.h</file>
+         <hash>63bb0c0e4c0c90c71266590ddd5e52f41330c479c837b9f0ea2897f09f0bc3ac</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAMA7G54_DFP\instance\tc0.h</file>
+         <hash>eb1990b69a946f512cb85e62d2768f7fe609fa56fae8da5a84619d9513194cd0</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAMA7G54_DFP\instance\tc1.h</file>
+         <hash>29abb2a83689a637dffe5f2d5bdf3a3313cabe41ebb052cf800bf7b18702ea22</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAMA7G54_DFP\instance\tcpca.h</file>
+         <hash>57fce9bddddae6bb06184879b9298ad7167fc67926c779bc85d426c688c9fca2</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAMA7G54_DFP\instance\tcpcb.h</file>
+         <hash>f0a9bed670090bd0279971c3fa55524156010a1eacc7e121f23add1e077de69c</hash>
+      </entry>
+      <entry>
          <file>..\src\packs\SAMA7G54_DFP\instance\tdes.h</file>
          <hash>1a09b69faa2ded679cd80703175695bb1cbc2feb3b01eeec2d7ac670c5fa4b59</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAMA7G54_DFP\instance\trng.h</file>
+         <hash>1c1b8441e2307db8f645866817ee77dde82cdfd044cedd8117d9439a28940801</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAMA7G54_DFP\instance\tzaesbasc.h</file>
+         <hash>3db31d864c4ac3eb9fe72fec97be80b66f58595ed00b9647055475caf3595f23</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAMA7G54_DFP\instance\tzaesbns.h</file>
+         <hash>13ff8babc9b73df21a19ee0cf0396017c14917fb14281ccd487211026e9d8559</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAMA7G54_DFP\instance\tzaesbs.h</file>
+         <hash>9a54f4cbd03d631af86879f824867d39e3f9f81ec6e293504ad6b26ad576d532</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAMA7G54_DFP\instance\tzc.h</file>
+         <hash>55931744dd174d3cf37d012997fd953c9844efedb80e3858486b79ca53b77a02</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAMA7G54_DFP\instance\tzpm.h</file>
+         <hash>72f76e69f7551d05125c325f3ed782f6e1b422fa8c60c263a763cabb590da8f2</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAMA7G54_DFP\instance\udphsa.h</file>
+         <hash>f295e5a4e48982d2648a341d7ef52c22ecb46b03574a4d734045bb088ad5929c</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAMA7G54_DFP\instance\udphsb.h</file>
+         <hash>03de50f768d2d9896810650ab962fec1df84a4635e0ea466c9dd9397bdc9411d</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAMA7G54_DFP\instance\uhphs_ehci.h</file>
+         <hash>99a7514ce963cb7056bbdcd0042cbbb9d2b2b0a3baf23c2efcbd6f9ba9120028</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAMA7G54_DFP\instance\uhphs_ohci.h</file>
+         <hash>ea6c192f625a57fa10ab86771a7731dea5a55cde502bcaf003593587242bca5b</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAMA7G54_DFP\instance\xdmac0.h</file>
+         <hash>71f0df91c350628b24124eb9ebcd511276fbdce670eeffaba2934636224a8993</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAMA7G54_DFP\instance\xdmac1.h</file>
+         <hash>5fc815c7f5676c4e7111829c2888376c31faf6acbccd6b77ef41da8e570bb39f</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAMA7G54_DFP\instance\xdmac2.h</file>
+         <hash>96ab96147087e26053ca063c7eeddd48669a7519f667fbee64654a413686a9ef</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAMA7G54_DFP\pio\sama7g54.h</file>
+         <hash>e3539cbfc4a5af98b4ad0b9a431fc0ccd3098f9d34c989295bee390a4ecaffe5</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\SAMA7G54_DFP\sama7g54.h</file>
+         <hash>fe0c2b8c985689f188aa1381df1e885de8365b97d4b58dac6ce777ab074d7ebe</hash>
       </entry>
    </generatedFileHashHistoryMap>
 </config>
