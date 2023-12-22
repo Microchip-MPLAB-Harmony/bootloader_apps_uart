@@ -48,6 +48,8 @@ The following list provides links to documentation on how to build and run UART 
 
 -   **[PIC32CM MC00 Curiosity Pro Evaluation Kit: Building and Running the UART Bootloader applications](GUID-2944FF2A-E4AB-4484-B633-BA7CC8548776.md)**  
 
+-   **[PIC32CZ-CA80 Curiosity Ultra board: Building and Running the UART Bootloader applications](GUID-8F91AE2D-5DF7-4ED5-BEDF-D2BF2A0935F4.md)**  
+
 -   **[PIC32MK GP Development Kit: Building and Running the UART Bootloader applications](GUID-42D84285-93F2-4FD2-871A-0828314912BB.md)**  
 
 -   **[PIC32MK MCJ Curiosity Pro: Building and Running the UART Bootloader applications](GUID-5FF5350E-BCA2-4E45-BEA5-52D149A8B431.md)**  
@@ -89,6 +91,8 @@ The following list provides links to documentation on how to build and run UART 
 -   **[SAM L21 Xplained Pro Evaluation Kit: Building and Running the UART Bootloader applications](GUID-A53ECC58-D494-4DF6-A7F2-F9244E5833D7.md)**  
 
 -   **[SAM L22 Xplained Pro Evaluation Kit: Building and Running the UART Bootloader applications](GUID-B882700A-3970-454E-A3C0-C7C17297B438.md)**  
+
+-   **[PIC32CX WBZ451 Curiosity Board: Building and Running the UART Bootloader applications](GUID-4D591A9A-8F06-4084-BA48-90638B193216.md)**  
 
 
 **Parent topic:**[MPLAB® Harmony Bootloader Application Examples for UART](GUID-B72472E8-6E25-4036-8A27-70D70540E725.md)

@@ -48,13 +48,15 @@ The following list provides links to documentation on how to build and run UART 
 
 -   **[PIC32CM MC00 Curiosity Pro Evaluation Kit: Building and Running the UART Bootloader applications](../../docs/GUID-2944FF2A-E4AB-4484-B633-BA7CC8548776.md)**  
 
+-   **[PIC32CZ-CA80 Curiosity Ultra board: Building and Running the UART Bootloader applications](../../docs/GUID-8F91AE2D-5DF7-4ED5-BEDF-D2BF2A0935F4.md)**  
+
 -   **[PIC32MK GP Development Kit: Building and Running the UART Bootloader applications](../../docs/GUID-42D84285-93F2-4FD2-871A-0828314912BB.md)**  
 
 -   **[PIC32MK MCJ Curiosity Pro: Building and Running the UART Bootloader applications](../../docs/GUID-5FF5350E-BCA2-4E45-BEA5-52D149A8B431.md)**  
 
 -   **[PIC32MK MCM Curiosity Pro Development Board: Building and Running the UART Bootloader applications](../../docs/GUID-DDBFDA79-86F5-4F5A-B8CD-AB394574F8CF.md)**  
 
--   **[PIC32MM USB Curiosity Pro Development Board: Building and Running the UART Bootloader applications](../../docs/GUID-2BD25F8D-D735-4A7D-AE9A-B00C2EF5A69E.md)**
+-   **[PIC32MM USB Curiosity Development Board: Building and Running the UART Bootloader applications](../../docs/GUID-2BD25F8D-D735-4A7D-AE9A-B00C2EF5A69E.md)**
 
 -   **[PIC32MX 1/2/5 Starter Kit: Building and Running the UART Bootloader applications](../../docs/GUID-AEAD41EE-0D73-4B4B-B70D-B68E9468CA78.md)**  
 
@@ -89,6 +91,9 @@ The following list provides links to documentation on how to build and run UART 
 -   **[SAM L21 Xplained Pro Evaluation Kit: Building and Running the UART Bootloader applications](../../docs/GUID-A53ECC58-D494-4DF6-A7F2-F9244E5833D7.md)**  
 
 -   **[SAM L22 Xplained Pro Evaluation Kit: Building and Running the UART Bootloader applications](../../docs/GUID-B882700A-3970-454E-A3C0-C7C17297B438.md)**  
+
+-   **[PIC32CX WBZ451 Curiosity Board: Building and Running the UART Bootloader applications](../../docs/GUID-4D591A9A-8F06-4084-BA48-90638B193216.md)**  
+
 
 **Parent topic:**[MPLAB® Harmony Bootloader Application Examples for UART](../../docs/GUID-B72472E8-6E25-4036-8A27-70D70540E725.md)
 

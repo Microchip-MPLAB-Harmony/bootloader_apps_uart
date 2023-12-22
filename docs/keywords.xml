@@ -6,7 +6,7 @@
           pubtype="Online Reference"
           pubsubtype=""
           pubuserguidesubtype=""
-          pubproductheirarchy=""
+          pubproducthierarchy=""
           devices=""
           revisiondate="12/11/2021 00:00:00"
           revisionletter="A"
@@ -14,6 +14,6 @@
           pubid=""
           reachid=""
           description=""
-          lastmodified="02/11/2022 05:41:07"
+          lastmodified="02/01/2024 10:03:25"
           covertitle="MPLAB® Harmony Bootloader Application Examples for UART"
           frontcover=""/>

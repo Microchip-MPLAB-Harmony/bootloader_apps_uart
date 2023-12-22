@@ -25,10 +25,13 @@ The following applications are provided to demonstrate the UART bootloader
 |----|-----------|
 |UART Bootloader|This example application shows how to use the Bootloader Library to bootload an application using UART protocol|
 |UART Fail Safe Bootloader|This example application shows how to use the Bootloader Library to bootload an application on device having dual flash bank feature using UART protocol|
+|MPU UART Bootloader|This example application shows how to use the Harmony Bootloader to bootload an application from SD/eMMC/NAND/Serial flash memory and receives new application image using UART protocol and write it to SD/eMMC/NAND/Serial flash memory|
 
 -   **[UART Bootloader](GUID-2A9EAD6F-16A9-48AC-AB83-C48C263D2A5F.md)**  
 
 -   **[UART Fail Safe Bootloader](GUID-A8350647-8A43-43D5-8813-E9E69F137E7E.md)**  
+
+-   **[MPU UART Bootloader](GUID-E167DF03-E869-4A4B-B26A-E630383F5654.md)**  
 
 -   **[UART Bootloader Tools Help](GUID-FF183F68-D719-491F-A013-76044AD83756.md)**  
 
