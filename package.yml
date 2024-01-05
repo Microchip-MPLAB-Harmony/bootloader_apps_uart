@@ -1,14 +1,12 @@
 package:
   format-version: "1.0.0"
   name: "bootloader_apps_uart"
-  version: "v3.2.0"
+  version: "v3.3.0"
   type: "application"
   status: "production"
-  required: true
+  required: false
 
   dependencies:
     - name: "bootloader"
       type: "package"
-      version: "dev"
-
-
+      version: "v3.7.0"
