@@ -4,15 +4,22 @@
 
 
 project: bootloader_sd_emmc
-creation_date: 2023-12-06T19:52:46.449+05:30[Asia/Calcutta]    # ISO 8601 format: https://www.w3.org/TR/NOTE-datetime
+creation_date: 2024-01-05T17:28:59.255+05:30[Asia/Calcutta]    # ISO 8601 format: https://www.w3.org/TR/NOTE-datetime
 operating_system: Windows 10
 mcc_mode: IDE            # [IDE|Standalone|Headless]
 mcc_version: v5.4.1
 mcc_core_version: v5.6.1
 mplabx_version: v6.15        # if MPLAB X plugin only
-harmony_version: v1.4.0
-compiler: XC32 (v4.35)
+harmony_version: v1.4.1
+compiler: XC32 4.35
 
 modules:
     - {name: "CMSIS_5", version: "5.8.0"}
+    - {name: "bootloader", version: "v3.7.0"}
     - {name: "bsp", version: "v3.17.0"}
+    - {name: "csp", version: "v3.18.2"}
+    - {name: "core", version: "v3.13.2"}
+
+packs:
+    - {name: "SAMA5D2_DFP", version: "1.9.106"}
+
