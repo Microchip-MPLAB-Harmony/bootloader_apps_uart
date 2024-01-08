@@ -36,21 +36,21 @@ This example application shows how to use the Harmony Bootloader to bootload an 
 
 The following list provides links to documentation on how to build and run UART bootloader on different development kits
 
--   **[SAM9X60-Curiosity board: Building and Running the UART Bootloader applications](../../docs/GUID-926A1E89-F098-4E9B-812A-DFB904613B19.md)**  
+-   **[SAM9X60-Curiosity board: Building and Running the UART Bootloader with SD/eMMC media applications](../../docs/GUID-926A1E89-F098-4E9B-812A-DFB904613B19.md)**  
 
--   **[SAM9X75-EB Evaluation Board: Building and Running the UART Bootloader applications](../../docs/GUID-C39717F4-8782-4C11-9240-03703E104D9C.md)**  
+-   **[SAM9X75-EB Evaluation Board: Building and Running the UART Bootloader with SD/eMMC media applications](../../docs/GUID-C39717F4-8782-4C11-9240-03703E104D9C.md)**  
 
--   **[SAMA5D29 Curiosity Board: Building and Running the UART Bootloader applications](../../docs/GUID-7627E845-3512-4BDD-AFF1-56E6CA900D87.md)**  
+-   **[SAMA5D29 Curiosity Board: Building and Running the UART Bootloader with SD/eMMC media applications](../../docs/GUID-7627E845-3512-4BDD-AFF1-56E6CA900D87.md)**  
 
--   **[SAMA5D2 Xplained Ultra Evaluation Kit: Building and Running the UART Bootloader applications](../../docs/GUID-39122481-D35C-424E-A421-9FC1ABFE814D.md)**  
+-   **[SAMA5D2 Xplained Ultra Evaluation Kit: Building and Running the UART Bootloader with SD/eMMC media applications](../../docs/GUID-39122481-D35C-424E-A421-9FC1ABFE814D.md)**  
 
--   **[SAMA7G5 Evaluation Kit: Building and Running the UART Bootloader applications](../../docs/GUID-0E4F1815-E6F4-47BE-AAEC-1287D87E1230.md)**  
+-   **[SAMA7G5 Evaluation Kit: Building and Running the UART Bootloader with SD/eMMC media applications](../../docs/GUID-0E4F1815-E6F4-47BE-AAEC-1287D87E1230.md)**  
 
--   **[SAMA5D29 Curiosity Board: Building and Running the UART Bootloader applications](../../docs/GUID-0F818328-D64D-48BA-83C8-EB89B661FAF0.md)**  
+-   **[SAMA5D29 Curiosity Board: Building and Running the UART Bootloader with Serial Flash media applications](../../docs/GUID-0F818328-D64D-48BA-83C8-EB89B661FAF0.md)**  
 
--   **[SAMA5D2 Xplained Ultra Evaluation Kit: Building and Running the UART Bootloader applications](../../docs/GUID-C368E66B-5692-46FD-BA59-E97ECD335295.md)**  
+-   **[SAMA5D2 Xplained Ultra Evaluation Kit: Building and Running the UART Bootloader with Serial Flash media applications](../../docs/GUID-C368E66B-5692-46FD-BA59-E97ECD335295.md)**  
 
--   **[SAM9X60-Curiosity board: Building and Running the UART Bootloader applications](../../docs/GUID-F5BD318E-44B2-41D4-9F5F-690B1C3C107D.md)**  
+-   **[SAM9X60-Curiosity board: Building and Running the UART Bootloader with NAND Flash media applications](../../docs/GUID-F5BD318E-44B2-41D4-9F5F-690B1C3C107D.md)**  
 
 
 **Parent topic:**[MPLAB® Harmony Bootloader Application Examples for UART](../../docs/GUID-B72472E8-6E25-4036-8A27-70D70540E725.md)
