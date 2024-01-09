@@ -1,0 +1,1532 @@
+
+dist\wbz351_curiosity\debug\wbz351_curiosity.X.debug.elf:     file format elf32-littlearm
+
+
+Disassembly of section .vectors:
+
+20000010 <vectors>:
+20000010:	ff 7f 01 20 09 02 00 01                             ... ....
+
+Disassembly of section .text:
+
+01000208 <Reset_Handler>:
+    uintptr_t src, dst;
+
+
+    src = (uintptr_t)&_etext;
+    pSrc = (uint32_t *)src;      /* flash functions start after .text */
+    dst = (uintptr_t)&_sdata;
+ 1000208:	4a0f      	ldr	r2, [pc, #60]	; (1000248 <Reset_Handler+0x40>)
+    pDst = (uint32_t *)dst;      /* boundaries of .data area to init */
+
+    /* Init .data */
+    for (count = 0U; count < (((uint32_t)&_edata - (uint32_t)dst) / 4U); count++)
+ 100020a:	4810      	ldr	r0, [pc, #64]	; (100024c <Reset_Handler+0x44>)
+ 100020c:	1a80      	subs	r0, r0, r2
+ 100020e:	0880      	lsrs	r0, r0, #2
+{
+ 1000210:	b508      	push	{r3, lr}
+    for (count = 0U; count < (((uint32_t)&_edata - (uint32_t)dst) / 4U); count++)
+ 1000212:	d008      	beq.n	1000226 <Reset_Handler+0x1e>
+ 1000214:	4b0e      	ldr	r3, [pc, #56]	; (1000250 <Reset_Handler+0x48>)
+ 1000216:	eb03 0080 	add.w	r0, r3, r0, lsl #2
+    {
+        pDst[count] = pSrc[count];
+ 100021a:	f853 1b04 	ldr.w	r1, [r3], #4
+ 100021e:	f842 1b04 	str.w	r1, [r2], #4
+    for (count = 0U; count < (((uint32_t)&_edata - (uint32_t)dst) / 4U); count++)
+ 1000222:	4283      	cmp	r3, r0
+ 1000224:	d1f9      	bne.n	100021a <Reset_Handler+0x12>
+    }
+
+    /* Init .bss */
+    dst = (uintptr_t)&_sbss;
+ 1000226:	4b0b      	ldr	r3, [pc, #44]	; (1000254 <Reset_Handler+0x4c>)
+    pDst = (uint32_t *)dst;
+    for (count = 0U; count < (((uint32_t)&_ebss - (uint32_t)dst) / 4U); count++)
+ 1000228:	4a0b      	ldr	r2, [pc, #44]	; (1000258 <Reset_Handler+0x50>)
+ 100022a:	1ad2      	subs	r2, r2, r3
+ 100022c:	0892      	lsrs	r2, r2, #2
+ 100022e:	d006      	beq.n	100023e <Reset_Handler+0x36>
+ 1000230:	eb03 0282 	add.w	r2, r3, r2, lsl #2
+    {
+        pDst[count] = 0U;
+ 1000234:	2100      	movs	r1, #0
+ 1000236:	f843 1b04 	str.w	r1, [r3], #4
+    for (count = 0U; count < (((uint32_t)&_ebss - (uint32_t)dst) / 4U); count++)
+ 100023a:	429a      	cmp	r2, r3
+ 100023c:	d1fb      	bne.n	1000236 <Reset_Handler+0x2e>
+    }
+
+
+     /* Branch to application's main function */
+    (void)main();
+ 100023e:	f000 f80f 	bl	1000260 <__main_veneer>
+
+#if (defined(__DEBUG) || defined(__DEBUG_D)) && defined(__XC32)
+    __builtin_software_breakpoint();
+ 1000242:	be00      	bkpt	0x0000
+#endif
+}
+ 1000244:	bd08      	pop	{r3, pc}
+ 1000246:	bf00      	nop
+ 1000248:	20000018 	.word	0x20000018
+ 100024c:	200006a4 	.word	0x200006a4
+ 1000250:	01000268 	.word	0x01000268
+ 1000254:	200006a4 	.word	0x200006a4
+ 1000258:	200026cc 	.word	0x200026cc
+ 100025c:	00000000 	.word	0x00000000
+
+01000260 <__main_veneer>:
+ 1000260:	f85f f000 	ldr.w	pc, [pc]	; 1000264 <__main_veneer+0x4>
+ 1000264:	20000465 	.word	0x20000465
+
+Disassembly of section .data:
+
+20000018 <NVM_Initialize>:
+/* ************************************************************************** */
+/* ************************************************************************** */
+
+void NVM_Initialize( void )
+{
+    NVM_StartOperationAtAddress( NVM_REGS->NVM_NVMADDR,  NO_OPERATION );
+20000018:	4b0d      	ldr	r3, [pc, #52]	; (20000050 <_sfixed+0x38>)
+{
+2000001a:	b430      	push	{r4, r5}
+    NVM_StartOperationAtAddress( NVM_REGS->NVM_NVMADDR,  NO_OPERATION );
+2000001c:	6b1d      	ldr	r5, [r3, #48]	; 0x30
+ */
+__STATIC_FORCEINLINE uint32_t __get_PRIMASK(void)
+{
+  uint32_t result;
+
+  __ASM volatile ("MRS %0, primask" : "=r" (result) );
+2000001e:	f3ef 8010 	mrs	r0, PRIMASK
+  __ASM volatile ("cpsid i" : : : "memory");
+20000022:	b672      	cpsid	i
+    NVM_REGS->NVM_NVMCONCLR = NVM_NVMCON_WREN_Msk;
+20000024:	f44f 4180 	mov.w	r1, #16384	; 0x4000
+    NVM_REGS->NVM_NVMCONSET = ( NVM_NVMCON_NVMOP_Msk & (((uint32_t)operation) << NVM_NVMCON_NVMOP_Pos) );
+20000028:	2200      	movs	r2, #0
+    NVM_REGS->NVM_NVMCONCLR = NVM_NVMCON_NVMOP_Msk;
+2000002a:	240f      	movs	r4, #15
+    NVM_REGS->NVM_NVMADDR = address;
+2000002c:	631d      	str	r5, [r3, #48]	; 0x30
+    NVM_REGS->NVM_NVMCONCLR = NVM_NVMCON_WREN_Msk;
+2000002e:	6059      	str	r1, [r3, #4]
+    NVM_REGS->NVM_NVMKEY = (uint32_t)NVM_UNLOCK_KEY1;
+20000030:	4d08      	ldr	r5, [pc, #32]	; (20000054 <_sfixed+0x3c>)
+    NVM_REGS->NVM_NVMCONCLR = NVM_NVMCON_NVMOP_Msk;
+20000032:	605c      	str	r4, [r3, #4]
+    NVM_REGS->NVM_NVMCONSET = ( NVM_NVMCON_NVMOP_Msk & (((uint32_t)operation) << NVM_NVMCON_NVMOP_Pos) );
+20000034:	609a      	str	r2, [r3, #8]
+    NVM_REGS->NVM_NVMKEY = (uint32_t)NVM_UNLOCK_KEY2;
+20000036:	4c08      	ldr	r4, [pc, #32]	; (20000058 <_sfixed+0x40>)
+    NVM_REGS->NVM_NVMCONSET = NVM_NVMCON_WREN_Msk;
+20000038:	6099      	str	r1, [r3, #8]
+    NVM_REGS->NVM_NVMCONSET = NVM_NVMCON_WR_Msk;
+2000003a:	f44f 4100 	mov.w	r1, #32768	; 0x8000
+    NVM_REGS->NVM_NVMKEY = 0x0U;
+2000003e:	621a      	str	r2, [r3, #32]
+    NVM_REGS->NVM_NVMKEY = (uint32_t)NVM_UNLOCK_KEY1;
+20000040:	621d      	str	r5, [r3, #32]
+    NVM_REGS->NVM_NVMKEY = (uint32_t)NVM_UNLOCK_KEY2;
+20000042:	621c      	str	r4, [r3, #32]
+    NVM_REGS->NVM_NVMCONSET = NVM_NVMCON_WR_Msk;
+20000044:	6099      	str	r1, [r3, #8]
+  \details Assigns the given value to the Priority Mask Register.
+  \param [in]    priMask  Priority Mask
+ */
+__STATIC_FORCEINLINE void __set_PRIMASK(uint32_t priMask)
+{
+  __ASM volatile ("MSR primask, %0" : : "r" (priMask) : "memory");
+20000046:	f380 8810 	msr	PRIMASK, r0
+}
+2000004a:	bc30      	pop	{r4, r5}
+2000004c:	4770      	bx	lr
+2000004e:	bf00      	nop
+20000050:	44000600 	.word	0x44000600
+20000054:	aa996655 	.word	0xaa996655
+20000058:	556699aa 	.word	0x556699aa
+
+2000005c <NVM_RowWrite>:
+   return true;
+}
+
+bool NVM_RowWrite( uint32_t *data, uint32_t address )
+{
+   NVM_REGS->NVM_NVMSRCADDR = (uint32_t )data;
+2000005c:	4b0e      	ldr	r3, [pc, #56]	; (20000098 <NVM_RowWrite+0x3c>)
+{
+2000005e:	b470      	push	{r4, r5, r6}
+   NVM_REGS->NVM_NVMSRCADDR = (uint32_t )data;
+20000060:	f8c3 00c0 	str.w	r0, [r3, #192]	; 0xc0
+  __ASM volatile ("MRS %0, primask" : "=r" (result) );
+20000064:	f3ef 8010 	mrs	r0, PRIMASK
+  __ASM volatile ("cpsid i" : : : "memory");
+20000068:	b672      	cpsid	i
+    NVM_REGS->NVM_NVMCONCLR = NVM_NVMCON_WREN_Msk;
+2000006a:	f44f 4280 	mov.w	r2, #16384	; 0x4000
+    NVM_REGS->NVM_NVMCONCLR = NVM_NVMCON_NVMOP_Msk;
+2000006e:	240f      	movs	r4, #15
+    NVM_REGS->NVM_NVMCONSET = ( NVM_NVMCON_NVMOP_Msk & (((uint32_t)operation) << NVM_NVMCON_NVMOP_Pos) );
+20000070:	2603      	movs	r6, #3
+    NVM_REGS->NVM_NVMADDR = address;
+20000072:	6319      	str	r1, [r3, #48]	; 0x30
+    NVM_REGS->NVM_NVMKEY = 0x0U;
+20000074:	2500      	movs	r5, #0
+    NVM_REGS->NVM_NVMCONCLR = NVM_NVMCON_WREN_Msk;
+20000076:	605a      	str	r2, [r3, #4]
+    NVM_REGS->NVM_NVMKEY = (uint32_t)NVM_UNLOCK_KEY2;
+20000078:	4908      	ldr	r1, [pc, #32]	; (2000009c <NVM_RowWrite+0x40>)
+    NVM_REGS->NVM_NVMCONCLR = NVM_NVMCON_NVMOP_Msk;
+2000007a:	605c      	str	r4, [r3, #4]
+    NVM_REGS->NVM_NVMCONSET = ( NVM_NVMCON_NVMOP_Msk & (((uint32_t)operation) << NVM_NVMCON_NVMOP_Pos) );
+2000007c:	609e      	str	r6, [r3, #8]
+    NVM_REGS->NVM_NVMKEY = (uint32_t)NVM_UNLOCK_KEY1;
+2000007e:	4c08      	ldr	r4, [pc, #32]	; (200000a0 <NVM_RowWrite+0x44>)
+    NVM_REGS->NVM_NVMCONSET = NVM_NVMCON_WREN_Msk;
+20000080:	609a      	str	r2, [r3, #8]
+    NVM_REGS->NVM_NVMCONSET = NVM_NVMCON_WR_Msk;
+20000082:	f44f 4200 	mov.w	r2, #32768	; 0x8000
+    NVM_REGS->NVM_NVMKEY = 0x0U;
+20000086:	621d      	str	r5, [r3, #32]
+    NVM_REGS->NVM_NVMKEY = (uint32_t)NVM_UNLOCK_KEY1;
+20000088:	621c      	str	r4, [r3, #32]
+    NVM_REGS->NVM_NVMKEY = (uint32_t)NVM_UNLOCK_KEY2;
+2000008a:	6219      	str	r1, [r3, #32]
+    NVM_REGS->NVM_NVMCONSET = NVM_NVMCON_WR_Msk;
+2000008c:	609a      	str	r2, [r3, #8]
+  __ASM volatile ("MSR primask, %0" : : "r" (priMask) : "memory");
+2000008e:	f380 8810 	msr	PRIMASK, r0
+
+   NVM_StartOperationAtAddress( address,  ROW_PROGRAM_OPERATION);
+
+   return true;
+}
+20000092:	2001      	movs	r0, #1
+20000094:	bc70      	pop	{r4, r5, r6}
+20000096:	4770      	bx	lr
+20000098:	44000600 	.word	0x44000600
+2000009c:	556699aa 	.word	0x556699aa
+200000a0:	aa996655 	.word	0xaa996655
+
+200000a4 <NVM_PageErase>:
+
+bool NVM_PageErase( uint32_t address )
+{
+200000a4:	b430      	push	{r4, r5}
+  __ASM volatile ("MRS %0, primask" : "=r" (result) );
+200000a6:	f3ef 8110 	mrs	r1, PRIMASK
+  __ASM volatile ("cpsid i" : : : "memory");
+200000aa:	b672      	cpsid	i
+    NVM_REGS->NVM_NVMADDR = address;
+200000ac:	4b0b      	ldr	r3, [pc, #44]	; (200000dc <NVM_PageErase+0x38>)
+    NVM_REGS->NVM_NVMKEY = (uint32_t)NVM_UNLOCK_KEY1;
+200000ae:	4d0c      	ldr	r5, [pc, #48]	; (200000e0 <NVM_PageErase+0x3c>)
+    NVM_REGS->NVM_NVMADDR = address;
+200000b0:	6318      	str	r0, [r3, #48]	; 0x30
+    NVM_REGS->NVM_NVMCONCLR = NVM_NVMCON_WREN_Msk;
+200000b2:	f44f 4280 	mov.w	r2, #16384	; 0x4000
+    NVM_REGS->NVM_NVMCONCLR = NVM_NVMCON_NVMOP_Msk;
+200000b6:	200f      	movs	r0, #15
+    NVM_REGS->NVM_NVMCONCLR = NVM_NVMCON_WREN_Msk;
+200000b8:	605a      	str	r2, [r3, #4]
+    NVM_REGS->NVM_NVMCONCLR = NVM_NVMCON_NVMOP_Msk;
+200000ba:	6058      	str	r0, [r3, #4]
+    NVM_REGS->NVM_NVMCONSET = ( NVM_NVMCON_NVMOP_Msk & (((uint32_t)operation) << NVM_NVMCON_NVMOP_Pos) );
+200000bc:	2004      	movs	r0, #4
+200000be:	6098      	str	r0, [r3, #8]
+    NVM_REGS->NVM_NVMKEY = (uint32_t)NVM_UNLOCK_KEY2;
+200000c0:	4c08      	ldr	r4, [pc, #32]	; (200000e4 <NVM_PageErase+0x40>)
+    NVM_REGS->NVM_NVMCONSET = NVM_NVMCON_WREN_Msk;
+200000c2:	609a      	str	r2, [r3, #8]
+    NVM_REGS->NVM_NVMKEY = 0x0U;
+200000c4:	2000      	movs	r0, #0
+    NVM_REGS->NVM_NVMCONSET = NVM_NVMCON_WR_Msk;
+200000c6:	f44f 4200 	mov.w	r2, #32768	; 0x8000
+    NVM_REGS->NVM_NVMKEY = 0x0U;
+200000ca:	6218      	str	r0, [r3, #32]
+    NVM_REGS->NVM_NVMKEY = (uint32_t)NVM_UNLOCK_KEY1;
+200000cc:	621d      	str	r5, [r3, #32]
+    NVM_REGS->NVM_NVMKEY = (uint32_t)NVM_UNLOCK_KEY2;
+200000ce:	621c      	str	r4, [r3, #32]
+    NVM_REGS->NVM_NVMCONSET = NVM_NVMCON_WR_Msk;
+200000d0:	609a      	str	r2, [r3, #8]
+  __ASM volatile ("MSR primask, %0" : : "r" (priMask) : "memory");
+200000d2:	f381 8810 	msr	PRIMASK, r1
+   NVM_StartOperationAtAddress(address,  PAGE_ERASE_OPERATION);
+
+   return true;
+}
+200000d6:	2001      	movs	r0, #1
+200000d8:	bc30      	pop	{r4, r5}
+200000da:	4770      	bx	lr
+200000dc:	44000600 	.word	0x44000600
+200000e0:	aa996655 	.word	0xaa996655
+200000e4:	556699aa 	.word	0x556699aa
+
+200000e8 <NVM_IsBusy>:
+    return (NVM_REGS->NVM_NVMCON & (NVM_NVMCON_LVDERR_Msk | NVM_NVMCON_WRERR_Msk));
+}
+
+bool NVM_IsBusy( void )
+{
+    return (((NVM_REGS->NVM_NVMCON & NVM_NVMCON_WR_Msk) >> NVM_NVMCON_WR_Pos) != 0U);
+200000e8:	4b02      	ldr	r3, [pc, #8]	; (200000f4 <NVM_IsBusy+0xc>)
+200000ea:	6818      	ldr	r0, [r3, #0]
+}
+200000ec:	f3c0 30c0 	ubfx	r0, r0, #15, #1
+200000f0:	4770      	bx	lr
+200000f2:	bf00      	nop
+200000f4:	44000600 	.word	0x44000600
+
+200000f8 <NVIC_Initialize>:
+__STATIC_INLINE void __NVIC_SetPriorityGrouping(uint32_t PriorityGroup)
+{
+  uint32_t reg_value;
+  uint32_t PriorityGroupTmp = (PriorityGroup & (uint32_t)0x07UL);             /* only values 0..7 are used          */
+
+  reg_value  =  SCB->AIRCR;                                                   /* read old register configuration    */
+200000f8:	4b0e      	ldr	r3, [pc, #56]	; (20000134 <NVIC_Initialize+0x3c>)
+200000fa:	68da      	ldr	r2, [r3, #12]
+  reg_value &= ~((uint32_t)(SCB_AIRCR_VECTKEY_Msk | SCB_AIRCR_PRIGROUP_Msk)); /* clear bits to change               */
+200000fc:	f64f 01ff 	movw	r1, #63743	; 0xf8ff
+20000100:	400a      	ands	r2, r1
+  reg_value  =  (reg_value                                   |
+20000102:	f042 62bf 	orr.w	r2, r2, #100139008	; 0x5f80000
+20000106:	f442 3200 	orr.w	r2, r2, #131072	; 0x20000
+                ((uint32_t)0x5FAUL << SCB_AIRCR_VECTKEY_Pos) |
+                (PriorityGroupTmp << SCB_AIRCR_PRIGROUP_Pos)  );              /* Insert write key and priority group */
+  SCB->AIRCR =  reg_value;
+2000010a:	60da      	str	r2, [r3, #12]
+  __ASM volatile ("dmb 0xF":::"memory");
+2000010c:	f3bf 8f5f 	dmb	sy
+  __ASM volatile ("cpsie i" : : : "memory");
+20000110:	b662      	cpsie	i
+
+    /* Enable the interrupt sources and configure the priorities as configured
+     * from within the "Interrupt Manager" of MHC. */
+
+    /* Enable Usage fault */
+    SCB->SHCSR |= (SCB_SHCSR_USGFAULTENA_Msk);
+20000112:	6a5a      	ldr	r2, [r3, #36]	; 0x24
+20000114:	f442 2280 	orr.w	r2, r2, #262144	; 0x40000
+20000118:	625a      	str	r2, [r3, #36]	; 0x24
+    /* Trap divide by zero */
+    SCB->CCR   |= SCB_CCR_DIV_0_TRP_Msk;
+2000011a:	695a      	ldr	r2, [r3, #20]
+2000011c:	f042 0210 	orr.w	r2, r2, #16
+20000120:	615a      	str	r2, [r3, #20]
+
+    /* Enable Bus fault */
+    SCB->SHCSR |= (SCB_SHCSR_BUSFAULTENA_Msk);
+20000122:	6a5a      	ldr	r2, [r3, #36]	; 0x24
+20000124:	f442 3200 	orr.w	r2, r2, #131072	; 0x20000
+20000128:	625a      	str	r2, [r3, #36]	; 0x24
+
+    /* Enable memory management fault */
+    SCB->SHCSR |= (SCB_SHCSR_MEMFAULTENA_Msk);
+2000012a:	6a5a      	ldr	r2, [r3, #36]	; 0x24
+2000012c:	f442 3280 	orr.w	r2, r2, #65536	; 0x10000
+20000130:	625a      	str	r2, [r3, #36]	; 0x24
+
+}
+20000132:	4770      	bx	lr
+20000134:	e000ed00 	.word	0xe000ed00
+
+20000138 <SYS_DeInitialize>:
+}
+
+void __WEAK SYS_DeInitialize( void *data )
+{
+    /* Function can be overriden with custom implementation */
+}
+20000138:	4770      	bx	lr
+2000013a:	bf00      	nop
+
+2000013c <bootloader_GetVersion>:
+{
+    /* Function can be overriden with custom implementation */
+    uint16_t btlVersion = (((BTL_MAJOR_VERSION & (uint16_t)0xFFU) << 8) | (BTL_MINOR_VERSION & (uint16_t)0xFFU));
+
+    return btlVersion;
+}
+2000013c:	f240 3007 	movw	r0, #775	; 0x307
+20000140:	4770      	bx	lr
+20000142:	bf00      	nop
+
+20000144 <bootloader_CRCGenerate>:
+   H3_MISRAC_2012_R_10_1_DR_1, H3_MISRAC_2012_R_10_4_DR_1, H3_MISRAC_2012_R_11_1_DR_1 & H3_MISRAC_2012_R_11_6_DR_1 */
+
+
+/* Function to Generate CRC using the device service unit peripheral on programmed data */
+uint32_t bootloader_CRCGenerate(uint32_t start_addr, uint32_t size)
+{
+20000144:	b530      	push	{r4, r5, lr}
+20000146:	b083      	sub	sp, #12
+20000148:	4604      	mov	r4, r0
+2000014a:	460d      	mov	r5, r1
+    uint32_t crc  = 0xffffffffU;
+2000014c:	f04f 33ff 	mov.w	r3, #4294967295
+
+    PAC_PeripheralProtectSetup (PAC_PERIPHERAL_DSU, PAC_PROTECTION_CLEAR);
+20000150:	2101      	movs	r1, #1
+20000152:	2020      	movs	r0, #32
+    uint32_t crc  = 0xffffffffU;
+20000154:	9301      	str	r3, [sp, #4]
+    PAC_PeripheralProtectSetup (PAC_PERIPHERAL_DSU, PAC_PROTECTION_CLEAR);
+20000156:	f000 f831 	bl	200001bc <PAC_PeripheralProtectSetup>
+
+    (void) DSU_CRCCalculate (start_addr, size, crc, &crc);
+2000015a:	4629      	mov	r1, r5
+2000015c:	ab01      	add	r3, sp, #4
+2000015e:	9a01      	ldr	r2, [sp, #4]
+20000160:	4620      	mov	r0, r4
+20000162:	f000 f93d 	bl	200003e0 <DSU_CRCCalculate>
+
+    PAC_PeripheralProtectSetup (PAC_PERIPHERAL_DSU, PAC_PROTECTION_SET);
+20000166:	2102      	movs	r1, #2
+20000168:	2020      	movs	r0, #32
+2000016a:	f000 f827 	bl	200001bc <PAC_PeripheralProtectSetup>
+
+    return crc;
+}
+2000016e:	9801      	ldr	r0, [sp, #4]
+20000170:	b003      	add	sp, #12
+20000172:	bd30      	pop	{r4, r5, pc}
+
+20000174 <bootloader_TriggerReset>:
+  __ASM volatile ("dsb 0xF":::"memory");
+20000174:	f3bf 8f4f 	dsb	sy
+__NO_RETURN __STATIC_INLINE void __NVIC_SystemReset(void)
+{
+  __DSB();                                                          /* Ensure all outstanding memory accesses included
+                                                                       buffered write are completed before reset */
+  SCB->AIRCR  = (uint32_t)((0x5FAUL << SCB_AIRCR_VECTKEY_Pos)    |
+                           (SCB->AIRCR & SCB_AIRCR_PRIGROUP_Msk) |
+20000178:	4905      	ldr	r1, [pc, #20]	; (20000190 <bootloader_TriggerReset+0x1c>)
+  SCB->AIRCR  = (uint32_t)((0x5FAUL << SCB_AIRCR_VECTKEY_Pos)    |
+2000017a:	4b06      	ldr	r3, [pc, #24]	; (20000194 <bootloader_TriggerReset+0x20>)
+                           (SCB->AIRCR & SCB_AIRCR_PRIGROUP_Msk) |
+2000017c:	68ca      	ldr	r2, [r1, #12]
+2000017e:	f402 62e0 	and.w	r2, r2, #1792	; 0x700
+  SCB->AIRCR  = (uint32_t)((0x5FAUL << SCB_AIRCR_VECTKEY_Pos)    |
+20000182:	4313      	orrs	r3, r2
+20000184:	60cb      	str	r3, [r1, #12]
+20000186:	f3bf 8f4f 	dsb	sy
+                            SCB_AIRCR_SYSRESETREQ_Msk    );         /* Keep priority group unchanged */
+  __DSB();                                                          /* Ensure completion of memory access */
+
+  for(;;)                                                           /* wait until reset */
+  {
+    __NOP();
+2000018a:	bf00      	nop
+2000018c:	e7fd      	b.n	2000018a <bootloader_TriggerReset+0x16>
+2000018e:	bf00      	nop
+20000190:	e000ed00 	.word	0xe000ed00
+20000194:	05fa0004 	.word	0x05fa0004
+
+20000198 <run_Application>:
+{
+    NVIC_SystemReset();
+}
+
+void run_Application(uint32_t address)
+{
+20000198:	b538      	push	{r3, r4, r5, lr}
+    uint32_t msp            = *(uint32_t *)(address);
+2000019a:	6804      	ldr	r4, [r0, #0]
+    uint32_t reset_vector   = *(uint32_t *)(address + 4U);
+
+    if (msp == 0xffffffffU)
+2000019c:	1c63      	adds	r3, r4, #1
+2000019e:	d007      	beq.n	200001b0 <run_Application+0x18>
+200001a0:	4603      	mov	r3, r0
+    {
+        return;
+    }
+
+    /* Call Deinitialize routine to free any resources acquired by Bootloader */
+    SYS_DeInitialize(NULL);
+200001a2:	2000      	movs	r0, #0
+    uint32_t reset_vector   = *(uint32_t *)(address + 4U);
+200001a4:	685d      	ldr	r5, [r3, #4]
+    SYS_DeInitialize(NULL);
+200001a6:	f7ff ffc7 	bl	20000138 <SYS_DeInitialize>
+  __ASM volatile ("MSR msp, %0" : : "r" (topOfMainStack) : );
+200001aa:	f384 8808 	msr	MSP, r4
+
+    __set_MSP(msp);
+
+    ASM_VECTOR;
+200001ae:	4728      	bx	r5
+}
+200001b0:	bd38      	pop	{r3, r4, r5, pc}
+200001b2:	bf00      	nop
+
+200001b4 <EVSYS_Initialize>:
+
+void EVSYS_Initialize( void )
+{
+    /*Event Channel User Configuration*/
+
+}
+200001b4:	4770      	bx	lr
+200001b6:	bf00      	nop
+
+200001b8 <PAC_Initialize>:
+// *****************************************************************************
+// *****************************************************************************
+
+void PAC_Initialize( void )
+{
+}
+200001b8:	4770      	bx	lr
+200001ba:	bf00      	nop
+
+200001bc <PAC_PeripheralProtectSetup>:
+}
+
+void PAC_PeripheralProtectSetup( PAC_PERIPHERAL peripheral, PAC_PROTECTION operation )
+{
+    /* Set Peripheral Access Control */
+    PAC_REGS->PAC_WRCTRL = PAC_WRCTRL_PERID((uint32_t)peripheral) | PAC_WRCTRL_KEY((uint32_t)operation);
+200001bc:	b280      	uxth	r0, r0
+200001be:	f04f 4380 	mov.w	r3, #1073741824	; 0x40000000
+200001c2:	ea40 4101 	orr.w	r1, r0, r1, lsl #16
+200001c6:	6019      	str	r1, [r3, #0]
+}
+200001c8:	4770      	bx	lr
+200001ca:	bf00      	nop
+
+200001cc <SYSTICK_TimerInitialize>:
+#include "plib_systick.h"
+
+
+void SYSTICK_TimerInitialize ( void )
+{
+    SysTick->CTRL = 0U;
+200001cc:	4b04      	ldr	r3, [pc, #16]	; (200001e0 <SYSTICK_TimerInitialize+0x14>)
+    SysTick->VAL = 0U;
+    SysTick->LOAD = 0x61A800U - 1U;
+200001ce:	4805      	ldr	r0, [pc, #20]	; (200001e4 <SYSTICK_TimerInitialize+0x18>)
+    SysTick->CTRL = 0U;
+200001d0:	2200      	movs	r2, #0
+    SysTick->CTRL = SysTick_CTRL_CLKSOURCE_Msk;
+200001d2:	2104      	movs	r1, #4
+    SysTick->CTRL = 0U;
+200001d4:	601a      	str	r2, [r3, #0]
+    SysTick->VAL = 0U;
+200001d6:	609a      	str	r2, [r3, #8]
+    SysTick->LOAD = 0x61A800U - 1U;
+200001d8:	6058      	str	r0, [r3, #4]
+    SysTick->CTRL = SysTick_CTRL_CLKSOURCE_Msk;
+200001da:	6019      	str	r1, [r3, #0]
+}
+200001dc:	4770      	bx	lr
+200001de:	bf00      	nop
+200001e0:	e000e010 	.word	0xe000e010
+200001e4:	0061a7ff 	.word	0x0061a7ff
+
+200001e8 <SYSTICK_TimerRestart>:
+
+void SYSTICK_TimerRestart ( void )
+{
+    SysTick->CTRL &= ~(SysTick_CTRL_ENABLE_Msk);
+200001e8:	4b05      	ldr	r3, [pc, #20]	; (20000200 <SYSTICK_TimerRestart+0x18>)
+200001ea:	681a      	ldr	r2, [r3, #0]
+    SysTick->VAL = 0U;
+200001ec:	2100      	movs	r1, #0
+    SysTick->CTRL &= ~(SysTick_CTRL_ENABLE_Msk);
+200001ee:	f022 0201 	bic.w	r2, r2, #1
+200001f2:	601a      	str	r2, [r3, #0]
+    SysTick->VAL = 0U;
+200001f4:	6099      	str	r1, [r3, #8]
+    SysTick->CTRL |= SysTick_CTRL_ENABLE_Msk;
+200001f6:	681a      	ldr	r2, [r3, #0]
+200001f8:	f042 0201 	orr.w	r2, r2, #1
+200001fc:	601a      	str	r2, [r3, #0]
+}
+200001fe:	4770      	bx	lr
+20000200:	e000e010 	.word	0xe000e010
+
+20000204 <SYSTICK_TimerPeriodHasExpired>:
+}
+
+
+bool SYSTICK_TimerPeriodHasExpired(void)
+{
+   return ((SysTick->CTRL & SysTick_CTRL_COUNTFLAG_Msk) > 0U);
+20000204:	4b02      	ldr	r3, [pc, #8]	; (20000210 <SYSTICK_TimerPeriodHasExpired+0xc>)
+20000206:	6818      	ldr	r0, [r3, #0]
+}
+20000208:	f3c0 4000 	ubfx	r0, r0, #16, #1
+2000020c:	4770      	bx	lr
+2000020e:	bf00      	nop
+20000210:	e000e010 	.word	0xe000e010
+
+20000214 <SYS_Initialize>:
+
+  Remarks:
+*/
+
+void SYS_Initialize ( void* data )
+{
+20000214:	b508      	push	{r3, lr}
+    /* MISRAC 2012 deviation block start */
+    /* MISRA C-2012 Rule 2.2 deviated in this file.  Deviation record ID -  H3_MISRAC_2012_R_2_2_DR_1 */
+    NVM_Initialize();
+20000216:	f7ff feff 	bl	20000018 <NVM_Initialize>
+
+
+    GPIO_Initialize();
+2000021a:	f000 f819 	bl	20000250 <GPIO_Initialize>
+
+    if (bootloader_Trigger() == false)
+2000021e:	f000 f8ff 	bl	20000420 <bootloader_Trigger>
+20000222:	b178      	cbz	r0, 20000244 <SYS_Initialize+0x30>
+    {
+        run_Application(APP_START_ADDRESS);
+    }
+
+
+    CLOCK_Initialize();
+20000224:	f000 f862 	bl	200002ec <CLOCK_Initialize>
+
+    EVSYS_Initialize();
+20000228:	f7ff ffc4 	bl	200001b4 <EVSYS_Initialize>
+
+    SERCOM0_USART_Initialize();
+2000022c:	f000 f824 	bl	20000278 <SERCOM0_USART_Initialize>
+
+	SYSTICK_TimerInitialize();
+20000230:	f7ff ffcc 	bl	200001cc <SYSTICK_TimerInitialize>
+    PAC_Initialize();
+20000234:	f7ff ffc0 	bl	200001b8 <PAC_Initialize>
+
+    NVM_Initialize();
+20000238:	f7ff feee 	bl	20000018 <NVM_Initialize>
+
+    /* MISRAC 2012 deviation block end */
+    NVIC_Initialize();
+
+    /* MISRAC 2012 deviation block end */
+}
+2000023c:	e8bd 4008 	ldmia.w	sp!, {r3, lr}
+    NVIC_Initialize();
+20000240:	f7ff bf5a 	b.w	200000f8 <NVIC_Initialize>
+        run_Application(APP_START_ADDRESS);
+20000244:	4801      	ldr	r0, [pc, #4]	; (2000024c <SYS_Initialize+0x38>)
+20000246:	f7ff ffa7 	bl	20000198 <run_Application>
+2000024a:	e7eb      	b.n	20000224 <SYS_Initialize+0x10>
+2000024c:	01001000 	.word	0x01001000
+
+20000250 <GPIO_Initialize>:
+
+  Remarks:
+    See plib_gpio.h for more details.
+*/
+void GPIO_Initialize ( void )
+{
+20000250:	b430      	push	{r4, r5}
+ 
+          /* PORTA Initialization */
+    /* PORTB Initialization */
+    GPIOB_REGS->GPIO_LAT = 0x0U; /* Initial Latch Value */
+20000252:	4b07      	ldr	r3, [pc, #28]	; (20000270 <GPIO_Initialize+0x20>)
+    GPIOB_REGS->GPIO_TRISCLR = 0x8U; /* Direction Control */
+    GPIOB_REGS->GPIO_ANSELCLR = 0x8U; /* Digital Mode Enable */
+
+
+    /* PPS Input Remapping */
+    PPS_REGS->PPS_SCOM0P1R = 3U;
+20000254:	4a07      	ldr	r2, [pc, #28]	; (20000274 <GPIO_Initialize+0x24>)
+    GPIOB_REGS->GPIO_LAT = 0x0U; /* Initial Latch Value */
+20000256:	2500      	movs	r5, #0
+    GPIOB_REGS->GPIO_TRISCLR = 0x8U; /* Direction Control */
+20000258:	2108      	movs	r1, #8
+    PPS_REGS->PPS_SCOM0P1R = 3U;
+2000025a:	2403      	movs	r4, #3
+
+    /* PPS Output Remapping */
+    PPS_REGS->PPS_RPA5G3R = 2U;
+2000025c:	2002      	movs	r0, #2
+    GPIOB_REGS->GPIO_LAT = 0x0U; /* Initial Latch Value */
+2000025e:	631d      	str	r5, [r3, #48]	; 0x30
+    GPIOB_REGS->GPIO_TRISCLR = 0x8U; /* Direction Control */
+20000260:	6159      	str	r1, [r3, #20]
+    GPIOB_REGS->GPIO_ANSELCLR = 0x8U; /* Digital Mode Enable */
+20000262:	6059      	str	r1, [r3, #4]
+    PPS_REGS->PPS_SCOM0P1R = 3U;
+20000264:	6454      	str	r4, [r2, #68]	; 0x44
+    PPS_REGS->PPS_RPA5G3R = 2U;
+20000266:	f8c2 0234 	str.w	r0, [r2, #564]	; 0x234
+
+
+}
+2000026a:	bc30      	pop	{r4, r5}
+2000026c:	4770      	bx	lr
+2000026e:	bf00      	nop
+20000270:	44002b00 	.word	0x44002b00
+20000274:	44001000 	.word	0x44001000
+
+20000278 <SERCOM0_USART_Initialize>:
+     * Configures Data Order
+     * Configures Standby Mode
+     * Configures Sampling rate
+     * Configures IBON
+     */
+    SERCOM0_REGS->USART_INT.SERCOM_CTRLA = SERCOM_USART_INT_CTRLA_MODE_USART_INT_CLK | SERCOM_USART_INT_CTRLA_RXPO(0x1UL) | SERCOM_USART_INT_CTRLA_TXPO(0x0UL) | SERCOM_USART_INT_CTRLA_DORD_Msk | SERCOM_USART_INT_CTRLA_IBON_Msk | SERCOM_USART_INT_CTRLA_FORM(0x0UL) | SERCOM_USART_INT_CTRLA_SAMPR(0UL) ;
+20000278:	4b0a      	ldr	r3, [pc, #40]	; (200002a4 <SERCOM0_USART_Initialize+0x2c>)
+2000027a:	4a0b      	ldr	r2, [pc, #44]	; (200002a8 <SERCOM0_USART_Initialize+0x30>)
+2000027c:	601a      	str	r2, [r3, #0]
+     * Configures TXEN
+     * Configures CHSIZE
+     * Configures Parity
+     * Configures Stop bits
+     */
+    SERCOM0_REGS->USART_INT.SERCOM_CTRLB = SERCOM_USART_INT_CTRLB_CHSIZE_8_BIT | SERCOM_USART_INT_CTRLB_SBMODE_1_BIT | SERCOM_USART_INT_CTRLB_RXEN_Msk | SERCOM_USART_INT_CTRLB_TXEN_Msk;
+2000027e:	f44f 3140 	mov.w	r1, #196608	; 0x30000
+    SERCOM0_REGS->USART_INT.SERCOM_BAUD = (uint16_t)SERCOM_USART_INT_BAUD_BAUD(SERCOM0_USART_INT_BAUD_VALUE);
+20000282:	f64f 02a0 	movw	r2, #63648	; 0xf8a0
+20000286:	819a      	strh	r2, [r3, #12]
+
+    /* Wait for sync */
+    while((SERCOM0_REGS->USART_INT.SERCOM_SYNCBUSY) != 0U)
+20000288:	461a      	mov	r2, r3
+    SERCOM0_REGS->USART_INT.SERCOM_CTRLB = SERCOM_USART_INT_CTRLB_CHSIZE_8_BIT | SERCOM_USART_INT_CTRLB_SBMODE_1_BIT | SERCOM_USART_INT_CTRLB_RXEN_Msk | SERCOM_USART_INT_CTRLB_TXEN_Msk;
+2000028a:	6059      	str	r1, [r3, #4]
+    while((SERCOM0_REGS->USART_INT.SERCOM_SYNCBUSY) != 0U)
+2000028c:	69d3      	ldr	r3, [r2, #28]
+2000028e:	2b00      	cmp	r3, #0
+20000290:	d1fc      	bne.n	2000028c <SERCOM0_USART_Initialize+0x14>
+        /* Do nothing */
+    }
+
+
+    /* Enable the UART after the configurations */
+    SERCOM0_REGS->USART_INT.SERCOM_CTRLA |= SERCOM_USART_INT_CTRLA_ENABLE_Msk;
+20000292:	6813      	ldr	r3, [r2, #0]
+
+    /* Wait for sync */
+    while((SERCOM0_REGS->USART_INT.SERCOM_SYNCBUSY) != 0U)
+20000294:	4903      	ldr	r1, [pc, #12]	; (200002a4 <SERCOM0_USART_Initialize+0x2c>)
+    SERCOM0_REGS->USART_INT.SERCOM_CTRLA |= SERCOM_USART_INT_CTRLA_ENABLE_Msk;
+20000296:	f043 0302 	orr.w	r3, r3, #2
+2000029a:	6013      	str	r3, [r2, #0]
+    while((SERCOM0_REGS->USART_INT.SERCOM_SYNCBUSY) != 0U)
+2000029c:	69cb      	ldr	r3, [r1, #28]
+2000029e:	2b00      	cmp	r3, #0
+200002a0:	d1fc      	bne.n	2000029c <SERCOM0_USART_Initialize+0x24>
+    {
+        /* Do nothing */
+    }
+}
+200002a2:	4770      	bx	lr
+200002a4:	40000c00 	.word	0x40000c00
+200002a8:	40100104 	.word	0x40100104
+
+200002ac <SERCOM0_USART_WriteByte>:
+}
+
+void SERCOM0_USART_WriteByte( int data )
+{
+    /* Check if USART is ready for new data */
+    while((SERCOM0_REGS->USART_INT.SERCOM_INTFLAG & SERCOM_USART_INT_INTFLAG_DRE_Msk) == 0U)
+200002ac:	4a03      	ldr	r2, [pc, #12]	; (200002bc <SERCOM0_USART_WriteByte+0x10>)
+200002ae:	7e13      	ldrb	r3, [r2, #24]
+200002b0:	07db      	lsls	r3, r3, #31
+200002b2:	d5fc      	bpl.n	200002ae <SERCOM0_USART_WriteByte+0x2>
+    {
+        /* Do nothing */
+    }
+
+    SERCOM0_REGS->USART_INT.SERCOM_DATA = (uint16_t)data;
+200002b4:	b280      	uxth	r0, r0
+200002b6:	6290      	str	r0, [r2, #40]	; 0x28
+}
+200002b8:	4770      	bx	lr
+200002ba:	bf00      	nop
+200002bc:	40000c00 	.word	0x40000c00
+
+200002c0 <SERCOM0_USART_TransmitComplete>:
+
+bool SERCOM0_USART_TransmitComplete( void )
+{
+    bool transmitComplete = false;
+
+    if ((SERCOM0_REGS->USART_INT.SERCOM_INTFLAG & SERCOM_USART_INT_INTFLAG_TXC_Msk) == SERCOM_USART_INT_INTFLAG_TXC_Msk)
+200002c0:	4b02      	ldr	r3, [pc, #8]	; (200002cc <SERCOM0_USART_TransmitComplete+0xc>)
+200002c2:	7e18      	ldrb	r0, [r3, #24]
+    {
+        transmitComplete = true;
+    }
+
+    return transmitComplete;
+}
+200002c4:	f3c0 0040 	ubfx	r0, r0, #1, #1
+200002c8:	4770      	bx	lr
+200002ca:	bf00      	nop
+200002cc:	40000c00 	.word	0x40000c00
+
+200002d0 <SERCOM0_USART_ReceiverIsReady>:
+
+bool SERCOM0_USART_ReceiverIsReady( void )
+{
+    bool receiverStatus = false;
+
+    if ((SERCOM0_REGS->USART_INT.SERCOM_INTFLAG & SERCOM_USART_INT_INTFLAG_RXC_Msk) == SERCOM_USART_INT_INTFLAG_RXC_Msk)
+200002d0:	4b02      	ldr	r3, [pc, #8]	; (200002dc <SERCOM0_USART_ReceiverIsReady+0xc>)
+200002d2:	7e18      	ldrb	r0, [r3, #24]
+    {
+        receiverStatus = true;
+    }
+
+    return receiverStatus;
+}
+200002d4:	f3c0 0080 	ubfx	r0, r0, #2, #1
+200002d8:	4770      	bx	lr
+200002da:	bf00      	nop
+200002dc:	40000c00 	.word	0x40000c00
+
+200002e0 <SERCOM0_USART_ReadByte>:
+
+int SERCOM0_USART_ReadByte( void )
+{
+    return (int)SERCOM0_REGS->USART_INT.SERCOM_DATA;
+200002e0:	4b01      	ldr	r3, [pc, #4]	; (200002e8 <SERCOM0_USART_ReadByte+0x8>)
+200002e2:	6a98      	ldr	r0, [r3, #40]	; 0x28
+}
+200002e4:	4770      	bx	lr
+200002e6:	bf00      	nop
+200002e8:	40000c00 	.word	0x40000c00
+
+200002ec <CLOCK_Initialize>:
+    The objective is to eliminate the user's need to be knowledgeable in the
+    function of the 'configuration bits' to configure the system oscillators.
+*/
+
+void CLOCK_Initialize( void )
+{
+200002ec:	b470      	push	{r4, r5, r6}
+    //check CLDO ready
+    while ((CFG_REGS->CFG_MISCSTAT & CFG_MISCSTAT_CLDORDY_Msk) == 0U)
+200002ee:	f04f 4288 	mov.w	r2, #1140850688	; 0x44000000
+200002f2:	f8d2 3100 	ldr.w	r3, [r2, #256]	; 0x100
+200002f6:	0599      	lsls	r1, r3, #22
+200002f8:	d5fb      	bpl.n	200002f2 <CLOCK_Initialize+0x6>
+        /* Nothing to do */
+    }        
+    
+    //programming 4ms delay -  programming subsys_xtal_ready_delay
+    //check xtal spec for delay required
+    BTZBSYS_REGS->BTZBSYS_SUBSYS_CNTRL_REG1 = ((BTZBSYS_REGS->BTZBSYS_SUBSYS_CNTRL_REG1 & ~BTZBSYS_SUBSYS_CNTRL_REG1_subsys_xtal_ready_delay_Msk)
+200002fa:	4a31      	ldr	r2, [pc, #196]	; (200003c0 <CLOCK_Initialize+0xd4>)
+200002fc:	6853      	ldr	r3, [r2, #4]
+200002fe:	f423 4370 	bic.w	r3, r3, #61440	; 0xf000
+                                                | ((0x01UL) << BTZBSYS_SUBSYS_CNTRL_REG1_subsys_xtal_ready_delay_Pos)); 
+20000302:	f443 5380 	orr.w	r3, r3, #4096	; 0x1000
+    BTZBSYS_REGS->BTZBSYS_SUBSYS_CNTRL_REG1 = ((BTZBSYS_REGS->BTZBSYS_SUBSYS_CNTRL_REG1 & ~BTZBSYS_SUBSYS_CNTRL_REG1_subsys_xtal_ready_delay_Msk)
+20000306:	6053      	str	r3, [r2, #4]
+    //wait for crystal ready
+    while((BTZBSYS_REGS->BTZBSYS_SUBSYS_STATUS_REG1 & BTZBSYS_SUBSYS_STATUS_REG1_xtal_ready_out_Msk) != BTZBSYS_SUBSYS_STATUS_REG1_xtal_ready_out_Msk)
+20000308:	6a53      	ldr	r3, [r2, #36]	; 0x24
+2000030a:	07db      	lsls	r3, r3, #31
+2000030c:	d5fc      	bpl.n	20000308 <CLOCK_Initialize+0x1c>
+    {
+        /* Nothing to do */
+    }
+    // set PLL_enable
+    BLE_REGS->BLE_DPLL_RG2 &= ~((uint16_t)0x02U);
+2000030e:	492d      	ldr	r1, [pc, #180]	; (200003c4 <CLOCK_Initialize+0xd8>)
+    /* SPLLFLOCK    = 0x0    */
+    /* SPLLRST      = 0x1      */    
+    /* SPLLPOSTDIV1 = 1 */
+    /* SPLLPOSTDIV2 = 0x1 */    
+    /* SPLL_BYP     = 0x3     */
+    CRU_REGS->CRU_SPLLCON = 0xc0010028U;
+20000310:	482d      	ldr	r0, [pc, #180]	; (200003c8 <CLOCK_Initialize+0xdc>)
+    BLE_REGS->BLE_DPLL_RG2 &= ~((uint16_t)0x02U);
+20000312:	f8b1 34ba 	ldrh.w	r3, [r1, #1210]	; 0x4ba
+    CFG_REGS->CFG_SYSKEY = 0xAA996655U;
+20000316:	4d2d      	ldr	r5, [pc, #180]	; (200003cc <CLOCK_Initialize+0xe0>)
+    CFG_REGS->CFG_SYSKEY = 0x556699AAU;
+20000318:	4c2d      	ldr	r4, [pc, #180]	; (200003d0 <CLOCK_Initialize+0xe4>)
+    BLE_REGS->BLE_DPLL_RG2 &= ~((uint16_t)0x02U);
+2000031a:	f023 0302 	bic.w	r3, r3, #2
+2000031e:	041b      	lsls	r3, r3, #16
+20000320:	0c1b      	lsrs	r3, r3, #16
+20000322:	f8a1 34ba 	strh.w	r3, [r1, #1210]	; 0x4ba
+    BTZBSYS_REGS->BTZBSYS_SUBSYS_CNTRL_REG3 = ((BTZBSYS_REGS->BTZBSYS_SUBSYS_CNTRL_REG3 & ~BTZBSYS_SUBSYS_CNTRL_REG3_subsys_pll_ready_delay_Msk )
+20000326:	68d3      	ldr	r3, [r2, #12]
+    CRU_REGS->CRU_SPLLCON = 0xc0010028U;
+20000328:	492a      	ldr	r1, [pc, #168]	; (200003d4 <CLOCK_Initialize+0xe8>)
+    BTZBSYS_REGS->BTZBSYS_SUBSYS_CNTRL_REG3 = ((BTZBSYS_REGS->BTZBSYS_SUBSYS_CNTRL_REG3 & ~BTZBSYS_SUBSYS_CNTRL_REG3_subsys_pll_ready_delay_Msk )
+2000032a:	f023 037e 	bic.w	r3, r3, #126	; 0x7e
+                                                   | ((0x02UL) << BTZBSYS_SUBSYS_CNTRL_REG3_subsys_pll_ready_delay_Pos));
+2000032e:	f043 0304 	orr.w	r3, r3, #4
+    BTZBSYS_REGS->BTZBSYS_SUBSYS_CNTRL_REG3 = ((BTZBSYS_REGS->BTZBSYS_SUBSYS_CNTRL_REG3 & ~BTZBSYS_SUBSYS_CNTRL_REG3_subsys_pll_ready_delay_Msk )
+20000332:	60d3      	str	r3, [r2, #12]
+    CFG_REGS->CFG_SYSKEY = 0x00000000U;
+20000334:	f04f 4388 	mov.w	r3, #1140850688	; 0x44000000
+20000338:	2200      	movs	r2, #0
+2000033a:	f8c3 20b0 	str.w	r2, [r3, #176]	; 0xb0
+
+    //wait for PLL Lock
+    while((BTZBSYS_REGS -> BTZBSYS_SUBSYS_STATUS_REG1 & 0x03U) != 0x03U)
+2000033e:	4a20      	ldr	r2, [pc, #128]	; (200003c0 <CLOCK_Initialize+0xd4>)
+    CFG_REGS->CFG_SYSKEY = 0xAA996655U;
+20000340:	f8c3 50b0 	str.w	r5, [r3, #176]	; 0xb0
+    CFG_REGS->CFG_SYSKEY = 0x556699AAU;
+20000344:	f8c3 40b0 	str.w	r4, [r3, #176]	; 0xb0
+    CRU_REGS->CRU_SPLLCON = 0xc0010028U;
+20000348:	6201      	str	r1, [r0, #32]
+    while((BTZBSYS_REGS -> BTZBSYS_SUBSYS_STATUS_REG1 & 0x03U) != 0x03U)
+2000034a:	6a53      	ldr	r3, [r2, #36]	; 0x24
+2000034c:	f003 0303 	and.w	r3, r3, #3
+20000350:	2b03      	cmp	r3, #3
+20000352:	d1fa      	bne.n	2000034a <CLOCK_Initialize+0x5e>
+    /* CLKLOCK  = UNLOCKED  */
+    /* NOSC     = SPLL     */
+    /* WAKE2SPD = FRC */
+    /* DRMEN    = NO_EFFECT    */
+    /* FRCDIV   = DIV_1   */
+    CRU_REGS->CRU_OSCCON = 0x200105;
+20000354:	4a1c      	ldr	r2, [pc, #112]	; (200003c8 <CLOCK_Initialize+0xdc>)
+20000356:	4b20      	ldr	r3, [pc, #128]	; (200003d8 <CLOCK_Initialize+0xec>)
+20000358:	6013      	str	r3, [r2, #0]
+
+    CRU_REGS->CRU_OSCCONSET = CRU_OSCCON_OSWEN_Msk;  /* request oscillator switch to occur */
+2000035a:	2301      	movs	r3, #1
+2000035c:	6093      	str	r3, [r2, #8]
+
+    while((CRU_REGS->CRU_OSCCON & CRU_OSCCON_OSWEN_Msk) != 0U)       /* wait for indication of successful clock change before proceeding */
+2000035e:	6813      	ldr	r3, [r2, #0]
+20000360:	f013 0301 	ands.w	r3, r3, #1
+20000364:	d1fb      	bne.n	2000035e <CLOCK_Initialize+0x72>
+    /* Enable oscillator (ON bit) */
+    CRU_REGS->CRU_REFO1CONSET = 0x00008000;
+
+
+    /* Peripheral Clock Generators */
+    CFG_REGS->CFG_CFGPCLKGEN1 = 0x9000;
+20000366:	f04f 4188 	mov.w	r1, #1140850688	; 0x44000000
+    CRU_REGS->CRU_PB3DIV = CRU_PB3DIV_PBDIVON_Msk | CRU_PB3DIV_PBDIV(9);
+2000036a:	f248 0509 	movw	r5, #32777	; 0x8009
+    CRU_REGS->CRU_REFO1CON = 0x201;
+2000036e:	f240 2401 	movw	r4, #513	; 0x201
+    CRU_REGS->CRU_REFO1CONSET = 0x00008000;
+20000372:	f44f 4000 	mov.w	r0, #32768	; 0x8000
+    CRU_REGS->CRU_PB3DIV = CRU_PB3DIV_PBDIVON_Msk | CRU_PB3DIV_PBDIV(9);
+20000376:	f8c2 5150 	str.w	r5, [r2, #336]	; 0x150
+    CFG_REGS->CFG_CFGPCLKGEN1 = 0x9000;
+2000037a:	f44f 4610 	mov.w	r6, #36864	; 0x9000
+    CRU_REGS->CRU_REFO1CON = 0x201;
+2000037e:	6714      	str	r4, [r2, #112]	; 0x70
+    CFG_REGS->CFG_CFGPCLKGEN4 = 0x0;
+
+    /* Peripheral Module Disable Configuration */
+
+
+    CFG_REGS->CFG_PMD1 = 0x208103cf;
+20000380:	4d16      	ldr	r5, [pc, #88]	; (200003dc <CLOCK_Initialize+0xf0>)
+    CRU_REGS->CRU_REFO1CONSET = 0x00008000;
+20000382:	6790      	str	r0, [r2, #120]	; 0x78
+    CFG_REGS->CFG_PMD2 = 0x0;
+    CFG_REGS->CFG_PMD3 = 0x7ffe;
+20000384:	f647 74fe 	movw	r4, #32766	; 0x7ffe
+
+    /* Lock system since done with clock configuration */
+    CFG_REGS->CFG_SYSKEY = 0x33333333U;
+
+    // Change src_clk source to PLL CLK
+    BTZBSYS_REGS->BTZBSYS_SUBSYS_CNTRL_REG1 |= 0x00000010U;
+20000388:	4a0d      	ldr	r2, [pc, #52]	; (200003c0 <CLOCK_Initialize+0xd4>)
+    CFG_REGS->CFG_CFGPCLKGEN1 = 0x9000;
+2000038a:	660e      	str	r6, [r1, #96]	; 0x60
+    CFG_REGS->CFG_SYSKEY = 0x33333333U;
+2000038c:	f04f 3033 	mov.w	r0, #858993459	; 0x33333333
+    CFG_REGS->CFG_CFGPCLKGEN2 = 0x0;
+20000390:	670b      	str	r3, [r1, #112]	; 0x70
+    CFG_REGS->CFG_CFGPCLKGEN3 = 0x0;
+20000392:	f8c1 3080 	str.w	r3, [r1, #128]	; 0x80
+    CFG_REGS->CFG_CFGPCLKGEN4 = 0x0;
+20000396:	f8c1 3090 	str.w	r3, [r1, #144]	; 0x90
+    CFG_REGS->CFG_PMD1 = 0x208103cf;
+2000039a:	f8c1 50c0 	str.w	r5, [r1, #192]	; 0xc0
+    CFG_REGS->CFG_PMD2 = 0x0;
+2000039e:	f8c1 30d0 	str.w	r3, [r1, #208]	; 0xd0
+    CFG_REGS->CFG_PMD3 = 0x7ffe;
+200003a2:	f8c1 40e0 	str.w	r4, [r1, #224]	; 0xe0
+    CFG_REGS->CFG_SYSKEY = 0x33333333U;
+200003a6:	f8c1 00b0 	str.w	r0, [r1, #176]	; 0xb0
+    BTZBSYS_REGS->BTZBSYS_SUBSYS_CNTRL_REG1 |= 0x00000010U;
+200003aa:	6853      	ldr	r3, [r2, #4]
+200003ac:	f043 0310 	orr.w	r3, r3, #16
+200003b0:	6053      	str	r3, [r2, #4]
+
+    // set aclb_reset_n[24]
+    BTZBSYS_REGS->BTZBSYS_SUBSYS_CNTRL_REG0 |= 0x01000000U;
+200003b2:	6813      	ldr	r3, [r2, #0]
+200003b4:	f043 7380 	orr.w	r3, r3, #16777216	; 0x1000000
+200003b8:	6013      	str	r3, [r2, #0]
+}
+200003ba:	bc70      	pop	{r4, r5, r6}
+200003bc:	4770      	bx	lr
+200003be:	bf00      	nop
+200003c0:	41014000 	.word	0x41014000
+200003c4:	41012000 	.word	0x41012000
+200003c8:	44000a00 	.word	0x44000a00
+200003cc:	aa996655 	.word	0xaa996655
+200003d0:	556699aa 	.word	0x556699aa
+200003d4:	c0010028 	.word	0xc0010028
+200003d8:	00200105 	.word	0x00200105
+200003dc:	208103cf 	.word	0x208103cf
+
+200003e0 <DSU_CRCCalculate>:
+
+bool DSU_CRCCalculate (uint32_t startAddress, size_t length, uint32_t crcSeed, uint32_t * crc)
+{
+    bool statusValue = false;
+
+    if( (0U != length) && (NULL != crc) )
+200003e0:	b909      	cbnz	r1, 200003e6 <DSU_CRCCalculate+0x6>
+    bool statusValue = false;
+200003e2:	2000      	movs	r0, #0
+            statusValue = true;
+        }
+    }
+
+    return statusValue;
+}
+200003e4:	4770      	bx	lr
+    if( (0U != length) && (NULL != crc) )
+200003e6:	2b00      	cmp	r3, #0
+200003e8:	d0fb      	beq.n	200003e2 <DSU_CRCCalculate+0x2>
+{
+200003ea:	b430      	push	{r4, r5}
+        DSU_REGS->DSU_ADDR = startAddress;
+200003ec:	f04f 4482 	mov.w	r4, #1090519040	; 0x41000000
+        DSU_REGS->DSU_CTRL = DSU_CTRL_CRC_Msk;
+200003f0:	2504      	movs	r5, #4
+        DSU_REGS->DSU_ADDR = startAddress;
+200003f2:	6060      	str	r0, [r4, #4]
+        DSU_REGS->DSU_LENGTH = (uint32_t)length;
+200003f4:	60a1      	str	r1, [r4, #8]
+        DSU_REGS->DSU_DATA = crcSeed;
+200003f6:	60e2      	str	r2, [r4, #12]
+        DSU_REGS->DSU_STATUSA = DSU_REGS->DSU_STATUSA;
+200003f8:	7862      	ldrb	r2, [r4, #1]
+200003fa:	b2d2      	uxtb	r2, r2
+200003fc:	7062      	strb	r2, [r4, #1]
+        while((DSU_REGS->DSU_STATUSA & DSU_STATUSA_DONE_Msk) == 0U )
+200003fe:	4621      	mov	r1, r4
+        DSU_REGS->DSU_CTRL = DSU_CTRL_CRC_Msk;
+20000400:	7025      	strb	r5, [r4, #0]
+        while((DSU_REGS->DSU_STATUSA & DSU_STATUSA_DONE_Msk) == 0U )
+20000402:	784a      	ldrb	r2, [r1, #1]
+20000404:	07d0      	lsls	r0, r2, #31
+20000406:	d5fc      	bpl.n	20000402 <DSU_CRCCalculate+0x22>
+        if((DSU_REGS->DSU_STATUSA & DSU_STATUSA_BERR_Msk) == 0U )
+20000408:	784a      	ldrb	r2, [r1, #1]
+2000040a:	0752      	lsls	r2, r2, #29
+2000040c:	d502      	bpl.n	20000414 <DSU_CRCCalculate+0x34>
+    bool statusValue = false;
+2000040e:	2000      	movs	r0, #0
+}
+20000410:	bc30      	pop	{r4, r5}
+20000412:	4770      	bx	lr
+            *crc = (uint32_t) DSU_REGS->DSU_DATA;
+20000414:	68ca      	ldr	r2, [r1, #12]
+20000416:	601a      	str	r2, [r3, #0]
+            statusValue = true;
+20000418:	2001      	movs	r0, #1
+}
+2000041a:	bc30      	pop	{r4, r5}
+2000041c:	4770      	bx	lr
+2000041e:	bf00      	nop
+
+20000420 <bootloader_Trigger>:
+#define BTL_TRIGGER_PATTERN (0x5048434DUL)
+
+static uint32_t *ramStart = (uint32_t *)BTL_TRIGGER_RAM_START;
+
+bool bootloader_Trigger(void)
+{
+20000420:	f44f 63fa 	mov.w	r3, #2000	; 0x7d0
+    uint32_t i;
+
+    // Cheap delay. This should give at leat 1 ms delay.
+    for (i = 0; i < 2000; i++)
+    {
+        asm("nop");
+20000424:	bf00      	nop
+    for (i = 0; i < 2000; i++)
+20000426:	3b01      	subs	r3, #1
+20000428:	d1fc      	bne.n	20000424 <bootloader_Trigger+0x4>
+    }
+
+    /* Check for Bootloader Trigger Pattern in first 16 Bytes of RAM to enter
+     * Bootloader.
+     */
+    if (BTL_TRIGGER_PATTERN == ramStart[0] && BTL_TRIGGER_PATTERN == ramStart[1] &&
+2000042a:	f04f 5200 	mov.w	r2, #536870912	; 0x20000000
+2000042e:	480b      	ldr	r0, [pc, #44]	; (2000045c <bootloader_Trigger+0x3c>)
+20000430:	6811      	ldr	r1, [r2, #0]
+20000432:	4281      	cmp	r1, r0
+20000434:	d006      	beq.n	20000444 <bootloader_Trigger+0x24>
+        ramStart[0] = 0;
+        return true;
+    }
+
+    /* Check for Switch press to enter Bootloader */
+    if (SWITCH_Get() == 0)
+20000436:	4b0a      	ldr	r3, [pc, #40]	; (20000460 <bootloader_Trigger+0x40>)
+20000438:	6a18      	ldr	r0, [r3, #32]
+2000043a:	ea6f 1010 	mvn.w	r0, r0, lsr #4
+2000043e:	f000 0001 	and.w	r0, r0, #1
+    {
+        return true;
+    }
+
+    return false;
+}
+20000442:	4770      	bx	lr
+    if (BTL_TRIGGER_PATTERN == ramStart[0] && BTL_TRIGGER_PATTERN == ramStart[1] &&
+20000444:	6850      	ldr	r0, [r2, #4]
+20000446:	4288      	cmp	r0, r1
+20000448:	d1f5      	bne.n	20000436 <bootloader_Trigger+0x16>
+2000044a:	6891      	ldr	r1, [r2, #8]
+2000044c:	4281      	cmp	r1, r0
+2000044e:	d1f2      	bne.n	20000436 <bootloader_Trigger+0x16>
+        BTL_TRIGGER_PATTERN == ramStart[2] && BTL_TRIGGER_PATTERN == ramStart[3])
+20000450:	68d0      	ldr	r0, [r2, #12]
+20000452:	4288      	cmp	r0, r1
+20000454:	d1ef      	bne.n	20000436 <bootloader_Trigger+0x16>
+        ramStart[0] = 0;
+20000456:	6013      	str	r3, [r2, #0]
+        return true;
+20000458:	2001      	movs	r0, #1
+2000045a:	4770      	bx	lr
+2000045c:	5048434d 	.word	0x5048434d
+20000460:	44002a00 	.word	0x44002a00
+
+20000464 <main>:
+// Section: Main Entry Point
+// *****************************************************************************
+// *****************************************************************************
+
+int main ( void )
+{
+20000464:	b508      	push	{r3, lr}
+    /* Initialize all modules */
+    SYS_Initialize ( NULL );
+20000466:	2000      	movs	r0, #0
+20000468:	f7ff fed4 	bl	20000214 <SYS_Initialize>
+
+    while (true)
+    {
+        bootloader_UART_Tasks();
+2000046c:	f000 f856 	bl	2000051c <bootloader_UART_Tasks>
+20000470:	e7fc      	b.n	2000046c <main+0x8>
+20000472:	bf00      	nop
+
+20000474 <input_task>:
+// *****************************************************************************
+// *****************************************************************************
+
+/* Function to receive application firmware via UART/USART */
+static void input_task(void)
+{
+20000474:	b570      	push	{r4, r5, r6, lr}
+    static uint32_t size            = 0;
+    static bool     header_received = false;
+    uint8_t         *byte_buf       = (uint8_t *)&input_buffer[0];
+    uint8_t         input_data      = 0;
+
+    if (packet_received == true)
+20000476:	4c25      	ldr	r4, [pc, #148]	; (2000050c <input_task+0x98>)
+20000478:	7825      	ldrb	r5, [r4, #0]
+2000047a:	b105      	cbz	r5, 2000047e <input_task+0xa>
+    {
+        /* Nothing to do */
+    }
+
+    SYSTICK_TimerRestart();
+}
+2000047c:	bd70      	pop	{r4, r5, r6, pc}
+    if (SERCOM0_USART_ReceiverIsReady() == false)
+2000047e:	f7ff ff27 	bl	200002d0 <SERCOM0_USART_ReceiverIsReady>
+20000482:	2800      	cmp	r0, #0
+20000484:	d0fa      	beq.n	2000047c <input_task+0x8>
+    input_data = (uint8_t)SERCOM0_USART_ReadByte();
+20000486:	f7ff ff2b 	bl	200002e0 <SERCOM0_USART_ReadByte>
+2000048a:	b2c6      	uxtb	r6, r0
+    if (SYSTICK_TimerPeriodHasExpired())
+2000048c:	f7ff feba 	bl	20000204 <SYSTICK_TimerPeriodHasExpired>
+20000490:	b9b8      	cbnz	r0, 200004c2 <input_task+0x4e>
+    if (header_received == false)
+20000492:	7863      	ldrb	r3, [r4, #1]
+20000494:	6865      	ldr	r5, [r4, #4]
+20000496:	b303      	cbz	r3, 200004da <input_task+0x66>
+        if (ptr < size)
+20000498:	68a3      	ldr	r3, [r4, #8]
+2000049a:	42ab      	cmp	r3, r5
+2000049c:	d904      	bls.n	200004a8 <input_task+0x34>
+            byte_buf[ptr++] = input_data;
+2000049e:	491c      	ldr	r1, [pc, #112]	; (20000510 <input_task+0x9c>)
+200004a0:	1c6a      	adds	r2, r5, #1
+200004a2:	546e      	strb	r6, [r5, r1]
+200004a4:	6062      	str	r2, [r4, #4]
+200004a6:	4615      	mov	r5, r2
+        if (ptr == size)
+200004a8:	42ab      	cmp	r3, r5
+200004aa:	d106      	bne.n	200004ba <input_task+0x46>
+            ptr = 0;
+200004ac:	2200      	movs	r2, #0
+            size = 0;
+200004ae:	e9c4 2201 	strd	r2, r2, [r4, #4]
+            packet_received = true;
+200004b2:	2101      	movs	r1, #1
+            data_size = size;
+200004b4:	6123      	str	r3, [r4, #16]
+            header_received = false;
+200004b6:	7062      	strb	r2, [r4, #1]
+            packet_received = true;
+200004b8:	7021      	strb	r1, [r4, #0]
+}
+200004ba:	e8bd 4070 	ldmia.w	sp!, {r4, r5, r6, lr}
+    SYSTICK_TimerRestart();
+200004be:	f7ff be93 	b.w	200001e8 <SYSTICK_TimerRestart>
+        byte_buf[ptr] = input_data;
+200004c2:	4a13      	ldr	r2, [pc, #76]	; (20000510 <input_task+0x9c>)
+        header_received = false;
+200004c4:	7065      	strb	r5, [r4, #1]
+        ptr++;
+200004c6:	2301      	movs	r3, #1
+        byte_buf[ptr] = input_data;
+200004c8:	7016      	strb	r6, [r2, #0]
+        ptr++;
+200004ca:	6063      	str	r3, [r4, #4]
+            if (input_data != btl_guard[ptr-1U])
+200004cc:	4b11      	ldr	r3, [pc, #68]	; (20000514 <input_task+0xa0>)
+200004ce:	5d5b      	ldrb	r3, [r3, r5]
+200004d0:	42b3      	cmp	r3, r6
+200004d2:	d0f2      	beq.n	200004ba <input_task+0x46>
+                ptr = 0;
+200004d4:	2300      	movs	r3, #0
+200004d6:	6063      	str	r3, [r4, #4]
+200004d8:	e7ef      	b.n	200004ba <input_task+0x46>
+200004da:	1c6b      	adds	r3, r5, #1
+        byte_buf[ptr] = input_data;
+200004dc:	4a0c      	ldr	r2, [pc, #48]	; (20000510 <input_task+0x9c>)
+        ptr++;
+200004de:	6063      	str	r3, [r4, #4]
+        if (ptr <= GUARD_SIZE)
+200004e0:	2b04      	cmp	r3, #4
+        byte_buf[ptr] = input_data;
+200004e2:	5556      	strb	r6, [r2, r5]
+        if (ptr <= GUARD_SIZE)
+200004e4:	d9f2      	bls.n	200004cc <input_task+0x58>
+        else if (ptr == HEADER_SIZE)
+200004e6:	2b09      	cmp	r3, #9
+200004e8:	d1e7      	bne.n	200004ba <input_task+0x46>
+            if (input_buffer[GUARD_OFFSET] != BTL_GUARD)
+200004ea:	4b0b      	ldr	r3, [pc, #44]	; (20000518 <input_task+0xa4>)
+200004ec:	6811      	ldr	r1, [r2, #0]
+200004ee:	4299      	cmp	r1, r3
+200004f0:	d003      	beq.n	200004fa <input_task+0x86>
+                SERCOM0_USART_WriteByte(BL_RESP_ERROR);
+200004f2:	2051      	movs	r0, #81	; 0x51
+200004f4:	f7ff feda 	bl	200002ac <SERCOM0_USART_WriteByte>
+200004f8:	e7ec      	b.n	200004d4 <input_task+0x60>
+                input_command   = (uint8_t)input_buffer[CMD_OFFSET];
+200004fa:	e9d2 3201 	ldrd	r3, r2, [r2, #4]
+                size            = input_buffer[SIZE_OFFSET];
+200004fe:	60a3      	str	r3, [r4, #8]
+                header_received = true;
+20000500:	2301      	movs	r3, #1
+                input_command   = (uint8_t)input_buffer[CMD_OFFSET];
+20000502:	7322      	strb	r2, [r4, #12]
+                header_received = true;
+20000504:	7063      	strb	r3, [r4, #1]
+                uartBLActive    = true;
+20000506:	7363      	strb	r3, [r4, #13]
+20000508:	e7e4      	b.n	200004d4 <input_task+0x60>
+2000050a:	bf00      	nop
+2000050c:	200006a4 	.word	0x200006a4
+20000510:	200016c8 	.word	0x200016c8
+20000514:	200006a0 	.word	0x200006a0
+20000518:	5048434d 	.word	0x5048434d
+
+2000051c <bootloader_UART_Tasks>:
+// Section: Bootloader Global Functions
+// *****************************************************************************
+// *****************************************************************************
+
+void bootloader_UART_Tasks(void)
+{
+2000051c:	e92d 4ff8 	stmdb	sp!, {r3, r4, r5, r6, r7, r8, r9, sl, fp, lr}
+20000520:	4e59      	ldr	r6, [pc, #356]	; (20000688 <bootloader_UART_Tasks+0x16c>)
+        uint32_t crc        = input_buffer[CRC_OFFSET];
+20000522:	4f5a      	ldr	r7, [pc, #360]	; (2000068c <bootloader_UART_Tasks+0x170>)
+        flash_addr = (input_buffer[ADDR_OFFSET] & OFFSET_ALIGN_MASK);
+20000524:	f8df 8170 	ldr.w	r8, [pc, #368]	; 20000698 <bootloader_UART_Tasks+0x17c>
+        uint32_t end    = begin + (input_buffer[SIZE_OFFSET] & SIZE_ALIGN_MASK);
+20000528:	f8df 9170 	ldr.w	r9, [pc, #368]	; 2000069c <bootloader_UART_Tasks+0x180>
+2000052c:	e005      	b.n	2000053a <bootloader_UART_Tasks+0x1e>
+
+        if (flash_data_ready)
+        {
+            flash_task();
+        }
+        else if (packet_received)
+2000052e:	7833      	ldrb	r3, [r6, #0]
+20000530:	2b00      	cmp	r3, #0
+20000532:	d13c      	bne.n	200005ae <bootloader_UART_Tasks+0x92>
+        }
+        else
+        {
+            /* Nothing to do */
+        }
+    } while (uartBLActive);
+20000534:	7b73      	ldrb	r3, [r6, #13]
+20000536:	2b00      	cmp	r3, #0
+20000538:	d037      	beq.n	200005aa <bootloader_UART_Tasks+0x8e>
+        input_task();
+2000053a:	f7ff ff9b 	bl	20000474 <input_task>
+        if (flash_data_ready)
+2000053e:	7d33      	ldrb	r3, [r6, #20]
+20000540:	2b00      	cmp	r3, #0
+20000542:	d0f4      	beq.n	2000052e <bootloader_UART_Tasks+0x12>
+    uint32_t bytes_to_write = (data_size - 4U);
+20000544:	6933      	ldr	r3, [r6, #16]
+    uint32_t addr       = flash_addr;
+20000546:	69b5      	ldr	r5, [r6, #24]
+    uint32_t bytes_to_write = (data_size - 4U);
+20000548:	f1a3 0a04 	sub.w	sl, r3, #4
+    while(NVM_IsBusy() == true)
+2000054c:	e001      	b.n	20000552 <bootloader_UART_Tasks+0x36>
+        input_task();
+2000054e:	f7ff ff91 	bl	20000474 <input_task>
+    while(NVM_IsBusy() == true)
+20000552:	f7ff fdc9 	bl	200000e8 <NVM_IsBusy>
+20000556:	2800      	cmp	r0, #0
+20000558:	d1f9      	bne.n	2000054e <bootloader_UART_Tasks+0x32>
+    (void) flash_erase_fptr(addr);
+2000055a:	4628      	mov	r0, r5
+2000055c:	f7ff fda2 	bl	200000a4 <NVM_PageErase>
+    while(NVM_IsBusy() == true)
+20000560:	e001      	b.n	20000566 <bootloader_UART_Tasks+0x4a>
+        input_task();
+20000562:	f7ff ff87 	bl	20000474 <input_task>
+    while(NVM_IsBusy() == true)
+20000566:	f7ff fdbf 	bl	200000e8 <NVM_IsBusy>
+2000056a:	2800      	cmp	r0, #0
+2000056c:	d1f9      	bne.n	20000562 <bootloader_UART_Tasks+0x46>
+    for (bytes_written = 0; bytes_written < bytes_to_write; bytes_written += PAGE_SIZE)
+2000056e:	f1ba 0f00 	cmp.w	sl, #0
+20000572:	d015      	beq.n	200005a0 <bootloader_UART_Tasks+0x84>
+20000574:	4b46      	ldr	r3, [pc, #280]	; (20000690 <bootloader_UART_Tasks+0x174>)
+20000576:	4604      	mov	r4, r0
+        (void) flash_write_fptr(&flash_data[write_idx], addr);
+20000578:	eba3 0b05 	sub.w	fp, r3, r5
+2000057c:	4629      	mov	r1, r5
+2000057e:	eb0b 0005 	add.w	r0, fp, r5
+20000582:	f7ff fd6b 	bl	2000005c <NVM_RowWrite>
+        while(NVM_IsBusy() == true)
+20000586:	e001      	b.n	2000058c <bootloader_UART_Tasks+0x70>
+            input_task();
+20000588:	f7ff ff74 	bl	20000474 <input_task>
+        while(NVM_IsBusy() == true)
+2000058c:	f7ff fdac 	bl	200000e8 <NVM_IsBusy>
+20000590:	2800      	cmp	r0, #0
+20000592:	d1f9      	bne.n	20000588 <bootloader_UART_Tasks+0x6c>
+    for (bytes_written = 0; bytes_written < bytes_to_write; bytes_written += PAGE_SIZE)
+20000594:	f504 6480 	add.w	r4, r4, #1024	; 0x400
+20000598:	45a2      	cmp	sl, r4
+        addr += PAGE_SIZE;
+2000059a:	f505 6580 	add.w	r5, r5, #1024	; 0x400
+    for (bytes_written = 0; bytes_written < bytes_to_write; bytes_written += PAGE_SIZE)
+2000059e:	d8ed      	bhi.n	2000057c <bootloader_UART_Tasks+0x60>
+    flash_data_ready = false;
+200005a0:	2300      	movs	r3, #0
+200005a2:	7533      	strb	r3, [r6, #20]
+    } while (uartBLActive);
+200005a4:	7b73      	ldrb	r3, [r6, #13]
+200005a6:	2b00      	cmp	r3, #0
+200005a8:	d1c7      	bne.n	2000053a <bootloader_UART_Tasks+0x1e>
+}
+200005aa:	e8bd 8ff8 	ldmia.w	sp!, {r3, r4, r5, r6, r7, r8, r9, sl, fp, pc}
+    if (BL_CMD_UNLOCK == input_command)
+200005ae:	7b33      	ldrb	r3, [r6, #12]
+200005b0:	2ba0      	cmp	r3, #160	; 0xa0
+200005b2:	d00b      	beq.n	200005cc <bootloader_UART_Tasks+0xb0>
+    else if (BL_CMD_DATA == input_command)
+200005b4:	2ba1      	cmp	r3, #161	; 0xa1
+200005b6:	d01e      	beq.n	200005f6 <bootloader_UART_Tasks+0xda>
+    else if (BL_CMD_READ_VERSION == input_command)
+200005b8:	2ba6      	cmp	r3, #166	; 0xa6
+200005ba:	d04a      	beq.n	20000652 <bootloader_UART_Tasks+0x136>
+    else if (BL_CMD_VERIFY == input_command)
+200005bc:	2ba2      	cmp	r3, #162	; 0xa2
+200005be:	d056      	beq.n	2000066e <bootloader_UART_Tasks+0x152>
+    else if (BL_CMD_RESET == input_command)
+200005c0:	2ba3      	cmp	r3, #163	; 0xa3
+200005c2:	d036      	beq.n	20000632 <bootloader_UART_Tasks+0x116>
+        SERCOM0_USART_WriteByte(BL_RESP_INVALID);
+200005c4:	2052      	movs	r0, #82	; 0x52
+200005c6:	f7ff fe71 	bl	200002ac <SERCOM0_USART_WriteByte>
+200005ca:	e011      	b.n	200005f0 <bootloader_UART_Tasks+0xd4>
+        uint32_t end    = begin + (input_buffer[SIZE_OFFSET] & SIZE_ALIGN_MASK);
+200005cc:	e9d7 2300 	ldrd	r2, r3, [r7]
+        uint32_t begin  = (input_buffer[ADDR_OFFSET] & OFFSET_ALIGN_MASK);
+200005d0:	ea02 0208 	and.w	r2, r2, r8
+        uint32_t end    = begin + (input_buffer[SIZE_OFFSET] & SIZE_ALIGN_MASK);
+200005d4:	ea03 0309 	and.w	r3, r3, r9
+200005d8:	4413      	add	r3, r2
+        if (end > begin && end <= (FLASH_START + FLASH_LENGTH))
+200005da:	429a      	cmp	r2, r3
+200005dc:	d202      	bcs.n	200005e4 <bootloader_UART_Tasks+0xc8>
+200005de:	f1b3 7f84 	cmp.w	r3, #17301504	; 0x1080000
+200005e2:	d930      	bls.n	20000646 <bootloader_UART_Tasks+0x12a>
+            unlock_begin = 0;
+200005e4:	2300      	movs	r3, #0
+            SERCOM0_USART_WriteByte(BL_RESP_ERROR);
+200005e6:	2051      	movs	r0, #81	; 0x51
+            unlock_end = 0;
+200005e8:	e9c6 3307 	strd	r3, r3, [r6, #28]
+            SERCOM0_USART_WriteByte(BL_RESP_ERROR);
+200005ec:	f7ff fe5e 	bl	200002ac <SERCOM0_USART_WriteByte>
+    packet_received = false;
+200005f0:	2300      	movs	r3, #0
+200005f2:	7033      	strb	r3, [r6, #0]
+200005f4:	e79e      	b.n	20000534 <bootloader_UART_Tasks+0x18>
+        flash_addr = (input_buffer[ADDR_OFFSET] & OFFSET_ALIGN_MASK);
+200005f6:	683b      	ldr	r3, [r7, #0]
+        if (unlock_begin <= flash_addr && flash_addr < unlock_end)
+200005f8:	69f2      	ldr	r2, [r6, #28]
+        flash_addr = (input_buffer[ADDR_OFFSET] & OFFSET_ALIGN_MASK);
+200005fa:	ea03 0308 	and.w	r3, r3, r8
+        if (unlock_begin <= flash_addr && flash_addr < unlock_end)
+200005fe:	4293      	cmp	r3, r2
+        flash_addr = (input_buffer[ADDR_OFFSET] & OFFSET_ALIGN_MASK);
+20000600:	61b3      	str	r3, [r6, #24]
+        if (unlock_begin <= flash_addr && flash_addr < unlock_end)
+20000602:	d312      	bcc.n	2000062a <bootloader_UART_Tasks+0x10e>
+20000604:	6a32      	ldr	r2, [r6, #32]
+20000606:	4293      	cmp	r3, r2
+20000608:	d20f      	bcs.n	2000062a <bootloader_UART_Tasks+0x10e>
+2000060a:	4b20      	ldr	r3, [pc, #128]	; (2000068c <bootloader_UART_Tasks+0x170>)
+2000060c:	4a21      	ldr	r2, [pc, #132]	; (20000694 <bootloader_UART_Tasks+0x178>)
+2000060e:	f503 5080 	add.w	r0, r3, #4096	; 0x1000
+                flash_data[i] = input_buffer[i + DATA_OFFSET];
+20000612:	f853 1f04 	ldr.w	r1, [r3, #4]!
+20000616:	f842 1f04 	str.w	r1, [r2, #4]!
+            for (i = 0; i < WORDS(DATA_SIZE); i++)
+2000061a:	4283      	cmp	r3, r0
+2000061c:	d1f9      	bne.n	20000612 <bootloader_UART_Tasks+0xf6>
+            flash_data_ready = true;
+2000061e:	2301      	movs	r3, #1
+            SERCOM0_USART_WriteByte(BL_RESP_OK);
+20000620:	2050      	movs	r0, #80	; 0x50
+            flash_data_ready = true;
+20000622:	7533      	strb	r3, [r6, #20]
+            SERCOM0_USART_WriteByte(BL_RESP_OK);
+20000624:	f7ff fe42 	bl	200002ac <SERCOM0_USART_WriteByte>
+20000628:	e7e2      	b.n	200005f0 <bootloader_UART_Tasks+0xd4>
+            SERCOM0_USART_WriteByte(BL_RESP_ERROR);
+2000062a:	2051      	movs	r0, #81	; 0x51
+2000062c:	f7ff fe3e 	bl	200002ac <SERCOM0_USART_WriteByte>
+20000630:	e7de      	b.n	200005f0 <bootloader_UART_Tasks+0xd4>
+        SERCOM0_USART_WriteByte(BL_RESP_OK);
+20000632:	2050      	movs	r0, #80	; 0x50
+20000634:	f7ff fe3a 	bl	200002ac <SERCOM0_USART_WriteByte>
+        while(SERCOM0_USART_TransmitComplete() == false)
+20000638:	f7ff fe42 	bl	200002c0 <SERCOM0_USART_TransmitComplete>
+2000063c:	2800      	cmp	r0, #0
+2000063e:	d0fb      	beq.n	20000638 <bootloader_UART_Tasks+0x11c>
+        bootloader_TriggerReset();
+20000640:	f7ff fd98 	bl	20000174 <bootloader_TriggerReset>
+20000644:	e7d4      	b.n	200005f0 <bootloader_UART_Tasks+0xd4>
+            SERCOM0_USART_WriteByte(BL_RESP_OK);
+20000646:	2050      	movs	r0, #80	; 0x50
+            unlock_end = end;
+20000648:	e9c6 2307 	strd	r2, r3, [r6, #28]
+            SERCOM0_USART_WriteByte(BL_RESP_OK);
+2000064c:	f7ff fe2e 	bl	200002ac <SERCOM0_USART_WriteByte>
+20000650:	e7ce      	b.n	200005f0 <bootloader_UART_Tasks+0xd4>
+        SERCOM0_USART_WriteByte(BL_RESP_OK);
+20000652:	2050      	movs	r0, #80	; 0x50
+20000654:	f7ff fe2a 	bl	200002ac <SERCOM0_USART_WriteByte>
+        uint16_t btlVersion = bootloader_GetVersion();
+20000658:	f7ff fd70 	bl	2000013c <bootloader_GetVersion>
+2000065c:	4604      	mov	r4, r0
+        SERCOM0_USART_WriteByte((int)btlVer);
+2000065e:	f3c0 200f 	ubfx	r0, r0, #8, #16
+20000662:	f7ff fe23 	bl	200002ac <SERCOM0_USART_WriteByte>
+        SERCOM0_USART_WriteByte((int)btlVer);
+20000666:	b2e0      	uxtb	r0, r4
+20000668:	f7ff fe20 	bl	200002ac <SERCOM0_USART_WriteByte>
+2000066c:	e7c0      	b.n	200005f0 <bootloader_UART_Tasks+0xd4>
+        crc_gen = bootloader_CRCGenerate(unlock_begin, (unlock_end - unlock_begin));
+2000066e:	e9d6 0107 	ldrd	r0, r1, [r6, #28]
+20000672:	1a09      	subs	r1, r1, r0
+        uint32_t crc        = input_buffer[CRC_OFFSET];
+20000674:	683c      	ldr	r4, [r7, #0]
+        crc_gen = bootloader_CRCGenerate(unlock_begin, (unlock_end - unlock_begin));
+20000676:	f7ff fd65 	bl	20000144 <bootloader_CRCGenerate>
+        if (crc == crc_gen)
+2000067a:	4284      	cmp	r4, r0
+            SERCOM0_USART_WriteByte(BL_RESP_CRC_OK);
+2000067c:	bf0c      	ite	eq
+2000067e:	2053      	moveq	r0, #83	; 0x53
+            SERCOM0_USART_WriteByte(BL_RESP_CRC_FAIL);
+20000680:	2054      	movne	r0, #84	; 0x54
+20000682:	f7ff fe13 	bl	200002ac <SERCOM0_USART_WriteByte>
+20000686:	e7b3      	b.n	200005f0 <bootloader_UART_Tasks+0xd4>
+20000688:	200006a4 	.word	0x200006a4
+2000068c:	200016c8 	.word	0x200016c8
+20000690:	200006c8 	.word	0x200006c8
+20000694:	200006c4 	.word	0x200006c4
+20000698:	fffff000 	.word	0xfffff000
+2000069c:	fffffc00 	.word	0xfffffc00
+
+200006a0 <btl_guard>:
+200006a0:	5048434d                                MCHP
+
+Disassembly of section .config_00805F88%1:
+
+00805f88 <__config_00805F88>:
+  805f88:	0000ffff                                ....
+
+Disassembly of section .config_00805F8C%2:
+
+00805f8c <__config_00805F8C>:
+  805f8c:	840e4000                                .@..
+
+Disassembly of section .config_00805F90%3:
+
+00805f90 <__config_00805F90>:
+  805f90:	5f74fc38                                8.t_
+
+Disassembly of section .config_00805F94%4:
+
+00805f94 <__config_00805F94>:
+  805f94:	1410443b                                ;D..
+
+Disassembly of section .config_00805F98%5:
+
+00805f98 <__config_00805F98>:
+  805f98:	7100000b                                ...q
+
+Disassembly of section .config_00805F9C%6:
+
+00805f9c <__config_00805F9C>:
+  805f9c:	00000002                                ....
+
+Disassembly of section .config_00805FBC%7:
+
+00805fbc <__config_00805FBC>:
+  805fbc:	10000000                                ....
