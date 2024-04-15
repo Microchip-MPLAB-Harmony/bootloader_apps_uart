@@ -1,0 +1,421 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="65">
+  <logicalFolder name="root" displayName="root" projectFiles="true">
+    <logicalFolder name="HeaderFiles"
+                   displayName="Header Files"
+                   projectFiles="true">
+      <logicalFolder name="config" displayName="config" projectFiles="true">
+        <logicalFolder name="sam_rh71_tfbga_sst38"
+                       displayName="sam_rh71_tfbga_sst38"
+                       projectFiles="true">
+          <logicalFolder name="bsp" displayName="bsp" projectFiles="true">
+            <itemPath>../src/config/sam_rh71_tfbga_sst38/bsp/bsp.h</itemPath>
+          </logicalFolder>
+          <logicalFolder name="peripheral" displayName="peripheral" projectFiles="true">
+            <logicalFolder name="clk" displayName="clk" projectFiles="true">
+              <itemPath>../src/config/sam_rh71_tfbga_sst38/peripheral/clk/plib_clk.h</itemPath>
+            </logicalFolder>
+            <logicalFolder name="flexcom" displayName="flexcom" projectFiles="true">
+              <logicalFolder name="usart" displayName="usart" projectFiles="true">
+                <itemPath>../src/config/sam_rh71_tfbga_sst38/peripheral/flexcom/usart/plib_flexcom_usart_local.h</itemPath>
+                <itemPath>../src/config/sam_rh71_tfbga_sst38/peripheral/flexcom/usart/plib_flexcom1_usart.h</itemPath>
+              </logicalFolder>
+            </logicalFolder>
+            <logicalFolder name="hemc" displayName="hemc" projectFiles="true">
+              <itemPath>../src/config/sam_rh71_tfbga_sst38/peripheral/hemc/plib_hemc.h</itemPath>
+            </logicalFolder>
+            <logicalFolder name="matrix" displayName="matrix" projectFiles="true">
+              <itemPath>../src/config/sam_rh71_tfbga_sst38/peripheral/matrix/plib_matrix.h</itemPath>
+            </logicalFolder>
+            <logicalFolder name="nvic" displayName="nvic" projectFiles="true">
+              <itemPath>../src/config/sam_rh71_tfbga_sst38/peripheral/nvic/plib_nvic.h</itemPath>
+            </logicalFolder>
+            <logicalFolder name="pio" displayName="pio" projectFiles="true">
+              <itemPath>../src/config/sam_rh71_tfbga_sst38/peripheral/pio/plib_pio.h</itemPath>
+            </logicalFolder>
+            <logicalFolder name="systick" displayName="systick" projectFiles="true">
+              <itemPath>../src/config/sam_rh71_tfbga_sst38/peripheral/systick/plib_systick.h</itemPath>
+            </logicalFolder>
+          </logicalFolder>
+          <logicalFolder name="system" displayName="system" projectFiles="true">
+            <logicalFolder name="cache" displayName="cache" projectFiles="true">
+              <itemPath>../src/config/sam_rh71_tfbga_sst38/system/cache/sys_cache.h</itemPath>
+            </logicalFolder>
+          </logicalFolder>
+          <itemPath>../src/config/sam_rh71_tfbga_sst38/toolchain_specifics.h</itemPath>
+          <itemPath>../src/config/sam_rh71_tfbga_sst38/device.h</itemPath>
+          <itemPath>../src/config/sam_rh71_tfbga_sst38/sys_tasks.h</itemPath>
+          <itemPath>../src/config/sam_rh71_tfbga_sst38/definitions.h</itemPath>
+          <itemPath>../src/config/sam_rh71_tfbga_sst38/interrupts.h</itemPath>
+          <itemPath>../src/config/sam_rh71_tfbga_sst38/device_vectors.h</itemPath>
+          <itemPath>../src/config/sam_rh71_tfbga_sst38/configuration.h</itemPath>
+          <itemPath>../src/config/sam_rh71_tfbga_sst38/user.h</itemPath>
+          <itemPath>../src/config/sam_rh71_tfbga_sst38/device_cache.h</itemPath>
+        </logicalFolder>
+      </logicalFolder>
+      <logicalFolder name="packs" displayName="packs" projectFiles="true">
+        <logicalFolder name="ATSAMRH71F20C_DFP"
+                       displayName="ATSAMRH71F20C_DFP"
+                       projectFiles="true">
+          <logicalFolder name="component" displayName="component" projectFiles="true">
+            <itemPath>../src/packs/ATSAMRH71F20C_DFP/component/gmac.h</itemPath>
+            <itemPath>../src/packs/ATSAMRH71F20C_DFP/component/spw.h</itemPath>
+            <itemPath>../src/packs/ATSAMRH71F20C_DFP/component/rtc.h</itemPath>
+            <itemPath>../src/packs/ATSAMRH71F20C_DFP/component/trng.h</itemPath>
+            <itemPath>../src/packs/ATSAMRH71F20C_DFP/component/pio.h</itemPath>
+            <itemPath>../src/packs/ATSAMRH71F20C_DFP/component/matrix.h</itemPath>
+            <itemPath>../src/packs/ATSAMRH71F20C_DFP/component/hsmc.h</itemPath>
+            <itemPath>../src/packs/ATSAMRH71F20C_DFP/component/qspi.h</itemPath>
+            <itemPath>../src/packs/ATSAMRH71F20C_DFP/component/hefc.h</itemPath>
+            <itemPath>../src/packs/ATSAMRH71F20C_DFP/component/hemc.h</itemPath>
+            <itemPath>../src/packs/ATSAMRH71F20C_DFP/component/fuses.h</itemPath>
+            <itemPath>../src/packs/ATSAMRH71F20C_DFP/component/mcan.h</itemPath>
+            <itemPath>../src/packs/ATSAMRH71F20C_DFP/component/icm.h</itemPath>
+            <itemPath>../src/packs/ATSAMRH71F20C_DFP/component/rswdt.h</itemPath>
+            <itemPath>../src/packs/ATSAMRH71F20C_DFP/component/ip1553.h</itemPath>
+            <itemPath>../src/packs/ATSAMRH71F20C_DFP/component/pmc.h</itemPath>
+            <itemPath>../src/packs/ATSAMRH71F20C_DFP/component/sha.h</itemPath>
+            <itemPath>../src/packs/ATSAMRH71F20C_DFP/component/chipid.h</itemPath>
+            <itemPath>../src/packs/ATSAMRH71F20C_DFP/component/tcmecc.h</itemPath>
+            <itemPath>../src/packs/ATSAMRH71F20C_DFP/component/hsdramc.h</itemPath>
+            <itemPath>../src/packs/ATSAMRH71F20C_DFP/component/nmic.h</itemPath>
+            <itemPath>../src/packs/ATSAMRH71F20C_DFP/component/flexramecc.h</itemPath>
+            <itemPath>../src/packs/ATSAMRH71F20C_DFP/component/rstc.h</itemPath>
+            <itemPath>../src/packs/ATSAMRH71F20C_DFP/component/rtt.h</itemPath>
+            <itemPath>../src/packs/ATSAMRH71F20C_DFP/component/pwm.h</itemPath>
+            <itemPath>../src/packs/ATSAMRH71F20C_DFP/component/wdt.h</itemPath>
+            <itemPath>../src/packs/ATSAMRH71F20C_DFP/component/supc.h</itemPath>
+            <itemPath>../src/packs/ATSAMRH71F20C_DFP/component/flexcom.h</itemPath>
+            <itemPath>../src/packs/ATSAMRH71F20C_DFP/component/xdmac.h</itemPath>
+            <itemPath>../src/packs/ATSAMRH71F20C_DFP/component/sfr.h</itemPath>
+            <itemPath>../src/packs/ATSAMRH71F20C_DFP/component/tc.h</itemPath>
+          </logicalFolder>
+          <logicalFolder name="instance" displayName="instance" projectFiles="true">
+            <itemPath>../src/packs/ATSAMRH71F20C_DFP/instance/pwm0.h</itemPath>
+            <itemPath>../src/packs/ATSAMRH71F20C_DFP/instance/sfr.h</itemPath>
+            <itemPath>../src/packs/ATSAMRH71F20C_DFP/instance/mcan0.h</itemPath>
+            <itemPath>../src/packs/ATSAMRH71F20C_DFP/instance/pmc.h</itemPath>
+            <itemPath>../src/packs/ATSAMRH71F20C_DFP/instance/rstc.h</itemPath>
+            <itemPath>../src/packs/ATSAMRH71F20C_DFP/instance/matrix0.h</itemPath>
+            <itemPath>../src/packs/ATSAMRH71F20C_DFP/instance/chipid.h</itemPath>
+            <itemPath>../src/packs/ATSAMRH71F20C_DFP/instance/flexcom3.h</itemPath>
+            <itemPath>../src/packs/ATSAMRH71F20C_DFP/instance/hemc.h</itemPath>
+            <itemPath>../src/packs/ATSAMRH71F20C_DFP/instance/flexcom7.h</itemPath>
+            <itemPath>../src/packs/ATSAMRH71F20C_DFP/instance/sha.h</itemPath>
+            <itemPath>../src/packs/ATSAMRH71F20C_DFP/instance/xdmac.h</itemPath>
+            <itemPath>../src/packs/ATSAMRH71F20C_DFP/instance/tc3.h</itemPath>
+            <itemPath>../src/packs/ATSAMRH71F20C_DFP/instance/rswdt.h</itemPath>
+            <itemPath>../src/packs/ATSAMRH71F20C_DFP/instance/pwm1.h</itemPath>
+            <itemPath>../src/packs/ATSAMRH71F20C_DFP/instance/fuses.h</itemPath>
+            <itemPath>../src/packs/ATSAMRH71F20C_DFP/instance/trng.h</itemPath>
+            <itemPath>../src/packs/ATSAMRH71F20C_DFP/instance/gmac.h</itemPath>
+            <itemPath>../src/packs/ATSAMRH71F20C_DFP/instance/hsdramc.h</itemPath>
+            <itemPath>../src/packs/ATSAMRH71F20C_DFP/instance/flexcom4.h</itemPath>
+            <itemPath>../src/packs/ATSAMRH71F20C_DFP/instance/flexcom8.h</itemPath>
+            <itemPath>../src/packs/ATSAMRH71F20C_DFP/instance/hsmc.h</itemPath>
+            <itemPath>../src/packs/ATSAMRH71F20C_DFP/instance/tc0.h</itemPath>
+            <itemPath>../src/packs/ATSAMRH71F20C_DFP/instance/flexcom0.h</itemPath>
+            <itemPath>../src/packs/ATSAMRH71F20C_DFP/instance/pio.h</itemPath>
+            <itemPath>../src/packs/ATSAMRH71F20C_DFP/instance/spw.h</itemPath>
+            <itemPath>../src/packs/ATSAMRH71F20C_DFP/instance/hefc.h</itemPath>
+            <itemPath>../src/packs/ATSAMRH71F20C_DFP/instance/rtc.h</itemPath>
+            <itemPath>../src/packs/ATSAMRH71F20C_DFP/instance/supc.h</itemPath>
+            <itemPath>../src/packs/ATSAMRH71F20C_DFP/instance/nmic.h</itemPath>
+            <itemPath>../src/packs/ATSAMRH71F20C_DFP/instance/icm.h</itemPath>
+            <itemPath>../src/packs/ATSAMRH71F20C_DFP/instance/flexcom5.h</itemPath>
+            <itemPath>../src/packs/ATSAMRH71F20C_DFP/instance/flexcom9.h</itemPath>
+            <itemPath>../src/packs/ATSAMRH71F20C_DFP/instance/wdt.h</itemPath>
+            <itemPath>../src/packs/ATSAMRH71F20C_DFP/instance/tc1.h</itemPath>
+            <itemPath>../src/packs/ATSAMRH71F20C_DFP/instance/flexcom1.h</itemPath>
+            <itemPath>../src/packs/ATSAMRH71F20C_DFP/instance/mcan1.h</itemPath>
+            <itemPath>../src/packs/ATSAMRH71F20C_DFP/instance/rtt.h</itemPath>
+            <itemPath>../src/packs/ATSAMRH71F20C_DFP/instance/qspi.h</itemPath>
+            <itemPath>../src/packs/ATSAMRH71F20C_DFP/instance/tcmecc.h</itemPath>
+            <itemPath>../src/packs/ATSAMRH71F20C_DFP/instance/flexcom2.h</itemPath>
+            <itemPath>../src/packs/ATSAMRH71F20C_DFP/instance/ip1553.h</itemPath>
+            <itemPath>../src/packs/ATSAMRH71F20C_DFP/instance/flexcom6.h</itemPath>
+            <itemPath>../src/packs/ATSAMRH71F20C_DFP/instance/tc2.h</itemPath>
+            <itemPath>../src/packs/ATSAMRH71F20C_DFP/instance/flexramecc.h</itemPath>
+          </logicalFolder>
+          <logicalFolder name="pio" displayName="pio" projectFiles="true">
+            <itemPath>../src/packs/ATSAMRH71F20C_DFP/pio/samrh71f20c.h</itemPath>
+          </logicalFolder>
+          <itemPath>../src/packs/ATSAMRH71F20C_DFP/samrh71f20c.h</itemPath>
+        </logicalFolder>
+        <logicalFolder name="CMSIS" displayName="CMSIS" projectFiles="true">
+          <logicalFolder name="CMSIS" displayName="CMSIS" projectFiles="true">
+            <logicalFolder name="Core" displayName="Core" projectFiles="true">
+              <logicalFolder name="Include" displayName="Include" projectFiles="true">
+                <itemPath>../src/packs/CMSIS/CMSIS/Core/Include/cmsis_armclang.h</itemPath>
+                <itemPath>../src/packs/CMSIS/CMSIS/Core/Include/cmsis_compiler.h</itemPath>
+                <itemPath>../src/packs/CMSIS/CMSIS/Core/Include/cmsis_iccarm.h</itemPath>
+                <itemPath>../src/packs/CMSIS/CMSIS/Core/Include/cmsis_armcc.h</itemPath>
+                <itemPath>../src/packs/CMSIS/CMSIS/Core/Include/cmsis_armclang_ltm.h</itemPath>
+                <itemPath>../src/packs/CMSIS/CMSIS/Core/Include/mpu_armv7.h</itemPath>
+                <itemPath>../src/packs/CMSIS/CMSIS/Core/Include/cmsis_version.h</itemPath>
+                <itemPath>../src/packs/CMSIS/CMSIS/Core/Include/cmsis_gcc.h</itemPath>
+                <itemPath>../src/packs/CMSIS/CMSIS/Core/Include/core_cm7.h</itemPath>
+                <itemPath>../src/packs/CMSIS/CMSIS/Core/Include/cachel1_armv7.h</itemPath>
+              </logicalFolder>
+            </logicalFolder>
+          </logicalFolder>
+        </logicalFolder>
+      </logicalFolder>
+      <itemPath>../src/app.h</itemPath>
+    </logicalFolder>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="true">
+      <itemPath>Makefile</itemPath>
+      <itemPath>test_app_sam_rh71_tfbga_sst38.mc3</itemPath>
+    </logicalFolder>
+    <logicalFolder name="LinkerScript"
+                   displayName="Linker Files"
+                   projectFiles="true">
+      <itemPath>../src/config/sam_rh71_tfbga_sst38/ATSAMRH71F20C_prom.ld</itemPath>
+    </logicalFolder>
+    <logicalFolder name="SourceFiles"
+                   displayName="Source Files"
+                   projectFiles="true">
+      <logicalFolder name="config" displayName="config" projectFiles="true">
+        <logicalFolder name="sam_rh71_tfbga_sst38"
+                       displayName="sam_rh71_tfbga_sst38"
+                       projectFiles="true">
+          <logicalFolder name="bsp" displayName="bsp" projectFiles="true">
+            <itemPath>../src/config/sam_rh71_tfbga_sst38/bsp/bsp.c</itemPath>
+          </logicalFolder>
+          <logicalFolder name="peripheral" displayName="peripheral" projectFiles="true">
+            <logicalFolder name="clk" displayName="clk" projectFiles="true">
+              <itemPath>../src/config/sam_rh71_tfbga_sst38/peripheral/clk/plib_clk.c</itemPath>
+            </logicalFolder>
+            <logicalFolder name="flexcom" displayName="flexcom" projectFiles="true">
+              <logicalFolder name="usart" displayName="usart" projectFiles="true">
+                <itemPath>../src/config/sam_rh71_tfbga_sst38/peripheral/flexcom/usart/plib_flexcom1_usart.c</itemPath>
+              </logicalFolder>
+            </logicalFolder>
+            <logicalFolder name="hemc" displayName="hemc" projectFiles="true">
+              <itemPath>../src/config/sam_rh71_tfbga_sst38/peripheral/hemc/plib_hemc.c</itemPath>
+            </logicalFolder>
+            <logicalFolder name="matrix" displayName="matrix" projectFiles="true">
+              <itemPath>../src/config/sam_rh71_tfbga_sst38/peripheral/matrix/plib_matrix.c</itemPath>
+            </logicalFolder>
+            <logicalFolder name="nvic" displayName="nvic" projectFiles="true">
+              <itemPath>../src/config/sam_rh71_tfbga_sst38/peripheral/nvic/plib_nvic.c</itemPath>
+            </logicalFolder>
+            <logicalFolder name="pio" displayName="pio" projectFiles="true">
+              <itemPath>../src/config/sam_rh71_tfbga_sst38/peripheral/pio/plib_pio.c</itemPath>
+            </logicalFolder>
+            <logicalFolder name="systick" displayName="systick" projectFiles="true">
+              <itemPath>../src/config/sam_rh71_tfbga_sst38/peripheral/systick/plib_systick.c</itemPath>
+            </logicalFolder>
+          </logicalFolder>
+          <logicalFolder name="stdio" displayName="stdio" projectFiles="true">
+            <itemPath>../src/config/sam_rh71_tfbga_sst38/stdio/xc32_monitor.c</itemPath>
+          </logicalFolder>
+          <logicalFolder name="system" displayName="system" projectFiles="true">
+            <logicalFolder name="cache" displayName="cache" projectFiles="true">
+              <itemPath>../src/config/sam_rh71_tfbga_sst38/system/cache/sys_cache.c</itemPath>
+            </logicalFolder>
+          </logicalFolder>
+          <itemPath>../src/config/sam_rh71_tfbga_sst38/libc_syscalls.c</itemPath>
+          <itemPath>../src/config/sam_rh71_tfbga_sst38/initialization.c</itemPath>
+          <itemPath>../src/config/sam_rh71_tfbga_sst38/interrupts.c</itemPath>
+          <itemPath>../src/config/sam_rh71_tfbga_sst38/startup_xc32.c</itemPath>
+          <itemPath>../src/config/sam_rh71_tfbga_sst38/tasks.c</itemPath>
+          <itemPath>../src/config/sam_rh71_tfbga_sst38/exceptions.c</itemPath>
+        </logicalFolder>
+      </logicalFolder>
+      <itemPath>../src/config/sam_rh71_tfbga_sst38/pin_configurations.csv</itemPath>
+      <itemPath>../src/app.c</itemPath>
+      <itemPath>../src/main.c</itemPath>
+    </logicalFolder>
+  </logicalFolder>
+  <sourceRootList>
+    <Elem>../src/config/sam_rh71_tfbga_sst38</Elem>
+  </sourceRootList>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="sam_rh71_tfbga_sst38" type="2">
+      <toolsSet>
+        <developmentServer>localhost</developmentServer>
+        <targetDevice>ATSAMRH71F20C</targetDevice>
+        <targetHeader></targetHeader>
+        <targetPluginBoard></targetPluginBoard>
+        <platformTool>noID</platformTool>
+        <languageToolchain>XC32</languageToolchain>
+        <languageToolchainVersion>4.35</languageToolchainVersion>
+        <platform>3</platform>
+      </toolsSet>
+      <packs>
+        <pack name="CMSIS" vendor="ARM" version="5.8.0"/>
+        <pack name="SAMRH71_DFP" vendor="Microchip" version="2.6.253"/>
+      </packs>
+      <ScriptingSettings>
+      </ScriptingSettings>
+      <compileType>
+        <linkerTool>
+          <linkerLibItems>
+          </linkerLibItems>
+        </linkerTool>
+        <archiverTool>
+        </archiverTool>
+        <loading>
+          <useAlternateLoadableFile>false</useAlternateLoadableFile>
+          <parseOnProdLoad>false</parseOnProdLoad>
+          <alternateLoadableFile></alternateLoadableFile>
+        </loading>
+        <subordinates>
+        </subordinates>
+      </compileType>
+      <makeCustomizationType>
+        <makeCustomizationPreStepEnabled>false</makeCustomizationPreStepEnabled>
+        <makeUseCleanTarget>false</makeUseCleanTarget>
+        <makeCustomizationPreStep></makeCustomizationPreStep>
+        <makeCustomizationPostStepEnabled>true</makeCustomizationPostStepEnabled>
+        <makeCustomizationPostStep>${MP_CC_DIR}/xc32-objcopy -I ihex -O binary ${DISTDIR}/${PROJECTNAME}.${IMAGE_TYPE}.hex ${DISTDIR}/${PROJECTNAME}.${IMAGE_TYPE}.bin</makeCustomizationPostStep>
+        <makeCustomizationPutChecksumInUserID>false</makeCustomizationPutChecksumInUserID>
+        <makeCustomizationEnableLongLines>false</makeCustomizationEnableLongLines>
+        <makeCustomizationNormalizeHexFile>false</makeCustomizationNormalizeHexFile>
+      </makeCustomizationType>
+      <C32>
+        <property key="additional-warnings" value="false"/>
+        <property key="addresss-attribute-use" value="false"/>
+        <property key="enable-app-io" value="false"/>
+        <property key="enable-omit-frame-pointer" value="false"/>
+        <property key="enable-symbols" value="true"/>
+        <property key="enable-unroll-loops" value="false"/>
+        <property key="exclude-floating-point" value="false"/>
+        <property key="extra-include-directories"
+                  value="../src;../src/config/sam_rh71_tfbga_sst38;../src/packs/ATSAMRH71F20C_DFP;../src/packs/CMSIS/;../src/packs/CMSIS/CMSIS/Core/Include"/>
+        <property key="generate-16-bit-code" value="false"/>
+        <property key="generate-micro-compressed-code" value="false"/>
+        <property key="isolate-each-function" value="true"/>
+        <property key="make-warnings-into-errors" value="false"/>
+        <property key="optimization-level" value="-O1"/>
+        <property key="place-data-into-section" value="false"/>
+        <property key="post-instruction-scheduling" value="default"/>
+        <property key="pre-instruction-scheduling" value="default"/>
+        <property key="preprocessor-macros" value=""/>
+        <property key="strict-ansi" value="false"/>
+        <property key="support-ansi" value="false"/>
+        <property key="tentative-definitions" value="-fno-common"/>
+        <property key="toplevel-reordering" value=""/>
+        <property key="unaligned-access" value=""/>
+        <property key="use-cci" value="false"/>
+        <property key="use-iar" value="false"/>
+        <property key="use-indirect-calls" value="false"/>
+      </C32>
+      <C32-AR>
+        <property key="additional-options-chop-files" value="false"/>
+      </C32-AR>
+      <C32-AS>
+        <property key="assembler-symbols" value=""/>
+        <property key="enable-symbols" value="true"/>
+        <property key="exclude-floating-point-library" value="false"/>
+        <property key="expand-macros" value="false"/>
+        <property key="extra-include-directories-for-assembler" value=""/>
+        <property key="extra-include-directories-for-preprocessor" value=""/>
+        <property key="false-conditionals" value="false"/>
+        <property key="generate-16-bit-code" value="false"/>
+        <property key="generate-micro-compressed-code" value="false"/>
+        <property key="keep-locals" value="false"/>
+        <property key="list-assembly" value="false"/>
+        <property key="list-source" value="false"/>
+        <property key="list-symbols" value="false"/>
+        <property key="oXC32asm-list-to-file" value="false"/>
+        <property key="omit-debug-dirs" value="false"/>
+        <property key="omit-forms" value="false"/>
+        <property key="preprocessor-macros" value=""/>
+        <property key="warning-level" value=""/>
+      </C32-AS>
+      <C32-CO>
+        <property key="coverage-enable" value=""/>
+        <property key="stack-guidance" value="false"/>
+      </C32-CO>
+      <C32-LD>
+        <property key="additional-options-use-response-files" value="false"/>
+        <property key="additional-options-write-sla" value="false"/>
+        <property key="allocate-dinit" value="false"/>
+        <property key="code-dinit" value="false"/>
+        <property key="ebase-addr" value=""/>
+        <property key="enable-check-sections" value="false"/>
+        <property key="exclude-floating-point-library" value="false"/>
+        <property key="exclude-standard-libraries" value="false"/>
+        <property key="extra-lib-directories" value=""/>
+        <property key="fill-flash-options-addr" value=""/>
+        <property key="fill-flash-options-const" value=""/>
+        <property key="fill-flash-options-how" value="0"/>
+        <property key="fill-flash-options-inc-const" value="1"/>
+        <property key="fill-flash-options-increment" value=""/>
+        <property key="fill-flash-options-seq" value=""/>
+        <property key="fill-flash-options-what" value="0"/>
+        <property key="generate-16-bit-code" value="false"/>
+        <property key="generate-cross-reference-file" value="false"/>
+        <property key="generate-micro-compressed-code" value="false"/>
+        <property key="heap-size" value="512"/>
+        <property key="input-libraries" value=""/>
+        <property key="kseg-length" value=""/>
+        <property key="kseg-origin" value=""/>
+        <property key="linker-symbols" value=""/>
+        <property key="map-file" value="${DISTDIR}/${PROJECTNAME}.${IMAGE_TYPE}.map"/>
+        <property key="no-device-startup-code" value="true"/>
+        <property key="no-startup-files" value="false"/>
+        <property key="oXC32ld-extra-opts" value=""/>
+        <property key="optimization-level" value=""/>
+        <property key="preprocessor-macros" value=""/>
+        <property key="remove-unused-sections" value="true"/>
+        <property key="report-memory-usage" value="false"/>
+        <property key="serial-length" value=""/>
+        <property key="serial-origin" value=""/>
+        <property key="stack-size" value=""/>
+        <property key="symbol-stripping" value=""/>
+        <property key="trace-symbols" value=""/>
+        <property key="warn-section-align" value="false"/>
+        <appendMe value="-DRAM_ORIGIN=0x21000010, -DRAM_LENGTH=0xbfff0"/>
+      </C32-LD>
+      <C32CPP>
+        <property key="additional-warnings" value="false"/>
+        <property key="addresss-attribute-use" value="false"/>
+        <property key="check-new" value="false"/>
+        <property key="eh-specs" value="true"/>
+        <property key="enable-app-io" value="false"/>
+        <property key="enable-omit-frame-pointer" value="false"/>
+        <property key="enable-symbols" value="true"/>
+        <property key="enable-unroll-loops" value="false"/>
+        <property key="exceptions" value="true"/>
+        <property key="exclude-floating-point" value="false"/>
+        <property key="extra-include-directories"
+                  value="../src;../src/config/sam_rh71_tfbga_sst38;../src/packs/ATSAMRH71F20C_DFP;../src/packs/CMSIS/;../src/packs/CMSIS/CMSIS/Core/Include"/>
+        <property key="generate-16-bit-code" value="false"/>
+        <property key="generate-micro-compressed-code" value="false"/>
+        <property key="isolate-each-function" value="false"/>
+        <property key="make-warnings-into-errors" value="false"/>
+        <property key="optimization-level" value=""/>
+        <property key="place-data-into-section" value="false"/>
+        <property key="post-instruction-scheduling" value="default"/>
+        <property key="pre-instruction-scheduling" value="default"/>
+        <property key="preprocessor-macros" value=""/>
+        <property key="rtti" value="true"/>
+        <property key="strict-ansi" value="false"/>
+        <property key="toplevel-reordering" value=""/>
+        <property key="unaligned-access" value=""/>
+        <property key="use-cci" value="false"/>
+        <property key="use-iar" value="false"/>
+        <property key="use-indirect-calls" value="false"/>
+      </C32CPP>
+      <C32Global>
+        <property key="common-include-directories" value=""/>
+        <property key="gp-relative-option" value=""/>
+        <property key="legacy-libc" value="false"/>
+        <property key="mdtcm" value="0x40000"/>
+        <property key="mitcm" value="0x20000"/>
+        <property key="mstacktcm" value="false"/>
+        <property key="omit-pack-options" value="1"/>
+        <property key="relaxed-math" value="false"/>
+        <property key="save-temps" value="false"/>
+        <property key="stack-smashing" value=""/>
+        <property key="wpo-lto" value="false"/>
+      </C32Global>
+    </conf>
+  </confs>
+</configurationDescriptor>
