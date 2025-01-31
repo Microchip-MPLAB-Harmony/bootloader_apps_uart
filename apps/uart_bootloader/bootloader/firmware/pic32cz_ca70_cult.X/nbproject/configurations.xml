@@ -1,0 +1,526 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="65">
+  <logicalFolder name="root" displayName="root" projectFiles="true">
+    <logicalFolder name="HeaderFiles"
+                   displayName="Header Files"
+                   projectFiles="true">
+      <logicalFolder name="config" displayName="config" projectFiles="true">
+        <logicalFolder name="pic32cz_ca70_cult"
+                       displayName="pic32cz_ca70_cult"
+                       projectFiles="true">
+          <logicalFolder name="bootloader" displayName="bootloader" projectFiles="true">
+            <itemPath>../src/config/pic32cz_ca70_cult/bootloader/bootloader_uart.h</itemPath>
+            <itemPath>../src/config/pic32cz_ca70_cult/bootloader/bootloader_interrupt.h</itemPath>
+            <itemPath>../src/config/pic32cz_ca70_cult/bootloader/bootloader_common.h</itemPath>
+          </logicalFolder>
+          <logicalFolder name="peripheral" displayName="peripheral" projectFiles="true">
+            <logicalFolder name="clk" displayName="clk" projectFiles="true">
+              <itemPath>../src/config/pic32cz_ca70_cult/peripheral/clk/plib_clk.h</itemPath>
+            </logicalFolder>
+            <logicalFolder name="efc" displayName="efc" projectFiles="true">
+              <itemPath>../src/config/pic32cz_ca70_cult/peripheral/efc/plib_efc.h</itemPath>
+            </logicalFolder>
+            <logicalFolder name="nvic" displayName="nvic" projectFiles="true">
+              <itemPath>../src/config/pic32cz_ca70_cult/peripheral/nvic/plib_nvic.h</itemPath>
+            </logicalFolder>
+            <logicalFolder name="pio" displayName="pio" projectFiles="true">
+              <itemPath>../src/config/pic32cz_ca70_cult/peripheral/pio/plib_pio.h</itemPath>
+            </logicalFolder>
+            <logicalFolder name="systick" displayName="systick" projectFiles="true">
+              <itemPath>../src/config/pic32cz_ca70_cult/peripheral/systick/plib_systick.h</itemPath>
+            </logicalFolder>
+            <logicalFolder name="uart" displayName="uart" projectFiles="true">
+              <itemPath>../src/config/pic32cz_ca70_cult/peripheral/uart/plib_uart_common.h</itemPath>
+              <itemPath>../src/config/pic32cz_ca70_cult/peripheral/uart/plib_uart1.h</itemPath>
+            </logicalFolder>
+          </logicalFolder>
+          <itemPath>../src/config/pic32cz_ca70_cult/device_vectors.h</itemPath>
+          <itemPath>../src/config/pic32cz_ca70_cult/device_cache.h</itemPath>
+          <itemPath>../src/config/pic32cz_ca70_cult/definitions.h</itemPath>
+          <itemPath>../src/config/pic32cz_ca70_cult/device.h</itemPath>
+          <itemPath>../src/config/pic32cz_ca70_cult/toolchain_specifics.h</itemPath>
+        </logicalFolder>
+      </logicalFolder>
+      <logicalFolder name="packs" displayName="packs" projectFiles="true">
+        <logicalFolder name="CMSIS" displayName="CMSIS" projectFiles="true">
+          <logicalFolder name="CMSIS" displayName="CMSIS" projectFiles="true">
+            <logicalFolder name="Core" displayName="Core" projectFiles="true">
+              <logicalFolder name="Include" displayName="Include" projectFiles="true">
+                <itemPath>../src/packs/CMSIS/CMSIS/Core/Include/cmsis_armcc.h</itemPath>
+                <itemPath>../src/packs/CMSIS/CMSIS/Core/Include/cmsis_version.h</itemPath>
+                <itemPath>../src/packs/CMSIS/CMSIS/Core/Include/mpu_armv7.h</itemPath>
+                <itemPath>../src/packs/CMSIS/CMSIS/Core/Include/cmsis_gcc.h</itemPath>
+                <itemPath>../src/packs/CMSIS/CMSIS/Core/Include/cachel1_armv7.h</itemPath>
+                <itemPath>../src/packs/CMSIS/CMSIS/Core/Include/core_cm7.h</itemPath>
+                <itemPath>../src/packs/CMSIS/CMSIS/Core/Include/cmsis_compiler.h</itemPath>
+                <itemPath>../src/packs/CMSIS/CMSIS/Core/Include/cmsis_armclang_ltm.h</itemPath>
+                <itemPath>../src/packs/CMSIS/CMSIS/Core/Include/cmsis_armclang.h</itemPath>
+                <itemPath>../src/packs/CMSIS/CMSIS/Core/Include/cmsis_iccarm.h</itemPath>
+              </logicalFolder>
+            </logicalFolder>
+          </logicalFolder>
+        </logicalFolder>
+        <logicalFolder name="PIC32CZ2051CA70144_DFP"
+                       displayName="PIC32CZ2051CA70144_DFP"
+                       projectFiles="true">
+          <logicalFolder name="component" displayName="component" projectFiles="true">
+            <itemPath>../src/packs/PIC32CZ2051CA70144_DFP/component/uart.h</itemPath>
+            <itemPath>../src/packs/PIC32CZ2051CA70144_DFP/component/twihs.h</itemPath>
+            <itemPath>../src/packs/PIC32CZ2051CA70144_DFP/component/rswdt.h</itemPath>
+            <itemPath>../src/packs/PIC32CZ2051CA70144_DFP/component/xdmac.h</itemPath>
+            <itemPath>../src/packs/PIC32CZ2051CA70144_DFP/component/acc.h</itemPath>
+            <itemPath>../src/packs/PIC32CZ2051CA70144_DFP/component/isi.h</itemPath>
+            <itemPath>../src/packs/PIC32CZ2051CA70144_DFP/component/rstc.h</itemPath>
+            <itemPath>../src/packs/PIC32CZ2051CA70144_DFP/component/icm.h</itemPath>
+            <itemPath>../src/packs/PIC32CZ2051CA70144_DFP/component/matrix.h</itemPath>
+            <itemPath>../src/packs/PIC32CZ2051CA70144_DFP/component/dacc.h</itemPath>
+            <itemPath>../src/packs/PIC32CZ2051CA70144_DFP/component/supc.h</itemPath>
+            <itemPath>../src/packs/PIC32CZ2051CA70144_DFP/component/pmc.h</itemPath>
+            <itemPath>../src/packs/PIC32CZ2051CA70144_DFP/component/ssc.h</itemPath>
+            <itemPath>../src/packs/PIC32CZ2051CA70144_DFP/component/i2sc.h</itemPath>
+            <itemPath>../src/packs/PIC32CZ2051CA70144_DFP/component/usart.h</itemPath>
+            <itemPath>../src/packs/PIC32CZ2051CA70144_DFP/component/gmac.h</itemPath>
+            <itemPath>../src/packs/PIC32CZ2051CA70144_DFP/component/fuses.h</itemPath>
+            <itemPath>../src/packs/PIC32CZ2051CA70144_DFP/component/hsmci.h</itemPath>
+            <itemPath>../src/packs/PIC32CZ2051CA70144_DFP/component/trng.h</itemPath>
+            <itemPath>../src/packs/PIC32CZ2051CA70144_DFP/component/usbhs.h</itemPath>
+            <itemPath>../src/packs/PIC32CZ2051CA70144_DFP/component/chipid.h</itemPath>
+            <itemPath>../src/packs/PIC32CZ2051CA70144_DFP/component/gpbr.h</itemPath>
+            <itemPath>../src/packs/PIC32CZ2051CA70144_DFP/component/rtt.h</itemPath>
+            <itemPath>../src/packs/PIC32CZ2051CA70144_DFP/component/pwm.h</itemPath>
+            <itemPath>../src/packs/PIC32CZ2051CA70144_DFP/component/qspi.h</itemPath>
+            <itemPath>../src/packs/PIC32CZ2051CA70144_DFP/component/efc.h</itemPath>
+            <itemPath>../src/packs/PIC32CZ2051CA70144_DFP/component/rtc.h</itemPath>
+            <itemPath>../src/packs/PIC32CZ2051CA70144_DFP/component/aes.h</itemPath>
+            <itemPath>../src/packs/PIC32CZ2051CA70144_DFP/component/mlb.h</itemPath>
+            <itemPath>../src/packs/PIC32CZ2051CA70144_DFP/component/smc.h</itemPath>
+            <itemPath>../src/packs/PIC32CZ2051CA70144_DFP/component/mcan.h</itemPath>
+            <itemPath>../src/packs/PIC32CZ2051CA70144_DFP/component/tc.h</itemPath>
+            <itemPath>../src/packs/PIC32CZ2051CA70144_DFP/component/afec.h</itemPath>
+            <itemPath>../src/packs/PIC32CZ2051CA70144_DFP/component/pio.h</itemPath>
+            <itemPath>../src/packs/PIC32CZ2051CA70144_DFP/component/spi.h</itemPath>
+            <itemPath>../src/packs/PIC32CZ2051CA70144_DFP/component/utmi.h</itemPath>
+            <itemPath>../src/packs/PIC32CZ2051CA70144_DFP/component/wdt.h</itemPath>
+          </logicalFolder>
+          <logicalFolder name="instance" displayName="instance" projectFiles="true">
+            <itemPath>../src/packs/PIC32CZ2051CA70144_DFP/instance/tc0.h</itemPath>
+            <itemPath>../src/packs/PIC32CZ2051CA70144_DFP/instance/gpbr.h</itemPath>
+            <itemPath>../src/packs/PIC32CZ2051CA70144_DFP/instance/wdt.h</itemPath>
+            <itemPath>../src/packs/PIC32CZ2051CA70144_DFP/instance/twihs0.h</itemPath>
+            <itemPath>../src/packs/PIC32CZ2051CA70144_DFP/instance/isi.h</itemPath>
+            <itemPath>../src/packs/PIC32CZ2051CA70144_DFP/instance/usart0.h</itemPath>
+            <itemPath>../src/packs/PIC32CZ2051CA70144_DFP/instance/supc.h</itemPath>
+            <itemPath>../src/packs/PIC32CZ2051CA70144_DFP/instance/qspi.h</itemPath>
+            <itemPath>../src/packs/PIC32CZ2051CA70144_DFP/instance/utmi.h</itemPath>
+            <itemPath>../src/packs/PIC32CZ2051CA70144_DFP/instance/gmac.h</itemPath>
+            <itemPath>../src/packs/PIC32CZ2051CA70144_DFP/instance/mlb.h</itemPath>
+            <itemPath>../src/packs/PIC32CZ2051CA70144_DFP/instance/uart2.h</itemPath>
+            <itemPath>../src/packs/PIC32CZ2051CA70144_DFP/instance/pioa.h</itemPath>
+            <itemPath>../src/packs/PIC32CZ2051CA70144_DFP/instance/rtc.h</itemPath>
+            <itemPath>../src/packs/PIC32CZ2051CA70144_DFP/instance/efc.h</itemPath>
+            <itemPath>../src/packs/PIC32CZ2051CA70144_DFP/instance/pioe.h</itemPath>
+            <itemPath>../src/packs/PIC32CZ2051CA70144_DFP/instance/trng.h</itemPath>
+            <itemPath>../src/packs/PIC32CZ2051CA70144_DFP/instance/chipid.h</itemPath>
+            <itemPath>../src/packs/PIC32CZ2051CA70144_DFP/instance/tc1.h</itemPath>
+            <itemPath>../src/packs/PIC32CZ2051CA70144_DFP/instance/rstc.h</itemPath>
+            <itemPath>../src/packs/PIC32CZ2051CA70144_DFP/instance/mcan1.h</itemPath>
+            <itemPath>../src/packs/PIC32CZ2051CA70144_DFP/instance/usart1.h</itemPath>
+            <itemPath>../src/packs/PIC32CZ2051CA70144_DFP/instance/uart3.h</itemPath>
+            <itemPath>../src/packs/PIC32CZ2051CA70144_DFP/instance/pmc.h</itemPath>
+            <itemPath>../src/packs/PIC32CZ2051CA70144_DFP/instance/dacc.h</itemPath>
+            <itemPath>../src/packs/PIC32CZ2051CA70144_DFP/instance/piob.h</itemPath>
+            <itemPath>../src/packs/PIC32CZ2051CA70144_DFP/instance/icm.h</itemPath>
+            <itemPath>../src/packs/PIC32CZ2051CA70144_DFP/instance/acc.h</itemPath>
+            <itemPath>../src/packs/PIC32CZ2051CA70144_DFP/instance/matrix.h</itemPath>
+            <itemPath>../src/packs/PIC32CZ2051CA70144_DFP/instance/ssc.h</itemPath>
+            <itemPath>../src/packs/PIC32CZ2051CA70144_DFP/instance/spi0.h</itemPath>
+            <itemPath>../src/packs/PIC32CZ2051CA70144_DFP/instance/tc2.h</itemPath>
+            <itemPath>../src/packs/PIC32CZ2051CA70144_DFP/instance/mcan0.h</itemPath>
+            <itemPath>../src/packs/PIC32CZ2051CA70144_DFP/instance/pwm1.h</itemPath>
+            <itemPath>../src/packs/PIC32CZ2051CA70144_DFP/instance/twihs2.h</itemPath>
+            <itemPath>../src/packs/PIC32CZ2051CA70144_DFP/instance/usart2.h</itemPath>
+            <itemPath>../src/packs/PIC32CZ2051CA70144_DFP/instance/uart4.h</itemPath>
+            <itemPath>../src/packs/PIC32CZ2051CA70144_DFP/instance/uart0.h</itemPath>
+            <itemPath>../src/packs/PIC32CZ2051CA70144_DFP/instance/pioc.h</itemPath>
+            <itemPath>../src/packs/PIC32CZ2051CA70144_DFP/instance/xdmac.h</itemPath>
+            <itemPath>../src/packs/PIC32CZ2051CA70144_DFP/instance/rswdt.h</itemPath>
+            <itemPath>../src/packs/PIC32CZ2051CA70144_DFP/instance/aes.h</itemPath>
+            <itemPath>../src/packs/PIC32CZ2051CA70144_DFP/instance/usbhs.h</itemPath>
+            <itemPath>../src/packs/PIC32CZ2051CA70144_DFP/instance/i2sc0.h</itemPath>
+            <itemPath>../src/packs/PIC32CZ2051CA70144_DFP/instance/afec0.h</itemPath>
+            <itemPath>../src/packs/PIC32CZ2051CA70144_DFP/instance/spi1.h</itemPath>
+            <itemPath>../src/packs/PIC32CZ2051CA70144_DFP/instance/smc.h</itemPath>
+            <itemPath>../src/packs/PIC32CZ2051CA70144_DFP/instance/fuses.h</itemPath>
+            <itemPath>../src/packs/PIC32CZ2051CA70144_DFP/instance/tc3.h</itemPath>
+            <itemPath>../src/packs/PIC32CZ2051CA70144_DFP/instance/twihs1.h</itemPath>
+            <itemPath>../src/packs/PIC32CZ2051CA70144_DFP/instance/pwm0.h</itemPath>
+            <itemPath>../src/packs/PIC32CZ2051CA70144_DFP/instance/rtt.h</itemPath>
+            <itemPath>../src/packs/PIC32CZ2051CA70144_DFP/instance/uart1.h</itemPath>
+            <itemPath>../src/packs/PIC32CZ2051CA70144_DFP/instance/piod.h</itemPath>
+            <itemPath>../src/packs/PIC32CZ2051CA70144_DFP/instance/hsmci.h</itemPath>
+            <itemPath>../src/packs/PIC32CZ2051CA70144_DFP/instance/i2sc1.h</itemPath>
+            <itemPath>../src/packs/PIC32CZ2051CA70144_DFP/instance/afec1.h</itemPath>
+          </logicalFolder>
+          <logicalFolder name="pio" displayName="pio" projectFiles="true">
+            <itemPath>../src/packs/PIC32CZ2051CA70144_DFP/pio/pic32cz2051ca70144.h</itemPath>
+          </logicalFolder>
+          <itemPath>../src/packs/PIC32CZ2051CA70144_DFP/pic32cz2051ca70144.h</itemPath>
+        </logicalFolder>
+      </logicalFolder>
+    </logicalFolder>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="true">
+      <itemPath>Makefile</itemPath>
+      <itemPath>pic32cz_ca70.mc3</itemPath>
+    </logicalFolder>
+    <logicalFolder name="LinkerScript"
+                   displayName="Linker Files"
+                   projectFiles="true">
+      <itemPath>../src/config/pic32cz_ca70_cult/btl.ld</itemPath>
+    </logicalFolder>
+    <logicalFolder name="SourceFiles"
+                   displayName="Source Files"
+                   projectFiles="true">
+      <logicalFolder name="config" displayName="config" projectFiles="true">
+        <logicalFolder name="pic32cz_ca70_cult"
+                       displayName="pic32cz_ca70_cult"
+                       projectFiles="true">
+          <logicalFolder name="bootloader" displayName="bootloader" projectFiles="true">
+            <itemPath>../src/config/pic32cz_ca70_cult/bootloader/bootloader_common.c</itemPath>
+            <itemPath>../src/config/pic32cz_ca70_cult/bootloader/bootloader_uart.c</itemPath>
+          </logicalFolder>
+          <logicalFolder name="peripheral" displayName="peripheral" projectFiles="true">
+            <logicalFolder name="clk" displayName="clk" projectFiles="true">
+              <itemPath>../src/config/pic32cz_ca70_cult/peripheral/clk/plib_clk.c</itemPath>
+            </logicalFolder>
+            <logicalFolder name="efc" displayName="efc" projectFiles="true">
+              <itemPath>../src/config/pic32cz_ca70_cult/peripheral/efc/plib_efc.c</itemPath>
+            </logicalFolder>
+            <logicalFolder name="nvic" displayName="nvic" projectFiles="true">
+              <itemPath>../src/config/pic32cz_ca70_cult/peripheral/nvic/plib_nvic.c</itemPath>
+            </logicalFolder>
+            <logicalFolder name="pio" displayName="pio" projectFiles="true">
+              <itemPath>../src/config/pic32cz_ca70_cult/peripheral/pio/plib_pio.c</itemPath>
+            </logicalFolder>
+            <logicalFolder name="systick" displayName="systick" projectFiles="true">
+              <itemPath>../src/config/pic32cz_ca70_cult/peripheral/systick/plib_systick.c</itemPath>
+            </logicalFolder>
+            <logicalFolder name="uart" displayName="uart" projectFiles="true">
+              <itemPath>../src/config/pic32cz_ca70_cult/peripheral/uart/plib_uart1.c</itemPath>
+            </logicalFolder>
+          </logicalFolder>
+          <itemPath>../src/config/pic32cz_ca70_cult/startup_xc32.c</itemPath>
+          <itemPath>../src/config/pic32cz_ca70_cult/initialization.c</itemPath>
+        </logicalFolder>
+      </logicalFolder>
+      <itemPath>../src/main.c</itemPath>
+      <itemPath>../src/config/pic32cz_ca70_cult/pin_configurations.csv</itemPath>
+    </logicalFolder>
+  </logicalFolder>
+  <sourceRootList>
+    <Elem>../src/config/pic32cz_ca70_cult/bootloader</Elem>
+  </sourceRootList>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="pic32cz_ca70_cult" type="2">
+      <toolsSet>
+        <developmentServer>localhost</developmentServer>
+        <targetDevice>PIC32CZ2051CA70144</targetDevice>
+        <targetHeader></targetHeader>
+        <targetPluginBoard></targetPluginBoard>
+        <platformTool>pkob4hybrid</platformTool>
+        <languageToolchain>XC32</languageToolchain>
+        <languageToolchainVersion>4.45</languageToolchainVersion>
+        <platform>3</platform>
+      </toolsSet>
+      <packs>
+        <pack name="PIC32CZ-CA70_DFP" vendor="Microchip" version="1.0.10"/>
+        <pack name="CMSIS" vendor="ARM" version="5.8.0"/>
+      </packs>
+      <ScriptingSettings>
+      </ScriptingSettings>
+      <compileType>
+        <linkerTool>
+          <linkerLibItems>
+          </linkerLibItems>
+        </linkerTool>
+        <archiverTool>
+        </archiverTool>
+        <loading>
+          <useAlternateLoadableFile>false</useAlternateLoadableFile>
+          <parseOnProdLoad>false</parseOnProdLoad>
+          <alternateLoadableFile></alternateLoadableFile>
+        </loading>
+        <subordinates>
+        </subordinates>
+      </compileType>
+      <makeCustomizationType>
+        <makeCustomizationPreStepEnabled>false</makeCustomizationPreStepEnabled>
+        <makeUseCleanTarget>false</makeUseCleanTarget>
+        <makeCustomizationPreStep></makeCustomizationPreStep>
+        <makeCustomizationPostStepEnabled>false</makeCustomizationPostStepEnabled>
+        <makeCustomizationPostStep></makeCustomizationPostStep>
+        <makeCustomizationPutChecksumInUserID>false</makeCustomizationPutChecksumInUserID>
+        <makeCustomizationEnableLongLines>false</makeCustomizationEnableLongLines>
+        <makeCustomizationNormalizeHexFile>false</makeCustomizationNormalizeHexFile>
+      </makeCustomizationType>
+      <C32>
+        <property key="additional-warnings" value="true"/>
+        <property key="addresss-attribute-use" value="false"/>
+        <property key="appendMe" value=""/>
+        <property key="enable-app-io" value="false"/>
+        <property key="enable-omit-frame-pointer" value="false"/>
+        <property key="enable-symbols" value="true"/>
+        <property key="enable-unroll-loops" value="false"/>
+        <property key="exclude-floating-point" value="false"/>
+        <property key="extra-include-directories"
+                  value="../src;../src/config/default;../src/config/pic32cz_ca70_cult;../src/packs/CMSIS/;../src/packs/CMSIS/CMSIS/Core/Include;../src/packs/PIC32CZ2051CA70144_DFP"/>
+        <property key="generate-16-bit-code" value="false"/>
+        <property key="generate-micro-compressed-code" value="false"/>
+        <property key="isolate-each-function" value="true"/>
+        <property key="make-warnings-into-errors" value="true"/>
+        <property key="optimization-level" value="-O2"/>
+        <property key="place-data-into-section" value="false"/>
+        <property key="post-instruction-scheduling" value="default"/>
+        <property key="pre-instruction-scheduling" value="default"/>
+        <property key="preprocessor-macros" value=""/>
+        <property key="strict-ansi" value="false"/>
+        <property key="support-ansi" value="false"/>
+        <property key="tentative-definitions" value="-fno-common"/>
+        <property key="toplevel-reordering" value=""/>
+        <property key="unaligned-access" value=""/>
+        <property key="use-cci" value="false"/>
+        <property key="use-iar" value="false"/>
+        <property key="use-indirect-calls" value="false"/>
+      </C32>
+      <C32-AR>
+        <property key="additional-options-chop-files" value="false"/>
+      </C32-AR>
+      <C32-AS>
+        <property key="assembler-symbols" value=""/>
+        <property key="enable-symbols" value="true"/>
+        <property key="exclude-floating-point-library" value="false"/>
+        <property key="expand-macros" value="false"/>
+        <property key="extra-include-directories-for-assembler" value=""/>
+        <property key="extra-include-directories-for-preprocessor" value=""/>
+        <property key="false-conditionals" value="false"/>
+        <property key="generate-16-bit-code" value="false"/>
+        <property key="generate-micro-compressed-code" value="false"/>
+        <property key="keep-locals" value="false"/>
+        <property key="list-assembly" value="false"/>
+        <property key="list-source" value="false"/>
+        <property key="list-symbols" value="false"/>
+        <property key="oXC32asm-list-to-file" value="false"/>
+        <property key="omit-debug-dirs" value="false"/>
+        <property key="omit-forms" value="false"/>
+        <property key="preprocessor-macros" value=""/>
+        <property key="warning-level" value=""/>
+      </C32-AS>
+      <C32-CO>
+        <property key="coverage-enable" value=""/>
+        <property key="stack-guidance" value="false"/>
+      </C32-CO>
+      <C32-LD>
+        <property key="additional-options-use-response-files" value="false"/>
+        <property key="additional-options-write-sla" value="false"/>
+        <property key="allocate-dinit" value="false"/>
+        <property key="appendMe" value=""/>
+        <property key="code-dinit" value="false"/>
+        <property key="ebase-addr" value=""/>
+        <property key="enable-check-sections" value="false"/>
+        <property key="exclude-floating-point-library" value="false"/>
+        <property key="exclude-standard-libraries" value="false"/>
+        <property key="extra-lib-directories" value=""/>
+        <property key="fill-flash-options-addr" value=""/>
+        <property key="fill-flash-options-const" value=""/>
+        <property key="fill-flash-options-how" value="0"/>
+        <property key="fill-flash-options-inc-const" value="1"/>
+        <property key="fill-flash-options-increment" value=""/>
+        <property key="fill-flash-options-seq" value=""/>
+        <property key="fill-flash-options-what" value="0"/>
+        <property key="generate-16-bit-code" value="false"/>
+        <property key="generate-cross-reference-file" value="false"/>
+        <property key="generate-micro-compressed-code" value="false"/>
+        <property key="heap-size" value="512"/>
+        <property key="input-libraries" value=""/>
+        <property key="kseg-length" value=""/>
+        <property key="kseg-origin" value=""/>
+        <property key="linker-symbols" value=""/>
+        <property key="map-file" value="${DISTDIR}/${PROJECTNAME}.${IMAGE_TYPE}.map"/>
+        <property key="no-device-startup-code" value="true"/>
+        <property key="no-startup-files" value="true"/>
+        <property key="oXC32ld-extra-opts" value=""/>
+        <property key="optimization-level" value=""/>
+        <property key="preprocessor-macros" value=""/>
+        <property key="remove-unused-sections" value="true"/>
+        <property key="report-memory-usage" value="false"/>
+        <property key="serial-length" value=""/>
+        <property key="serial-origin" value=""/>
+        <property key="stack-size" value=""/>
+        <property key="symbol-stripping" value=""/>
+        <property key="trace-symbols" value=""/>
+        <property key="warn-section-align" value="false"/>
+      </C32-LD>
+      <C32CPP>
+        <property key="additional-warnings" value="false"/>
+        <property key="addresss-attribute-use" value="false"/>
+        <property key="appendMe" value=""/>
+        <property key="check-new" value="false"/>
+        <property key="eh-specs" value="true"/>
+        <property key="enable-app-io" value="false"/>
+        <property key="enable-omit-frame-pointer" value="false"/>
+        <property key="enable-symbols" value="true"/>
+        <property key="enable-unroll-loops" value="false"/>
+        <property key="exceptions" value="true"/>
+        <property key="exclude-floating-point" value="false"/>
+        <property key="extra-include-directories"
+                  value="../src;../src/config/default;../src/config/pic32cz_ca70_cult;../src/packs/CMSIS/;../src/packs/CMSIS/CMSIS/Core/Include;../src/packs/PIC32CZ2051CA70144_DFP"/>
+        <property key="generate-16-bit-code" value="false"/>
+        <property key="generate-micro-compressed-code" value="false"/>
+        <property key="isolate-each-function" value="true"/>
+        <property key="make-warnings-into-errors" value="false"/>
+        <property key="optimization-level" value="-O1"/>
+        <property key="place-data-into-section" value="false"/>
+        <property key="post-instruction-scheduling" value="default"/>
+        <property key="pre-instruction-scheduling" value="default"/>
+        <property key="preprocessor-macros" value=""/>
+        <property key="rtti" value="true"/>
+        <property key="strict-ansi" value="false"/>
+        <property key="toplevel-reordering" value=""/>
+        <property key="unaligned-access" value=""/>
+        <property key="use-cci" value="false"/>
+        <property key="use-iar" value="false"/>
+        <property key="use-indirect-calls" value="false"/>
+      </C32CPP>
+      <C32Global>
+        <property key="appendMe" value=""/>
+        <property key="common-include-directories" value=""/>
+        <property key="gp-relative-option" value=""/>
+        <property key="legacy-libc" value="false"/>
+        <property key="mdtcm" value=""/>
+        <property key="mitcm" value=""/>
+        <property key="mstacktcm" value="false"/>
+        <property key="omit-pack-options" value="1"/>
+        <property key="relaxed-math" value="false"/>
+        <property key="save-temps" value="false"/>
+        <property key="stack-smashing" value=""/>
+        <property key="wpo-lto" value="false"/>
+      </C32Global>
+      <Tool>
+        <property key="AutoSelectMemRanges" value="auto"/>
+        <property key="SecureSegment.SegmentProgramming" value="FullChipProgramming"/>
+        <property key="ToolFirmwareFilePath"
+                  value="Press to browse for a specific firmware version"/>
+        <property key="ToolFirmwareOption.UpdateOptions"
+                  value="ToolFirmwareOption.UseLatest"/>
+        <property key="ToolFirmwareToolPack"
+                  value="Press to select which tool pack to use"/>
+        <property key="communication.interface" value="swd"/>
+        <property key="communication.interface.jtag" value="2wire"/>
+        <property key="communication.speed" value="2.000"/>
+        <property key="debugoptions.debug-startup" value="Use system settings"/>
+        <property key="debugoptions.reset-behaviour" value="Use system settings"/>
+        <property key="debugoptions.simultaneous.debug" value="false"/>
+        <property key="debugoptions.useswbreakpoints" value="false"/>
+        <property key="event.recorder.debugger.behavior" value="Running"/>
+        <property key="event.recorder.enabled" value="false"/>
+        <property key="event.recorder.scvd.files" value=""/>
+        <property key="freeze.timers" value="false"/>
+        <property key="lastid" value=""/>
+        <property key="memories.aux" value="false"/>
+        <property key="memories.bootflash" value="true"/>
+        <property key="memories.configurationmemory" value="true"/>
+        <property key="memories.configurationmemory2" value="true"/>
+        <property key="memories.dataflash" value="true"/>
+        <property key="memories.eeprom" value="true"/>
+        <property key="memories.exclude.configurationmemory" value="true"/>
+        <property key="memories.flashdata" value="true"/>
+        <property key="memories.id" value="true"/>
+        <property key="memories.instruction.ram.ranges"
+                  value="${memories.instruction.ram.ranges}"/>
+        <property key="memories.programmemory" value="true"/>
+        <property key="memories.programmemory.ranges" value="0-9fffffff"/>
+        <property key="programoptions.donoteraseauxmem" value="false"/>
+        <property key="programoptions.eraseb4program" value="true"/>
+        <property key="programoptions.pgmentry.voltage" value="low"/>
+        <property key="programoptions.pgmspeed" value="Med"/>
+        <property key="programoptions.preservedataflash" value="false"/>
+        <property key="programoptions.preservedataflash.ranges"
+                  value="${memories.dataflash.default}"/>
+        <property key="programoptions.preserveeeprom" value="false"/>
+        <property key="programoptions.preserveeeprom.ranges" value=""/>
+        <property key="programoptions.preserveprogram.ranges" value=""/>
+        <property key="programoptions.preserveprogramrange" value="false"/>
+        <property key="programoptions.preserveuserid" value="false"/>
+        <property key="programoptions.program.otpconfig" value="false"/>
+        <property key="programoptions.programcalmem" value="false"/>
+        <property key="programoptions.programuserotp" value="false"/>
+        <property key="programoptions.smart.program" value="When debugging only"/>
+        <property key="programoptions.testmodeentrymethod" value="VDDFirst"/>
+        <property key="toolpack.updateoptions"
+                  value="toolpack.updateoptions.uselatestoolpack"/>
+        <property key="toolpack.updateoptions.packversion"
+                  value="Press to select which tool pack to use"/>
+      </Tool>
+      <pkob4hybrid>
+        <property key="AutoSelectMemRanges" value="auto"/>
+        <property key="SecureSegment.SegmentProgramming" value="FullChipProgramming"/>
+        <property key="ToolFirmwareFilePath"
+                  value="Press to browse for a specific firmware version"/>
+        <property key="ToolFirmwareOption.UpdateOptions"
+                  value="ToolFirmwareOption.UseLatest"/>
+        <property key="ToolFirmwareToolPack"
+                  value="Press to select which tool pack to use"/>
+        <property key="communication.interface" value="swd"/>
+        <property key="communication.interface.jtag" value="2wire"/>
+        <property key="communication.speed" value="2.000"/>
+        <property key="debugoptions.debug-startup" value="Use system settings"/>
+        <property key="debugoptions.reset-behaviour" value="Use system settings"/>
+        <property key="debugoptions.simultaneous.debug" value="false"/>
+        <property key="debugoptions.useswbreakpoints" value="false"/>
+        <property key="event.recorder.debugger.behavior" value="Running"/>
+        <property key="event.recorder.enabled" value="false"/>
+        <property key="event.recorder.scvd.files" value=""/>
+        <property key="freeze.timers" value="false"/>
+        <property key="lastid" value=""/>
+        <property key="memories.aux" value="false"/>
+        <property key="memories.bootflash" value="true"/>
+        <property key="memories.configurationmemory" value="true"/>
+        <property key="memories.configurationmemory2" value="true"/>
+        <property key="memories.dataflash" value="true"/>
+        <property key="memories.eeprom" value="true"/>
+        <property key="memories.exclude.configurationmemory" value="true"/>
+        <property key="memories.flashdata" value="true"/>
+        <property key="memories.id" value="true"/>
+        <property key="memories.instruction.ram.ranges"
+                  value="${memories.instruction.ram.ranges}"/>
+        <property key="memories.programmemory" value="true"/>
+        <property key="memories.programmemory.ranges" value="0-9fffffff"/>
+        <property key="programmerToGoFilePath"
+                  value="C:/Users/I76597/h3/bootloader_apps_pic32cm_gc/bootloader_apps_uart/apps/uart_bootloader/bootloader/firmware/pic32cz_ca70_cult.X/debug/pic32cz_ca70_cult/pic32cz_ca70_cult_ptg"/>
+        <property key="programoptions.donoteraseauxmem" value="false"/>
+        <property key="programoptions.eraseb4program" value="true"/>
+        <property key="programoptions.pgmentry.voltage" value="low"/>
+        <property key="programoptions.pgmspeed" value="Med"/>
+        <property key="programoptions.preservedataflash" value="false"/>
+        <property key="programoptions.preservedataflash.ranges"
+                  value="${memories.dataflash.default}"/>
+        <property key="programoptions.preserveeeprom" value="false"/>
+        <property key="programoptions.preserveeeprom.ranges" value=""/>
+        <property key="programoptions.preserveprogram.ranges" value=""/>
+        <property key="programoptions.preserveprogramrange" value="false"/>
+        <property key="programoptions.preserveuserid" value="false"/>
+        <property key="programoptions.program.otpconfig" value="false"/>
+        <property key="programoptions.programcalmem" value="false"/>
+        <property key="programoptions.programuserotp" value="false"/>
+        <property key="programoptions.smart.program" value="When debugging only"/>
+        <property key="programoptions.testmodeentrymethod" value="VDDFirst"/>
+        <property key="toolpack.updateoptions"
+                  value="toolpack.updateoptions.uselatestoolpack"/>
+        <property key="toolpack.updateoptions.packversion"
+                  value="Press to select which tool pack to use"/>
+      </pkob4hybrid>
+    </conf>
+  </confs>
+</configurationDescriptor>
