@@ -1,7 +1,9 @@
 /*
  * Header file for PIC32CZ2051CA70144
  *
- * Copyright (c) 2024 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2025 Microchip Technology Inc. and its subsidiaries.
+ *
+ * SPDX-License-Identifier: Apache-2.0
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -17,7 +19,7 @@
  *
  */
 
-/* File generated from device description file (ATDF) version 2023-09-08T03:06:20Z */
+/* File generated from device description file (ATDF) version 2025-04-15T17:35:01Z */
 #ifndef _PIC32CZ2051CA70144_H_
 #define _PIC32CZ2051CA70144_H_
 
@@ -64,7 +66,7 @@
 #endif /* SKIP_INTEGER_LITERALS */
 
 /* ************************************************************************** */
-/* CMSIS DEFINITIONS FOR PIC32CZ2051CA70144                                 */
+/*                  CMSIS DEFINITIONS FOR PIC32CZ2051CA70144                  */
 /* ************************************************************************** */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
 /* Interrupt Number Definition */
@@ -82,7 +84,7 @@ typedef enum IRQn
   PendSV_IRQn               =  -2, /* -2  Pendable request for system service */
   SysTick_IRQn              =  -1, /* -1  System Tick Timer                   */
 
-/******  PIC32CZ2051CA70144 specific Interrupt Numbers ***********************************/
+/* ************* PIC32CZ2051CA70144 specific Interrupt Numbers ************** */
   SUPC_IRQn                 =   0, /* 0   Supply Controller (SUPC)            */
   RSTC_IRQn                 =   1, /* 1   Reset Controller (RSTC)             */
   RTC_IRQn                  =   2, /* 2   Real-time Clock (RTC)               */
@@ -373,7 +375,7 @@ void GMAC_Q5_Handler               ( void );
 #endif /* USE_CMSIS_INIT */
 
 /* ************************************************************************** */
-/*   SOFTWARE PERIPHERAL API DEFINITION FOR PIC32CZ2051CA70144                */
+/*         SOFTWARE PERIPHERAL API DEFINITIONS FOR PIC32CZ2051CA70144         */
 /* ************************************************************************** */
 #include "component/acc.h"
 #include "component/aes.h"
@@ -414,7 +416,7 @@ void GMAC_Q5_Handler               ( void );
 #include "component/xdmac.h"
 
 /* ************************************************************************** */
-/*   INSTANCE DEFINITIONS FOR PIC32CZ2051CA70144 */
+/*                INSTANCE DEFINITIONS FOR PIC32CZ2051CA70144                 */
 /* ************************************************************************** */
 #include "instance/acc.h"
 #include "instance/aes.h"
@@ -475,7 +477,7 @@ void GMAC_Q5_Handler               ( void );
 #include "instance/xdmac.h"
 
 /* ************************************************************************** */
-/*  PERIPHERAL ID DEFINITIONS FOR PIC32CZ2051CA70144                          */
+/*              PERIPHERAL ID DEFINITIONS FOR PIC32CZ2051CA70144              */
 /* ************************************************************************** */
 #define ID_SUPC          (  0) /* Supply Controller (SUPC) */
 #define ID_RSTC          (  1) /* Reset Controller (RSTC) */
@@ -541,7 +543,7 @@ void GMAC_Q5_Handler               ( void );
 #define ID_PERIPH_MAX    ( 70) /* Number of peripheral IDs */
 
 /* ************************************************************************** */
-/*   REGISTER STRUCTURE ADDRESS DEFINITIONS FOR PIC32CZ2051CA70144            */
+/*       REGISTER STRUCTURE ADDRESS DEFINITIONS FOR PIC32CZ2051CA70144        */
 /* ************************************************************************** */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
 #define ACC_REGS                         ((acc_registers_t*)0x40044000)                /* ACC Registers Address        */
@@ -604,7 +606,7 @@ void GMAC_Q5_Handler               ( void );
 #endif /* (defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 /* ************************************************************************** */
-/*   BASE ADDRESS DEFINITIONS FOR PIC32CZ2051CA70144                          */
+/*              BASE ADDRESS DEFINITIONS FOR PIC32CZ2051CA70144               */
 /* ************************************************************************** */
 #define ACC_BASE_ADDRESS                 _UINT32_(0x40044000)                          /* ACC Base Address */
 #define AES_BASE_ADDRESS                 _UINT32_(0x4006c000)                          /* AES Base Address */
@@ -665,12 +667,12 @@ void GMAC_Q5_Handler               ( void );
 #define GPNVMBITS_BASE_ADDRESS           _UINT32_(0x00000000)                          /* FUSES Base Address */
 
 /* ************************************************************************** */
-/*   PIO DEFINITIONS FOR PIC32CZ2051CA70144                                   */
+/*                   PIO DEFINITIONS FOR PIC32CZ2051CA70144                   */
 /* ************************************************************************** */
 #include "pio/pic32cz2051ca70144.h"
 
 /* ************************************************************************** */
-/*   MEMORY MAPPING DEFINITIONS FOR PIC32CZ2051CA70144                        */
+/*             MEMORY MAPPING DEFINITIONS FOR PIC32CZ2051CA70144              */
 /* ************************************************************************** */
 #define PERIPHERALS_SIZE               _UINT32_(0x20000000)    /* 524288kB Memory segment type: io */
 #define SYSTEM_SIZE                    _UINT32_(0x10000000)    /* 262144kB Memory segment type: io */
@@ -683,7 +685,7 @@ void GMAC_Q5_Handler               ( void );
 
 #define IROM_SIZE                      _UINT32_(0x00004000)    /*   16kB Memory segment type: rom */
 #define DTCM_SIZE                      _UINT32_(0x00020000)    /*  128kB Memory segment type: other */
-#define IRAM_SIZE                      _UINT32_(0x00060000)    /*  384kB Memory segment type: ram */
+#define IRAM_SIZE                      _UINT32_(0x00080000)    /*  512kB Memory segment type: ram */
 #define EBI_CS0_SIZE                   _UINT32_(0x01000000)    /* 16384kB Memory segment type: other */
 #define EBI_CS1_SIZE                   _UINT32_(0x01000000)    /* 16384kB Memory segment type: other */
 #define EBI_CS2_SIZE                   _UINT32_(0x01000000)    /* 16384kB Memory segment type: other */
@@ -704,14 +706,14 @@ void GMAC_Q5_Handler               ( void );
 #define EBI_CS3_ADDR                   _UINT32_(0x63000000)    /* EBI_CS3 base address (type: other)*/
 
 /* ************************************************************************** */
-/*   DEVICE SIGNATURES FOR PIC32CZ2051CA70144                                 */
+/*                  DEVICE SIGNATURES FOR PIC32CZ2051CA70144                  */
 /* ************************************************************************** */
 #define CHIP_JTAGID                    _UINT32_(0X05B3D03F)
 #define CHIP_CIDR                      _UINT32_(0XA1AF0E00)
 #define CHIP_EXID                      _UINT32_(0X00000002)
 
 /* ************************************************************************** */
-/*   ELECTRICAL DEFINITIONS FOR PIC32CZ2051CA70144                            */
+/*               ELECTRICAL DEFINITIONS FOR PIC32CZ2051CA70144                */
 /* ************************************************************************** */
 #define CHIP_FREQ_SLCK_RC_MIN          _UINT32_(20000)     
 #define CHIP_FREQ_SLCK_RC              _UINT32_(32000)     /* Typical Slow Clock Internal RC frequency */
@@ -730,8 +732,6 @@ void GMAC_Q5_Handler               ( void );
 #define CHIP_FREQ_FWS_5                _UINT32_(138000000) /* Maximum operating frequency when FWS is 5 */
 #define CHIP_FREQ_FWS_6                _UINT32_(150000000) /* Maximum operating frequency when FWS is 6 */
 #define CHIP_FREQ_FWS_NUMBER           _UINT32_(7)         /* Number of FWS ranges */
-
-
 
 #ifdef __cplusplus
 }

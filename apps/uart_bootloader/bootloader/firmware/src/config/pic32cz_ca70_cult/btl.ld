@@ -78,10 +78,10 @@ ENTRY(__XC32_RESET_HANDLER_NAME)
  */
 #define RAM_START (0x20400000 + 16)
 
-#define RAM_SIZE  (0x00060000 - 16)
+#define RAM_SIZE  (0x00080000 - 16)
 
-#if (RAM_SIZE > 0x00060000)
-    #  error RAM_SIZE is greater than the max size of 0x00060000
+#if (RAM_SIZE > 0x00080000)
+    #  error RAM_SIZE is greater than the max size of 0x00080000
 #endif
 
 
@@ -154,6 +154,8 @@ SECTIONS
         *(.rodata)
         *(.rodata.*)
         *(.ramfunc.*)
+        *(.data)
+        *(.data.*)
         . = ALIGN(4);
         __data_end__ = .;
         _edata = .;

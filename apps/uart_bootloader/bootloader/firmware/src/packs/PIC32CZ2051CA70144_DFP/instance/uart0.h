@@ -1,7 +1,9 @@
 /*
  * Instance header file for PIC32CZ2051CA70144
  *
- * Copyright (c) 2024 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2025 Microchip Technology Inc. and its subsidiaries.
+ *
+ * SPDX-License-Identifier: Apache-2.0
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -17,7 +19,7 @@
  *
  */
 
-/* file generated from device description file (ATDF) version 2023-09-08T03:06:20Z */
+/* file generated from device description file (ATDF) version 2025-04-15T17:35:01Z */
 #ifndef _PIC32CZCA70_UART0_INSTANCE_
 #define _PIC32CZCA70_UART0_INSTANCE_
 
