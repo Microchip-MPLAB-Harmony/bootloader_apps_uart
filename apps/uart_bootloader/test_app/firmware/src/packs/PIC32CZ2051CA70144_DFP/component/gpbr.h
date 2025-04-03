@@ -1,7 +1,9 @@
 /*
  * Component description for GPBR
  *
- * Copyright (c) 2024 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2025 Microchip Technology Inc. and its subsidiaries.
+ *
+ * SPDX-License-Identifier: Apache-2.0
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -17,22 +19,22 @@
  *
  */
 
-/* file generated from device description file (ATDF) version 2023-09-08T03:06:20Z */
+/*  file generated from device description file (ATDF) version 2025-04-15T17:35:01Z  */
 #ifndef _PIC32CZCA70_GPBR_COMPONENT_H_
 #define _PIC32CZCA70_GPBR_COMPONENT_H_
 
 /* ************************************************************************** */
-/*   SOFTWARE API DEFINITION FOR GPBR                                         */
+/*                      SOFTWARE API DEFINITION FOR GPBR                      */
 /* ************************************************************************** */
 
 /* -------- SYS_GPBR : (GPBR Offset: 0x00) (R/W 32) General Purpose Backup Register 0 -------- */
 #define SYS_GPBR_GPBR_VALUE_Pos               _UINT32_(0)                                          /* (SYS_GPBR) Value of GPBR x Position */
 #define SYS_GPBR_GPBR_VALUE_Msk               (_UINT32_(0xFFFFFFFF) << SYS_GPBR_GPBR_VALUE_Pos)    /* (SYS_GPBR) Value of GPBR x Mask */
-#define SYS_GPBR_GPBR_VALUE(value)            (SYS_GPBR_GPBR_VALUE_Msk & (_UINT32_(value) << SYS_GPBR_GPBR_VALUE_Pos)) /* Assigment of value for GPBR_VALUE in the SYS_GPBR register */
+#define SYS_GPBR_GPBR_VALUE(value)            (SYS_GPBR_GPBR_VALUE_Msk & (_UINT32_(value) << SYS_GPBR_GPBR_VALUE_Pos)) /* Assignment of value for GPBR_VALUE in the SYS_GPBR register */
 #define SYS_GPBR_Msk                          _UINT32_(0xFFFFFFFF)                                 /* (SYS_GPBR) Register Mask  */
 
 
-/** \brief GPBR register offsets definitions */
+/* GPBR register offsets definitions */
 #define SYS_GPBR_REG_OFST              _UINT32_(0x00)      /* (SYS_GPBR) General Purpose Backup Register 0 Offset */
 #define SYS_GPBR0_REG_OFST             _UINT32_(0x00)      /* (SYS_GPBR0) General Purpose Backup Register 0 Offset */
 #define SYS_GPBR1_REG_OFST             _UINT32_(0x04)      /* (SYS_GPBR1) General Purpose Backup Register 0 Offset */
@@ -44,10 +46,10 @@
 #define SYS_GPBR7_REG_OFST             _UINT32_(0x1C)      /* (SYS_GPBR7) General Purpose Backup Register 0 Offset */
 
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
-/** \brief GPBR register API structure */
+/* GPBR register API structure */
 typedef struct
 {
-  __IO  uint32_t                       SYS_GPBR[8];        /**< Offset: 0x00 (R/W  32) General Purpose Backup Register 0 */
+  __IO  uint32_t                       SYS_GPBR[8];        /* Offset: 0x00 (R/W  32) General Purpose Backup Register 0 */
 } gpbr_registers_t;
 
 
