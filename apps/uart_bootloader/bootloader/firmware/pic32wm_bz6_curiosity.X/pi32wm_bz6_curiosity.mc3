@@ -1,0 +1,3681 @@
+<config configName="default" projectName="pi32wm_bz6_curiosity" configVersion="1.1" device="PIC32WM_BZ6204" deviceLibraryClass="com.microchip.mcc.harmony.Harmony3Library" coreVersion="5.7.1">
+   <usedPackages class="java.util.ArrayList"/>
+   <usedClasses class="java.util.TreeMap">
+      <entry>
+         <string>cmsis</string>
+         <string>class com.microchip.mcc.harmony.HarmonyModule</string>
+      </entry>
+      <entry>
+         <string>core</string>
+         <string>class com.microchip.mcc.harmony.HarmonyModule</string>
+      </entry>
+      <entry>
+         <string>dfp</string>
+         <string>class com.microchip.mcc.harmony.HarmonyModule</string>
+      </entry>
+      <entry>
+         <string>dsu</string>
+         <string>class com.microchip.mcc.harmony.HarmonyModule</string>
+      </entry>
+      <entry>
+         <string>evsys</string>
+         <string>class com.microchip.mcc.harmony.HarmonyModule</string>
+      </entry>
+      <entry>
+         <string>nvm</string>
+         <string>class com.microchip.mcc.harmony.HarmonyModule</string>
+      </entry>
+      <entry>
+         <string>sercom0</string>
+         <string>class com.microchip.mcc.harmony.HarmonyModule</string>
+      </entry>
+      <entry>
+         <string>uart_bootloader</string>
+         <string>class com.microchip.mcc.harmony.HarmonyModule</string>
+      </entry>
+   </usedClasses>
+   <usedLibraries class="java.util.ArrayList">
+      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.5.5"/>
+   </usedLibraries>
+   <tokenMap class="java.util.TreeMap">
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="cmsis" name="#&amp;__MCC_Group_Parrent_id"/>
+         <value>__ROOTVIEW</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="!@#harmonyUserData"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;UserData&gt;
+  &lt;UserData dnOrder=&quot;0&quot;&gt;
+    &lt;GraphSettings canvasHeight=&quot;349&quot; canvasWidth=&quot;777&quot; dnOrder=&quot;0&quot;/&gt;
+    &lt;PowerProfiles dnOrder=&quot;1&quot;&gt;
+      &lt;Profile dnOrder=&quot;0&quot; id=&quot;profile0&quot; name=&quot;Main&quot;/&gt;
+    &lt;/PowerProfiles&gt;
+    &lt;ComponentGraph dnOrder=&quot;2&quot; id=&quot;__ROOTVIEW&quot;&gt;
+      &lt;ElementPositions dnOrder=&quot;0&quot;&gt;
+        &lt;ElementPosition dnOrder=&quot;0&quot; id=&quot;cmsis&quot; x=&quot;500&quot; y=&quot;20&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;1&quot; id=&quot;core&quot; x=&quot;180&quot; y=&quot;20&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;2&quot; id=&quot;dfp&quot; x=&quot;280&quot; y=&quot;20&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;3&quot; id=&quot;dsu&quot; x=&quot;640&quot; y=&quot;20&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;4&quot; id=&quot;evsys&quot; x=&quot;20&quot; y=&quot;20&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;5&quot; id=&quot;nvm&quot; x=&quot;182&quot; y=&quot;143&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;6&quot; id=&quot;sercom0&quot; x=&quot;182&quot; y=&quot;237&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;7&quot; id=&quot;uart_bootloader&quot; x=&quot;410&quot; y=&quot;207&quot;/&gt;
+      &lt;/ElementPositions&gt;
+    &lt;/ComponentGraph&gt;
+  &lt;/UserData&gt;
+&lt;/UserData&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="#&amp;__MCC_Group_Parrent_id"/>
+         <value>__ROOTVIEW</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="ADD_LINKER_FILE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;ADD_LINKER_FILE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;uart_bootloader&quot; value=&quot;false&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="APP_START_ADDRESS"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;APP_START_ADDRESS&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;uart_bootloader&quot; value=&quot;1000000&quot;/&gt;
+      &lt;User dnOrder=&quot;1&quot; value=&quot;1002000&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="BSP_PIN_10_MODE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;BSP_PIN_10_MODE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;DIGITAL&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="BSP_PIN_11_MODE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;BSP_PIN_11_MODE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;DIGITAL&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="BSP_PIN_12_MODE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;BSP_PIN_12_MODE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;DIGITAL&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="BSP_PIN_13_MODE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;BSP_PIN_13_MODE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;DIGITAL&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="BSP_PIN_16_MODE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;BSP_PIN_16_MODE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;DIGITAL&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="BSP_PIN_18_MODE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;BSP_PIN_18_MODE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;DIGITAL&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="BSP_PIN_19_FUNCTION_NAME"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;BSP_PIN_19_FUNCTION_NAME&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;SWITCH&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="BSP_PIN_19_FUNCTION_TYPE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;BSP_PIN_19_FUNCTION_TYPE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;GPIO&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="BSP_PIN_19_MODE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;BSP_PIN_19_MODE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;DIGITAL&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="BSP_PIN_20_MODE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;BSP_PIN_20_MODE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;DIGITAL&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="BSP_PIN_21_MODE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;BSP_PIN_21_MODE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;DIGITAL&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="BSP_PIN_22_MODE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;BSP_PIN_22_MODE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;DIGITAL&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="BSP_PIN_24_MODE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;BSP_PIN_24_MODE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;DIGITAL&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="BSP_PIN_25_MODE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;BSP_PIN_25_MODE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;DIGITAL&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="BSP_PIN_26_MODE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;BSP_PIN_26_MODE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;DIGITAL&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="BSP_PIN_38_MODE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;BSP_PIN_38_MODE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;DIGITAL&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="BSP_PIN_3_MODE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;BSP_PIN_3_MODE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;DIGITAL&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="BSP_PIN_41_DIR"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;BSP_PIN_41_DIR&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;Out&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="BSP_PIN_41_FUNCTION_NAME"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;BSP_PIN_41_FUNCTION_NAME&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;LED&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="BSP_PIN_41_FUNCTION_TYPE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;BSP_PIN_41_FUNCTION_TYPE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;GPIO&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="BSP_PIN_41_LAT"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;BSP_PIN_41_LAT&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;High&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="BSP_PIN_41_MODE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;BSP_PIN_41_MODE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;DIGITAL&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="BSP_PIN_42_MODE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;BSP_PIN_42_MODE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;DIGITAL&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="BSP_PIN_43_MODE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;BSP_PIN_43_MODE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;DIGITAL&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="BSP_PIN_45_MODE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;BSP_PIN_45_MODE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;DIGITAL&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="BSP_PIN_46_MODE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;BSP_PIN_46_MODE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;DIGITAL&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="BSP_PIN_47_MODE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;BSP_PIN_47_MODE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;DIGITAL&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="BSP_PIN_48_MODE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;BSP_PIN_48_MODE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;DIGITAL&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="BSP_PIN_49_MODE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;BSP_PIN_49_MODE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;DIGITAL&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="BSP_PIN_51_MODE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;BSP_PIN_51_MODE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;DIGITAL&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="BSP_PIN_52_MODE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;BSP_PIN_52_MODE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;DIGITAL&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="BSP_PIN_54_MODE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;BSP_PIN_54_MODE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;DIGITAL&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="BSP_PIN_57_MODE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;BSP_PIN_57_MODE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;DIGITAL&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="BSP_PIN_59_MODE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;BSP_PIN_59_MODE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;DIGITAL&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="CFGPCLKGEN1_REG"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;CFGPCLKGEN1_REG&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;36864&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="CONFIG_SCOM0_HSEN"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;CONFIG_SCOM0_HSEN&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;DIRECT&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="CoreMainFile"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;CoreMainFile&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;uart_bootloader&quot; value=&quot;false&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="CoreSysCallsFile"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;CoreSysCallsFile&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;uart_bootloader&quot; value=&quot;false&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="CoreSysExceptionFile"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;CoreSysExceptionFile&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;uart_bootloader&quot; value=&quot;false&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="CoreSysInitFile"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;CoreSysInitFile&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;uart_bootloader&quot; value=&quot;false&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="CoreSysIntFile"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;CoreSysIntFile&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;uart_bootloader&quot; value=&quot;false&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="CoreSysStartupFile"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;CoreSysStartupFile&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;uart_bootloader&quot; value=&quot;false&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="CoreSysStdioSyscallsFile"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;CoreSysStdioSyscallsFile&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;uart_bootloader&quot; value=&quot;false&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="DEBUG_CONSOLE_C"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;DEBUG_CONSOLE_C&quot;&gt;
+    &lt;Attributes dnOrder=&quot;0&quot;&gt;
+      &lt;Boolean dnOrder=&quot;0&quot; id=&quot;enabled&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;false&lt;/Value&gt;
+      &lt;/Boolean&gt;
+    &lt;/Attributes&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="EXCEPTIONS_C"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;EXCEPTIONS_C&quot;&gt;
+    &lt;Attributes dnOrder=&quot;0&quot;&gt;
+      &lt;Boolean dnOrder=&quot;0&quot; id=&quot;enabled&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;false&lt;/Value&gt;
+      &lt;/Boolean&gt;
+    &lt;/Attributes&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="FUSE_CONFIG_ENABLE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;FUSE_CONFIG_ENABLE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;true&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="GCLK_ID_3_CHEN"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;GCLK_ID_3_CHEN&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;true&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="GCLK_ID_3_FREQ"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;GCLK_ID_3_FREQ&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;128000000&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="GCLK_ID_3_GENSEL"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;GCLK_ID_3_GENSEL&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;1&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="INITIALIZATION_C"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;INITIALIZATION_C&quot;&gt;
+    &lt;Attributes dnOrder=&quot;0&quot;&gt;
+      &lt;Boolean dnOrder=&quot;0&quot; id=&quot;enabled&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;false&lt;/Value&gt;
+      &lt;/Boolean&gt;
+    &lt;/Attributes&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="INSTRUCTION_CACHE_ENABLE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;INSTRUCTION_CACHE_ENABLE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;uart_bootloader&quot; value=&quot;false&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="INTERRUPTS_C"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;INTERRUPTS_C&quot;&gt;
+    &lt;Attributes dnOrder=&quot;0&quot;&gt;
+      &lt;Boolean dnOrder=&quot;0&quot; id=&quot;enabled&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;false&lt;/Value&gt;
+      &lt;/Boolean&gt;
+    &lt;/Attributes&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="INTERRUPTS_H"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;INTERRUPTS_H&quot;&gt;
+    &lt;Attributes dnOrder=&quot;0&quot;&gt;
+      &lt;Boolean dnOrder=&quot;0&quot; id=&quot;enabled&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;false&lt;/Value&gt;
+      &lt;/Boolean&gt;
+    &lt;/Attributes&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="LIBC_SYSCALLS_C"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;LIBC_SYSCALLS_C&quot;&gt;
+    &lt;Attributes dnOrder=&quot;0&quot;&gt;
+      &lt;Boolean dnOrder=&quot;0&quot; id=&quot;enabled&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;false&lt;/Value&gt;
+      &lt;/Boolean&gt;
+    &lt;/Attributes&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="LINKER_SCRIPT"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;LINKER_SCRIPT&quot;&gt;
+    &lt;Attributes dnOrder=&quot;0&quot;&gt;
+      &lt;Boolean dnOrder=&quot;0&quot; id=&quot;enabled&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;false&lt;/Value&gt;
+      &lt;/Boolean&gt;
+    &lt;/Attributes&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="MAIN_C"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;MAIN_C&quot;&gt;
+    &lt;Attributes dnOrder=&quot;0&quot;&gt;
+      &lt;Boolean dnOrder=&quot;0&quot; id=&quot;enabled&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;false&lt;/Value&gt;
+      &lt;/Boolean&gt;
+    &lt;/Attributes&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="NVIC_-1_0_ENABLE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;NVIC_-1_0_ENABLE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;false&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="NVIC_-1_0_HANDLER_LOCK"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;NVIC_-1_0_HANDLER_LOCK&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;false&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="NVIC_13_0_ENABLE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;NVIC_13_0_ENABLE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;false&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="NVIC_13_0_HANDLER"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;NVIC_13_0_HANDLER&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;PAC_Handler&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="NVIC_13_0_HANDLER_LOCK"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;NVIC_13_0_HANDLER_LOCK&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;false&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="NVIC_15_0_ENABLE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;NVIC_15_0_ENABLE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;false&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="NVIC_15_0_HANDLER"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;NVIC_15_0_HANDLER&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;SERCOM0_Handler&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="NVIC_15_0_HANDLER_LOCK"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;NVIC_15_0_HANDLER_LOCK&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;false&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="NVIC_3_0_ENABLE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;NVIC_3_0_ENABLE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;false&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="NVIC_3_0_HANDLER"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;NVIC_3_0_HANDLER&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;NVM_Handler&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="NVIC_3_0_HANDLER_LOCK"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;NVIC_3_0_HANDLER_LOCK&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;false&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="NVM_INTERRUPT_ENABLE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;NVM_INTERRUPT_ENABLE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;nvm&quot; value=&quot;false&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="NVM_INTERRUPT_ENABLE_UPDATE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;NVM_INTERRUPT_ENABLE_UPDATE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;true&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="NVM_INTERRUPT_HANDLER"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;NVM_INTERRUPT_HANDLER&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;nvm&quot; value=&quot;NVM_Handler&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="NVM_INTERRUPT_HANDLER_LOCK"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;NVM_INTERRUPT_HANDLER_LOCK&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;nvm&quot; value=&quot;false&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="PAC_HEADER"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;PAC_HEADER&quot;&gt;
+    &lt;Attributes dnOrder=&quot;0&quot;&gt;
+      &lt;Boolean dnOrder=&quot;0&quot; id=&quot;enabled&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
+      &lt;/Boolean&gt;
+    &lt;/Attributes&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="PAC_INTERRRUPT_MODE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;PAC_INTERRRUPT_MODE&quot;&gt;
+    &lt;Attributes dnOrder=&quot;0&quot;&gt;
+      &lt;Boolean dnOrder=&quot;0&quot; id=&quot;visible&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
+      &lt;/Boolean&gt;
+    &lt;/Attributes&gt;
+    &lt;Values dnOrder=&quot;1&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;uart_bootloader&quot; value=&quot;false&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="PAC_INTERRUPT_ENABLE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;PAC_INTERRUPT_ENABLE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;false&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="PAC_INTERRUPT_ENABLE_UPDATE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;PAC_INTERRUPT_ENABLE_UPDATE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;true&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="PAC_INTERRUPT_HANDLER"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;PAC_INTERRUPT_HANDLER&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;PAC_Handler&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="PAC_INTERRUPT_HANDLER_LOCK"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;PAC_INTERRUPT_HANDLER_LOCK&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;false&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="PAC_SOURCE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;PAC_SOURCE&quot;&gt;
+    &lt;Attributes dnOrder=&quot;0&quot;&gt;
+      &lt;Boolean dnOrder=&quot;0&quot; id=&quot;enabled&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
+      &lt;/Boolean&gt;
+    &lt;/Attributes&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="PAC_SYS_DEF"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;PAC_SYS_DEF&quot;&gt;
+    &lt;Attributes dnOrder=&quot;0&quot;&gt;
+      &lt;Boolean dnOrder=&quot;0&quot; id=&quot;enabled&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
+      &lt;/Boolean&gt;
+    &lt;/Attributes&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="PAC_SYS_INIT"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;PAC_SYS_INIT&quot;&gt;
+    &lt;Attributes dnOrder=&quot;0&quot;&gt;
+      &lt;Boolean dnOrder=&quot;0&quot; id=&quot;enabled&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
+      &lt;/Boolean&gt;
+    &lt;/Attributes&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="PAC_USE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;PAC_USE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;uart_bootloader&quot; value=&quot;true&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="PMD3_REG_VALUE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;PMD3_REG_VALUE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;259260414&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="SERCOM0_CORE_CLOCK_ENABLE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;SERCOM0_CORE_CLOCK_ENABLE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;sercom0&quot; value=&quot;true&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="SERCOM0_CORE_CLOCK_FREQUENCY"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;SERCOM0_CORE_CLOCK_FREQUENCY&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;128000000&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="SERCOM0_INTERRUPT_ENABLE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;SERCOM0_INTERRUPT_ENABLE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;sercom0&quot; value=&quot;false&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="SERCOM0_INTERRUPT_ENABLE_UPDATE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;SERCOM0_INTERRUPT_ENABLE_UPDATE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;true&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="SERCOM0_INTERRUPT_HANDLER"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;SERCOM0_INTERRUPT_HANDLER&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;sercom0&quot; value=&quot;SERCOM0_Handler&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="SERCOM0_INTERRUPT_HANDLER_LOCK"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;SERCOM0_INTERRUPT_HANDLER_LOCK&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;sercom0&quot; value=&quot;false&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="STARTUP_C"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;STARTUP_C&quot;&gt;
+    &lt;Attributes dnOrder=&quot;0&quot;&gt;
+      &lt;Boolean dnOrder=&quot;0&quot; id=&quot;enabled&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;false&lt;/Value&gt;
+      &lt;/Boolean&gt;
+    &lt;/Attributes&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="SYSTICK_FILE_0"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;SYSTICK_FILE_0&quot;&gt;
+    &lt;Attributes dnOrder=&quot;0&quot;&gt;
+      &lt;Boolean dnOrder=&quot;0&quot; id=&quot;enabled&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
+      &lt;/Boolean&gt;
+    &lt;/Attributes&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="SYSTICK_FILE_1"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;SYSTICK_FILE_1&quot;&gt;
+    &lt;Attributes dnOrder=&quot;0&quot;&gt;
+      &lt;Boolean dnOrder=&quot;0&quot; id=&quot;enabled&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
+      &lt;/Boolean&gt;
+    &lt;/Attributes&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="SYSTICK_FILE_2"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;SYSTICK_FILE_2&quot;&gt;
+    &lt;Attributes dnOrder=&quot;0&quot;&gt;
+      &lt;Boolean dnOrder=&quot;0&quot; id=&quot;enabled&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
+      &lt;/Boolean&gt;
+    &lt;/Attributes&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="SYSTICK_PERIOD"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;SYSTICK_PERIOD&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;0xC35000&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="SYSTICK_PERIOD_MS"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;SYSTICK_PERIOD_MS&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;uart_bootloader&quot; value=&quot;100.0&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="SYSTICK_PERIOD_US"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;SYSTICK_PERIOD_US&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;100000&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="SYS_PORT_B_ANSEL"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;SYS_PORT_B_ANSEL&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;8&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="SYS_PORT_C_ANSEL"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;SYS_PORT_C_ANSEL&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;128&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="SYS_PORT_C_LAT"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;SYS_PORT_C_LAT&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;128&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="SYS_PORT_C_TRIS"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;SYS_PORT_C_TRIS&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;128&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="SysTick_INTERRUPT_ENABLE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;SysTick_INTERRUPT_ENABLE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;false&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="SysTick_INTERRUPT_ENABLE_UPDATE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;SysTick_INTERRUPT_ENABLE_UPDATE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;true&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="SysTick_INTERRUPT_HANDLER_LOCK"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;SysTick_INTERRUPT_HANDLER_LOCK&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;false&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="USE_SYSTICK_INTERRUPT"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;USE_SYSTICK_INTERRUPT&quot;&gt;
+    &lt;Attributes dnOrder=&quot;0&quot;&gt;
+      &lt;Boolean dnOrder=&quot;0&quot; id=&quot;readOnly&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;false&lt;/Value&gt;
+      &lt;/Boolean&gt;
+    &lt;/Attributes&gt;
+    &lt;Values dnOrder=&quot;1&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;false&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="XC32_LINKER_PREPROC_MARCOS"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;XC32_LINKER_PREPROC_MARCOS&quot;&gt;
+    &lt;Attributes dnOrder=&quot;0&quot;&gt;
+      &lt;Boolean dnOrder=&quot;0&quot; id=&quot;enabled&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;false&lt;/Value&gt;
+      &lt;/Boolean&gt;
+      &lt;String dnOrder=&quot;1&quot; id=&quot;value&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;ROM_ORIGIN=0x1000000;ROM_LENGTH=0x200000&lt;/Value&gt;
+      &lt;/String&gt;
+    &lt;/Attributes&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="systickEnable"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;systickEnable&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;uart_bootloader&quot; value=&quot;true&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="systickSystemInitFile"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;systickSystemInitFile&quot;&gt;
+    &lt;Attributes dnOrder=&quot;0&quot;&gt;
+      &lt;Boolean dnOrder=&quot;0&quot; id=&quot;enabled&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
+      &lt;/Boolean&gt;
+    &lt;/Attributes&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="dfp" name="#&amp;__MCC_Group_Parrent_id"/>
+         <value>__ROOTVIEW</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="dsu" name="#&amp;__MCC_Group_Parrent_id"/>
+         <value>__ROOTVIEW</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="dsu" name="DSU_INSTANCE_NAME"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;dsu&gt;
+  &lt;dsu dnOrder=&quot;0&quot; id=&quot;DSU_INSTANCE_NAME&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/dsu&gt;
+&lt;/dsu&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="evsys" name="#&amp;__MCC_Group_Parrent_id"/>
+         <value>__ROOTVIEW</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="nvm" name="!@#harmonyAttachmentState"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;nvm&gt;
+  &lt;nvm dnOrder=&quot;0&quot;&gt;
+    &lt;Attachments dnOrder=&quot;0&quot;&gt;
+      &lt;DirectCapability dnOrder=&quot;0&quot; id=&quot;NVM_MEMORY&quot;&gt;
+        &lt;Attributes dnOrder=&quot;0&quot;&gt;
+          &lt;String dnOrder=&quot;0&quot; id=&quot;targetComponentID&quot;&gt;
+            &lt;Value dnOrder=&quot;0&quot;&gt;uart_bootloader&lt;/Value&gt;
+          &lt;/String&gt;
+          &lt;String dnOrder=&quot;1&quot; id=&quot;targetAttachmentID&quot;&gt;
+            &lt;Value dnOrder=&quot;0&quot;&gt;btl_MEMORY_dependency&lt;/Value&gt;
+          &lt;/String&gt;
+        &lt;/Attributes&gt;
+      &lt;/DirectCapability&gt;
+    &lt;/Attachments&gt;
+  &lt;/nvm&gt;
+&lt;/nvm&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="nvm" name="#&amp;__MCC_Group_Parrent_id"/>
+         <value>__ROOTVIEW</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="nvm" name="DRV_MEMORY_CONNECTED"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;nvm&gt;
+  &lt;nvm dnOrder=&quot;0&quot; id=&quot;DRV_MEMORY_CONNECTED&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/nvm&gt;
+&lt;/nvm&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="nvm" name="ERASE_API_NAME"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;nvm&gt;
+  &lt;nvm dnOrder=&quot;0&quot; id=&quot;ERASE_API_NAME&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/nvm&gt;
+&lt;/nvm&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="nvm" name="ERASE_BUFFER_SIZE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;nvm&gt;
+  &lt;nvm dnOrder=&quot;0&quot; id=&quot;ERASE_BUFFER_SIZE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/nvm&gt;
+&lt;/nvm&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="nvm" name="ERASE_ENABLE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;nvm&gt;
+  &lt;nvm dnOrder=&quot;0&quot; id=&quot;ERASE_ENABLE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/nvm&gt;
+&lt;/nvm&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="nvm" name="FLASH_ERASE_SIZE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;nvm&gt;
+  &lt;nvm dnOrder=&quot;0&quot; id=&quot;FLASH_ERASE_SIZE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/nvm&gt;
+&lt;/nvm&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="nvm" name="FLASH_PROGRAM_SIZE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;nvm&gt;
+  &lt;nvm dnOrder=&quot;0&quot; id=&quot;FLASH_PROGRAM_SIZE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/nvm&gt;
+&lt;/nvm&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="nvm" name="FLASH_SIZE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;nvm&gt;
+  &lt;nvm dnOrder=&quot;0&quot; id=&quot;FLASH_SIZE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/nvm&gt;
+&lt;/nvm&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="nvm" name="FLASH_START_ADDRESS"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;nvm&gt;
+  &lt;nvm dnOrder=&quot;0&quot; id=&quot;FLASH_START_ADDRESS&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/nvm&gt;
+&lt;/nvm&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="nvm" name="FLASH_WRITE_WORD_SIZE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;nvm&gt;
+  &lt;nvm dnOrder=&quot;0&quot; id=&quot;FLASH_WRITE_WORD_SIZE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/nvm&gt;
+&lt;/nvm&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="nvm" name="INTERRUPT_ENABLE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;nvm&gt;
+  &lt;nvm dnOrder=&quot;0&quot; id=&quot;INTERRUPT_ENABLE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;uart_bootloader&quot; value=&quot;false&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/nvm&gt;
+&lt;/nvm&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="nvm" name="MEMORY_MEDIA_SIZE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;nvm&gt;
+  &lt;nvm dnOrder=&quot;0&quot; id=&quot;MEMORY_MEDIA_SIZE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/nvm&gt;
+&lt;/nvm&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="nvm" name="NVM_IEC_REG"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;nvm&gt;
+  &lt;nvm dnOrder=&quot;0&quot; id=&quot;NVM_IEC_REG&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/nvm&gt;
+&lt;/nvm&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="nvm" name="NVM_IEC_REG_VALUE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;nvm&gt;
+  &lt;nvm dnOrder=&quot;0&quot; id=&quot;NVM_IEC_REG_VALUE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/nvm&gt;
+&lt;/nvm&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="nvm" name="NVM_IFS_REG"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;nvm&gt;
+  &lt;nvm dnOrder=&quot;0&quot; id=&quot;NVM_IFS_REG&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/nvm&gt;
+&lt;/nvm&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="nvm" name="NVM_IFS_REG_VALUE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;nvm&gt;
+  &lt;nvm dnOrder=&quot;0&quot; id=&quot;NVM_IFS_REG_VALUE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/nvm&gt;
+&lt;/nvm&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="nvm" name="NVM_INSTANCE_NAME"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;nvm&gt;
+  &lt;nvm dnOrder=&quot;0&quot; id=&quot;NVM_INSTANCE_NAME&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/nvm&gt;
+&lt;/nvm&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="nvm" name="NVM_VECTOR_NUMBER"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;nvm&gt;
+  &lt;nvm dnOrder=&quot;0&quot; id=&quot;NVM_VECTOR_NUMBER&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/nvm&gt;
+&lt;/nvm&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="nvm" name="START_ADDRESS"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;nvm&gt;
+  &lt;nvm dnOrder=&quot;0&quot; id=&quot;START_ADDRESS&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/nvm&gt;
+&lt;/nvm&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="nvm" name="WRITE_API_NAME"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;nvm&gt;
+  &lt;nvm dnOrder=&quot;0&quot; id=&quot;WRITE_API_NAME&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/nvm&gt;
+&lt;/nvm&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sercom0" name="!@#harmonyAttachmentState"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sercom0&gt;
+  &lt;sercom0 dnOrder=&quot;0&quot;&gt;
+    &lt;Attachments dnOrder=&quot;0&quot;&gt;
+      &lt;DirectCapability dnOrder=&quot;0&quot; id=&quot;SERCOM0_I2C&quot;&gt;
+        &lt;Attributes dnOrder=&quot;0&quot;&gt;
+          &lt;Boolean dnOrder=&quot;0&quot; id=&quot;enabled&quot;&gt;
+            &lt;Value dnOrder=&quot;0&quot;&gt;false&lt;/Value&gt;
+          &lt;/Boolean&gt;
+        &lt;/Attributes&gt;
+      &lt;/DirectCapability&gt;
+      &lt;DirectCapability dnOrder=&quot;1&quot; id=&quot;SERCOM0_SPI&quot;&gt;
+        &lt;Attributes dnOrder=&quot;0&quot;&gt;
+          &lt;Boolean dnOrder=&quot;0&quot; id=&quot;enabled&quot;&gt;
+            &lt;Value dnOrder=&quot;0&quot;&gt;false&lt;/Value&gt;
+          &lt;/Boolean&gt;
+        &lt;/Attributes&gt;
+      &lt;/DirectCapability&gt;
+      &lt;DirectCapability dnOrder=&quot;2&quot; id=&quot;SERCOM0_UART&quot;&gt;
+        &lt;Attributes dnOrder=&quot;0&quot;&gt;
+          &lt;String dnOrder=&quot;0&quot; id=&quot;targetComponentID&quot;&gt;
+            &lt;Value dnOrder=&quot;0&quot;&gt;uart_bootloader&lt;/Value&gt;
+          &lt;/String&gt;
+          &lt;String dnOrder=&quot;1&quot; id=&quot;targetAttachmentID&quot;&gt;
+            &lt;Value dnOrder=&quot;0&quot;&gt;btl_UART_dependency&lt;/Value&gt;
+          &lt;/String&gt;
+        &lt;/Attributes&gt;
+      &lt;/DirectCapability&gt;
+    &lt;/Attachments&gt;
+  &lt;/sercom0&gt;
+&lt;/sercom0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sercom0" name="#&amp;__MCC_Group_Parrent_id"/>
+         <value>__ROOTVIEW</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sercom0" name="I2CM_ADDR_SIZE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sercom0&gt;
+  &lt;sercom0 dnOrder=&quot;0&quot; id=&quot;I2CM_ADDR_SIZE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/sercom0&gt;
+&lt;/sercom0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sercom0" name="I2CM_BAUD"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sercom0&gt;
+  &lt;sercom0 dnOrder=&quot;0&quot; id=&quot;I2CM_BAUD&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;sercom0&quot; value=&quot;255&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/sercom0&gt;
+&lt;/sercom0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sercom0" name="I2CM_BAUD_SIZE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sercom0&gt;
+  &lt;sercom0 dnOrder=&quot;0&quot; id=&quot;I2CM_BAUD_SIZE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/sercom0&gt;
+&lt;/sercom0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sercom0" name="I2CM_MODE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sercom0&gt;
+  &lt;sercom0 dnOrder=&quot;0&quot; id=&quot;I2CM_MODE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/sercom0&gt;
+&lt;/sercom0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sercom0" name="I2CM_TRISE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sercom0&gt;
+  &lt;sercom0 dnOrder=&quot;0&quot; id=&quot;I2CM_TRISE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/sercom0&gt;
+&lt;/sercom0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sercom0" name="I2CS_INTENSET_ERROR"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sercom0&gt;
+  &lt;sercom0 dnOrder=&quot;0&quot; id=&quot;I2CS_INTENSET_ERROR&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/sercom0&gt;
+&lt;/sercom0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sercom0" name="I2CS_INTERRUPT_MODE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sercom0&gt;
+  &lt;sercom0 dnOrder=&quot;0&quot; id=&quot;I2CS_INTERRUPT_MODE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/sercom0&gt;
+&lt;/sercom0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sercom0" name="I2CS_LOWTOUT_ERROR_SUPPORT"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sercom0&gt;
+  &lt;sercom0 dnOrder=&quot;0&quot; id=&quot;I2CS_LOWTOUT_ERROR_SUPPORT&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/sercom0&gt;
+&lt;/sercom0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sercom0" name="I2CS_LOWTOUT_SUPPORT"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sercom0&gt;
+  &lt;sercom0 dnOrder=&quot;0&quot; id=&quot;I2CS_LOWTOUT_SUPPORT&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/sercom0&gt;
+&lt;/sercom0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sercom0" name="I2CS_MODE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sercom0&gt;
+  &lt;sercom0 dnOrder=&quot;0&quot; id=&quot;I2CS_MODE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/sercom0&gt;
+&lt;/sercom0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sercom0" name="I2CS_PLIB_API_PREFIX"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sercom0&gt;
+  &lt;sercom0 dnOrder=&quot;0&quot; id=&quot;I2CS_PLIB_API_PREFIX&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/sercom0&gt;
+&lt;/sercom0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sercom0" name="I2CS_RUNSTDBY"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sercom0&gt;
+  &lt;sercom0 dnOrder=&quot;0&quot; id=&quot;I2CS_RUNSTDBY&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/sercom0&gt;
+&lt;/sercom0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sercom0" name="I2CS_SCLSM"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sercom0&gt;
+  &lt;sercom0 dnOrder=&quot;0&quot; id=&quot;I2CS_SCLSM&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/sercom0&gt;
+&lt;/sercom0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sercom0" name="I2CS_SDAHOLD_TIME"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sercom0&gt;
+  &lt;sercom0 dnOrder=&quot;0&quot; id=&quot;I2CS_SDAHOLD_TIME&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/sercom0&gt;
+&lt;/sercom0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sercom0" name="I2CS_SDASETUP_MAX_VALUE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sercom0&gt;
+  &lt;sercom0 dnOrder=&quot;0&quot; id=&quot;I2CS_SDASETUP_MAX_VALUE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/sercom0&gt;
+&lt;/sercom0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sercom0" name="I2CS_SDASETUP_TIME_NS"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sercom0&gt;
+  &lt;sercom0 dnOrder=&quot;0&quot; id=&quot;I2CS_SDASETUP_TIME_NS&quot;&gt;
+    &lt;Attributes dnOrder=&quot;0&quot;&gt;
+      &lt;Integer dnOrder=&quot;0&quot; id=&quot;max&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;1921&lt;/Value&gt;
+      &lt;/Integer&gt;
+    &lt;/Attributes&gt;
+    &lt;Values dnOrder=&quot;1&quot;/&gt;
+  &lt;/sercom0&gt;
+&lt;/sercom0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sercom0" name="I2CS_SDASETUP_TIME_REG_VALUE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sercom0&gt;
+  &lt;sercom0 dnOrder=&quot;0&quot; id=&quot;I2CS_SDASETUP_TIME_REG_VALUE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;sercom0&quot; value=&quot;1&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/sercom0&gt;
+&lt;/sercom0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sercom0" name="I2CS_SDASETUP_TIME_SUPPORT"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sercom0&gt;
+  &lt;sercom0 dnOrder=&quot;0&quot; id=&quot;I2CS_SDASETUP_TIME_SUPPORT&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;sercom0&quot; value=&quot;true&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/sercom0&gt;
+&lt;/sercom0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sercom0" name="I2CS_SEXTTOEN_SUPPORT"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sercom0&gt;
+  &lt;sercom0 dnOrder=&quot;0&quot; id=&quot;I2CS_SEXTTOEN_SUPPORT&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/sercom0&gt;
+&lt;/sercom0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sercom0" name="I2CS_SEXTTOOUT_ERROR_SUPPORT"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sercom0&gt;
+  &lt;sercom0 dnOrder=&quot;0&quot; id=&quot;I2CS_SEXTTOOUT_ERROR_SUPPORT&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/sercom0&gt;
+&lt;/sercom0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sercom0" name="I2CS_SLAVE_ADDDRESS"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sercom0&gt;
+  &lt;sercom0 dnOrder=&quot;0&quot; id=&quot;I2CS_SLAVE_ADDDRESS&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/sercom0&gt;
+&lt;/sercom0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sercom0" name="I2CS_SMEN"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sercom0&gt;
+  &lt;sercom0 dnOrder=&quot;0&quot; id=&quot;I2CS_SMEN&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/sercom0&gt;
+&lt;/sercom0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sercom0" name="I2C_ADDR_TENBITEN"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sercom0&gt;
+  &lt;sercom0 dnOrder=&quot;0&quot; id=&quot;I2C_ADDR_TENBITEN&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/sercom0&gt;
+&lt;/sercom0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sercom0" name="I2C_CLOCK_SPEED"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sercom0&gt;
+  &lt;sercom0 dnOrder=&quot;0&quot; id=&quot;I2C_CLOCK_SPEED&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/sercom0&gt;
+&lt;/sercom0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sercom0" name="I2C_CLOCK_SPEED_HZ"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sercom0&gt;
+  &lt;sercom0 dnOrder=&quot;0&quot; id=&quot;I2C_CLOCK_SPEED_HZ&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/sercom0&gt;
+&lt;/sercom0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sercom0" name="I2C_INTERRUPT_MODE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sercom0&gt;
+  &lt;sercom0 dnOrder=&quot;0&quot; id=&quot;I2C_INTERRUPT_MODE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/sercom0&gt;
+&lt;/sercom0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sercom0" name="I2C_MASTER_CODE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sercom0&gt;
+  &lt;sercom0 dnOrder=&quot;0&quot; id=&quot;I2C_MASTER_CODE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/sercom0&gt;
+&lt;/sercom0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sercom0" name="I2C_MASTER_MODE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sercom0&gt;
+  &lt;sercom0 dnOrder=&quot;0&quot; id=&quot;I2C_MASTER_MODE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/sercom0&gt;
+&lt;/sercom0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sercom0" name="I2C_PLIB_API_PREFIX"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sercom0&gt;
+  &lt;sercom0 dnOrder=&quot;0&quot; id=&quot;I2C_PLIB_API_PREFIX&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/sercom0&gt;
+&lt;/sercom0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sercom0" name="I2C_RUNSTDBY"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sercom0&gt;
+  &lt;sercom0 dnOrder=&quot;0&quot; id=&quot;I2C_RUNSTDBY&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/sercom0&gt;
+&lt;/sercom0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sercom0" name="I2C_SCLSM"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sercom0&gt;
+  &lt;sercom0 dnOrder=&quot;0&quot; id=&quot;I2C_SCLSM&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/sercom0&gt;
+&lt;/sercom0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sercom0" name="I2C_SDAHOLD_TIME"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sercom0&gt;
+  &lt;sercom0 dnOrder=&quot;0&quot; id=&quot;I2C_SDAHOLD_TIME&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/sercom0&gt;
+&lt;/sercom0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sercom0" name="I2C_SLAVE_MODE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sercom0&gt;
+  &lt;sercom0 dnOrder=&quot;0&quot; id=&quot;I2C_SLAVE_MODE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/sercom0&gt;
+&lt;/sercom0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sercom0" name="RECEIVE_DATA_REGISTER"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sercom0&gt;
+  &lt;sercom0 dnOrder=&quot;0&quot; id=&quot;RECEIVE_DATA_REGISTER&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;sercom0&quot; value=&quot;&amp;amp;(SERCOM0_REGS-&amp;gt;USART_INT.SERCOM_DATA)&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/sercom0&gt;
+&lt;/sercom0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sercom0" name="SERCOM_INSTANCE_NAME"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sercom0&gt;
+  &lt;sercom0 dnOrder=&quot;0&quot; id=&quot;SERCOM_INSTANCE_NAME&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/sercom0&gt;
+&lt;/sercom0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sercom0" name="SERCOM_MODE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sercom0&gt;
+  &lt;sercom0 dnOrder=&quot;0&quot; id=&quot;SERCOM_MODE&quot;&gt;
+    &lt;Attributes dnOrder=&quot;0&quot;&gt;
+      &lt;Boolean dnOrder=&quot;0&quot; id=&quot;readOnly&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
+      &lt;/Boolean&gt;
+    &lt;/Attributes&gt;
+    &lt;Values dnOrder=&quot;1&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;sercom0&quot; value=&quot;0&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/sercom0&gt;
+&lt;/sercom0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sercom0" name="SERCOM_SPI_REG_NAME"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sercom0&gt;
+  &lt;sercom0 dnOrder=&quot;0&quot; id=&quot;SERCOM_SPI_REG_NAME&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/sercom0&gt;
+&lt;/sercom0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sercom0" name="SERCOM_SPI_SLAVE_REG_NAME"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sercom0&gt;
+  &lt;sercom0 dnOrder=&quot;0&quot; id=&quot;SERCOM_SPI_SLAVE_REG_NAME&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/sercom0&gt;
+&lt;/sercom0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sercom0" name="SERCOM_SYNCBUSY"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sercom0&gt;
+  &lt;sercom0 dnOrder=&quot;0&quot; id=&quot;SERCOM_SYNCBUSY&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/sercom0&gt;
+&lt;/sercom0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sercom0" name="SERCOM_USART_COMMON_HEADER"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sercom0&gt;
+  &lt;sercom0 dnOrder=&quot;0&quot; id=&quot;SERCOM_USART_COMMON_HEADER&quot;&gt;
+    &lt;Attributes dnOrder=&quot;0&quot;&gt;
+      &lt;Boolean dnOrder=&quot;0&quot; id=&quot;enabled&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
+      &lt;/Boolean&gt;
+    &lt;/Attributes&gt;
+  &lt;/sercom0&gt;
+&lt;/sercom0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sercom0" name="SERCOM_USART_HEADER"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sercom0&gt;
+  &lt;sercom0 dnOrder=&quot;0&quot; id=&quot;SERCOM_USART_HEADER&quot;&gt;
+    &lt;Attributes dnOrder=&quot;0&quot;&gt;
+      &lt;Boolean dnOrder=&quot;0&quot; id=&quot;enabled&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
+      &lt;/Boolean&gt;
+    &lt;/Attributes&gt;
+  &lt;/sercom0&gt;
+&lt;/sercom0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sercom0" name="SERCOM_USART_REG_NAME"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sercom0&gt;
+  &lt;sercom0 dnOrder=&quot;0&quot; id=&quot;SERCOM_USART_REG_NAME&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/sercom0&gt;
+&lt;/sercom0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sercom0" name="SERCOM_USART_SOURCE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sercom0&gt;
+  &lt;sercom0 dnOrder=&quot;0&quot; id=&quot;SERCOM_USART_SOURCE&quot;&gt;
+    &lt;Attributes dnOrder=&quot;0&quot;&gt;
+      &lt;Boolean dnOrder=&quot;0&quot; id=&quot;enabled&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
+      &lt;/Boolean&gt;
+    &lt;/Attributes&gt;
+  &lt;/sercom0&gt;
+&lt;/sercom0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sercom0" name="SPIM_MODE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sercom0&gt;
+  &lt;sercom0 dnOrder=&quot;0&quot; id=&quot;SPIM_MODE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/sercom0&gt;
+&lt;/sercom0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sercom0" name="SPIS_BUSY_PIN"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sercom0&gt;
+  &lt;sercom0 dnOrder=&quot;0&quot; id=&quot;SPIS_BUSY_PIN&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/sercom0&gt;
+&lt;/sercom0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sercom0" name="SPIS_BUSY_PIN_LOGIC_LEVEL"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sercom0&gt;
+  &lt;sercom0 dnOrder=&quot;0&quot; id=&quot;SPIS_BUSY_PIN_LOGIC_LEVEL&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/sercom0&gt;
+&lt;/sercom0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sercom0" name="SPIS_CHARSIZE_BITS"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sercom0&gt;
+  &lt;sercom0 dnOrder=&quot;0&quot; id=&quot;SPIS_CHARSIZE_BITS&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/sercom0&gt;
+&lt;/sercom0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sercom0" name="SPIS_CLOCK_PHASE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sercom0&gt;
+  &lt;sercom0 dnOrder=&quot;0&quot; id=&quot;SPIS_CLOCK_PHASE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/sercom0&gt;
+&lt;/sercom0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sercom0" name="SPIS_CLOCK_POLARITY"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sercom0&gt;
+  &lt;sercom0 dnOrder=&quot;0&quot; id=&quot;SPIS_CLOCK_POLARITY&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/sercom0&gt;
+&lt;/sercom0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sercom0" name="SPIS_DATA_ORDER"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sercom0&gt;
+  &lt;sercom0 dnOrder=&quot;0&quot; id=&quot;SPIS_DATA_ORDER&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/sercom0&gt;
+&lt;/sercom0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sercom0" name="SPIS_DATA_SIZE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sercom0&gt;
+  &lt;sercom0 dnOrder=&quot;0&quot; id=&quot;SPIS_DATA_SIZE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/sercom0&gt;
+&lt;/sercom0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sercom0" name="SPIS_DIPO"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sercom0&gt;
+  &lt;sercom0 dnOrder=&quot;0&quot; id=&quot;SPIS_DIPO&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/sercom0&gt;
+&lt;/sercom0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sercom0" name="SPIS_DOPO"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sercom0&gt;
+  &lt;sercom0 dnOrder=&quot;0&quot; id=&quot;SPIS_DOPO&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/sercom0&gt;
+&lt;/sercom0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sercom0" name="SPIS_INTENSET_ERROR"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sercom0&gt;
+  &lt;sercom0 dnOrder=&quot;0&quot; id=&quot;SPIS_INTENSET_ERROR&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/sercom0&gt;
+&lt;/sercom0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sercom0" name="SPIS_INTERRUPT_MODE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sercom0&gt;
+  &lt;sercom0 dnOrder=&quot;0&quot; id=&quot;SPIS_INTERRUPT_MODE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/sercom0&gt;
+&lt;/sercom0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sercom0" name="SPIS_MODE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sercom0&gt;
+  &lt;sercom0 dnOrder=&quot;0&quot; id=&quot;SPIS_MODE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/sercom0&gt;
+&lt;/sercom0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sercom0" name="SPIS_RUNSTDBY"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sercom0&gt;
+  &lt;sercom0 dnOrder=&quot;0&quot; id=&quot;SPIS_RUNSTDBY&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/sercom0&gt;
+&lt;/sercom0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sercom0" name="SPIS_RX_BUFFER_SIZE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sercom0&gt;
+  &lt;sercom0 dnOrder=&quot;0&quot; id=&quot;SPIS_RX_BUFFER_SIZE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/sercom0&gt;
+&lt;/sercom0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sercom0" name="SPIS_SSDE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sercom0&gt;
+  &lt;sercom0 dnOrder=&quot;0&quot; id=&quot;SPIS_SSDE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/sercom0&gt;
+&lt;/sercom0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sercom0" name="SPIS_TX_BUFFER_SIZE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sercom0&gt;
+  &lt;sercom0 dnOrder=&quot;0&quot; id=&quot;SPIS_TX_BUFFER_SIZE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/sercom0&gt;
+&lt;/sercom0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sercom0" name="SPIS_USE_BUSY_PIN"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sercom0&gt;
+  &lt;sercom0 dnOrder=&quot;0&quot; id=&quot;SPIS_USE_BUSY_PIN&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/sercom0&gt;
+&lt;/sercom0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sercom0" name="SPI_BAUD_RATE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sercom0&gt;
+  &lt;sercom0 dnOrder=&quot;0&quot; id=&quot;SPI_BAUD_RATE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/sercom0&gt;
+&lt;/sercom0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sercom0" name="SPI_BAUD_REG_VALUE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sercom0&gt;
+  &lt;sercom0 dnOrder=&quot;0&quot; id=&quot;SPI_BAUD_REG_VALUE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;sercom0&quot; value=&quot;63&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/sercom0&gt;
+&lt;/sercom0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sercom0" name="SPI_CHARSIZE_BITS"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sercom0&gt;
+  &lt;sercom0 dnOrder=&quot;0&quot; id=&quot;SPI_CHARSIZE_BITS&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/sercom0&gt;
+&lt;/sercom0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sercom0" name="SPI_CHARSIZE_BITS_8_BIT_MASK"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sercom0&gt;
+  &lt;sercom0 dnOrder=&quot;0&quot; id=&quot;SPI_CHARSIZE_BITS_8_BIT_MASK&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/sercom0&gt;
+&lt;/sercom0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sercom0" name="SPI_CHARSIZE_BITS_9_BIT_MASK"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sercom0&gt;
+  &lt;sercom0 dnOrder=&quot;0&quot; id=&quot;SPI_CHARSIZE_BITS_9_BIT_MASK&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/sercom0&gt;
+&lt;/sercom0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sercom0" name="SPI_CLOCK_PHASE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sercom0&gt;
+  &lt;sercom0 dnOrder=&quot;0&quot; id=&quot;SPI_CLOCK_PHASE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/sercom0&gt;
+&lt;/sercom0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sercom0" name="SPI_CLOCK_PHASE_LEADING_MASK"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sercom0&gt;
+  &lt;sercom0 dnOrder=&quot;0&quot; id=&quot;SPI_CLOCK_PHASE_LEADING_MASK&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/sercom0&gt;
+&lt;/sercom0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sercom0" name="SPI_CLOCK_PHASE_TRAILING_MASK"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sercom0&gt;
+  &lt;sercom0 dnOrder=&quot;0&quot; id=&quot;SPI_CLOCK_PHASE_TRAILING_MASK&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/sercom0&gt;
+&lt;/sercom0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sercom0" name="SPI_CLOCK_POLARITY"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sercom0&gt;
+  &lt;sercom0 dnOrder=&quot;0&quot; id=&quot;SPI_CLOCK_POLARITY&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/sercom0&gt;
+&lt;/sercom0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sercom0" name="SPI_CLOCK_POLARITY_HIGH_MASK"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sercom0&gt;
+  &lt;sercom0 dnOrder=&quot;0&quot; id=&quot;SPI_CLOCK_POLARITY_HIGH_MASK&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/sercom0&gt;
+&lt;/sercom0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sercom0" name="SPI_CLOCK_POLARITY_LOW_MASK"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sercom0&gt;
+  &lt;sercom0 dnOrder=&quot;0&quot; id=&quot;SPI_CLOCK_POLARITY_LOW_MASK&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/sercom0&gt;
+&lt;/sercom0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sercom0" name="SPI_DATA_ORDER"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sercom0&gt;
+  &lt;sercom0 dnOrder=&quot;0&quot; id=&quot;SPI_DATA_ORDER&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/sercom0&gt;
+&lt;/sercom0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sercom0" name="SPI_DIPO"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sercom0&gt;
+  &lt;sercom0 dnOrder=&quot;0&quot; id=&quot;SPI_DIPO&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/sercom0&gt;
+&lt;/sercom0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sercom0" name="SPI_DOPO"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sercom0&gt;
+  &lt;sercom0 dnOrder=&quot;0&quot; id=&quot;SPI_DOPO&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/sercom0&gt;
+&lt;/sercom0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sercom0" name="SPI_INTENSET_ERROR"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sercom0&gt;
+  &lt;sercom0 dnOrder=&quot;0&quot; id=&quot;SPI_INTENSET_ERROR&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/sercom0&gt;
+&lt;/sercom0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sercom0" name="SPI_INTERRUPT_MODE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sercom0&gt;
+  &lt;sercom0 dnOrder=&quot;0&quot; id=&quot;SPI_INTERRUPT_MODE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/sercom0&gt;
+&lt;/sercom0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sercom0" name="SPI_MSSEN"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sercom0&gt;
+  &lt;sercom0 dnOrder=&quot;0&quot; id=&quot;SPI_MSSEN&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/sercom0&gt;
+&lt;/sercom0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sercom0" name="SPI_PLIB_API_PREFIX"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sercom0&gt;
+  &lt;sercom0 dnOrder=&quot;0&quot; id=&quot;SPI_PLIB_API_PREFIX&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/sercom0&gt;
+&lt;/sercom0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sercom0" name="SPI_RECIEVER_ENABLE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sercom0&gt;
+  &lt;sercom0 dnOrder=&quot;0&quot; id=&quot;SPI_RECIEVER_ENABLE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/sercom0&gt;
+&lt;/sercom0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sercom0" name="SPI_RUNSTDBY"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sercom0&gt;
+  &lt;sercom0 dnOrder=&quot;0&quot; id=&quot;SPI_RUNSTDBY&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/sercom0&gt;
+&lt;/sercom0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sercom0" name="SPI_STATUS_OVERRUN_MASK"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sercom0&gt;
+  &lt;sercom0 dnOrder=&quot;0&quot; id=&quot;SPI_STATUS_OVERRUN_MASK&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/sercom0&gt;
+&lt;/sercom0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sercom0" name="TRANSMIT_DATA_REGISTER"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sercom0&gt;
+  &lt;sercom0 dnOrder=&quot;0&quot; id=&quot;TRANSMIT_DATA_REGISTER&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;sercom0&quot; value=&quot;&amp;amp;(SERCOM0_REGS-&amp;gt;USART_INT.SERCOM_DATA)&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/sercom0&gt;
+&lt;/sercom0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sercom0" name="USART_7816_BAUD_VALUE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sercom0&gt;
+  &lt;sercom0 dnOrder=&quot;0&quot; id=&quot;USART_7816_BAUD_VALUE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/sercom0&gt;
+&lt;/sercom0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sercom0" name="USART_7816_CARD_DETECT"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sercom0&gt;
+  &lt;sercom0 dnOrder=&quot;0&quot; id=&quot;USART_7816_CARD_DETECT&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/sercom0&gt;
+&lt;/sercom0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sercom0" name="USART_7816_CLOCK_OUTPUT"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sercom0&gt;
+  &lt;sercom0 dnOrder=&quot;0&quot; id=&quot;USART_7816_CLOCK_OUTPUT&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/sercom0&gt;
+&lt;/sercom0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sercom0" name="USART_7816_DSNACK"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sercom0&gt;
+  &lt;sercom0 dnOrder=&quot;0&quot; id=&quot;USART_7816_DSNACK&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/sercom0&gt;
+&lt;/sercom0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sercom0" name="USART_7816_GTIME"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sercom0&gt;
+  &lt;sercom0 dnOrder=&quot;0&quot; id=&quot;USART_7816_GTIME&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/sercom0&gt;
+&lt;/sercom0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sercom0" name="USART_7816_INACK"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sercom0&gt;
+  &lt;sercom0 dnOrder=&quot;0&quot; id=&quot;USART_7816_INACK&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/sercom0&gt;
+&lt;/sercom0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sercom0" name="USART_7816_MAXITER"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sercom0&gt;
+  &lt;sercom0 dnOrder=&quot;0&quot; id=&quot;USART_7816_MAXITER&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/sercom0&gt;
+&lt;/sercom0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sercom0" name="USART_7816_RESET"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sercom0&gt;
+  &lt;sercom0 dnOrder=&quot;0&quot; id=&quot;USART_7816_RESET&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/sercom0&gt;
+&lt;/sercom0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sercom0" name="USART_7816_VCC_ENABLE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sercom0&gt;
+  &lt;sercom0 dnOrder=&quot;0&quot; id=&quot;USART_7816_VCC_ENABLE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/sercom0&gt;
+&lt;/sercom0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sercom0" name="USART_BAUD_RATE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sercom0&gt;
+  &lt;sercom0 dnOrder=&quot;0&quot; id=&quot;USART_BAUD_RATE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/sercom0&gt;
+&lt;/sercom0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sercom0" name="USART_BAUD_VALUE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sercom0&gt;
+  &lt;sercom0 dnOrder=&quot;0&quot; id=&quot;USART_BAUD_VALUE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;sercom0&quot; value=&quot;64592&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/sercom0&gt;
+&lt;/sercom0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sercom0" name="USART_CHARSIZE_BITS"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sercom0&gt;
+  &lt;sercom0 dnOrder=&quot;0&quot; id=&quot;USART_CHARSIZE_BITS&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/sercom0&gt;
+&lt;/sercom0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sercom0" name="USART_COMM_MODE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sercom0&gt;
+  &lt;sercom0 dnOrder=&quot;0&quot; id=&quot;USART_COMM_MODE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/sercom0&gt;
+&lt;/sercom0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sercom0" name="USART_CTRLC_GTIME"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sercom0&gt;
+  &lt;sercom0 dnOrder=&quot;0&quot; id=&quot;USART_CTRLC_GTIME&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/sercom0&gt;
+&lt;/sercom0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sercom0" name="USART_DATA_5_BIT_MASK"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sercom0&gt;
+  &lt;sercom0 dnOrder=&quot;0&quot; id=&quot;USART_DATA_5_BIT_MASK&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/sercom0&gt;
+&lt;/sercom0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sercom0" name="USART_DATA_6_BIT_MASK"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sercom0&gt;
+  &lt;sercom0 dnOrder=&quot;0&quot; id=&quot;USART_DATA_6_BIT_MASK&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/sercom0&gt;
+&lt;/sercom0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sercom0" name="USART_DATA_7_BIT_MASK"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sercom0&gt;
+  &lt;sercom0 dnOrder=&quot;0&quot; id=&quot;USART_DATA_7_BIT_MASK&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/sercom0&gt;
+&lt;/sercom0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sercom0" name="USART_DATA_8_BIT_MASK"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sercom0&gt;
+  &lt;sercom0 dnOrder=&quot;0&quot; id=&quot;USART_DATA_8_BIT_MASK&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/sercom0&gt;
+&lt;/sercom0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sercom0" name="USART_DATA_9_BIT_MASK"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sercom0&gt;
+  &lt;sercom0 dnOrder=&quot;0&quot; id=&quot;USART_DATA_9_BIT_MASK&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/sercom0&gt;
+&lt;/sercom0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sercom0" name="USART_DATA_BITS"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sercom0&gt;
+  &lt;sercom0 dnOrder=&quot;0&quot; id=&quot;USART_DATA_BITS&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/sercom0&gt;
+&lt;/sercom0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sercom0" name="USART_FLOW_CONTROL"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sercom0&gt;
+  &lt;sercom0 dnOrder=&quot;0&quot; id=&quot;USART_FLOW_CONTROL&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/sercom0&gt;
+&lt;/sercom0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sercom0" name="USART_FORM"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sercom0&gt;
+  &lt;sercom0 dnOrder=&quot;0&quot; id=&quot;USART_FORM&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/sercom0&gt;
+&lt;/sercom0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sercom0" name="USART_FRAMING_ERROR_VALUE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sercom0&gt;
+  &lt;sercom0 dnOrder=&quot;0&quot; id=&quot;USART_FRAMING_ERROR_VALUE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/sercom0&gt;
+&lt;/sercom0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sercom0" name="USART_INTENSET_ERROR"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sercom0&gt;
+  &lt;sercom0 dnOrder=&quot;0&quot; id=&quot;USART_INTENSET_ERROR&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/sercom0&gt;
+&lt;/sercom0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sercom0" name="USART_INTERRUPT_MODE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sercom0&gt;
+  &lt;sercom0 dnOrder=&quot;0&quot; id=&quot;USART_INTERRUPT_MODE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/sercom0&gt;
+&lt;/sercom0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sercom0" name="USART_INTERRUPT_MODE_ENABLE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sercom0&gt;
+  &lt;sercom0 dnOrder=&quot;0&quot; id=&quot;USART_INTERRUPT_MODE_ENABLE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;sercom0&quot; value=&quot;false&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/sercom0&gt;
+&lt;/sercom0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sercom0" name="USART_LIN_MASTER_BREAK_LEN"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sercom0&gt;
+  &lt;sercom0 dnOrder=&quot;0&quot; id=&quot;USART_LIN_MASTER_BREAK_LEN&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/sercom0&gt;
+&lt;/sercom0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sercom0" name="USART_LIN_MASTER_HDRDLY"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sercom0&gt;
+  &lt;sercom0 dnOrder=&quot;0&quot; id=&quot;USART_LIN_MASTER_HDRDLY&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/sercom0&gt;
+&lt;/sercom0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sercom0" name="USART_LIN_MASTER_SUPPORTED"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sercom0&gt;
+  &lt;sercom0 dnOrder=&quot;0&quot; id=&quot;USART_LIN_MASTER_SUPPORTED&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;sercom0&quot; value=&quot;true&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/sercom0&gt;
+&lt;/sercom0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sercom0" name="USART_MODE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sercom0&gt;
+  &lt;sercom0 dnOrder=&quot;0&quot; id=&quot;USART_MODE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/sercom0&gt;
+&lt;/sercom0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sercom0" name="USART_OPERATING_MODE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sercom0&gt;
+  &lt;sercom0 dnOrder=&quot;0&quot; id=&quot;USART_OPERATING_MODE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;sercom0&quot; value=&quot;0&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/sercom0&gt;
+&lt;/sercom0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sercom0" name="USART_OVERRUN_ERROR_VALUE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sercom0&gt;
+  &lt;sercom0 dnOrder=&quot;0&quot; id=&quot;USART_OVERRUN_ERROR_VALUE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/sercom0&gt;
+&lt;/sercom0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sercom0" name="USART_PARITY_ERROR_VALUE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sercom0&gt;
+  &lt;sercom0 dnOrder=&quot;0&quot; id=&quot;USART_PARITY_ERROR_VALUE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/sercom0&gt;
+&lt;/sercom0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sercom0" name="USART_PARITY_EVEN_MASK"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sercom0&gt;
+  &lt;sercom0 dnOrder=&quot;0&quot; id=&quot;USART_PARITY_EVEN_MASK&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/sercom0&gt;
+&lt;/sercom0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sercom0" name="USART_PARITY_MODE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sercom0&gt;
+  &lt;sercom0 dnOrder=&quot;0&quot; id=&quot;USART_PARITY_MODE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/sercom0&gt;
+&lt;/sercom0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sercom0" name="USART_PARITY_NONE_MASK"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sercom0&gt;
+  &lt;sercom0 dnOrder=&quot;0&quot; id=&quot;USART_PARITY_NONE_MASK&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/sercom0&gt;
+&lt;/sercom0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sercom0" name="USART_PARITY_ODD_MASK"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sercom0&gt;
+  &lt;sercom0 dnOrder=&quot;0&quot; id=&quot;USART_PARITY_ODD_MASK&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/sercom0&gt;
+&lt;/sercom0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sercom0" name="USART_PLIB_API_PREFIX"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sercom0&gt;
+  &lt;sercom0 dnOrder=&quot;0&quot; id=&quot;USART_PLIB_API_PREFIX&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/sercom0&gt;
+&lt;/sercom0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sercom0" name="USART_RING_BUFFER_ENABLE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sercom0&gt;
+  &lt;sercom0 dnOrder=&quot;0&quot; id=&quot;USART_RING_BUFFER_ENABLE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/sercom0&gt;
+&lt;/sercom0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sercom0" name="USART_RING_BUFFER_MODE_ENABLE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sercom0&gt;
+  &lt;sercom0 dnOrder=&quot;0&quot; id=&quot;USART_RING_BUFFER_MODE_ENABLE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;sercom0&quot; value=&quot;false&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/sercom0&gt;
+&lt;/sercom0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sercom0" name="USART_RS485"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sercom0&gt;
+  &lt;sercom0 dnOrder=&quot;0&quot; id=&quot;USART_RS485&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/sercom0&gt;
+&lt;/sercom0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sercom0" name="USART_RUNSTDBY"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sercom0&gt;
+  &lt;sercom0 dnOrder=&quot;0&quot; id=&quot;USART_RUNSTDBY&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/sercom0&gt;
+&lt;/sercom0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sercom0" name="USART_RXPO"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sercom0&gt;
+  &lt;sercom0 dnOrder=&quot;0&quot; id=&quot;USART_RXPO&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;1&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/sercom0&gt;
+&lt;/sercom0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sercom0" name="USART_RX_ENABLE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sercom0&gt;
+  &lt;sercom0 dnOrder=&quot;0&quot; id=&quot;USART_RX_ENABLE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/sercom0&gt;
+&lt;/sercom0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sercom0" name="USART_RX_RING_BUFFER_SIZE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sercom0&gt;
+  &lt;sercom0 dnOrder=&quot;0&quot; id=&quot;USART_RX_RING_BUFFER_SIZE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/sercom0&gt;
+&lt;/sercom0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sercom0" name="USART_SAMPLE_COUNT"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sercom0&gt;
+  &lt;sercom0 dnOrder=&quot;0&quot; id=&quot;USART_SAMPLE_COUNT&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;sercom0&quot; value=&quot;16&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/sercom0&gt;
+&lt;/sercom0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sercom0" name="USART_SAMPLE_RATE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sercom0&gt;
+  &lt;sercom0 dnOrder=&quot;0&quot; id=&quot;USART_SAMPLE_RATE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;sercom0&quot; value=&quot;0&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/sercom0&gt;
+&lt;/sercom0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sercom0" name="USART_SFDE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sercom0&gt;
+  &lt;sercom0 dnOrder=&quot;0&quot; id=&quot;USART_SFDE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/sercom0&gt;
+&lt;/sercom0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sercom0" name="USART_STOP_1_BIT_MASK"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sercom0&gt;
+  &lt;sercom0 dnOrder=&quot;0&quot; id=&quot;USART_STOP_1_BIT_MASK&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/sercom0&gt;
+&lt;/sercom0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sercom0" name="USART_STOP_2_BIT_MASK"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sercom0&gt;
+  &lt;sercom0 dnOrder=&quot;0&quot; id=&quot;USART_STOP_2_BIT_MASK&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/sercom0&gt;
+&lt;/sercom0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sercom0" name="USART_STOP_BIT"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sercom0&gt;
+  &lt;sercom0 dnOrder=&quot;0&quot; id=&quot;USART_STOP_BIT&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/sercom0&gt;
+&lt;/sercom0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sercom0" name="USART_TXPO"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sercom0&gt;
+  &lt;sercom0 dnOrder=&quot;0&quot; id=&quot;USART_TXPO&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/sercom0&gt;
+&lt;/sercom0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sercom0" name="USART_TX_ENABLE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sercom0&gt;
+  &lt;sercom0 dnOrder=&quot;0&quot; id=&quot;USART_TX_ENABLE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/sercom0&gt;
+&lt;/sercom0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sercom0" name="USART_TX_RING_BUFFER_SIZE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sercom0&gt;
+  &lt;sercom0 dnOrder=&quot;0&quot; id=&quot;USART_TX_RING_BUFFER_SIZE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/sercom0&gt;
+&lt;/sercom0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sercom0" name="USART_USE_FRACTIONAL_BAUD"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sercom0&gt;
+  &lt;sercom0 dnOrder=&quot;0&quot; id=&quot;USART_USE_FRACTIONAL_BAUD&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;sercom0&quot; value=&quot;false&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/sercom0&gt;
+&lt;/sercom0&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="uart_bootloader" name="!@#harmonyAttachmentState"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;uart_bootloader&gt;
+  &lt;uart_bootloader dnOrder=&quot;0&quot;&gt;
+    &lt;Attachments dnOrder=&quot;0&quot;&gt;
+      &lt;DirectDependency dnOrder=&quot;0&quot; id=&quot;btl_MEMORY_dependency&quot;&gt;
+        &lt;Attributes dnOrder=&quot;0&quot;&gt;
+          &lt;String dnOrder=&quot;0&quot; id=&quot;targetComponentID&quot;&gt;
+            &lt;Value dnOrder=&quot;0&quot;&gt;nvm&lt;/Value&gt;
+          &lt;/String&gt;
+          &lt;String dnOrder=&quot;1&quot; id=&quot;targetAttachmentID&quot;&gt;
+            &lt;Value dnOrder=&quot;0&quot;&gt;NVM_MEMORY&lt;/Value&gt;
+          &lt;/String&gt;
+        &lt;/Attributes&gt;
+      &lt;/DirectDependency&gt;
+      &lt;DirectDependency dnOrder=&quot;1&quot; id=&quot;btl_UART_dependency&quot;&gt;
+        &lt;Attributes dnOrder=&quot;0&quot;&gt;
+          &lt;String dnOrder=&quot;0&quot; id=&quot;targetComponentID&quot;&gt;
+            &lt;Value dnOrder=&quot;0&quot;&gt;sercom0&lt;/Value&gt;
+          &lt;/String&gt;
+          &lt;String dnOrder=&quot;1&quot; id=&quot;targetAttachmentID&quot;&gt;
+            &lt;Value dnOrder=&quot;0&quot;&gt;SERCOM0_UART&lt;/Value&gt;
+          &lt;/String&gt;
+        &lt;/Attributes&gt;
+      &lt;/DirectDependency&gt;
+    &lt;/Attachments&gt;
+  &lt;/uart_bootloader&gt;
+&lt;/uart_bootloader&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="uart_bootloader" name="#&amp;__MCC_Group_Parrent_id"/>
+         <value>__ROOTVIEW</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="uart_bootloader" name="BTL_DUAL_BANK"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;uart_bootloader&gt;
+  &lt;uart_bootloader dnOrder=&quot;0&quot; id=&quot;BTL_DUAL_BANK&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/uart_bootloader&gt;
+&lt;/uart_bootloader&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="uart_bootloader" name="BTL_FLASH_SIZE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;uart_bootloader&gt;
+  &lt;uart_bootloader dnOrder=&quot;0&quot; id=&quot;BTL_FLASH_SIZE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/uart_bootloader&gt;
+&lt;/uart_bootloader&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="uart_bootloader" name="BTL_FUSE_PROGRAM_ENABLE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;uart_bootloader&gt;
+  &lt;uart_bootloader dnOrder=&quot;0&quot; id=&quot;BTL_FUSE_PROGRAM_ENABLE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/uart_bootloader&gt;
+&lt;/uart_bootloader&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="uart_bootloader" name="BTL_HW_CRC_GEN"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;uart_bootloader&gt;
+  &lt;uart_bootloader dnOrder=&quot;0&quot; id=&quot;BTL_HW_CRC_GEN&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/uart_bootloader&gt;
+&lt;/uart_bootloader&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="uart_bootloader" name="BTL_MEM_START_ADDR"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;uart_bootloader&gt;
+  &lt;uart_bootloader dnOrder=&quot;0&quot; id=&quot;BTL_MEM_START_ADDR&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;uart_bootloader&quot; value=&quot;16777216&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/uart_bootloader&gt;
+&lt;/uart_bootloader&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="uart_bootloader" name="BTL_RAM_SIZE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;uart_bootloader&gt;
+  &lt;uart_bootloader dnOrder=&quot;0&quot; id=&quot;BTL_RAM_SIZE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/uart_bootloader&gt;
+&lt;/uart_bootloader&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="uart_bootloader" name="BTL_RAM_START"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;uart_bootloader&gt;
+  &lt;uart_bootloader dnOrder=&quot;0&quot; id=&quot;BTL_RAM_START&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/uart_bootloader&gt;
+&lt;/uart_bootloader&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="uart_bootloader" name="BTL_SIZE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;uart_bootloader&gt;
+  &lt;uart_bootloader dnOrder=&quot;0&quot; id=&quot;BTL_SIZE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;uart_bootloader&quot; value=&quot;4096&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/uart_bootloader&gt;
+&lt;/uart_bootloader&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="uart_bootloader" name="BTL_START"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;uart_bootloader&gt;
+  &lt;uart_bootloader dnOrder=&quot;0&quot; id=&quot;BTL_START&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/uart_bootloader&gt;
+&lt;/uart_bootloader&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="uart_bootloader" name="BTL_TRIGGER_ENABLE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;uart_bootloader&gt;
+  &lt;uart_bootloader dnOrder=&quot;0&quot; id=&quot;BTL_TRIGGER_ENABLE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;true&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/uart_bootloader&gt;
+&lt;/uart_bootloader&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="uart_bootloader" name="BTL_TRIGGER_LEN"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;uart_bootloader&gt;
+  &lt;uart_bootloader dnOrder=&quot;0&quot; id=&quot;BTL_TRIGGER_LEN&quot;&gt;
+    &lt;Attributes dnOrder=&quot;0&quot;&gt;
+      &lt;Boolean dnOrder=&quot;0&quot; id=&quot;visible&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
+      &lt;/Boolean&gt;
+    &lt;/Attributes&gt;
+    &lt;Values dnOrder=&quot;1&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;16&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/uart_bootloader&gt;
+&lt;/uart_bootloader&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="uart_bootloader" name="BTL_TYPE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;uart_bootloader&gt;
+  &lt;uart_bootloader dnOrder=&quot;0&quot; id=&quot;BTL_TYPE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/uart_bootloader&gt;
+&lt;/uart_bootloader&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="uart_bootloader" name="BTL_WDOG_ENABLE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;uart_bootloader&gt;
+  &lt;uart_bootloader dnOrder=&quot;0&quot; id=&quot;BTL_WDOG_ENABLE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/uart_bootloader&gt;
+&lt;/uart_bootloader&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="uart_bootloader" name="CRC_PERIPH_USED"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;uart_bootloader&gt;
+  &lt;uart_bootloader dnOrder=&quot;0&quot; id=&quot;CRC_PERIPH_USED&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/uart_bootloader&gt;
+&lt;/uart_bootloader&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="uart_bootloader" name="MEM_USED"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;uart_bootloader&gt;
+  &lt;uart_bootloader dnOrder=&quot;0&quot; id=&quot;MEM_USED&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;uart_bootloader&quot; value=&quot;NVM&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/uart_bootloader&gt;
+&lt;/uart_bootloader&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="uart_bootloader" name="PERIPH_USED"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;uart_bootloader&gt;
+  &lt;uart_bootloader dnOrder=&quot;0&quot; id=&quot;PERIPH_USED&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;uart_bootloader&quot; value=&quot;SERCOM0_USART&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/uart_bootloader&gt;
+&lt;/uart_bootloader&gt;
+</value>
+      </entry>
+   </tokenMap>
+   <generatedFileHashHistoryMap class="java.util.TreeMap">
+      <entry>
+         <file>..\src\config\pic32wm_bz6_curiosity\bootloader\bootloader_common.c</file>
+         <hash>edd3bb532ea1be9b2c175fb1a4b3d1768c1021a71b0e91965a2798d29d40a746</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32wm_bz6_curiosity\bootloader\bootloader_common.h</file>
+         <hash>b5296e00fd70c24c52b37fefa8a0b0880a05ce51e6eec0cf6bf8672b5578a0c2</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32wm_bz6_curiosity\bootloader\bootloader_interrupt.h</file>
+         <hash>837763bc7dc36bd7376c590dfc8da33dd26a2d61be65aefa8f8efeed8ef1f3d1</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32wm_bz6_curiosity\bootloader\bootloader_uart.c</file>
+         <hash>567608ff2ada05ca7979b5a822b2bd8895f473c1b199fdaad35efb0374ec9f42</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32wm_bz6_curiosity\bootloader\bootloader_uart.h</file>
+         <hash>be04b89cce61ec9f05d343b6b6807fee2ed9576b2351f3da114194023903d606</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32wm_bz6_curiosity\btl.ld</file>
+         <hash>de9730ef2161e05e6b8689083ffda1984477e309a1a242164378191e93cf9f26</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32wm_bz6_curiosity\definitions.h</file>
+         <hash>d1fe3525586de065095273681ee1a8a2914ddbd924d6579f24cb82243579fb8f</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32wm_bz6_curiosity\device.h</file>
+         <hash>751c7a83c29599a951e732ea0efaf0a85ab5d0f09568f27eee620fb5bddb7149</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32wm_bz6_curiosity\device_cache.h</file>
+         <hash>e2914501b361bbc93a56d6915b1bf4fac00277e61f31fdee87a587bc15dea5b6</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32wm_bz6_curiosity\device_vectors.h</file>
+         <hash>8e26f22cc2a90b7273441ea53ced95309d1a9bb628eec5fdbe3fd260d07dd163</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32wm_bz6_curiosity\initialization.c</file>
+         <hash>d89fcfd3c36f5cf0ddf80906096908e6e766e647bad63e379a0fb5897bd27ee9</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32wm_bz6_curiosity\peripheral\clk\plib_clk.c</file>
+         <hash>c944fbbe1ef6164d8b9964aa4f48c5e96f4808603ad6db43d620ff3cc4a099ce</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32wm_bz6_curiosity\peripheral\clk\plib_clk.h</file>
+         <hash>2d1939a0da512a64fea40fffe4c2f30f2d3d16344591a807c5814fc1e67fcc01</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32wm_bz6_curiosity\peripheral\cmcc\plib_cmcc.c</file>
+         <hash>9211e312b7d2ad66448fe25b7834ed0989f0bcc547511de8341e2f667daca5ea</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32wm_bz6_curiosity\peripheral\cmcc\plib_cmcc.h</file>
+         <hash>89b940242bfa0ecdba3ac53666c5996e25fab712227d37d2d6881c8a86b5f497</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32wm_bz6_curiosity\peripheral\dsu\plib_dsu.c</file>
+         <hash>53c703513e4b8ae9ec2b5e684658105cc115eea2d1025807c3a25129d54f600a</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32wm_bz6_curiosity\peripheral\dsu\plib_dsu.h</file>
+         <hash>e2a3270851e9f3547d493dfaf94d5a7f8e81792b65ed7acb8cdc3c2b0ecfdd20</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32wm_bz6_curiosity\peripheral\evsys\plib_evsys.c</file>
+         <hash>e263b84cfe1aa5d810e88b708fb9df2ffbb548e9bebbc358ee047c57acadac04</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32wm_bz6_curiosity\peripheral\evsys\plib_evsys.h</file>
+         <hash>f7d08eb8162f271ce1db384c082586a6624e506aa7f502c64c4ab5a1aadac47d</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32wm_bz6_curiosity\peripheral\gpio\plib_gpio.c</file>
+         <hash>d90ec6d2b4861098da68716004980e79d51edb81b87c6c072fca11f463c7e1c9</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32wm_bz6_curiosity\peripheral\gpio\plib_gpio.h</file>
+         <hash>f70d02ff545c829fbe55ba520aeb3c781ca6d3153e8294339881461aaa21bdc6</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32wm_bz6_curiosity\peripheral\nvic\plib_nvic.c</file>
+         <hash>dd717044dd36bdaf83a852c95160c3e8184a8cd8eb45179b6fa65d159c1e7306</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32wm_bz6_curiosity\peripheral\nvic\plib_nvic.h</file>
+         <hash>9936ac782115af41003255283fa2f603f4ff2212d16275b7c80ea8d067a9e208</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32wm_bz6_curiosity\peripheral\nvm\plib_nvm.c</file>
+         <hash>9f2aaac3faa71618c2f7931f6304ee0c7604a550b7130a1970de2abff737a377</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32wm_bz6_curiosity\peripheral\nvm\plib_nvm.h</file>
+         <hash>e9a247b1a608f253eeb2f2b88502ed249568736ef31895d841d9c427d29f0ca8</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32wm_bz6_curiosity\peripheral\pac\plib_pac.c</file>
+         <hash>e9849a6ed749b95ad52092f60d618b4b23d79edd81066551f4309a52268695ae</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32wm_bz6_curiosity\peripheral\pac\plib_pac.h</file>
+         <hash>8bdf08c5c2faab4cfd45745c1e915e3f9bd236f861ef62a7b8c057fde1e78316</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32wm_bz6_curiosity\peripheral\sercom\usart\plib_sercom0_usart.c</file>
+         <hash>883ca3fe48024d70eca453c084dcd7b3e3be48ad61bc45f17e1986896dd20b8d</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32wm_bz6_curiosity\peripheral\sercom\usart\plib_sercom0_usart.h</file>
+         <hash>ada260bab121780e4ff3b1d8514c96508f13c20f21c860135a5e986f23fb2c9e</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32wm_bz6_curiosity\peripheral\sercom\usart\plib_sercom_usart_common.h</file>
+         <hash>3653b66472c558c50f7037a1dd25d2678e9a13aa718f3c53a2195e6f3919ea48</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32wm_bz6_curiosity\peripheral\systick\plib_systick.c</file>
+         <hash>a2a64ab5b2a4262f7d4aa8b150408974ac0b6cc783aea283ab1d4876758cc76f</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32wm_bz6_curiosity\peripheral\systick\plib_systick.h</file>
+         <hash>25f7c13cf6aa7c620c748c17aa033e902848562684bed3534c471d81506e4e72</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32wm_bz6_curiosity\startup_xc32.c</file>
+         <hash>d61c5a7becdd58e76df4fa51b964845db4d699198c0b65c603e2f283d59d793f</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32wm_bz6_curiosity\toolchain_specifics.h</file>
+         <hash>6fc0551b0fa3362678b3d7a227386fafa343140d31e4da3ad4af972e61cd0acb</hash>
+      </entry>
+      <entry>
+         <file>..\src\main.c</file>
+         <hash/>
+      </entry>
+      <entry>
+         <file>..\src\packs\CMSIS\CMSIS\Core\Include\cachel1_armv7.h</file>
+         <hash>6cdb5b324f2fd1bb5b2f47298ba6e6777e735d7cad3bb8d942cd36e2c6e65328</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\CMSIS\CMSIS\Core\Include\cmsis_armcc.h</file>
+         <hash>d074534d7106cec83474b3b0a897bd2553e1a8895ecbd54f4f4fb25928066eee</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\CMSIS\CMSIS\Core\Include\cmsis_armclang.h</file>
+         <hash>11b39b96ddc1125124762b3423a77b90dd40ea5b4582a3513830245046b24311</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\CMSIS\CMSIS\Core\Include\cmsis_armclang_ltm.h</file>
+         <hash>8621969ea669a1b230ff2125a760ef66d575c48cb45e9e457f768909abcbda46</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\CMSIS\CMSIS\Core\Include\cmsis_compiler.h</file>
+         <hash>869640702d811c4c63abb52206715c891a93fd03be954df5ad40d378355af3d6</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\CMSIS\CMSIS\Core\Include\cmsis_gcc.h</file>
+         <hash>3d4e265d0aa42f888385ccf073666e6ebb5ec9f834760b9da27c474e177f708d</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\CMSIS\CMSIS\Core\Include\cmsis_iccarm.h</file>
+         <hash>f28119adbc81fb0e3c957c9aebe8fb423ad93634e76ead3caa2b0818d2e123ae</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\CMSIS\CMSIS\Core\Include\cmsis_version.h</file>
+         <hash>8cda7ac3ff6f0eb5e83c4fe613dd195151b24da54167f5c3c007e599a03f1edc</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\CMSIS\CMSIS\Core\Include\core_cm4.h</file>
+         <hash>d59a9e3ed4cf43a3c74a2e48f344d41be2b6363ef9394ea2c551052fe553a6af</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\CMSIS\CMSIS\Core\Include\mpu_armv7.h</file>
+         <hash>de1b5eb9ed566527b66dc06f4ecb6a43ab6800f7dac47e87c9cb42984dca41bb</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32WM_BZ6204_DFP\component\ac.h</file>
+         <hash>c3e1181f05dd5511d884de0f9bf25930986997385923824d0d7f4dac0ec44d05</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32WM_BZ6204_DFP\component\adchs.h</file>
+         <hash>22064b27555cc65136e8b60308e03e8efc0248e26a959b289463d333c632dd73</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32WM_BZ6204_DFP\component\arb.h</file>
+         <hash>f48b91e2d5d63a3a79c4d99c5bab182aeeb0f6fbf6ee9503cb9cfc9414f8bd41</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32WM_BZ6204_DFP\component\ble.h</file>
+         <hash>c2e4b6846a4ebfb6963c11fac3010d91c7c6fdbc8234be58e95fd0e38afbba11</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32WM_BZ6204_DFP\component\btzbsys.h</file>
+         <hash>960ad07da5151a1deeab89582729aabaa4921a22b2d36fadd0eac4d307e5dbb4</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32WM_BZ6204_DFP\component\can.h</file>
+         <hash>3f08c496d9a0d6b1ac124928905294ce85ddc6eabe6e6a8bc7e37c21910a9f5c</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32WM_BZ6204_DFP\component\ccl.h</file>
+         <hash>8d67912d12284445156859ad422e155892387f03dff2dc7360b82ee31106e054</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32WM_BZ6204_DFP\component\cfg.h</file>
+         <hash>e2ca387c8bc763daed8d369a2e3279c27df2b1521c6dbbec4393ee72caa636d8</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32WM_BZ6204_DFP\component\cmcc.h</file>
+         <hash>123aa8f7d5cb3dad0b100b2f1dd94e44f3412a80ec445a21243df009f676dc58</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32WM_BZ6204_DFP\component\cru.h</file>
+         <hash>0db727174b7f3043dc8370c36dab5f7e9652c229a80ad91732ef6b26e2903d25</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32WM_BZ6204_DFP\component\cvd.h</file>
+         <hash>835a8a3c35014c57197fc06cbc2316270a63b3835bed840bfaf8e43a3d09f1b5</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32WM_BZ6204_DFP\component\dac_ctrl.h</file>
+         <hash>b3985cfff7119792efd63adb152236a0049a5e2397ce86906da3bb28b67680fb</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32WM_BZ6204_DFP\component\dmac.h</file>
+         <hash>c3dc3af130324f5c2eacf579ca364d9e7cf01812666a74292df07021bae61d09</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32WM_BZ6204_DFP\component\dmt.h</file>
+         <hash>f9e954e7ff274c5edebe2d00df85da7611126bc6a3cca98a49cb8ab5fb5cb2bb</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32WM_BZ6204_DFP\component\dscon.h</file>
+         <hash>93c68427f77a5358423e2651b050316679ca73e901d416ea94da35dce9022801</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32WM_BZ6204_DFP\component\dsu.h</file>
+         <hash>7b8f0dfee8267b3b2be6082f527931e7dc4600c34ffefa9dd6dc088036daaa44</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32WM_BZ6204_DFP\component\efuse.h</file>
+         <hash>e2954124706b0d0c20b3f8a637a721e930b14c1a31b90e102ef247f9b9ffb52e</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32WM_BZ6204_DFP\component\eic.h</file>
+         <hash>85381727516fff5c869ff6c600fbd95300253575586b5c36b55b0bc9e2d703fa</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32WM_BZ6204_DFP\component\eth.h</file>
+         <hash>91db4c5ab7e101e11322601c65ede9d32790302b1c0bb8c6e6e077c5df3bad54</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32WM_BZ6204_DFP\component\evsys.h</file>
+         <hash>616c7645b8fd229be4b2e661d69cfc64161543057dd8b2adcabb8faa6edc752b</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32WM_BZ6204_DFP\component\freqm.h</file>
+         <hash>3ac83a11b29aecc0560c2636a329234bff030455d4a4aeb60d0aaf76c5d07a26</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32WM_BZ6204_DFP\component\fuses.h</file>
+         <hash>5872ae22acdfbdd6684d62beaaa564a2ec1e2ad804e31d925336eaa66bd486af</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32WM_BZ6204_DFP\component\gpio.h</file>
+         <hash>c7553061d20544a3e5d6e0acb88e7d53596808cc911559a6219c75c76e9d29a5</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32WM_BZ6204_DFP\component\hmatrix2top.h</file>
+         <hash>3c6b7b8c67e300be1504ce0806324f7235e10ec108f7d504af16e667b721c45b</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32WM_BZ6204_DFP\component\nvm.h</file>
+         <hash>051b9d2b5eaa4693ebbbc0e9f2c56ec67fc89dc7e79fd2f2976102f0bd0db04b</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32WM_BZ6204_DFP\component\pac.h</file>
+         <hash>4ef2cb52591df4a0224507410e90ed710b6f04b53f55a6f681c02fd229d29f4b</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32WM_BZ6204_DFP\component\pche.h</file>
+         <hash>5e815bce38793d09eb1afdd134f8cc1886be0d215a2e6e25d57d8a7cd1155f79</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32WM_BZ6204_DFP\component\pfw.h</file>
+         <hash>8ec43096c3af76fb49ae1c46b6902ac425a1d5bd206254cdb7987005f3f599ae</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32WM_BZ6204_DFP\component\pmu.h</file>
+         <hash>0ba4714d3b0f0acbcdd1215ac96fb1b310a2c0b68228951cd343fdd684afd7c2</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32WM_BZ6204_DFP\component\pps.h</file>
+         <hash>626849c6a0d13a07b5ca3b5f84c8688f8134ce136c5068b8f8fc404d16fceb83</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32WM_BZ6204_DFP\component\qei.h</file>
+         <hash>63d1847de5807c20e959a8487993503334ae8bf34b2d88f7e148b0c6b15f51ed</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32WM_BZ6204_DFP\component\qspi.h</file>
+         <hash>283cfba10bec3c84b6e79b39bf9a4ee5c8c2613e7d100672f99482af968d3f19</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32WM_BZ6204_DFP\component\ramecc.h</file>
+         <hash>f1054e73fd1019610ac481f5a2f61410bd671eb05ee132aab4ad443d7adda479</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32WM_BZ6204_DFP\component\rcon.h</file>
+         <hash>c9c5c0968b4482dbe9cf50df176ba3d42351811b9d22ab8c180d5a4c5d274c31</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32WM_BZ6204_DFP\component\rot.h</file>
+         <hash>0e39857ff53eda193ea24643d52bbfea875d36292bff874b7e93f73fd85285ba</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32WM_BZ6204_DFP\component\rtc.h</file>
+         <hash>644bfd7165b73d32ee94add242baba444aa87fe5ee0a659e4e9e01670478a350</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32WM_BZ6204_DFP\component\sercom.h</file>
+         <hash>76a8db260263d352c2c15e20794e0aacb552ba75f2849513d06ee83107365cf8</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32WM_BZ6204_DFP\component\silex.h</file>
+         <hash>86e001a87943ca3094d44753f97469c08b6755c5de6461d6190a4bd4a866a10c</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32WM_BZ6204_DFP\component\tc.h</file>
+         <hash>19cba64d7578dea2d6b6213fa64611398e70fa734405ff14a56875dd9f455c4d</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32WM_BZ6204_DFP\component\tcc.h</file>
+         <hash>4f5ece41b4a40722d8995453ea86a9d828c787217be603d5a551576f378d56a7</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32WM_BZ6204_DFP\component\usb.h</file>
+         <hash>d404df842bc78167066de911a6a10c12ed2904b0d774889774097c3def659f44</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32WM_BZ6204_DFP\component\wdt.h</file>
+         <hash>4c73002c6d156ba15755067253de0ba3d4162b7c8b06e1d407975444dbb14b5c</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32WM_BZ6204_DFP\component\zigbee.h</file>
+         <hash>5ac2b62f3624098b60c624c1d4308f582c586d035ef246d05e75430687828a27</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32WM_BZ6204_DFP\instance\ac.h</file>
+         <hash>7c6f44dc59611e00f8f3ee87a6c1e7b1060255a92d260b46d5bef75c4520a9b9</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32WM_BZ6204_DFP\instance\adchs.h</file>
+         <hash>2c384867ff0432810d934c9a55b44a95d0b817f6529de96a43d86df119d46686</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32WM_BZ6204_DFP\instance\arb.h</file>
+         <hash>0b80d911e19eeb51d0a05d1ae8898c45a4364b657fa8ab6c8013180f4f60b0b9</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32WM_BZ6204_DFP\instance\ble.h</file>
+         <hash>877504cb8fc69ac1d9c7ba9d51c6e31e70030f2ebea318f58fcb6dde6629f895</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32WM_BZ6204_DFP\instance\btzbsys.h</file>
+         <hash>cff0cd00f669ff27932c70e061e930da9c5749a5c5107b15bc05547803811105</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32WM_BZ6204_DFP\instance\can0.h</file>
+         <hash>7bbf4a18adbcc410a8ec99b3487493aefc2b3c3dd911267ec0bc37c0b500050e</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32WM_BZ6204_DFP\instance\can1.h</file>
+         <hash>9ce645c530f210cc0e9891d2a73fbb6a48b74cfe323ffc10a754373634fb1049</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32WM_BZ6204_DFP\instance\ccl.h</file>
+         <hash>4dd6edccc2999618697cef30af34d8e01970f7d909fc952e7e1771cb69c2c644</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32WM_BZ6204_DFP\instance\cfg.h</file>
+         <hash>ce9aa0ffba1bb0672f70e2acee11d12639efdf20064c33567719a29efa88f615</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32WM_BZ6204_DFP\instance\cmcc.h</file>
+         <hash>ee74721275463fd97eebe8c068623b57725a20736d4414437431bf7b61165aa0</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32WM_BZ6204_DFP\instance\cru.h</file>
+         <hash>7af5b95e04dc50fdd411c76038ac29c47cd9930c21ae9a3ae734e1bfbbfd0e43</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32WM_BZ6204_DFP\instance\cvd.h</file>
+         <hash>5f9a6aa68fea0adb13d6b06f0aabfca7d1a0443a29b7b475ce9920923a46dcba</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32WM_BZ6204_DFP\instance\dac_ctrl.h</file>
+         <hash>2c83403c3199e1dbdf5186b045d34f79cb6c0d4b60d7eebdcb9d6d7be52e3bb2</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32WM_BZ6204_DFP\instance\dmac.h</file>
+         <hash>32459b48e8408c4b738c01c1b675ecd24198cf5f1d423c925d7b8471e5eef60c</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32WM_BZ6204_DFP\instance\dmt.h</file>
+         <hash>fbe0d88efd12f3c2bd59e89bc2a8b77782081db2e44624a8eb29b81cf6da6b43</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32WM_BZ6204_DFP\instance\dscon.h</file>
+         <hash>169688ea5b9805deffacc4e760c7cc9aa851f809593a8360546772718aa67a75</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32WM_BZ6204_DFP\instance\dsu.h</file>
+         <hash>e406cf1844b6322fd823549f9b343eedb6349da148a5e0a5069957b62c72ca2f</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32WM_BZ6204_DFP\instance\efuse.h</file>
+         <hash>d6cf4aee9ab0eac5e19aec611d716beebbd79f7e03fdd51624709f906a698514</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32WM_BZ6204_DFP\instance\eic.h</file>
+         <hash>77aed50ccfc16d1edd36945a9f87a435caa962bf9b2c1c9a3c961e2556b7457d</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32WM_BZ6204_DFP\instance\eth.h</file>
+         <hash>c593579e296f8c5c940e14accc27b0b252b8ef379c4bad65001fa08e48a2d2fd</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32WM_BZ6204_DFP\instance\evsys.h</file>
+         <hash>cf888819a0d4bce05c039b5e14ef1502cbe8e82f492ca600cbe7b6f672541457</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32WM_BZ6204_DFP\instance\freqm.h</file>
+         <hash>bf4819c1fc505f75be9f32c2cad1995a818d5f0fdefad0e2ab2cef2283437f95</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32WM_BZ6204_DFP\instance\fuses.h</file>
+         <hash>c798ee70ecd4c34fd6e8f086c79ecef5192fde10528be2819e0d84959f7efa81</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32WM_BZ6204_DFP\instance\gpioa.h</file>
+         <hash>45027e236ce8814ca9bce9c724fb20c13d372e2780d4f797a394462fe0d92e55</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32WM_BZ6204_DFP\instance\gpiob.h</file>
+         <hash>c9d76d0075f7557de21d395108f31e916edc22e47c4bdd96d52412f2ccfdd3e9</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32WM_BZ6204_DFP\instance\gpioc.h</file>
+         <hash>bd90c99184ad19ce5765f867fb735cc25451000ba76a0740792b8ae9a26d54b1</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32WM_BZ6204_DFP\instance\gpiod.h</file>
+         <hash>13e6be58ddc731310e1c83c9c25371482d209a837ba9e3dce24ade2b1ea10b34</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32WM_BZ6204_DFP\instance\gpioe.h</file>
+         <hash>df6443dad55d4bcab86d30412a745121a0a31ebc7fc93b1cb54683a222316d8c</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32WM_BZ6204_DFP\instance\hmatrix2top.h</file>
+         <hash>ce60580f4271f1f1a8303908efe5f0b86076681d11fc464f14623522eedea234</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32WM_BZ6204_DFP\instance\nvm.h</file>
+         <hash>b6cd33838e95f0643b3c18d361eec3b0a114f2a03f7c2ab8aa9ec4e32941b5a2</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32WM_BZ6204_DFP\instance\pac.h</file>
+         <hash>1d28663067edf53ff3377e990e7c2cf4c3eb92486926a412c900296a2bedcb17</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32WM_BZ6204_DFP\instance\pche.h</file>
+         <hash>9b49131d37896ff9900e931c307e32e2b23611712f8f52a7cd5fe67ba5080639</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32WM_BZ6204_DFP\instance\pfw.h</file>
+         <hash>1b60d4a94bc8c6c199d3b841a53155bbb451ab80e672b3b4af5299ceea0b827a</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32WM_BZ6204_DFP\instance\pmu.h</file>
+         <hash>f514e32da8c5d126d22b22431243b5ae5cf166533453b79d5023b0a8886635bf</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32WM_BZ6204_DFP\instance\pps.h</file>
+         <hash>97423b4076b39e2f2602887e799de00133e64ea19a74b77794ef22f71fa6855e</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32WM_BZ6204_DFP\instance\qei.h</file>
+         <hash>e8bb09d80e14ffbffcfbfe79cb42fcb11df7ca26df9a7a8218cb382cdd5920e7</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32WM_BZ6204_DFP\instance\qspi.h</file>
+         <hash>bcce943200671d53609cc133e07800736083079a1e2029e5ead2474b0e80f6ec</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32WM_BZ6204_DFP\instance\ramecc.h</file>
+         <hash>7ce06030a64b953ca6e8c95b0410544a7639e2549841eb91f7cd9b35301f7f62</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32WM_BZ6204_DFP\instance\rcon.h</file>
+         <hash>f4baab293720c564be2805aa42e25e50a2f7776d327bffc76103572bc7c7f0f9</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32WM_BZ6204_DFP\instance\rot.h</file>
+         <hash>a18cd60bdb43a263ed519c0983395457e1afc05bc7d317c9c28dfc4e29247d59</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32WM_BZ6204_DFP\instance\rtc.h</file>
+         <hash>5c4a1084f22c421439812d00401362678517bdec8265a30023d6daae29e93959</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32WM_BZ6204_DFP\instance\sercom0.h</file>
+         <hash>5c690d91483ee72af7dda239ce2b39482cf852a54319b3bfbccc4cb316202367</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32WM_BZ6204_DFP\instance\sercom1.h</file>
+         <hash>e466774c1369403a724e59235c90a00a1105eac73d9f055644f13b57f6f19f95</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32WM_BZ6204_DFP\instance\sercom2.h</file>
+         <hash>152eff42eb2583589d1d1b4e0e022ce338f239ccd70bc34b14837d5b4c858d9b</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32WM_BZ6204_DFP\instance\sercom3.h</file>
+         <hash>940a6fb876163f2ab5cacbe93d0d91e041082a395ab0444da19192a6792d39ff</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32WM_BZ6204_DFP\instance\sercom4.h</file>
+         <hash>fff1d02272963dbe91d65da08a174907f3ab7bde1c204983745774fe655bc690</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32WM_BZ6204_DFP\instance\sercom5.h</file>
+         <hash>62269c135020af287464dcc4e3943c43464eb631decb7bf66116a589237fa37c</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32WM_BZ6204_DFP\instance\sercom6.h</file>
+         <hash>6f3c6e6632560a71080ee45302508315020436624468a5eacf4155ae30ad8d92</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32WM_BZ6204_DFP\instance\silex.h</file>
+         <hash>9d42e5cf3e261f38dedfbf99bbb9fad861085a9c69d75a93f83345497329cca7</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32WM_BZ6204_DFP\instance\tc0.h</file>
+         <hash>193ca24a2f4190b3573b42c10b9e79aed3baa36e6a443c1f7fc33580fa588e26</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32WM_BZ6204_DFP\instance\tc1.h</file>
+         <hash>6f13d5e530284b82e67e93e3149b0f36858da64fbb69fb2b1b191b103ce032f2</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32WM_BZ6204_DFP\instance\tc2.h</file>
+         <hash>c12eae0131dda7cb08bbc89e24d32210c4cc23a0825848f3aa9a25a3943a5c04</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32WM_BZ6204_DFP\instance\tc3.h</file>
+         <hash>9334a55ab880dc9b6afd66392e91cc312a297271aa93dd3415c98fc8484791a6</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32WM_BZ6204_DFP\instance\tc4.h</file>
+         <hash>048947c31083a25f8edbbc34c4b73af0bb83cafa8b3e8f93a329c6176bc73393</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32WM_BZ6204_DFP\instance\tc5.h</file>
+         <hash>3cd2653d3324d57893a5ca138829ad3a9695429503bb8b50d3cd61c7a5633955</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32WM_BZ6204_DFP\instance\tc6.h</file>
+         <hash>cc4a5998cd788d3920a3276178950a79e5edbd41b9db5eadf02d3d59683c2529</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32WM_BZ6204_DFP\instance\tc7.h</file>
+         <hash>d6e1b90b37d15e855ec77d6e50f94847493fef1a99437159d204b35fc0baea04</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32WM_BZ6204_DFP\instance\tc8.h</file>
+         <hash>1a4cf971e7ac288fb98218496a3c151b9f3cc1eec281430b1c5af6909fd20267</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32WM_BZ6204_DFP\instance\tc9.h</file>
+         <hash>b7b8cac83921d86dbb91ca629708ebf65ee38ad01165c8f64a14df47d015ec5e</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32WM_BZ6204_DFP\instance\tcc0.h</file>
+         <hash>d235469cefd04a828aa2fec92654e308f8c06c1bcdd3c4b3980dcb52c86d48fa</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32WM_BZ6204_DFP\instance\tcc1.h</file>
+         <hash>63374635163993365b8a5e608d905e9acd3dd3837543efda42ec0601c1d39401</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32WM_BZ6204_DFP\instance\tcc2.h</file>
+         <hash>2cd309c897b992a30d3c0c081a099acc30b89f896af34fe81e253be98082a3d5</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32WM_BZ6204_DFP\instance\usb.h</file>
+         <hash>35f664e072eba9ed801894047f8b4e021a754ffc7c83be6f90653af20439b5e8</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32WM_BZ6204_DFP\instance\wdt.h</file>
+         <hash>b4a83d570006c70833e559a045aca0e0626ef6ba8ab72ad50118c3351dcecc83</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32WM_BZ6204_DFP\instance\zigbee.h</file>
+         <hash>b2985c9400042358ea9c4c32bbb135a3d228b701951146c10569b517fcf16a67</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32WM_BZ6204_DFP\pic32wm_bz6204.h</file>
+         <hash>d7aefb797d53774b5c281b49075fe4a31978432490952c8b194eed7b2f5213f5</hash>
+      </entry>
+      <entry>
+         <file>..\src\packs\PIC32WM_BZ6204_DFP\pio\pic32wm_bz6204.h</file>
+         <hash>bf00e54f1f22c7618db1d1cd63b780b6490ff58d0de264f6c89b5705682aa059</hash>
+      </entry>
+   </generatedFileHashHistoryMap>
+</config>
