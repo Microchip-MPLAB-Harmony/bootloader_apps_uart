@@ -151,14 +151,14 @@ void SYS_Initialize ( void* data )
 
 
 
+	BSP_Initialize();
     EVSYS_Initialize();
 
-	BSP_Initialize();
 	SYSTICK_TimerInitialize();
     SERCOM4_USART_Initialize();
 
 
-    APP_Initialize();
+    APP_ARM_Initialize();
 
 
     NVIC_Initialize();

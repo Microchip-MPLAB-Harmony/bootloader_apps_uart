@@ -3,7 +3,7 @@
     <type>com.microchip.mplab.nbide.embedded.makeproject</type>
     <configuration>
         <data xmlns="http://www.netbeans.org/ns/make-project/1">
-            <name>uart_bootloader_test_app_pic32cx_sg41_cult</name>
+            <name>uart_fail_safe_bootloader_test_app_pic32cx_sg41_cult</name>
             <creation-uuid>943c5505-c346-4e46-b944-e5e89edcb7f2</creation-uuid>
             <make-project-type>0</make-project-type>
             <sourceEncoding>ISO-8859-1</sourceEncoding>
@@ -11,7 +11,7 @@
             <sourceRootList/>
             <confList>
                 <confElem>
-                    <name>default</name>
+                    <name>pic32cx_sg41_cult</name>
                     <type>2</type>
                 </confElem>
             </confList>

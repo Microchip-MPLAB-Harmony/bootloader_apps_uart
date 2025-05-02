@@ -5,48 +5,50 @@
                    displayName="Header Files"
                    projectFiles="true">
       <logicalFolder name="config" displayName="config" projectFiles="true">
-        <logicalFolder name="default" displayName="default" projectFiles="true">
+        <logicalFolder name="pic32cx_sg41_cult"
+                       displayName="pic32cx_sg41_cult"
+                       projectFiles="true">
           <logicalFolder name="bsp" displayName="bsp" projectFiles="true">
-            <itemPath>../src/config/default/bsp/bsp.h</itemPath>
+            <itemPath>../src/config/pic32cx_sg41_cult/bsp/bsp.h</itemPath>
           </logicalFolder>
           <logicalFolder name="peripheral" displayName="peripheral" projectFiles="true">
             <logicalFolder name="clock" displayName="clock" projectFiles="true">
-              <itemPath>../src/config/default/peripheral/clock/plib_clock.h</itemPath>
+              <itemPath>../src/config/pic32cx_sg41_cult/peripheral/clock/plib_clock.h</itemPath>
             </logicalFolder>
             <logicalFolder name="cmcc" displayName="cmcc" projectFiles="true">
-              <itemPath>../src/config/default/peripheral/cmcc/plib_cmcc.h</itemPath>
+              <itemPath>../src/config/pic32cx_sg41_cult/peripheral/cmcc/plib_cmcc.h</itemPath>
             </logicalFolder>
             <logicalFolder name="evsys" displayName="evsys" projectFiles="true">
-              <itemPath>../src/config/default/peripheral/evsys/plib_evsys.h</itemPath>
+              <itemPath>../src/config/pic32cx_sg41_cult/peripheral/evsys/plib_evsys.h</itemPath>
             </logicalFolder>
             <logicalFolder name="nvic" displayName="nvic" projectFiles="true">
-              <itemPath>../src/config/default/peripheral/nvic/plib_nvic.h</itemPath>
+              <itemPath>../src/config/pic32cx_sg41_cult/peripheral/nvic/plib_nvic.h</itemPath>
             </logicalFolder>
             <logicalFolder name="nvmctrl" displayName="nvmctrl" projectFiles="true">
-              <itemPath>../src/config/default/peripheral/nvmctrl/plib_nvmctrl.h</itemPath>
+              <itemPath>../src/config/pic32cx_sg41_cult/peripheral/nvmctrl/plib_nvmctrl.h</itemPath>
             </logicalFolder>
             <logicalFolder name="port" displayName="port" projectFiles="true">
-              <itemPath>../src/config/default/peripheral/port/plib_port.h</itemPath>
+              <itemPath>../src/config/pic32cx_sg41_cult/peripheral/port/plib_port.h</itemPath>
             </logicalFolder>
             <logicalFolder name="sercom" displayName="sercom" projectFiles="true">
               <logicalFolder name="usart" displayName="usart" projectFiles="true">
-                <itemPath>../src/config/default/peripheral/sercom/usart/plib_sercom4_usart.h</itemPath>
-                <itemPath>../src/config/default/peripheral/sercom/usart/plib_sercom_usart_common.h</itemPath>
+                <itemPath>../src/config/pic32cx_sg41_cult/peripheral/sercom/usart/plib_sercom4_usart.h</itemPath>
+                <itemPath>../src/config/pic32cx_sg41_cult/peripheral/sercom/usart/plib_sercom_usart_common.h</itemPath>
               </logicalFolder>
             </logicalFolder>
             <logicalFolder name="systick" displayName="systick" projectFiles="true">
-              <itemPath>../src/config/default/peripheral/systick/plib_systick.h</itemPath>
+              <itemPath>../src/config/pic32cx_sg41_cult/peripheral/systick/plib_systick.h</itemPath>
             </logicalFolder>
           </logicalFolder>
-          <itemPath>../src/config/default/configuration.h</itemPath>
-          <itemPath>../src/config/default/sys_tasks.h</itemPath>
-          <itemPath>../src/config/default/interrupts.h</itemPath>
-          <itemPath>../src/config/default/device.h</itemPath>
-          <itemPath>../src/config/default/user.h</itemPath>
-          <itemPath>../src/config/default/toolchain_specifics.h</itemPath>
-          <itemPath>../src/config/default/device_vectors.h</itemPath>
-          <itemPath>../src/config/default/definitions.h</itemPath>
-          <itemPath>../src/config/default/device_cache.h</itemPath>
+          <itemPath>../src/config/pic32cx_sg41_cult/interrupts.h</itemPath>
+          <itemPath>../src/config/pic32cx_sg41_cult/user.h</itemPath>
+          <itemPath>../src/config/pic32cx_sg41_cult/configuration.h</itemPath>
+          <itemPath>../src/config/pic32cx_sg41_cult/toolchain_specifics.h</itemPath>
+          <itemPath>../src/config/pic32cx_sg41_cult/definitions.h</itemPath>
+          <itemPath>../src/config/pic32cx_sg41_cult/sys_tasks.h</itemPath>
+          <itemPath>../src/config/pic32cx_sg41_cult/device_vectors.h</itemPath>
+          <itemPath>../src/config/pic32cx_sg41_cult/device.h</itemPath>
+          <itemPath>../src/config/pic32cx_sg41_cult/device_cache.h</itemPath>
         </logicalFolder>
       </logicalFolder>
       <logicalFolder name="packs" displayName="packs" projectFiles="true">
@@ -193,8 +195,10 @@
                    displayName="Linker Files"
                    projectFiles="true">
       <logicalFolder name="config" displayName="config" projectFiles="true">
-        <logicalFolder name="default" displayName="default" projectFiles="true">
-          <itemPath>../src/config/default/PIC32CX1025SG41128.ld</itemPath>
+        <logicalFolder name="pic32cx_sg41_cult"
+                       displayName="pic32cx_sg41_cult"
+                       projectFiles="true">
+          <itemPath>../src/config/pic32cx_sg41_cult/PIC32CX1025SG41128.ld</itemPath>
         </logicalFolder>
       </logicalFolder>
     </logicalFolder>
@@ -202,57 +206,59 @@
                    displayName="Source Files"
                    projectFiles="true">
       <logicalFolder name="config" displayName="config" projectFiles="true">
-        <logicalFolder name="default" displayName="default" projectFiles="true">
+        <logicalFolder name="pic32cx_sg41_cult"
+                       displayName="pic32cx_sg41_cult"
+                       projectFiles="true">
           <logicalFolder name="bsp" displayName="bsp" projectFiles="true">
-            <itemPath>../src/config/default/bsp/bsp.c</itemPath>
+            <itemPath>../src/config/pic32cx_sg41_cult/bsp/bsp.c</itemPath>
           </logicalFolder>
           <logicalFolder name="peripheral" displayName="peripheral" projectFiles="true">
             <logicalFolder name="clock" displayName="clock" projectFiles="true">
-              <itemPath>../src/config/default/peripheral/clock/plib_clock.c</itemPath>
+              <itemPath>../src/config/pic32cx_sg41_cult/peripheral/clock/plib_clock.c</itemPath>
             </logicalFolder>
             <logicalFolder name="cmcc" displayName="cmcc" projectFiles="true">
-              <itemPath>../src/config/default/peripheral/cmcc/plib_cmcc.c</itemPath>
+              <itemPath>../src/config/pic32cx_sg41_cult/peripheral/cmcc/plib_cmcc.c</itemPath>
             </logicalFolder>
             <logicalFolder name="evsys" displayName="evsys" projectFiles="true">
-              <itemPath>../src/config/default/peripheral/evsys/plib_evsys.c</itemPath>
+              <itemPath>../src/config/pic32cx_sg41_cult/peripheral/evsys/plib_evsys.c</itemPath>
             </logicalFolder>
             <logicalFolder name="nvic" displayName="nvic" projectFiles="true">
-              <itemPath>../src/config/default/peripheral/nvic/plib_nvic.c</itemPath>
+              <itemPath>../src/config/pic32cx_sg41_cult/peripheral/nvic/plib_nvic.c</itemPath>
             </logicalFolder>
             <logicalFolder name="nvmctrl" displayName="nvmctrl" projectFiles="true">
-              <itemPath>../src/config/default/peripheral/nvmctrl/plib_nvmctrl.c</itemPath>
+              <itemPath>../src/config/pic32cx_sg41_cult/peripheral/nvmctrl/plib_nvmctrl.c</itemPath>
             </logicalFolder>
             <logicalFolder name="port" displayName="port" projectFiles="true">
-              <itemPath>../src/config/default/peripheral/port/plib_port.c</itemPath>
+              <itemPath>../src/config/pic32cx_sg41_cult/peripheral/port/plib_port.c</itemPath>
             </logicalFolder>
             <logicalFolder name="sercom" displayName="sercom" projectFiles="true">
               <logicalFolder name="usart" displayName="usart" projectFiles="true">
-                <itemPath>../src/config/default/peripheral/sercom/usart/plib_sercom4_usart.c</itemPath>
+                <itemPath>../src/config/pic32cx_sg41_cult/peripheral/sercom/usart/plib_sercom4_usart.c</itemPath>
               </logicalFolder>
             </logicalFolder>
             <logicalFolder name="systick" displayName="systick" projectFiles="true">
-              <itemPath>../src/config/default/peripheral/systick/plib_systick.c</itemPath>
+              <itemPath>../src/config/pic32cx_sg41_cult/peripheral/systick/plib_systick.c</itemPath>
             </logicalFolder>
           </logicalFolder>
           <logicalFolder name="stdio" displayName="stdio" projectFiles="true">
-            <itemPath>../src/config/default/stdio/xc32_monitor.c</itemPath>
+            <itemPath>../src/config/pic32cx_sg41_cult/stdio/xc32_monitor.c</itemPath>
           </logicalFolder>
-          <itemPath>../src/config/default/interrupts.c</itemPath>
-          <itemPath>../src/config/default/libc_syscalls.c</itemPath>
-          <itemPath>../src/config/default/tasks.c</itemPath>
-          <itemPath>../src/config/default/exceptions.c</itemPath>
-          <itemPath>../src/config/default/startup_xc32.c</itemPath>
-          <itemPath>../src/config/default/initialization.c</itemPath>
+          <itemPath>../src/config/pic32cx_sg41_cult/interrupts.c</itemPath>
+          <itemPath>../src/config/pic32cx_sg41_cult/libc_syscalls.c</itemPath>
+          <itemPath>../src/config/pic32cx_sg41_cult/tasks.c</itemPath>
+          <itemPath>../src/config/pic32cx_sg41_cult/exceptions.c</itemPath>
+          <itemPath>../src/config/pic32cx_sg41_cult/startup_xc32.c</itemPath>
+          <itemPath>../src/config/pic32cx_sg41_cult/initialization.c</itemPath>
         </logicalFolder>
       </logicalFolder>
       <itemPath>../src/main.c</itemPath>
-      <itemPath>../src/config/default/pin_configurations.csv</itemPath>
       <itemPath>../src/app_arm.c</itemPath>
+      <itemPath>../src/config/pic32cx_sg41_cult/pin_configurations.csv</itemPath>
     </logicalFolder>
   </logicalFolder>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
-    <conf name="default" type="2">
+    <conf name="pic32cx_sg41_cult" type="2">
       <toolsSet>
         <developmentServer>localhost</developmentServer>
         <targetDevice>PIC32CX1025SG41128</targetDevice>
@@ -264,8 +270,8 @@
         <platform>3</platform>
       </toolsSet>
       <packs>
-        <pack name="PIC32CX-SG41_DFP" vendor="Microchip" version="1.5.140"/>
         <pack name="CMSIS" vendor="ARM" version="6.1.0"/>
+        <pack name="PIC32CX-SG41_DFP" vendor="Microchip" version="1.5.140"/>
       </packs>
       <ScriptingSettings>
       </ScriptingSettings>
@@ -297,6 +303,7 @@
       <C32>
         <property key="additional-warnings" value="true"/>
         <property key="addresss-attribute-use" value="false"/>
+        <property key="appendMe" value=""/>
         <property key="cast-align" value="false"/>
         <property key="code-model" value="default"/>
         <property key="const-model" value="default"/>
@@ -311,7 +318,7 @@
         <property key="exclude-floating-point" value="false"/>
         <property key="expand-pragma-config" value="false"/>
         <property key="extra-include-directories"
-                  value="../src;../src/config/default;../src/packs/CMSIS/;../src/packs/CMSIS/CMSIS/Core/Include;../src/packs/PIC32CX1025SG41128_DFP"/>
+                  value="../src;../src/config/default;../src/config/pic32cx_sg41_cult;../src/packs/CMSIS/;../src/packs/CMSIS/CMSIS/Core/Include;../src/packs/PIC32CX1025SG41128_DFP"/>
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="true"/>
@@ -375,6 +382,7 @@
         <property key="additional-options-use-response-files" value="false"/>
         <property key="additional-options-write-sla" value="false"/>
         <property key="allocate-dinit" value="false"/>
+        <property key="appendMe" value="-DRAM_ORIGIN=0x20000010, -DRAM_LENGTH=0x3fff0"/>
         <property key="code-dinit" value="false"/>
         <property key="ebase-addr" value=""/>
         <property key="enable-check-sections" value="false"/>
@@ -422,6 +430,7 @@
       <C32CPP>
         <property key="additional-warnings" value="false"/>
         <property key="addresss-attribute-use" value="false"/>
+        <property key="appendMe" value=""/>
         <property key="check-new" value="false"/>
         <property key="eh-specs" value="true"/>
         <property key="enable-app-io" value="false"/>
@@ -431,7 +440,7 @@
         <property key="exceptions" value="true"/>
         <property key="exclude-floating-point" value="false"/>
         <property key="extra-include-directories"
-                  value="../src;../src/config/default;../src/packs/CMSIS/;../src/packs/CMSIS/CMSIS/Core/Include;../src/packs/PIC32CX1025SG41128_DFP"/>
+                  value="../src;../src/config/default;../src/config/pic32cx_sg41_cult;../src/packs/CMSIS/;../src/packs/CMSIS/CMSIS/Core/Include;../src/packs/PIC32CX1025SG41128_DFP"/>
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="true"/>
@@ -450,6 +459,7 @@
         <property key="use-indirect-calls" value="false"/>
       </C32CPP>
       <C32Global>
+        <property key="appendMe" value=""/>
         <property key="combine-sourcefiles" value="false"/>
         <property key="common-include-directories" value=""/>
         <property key="common-macros" value=""/>
