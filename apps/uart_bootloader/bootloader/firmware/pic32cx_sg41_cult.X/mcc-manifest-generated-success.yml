@@ -2,7 +2,7 @@
 
 manifest_file_version: 1.0.0
 project: uart_bootloader_pic32cx_sg41_cult
-creation_date: 2025-04-30T16:09:02.685+05:30[Asia/Calcutta]
+creation_date: 2025-05-05T10:55:23.227+05:30[Asia/Calcutta]
 operating_system: Windows 11
 mcc_mode: IDE
 mcc_mode_version: v6.25
@@ -20,4 +20,4 @@ packs: {name: PIC32CX-SG41_DFP, version: 1.5.140}
 modules:
 - {name: csp, type: HARMONY, version: bootloader_release_support}
 - {name: CMSIS_5, type: HARMONY, version: 5.9.0}
-- {name: bootloader, type: HARMONY, version: bootloader_support}
+- {name: bootloader, type: HARMONY, version: bootloader_qs_fpb}

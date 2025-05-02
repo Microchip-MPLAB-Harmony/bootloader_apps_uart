@@ -9,9 +9,10 @@
                        displayName="pic32cx_sg41_cult"
                        projectFiles="true">
           <logicalFolder name="bootloader" displayName="bootloader" projectFiles="true">
-            <itemPath>../src/config/pic32cx_sg41_cult/bootloader/bootloader_common.h</itemPath>
             <itemPath>../src/config/pic32cx_sg41_cult/bootloader/bootloader_uart.h</itemPath>
             <itemPath>../src/config/pic32cx_sg41_cult/bootloader/bootloader_interrupt.h</itemPath>
+            <itemPath>../src/config/pic32cx_sg41_cult/bootloader/bootloader_common.h</itemPath>
+            <itemPath>../src/config/pic32cx_sg41_cult/bootloader/bootloader_uart.c</itemPath>
           </logicalFolder>
           <logicalFolder name="peripheral" displayName="peripheral" projectFiles="true">
             <logicalFolder name="clock" displayName="clock" projectFiles="true">
@@ -49,10 +50,10 @@
             </logicalFolder>
           </logicalFolder>
           <itemPath>../src/config/pic32cx_sg41_cult/toolchain_specifics.h</itemPath>
-          <itemPath>../src/config/pic32cx_sg41_cult/device_cache.h</itemPath>
-          <itemPath>../src/config/pic32cx_sg41_cult/device_vectors.h</itemPath>
-          <itemPath>../src/config/pic32cx_sg41_cult/device.h</itemPath>
           <itemPath>../src/config/pic32cx_sg41_cult/definitions.h</itemPath>
+          <itemPath>../src/config/pic32cx_sg41_cult/device_cache.h</itemPath>
+          <itemPath>../src/config/pic32cx_sg41_cult/device.h</itemPath>
+          <itemPath>../src/config/pic32cx_sg41_cult/device_vectors.h</itemPath>
         </logicalFolder>
       </logicalFolder>
       <logicalFolder name="packs" displayName="packs" projectFiles="true">
@@ -208,7 +209,6 @@
                        projectFiles="true">
           <logicalFolder name="bootloader" displayName="bootloader" projectFiles="true">
             <itemPath>../src/config/pic32cx_sg41_cult/bootloader/bootloader_common.c</itemPath>
-            <itemPath>../src/config/pic32cx_sg41_cult/bootloader/bootloader_uart.c</itemPath>
           </logicalFolder>
           <logicalFolder name="peripheral" displayName="peripheral" projectFiles="true">
             <logicalFolder name="clock" displayName="clock" projectFiles="true">
@@ -244,8 +244,8 @@
               <itemPath>../src/config/pic32cx_sg41_cult/peripheral/systick/plib_systick.c</itemPath>
             </logicalFolder>
           </logicalFolder>
-          <itemPath>../src/config/pic32cx_sg41_cult/initialization.c</itemPath>
           <itemPath>../src/config/pic32cx_sg41_cult/startup_xc32.c</itemPath>
+          <itemPath>../src/config/pic32cx_sg41_cult/initialization.c</itemPath>
         </logicalFolder>
       </logicalFolder>
       <itemPath>../src/main.c</itemPath>
@@ -293,8 +293,8 @@
         <makeCustomizationPreStepEnabled>false</makeCustomizationPreStepEnabled>
         <makeUseCleanTarget>false</makeUseCleanTarget>
         <makeCustomizationPreStep></makeCustomizationPreStep>
-        <makeCustomizationPostStepEnabled>false</makeCustomizationPostStepEnabled>
-        <makeCustomizationPostStep></makeCustomizationPostStep>
+        <makeCustomizationPostStepEnabled>true</makeCustomizationPostStepEnabled>
+        <makeCustomizationPostStep>${MP_CC_DIR}/xc32-objcopy -I ihex -O binary ${DISTDIR}/${PROJECTNAME}.${IMAGE_TYPE}.hex ${DISTDIR}/${PROJECTNAME}.${IMAGE_TYPE}.bin</makeCustomizationPostStep>
         <makeCustomizationPutChecksumInUserID>false</makeCustomizationPutChecksumInUserID>
         <makeCustomizationEnableLongLines>false</makeCustomizationEnableLongLines>
         <makeCustomizationNormalizeHexFile>false</makeCustomizationNormalizeHexFile>
@@ -511,7 +511,7 @@
         <property key="memories.programmemory" value="true"/>
         <property key="memories.programmemory.ranges" value="0-47001fff"/>
         <property key="programmerToGoFilePath"
-                  value="C:/Users/I76597/h3/Bootloader_pic32wm_bz6_curioity/bootloader_apps_uart/apps/uart_bootloader/bootloader/firmware/pic32cx_sg41_cult.X/debug/default/pic32cx_sg41_cult_ptg"/>
+                  value="C:/Users/I76597/h3/Bootloader_pic32wm_bz6_curioity/bootloader_apps_uart/apps/uart_fail_safe_bootloader/bootloader/firmware/pic32cx_sg41_cult.X/debug/default/pic32cx_sg41_cult_ptg"/>
         <property key="programoptions.donoteraseauxmem" value="false"/>
         <property key="programoptions.eraseb4program" value="true"/>
         <property key="programoptions.pgmentry.voltage" value="low"/>
@@ -569,8 +569,6 @@
                   value="${memories.instruction.ram.ranges}"/>
         <property key="memories.programmemory" value="true"/>
         <property key="memories.programmemory.ranges" value="0-47001fff"/>
-        <property key="programmerToGoFilePath"
-                  value="C:/Users/I76597/h3/Bootloader_pic32wm_bz6_curioity/bootloader_apps_uart/apps/uart_bootloader/bootloader/firmware/pic32cx_sg41_cult.X/debug/pic32cx_sg41_cult/pic32cx_sg41_cult_ptg"/>
         <property key="programoptions.donoteraseauxmem" value="false"/>
         <property key="programoptions.eraseb4program" value="true"/>
         <property key="programoptions.pgmentry.voltage" value="low"/>
