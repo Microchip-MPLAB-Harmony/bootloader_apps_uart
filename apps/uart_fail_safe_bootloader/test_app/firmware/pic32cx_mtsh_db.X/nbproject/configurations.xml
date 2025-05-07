@@ -5,56 +5,58 @@
                    displayName="Header Files"
                    projectFiles="true">
       <logicalFolder name="config" displayName="config" projectFiles="true">
-        <logicalFolder name="default" displayName="default" projectFiles="true">
+        <logicalFolder name="pic32cx_mtsh_db"
+                       displayName="pic32cx_mtsh_db"
+                       projectFiles="true">
           <logicalFolder name="bsp" displayName="bsp" projectFiles="true">
-            <itemPath>../src/config/default/bsp/bsp.h</itemPath>
+            <itemPath>../src/config/pic32cx_mtsh_db/bsp/bsp.h</itemPath>
           </logicalFolder>
           <logicalFolder name="peripheral" displayName="peripheral" projectFiles="true">
             <logicalFolder name="clk" displayName="clk" projectFiles="true">
-              <itemPath>../src/config/default/peripheral/clk/plib_clk.h</itemPath>
+              <itemPath>../src/config/pic32cx_mtsh_db/peripheral/clk/plib_clk.h</itemPath>
             </logicalFolder>
             <logicalFolder name="cmcc" displayName="cmcc" projectFiles="true">
-              <itemPath>../src/config/default/peripheral/cmcc/plib_cmcc.h</itemPath>
+              <itemPath>../src/config/pic32cx_mtsh_db/peripheral/cmcc/plib_cmcc.h</itemPath>
             </logicalFolder>
             <logicalFolder name="dwdt" displayName="dwdt" projectFiles="true">
-              <itemPath>../src/config/default/peripheral/dwdt/plib_dwdt.h</itemPath>
+              <itemPath>../src/config/pic32cx_mtsh_db/peripheral/dwdt/plib_dwdt.h</itemPath>
             </logicalFolder>
             <logicalFolder name="flexcom" displayName="flexcom" projectFiles="true">
               <logicalFolder name="usart" displayName="usart" projectFiles="true">
-                <itemPath>../src/config/default/peripheral/flexcom/usart/plib_flexcom0_usart.h</itemPath>
-                <itemPath>../src/config/default/peripheral/flexcom/usart/plib_flexcom_usart_local.h</itemPath>
+                <itemPath>../src/config/pic32cx_mtsh_db/peripheral/flexcom/usart/plib_flexcom_usart_local.h</itemPath>
+                <itemPath>../src/config/pic32cx_mtsh_db/peripheral/flexcom/usart/plib_flexcom0_usart.h</itemPath>
               </logicalFolder>
             </logicalFolder>
             <logicalFolder name="nvic" displayName="nvic" projectFiles="true">
-              <itemPath>../src/config/default/peripheral/nvic/plib_nvic.h</itemPath>
+              <itemPath>../src/config/pic32cx_mtsh_db/peripheral/nvic/plib_nvic.h</itemPath>
             </logicalFolder>
             <logicalFolder name="pio" displayName="pio" projectFiles="true">
-              <itemPath>../src/config/default/peripheral/pio/plib_pio.h</itemPath>
+              <itemPath>../src/config/pic32cx_mtsh_db/peripheral/pio/plib_pio.h</itemPath>
             </logicalFolder>
             <logicalFolder name="rstc" displayName="rstc" projectFiles="true">
-              <itemPath>../src/config/default/peripheral/rstc/plib_rstc.h</itemPath>
+              <itemPath>../src/config/pic32cx_mtsh_db/peripheral/rstc/plib_rstc.h</itemPath>
             </logicalFolder>
             <logicalFolder name="sefc" displayName="sefc" projectFiles="true">
-              <itemPath>../src/config/default/peripheral/sefc/plib_sefc_common.h</itemPath>
-              <itemPath>../src/config/default/peripheral/sefc/plib_sefc1.h</itemPath>
-              <itemPath>../src/config/default/peripheral/sefc/plib_sefc0.h</itemPath>
+              <itemPath>../src/config/pic32cx_mtsh_db/peripheral/sefc/plib_sefc0.h</itemPath>
+              <itemPath>../src/config/pic32cx_mtsh_db/peripheral/sefc/plib_sefc1.h</itemPath>
+              <itemPath>../src/config/pic32cx_mtsh_db/peripheral/sefc/plib_sefc_common.h</itemPath>
             </logicalFolder>
             <logicalFolder name="supc" displayName="supc" projectFiles="true">
-              <itemPath>../src/config/default/peripheral/supc/plib_supc.h</itemPath>
+              <itemPath>../src/config/pic32cx_mtsh_db/peripheral/supc/plib_supc.h</itemPath>
             </logicalFolder>
             <logicalFolder name="systick" displayName="systick" projectFiles="true">
-              <itemPath>../src/config/default/peripheral/systick/plib_systick.h</itemPath>
+              <itemPath>../src/config/pic32cx_mtsh_db/peripheral/systick/plib_systick.h</itemPath>
             </logicalFolder>
           </logicalFolder>
-          <itemPath>../src/config/default/device_vectors.h</itemPath>
-          <itemPath>../src/config/default/definitions.h</itemPath>
-          <itemPath>../src/config/default/interrupts.h</itemPath>
-          <itemPath>../src/config/default/device.h</itemPath>
-          <itemPath>../src/config/default/device_cache.h</itemPath>
-          <itemPath>../src/config/default/toolchain_specifics.h</itemPath>
-          <itemPath>../src/config/default/configuration.h</itemPath>
-          <itemPath>../src/config/default/sys_tasks.h</itemPath>
-          <itemPath>../src/config/default/user.h</itemPath>
+          <itemPath>../src/config/pic32cx_mtsh_db/user.h</itemPath>
+          <itemPath>../src/config/pic32cx_mtsh_db/definitions.h</itemPath>
+          <itemPath>../src/config/pic32cx_mtsh_db/interrupts.h</itemPath>
+          <itemPath>../src/config/pic32cx_mtsh_db/device_vectors.h</itemPath>
+          <itemPath>../src/config/pic32cx_mtsh_db/device.h</itemPath>
+          <itemPath>../src/config/pic32cx_mtsh_db/toolchain_specifics.h</itemPath>
+          <itemPath>../src/config/pic32cx_mtsh_db/device_cache.h</itemPath>
+          <itemPath>../src/config/pic32cx_mtsh_db/sys_tasks.h</itemPath>
+          <itemPath>../src/config/pic32cx_mtsh_db/configuration.h</itemPath>
         </logicalFolder>
       </logicalFolder>
       <logicalFolder name="packs" displayName="packs" projectFiles="true">
@@ -189,8 +191,10 @@
                    displayName="Linker Files"
                    projectFiles="true">
       <logicalFolder name="config" displayName="config" projectFiles="true">
-        <logicalFolder name="default" displayName="default" projectFiles="true">
-          <itemPath>../src/config/default/PIC32CX2051MTSH128.ld</itemPath>
+        <logicalFolder name="pic32cx_mtsh_db"
+                       displayName="pic32cx_mtsh_db"
+                       projectFiles="true">
+          <itemPath>../src/config/pic32cx_mtsh_db/PIC32CX2051MTSH128.ld</itemPath>
         </logicalFolder>
       </logicalFolder>
     </logicalFolder>
@@ -198,71 +202,73 @@
                    displayName="Source Files"
                    projectFiles="true">
       <logicalFolder name="config" displayName="config" projectFiles="true">
-        <logicalFolder name="default" displayName="default" projectFiles="true">
+        <logicalFolder name="pic32cx_mtsh_db"
+                       displayName="pic32cx_mtsh_db"
+                       projectFiles="true">
           <logicalFolder name="bsp" displayName="bsp" projectFiles="true">
-            <itemPath>../src/config/default/bsp/bsp.c</itemPath>
+            <itemPath>../src/config/pic32cx_mtsh_db/bsp/bsp.c</itemPath>
           </logicalFolder>
           <logicalFolder name="peripheral" displayName="peripheral" projectFiles="true">
             <logicalFolder name="clk" displayName="clk" projectFiles="true">
-              <itemPath>../src/config/default/peripheral/clk/plib_clk.c</itemPath>
+              <itemPath>../src/config/pic32cx_mtsh_db/peripheral/clk/plib_clk.c</itemPath>
             </logicalFolder>
             <logicalFolder name="cmcc" displayName="cmcc" projectFiles="true">
-              <itemPath>../src/config/default/peripheral/cmcc/plib_cmcc.c</itemPath>
+              <itemPath>../src/config/pic32cx_mtsh_db/peripheral/cmcc/plib_cmcc.c</itemPath>
             </logicalFolder>
             <logicalFolder name="dwdt" displayName="dwdt" projectFiles="true">
-              <itemPath>../src/config/default/peripheral/dwdt/plib_dwdt.c</itemPath>
+              <itemPath>../src/config/pic32cx_mtsh_db/peripheral/dwdt/plib_dwdt.c</itemPath>
             </logicalFolder>
             <logicalFolder name="flexcom" displayName="flexcom" projectFiles="true">
               <logicalFolder name="usart" displayName="usart" projectFiles="true">
-                <itemPath>../src/config/default/peripheral/flexcom/usart/plib_flexcom0_usart.c</itemPath>
+                <itemPath>../src/config/pic32cx_mtsh_db/peripheral/flexcom/usart/plib_flexcom0_usart.c</itemPath>
               </logicalFolder>
             </logicalFolder>
             <logicalFolder name="nvic" displayName="nvic" projectFiles="true">
-              <itemPath>../src/config/default/peripheral/nvic/plib_nvic.c</itemPath>
+              <itemPath>../src/config/pic32cx_mtsh_db/peripheral/nvic/plib_nvic.c</itemPath>
             </logicalFolder>
             <logicalFolder name="pio" displayName="pio" projectFiles="true">
-              <itemPath>../src/config/default/peripheral/pio/plib_pio.c</itemPath>
+              <itemPath>../src/config/pic32cx_mtsh_db/peripheral/pio/plib_pio.c</itemPath>
             </logicalFolder>
             <logicalFolder name="rstc" displayName="rstc" projectFiles="true">
-              <itemPath>../src/config/default/peripheral/rstc/plib_rstc.c</itemPath>
+              <itemPath>../src/config/pic32cx_mtsh_db/peripheral/rstc/plib_rstc.c</itemPath>
             </logicalFolder>
             <logicalFolder name="sefc" displayName="sefc" projectFiles="true">
-              <itemPath>../src/config/default/peripheral/sefc/plib_sefc_common.c</itemPath>
-              <itemPath>../src/config/default/peripheral/sefc/plib_sefc1.c</itemPath>
-              <itemPath>../src/config/default/peripheral/sefc/plib_sefc0.c</itemPath>
+              <itemPath>../src/config/pic32cx_mtsh_db/peripheral/sefc/plib_sefc_common.c</itemPath>
+              <itemPath>../src/config/pic32cx_mtsh_db/peripheral/sefc/plib_sefc0.c</itemPath>
+              <itemPath>../src/config/pic32cx_mtsh_db/peripheral/sefc/plib_sefc1.c</itemPath>
             </logicalFolder>
             <logicalFolder name="supc" displayName="supc" projectFiles="true">
-              <itemPath>../src/config/default/peripheral/supc/plib_supc.c</itemPath>
+              <itemPath>../src/config/pic32cx_mtsh_db/peripheral/supc/plib_supc.c</itemPath>
             </logicalFolder>
             <logicalFolder name="systick" displayName="systick" projectFiles="true">
-              <itemPath>../src/config/default/peripheral/systick/plib_systick.c</itemPath>
+              <itemPath>../src/config/pic32cx_mtsh_db/peripheral/systick/plib_systick.c</itemPath>
             </logicalFolder>
           </logicalFolder>
           <logicalFolder name="stdio" displayName="stdio" projectFiles="true">
-            <itemPath>../src/config/default/stdio/xc32_monitor.c</itemPath>
+            <itemPath>../src/config/pic32cx_mtsh_db/stdio/xc32_monitor.c</itemPath>
           </logicalFolder>
-          <itemPath>../src/config/default/libc_syscalls.c</itemPath>
-          <itemPath>../src/config/default/interrupts.c</itemPath>
-          <itemPath>../src/config/default/startup_xc32.c</itemPath>
-          <itemPath>../src/config/default/exceptions.c</itemPath>
-          <itemPath>../src/config/default/initialization.c</itemPath>
-          <itemPath>../src/config/default/tasks.c</itemPath>
+          <itemPath>../src/config/pic32cx_mtsh_db/interrupts.c</itemPath>
+          <itemPath>../src/config/pic32cx_mtsh_db/tasks.c</itemPath>
+          <itemPath>../src/config/pic32cx_mtsh_db/exceptions.c</itemPath>
+          <itemPath>../src/config/pic32cx_mtsh_db/initialization.c</itemPath>
+          <itemPath>../src/config/pic32cx_mtsh_db/libc_syscalls.c</itemPath>
+          <itemPath>../src/config/pic32cx_mtsh_db/startup_xc32.c</itemPath>
         </logicalFolder>
       </logicalFolder>
       <itemPath>../src/main.c</itemPath>
-      <itemPath>../src/config/default/pin_configurations.csv</itemPath>
       <itemPath>../src/app_pic33cx_mt.c</itemPath>
+      <itemPath>../src/config/pic32cx_mtsh_db/pin_configurations.csv</itemPath>
     </logicalFolder>
   </logicalFolder>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
-    <conf name="default" type="2">
+    <conf name="pic32cx_mtsh_db" type="2">
       <toolsSet>
         <developmentServer>localhost</developmentServer>
         <targetDevice>PIC32CX2051MTSH128</targetDevice>
         <targetHeader></targetHeader>
         <targetPluginBoard></targetPluginBoard>
-        <platformTool>j32</platformTool>
+        <platformTool>noID</platformTool>
         <languageToolchain>XC32</languageToolchain>
         <languageToolchainVersion>4.45</languageToolchainVersion>
         <platform>3</platform>
@@ -301,22 +307,41 @@
       <C32>
         <property key="additional-warnings" value="true"/>
         <property key="addresss-attribute-use" value="false"/>
+        <property key="cast-align" value="false"/>
+        <property key="code-model" value="default"/>
+        <property key="const-model" value="default"/>
+        <property key="data-model" value="default"/>
+        <property key="disable-instruction-scheduling" value="false"/>
         <property key="enable-app-io" value="false"/>
         <property key="enable-omit-frame-pointer" value="false"/>
+        <property key="enable-procedural-abstraction" value="false"/>
+        <property key="enable-short-double" value="false"/>
         <property key="enable-symbols" value="true"/>
         <property key="enable-unroll-loops" value="false"/>
         <property key="exclude-floating-point" value="false"/>
+        <property key="expand-pragma-config" value="false"/>
         <property key="extra-include-directories"
-                  value="../src;../src/config/default;../src/packs/CMSIS/;../src/packs/CMSIS/CMSIS/Core/Include;../src/packs/PIC32CX2051MTSH128_DFP"/>
+                  value="../src;../src/config/default;../src/config/pic32cx_mtsh_db;../src/packs/CMSIS/;../src/packs/CMSIS/CMSIS/Core/Include;../src/packs/PIC32CX2051MTSH128_DFP"/>
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="true"/>
+        <property key="keep-inline" value="false"/>
         <property key="make-warnings-into-errors" value="true"/>
+        <property key="oXC16gcc-errata" value=""/>
+        <property key="oXC16gcc-large-aggregate" value="false"/>
+        <property key="oXC16gcc-mpa-lvl" value=""/>
+        <property key="oXC16gcc-name-text-sec" value=""/>
+        <property key="oXC16gcc-near-chars" value="false"/>
+        <property key="oXC16gcc-no-isr-warn" value="false"/>
+        <property key="oXC16gcc-sfr-warn" value="false"/>
+        <property key="oXC16gcc-smar-io-lvl" value="1"/>
+        <property key="oXC16gcc-smart-io-fmt" value=""/>
         <property key="optimization-level" value="-O1"/>
         <property key="place-data-into-section" value="true"/>
         <property key="post-instruction-scheduling" value="default"/>
         <property key="pre-instruction-scheduling" value="default"/>
         <property key="preprocessor-macros" value=""/>
+        <property key="scalar-model" value="default"/>
         <property key="strict-ansi" value="false"/>
         <property key="support-ansi" value="false"/>
         <property key="tentative-definitions" value="-fno-common"/>
@@ -341,12 +366,15 @@
         <property key="generate-micro-compressed-code" value="false"/>
         <property key="keep-locals" value="false"/>
         <property key="list-assembly" value="false"/>
+        <property key="list-section-info" value="false"/>
         <property key="list-source" value="false"/>
         <property key="list-symbols" value="false"/>
+        <property key="oXC16asm-extra-opts" value=""/>
         <property key="oXC32asm-list-to-file" value="false"/>
         <property key="omit-debug-dirs" value="false"/>
         <property key="omit-forms" value="false"/>
         <property key="preprocessor-macros" value=""/>
+        <property key="relax" value="false"/>
         <property key="warning-level" value=""/>
       </C32-AS>
       <C32-CO>
@@ -360,6 +388,8 @@
         <property key="code-dinit" value="false"/>
         <property key="ebase-addr" value=""/>
         <property key="enable-check-sections" value="false"/>
+        <property key="enable-data-init" value="true"/>
+        <property key="enable-default-isr" value="true"/>
         <property key="exclude-floating-point-library" value="false"/>
         <property key="exclude-standard-libraries" value="false"/>
         <property key="extra-lib-directories" value=""/>
@@ -380,11 +410,15 @@
         <property key="linker-symbols" value=""/>
         <property key="map-file" value="${DISTDIR}/${PROJECTNAME}.${IMAGE_TYPE}.map"/>
         <property key="no-device-startup-code" value="true"/>
+        <property key="no-ivt" value="false"/>
         <property key="no-startup-files" value="false"/>
+        <property key="oXC16ld-force-link" value="false"/>
+        <property key="oXC16ld-no-smart-io" value="false"/>
+        <property key="oXC16ld-stackguard" value="16"/>
         <property key="oXC32ld-extra-opts" value=""/>
         <property key="optimization-level" value=""/>
         <property key="preprocessor-macros"
-                  value="ROM_LENGTH=0x1fe000;ROM_ORIGIN=0x1002000"/>
+                  value="ROM_LENGTH=0xfe000;ROM_ORIGIN=0x1002000"/>
         <property key="remove-unused-sections" value="true"/>
         <property key="report-memory-usage" value="false"/>
         <property key="serial-length" value=""/>
@@ -406,7 +440,7 @@
         <property key="exceptions" value="true"/>
         <property key="exclude-floating-point" value="false"/>
         <property key="extra-include-directories"
-                  value="../src;../src/config/default;../src/packs/CMSIS/;../src/packs/CMSIS/CMSIS/Core/Include;../src/packs/PIC32CX2051MTSH128_DFP"/>
+                  value="../src;../src/config/default;../src/config/pic32cx_mtsh_db;../src/packs/CMSIS/;../src/packs/CMSIS/CMSIS/Core/Include;../src/packs/PIC32CX2051MTSH128_DFP"/>
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="true"/>
@@ -425,13 +459,20 @@
         <property key="use-indirect-calls" value="false"/>
       </C32CPP>
       <C32Global>
+        <property key="combine-sourcefiles" value="false"/>
         <property key="common-include-directories" value=""/>
+        <property key="common-macros" value=""/>
+        <property key="dual-boot-partition" value="0"/>
+        <property key="generic-16-bit" value="false"/>
         <property key="gp-relative-option" value=""/>
         <property key="legacy-libc" value="false"/>
         <property key="mdtcm" value=""/>
         <property key="mitcm" value=""/>
+        <property key="mpreserve-all" value="false"/>
         <property key="mstacktcm" value="false"/>
         <property key="omit-pack-options" value="1"/>
+        <property key="preserve-all" value="false"/>
+        <property key="preserve-file" value=""/>
         <property key="relaxed-math" value="false"/>
         <property key="save-temps" value="false"/>
         <property key="stack-smashing" value=""/>

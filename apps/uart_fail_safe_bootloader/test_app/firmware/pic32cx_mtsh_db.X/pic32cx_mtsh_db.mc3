@@ -11288,183 +11288,183 @@
          <hash>0c160a45c62355413f67578259b54c9a9058214589071c3ae1d9e448f282ef36</hash>
       </entry>
       <entry>
-         <file>..\src\config\default\PIC32CX2051MTSH128.ld</file>
+         <file>..\src\config\pic32cx_mtsh_db\PIC32CX2051MTSH128.ld</file>
          <hash>c6dfa1c9f647c6c3ee86f24233ad844d2f688ba6b57d5eea4b70975e99529edc</hash>
       </entry>
       <entry>
-         <file>..\src\config\default\bsp\bsp.c</file>
+         <file>..\src\config\pic32cx_mtsh_db\bsp\bsp.c</file>
          <hash>103981e89044be694fa50e209ba0aa27a2ed8b700a3e2bf913d031f54655993f</hash>
       </entry>
       <entry>
-         <file>..\src\config\default\bsp\bsp.h</file>
+         <file>..\src\config\pic32cx_mtsh_db\bsp\bsp.h</file>
          <hash>7b158fbfe62dd88288edcc39c1a296ca4fbd6458ad343bd96823717e8d3f5926</hash>
       </entry>
       <entry>
-         <file>..\src\config\default\configuration.h</file>
+         <file>..\src\config\pic32cx_mtsh_db\configuration.h</file>
          <hash>321175fed312776d5e0da9d63da1fca0673933ab0298c1d9a4aeb32cf5873639</hash>
       </entry>
       <entry>
-         <file>..\src\config\default\definitions.h</file>
-         <hash>2ea026b7775e91a5f6047ad1663033c48ea34bedc4e41800aca25a6d0fc231a6</hash>
+         <file>..\src\config\pic32cx_mtsh_db\definitions.h</file>
+         <hash>21368bfd6e051c085e1e0e780b3dd855d41618363dbf89ff566c39d52f025b7c</hash>
       </entry>
       <entry>
-         <file>..\src\config\default\device.h</file>
-         <hash>f1e98c5f5f67d72e48008397572f18fe4f3ba3f2d50ae075b616f8b1cf3b9ccf</hash>
+         <file>..\src\config\pic32cx_mtsh_db\device.h</file>
+         <hash>31f7ac2b10db22dd9085d8e61fa72a36d0300c3c8e09df0d2c23c3d3636c8b40</hash>
       </entry>
       <entry>
-         <file>..\src\config\default\device_cache.h</file>
+         <file>..\src\config\pic32cx_mtsh_db\device_cache.h</file>
          <hash>e2914501b361bbc93a56d6915b1bf4fac00277e61f31fdee87a587bc15dea5b6</hash>
       </entry>
       <entry>
-         <file>..\src\config\default\device_vectors.h</file>
+         <file>..\src\config\pic32cx_mtsh_db\device_vectors.h</file>
          <hash>4708aa91d43efb41347f7e94739b057ff002880f67f5763528992d1660d2333e</hash>
       </entry>
       <entry>
-         <file>..\src\config\default\exceptions.c</file>
+         <file>..\src\config\pic32cx_mtsh_db\exceptions.c</file>
          <hash>a565e8d25d218b3e1069267ae9cc317161d062683a27c64e3cb454757bb82fd9</hash>
       </entry>
       <entry>
-         <file>..\src\config\default\initialization.c</file>
-         <hash>6e8052bbe29b4d1a954580abf7246ad01fbfe38ec3aca80cbc77a9e7bb3e66e6</hash>
+         <file>..\src\config\pic32cx_mtsh_db\initialization.c</file>
+         <hash>b030708e83609f97080f269c6d478c8906d3219f6d66c262ddf7116c206adc9b</hash>
       </entry>
       <entry>
-         <file>..\src\config\default\interrupts.c</file>
-         <hash>ccee0c04cbdd7f711b1ac50c94f985898e4307483fc6660ae571f9c0d10ea6a3</hash>
+         <file>..\src\config\pic32cx_mtsh_db\interrupts.c</file>
+         <hash>84a6d4b724b9b00ac9796671033551bf09d1a21cc0d2d8eb49eea8bec7c2987a</hash>
       </entry>
       <entry>
-         <file>..\src\config\default\interrupts.h</file>
-         <hash>51a66f1b8fa6ef9e021e84e64a8eeb9cf954ef63cfdd9cb28c6808abc26a4f95</hash>
+         <file>..\src\config\pic32cx_mtsh_db\interrupts.h</file>
+         <hash>65c5edcf97cdaf499497c7e18d8fa01383032be88e8aedfc883cbc35dc8bbfc8</hash>
       </entry>
       <entry>
-         <file>..\src\config\default\libc_syscalls.c</file>
+         <file>..\src\config\pic32cx_mtsh_db\libc_syscalls.c</file>
          <hash>88bb2e34c939601b5b7ad076556e3ee0fcedf388436b8cddb6d6fd3e9d07472f</hash>
       </entry>
       <entry>
-         <file>..\src\config\default\peripheral\clk\plib_clk.c</file>
+         <file>..\src\config\pic32cx_mtsh_db\peripheral\clk\plib_clk.c</file>
          <hash>4a8f8188c0916d2ef1d16a9ac0cdadf660090288bdb1739bc54d1d21a034ae04</hash>
       </entry>
       <entry>
-         <file>..\src\config\default\peripheral\clk\plib_clk.h</file>
+         <file>..\src\config\pic32cx_mtsh_db\peripheral\clk\plib_clk.h</file>
          <hash>4b982aeb3ae73e8e687bdb5f094f239c4cb41a17facf59e7a8e4aba3f1feb0c2</hash>
       </entry>
       <entry>
-         <file>..\src\config\default\peripheral\cmcc\plib_cmcc.c</file>
+         <file>..\src\config\pic32cx_mtsh_db\peripheral\cmcc\plib_cmcc.c</file>
          <hash>ba0fcd94a826c11a458b5a75f6bb0286b80d201144e2263cd5d4c6284563d826</hash>
       </entry>
       <entry>
-         <file>..\src\config\default\peripheral\cmcc\plib_cmcc.h</file>
+         <file>..\src\config\pic32cx_mtsh_db\peripheral\cmcc\plib_cmcc.h</file>
          <hash>648ef8d199996bad027d6c64a669a9ee41c334029323d94e2e69dee56dcfa593</hash>
       </entry>
       <entry>
-         <file>..\src\config\default\peripheral\dwdt\plib_dwdt.c</file>
+         <file>..\src\config\pic32cx_mtsh_db\peripheral\dwdt\plib_dwdt.c</file>
          <hash>3a7bb6805229f1ac8070816c089838346738a79695b9c3fb3fceb6e7ada5a353</hash>
       </entry>
       <entry>
-         <file>..\src\config\default\peripheral\dwdt\plib_dwdt.h</file>
+         <file>..\src\config\pic32cx_mtsh_db\peripheral\dwdt\plib_dwdt.h</file>
          <hash>b4593d5f3443493f70c78683d85bc881e9b32bfd17dbdad3a3e2bf6f6f6811ce</hash>
       </entry>
       <entry>
-         <file>..\src\config\default\peripheral\flexcom\usart\plib_flexcom0_usart.c</file>
-         <hash>981d8d9c98f4cfe5d5329daf070291ddfc8668bc36be2706716708994f7211b5</hash>
+         <file>..\src\config\pic32cx_mtsh_db\peripheral\flexcom\usart\plib_flexcom0_usart.c</file>
+         <hash>608721f1543bdd20a900a15564be26c3ce3abaa50b88c9afeaa6f3df6c722bf6</hash>
       </entry>
       <entry>
-         <file>..\src\config\default\peripheral\flexcom\usart\plib_flexcom0_usart.h</file>
-         <hash>e8c6d549b9a49f8712575b00abd814342ec6cb595a1506a872b9ad67329cba90</hash>
+         <file>..\src\config\pic32cx_mtsh_db\peripheral\flexcom\usart\plib_flexcom0_usart.h</file>
+         <hash>c7e7cdf9cf4019222326048b62a7709a6a98865e0cd6a225c3c78f864b2ede8a</hash>
       </entry>
       <entry>
-         <file>..\src\config\default\peripheral\flexcom\usart\plib_flexcom_usart_local.h</file>
+         <file>..\src\config\pic32cx_mtsh_db\peripheral\flexcom\usart\plib_flexcom_usart_local.h</file>
          <hash>44c68d2efb80f2837e7bbcb39073972a6672c61ea2daf8f63e8c7e7da6e1208c</hash>
       </entry>
       <entry>
-         <file>..\src\config\default\peripheral\nvic\plib_nvic.c</file>
+         <file>..\src\config\pic32cx_mtsh_db\peripheral\nvic\plib_nvic.c</file>
          <hash>dd717044dd36bdaf83a852c95160c3e8184a8cd8eb45179b6fa65d159c1e7306</hash>
       </entry>
       <entry>
-         <file>..\src\config\default\peripheral\nvic\plib_nvic.h</file>
+         <file>..\src\config\pic32cx_mtsh_db\peripheral\nvic\plib_nvic.h</file>
          <hash>9936ac782115af41003255283fa2f603f4ff2212d16275b7c80ea8d067a9e208</hash>
       </entry>
       <entry>
-         <file>..\src\config\default\peripheral\pio\plib_pio.c</file>
+         <file>..\src\config\pic32cx_mtsh_db\peripheral\pio\plib_pio.c</file>
          <hash>517ea21b55db79bf1cf3f56709a2e2712ff07e0dcf3e80db8839972882bcbbdd</hash>
       </entry>
       <entry>
-         <file>..\src\config\default\peripheral\pio\plib_pio.h</file>
+         <file>..\src\config\pic32cx_mtsh_db\peripheral\pio\plib_pio.h</file>
          <hash>fe7a6f065d5808e8504fd7e28947afaad01fea73b23b9e0861697cdc88c0dbda</hash>
       </entry>
       <entry>
-         <file>..\src\config\default\peripheral\rstc\plib_rstc.c</file>
+         <file>..\src\config\pic32cx_mtsh_db\peripheral\rstc\plib_rstc.c</file>
          <hash>ee07d7f5fb5c51a2ce166063b973878bf0976ae5f61d7f08529e240a69c0c1a2</hash>
       </entry>
       <entry>
-         <file>..\src\config\default\peripheral\rstc\plib_rstc.h</file>
+         <file>..\src\config\pic32cx_mtsh_db\peripheral\rstc\plib_rstc.h</file>
          <hash>e2279b434403c1f16a5da80447b78283566301636cbec855c6c5d8591507d8ba</hash>
       </entry>
       <entry>
-         <file>..\src\config\default\peripheral\sefc\plib_sefc0.c</file>
+         <file>..\src\config\pic32cx_mtsh_db\peripheral\sefc\plib_sefc0.c</file>
          <hash>617742bee46ba461c344e3ad0d2dad8d37fe615c771f0f4b991571360261d6a4</hash>
       </entry>
       <entry>
-         <file>..\src\config\default\peripheral\sefc\plib_sefc0.h</file>
+         <file>..\src\config\pic32cx_mtsh_db\peripheral\sefc\plib_sefc0.h</file>
          <hash>379944129ce0df4921995d2086d67f2876ff1def7933b4eca65e94f9164eca16</hash>
       </entry>
       <entry>
-         <file>..\src\config\default\peripheral\sefc\plib_sefc1.c</file>
+         <file>..\src\config\pic32cx_mtsh_db\peripheral\sefc\plib_sefc1.c</file>
          <hash>c5864057d7dc145d784c2e0afbac3bdb66bba7f000f064903101ea84c5e827e4</hash>
       </entry>
       <entry>
-         <file>..\src\config\default\peripheral\sefc\plib_sefc1.h</file>
+         <file>..\src\config\pic32cx_mtsh_db\peripheral\sefc\plib_sefc1.h</file>
          <hash>3640ecd460bae3b8a39004c830dee3edff3a669498d6c2dc71dd08b5eccdb3d4</hash>
       </entry>
       <entry>
-         <file>..\src\config\default\peripheral\sefc\plib_sefc_common.c</file>
-         <hash>766b9eb13c07428c2dafc6c41dcd600af07d25838a59c9ff607757de4d6b7c1a</hash>
+         <file>..\src\config\pic32cx_mtsh_db\peripheral\sefc\plib_sefc_common.c</file>
+         <hash>0c27fb9a65f685636ea4c67725983303f364c576d7608fe4b36b4294e0e0a968</hash>
       </entry>
       <entry>
-         <file>..\src\config\default\peripheral\sefc\plib_sefc_common.h</file>
+         <file>..\src\config\pic32cx_mtsh_db\peripheral\sefc\plib_sefc_common.h</file>
          <hash>9766f7ad9b16f211828181e06f535d478284687d4913439e270245a295bcfac8</hash>
       </entry>
       <entry>
-         <file>..\src\config\default\peripheral\supc\plib_supc.c</file>
+         <file>..\src\config\pic32cx_mtsh_db\peripheral\supc\plib_supc.c</file>
          <hash>8f62cfd5acf7450f3a5bb27db51d141f191fa1a722b743829df913df2f63eb18</hash>
       </entry>
       <entry>
-         <file>..\src\config\default\peripheral\supc\plib_supc.h</file>
+         <file>..\src\config\pic32cx_mtsh_db\peripheral\supc\plib_supc.h</file>
          <hash>69d1e7040ea51b94b62f40bf6432c66a608056de2adf4956bdc432355f019631</hash>
       </entry>
       <entry>
-         <file>..\src\config\default\peripheral\systick\plib_systick.c</file>
-         <hash>b162ae43b43741337bbc9488005b2fb7b764bf36bdea83050e01ec493ac7b04c</hash>
+         <file>..\src\config\pic32cx_mtsh_db\peripheral\systick\plib_systick.c</file>
+         <hash>659d37e30c3c0d79a7e522aefd54dde6f7d63db3fda04e6719b18c117c801641</hash>
       </entry>
       <entry>
-         <file>..\src\config\default\peripheral\systick\plib_systick.h</file>
+         <file>..\src\config\pic32cx_mtsh_db\peripheral\systick\plib_systick.h</file>
          <hash>8f472a30f8e1826326b0c517358b4cd8622be2110c20787a11b0fb221a2bfdb6</hash>
       </entry>
       <entry>
-         <file>..\src\config\default\pin_configurations.csv</file>
+         <file>..\src\config\pic32cx_mtsh_db\pin_configurations.csv</file>
          <hash>0d850c5d2d533917bf68ad6da5c42ed6bd8ab29cc34682a88fa2ef9f3e8710e7</hash>
       </entry>
       <entry>
-         <file>..\src\config\default\startup_xc32.c</file>
+         <file>..\src\config\pic32cx_mtsh_db\startup_xc32.c</file>
          <hash>ef7f14c52d7d65f5b819942dab6f2ae93157d35a40ee248ea4b6e1b4cad4f51f</hash>
       </entry>
       <entry>
-         <file>..\src\config\default\stdio\xc32_monitor.c</file>
+         <file>..\src\config\pic32cx_mtsh_db\stdio\xc32_monitor.c</file>
          <hash>3b81577217c4f44d59c15260cab2ae46ea414cafc441b23d86117767c62872cf</hash>
       </entry>
       <entry>
-         <file>..\src\config\default\sys_tasks.h</file>
+         <file>..\src\config\pic32cx_mtsh_db\sys_tasks.h</file>
          <hash>21f254f497a18a024cd00128d06c4776c2643f867a460c1ba9880a7dd41a8d56</hash>
       </entry>
       <entry>
-         <file>..\src\config\default\tasks.c</file>
+         <file>..\src\config\pic32cx_mtsh_db\tasks.c</file>
          <hash>069ab0c4a7f9eb568c47e6e372028deaa7028c0a11bf622019740da8c9a5488c</hash>
       </entry>
       <entry>
-         <file>..\src\config\default\toolchain_specifics.h</file>
+         <file>..\src\config\pic32cx_mtsh_db\toolchain_specifics.h</file>
          <hash>a4f1774c6f1f8c6cd522567536c9e9d75ca63259b868015ac9b0fb0aeeffe1f4</hash>
       </entry>
       <entry>
-         <file>..\src\config\default\user.h</file>
+         <file>..\src\config\pic32cx_mtsh_db\user.h</file>
          <hash>451e0878e9fcf6cf9fab046c1452ea662757988346c7f39e6bc98478ca25f995</hash>
       </entry>
       <entry>
