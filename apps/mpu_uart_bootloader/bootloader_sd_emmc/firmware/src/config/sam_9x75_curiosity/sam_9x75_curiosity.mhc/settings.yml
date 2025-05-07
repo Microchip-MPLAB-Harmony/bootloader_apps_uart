@@ -1,0 +1,14 @@
+configName: sam_9x75_curiosity
+folderName: sam_9x75_curiosity
+format_version: v1.0
+frameworkPath: C:\h3
+processor: SAM9X75
+projectName: sam_9x75_curiosity
+settings:
+  PackageFilter: ''
+  FORCE_OPTIMIZATION: 'false'
+  GENERATE_BACKUP: 'true'
+  TRUSTZONE: 'false'
+  CMSISPath: dev_packs\arm\CMSIS\5.8.0
+  MERGE_STRATEGY: USER_ALL
+  DFPPath: SAM9X7_DFP\1.1.120
