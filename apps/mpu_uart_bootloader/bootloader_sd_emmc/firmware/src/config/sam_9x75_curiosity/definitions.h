@@ -48,7 +48,6 @@
 #include <stdint.h>
 #include <stddef.h>
 #include <stdbool.h>
-#include "driver/sdmmc/drv_sdmmc.h"
 #include "system/fs/sys_fs.h"
 #include "system/fs/sys_fs_media_manager.h"
 #include "system/fs/sys_fs_fat_interface.h"
@@ -56,14 +55,15 @@
 #include "system/fs/fat_fs/file_system/ffconf.h"
 #include "system/fs/fat_fs/hardware_access/diskio.h"
 #include "bootloader/bootloader_uart.h"
+#include "driver/sdmmc/drv_sdmmc.h"
 #include "peripheral/mmu/plib_mmu.h"
 #include "peripheral/clk/plib_clk.h"
 #include "peripheral/pio/plib_pio.h"
 #include "peripheral/aic/plib_aic.h"
 #include "peripheral/sdmmc/plib_sdmmc0.h"
 #include "bsp/bsp.h"
-#include "peripheral/dbgu/plib_dbgu.h"
 #include "peripheral/tc/plib_tc0.h"
+#include "peripheral/dbgu/plib_dbgu.h"
 #include "system/int/sys_int.h"
 #include "osal/osal.h"
 #include "system/debug/sys_debug.h"

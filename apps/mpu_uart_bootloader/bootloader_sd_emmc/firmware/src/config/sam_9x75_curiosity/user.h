@@ -58,7 +58,7 @@ extern "C" {
 // *****************************************************************************
 // *****************************************************************************
 #define SWITCH_Get()    USER_BUTTON_Get()
-#define LED_ON()        LED_GREEN_On()
+#define LED_ON()        LED_BLUE_On()
 
 //DOM-IGNORE-BEGIN
 #ifdef __cplusplus

@@ -103,15 +103,15 @@ void PIO_Initialize ( void )
     ((pio_registers_t*)PIO_PORT_C)->PIO_PER = 0xFFFFFFFFU;
     ((pio_registers_t*)PIO_PORT_C)->PIO_MDDR = 0xFFFFFFFFU;
     /* PORTC Pull Up Enable/Disable as per MHC selection */
-    ((pio_registers_t*)PIO_PORT_C)->PIO_PUDR = ~0x1000200U;
-    ((pio_registers_t*)PIO_PORT_C)->PIO_PUER = 0x1000200U;
+    ((pio_registers_t*)PIO_PORT_C)->PIO_PUDR = ~0x1000000U;
+    ((pio_registers_t*)PIO_PORT_C)->PIO_PUER = 0x1000000U;
     /* PORTC Pull Down Enable/Disable as per MHC selection */
     ((pio_registers_t*)PIO_PORT_C)->PIO_PPDDR = 0xFFFFFFFFU;
     /* PORTC Output Write Enable */
     ((pio_registers_t*)PIO_PORT_C)->PIO_OWER = PIO_OWER_Msk;
     /* PORTC Output Direction Enable */
-    ((pio_registers_t*)PIO_PORT_C)->PIO_OER = 0x384000U;
-    ((pio_registers_t*)PIO_PORT_C)->PIO_ODR = ~0x384000U;
+    ((pio_registers_t*)PIO_PORT_C)->PIO_OER = 0x380000U;
+    ((pio_registers_t*)PIO_PORT_C)->PIO_ODR = ~0x380000U;
     /* Initialize PORTC pin state */
     ((pio_registers_t*)PIO_PORT_C)->PIO_ODSR = 0x0U;
     /* PORTC Slew rate control */
