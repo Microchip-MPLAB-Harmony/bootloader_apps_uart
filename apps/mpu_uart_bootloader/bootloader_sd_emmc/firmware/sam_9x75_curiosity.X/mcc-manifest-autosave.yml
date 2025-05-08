@@ -2,7 +2,7 @@
 
 manifest_file_version: 1.0.0
 project: uart_bootloader_bootloader_sam_9x75_curiosity
-creation_date: 2025-05-08T14:04:45.561+05:30[Asia/Calcutta]
+creation_date: 2025-05-08T19:01:06.141+05:30[Asia/Calcutta]
 operating_system: Windows 11
 mcc_mode: IDE
 mcc_mode_version: v6.25
@@ -15,7 +15,7 @@ is_mcc_offline: true
 is_using_prerelease_versions: false
 mcc_content_registries: https://registry.npmjs.org/
 device_library: {library_class: com.microchip.mcc.harmony.Harmony3Library, name: Harmony
-    V3, version: 1.5.5}
+    V3, version: 1.5.3}
 packs: {name: SAM9X7_DFP, version: 1.9.170}
 modules:
 - {name: core, type: HARMONY, version: dev}
