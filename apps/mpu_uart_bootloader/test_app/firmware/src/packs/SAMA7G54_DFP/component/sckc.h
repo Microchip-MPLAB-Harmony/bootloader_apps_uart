@@ -1,31 +1,30 @@
 /*
  * Component description for SCKC
  *
- * Copyright (c) 2023 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2025 Microchip Technology Inc. and its subsidiaries.
  *
- * Subject to your compliance with these terms, you may use Microchip software and any derivatives
- * exclusively with Microchip products. It is your responsibility to comply with third party license
- * terms applicable to your use of third party software (including open source software) that may
- * accompany Microchip software.
+ * SPDX-License-Identifier: Apache-2.0
  *
- * THIS SOFTWARE IS SUPPLIED BY MICROCHIP "AS IS". NO WARRANTIES, WHETHER EXPRESS, IMPLIED OR STATUTORY,
- * APPLY TO THIS SOFTWARE, INCLUDING ANY IMPLIED WARRANTIES OF NON-INFRINGEMENT, MERCHANTABILITY, AND
- * FITNESS FOR A PARTICULAR PURPOSE.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
  *
- * IN NO EVENT WILL MICROCHIP BE LIABLE FOR ANY INDIRECT, SPECIAL, PUNITIVE, INCIDENTAL OR CONSEQUENTIAL
- * LOSS, DAMAGE, COST OR EXPENSE OF ANY KIND WHATSOEVER RELATED TO THE SOFTWARE, HOWEVER CAUSED, EVEN IF
- * MICROCHIP HAS BEEN ADVISED OF THE POSSIBILITY OR THE DAMAGES ARE FORESEEABLE. TO THE FULLEST EXTENT
- * ALLOWED BY LAW, MICROCHIP'S TOTAL LIABILITY ON ALL CLAIMS IN ANY WAY RELATED TO THIS SOFTWARE WILL NOT
- * EXCEED THE AMOUNT OF FEES, IF ANY, THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
  *
  */
 
-/* file generated from device description version 2023-02-02T10:07:15Z */
-#ifndef _SAMA7G_SCKC_COMPONENT_H_
-#define _SAMA7G_SCKC_COMPONENT_H_
+/*      file generated from device description file (ATDF) version None       */
+#ifndef _SAMA7G5_SCKC_COMPONENT_H_
+#define _SAMA7G5_SCKC_COMPONENT_H_
 
 /* ************************************************************************** */
-/*   SOFTWARE API DEFINITION FOR SCKC                                         */
+/*                      SOFTWARE API DEFINITION FOR SCKC                      */
 /* ************************************************************************** */
 
 /* -------- SCKC_CR : (SCKC Offset: 0x00) (R/W 32) Slow Clock Controller Configuration Register -------- */
@@ -33,24 +32,24 @@
 
 #define SCKC_CR_TD_OSCSEL_Pos                 _UINT32_(24)                                         /* (SCKC_CR) Timing Domain Slow Clock Selector Position */
 #define SCKC_CR_TD_OSCSEL_Msk                 (_UINT32_(0x1) << SCKC_CR_TD_OSCSEL_Pos)             /* (SCKC_CR) Timing Domain Slow Clock Selector Mask */
-#define SCKC_CR_TD_OSCSEL(value)              (SCKC_CR_TD_OSCSEL_Msk & (_UINT32_(value) << SCKC_CR_TD_OSCSEL_Pos)) /* Assigment of value for TD_OSCSEL in the SCKC_CR register */
-#define   SCKC_CR_TD_OSCSEL_RC_Val            _UINT32_(0x0)                                        /* (SCKC_CR) Slow clock of the timing domain is driven by the embedded 32 kHz (typical) RC oscillator.  */
+#define SCKC_CR_TD_OSCSEL(value)              (SCKC_CR_TD_OSCSEL_Msk & (_UINT32_(value) << SCKC_CR_TD_OSCSEL_Pos)) /* Assignment of value for TD_OSCSEL in the SCKC_CR register */
+#define   SCKC_CR_TD_OSCSEL_RC_Val            _UINT32_(0x0)                                        /* (SCKC_CR) Slow clock of the timing domain is driven by the embedded Always-on 64 kHz (typical) RC oscillator.  */
 #define   SCKC_CR_TD_OSCSEL_XTAL_Val          _UINT32_(0x1)                                        /* (SCKC_CR) Slow clock of the timing domain is driven by the 32.768 kHz crystal oscillator.  */
-#define SCKC_CR_TD_OSCSEL_RC                  (SCKC_CR_TD_OSCSEL_RC_Val << SCKC_CR_TD_OSCSEL_Pos)  /* (SCKC_CR) Slow clock of the timing domain is driven by the embedded 32 kHz (typical) RC oscillator. Position  */
-#define SCKC_CR_TD_OSCSEL_XTAL                (SCKC_CR_TD_OSCSEL_XTAL_Val << SCKC_CR_TD_OSCSEL_Pos) /* (SCKC_CR) Slow clock of the timing domain is driven by the 32.768 kHz crystal oscillator. Position  */
+#define SCKC_CR_TD_OSCSEL_RC                  (SCKC_CR_TD_OSCSEL_RC_Val << SCKC_CR_TD_OSCSEL_Pos)  /* (SCKC_CR) Slow clock of the timing domain is driven by the embedded Always-on 64 kHz (typical) RC oscillator. Position */
+#define SCKC_CR_TD_OSCSEL_XTAL                (SCKC_CR_TD_OSCSEL_XTAL_Val << SCKC_CR_TD_OSCSEL_Pos) /* (SCKC_CR) Slow clock of the timing domain is driven by the 32.768 kHz crystal oscillator. Position */
 #define SCKC_CR_Msk                           _UINT32_(0x01000000)                                 /* (SCKC_CR) Register Mask  */
 
 
-/** \brief SCKC register offsets definitions */
+/* SCKC register offsets definitions */
 #define SCKC_CR_REG_OFST               _UINT32_(0x00)      /* (SCKC_CR) Slow Clock Controller Configuration Register Offset */
 
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
-/** \brief SCKC register API structure */
+/* SCKC register API structure */
 typedef struct
 {  /* Slow Clock Controller */
-  __IO  uint32_t                       SCKC_CR;            /**< Offset: 0x00 (R/W  32) Slow Clock Controller Configuration Register */
+  __IO  uint32_t                       SCKC_CR;            /* Offset: 0x00 (R/W  32) Slow Clock Controller Configuration Register */
 } sckc_registers_t;
 
 
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
-#endif /* _SAMA7G_SCKC_COMPONENT_H_ */
+#endif /* _SAMA7G5_SCKC_COMPONENT_H_ */

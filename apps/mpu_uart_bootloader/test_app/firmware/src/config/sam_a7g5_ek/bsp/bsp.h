@@ -76,21 +76,21 @@
 
 /*** LED Macros for LED_GREEN ***/
 #define LED_GREEN_Toggle() do { PIOA_REGS->PIO_MSKR = (1UL<<13); (PIOA_REGS->PIO_ODSR ^= (1UL<<13)); } while (0)
-#define LED_GREEN_Get() ((PIOA_REGS->PIO_PDSR >> 13) & 0x1)
+#define LED_GREEN_Get() ((PIOA_REGS->PIO_PDSR >> 13) & 0x1U)
 #define LED_GREEN_On() (PIOA_REGS->PIO_SODR = (1UL<<13))
 #define LED_GREEN_Off() (PIOA_REGS->PIO_CODR = (1UL<<13))
 /*** LED Macros for LED_BLUE ***/
 #define LED_BLUE_Toggle() do { PIOD_REGS->PIO_MSKR = (1UL<<20); (PIOD_REGS->PIO_ODSR ^= (1UL<<20)); } while (0)
-#define LED_BLUE_Get() ((PIOD_REGS->PIO_PDSR >> 20) & 0x1)
+#define LED_BLUE_Get() ((PIOD_REGS->PIO_PDSR >> 20) & 0x1U)
 #define LED_BLUE_On() (PIOD_REGS->PIO_SODR = (1UL<<20))
 #define LED_BLUE_Off() (PIOD_REGS->PIO_CODR = (1UL<<20))
 /*** LED Macros for LED_RED ***/
 #define LED_RED_Toggle() do { PIOB_REGS->PIO_MSKR = (1UL<<8); (PIOB_REGS->PIO_ODSR ^= (1UL<<8)); } while (0)
-#define LED_RED_Get() ((PIOB_REGS->PIO_PDSR >> 8) & 0x1)
+#define LED_RED_Get() ((PIOB_REGS->PIO_PDSR >> 8) & 0x1U)
 #define LED_RED_On() (PIOB_REGS->PIO_SODR = (1UL<<8))
 #define LED_RED_Off() (PIOB_REGS->PIO_CODR = (1UL<<8))
 /*** SWITCH Macros for USER_BUTTON ***/
-#define USER_BUTTON_Get() ((PIOA_REGS->PIO_PDSR >> 12) & 0x1)
+#define USER_BUTTON_Get() ((PIOA_REGS->PIO_PDSR >> 12) & 0x1U)
 #define USER_BUTTON_STATE_PRESSED 0
 #define USER_BUTTON_STATE_RELEASED 1
 
