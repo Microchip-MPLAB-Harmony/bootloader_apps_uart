@@ -174,6 +174,7 @@ typedef struct {
 #endif
 	LBA_t	winsect;		/* Current sector appearing in the win[] */
 	BYTE	CACHE_ALIGN win[FF_MAX_SS];	/* Disk access window for Directory, FAT (and file data at tiny cfg) */
+
 } FATFS;
 
 
@@ -219,6 +220,7 @@ typedef struct {
 #endif
 #if !FF_FS_TINY
 	BYTE	CACHE_ALIGN buf[FF_MAX_SS];	/* File private data read/write window */
+
 #endif
 } FIL;
 

@@ -1,35 +1,34 @@
 /*
  * Header file for ATSAMA7G54
  *
- * Copyright (c) 2023 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2025 Microchip Technology Inc. and its subsidiaries.
  *
- * Subject to your compliance with these terms, you may use Microchip software and any derivatives
- * exclusively with Microchip products. It is your responsibility to comply with third party license
- * terms applicable to your use of third party software (including open source software) that may
- * accompany Microchip software.
+ * SPDX-License-Identifier: Apache-2.0
  *
- * THIS SOFTWARE IS SUPPLIED BY MICROCHIP "AS IS". NO WARRANTIES, WHETHER EXPRESS, IMPLIED OR STATUTORY,
- * APPLY TO THIS SOFTWARE, INCLUDING ANY IMPLIED WARRANTIES OF NON-INFRINGEMENT, MERCHANTABILITY, AND
- * FITNESS FOR A PARTICULAR PURPOSE.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
  *
- * IN NO EVENT WILL MICROCHIP BE LIABLE FOR ANY INDIRECT, SPECIAL, PUNITIVE, INCIDENTAL OR CONSEQUENTIAL
- * LOSS, DAMAGE, COST OR EXPENSE OF ANY KIND WHATSOEVER RELATED TO THE SOFTWARE, HOWEVER CAUSED, EVEN IF
- * MICROCHIP HAS BEEN ADVISED OF THE POSSIBILITY OR THE DAMAGES ARE FORESEEABLE. TO THE FULLEST EXTENT
- * ALLOWED BY LAW, MICROCHIP'S TOTAL LIABILITY ON ALL CLAIMS IN ANY WAY RELATED TO THIS SOFTWARE WILL NOT
- * EXCEED THE AMOUNT OF FEES, IF ANY, THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
  *
  */
 
-/* File generated from device description version 2023-02-02T10:07:10Z */
+/* File generated from device description file (ATDF) version None */
 #ifndef _SAMA7G54_H_
 #define _SAMA7G54_H_
 
 /* Header version uses Semantic Versioning 2.0.0 (https://semver.org/) */
-#define HEADER_FORMAT_VERSION "2.1.0"
+#define HEADER_FORMAT_VERSION "2.1.1"
 
 #define HEADER_FORMAT_VERSION_MAJOR (2)
 #define HEADER_FORMAT_VERSION_MINOR (1)
-#define HEADER_FORMAT_VERSION_PATCH (0)
+#define HEADER_FORMAT_VERSION_PATCH (1)
 
 /* SAMA7G54 definitions
   This file defines all structures and symbols for SAMA7G54:
@@ -67,7 +66,7 @@
 #endif /* SKIP_INTEGER_LITERALS */
 
 /* ************************************************************************** */
-/* CMSIS DEFINITIONS FOR SAMA7G54                                           */
+/*                       CMSIS DEFINITIONS FOR SAMA7G54                       */
 /* ************************************************************************** */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
 /* Interrupt Number Definition */
@@ -92,15 +91,15 @@ typedef enum IRQn
   SGI15_IRQn                =  15, /* 15  Software Generated Interrupt 15     */
 
 /******  CORTEX-A7 Processor Exceptions Numbers ******************************/
+  VirtMaint_IRQn            =  25, /* 25  Virtual Maintenance Interrupt (PPI6) */
+  HyperVTimer_IRQn          =  26, /* 26  Hypervisor Timer event (PPI5)       */
+  VirtTimer_IRQn            =  27, /* 27  Virtual Timer event (PPI4)          */
   LegacynFIQ_IRQn           =  28, /* 28  Legacy nFIQ signal (PPI0)           */
   SecPhysTimer_IRQn         =  29, /* 29  Secure Physical Timer event (PPI1)  */
   NonSecPhysTimer_IRQn      =  30, /* 30  Non-secure Physical Timer event (PPI2) */
   LegacynIRQ_IRQn           =  31, /* 31  Legacy nIRQ signal (PPI3)           */
-  VirtTimer_IRQn            =  27, /* 27  Virtual Timer event (PPI4)          */
-  HyperVTimer_IRQn          =  26, /* 26  Hypervisor Timer event (PPI5)       */
-  VirtMaint_IRQn            =  25, /* 25  Virtual Maintenance Interrupt (PPI6) */
 
-/******  SAMA7G54 specific Interrupt Numbers ***********************************/
+/* ****************** SAMA7G54 specific Interrupt Numbers ******************* */
   DWDT_SW_IRQn              =  32, /* 32  Dual Watchdog Timer (DWDT)          */
   DWDT_NSW_IRQn             =  33, /* 33  Dual Watchdog Timer (DWDT)          */
   DWDT_NSW_ALARM_IRQn       =  34, /* 34  Dual Watchdog Timer (DWDT)          */
@@ -117,7 +116,7 @@ typedef enum IRQn
   PIOE_IRQn                 =  47, /* 47  Parallel Input/Output Controller (PIOE) */
   SECUMOD_IRQn              =  49, /* 49  Security Module (SECUMOD)           */
   SECURAM_IRQn              =  50, /* 50   (SECURAM)                          */
-  SFR_IRQn                  =  51, /* 51  Special Function Register (SFR)     */
+  SFR_IRQn                  =  51, /* 51  Special Function Registers (SFR)    */
   HSMC_IRQn                 =  53, /* 53  Static Memory Controller (HSMC)     */
   XDMAC0_IRQn               =  54, /* 54  Extensible DMA Controller (XDMAC0)  */
   XDMAC1_IRQn               =  55, /* 55  Extensible DMA Controller (XDMAC1)  */
@@ -125,10 +124,10 @@ typedef enum IRQn
   ACC_IRQn                  =  57, /* 57  Analog Comparator Controller (ACC)  */
   ADC_IRQn                  =  58, /* 58  Analog-to-Digital Converter (ADC)   */
   AES_IRQn                  =  59, /* 59  Advanced Encryption Standard (AES)  */
-  ARM_IRQn                  =  61, /* 61  ARM (ARM)                           */
+  ARM_IRQn                  =  61, /* 61  Cortex-A7 CPU (ARM)                 */
   ASRC_IRQn                 =  62, /* 62  Asynchronous Sample Rate Converter (ASRC) */
   CPKCC_IRQn                =  64, /* 64  Classic Public Key Cryptography Controller (CPKCC) */
-  CSI_IRQn                  =  65, /* 65  Camera Serial Interface (CSI)       */
+  CSI_IRQn                  =  65, /* 65  CSI Host Controller (CSI)           */
   CSI2DC_IRQn               =  66, /* 66  CSI-2 Demultiplexer Controller (CSI2DC) */
   FLEXCOM0_IRQn             =  70, /* 70  Flexible Serial Communication (FLEXCOM0) */
   FLEXCOM1_IRQn             =  71, /* 71  Flexible Serial Communication (FLEXCOM1) */
@@ -150,7 +149,7 @@ typedef enum IRQn
   ISC_IRQn                  =  88, /* 88  Image Sensor Controller (ISC)       */
   I2SMCC0_IRQn              =  89, /* 89  Inter-IC Sound Multi Channel Controller (I2SMCC0) */
   I2SMCC1_IRQn              =  90, /* 90  Inter-IC Sound Multi Channel Controller (I2SMCC1) */
-  MATRIX_IRQn               =  92, /* 92  AHB Bus Matrix (MATRIX)             */
+  MATRIX_IRQn               =  92, /* 92  AHB Bus Matrix (MATRIX2) (MATRIX)   */
   MCAN0_INT0_IRQn           =  93, /* 93  Controller Area Network (MCAN0)     */
   MCAN1_INT0_IRQn           =  94, /* 94  Controller Area Network (MCAN1)     */
   MCAN2_INT0_IRQn           =  95, /* 95  Controller Area Network (MCAN2)     */
@@ -191,13 +190,13 @@ typedef enum IRQn
   TZAESB_NS_SINT_IRQn       = 131, /* 131 TrustZone Advanced Encryption Standard Bridge (TZAESB) */
   TZAESB_S_IRQn             = 132, /* 132 TrustZone Advanced Encryption Standard Bridge (TZAESB) */
   TZAESB_S_SINT_IRQn        = 133, /* 133 TrustZone Advanced Encryption Standard Bridge (TZAESB) */
-  TZC_IRQn                  = 134, /* 134 TrustZone Address Space Controller (TZC) */
+  TZC_IRQn                  = 134, /* 134 TrustZone Address Space Controller (TZC) (TZC) */
   TZPM_IRQn                 = 135, /* 135 System Interconnect and Security (TZPM) */
-  UDPHSA_IRQn               = 136, /* 136 USB High Speed Device Port (UDPHSA) */
-  UDPHSB_IRQn               = 137, /* 137 USB High Speed Device Port (UDPHSB) */
+  UDPHSA_IRQn               = 136, /* 136 IP_Name (UDPHSA)                    */
+  UDPHSB_IRQn               = 137, /* 137 IP_Name (UDPHSB)                    */
   UHPHS_IRQn                = 138, /* 138 USB Host High Speed Port (UHPHS)    */
-  ARM_NPMUIRQ_IRQn          = 142, /* 142 ARM_NPMUIRQ (ARM)                   */
-  ARM_NAXIERRIRQ_IRQn       = 143, /* 143 ARM_NAXIERRIRQ (ARM)                */
+  ARM_NPMUIRQ_IRQn          = 142, /* 142 Cortex-A7 CPU (ARM)                 */
+  ARM_NAXIERRIRQ_IRQn       = 143, /* 143 Cortex-A7 CPU (ARM)                 */
   XDMAC0_SINT_IRQn          = 144, /* 144 Extensible DMA Controller (XDMAC0)  */
   XDMAC1_SINT_IRQn          = 145, /* 145 Extensible DMA Controller (XDMAC1)  */
   XDMAC2_SINT_IRQn          = 146, /* 146 Extensible DMA Controller (XDMAC2)  */
@@ -241,30 +240,30 @@ typedef enum IRQn
   EIC_EXT_IRQ0_IRQn         = 185, /* 185 External Interrupt Controller (EIC) */
   EIC_EXT_IRQ1_IRQn         = 186, /* 186 External Interrupt Controller (EIC) */
 
-/******  CORTEX-A7 Special Interrupt Numbers ******************************/
+/* ****************** CORTEX-A7 Special Interrupt Numbers ******************* */
 
   PERIPH_MAX_IRQn           = 186  /* Max peripheral ID */
 } IRQn_Type;
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 /* Configuration of the CORTEX-A7 Processor and Core Peripherals */
+#define GIC_DISTRIBUTOR_BASE      0xE8C11000 /* Base address for GIC distributor interface                                */
+#define GIC_INTERFACE_BASE        0xE8C12000 /* Base address for GIC CPU interface                                        */
 #define __CA_REV                      0x0005 /* CA7 Core Revision(r0p5)                                                   */
 #define __CORTEX_A                         7 /* Core type number (Cortex-A7)                                              */
 #define __FPU_PRESENT                      1 /* FPU is present on core                                                    */
 #define __GIC_PRESENT                      1 /* GIC is present on core                                                    */
-#define GIC_DISTRIBUTOR_BASE      0xE8C11000 /* Base address for GIC distributor interface                                */
-#define GIC_INTERFACE_BASE        0xE8C12000 /* Base address for GIC CPU interface                                        */
+#define __L2C_PRESENT                      0 /* L2C-310 cache controller is present                                       */
 #define __TIM_PRESENT                      1 /* Generic Timer capability is present                                       */
-#define __L2C_PRESENT                      0 /* L2C-310 cache controller is absent                                        */
 
 /* CMSIS includes */
 #include "core_ca.h"
 #if defined USE_CMSIS_INIT
-#include "system_sama7g.h"
+#include "system_sama7g5.h"
 #endif /* USE_CMSIS_INIT */
 
 /* ************************************************************************** */
-/*   SOFTWARE PERIPHERAL API DEFINITION FOR SAMA7G54                          */
+/*              SOFTWARE PERIPHERAL API DEFINITIONS FOR SAMA7G54              */
 /* ************************************************************************** */
 #include "component/acc.h"
 #include "component/adc.h"
@@ -324,7 +323,7 @@ typedef enum IRQn
 #include "component/xdmac.h"
 
 /* ************************************************************************** */
-/*   INSTANCE DEFINITIONS FOR SAMA7G54 */
+/*                     INSTANCE DEFINITIONS FOR SAMA7G54                      */
 /* ************************************************************************** */
 #include "instance/acc.h"
 #include "instance/adc.h"
@@ -371,6 +370,11 @@ typedef enum IRQn
 #include "instance/pdmc0.h"
 #include "instance/pdmc1.h"
 #include "instance/pio.h"
+#include "instance/pioa.h"
+#include "instance/piob.h"
+#include "instance/pioc.h"
+#include "instance/piod.h"
+#include "instance/pioe.h"
 #include "instance/pit64b0.h"
 #include "instance/pit64b1.h"
 #include "instance/pit64b2.h"
@@ -389,6 +393,7 @@ typedef enum IRQn
 #include "instance/sdmmc1.h"
 #include "instance/sdmmc2.h"
 #include "instance/secumod.h"
+#include "instance/securam.h"
 #include "instance/sfr.h"
 #include "instance/sfrbu.h"
 #include "instance/sha.h"
@@ -404,6 +409,7 @@ typedef enum IRQn
 #include "instance/tcpcb.h"
 #include "instance/tdes.h"
 #include "instance/trng.h"
+#include "instance/tzaesb.h"
 #include "instance/tzaesbasc.h"
 #include "instance/tzaesbns.h"
 #include "instance/tzaesbs.h"
@@ -411,6 +417,7 @@ typedef enum IRQn
 #include "instance/tzpm.h"
 #include "instance/udphsa.h"
 #include "instance/udphsb.h"
+#include "instance/uhphs.h"
 #include "instance/uhphs_ehci.h"
 #include "instance/uhphs_ohci.h"
 #include "instance/xdmac0.h"
@@ -418,7 +425,7 @@ typedef enum IRQn
 #include "instance/xdmac2.h"
 
 /* ************************************************************************** */
-/*  PERIPHERAL ID DEFINITIONS FOR SAMA7G54                                    */
+/*                   PERIPHERAL ID DEFINITIONS FOR SAMA7G54                   */
 /* ************************************************************************** */
 #define ID_DWDT_SW       (  0) /* Dual Watchdog Timer, Secure World (DWDT_SW) */
 #define ID_DWDT_NSW      (  1) /* Dual Watchdog Timer, Non Secure World, interrupt (DWDT_NSW) */
@@ -447,6 +454,7 @@ typedef enum IRQn
 #define ID_ADC           ( 26) /* Analog-to-Digital Converter (ADC) */
 #define ID_AES           ( 27) /* Advanced Encryption Standard (AES) */
 #define ID_TZAESBASC     ( 28) /* TrustZone Advanced Encryption Standard Bridge - Address Space Controlller (TZAESBASC) */
+#define ID_ARM           ( 29) /* Cortex-A7 Core0 interrupt (ARM) */
 #define ID_ASRC          ( 30) /* Asynchronous Sample Rate Converter (ASRC) */
 #define ID_CPKCC         ( 32) /* Classic Public Key Cryptography Controller (CPKCC) */
 #define ID_CSI           ( 33) /* Camera Serial Interface 2 between ISC and MIPI PHY (CSI) */
@@ -520,6 +528,8 @@ typedef enum IRQn
 #define ID_UDPHSA        (104) /* USB Device High Speed A (UDPHSA) */
 #define ID_UDPHSB        (105) /* USB Device High Speed B (UDPHSB) */
 #define ID_UHPHS         (106) /* USB Host Controller High Speed (UHPHS) */
+#define ID_ARM_nPMUIRQ   (110) /* Performance Monitoring Unit interrupt (ARM_nPMUIRQ) */
+#define ID_ARM_nAXIERRIRQ (111) /* AXI transaction error interrupt (ARM_nAXIERRIRQ) */
 #define ID_XDMAC0_SINT   (112) /* DMA 0, mem to periph, 32 Channels, Secure INTerrupt (XDMAC0_SINT) */
 #define ID_XDMAC1_SINT   (113) /* DMA 1, mem to periph, 32 Channels, Secure INTerrupt (XDMAC1_SINT) */
 #define ID_XDMAC2_SINT   (114) /* DMA 2, mem to mem, 4 Channels, Secure INTerrupt (XDMAC2_SINT) */
@@ -566,7 +576,7 @@ typedef enum IRQn
 #define ID_PERIPH_MAX    (154) /* Number of peripheral IDs */
 
 /* ************************************************************************** */
-/*   REGISTER STRUCTURE ADDRESS DEFINITIONS FOR SAMA7G54                      */
+/*            REGISTER STRUCTURE ADDRESS DEFINITIONS FOR SAMA7G54             */
 /* ************************************************************************** */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
 #define ACC_REGS                         ((acc_registers_t*)0xe1600000)                /* ACC Registers Address        */
@@ -575,8 +585,8 @@ typedef enum IRQn
 #define ASRC_REGS                        ((asrc_registers_t*)0xe1610000)               /* ASRC Registers Address       */
 #define BSC_REGS                         ((bsc_registers_t*)0xe001d054)                /* BSC Registers Address        */
 #define CHIPID_REGS                      ((chipid_registers_t*)0xe0020000)             /* CHIPID Registers Address     */
-#define CSI_REGS                         ((csi_registers_t*)0xe1400000)                /* CSI Registers Address        */
 #define CPKCC_REGS                       ((cpkcc_registers_t*)0xe000c000)              /* CPKCC Registers Address      */
+#define CSI_REGS                         ((csi_registers_t*)0xe1400000)                /* CSI Registers Address        */
 #define CSI2DC_REGS                      ((csi2dc_registers_t*)0xe1404000)             /* CSI2DC Registers Address     */
 #define DDRPUBL_REGS                     ((ddr3phy_registers_t*)0xe3804000)            /* DDRPUBL Registers Address    */
 #define DWDT_REGS                        ((dwdt_registers_t*)0xe001c000)               /* DWDT Registers Address       */
@@ -662,7 +672,7 @@ typedef enum IRQn
 #endif /* (defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 /* ************************************************************************** */
-/*   BASE ADDRESS DEFINITIONS FOR SAMA7G54                                    */
+/*                   BASE ADDRESS DEFINITIONS FOR SAMA7G54                    */
 /* ************************************************************************** */
 #define ACC_BASE_ADDRESS                 _UINT32_(0xe1600000)                          /* ACC Base Address */
 #define ADC_BASE_ADDRESS                 _UINT32_(0xe1000000)                          /* ADC Base Address */
@@ -670,8 +680,8 @@ typedef enum IRQn
 #define ASRC_BASE_ADDRESS                _UINT32_(0xe1610000)                          /* ASRC Base Address */
 #define BSC_BASE_ADDRESS                 _UINT32_(0xe001d054)                          /* BSC Base Address */
 #define CHIPID_BASE_ADDRESS              _UINT32_(0xe0020000)                          /* CHIPID Base Address */
-#define CSI_BASE_ADDRESS                 _UINT32_(0xe1400000)                          /* CSI Base Address */
 #define CPKCC_BASE_ADDRESS               _UINT32_(0xe000c000)                          /* CPKCC Base Address */
+#define CSI_BASE_ADDRESS                 _UINT32_(0xe1400000)                          /* CSI Base Address */
 #define CSI2DC_BASE_ADDRESS              _UINT32_(0xe1404000)                          /* CSI2DC Base Address */
 #define DDRPUBL_BASE_ADDRESS             _UINT32_(0xe3804000)                          /* DDRPUBL Base Address */
 #define DWDT_BASE_ADDRESS                _UINT32_(0xe001c000)                          /* DWDT Base Address */
@@ -756,85 +766,83 @@ typedef enum IRQn
 #define XDMAC2_BASE_ADDRESS              _UINT32_(0xe1200000)                          /* XDMAC2 Base Address */
 
 /* ************************************************************************** */
-/*   PIO DEFINITIONS FOR SAMA7G54                                             */
+/*                        PIO DEFINITIONS FOR SAMA7G54                        */
 /* ************************************************************************** */
 #include "pio/sama7g54.h"
 
 /* ************************************************************************** */
-/*   MEMORY MAPPING DEFINITIONS FOR SAMA7G54                                  */
+/*                  MEMORY MAPPING DEFINITIONS FOR SAMA7G54                   */
 /* ************************************************************************** */
 #define IROM_SIZE                      _UINT32_(0x00014000)    /*   80kB Memory segment type: rom */
 #define ECC_ROM_SIZE                   _UINT32_(0x00018000)    /*   96kB Memory segment type: rom */
 #define CPKCC_ROM_SIZE                 _UINT32_(0x00010000)    /*   64kB Memory segment type: rom */
-#define CPKCC_RAM_SIZE                 _UINT32_(0x00001000)    /*    4kB Memory segment type: other */
+#define CPKCC_RAM_SIZE                 _UINT32_(0x00001000)    /*    4kB Memory segment type: ram */
 #define IRAM_SIZE                      _UINT32_(0x00020000)    /*  128kB Memory segment type: ram */
-#define UDPHS_RAMA_SIZE                _UINT32_(0x00100000)    /* 1024kB Memory segment type: other */
-#define UDPHS_RAMB_SIZE                _UINT32_(0x00100000)    /* 1024kB Memory segment type: other */
-#define UHPHS_OHCI_SIZE                _UINT32_(0x00001000)    /*    4kB Memory segment type: other */
-#define UHPHS_EHCI_SIZE                _UINT32_(0x00100000)    /* 1024kB Memory segment type: other */
-#define NFC_RAM_SIZE                   _UINT32_(0x00003000)    /*   12kB Memory segment type: other */
-#define NFC_SIZE                       _UINT32_(0x08000000)    /* 131072kB Memory segment type: other */
-#define QSPIMEM0_SIZE                  _UINT32_(0x10000000)    /* 262144kB Memory segment type: other */
-#define QSPIMEM1_SIZE                  _UINT32_(0x10000000)    /* 262144kB Memory segment type: other */
-#define EBI_CS0_SIZE                   _UINT32_(0x08000000)    /* 131072kB Memory segment type: other */
-#define EBI_CS1_SIZE                   _UINT32_(0x08000000)    /* 131072kB Memory segment type: other */
-#define EBI_CS2_SIZE                   _UINT32_(0x08000000)    /* 131072kB Memory segment type: other */
-#define EBI_CS3_SIZE                   _UINT32_(0x08000000)    /* 131072kB Memory segment type: other */
-#define DDR_CS_SIZE                    _UINT32_(0x80000000)    /* 2097152kB Memory segment type: other */
-#define SECURAM_SIZE                   _UINT32_(0x00004000)    /*   16kB Memory segment type: other */
-#define SDMMC0_SIZE                    _UINT32_(0x00004000)    /*   16kB Memory segment type: other */
-#define SDMMC1_SIZE                    _UINT32_(0x00004000)    /*   16kB Memory segment type: other */
-#define SDMMC2_SIZE                    _UINT32_(0x00004000)    /*   16kB Memory segment type: other */
-#define APB_DBG_S_SIZE                 _UINT32_(0x00060000)    /*  384kB Memory segment type: other */
-#define APB_DBG_SIZE                   _UINT32_(0x00001000)    /*    4kB Memory segment type: other */
-#define NICGPV_SIZE                    _UINT32_(0x00100000)    /* 1024kB Memory segment type: other */
-#define OTPC_SIZE                      _UINT32_(0x00001000)    /*    4kB Memory segment type: other */
-#define CSI2DC_META_SIZE               _UINT32_(0x00002000)    /*    8kB Memory segment type: other */
-#define ARM_PERIPH_SIZE                _UINT32_(0x00008000)    /*   32kB Memory segment type: io */
-#define PERIPHERALS_SIZE               _UINT32_(0x10000000)    /* 262144kB Memory segment type: io */
+#define UDPHS_RAMA_SIZE                _UINT32_(0x00100000)    /* 1024kB Memory segment type: ram */
+#define UDPHS_RAMB_SIZE                _UINT32_(0x00100000)    /* 1024kB Memory segment type: ram */
+#define UHPHS_OHCI_SIZE                _UINT32_(0x00001000)    /*    4kB Memory segment type: ram */
+#define UHPHS_EHCI_SIZE                _UINT32_(0x00100000)    /* 1024kB Memory segment type: ram */
+#define NFC_RAM_SIZE                   _UINT32_(0x00003000)    /*   12kB Memory segment type: ram */
+#define NFC_SIZE                       _UINT32_(0x08000000)    /* 131072kB Memory segment type: ram */
+#define QSPI_MEM0_SIZE                 _UINT32_(0x10000000)    /* 262144kB Memory segment type: ram */
+#define QSPI_MEM1_SIZE                 _UINT32_(0x10000000)    /* 262144kB Memory segment type: ram */
+#define EBI_CS0_SIZE                   _UINT32_(0x08000000)    /* 131072kB Memory segment type: ram */
+#define EBI_CS1_SIZE                   _UINT32_(0x08000000)    /* 131072kB Memory segment type: ram */
+#define EBI_CS2_SIZE                   _UINT32_(0x08000000)    /* 131072kB Memory segment type: ram */
+#define EBI_CS3_SIZE                   _UINT32_(0x08000000)    /* 131072kB Memory segment type: ram */
+#define DDR_CS_SIZE                    _UINT32_(0x80000000)    /* 2097152kB Memory segment type: ram */
+#define PERIPHERALS_SIZE               _UINT32_(0x80000000)    /* 2097152kB Memory segment type: io */
+#define SECURAM_SIZE                   _UINT32_(0x00004000)    /*   16kB Memory segment type: ram */
+#define SDMMC0_SIZE                    _UINT32_(0x00004000)    /*   16kB Memory segment type: ram */
+#define SDMMC1_SIZE                    _UINT32_(0x00004000)    /*   16kB Memory segment type: ram */
+#define SDMMC2_SIZE                    _UINT32_(0x00004000)    /*   16kB Memory segment type: ram */
+#define APB_DBG_S_SIZE                 _UINT32_(0x00060000)    /*  384kB Memory segment type: ram */
+#define APB_DBG_SIZE                   _UINT32_(0x00001000)    /*    4kB Memory segment type: ram */
+#define NICGPV_SIZE                    _UINT32_(0x00100000)    /* 1024kB Memory segment type: ram */
+#define OTPC_SIZE                      _UINT32_(0x00001000)    /*    4kB Memory segment type: ram */
+#define CSI2DC_META_SIZE               _UINT32_(0x00002000)    /*    8kB Memory segment type: ram */
+#define ARM_PERIPH_SIZE                _UINT32_(0x00008000)    /*   32kB Memory segment type: ram */
 
 #define IROM_ADDR                      _UINT32_(0x00000000)    /* IROM base address (type: rom)*/
 #define ECC_ROM_ADDR                   _UINT32_(0x00020000)    /* ECC_ROM base address (type: rom)*/
 #define CPKCC_ROM_ADDR                 _UINT32_(0x00040000)    /* CPKCC_ROM base address (type: rom)*/
-#define CPKCC_RAM_ADDR                 _UINT32_(0x00051000)    /* CPKCC_RAM base address (type: other)*/
+#define CPKCC_RAM_ADDR                 _UINT32_(0x00051000)    /* CPKCC_RAM base address (type: ram)*/
 #define IRAM_ADDR                      _UINT32_(0x00100000)    /* IRAM base address (type: ram)*/
-#define UDPHS_RAMA_ADDR                _UINT32_(0x00200000)    /* UDPHS_RAMA base address (type: other)*/
-#define UDPHS_RAMB_ADDR                _UINT32_(0x00300000)    /* UDPHS_RAMB base address (type: other)*/
-#define UHPHS_OHCI_ADDR                _UINT32_(0x00400000)    /* UHPHS_OHCI base address (type: other)*/
-#define UHPHS_EHCI_ADDR                _UINT32_(0x00500000)    /* UHPHS_EHCI base address (type: other)*/
-#define NFC_RAM_ADDR                   _UINT32_(0x00600000)    /* NFC_RAM base address (type: other)*/
-#define NFC_ADDR                       _UINT32_(0x10000000)    /* NFC base address (type: other)*/
-#define QSPIMEM0_ADDR                  _UINT32_(0x20000000)    /* QSPIMEM0 base address (type: other)*/
-#define QSPIMEM1_ADDR                  _UINT32_(0x30000000)    /* QSPIMEM1 base address (type: other)*/
-#define EBI_CS0_ADDR                   _UINT32_(0x40000000)    /* EBI_CS0 base address (type: other)*/
-#define EBI_CS1_ADDR                   _UINT32_(0x48000000)    /* EBI_CS1 base address (type: other)*/
-#define EBI_CS2_ADDR                   _UINT32_(0x50000000)    /* EBI_CS2 base address (type: other)*/
-#define EBI_CS3_ADDR                   _UINT32_(0x58000000)    /* EBI_CS3 base address (type: other)*/
-#define DDR_CS_ADDR                    _UINT32_(0x60000000)    /* DDR_CS base address (type: other)*/
-#define SECURAM_ADDR                   _UINT32_(0xe0000000)    /* SECURAM base address (type: other)*/
-#define SDMMC0_ADDR                    _UINT32_(0xe1204000)    /* SDMMC0 base address (type: other)*/
-#define SDMMC1_ADDR                    _UINT32_(0xe1208000)    /* SDMMC1 base address (type: other)*/
-#define SDMMC2_ADDR                    _UINT32_(0xe120c000)    /* SDMMC2 base address (type: other)*/
-#define APB_DBG_S_ADDR                 _UINT32_(0xe8800000)    /* APB_DBG_S base address (type: other)*/
-#define APB_DBG_ADDR                   _UINT32_(0xe8900000)    /* APB_DBG base address (type: other)*/
-#define NICGPV_ADDR                    _UINT32_(0xe8b00000)    /* NICGPV base address (type: other)*/
-#define OTPC_ADDR                      _UINT32_(0xe8c00000)    /* OTPC base address (type: other)*/
-#define CSI2DC_META_ADDR               _UINT32_(0xe8c02000)    /* CSI2DC_META base address (type: other)*/
-#define ARM_PERIPH_ADDR                _UINT32_(0xe8c10000)    /* ARM_PERIPH base address (type: io)*/
+#define UDPHS_RAMA_ADDR                _UINT32_(0x00200000)    /* UDPHS_RAMA base address (type: ram)*/
+#define UDPHS_RAMB_ADDR                _UINT32_(0x00300000)    /* UDPHS_RAMB base address (type: ram)*/
+#define UHPHS_OHCI_ADDR                _UINT32_(0x00400000)    /* UHPHS_OHCI base address (type: ram)*/
+#define UHPHS_EHCI_ADDR                _UINT32_(0x00500000)    /* UHPHS_EHCI base address (type: ram)*/
+#define NFC_RAM_ADDR                   _UINT32_(0x00600000)    /* NFC_RAM base address (type: ram)*/
+#define NFC_ADDR                       _UINT32_(0x10000000)    /* NFC base address (type: ram)*/
+#define QSPI_MEM0_ADDR                 _UINT32_(0x20000000)    /* QSPI_MEM0 base address (type: ram)*/
+#define QSPI_MEM1_ADDR                 _UINT32_(0x30000000)    /* QSPI_MEM1 base address (type: ram)*/
+#define EBI_CS0_ADDR                   _UINT32_(0x40000000)    /* EBI_CS0 base address (type: ram)*/
+#define EBI_CS1_ADDR                   _UINT32_(0x48000000)    /* EBI_CS1 base address (type: ram)*/
+#define EBI_CS2_ADDR                   _UINT32_(0x50000000)    /* EBI_CS2 base address (type: ram)*/
+#define EBI_CS3_ADDR                   _UINT32_(0x58000000)    /* EBI_CS3 base address (type: ram)*/
+#define DDR_CS_ADDR                    _UINT32_(0x60000000)    /* DDR_CS base address (type: ram)*/
 #define PERIPHERALS_ADDR               _UINT32_(0xe0000000)    /* PERIPHERALS base address (type: io)*/
+#define SECURAM_ADDR                   _UINT32_(0xe0000000)    /* SECURAM base address (type: ram)*/
+#define SDMMC0_ADDR                    _UINT32_(0xe1204000)    /* SDMMC0 base address (type: ram)*/
+#define SDMMC1_ADDR                    _UINT32_(0xe1208000)    /* SDMMC1 base address (type: ram)*/
+#define SDMMC2_ADDR                    _UINT32_(0xe120c000)    /* SDMMC2 base address (type: ram)*/
+#define APB_DBG_S_ADDR                 _UINT32_(0xe8800000)    /* APB_DBG_S base address (type: ram)*/
+#define APB_DBG_ADDR                   _UINT32_(0xe8900000)    /* APB_DBG base address (type: ram)*/
+#define NICGPV_ADDR                    _UINT32_(0xe8b00000)    /* NICGPV base address (type: ram)*/
+#define OTPC_ADDR                      _UINT32_(0xe8c00000)    /* OTPC base address (type: ram)*/
+#define CSI2DC_META_ADDR               _UINT32_(0xe8c02000)    /* CSI2DC_META base address (type: ram)*/
+#define ARM_PERIPH_ADDR                _UINT32_(0xe8c10000)    /* ARM_PERIPH base address (type: ram)*/
 
 /* ************************************************************************** */
-/*   DEVICE SIGNATURES FOR SAMA7G54                                           */
+/*                       DEVICE SIGNATURES FOR SAMA7G54                       */
 /* ************************************************************************** */
 #define CHIP_JTAGID                    _UINT32_(0X05B4203F)
-#define CHIP_CIDR                      _UINT32_(0X80162110)
+#define CHIP_CIDR                      _UINT32_(0X80162111)
 #define CHIP_EXID                      _UINT32_(0X00000000)
 
 /* ************************************************************************** */
-/*   ELECTRICAL DEFINITIONS FOR SAMA7G54                                      */
+/*                    ELECTRICAL DEFINITIONS FOR SAMA7G54                     */
 /* ************************************************************************** */
-
-
 
 #ifdef __cplusplus
 }

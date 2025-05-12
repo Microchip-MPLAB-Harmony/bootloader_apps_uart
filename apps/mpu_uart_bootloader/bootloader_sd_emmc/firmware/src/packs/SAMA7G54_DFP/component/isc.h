@@ -1,31 +1,30 @@
 /*
  * Component description for ISC
  *
- * Copyright (c) 2023 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2025 Microchip Technology Inc. and its subsidiaries.
  *
- * Subject to your compliance with these terms, you may use Microchip software and any derivatives
- * exclusively with Microchip products. It is your responsibility to comply with third party license
- * terms applicable to your use of third party software (including open source software) that may
- * accompany Microchip software.
+ * SPDX-License-Identifier: Apache-2.0
  *
- * THIS SOFTWARE IS SUPPLIED BY MICROCHIP "AS IS". NO WARRANTIES, WHETHER EXPRESS, IMPLIED OR STATUTORY,
- * APPLY TO THIS SOFTWARE, INCLUDING ANY IMPLIED WARRANTIES OF NON-INFRINGEMENT, MERCHANTABILITY, AND
- * FITNESS FOR A PARTICULAR PURPOSE.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
  *
- * IN NO EVENT WILL MICROCHIP BE LIABLE FOR ANY INDIRECT, SPECIAL, PUNITIVE, INCIDENTAL OR CONSEQUENTIAL
- * LOSS, DAMAGE, COST OR EXPENSE OF ANY KIND WHATSOEVER RELATED TO THE SOFTWARE, HOWEVER CAUSED, EVEN IF
- * MICROCHIP HAS BEEN ADVISED OF THE POSSIBILITY OR THE DAMAGES ARE FORESEEABLE. TO THE FULLEST EXTENT
- * ALLOWED BY LAW, MICROCHIP'S TOTAL LIABILITY ON ALL CLAIMS IN ANY WAY RELATED TO THIS SOFTWARE WILL NOT
- * EXCEED THE AMOUNT OF FEES, IF ANY, THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
  *
  */
 
-/* file generated from device description version 2023-02-02T10:07:15Z */
-#ifndef _SAMA7G_ISC_COMPONENT_H_
-#define _SAMA7G_ISC_COMPONENT_H_
+/*      file generated from device description file (ATDF) version None       */
+#ifndef _SAMA7G5_ISC_COMPONENT_H_
+#define _SAMA7G5_ISC_COMPONENT_H_
 
 /* ************************************************************************** */
-/*   SOFTWARE API DEFINITION FOR ISC                                          */
+/*                      SOFTWARE API DEFINITION FOR ISC                       */
 /* ************************************************************************** */
 
 /* -------- ISC_HXS_TAP10PHI : (ISC Offset: 0x00) (R/W 32) HXS TAP10 Phase Register  -------- */
@@ -33,10 +32,10 @@
 
 #define ISC_HXS_TAP10PHI_TAP0_Pos             _UINT32_(0)                                          /* (ISC_HXS_TAP10PHI) Vertical Filter Tap 0 Coefficient Position */
 #define ISC_HXS_TAP10PHI_TAP0_Msk             (_UINT32_(0x1FFF) << ISC_HXS_TAP10PHI_TAP0_Pos)      /* (ISC_HXS_TAP10PHI) Vertical Filter Tap 0 Coefficient Mask */
-#define ISC_HXS_TAP10PHI_TAP0(value)          (ISC_HXS_TAP10PHI_TAP0_Msk & (_UINT32_(value) << ISC_HXS_TAP10PHI_TAP0_Pos)) /* Assigment of value for TAP0 in the ISC_HXS_TAP10PHI register */
+#define ISC_HXS_TAP10PHI_TAP0(value)          (ISC_HXS_TAP10PHI_TAP0_Msk & (_UINT32_(value) << ISC_HXS_TAP10PHI_TAP0_Pos)) /* Assignment of value for TAP0 in the ISC_HXS_TAP10PHI register */
 #define ISC_HXS_TAP10PHI_TAP1_Pos             _UINT32_(16)                                         /* (ISC_HXS_TAP10PHI) Vertical Filter Tap 1 Coefficient Position */
 #define ISC_HXS_TAP10PHI_TAP1_Msk             (_UINT32_(0x1FFF) << ISC_HXS_TAP10PHI_TAP1_Pos)      /* (ISC_HXS_TAP10PHI) Vertical Filter Tap 1 Coefficient Mask */
-#define ISC_HXS_TAP10PHI_TAP1(value)          (ISC_HXS_TAP10PHI_TAP1_Msk & (_UINT32_(value) << ISC_HXS_TAP10PHI_TAP1_Pos)) /* Assigment of value for TAP1 in the ISC_HXS_TAP10PHI register */
+#define ISC_HXS_TAP10PHI_TAP1(value)          (ISC_HXS_TAP10PHI_TAP1_Msk & (_UINT32_(value) << ISC_HXS_TAP10PHI_TAP1_Pos)) /* Assignment of value for TAP1 in the ISC_HXS_TAP10PHI register */
 #define ISC_HXS_TAP10PHI_Msk                  _UINT32_(0x1FFF1FFF)                                 /* (ISC_HXS_TAP10PHI) Register Mask  */
 
 
@@ -45,10 +44,10 @@
 
 #define ISC_HXS_TAP32PHI_TAP2_Pos             _UINT32_(0)                                          /* (ISC_HXS_TAP32PHI) Vertical Filter Tap 2 Coefficient Position */
 #define ISC_HXS_TAP32PHI_TAP2_Msk             (_UINT32_(0x1FFF) << ISC_HXS_TAP32PHI_TAP2_Pos)      /* (ISC_HXS_TAP32PHI) Vertical Filter Tap 2 Coefficient Mask */
-#define ISC_HXS_TAP32PHI_TAP2(value)          (ISC_HXS_TAP32PHI_TAP2_Msk & (_UINT32_(value) << ISC_HXS_TAP32PHI_TAP2_Pos)) /* Assigment of value for TAP2 in the ISC_HXS_TAP32PHI register */
+#define ISC_HXS_TAP32PHI_TAP2(value)          (ISC_HXS_TAP32PHI_TAP2_Msk & (_UINT32_(value) << ISC_HXS_TAP32PHI_TAP2_Pos)) /* Assignment of value for TAP2 in the ISC_HXS_TAP32PHI register */
 #define ISC_HXS_TAP32PHI_TAP3_Pos             _UINT32_(16)                                         /* (ISC_HXS_TAP32PHI) Vertical Filter Tap 3 Coefficient Position */
 #define ISC_HXS_TAP32PHI_TAP3_Msk             (_UINT32_(0x1FFF) << ISC_HXS_TAP32PHI_TAP3_Pos)      /* (ISC_HXS_TAP32PHI) Vertical Filter Tap 3 Coefficient Mask */
-#define ISC_HXS_TAP32PHI_TAP3(value)          (ISC_HXS_TAP32PHI_TAP3_Msk & (_UINT32_(value) << ISC_HXS_TAP32PHI_TAP3_Pos)) /* Assigment of value for TAP3 in the ISC_HXS_TAP32PHI register */
+#define ISC_HXS_TAP32PHI_TAP3(value)          (ISC_HXS_TAP32PHI_TAP3_Msk & (_UINT32_(value) << ISC_HXS_TAP32PHI_TAP3_Pos)) /* Assignment of value for TAP3 in the ISC_HXS_TAP32PHI register */
 #define ISC_HXS_TAP32PHI_Msk                  _UINT32_(0x1FFF1FFF)                                 /* (ISC_HXS_TAP32PHI) Register Mask  */
 
 
@@ -57,10 +56,10 @@
 
 #define ISC_VXS_TAP10PHI_TAP0_Pos             _UINT32_(0)                                          /* (ISC_VXS_TAP10PHI) Vertical Filter Tap 0 Coefficient Position */
 #define ISC_VXS_TAP10PHI_TAP0_Msk             (_UINT32_(0x1FFF) << ISC_VXS_TAP10PHI_TAP0_Pos)      /* (ISC_VXS_TAP10PHI) Vertical Filter Tap 0 Coefficient Mask */
-#define ISC_VXS_TAP10PHI_TAP0(value)          (ISC_VXS_TAP10PHI_TAP0_Msk & (_UINT32_(value) << ISC_VXS_TAP10PHI_TAP0_Pos)) /* Assigment of value for TAP0 in the ISC_VXS_TAP10PHI register */
+#define ISC_VXS_TAP10PHI_TAP0(value)          (ISC_VXS_TAP10PHI_TAP0_Msk & (_UINT32_(value) << ISC_VXS_TAP10PHI_TAP0_Pos)) /* Assignment of value for TAP0 in the ISC_VXS_TAP10PHI register */
 #define ISC_VXS_TAP10PHI_TAP1_Pos             _UINT32_(16)                                         /* (ISC_VXS_TAP10PHI) Vertical Filter Tap 1 Coefficient Position */
 #define ISC_VXS_TAP10PHI_TAP1_Msk             (_UINT32_(0x1FFF) << ISC_VXS_TAP10PHI_TAP1_Pos)      /* (ISC_VXS_TAP10PHI) Vertical Filter Tap 1 Coefficient Mask */
-#define ISC_VXS_TAP10PHI_TAP1(value)          (ISC_VXS_TAP10PHI_TAP1_Msk & (_UINT32_(value) << ISC_VXS_TAP10PHI_TAP1_Pos)) /* Assigment of value for TAP1 in the ISC_VXS_TAP10PHI register */
+#define ISC_VXS_TAP10PHI_TAP1(value)          (ISC_VXS_TAP10PHI_TAP1_Msk & (_UINT32_(value) << ISC_VXS_TAP10PHI_TAP1_Pos)) /* Assignment of value for TAP1 in the ISC_VXS_TAP10PHI register */
 #define ISC_VXS_TAP10PHI_Msk                  _UINT32_(0x1FFF1FFF)                                 /* (ISC_VXS_TAP10PHI) Register Mask  */
 
 
@@ -69,39 +68,39 @@
 
 #define ISC_VXS_TAP32PHI_TAP2_Pos             _UINT32_(0)                                          /* (ISC_VXS_TAP32PHI) Vertical Filter Tap 2 Coefficient Position */
 #define ISC_VXS_TAP32PHI_TAP2_Msk             (_UINT32_(0x1FFF) << ISC_VXS_TAP32PHI_TAP2_Pos)      /* (ISC_VXS_TAP32PHI) Vertical Filter Tap 2 Coefficient Mask */
-#define ISC_VXS_TAP32PHI_TAP2(value)          (ISC_VXS_TAP32PHI_TAP2_Msk & (_UINT32_(value) << ISC_VXS_TAP32PHI_TAP2_Pos)) /* Assigment of value for TAP2 in the ISC_VXS_TAP32PHI register */
+#define ISC_VXS_TAP32PHI_TAP2(value)          (ISC_VXS_TAP32PHI_TAP2_Msk & (_UINT32_(value) << ISC_VXS_TAP32PHI_TAP2_Pos)) /* Assignment of value for TAP2 in the ISC_VXS_TAP32PHI register */
 #define ISC_VXS_TAP32PHI_TAP3_Pos             _UINT32_(16)                                         /* (ISC_VXS_TAP32PHI) Vertical Filter Tap 3 Coefficient Position */
 #define ISC_VXS_TAP32PHI_TAP3_Msk             (_UINT32_(0x1FFF) << ISC_VXS_TAP32PHI_TAP3_Pos)      /* (ISC_VXS_TAP32PHI) Vertical Filter Tap 3 Coefficient Mask */
-#define ISC_VXS_TAP32PHI_TAP3(value)          (ISC_VXS_TAP32PHI_TAP3_Msk & (_UINT32_(value) << ISC_VXS_TAP32PHI_TAP3_Pos)) /* Assigment of value for TAP3 in the ISC_VXS_TAP32PHI register */
+#define ISC_VXS_TAP32PHI_TAP3(value)          (ISC_VXS_TAP32PHI_TAP3_Msk & (_UINT32_(value) << ISC_VXS_TAP32PHI_TAP3_Pos)) /* Assignment of value for TAP3 in the ISC_VXS_TAP32PHI register */
 #define ISC_VXS_TAP32PHI_Msk                  _UINT32_(0x1FFF1FFF)                                 /* (ISC_VXS_TAP32PHI) Register Mask  */
 
 
 /* -------- ISC_CTRLEN : (ISC Offset: 0x00) ( /W 32) Control Enable Register -------- */
 #define ISC_CTRLEN_CAPTURE_Pos                _UINT32_(0)                                          /* (ISC_CTRLEN) Single Shot or Multiple Frame Capture Input Stream Command Position */
 #define ISC_CTRLEN_CAPTURE_Msk                (_UINT32_(0x1) << ISC_CTRLEN_CAPTURE_Pos)            /* (ISC_CTRLEN) Single Shot or Multiple Frame Capture Input Stream Command Mask */
-#define ISC_CTRLEN_CAPTURE(value)             (ISC_CTRLEN_CAPTURE_Msk & (_UINT32_(value) << ISC_CTRLEN_CAPTURE_Pos)) /* Assigment of value for CAPTURE in the ISC_CTRLEN register */
+#define ISC_CTRLEN_CAPTURE(value)             (ISC_CTRLEN_CAPTURE_Msk & (_UINT32_(value) << ISC_CTRLEN_CAPTURE_Pos)) /* Assignment of value for CAPTURE in the ISC_CTRLEN register */
 #define ISC_CTRLEN_UPPRO_Pos                  _UINT32_(1)                                          /* (ISC_CTRLEN) Update Color Profile Position */
 #define ISC_CTRLEN_UPPRO_Msk                  (_UINT32_(0x1) << ISC_CTRLEN_UPPRO_Pos)              /* (ISC_CTRLEN) Update Color Profile Mask */
-#define ISC_CTRLEN_UPPRO(value)               (ISC_CTRLEN_UPPRO_Msk & (_UINT32_(value) << ISC_CTRLEN_UPPRO_Pos)) /* Assigment of value for UPPRO in the ISC_CTRLEN register */
+#define ISC_CTRLEN_UPPRO(value)               (ISC_CTRLEN_UPPRO_Msk & (_UINT32_(value) << ISC_CTRLEN_UPPRO_Pos)) /* Assignment of value for UPPRO in the ISC_CTRLEN register */
 #define ISC_CTRLEN_HISREQ_Pos                 _UINT32_(2)                                          /* (ISC_CTRLEN) Histogram Update Request Position */
 #define ISC_CTRLEN_HISREQ_Msk                 (_UINT32_(0x1) << ISC_CTRLEN_HISREQ_Pos)             /* (ISC_CTRLEN) Histogram Update Request Mask */
-#define ISC_CTRLEN_HISREQ(value)              (ISC_CTRLEN_HISREQ_Msk & (_UINT32_(value) << ISC_CTRLEN_HISREQ_Pos)) /* Assigment of value for HISREQ in the ISC_CTRLEN register */
+#define ISC_CTRLEN_HISREQ(value)              (ISC_CTRLEN_HISREQ_Msk & (_UINT32_(value) << ISC_CTRLEN_HISREQ_Pos)) /* Assignment of value for HISREQ in the ISC_CTRLEN register */
 #define ISC_CTRLEN_HISCLR_Pos                 _UINT32_(3)                                          /* (ISC_CTRLEN) Histogram Table Clear Position */
 #define ISC_CTRLEN_HISCLR_Msk                 (_UINT32_(0x1) << ISC_CTRLEN_HISCLR_Pos)             /* (ISC_CTRLEN) Histogram Table Clear Mask */
-#define ISC_CTRLEN_HISCLR(value)              (ISC_CTRLEN_HISCLR_Msk & (_UINT32_(value) << ISC_CTRLEN_HISCLR_Pos)) /* Assigment of value for HISCLR in the ISC_CTRLEN register */
+#define ISC_CTRLEN_HISCLR(value)              (ISC_CTRLEN_HISCLR_Msk & (_UINT32_(value) << ISC_CTRLEN_HISCLR_Pos)) /* Assignment of value for HISCLR in the ISC_CTRLEN register */
 #define ISC_CTRLEN_FUPPRO_Pos                 _UINT32_(9)                                          /* (ISC_CTRLEN) Force Update Color Profile Position */
 #define ISC_CTRLEN_FUPPRO_Msk                 (_UINT32_(0x1) << ISC_CTRLEN_FUPPRO_Pos)             /* (ISC_CTRLEN) Force Update Color Profile Mask */
-#define ISC_CTRLEN_FUPPRO(value)              (ISC_CTRLEN_FUPPRO_Msk & (_UINT32_(value) << ISC_CTRLEN_FUPPRO_Pos)) /* Assigment of value for FUPPRO in the ISC_CTRLEN register */
+#define ISC_CTRLEN_FUPPRO(value)              (ISC_CTRLEN_FUPPRO_Msk & (_UINT32_(value) << ISC_CTRLEN_FUPPRO_Pos)) /* Assignment of value for FUPPRO in the ISC_CTRLEN register */
 #define ISC_CTRLEN_Msk                        _UINT32_(0x0000020F)                                 /* (ISC_CTRLEN) Register Mask  */
 
 
 /* -------- ISC_CTRLDIS : (ISC Offset: 0x04) ( /W 32) Control Disable Register -------- */
 #define ISC_CTRLDIS_DISABLE_Pos               _UINT32_(0)                                          /* (ISC_CTRLDIS) End Capture At Next Vertical Synchronization Detection Position */
 #define ISC_CTRLDIS_DISABLE_Msk               (_UINT32_(0x1) << ISC_CTRLDIS_DISABLE_Pos)           /* (ISC_CTRLDIS) End Capture At Next Vertical Synchronization Detection Mask */
-#define ISC_CTRLDIS_DISABLE(value)            (ISC_CTRLDIS_DISABLE_Msk & (_UINT32_(value) << ISC_CTRLDIS_DISABLE_Pos)) /* Assigment of value for DISABLE in the ISC_CTRLDIS register */
+#define ISC_CTRLDIS_DISABLE(value)            (ISC_CTRLDIS_DISABLE_Msk & (_UINT32_(value) << ISC_CTRLDIS_DISABLE_Pos)) /* Assignment of value for DISABLE in the ISC_CTRLDIS register */
 #define ISC_CTRLDIS_SWRST_Pos                 _UINT32_(8)                                          /* (ISC_CTRLDIS) Software Reset Position */
 #define ISC_CTRLDIS_SWRST_Msk                 (_UINT32_(0x1) << ISC_CTRLDIS_SWRST_Pos)             /* (ISC_CTRLDIS) Software Reset Mask */
-#define ISC_CTRLDIS_SWRST(value)              (ISC_CTRLDIS_SWRST_Msk & (_UINT32_(value) << ISC_CTRLDIS_SWRST_Pos)) /* Assigment of value for SWRST in the ISC_CTRLDIS register */
+#define ISC_CTRLDIS_SWRST(value)              (ISC_CTRLDIS_SWRST_Msk & (_UINT32_(value) << ISC_CTRLDIS_SWRST_Pos)) /* Assignment of value for SWRST in the ISC_CTRLDIS register */
 #define ISC_CTRLDIS_Msk                       _UINT32_(0x00000101)                                 /* (ISC_CTRLDIS) Register Mask  */
 
 
@@ -110,39 +109,39 @@
 
 #define ISC_CTRLSR_CAPTURE_Pos                _UINT32_(0)                                          /* (ISC_CTRLSR) Capture Pending Position */
 #define ISC_CTRLSR_CAPTURE_Msk                (_UINT32_(0x1) << ISC_CTRLSR_CAPTURE_Pos)            /* (ISC_CTRLSR) Capture Pending Mask */
-#define ISC_CTRLSR_CAPTURE(value)             (ISC_CTRLSR_CAPTURE_Msk & (_UINT32_(value) << ISC_CTRLSR_CAPTURE_Pos)) /* Assigment of value for CAPTURE in the ISC_CTRLSR register */
+#define ISC_CTRLSR_CAPTURE(value)             (ISC_CTRLSR_CAPTURE_Msk & (_UINT32_(value) << ISC_CTRLSR_CAPTURE_Pos)) /* Assignment of value for CAPTURE in the ISC_CTRLSR register */
 #define   ISC_CTRLSR_CAPTURE_0_Val            _UINT32_(0x0)                                        /* (ISC_CTRLSR) Capture mode is disabled.  */
 #define   ISC_CTRLSR_CAPTURE_1_Val            _UINT32_(0x1)                                        /* (ISC_CTRLSR) Capture is pending.  */
-#define ISC_CTRLSR_CAPTURE_0                  (ISC_CTRLSR_CAPTURE_0_Val << ISC_CTRLSR_CAPTURE_Pos) /* (ISC_CTRLSR) Capture mode is disabled. Position  */
-#define ISC_CTRLSR_CAPTURE_1                  (ISC_CTRLSR_CAPTURE_1_Val << ISC_CTRLSR_CAPTURE_Pos) /* (ISC_CTRLSR) Capture is pending. Position  */
+#define ISC_CTRLSR_CAPTURE_0                  (ISC_CTRLSR_CAPTURE_0_Val << ISC_CTRLSR_CAPTURE_Pos) /* (ISC_CTRLSR) Capture mode is disabled. Position */
+#define ISC_CTRLSR_CAPTURE_1                  (ISC_CTRLSR_CAPTURE_1_Val << ISC_CTRLSR_CAPTURE_Pos) /* (ISC_CTRLSR) Capture is pending. Position */
 #define ISC_CTRLSR_UPPRO_Pos                  _UINT32_(1)                                          /* (ISC_CTRLSR) Profile Update Pending Position */
 #define ISC_CTRLSR_UPPRO_Msk                  (_UINT32_(0x1) << ISC_CTRLSR_UPPRO_Pos)              /* (ISC_CTRLSR) Profile Update Pending Mask */
-#define ISC_CTRLSR_UPPRO(value)               (ISC_CTRLSR_UPPRO_Msk & (_UINT32_(value) << ISC_CTRLSR_UPPRO_Pos)) /* Assigment of value for UPPRO in the ISC_CTRLSR register */
+#define ISC_CTRLSR_UPPRO(value)               (ISC_CTRLSR_UPPRO_Msk & (_UINT32_(value) << ISC_CTRLSR_UPPRO_Pos)) /* Assignment of value for UPPRO in the ISC_CTRLSR register */
 #define   ISC_CTRLSR_UPPRO_0_Val              _UINT32_(0x0)                                        /* (ISC_CTRLSR) There is no profile update pending request.  */
 #define   ISC_CTRLSR_UPPRO_1_Val              _UINT32_(0x1)                                        /* (ISC_CTRLSR) Indicates that the profile update request is still pending.  */
-#define ISC_CTRLSR_UPPRO_0                    (ISC_CTRLSR_UPPRO_0_Val << ISC_CTRLSR_UPPRO_Pos)     /* (ISC_CTRLSR) There is no profile update pending request. Position  */
-#define ISC_CTRLSR_UPPRO_1                    (ISC_CTRLSR_UPPRO_1_Val << ISC_CTRLSR_UPPRO_Pos)     /* (ISC_CTRLSR) Indicates that the profile update request is still pending. Position  */
+#define ISC_CTRLSR_UPPRO_0                    (ISC_CTRLSR_UPPRO_0_Val << ISC_CTRLSR_UPPRO_Pos)     /* (ISC_CTRLSR) There is no profile update pending request. Position */
+#define ISC_CTRLSR_UPPRO_1                    (ISC_CTRLSR_UPPRO_1_Val << ISC_CTRLSR_UPPRO_Pos)     /* (ISC_CTRLSR) Indicates that the profile update request is still pending. Position */
 #define ISC_CTRLSR_HISREQ_Pos                 _UINT32_(2)                                          /* (ISC_CTRLSR) Histogram Request Pending Position */
 #define ISC_CTRLSR_HISREQ_Msk                 (_UINT32_(0x1) << ISC_CTRLSR_HISREQ_Pos)             /* (ISC_CTRLSR) Histogram Request Pending Mask */
-#define ISC_CTRLSR_HISREQ(value)              (ISC_CTRLSR_HISREQ_Msk & (_UINT32_(value) << ISC_CTRLSR_HISREQ_Pos)) /* Assigment of value for HISREQ in the ISC_CTRLSR register */
+#define ISC_CTRLSR_HISREQ(value)              (ISC_CTRLSR_HISREQ_Msk & (_UINT32_(value) << ISC_CTRLSR_HISREQ_Pos)) /* Assignment of value for HISREQ in the ISC_CTRLSR register */
 #define   ISC_CTRLSR_HISREQ_0_Val             _UINT32_(0x0)                                        /* (ISC_CTRLSR) There is no histogram pending request.  */
 #define   ISC_CTRLSR_HISREQ_1_Val             _UINT32_(0x1)                                        /* (ISC_CTRLSR) Indicates that the histogram request is still pending.  */
-#define ISC_CTRLSR_HISREQ_0                   (ISC_CTRLSR_HISREQ_0_Val << ISC_CTRLSR_HISREQ_Pos)   /* (ISC_CTRLSR) There is no histogram pending request. Position  */
-#define ISC_CTRLSR_HISREQ_1                   (ISC_CTRLSR_HISREQ_1_Val << ISC_CTRLSR_HISREQ_Pos)   /* (ISC_CTRLSR) Indicates that the histogram request is still pending. Position  */
+#define ISC_CTRLSR_HISREQ_0                   (ISC_CTRLSR_HISREQ_0_Val << ISC_CTRLSR_HISREQ_Pos)   /* (ISC_CTRLSR) There is no histogram pending request. Position */
+#define ISC_CTRLSR_HISREQ_1                   (ISC_CTRLSR_HISREQ_1_Val << ISC_CTRLSR_HISREQ_Pos)   /* (ISC_CTRLSR) Indicates that the histogram request is still pending. Position */
 #define ISC_CTRLSR_FIELD_Pos                  _UINT32_(4)                                          /* (ISC_CTRLSR) Field Status (only relevant when the video stream is interlaced) Position */
 #define ISC_CTRLSR_FIELD_Msk                  (_UINT32_(0x1) << ISC_CTRLSR_FIELD_Pos)              /* (ISC_CTRLSR) Field Status (only relevant when the video stream is interlaced) Mask */
-#define ISC_CTRLSR_FIELD(value)               (ISC_CTRLSR_FIELD_Msk & (_UINT32_(value) << ISC_CTRLSR_FIELD_Pos)) /* Assigment of value for FIELD in the ISC_CTRLSR register */
+#define ISC_CTRLSR_FIELD(value)               (ISC_CTRLSR_FIELD_Msk & (_UINT32_(value) << ISC_CTRLSR_FIELD_Pos)) /* Assignment of value for FIELD in the ISC_CTRLSR register */
 #define   ISC_CTRLSR_FIELD_0_Val              _UINT32_(0x0)                                        /* (ISC_CTRLSR) The current field/segment is a top field  */
 #define   ISC_CTRLSR_FIELD_1_Val              _UINT32_(0x1)                                        /* (ISC_CTRLSR) The current field/segment is a bottom field.  */
-#define ISC_CTRLSR_FIELD_0                    (ISC_CTRLSR_FIELD_0_Val << ISC_CTRLSR_FIELD_Pos)     /* (ISC_CTRLSR) The current field/segment is a top field Position  */
-#define ISC_CTRLSR_FIELD_1                    (ISC_CTRLSR_FIELD_1_Val << ISC_CTRLSR_FIELD_Pos)     /* (ISC_CTRLSR) The current field/segment is a bottom field. Position  */
+#define ISC_CTRLSR_FIELD_0                    (ISC_CTRLSR_FIELD_0_Val << ISC_CTRLSR_FIELD_Pos)     /* (ISC_CTRLSR) The current field/segment is a top field Position */
+#define ISC_CTRLSR_FIELD_1                    (ISC_CTRLSR_FIELD_1_Val << ISC_CTRLSR_FIELD_Pos)     /* (ISC_CTRLSR) The current field/segment is a bottom field. Position */
 #define ISC_CTRLSR_SIP_Pos                    _UINT32_(31)                                         /* (ISC_CTRLSR) Synchronization In Progress Position */
 #define ISC_CTRLSR_SIP_Msk                    (_UINT32_(0x1) << ISC_CTRLSR_SIP_Pos)                /* (ISC_CTRLSR) Synchronization In Progress Mask */
-#define ISC_CTRLSR_SIP(value)                 (ISC_CTRLSR_SIP_Msk & (_UINT32_(value) << ISC_CTRLSR_SIP_Pos)) /* Assigment of value for SIP in the ISC_CTRLSR register */
+#define ISC_CTRLSR_SIP(value)                 (ISC_CTRLSR_SIP_Msk & (_UINT32_(value) << ISC_CTRLSR_SIP_Pos)) /* Assignment of value for SIP in the ISC_CTRLSR register */
 #define   ISC_CTRLSR_SIP_0_Val                _UINT32_(0x0)                                        /* (ISC_CTRLSR) The double domain synchronization is terminated.  */
 #define   ISC_CTRLSR_SIP_1_Val                _UINT32_(0x1)                                        /* (ISC_CTRLSR) The double domain synchronization is in progress.  */
-#define ISC_CTRLSR_SIP_0                      (ISC_CTRLSR_SIP_0_Val << ISC_CTRLSR_SIP_Pos)         /* (ISC_CTRLSR) The double domain synchronization is terminated. Position  */
-#define ISC_CTRLSR_SIP_1                      (ISC_CTRLSR_SIP_1_Val << ISC_CTRLSR_SIP_Pos)         /* (ISC_CTRLSR) The double domain synchronization is in progress. Position  */
+#define ISC_CTRLSR_SIP_0                      (ISC_CTRLSR_SIP_0_Val << ISC_CTRLSR_SIP_Pos)         /* (ISC_CTRLSR) The double domain synchronization is terminated. Position */
+#define ISC_CTRLSR_SIP_1                      (ISC_CTRLSR_SIP_1_Val << ISC_CTRLSR_SIP_Pos)         /* (ISC_CTRLSR) The double domain synchronization is in progress. Position */
 #define ISC_CTRLSR_Msk                        _UINT32_(0x80000017)                                 /* (ISC_CTRLSR) Register Mask  */
 
 
@@ -151,35 +150,35 @@
 
 #define ISC_PFE_CFG0_HPOL_Pos                 _UINT32_(0)                                          /* (ISC_PFE_CFG0) Horizontal Synchronization Polarity Position */
 #define ISC_PFE_CFG0_HPOL_Msk                 (_UINT32_(0x1) << ISC_PFE_CFG0_HPOL_Pos)             /* (ISC_PFE_CFG0) Horizontal Synchronization Polarity Mask */
-#define ISC_PFE_CFG0_HPOL(value)              (ISC_PFE_CFG0_HPOL_Msk & (_UINT32_(value) << ISC_PFE_CFG0_HPOL_Pos)) /* Assigment of value for HPOL in the ISC_PFE_CFG0 register */
+#define ISC_PFE_CFG0_HPOL(value)              (ISC_PFE_CFG0_HPOL_Msk & (_UINT32_(value) << ISC_PFE_CFG0_HPOL_Pos)) /* Assignment of value for HPOL in the ISC_PFE_CFG0 register */
 #define   ISC_PFE_CFG0_HPOL_0_Val             _UINT32_(0x0)                                        /* (ISC_PFE_CFG0) HSYNC signal is active high, i.e. valid pixels are sampled when HSYNC is asserted.  */
 #define   ISC_PFE_CFG0_HPOL_1_Val             _UINT32_(0x1)                                        /* (ISC_PFE_CFG0) HSYNC signal is active low, i.e. valid pixels are sampled when HSYNC is deasserted.  */
-#define ISC_PFE_CFG0_HPOL_0                   (ISC_PFE_CFG0_HPOL_0_Val << ISC_PFE_CFG0_HPOL_Pos)   /* (ISC_PFE_CFG0) HSYNC signal is active high, i.e. valid pixels are sampled when HSYNC is asserted. Position  */
-#define ISC_PFE_CFG0_HPOL_1                   (ISC_PFE_CFG0_HPOL_1_Val << ISC_PFE_CFG0_HPOL_Pos)   /* (ISC_PFE_CFG0) HSYNC signal is active low, i.e. valid pixels are sampled when HSYNC is deasserted. Position  */
+#define ISC_PFE_CFG0_HPOL_0                   (ISC_PFE_CFG0_HPOL_0_Val << ISC_PFE_CFG0_HPOL_Pos)   /* (ISC_PFE_CFG0) HSYNC signal is active high, i.e. valid pixels are sampled when HSYNC is asserted. Position */
+#define ISC_PFE_CFG0_HPOL_1                   (ISC_PFE_CFG0_HPOL_1_Val << ISC_PFE_CFG0_HPOL_Pos)   /* (ISC_PFE_CFG0) HSYNC signal is active low, i.e. valid pixels are sampled when HSYNC is deasserted. Position */
 #define ISC_PFE_CFG0_VPOL_Pos                 _UINT32_(1)                                          /* (ISC_PFE_CFG0) Vertical Synchronization Polarity Position */
 #define ISC_PFE_CFG0_VPOL_Msk                 (_UINT32_(0x1) << ISC_PFE_CFG0_VPOL_Pos)             /* (ISC_PFE_CFG0) Vertical Synchronization Polarity Mask */
-#define ISC_PFE_CFG0_VPOL(value)              (ISC_PFE_CFG0_VPOL_Msk & (_UINT32_(value) << ISC_PFE_CFG0_VPOL_Pos)) /* Assigment of value for VPOL in the ISC_PFE_CFG0 register */
+#define ISC_PFE_CFG0_VPOL(value)              (ISC_PFE_CFG0_VPOL_Msk & (_UINT32_(value) << ISC_PFE_CFG0_VPOL_Pos)) /* Assignment of value for VPOL in the ISC_PFE_CFG0 register */
 #define   ISC_PFE_CFG0_VPOL_0_Val             _UINT32_(0x0)                                        /* (ISC_PFE_CFG0) VSYNC signal is active high, i.e. valid pixels are sampled when VSYNC is asserted.  */
 #define   ISC_PFE_CFG0_VPOL_1_Val             _UINT32_(0x1)                                        /* (ISC_PFE_CFG0) VSYNC signal is active low, i.e. valid pixels are sampled when VSYNC is deasserted.  */
-#define ISC_PFE_CFG0_VPOL_0                   (ISC_PFE_CFG0_VPOL_0_Val << ISC_PFE_CFG0_VPOL_Pos)   /* (ISC_PFE_CFG0) VSYNC signal is active high, i.e. valid pixels are sampled when VSYNC is asserted. Position  */
-#define ISC_PFE_CFG0_VPOL_1                   (ISC_PFE_CFG0_VPOL_1_Val << ISC_PFE_CFG0_VPOL_Pos)   /* (ISC_PFE_CFG0) VSYNC signal is active low, i.e. valid pixels are sampled when VSYNC is deasserted. Position  */
+#define ISC_PFE_CFG0_VPOL_0                   (ISC_PFE_CFG0_VPOL_0_Val << ISC_PFE_CFG0_VPOL_Pos)   /* (ISC_PFE_CFG0) VSYNC signal is active high, i.e. valid pixels are sampled when VSYNC is asserted. Position */
+#define ISC_PFE_CFG0_VPOL_1                   (ISC_PFE_CFG0_VPOL_1_Val << ISC_PFE_CFG0_VPOL_Pos)   /* (ISC_PFE_CFG0) VSYNC signal is active low, i.e. valid pixels are sampled when VSYNC is deasserted. Position */
 #define ISC_PFE_CFG0_PPOL_Pos                 _UINT32_(2)                                          /* (ISC_PFE_CFG0) Pixel Clock Polarity Position */
 #define ISC_PFE_CFG0_PPOL_Msk                 (_UINT32_(0x1) << ISC_PFE_CFG0_PPOL_Pos)             /* (ISC_PFE_CFG0) Pixel Clock Polarity Mask */
-#define ISC_PFE_CFG0_PPOL(value)              (ISC_PFE_CFG0_PPOL_Msk & (_UINT32_(value) << ISC_PFE_CFG0_PPOL_Pos)) /* Assigment of value for PPOL in the ISC_PFE_CFG0 register */
+#define ISC_PFE_CFG0_PPOL(value)              (ISC_PFE_CFG0_PPOL_Msk & (_UINT32_(value) << ISC_PFE_CFG0_PPOL_Pos)) /* Assignment of value for PPOL in the ISC_PFE_CFG0 register */
 #define   ISC_PFE_CFG0_PPOL_0_Val             _UINT32_(0x0)                                        /* (ISC_PFE_CFG0) The pixel stream is sampled on the rising edge of the pixel clock.  */
 #define   ISC_PFE_CFG0_PPOL_1_Val             _UINT32_(0x1)                                        /* (ISC_PFE_CFG0) The pixel stream is sampled on the falling edge of the pixel clock.  */
-#define ISC_PFE_CFG0_PPOL_0                   (ISC_PFE_CFG0_PPOL_0_Val << ISC_PFE_CFG0_PPOL_Pos)   /* (ISC_PFE_CFG0) The pixel stream is sampled on the rising edge of the pixel clock. Position  */
-#define ISC_PFE_CFG0_PPOL_1                   (ISC_PFE_CFG0_PPOL_1_Val << ISC_PFE_CFG0_PPOL_Pos)   /* (ISC_PFE_CFG0) The pixel stream is sampled on the falling edge of the pixel clock. Position  */
+#define ISC_PFE_CFG0_PPOL_0                   (ISC_PFE_CFG0_PPOL_0_Val << ISC_PFE_CFG0_PPOL_Pos)   /* (ISC_PFE_CFG0) The pixel stream is sampled on the rising edge of the pixel clock. Position */
+#define ISC_PFE_CFG0_PPOL_1                   (ISC_PFE_CFG0_PPOL_1_Val << ISC_PFE_CFG0_PPOL_Pos)   /* (ISC_PFE_CFG0) The pixel stream is sampled on the falling edge of the pixel clock. Position */
 #define ISC_PFE_CFG0_FPOL_Pos                 _UINT32_(3)                                          /* (ISC_PFE_CFG0) Field Polarity Position */
 #define ISC_PFE_CFG0_FPOL_Msk                 (_UINT32_(0x1) << ISC_PFE_CFG0_FPOL_Pos)             /* (ISC_PFE_CFG0) Field Polarity Mask */
-#define ISC_PFE_CFG0_FPOL(value)              (ISC_PFE_CFG0_FPOL_Msk & (_UINT32_(value) << ISC_PFE_CFG0_FPOL_Pos)) /* Assigment of value for FPOL in the ISC_PFE_CFG0 register */
+#define ISC_PFE_CFG0_FPOL(value)              (ISC_PFE_CFG0_FPOL_Msk & (_UINT32_(value) << ISC_PFE_CFG0_FPOL_Pos)) /* Assignment of value for FPOL in the ISC_PFE_CFG0 register */
 #define   ISC_PFE_CFG0_FPOL_0_Val             _UINT32_(0x0)                                        /* (ISC_PFE_CFG0) Top field is sampled when F value is 0; Bottom field is sampled when F value is 1.  */
 #define   ISC_PFE_CFG0_FPOL_1_Val             _UINT32_(0x1)                                        /* (ISC_PFE_CFG0) Top field is sampled when F value is 1; Bottom field is sampled when F value is 0.  */
-#define ISC_PFE_CFG0_FPOL_0                   (ISC_PFE_CFG0_FPOL_0_Val << ISC_PFE_CFG0_FPOL_Pos)   /* (ISC_PFE_CFG0) Top field is sampled when F value is 0; Bottom field is sampled when F value is 1. Position  */
-#define ISC_PFE_CFG0_FPOL_1                   (ISC_PFE_CFG0_FPOL_1_Val << ISC_PFE_CFG0_FPOL_Pos)   /* (ISC_PFE_CFG0) Top field is sampled when F value is 1; Bottom field is sampled when F value is 0. Position  */
+#define ISC_PFE_CFG0_FPOL_0                   (ISC_PFE_CFG0_FPOL_0_Val << ISC_PFE_CFG0_FPOL_Pos)   /* (ISC_PFE_CFG0) Top field is sampled when F value is 0; Bottom field is sampled when F value is 1. Position */
+#define ISC_PFE_CFG0_FPOL_1                   (ISC_PFE_CFG0_FPOL_1_Val << ISC_PFE_CFG0_FPOL_Pos)   /* (ISC_PFE_CFG0) Top field is sampled when F value is 1; Bottom field is sampled when F value is 0. Position */
 #define ISC_PFE_CFG0_MODE_Pos                 _UINT32_(4)                                          /* (ISC_PFE_CFG0) Parallel Front End Mode Position */
 #define ISC_PFE_CFG0_MODE_Msk                 (_UINT32_(0x7) << ISC_PFE_CFG0_MODE_Pos)             /* (ISC_PFE_CFG0) Parallel Front End Mode Mask */
-#define ISC_PFE_CFG0_MODE(value)              (ISC_PFE_CFG0_MODE_Msk & (_UINT32_(value) << ISC_PFE_CFG0_MODE_Pos)) /* Assigment of value for MODE in the ISC_PFE_CFG0 register */
+#define ISC_PFE_CFG0_MODE(value)              (ISC_PFE_CFG0_MODE_Msk & (_UINT32_(value) << ISC_PFE_CFG0_MODE_Pos)) /* Assignment of value for MODE in the ISC_PFE_CFG0 register */
 #define   ISC_PFE_CFG0_MODE_PROGRESSIVE_Val   _UINT32_(0x0)                                        /* (ISC_PFE_CFG0) Video source is progressive.  */
 #define   ISC_PFE_CFG0_MODE_DF_TOP_Val        _UINT32_(0x1)                                        /* (ISC_PFE_CFG0) Video source is interlaced, two fields are captured starting with top field.  */
 #define   ISC_PFE_CFG0_MODE_DF_BOTTOM_Val     _UINT32_(0x2)                                        /* (ISC_PFE_CFG0) Video source is interlaced, two fields are captured starting with bottom field.  */
@@ -187,101 +186,101 @@
 #define   ISC_PFE_CFG0_MODE_SF_TOP_Val        _UINT32_(0x4)                                        /* (ISC_PFE_CFG0) Video source is interlaced, one field is captured starting with the top field.  */
 #define   ISC_PFE_CFG0_MODE_SF_BOTTOM_Val     _UINT32_(0x5)                                        /* (ISC_PFE_CFG0) Video source is interlaced, one field is captured starting with the bottom field.  */
 #define   ISC_PFE_CFG0_MODE_SF_IMMEDIATE_Val  _UINT32_(0x6)                                        /* (ISC_PFE_CFG0) Video source is interlaced, one field is captured starting immediately.  */
-#define ISC_PFE_CFG0_MODE_PROGRESSIVE         (ISC_PFE_CFG0_MODE_PROGRESSIVE_Val << ISC_PFE_CFG0_MODE_Pos) /* (ISC_PFE_CFG0) Video source is progressive. Position  */
-#define ISC_PFE_CFG0_MODE_DF_TOP              (ISC_PFE_CFG0_MODE_DF_TOP_Val << ISC_PFE_CFG0_MODE_Pos) /* (ISC_PFE_CFG0) Video source is interlaced, two fields are captured starting with top field. Position  */
-#define ISC_PFE_CFG0_MODE_DF_BOTTOM           (ISC_PFE_CFG0_MODE_DF_BOTTOM_Val << ISC_PFE_CFG0_MODE_Pos) /* (ISC_PFE_CFG0) Video source is interlaced, two fields are captured starting with bottom field. Position  */
-#define ISC_PFE_CFG0_MODE_DF_IMMEDIATE        (ISC_PFE_CFG0_MODE_DF_IMMEDIATE_Val << ISC_PFE_CFG0_MODE_Pos) /* (ISC_PFE_CFG0) Video source is interlaced, two fields are captured immediately. Position  */
-#define ISC_PFE_CFG0_MODE_SF_TOP              (ISC_PFE_CFG0_MODE_SF_TOP_Val << ISC_PFE_CFG0_MODE_Pos) /* (ISC_PFE_CFG0) Video source is interlaced, one field is captured starting with the top field. Position  */
-#define ISC_PFE_CFG0_MODE_SF_BOTTOM           (ISC_PFE_CFG0_MODE_SF_BOTTOM_Val << ISC_PFE_CFG0_MODE_Pos) /* (ISC_PFE_CFG0) Video source is interlaced, one field is captured starting with the bottom field. Position  */
-#define ISC_PFE_CFG0_MODE_SF_IMMEDIATE        (ISC_PFE_CFG0_MODE_SF_IMMEDIATE_Val << ISC_PFE_CFG0_MODE_Pos) /* (ISC_PFE_CFG0) Video source is interlaced, one field is captured starting immediately. Position  */
+#define ISC_PFE_CFG0_MODE_PROGRESSIVE         (ISC_PFE_CFG0_MODE_PROGRESSIVE_Val << ISC_PFE_CFG0_MODE_Pos) /* (ISC_PFE_CFG0) Video source is progressive. Position */
+#define ISC_PFE_CFG0_MODE_DF_TOP              (ISC_PFE_CFG0_MODE_DF_TOP_Val << ISC_PFE_CFG0_MODE_Pos) /* (ISC_PFE_CFG0) Video source is interlaced, two fields are captured starting with top field. Position */
+#define ISC_PFE_CFG0_MODE_DF_BOTTOM           (ISC_PFE_CFG0_MODE_DF_BOTTOM_Val << ISC_PFE_CFG0_MODE_Pos) /* (ISC_PFE_CFG0) Video source is interlaced, two fields are captured starting with bottom field. Position */
+#define ISC_PFE_CFG0_MODE_DF_IMMEDIATE        (ISC_PFE_CFG0_MODE_DF_IMMEDIATE_Val << ISC_PFE_CFG0_MODE_Pos) /* (ISC_PFE_CFG0) Video source is interlaced, two fields are captured immediately. Position */
+#define ISC_PFE_CFG0_MODE_SF_TOP              (ISC_PFE_CFG0_MODE_SF_TOP_Val << ISC_PFE_CFG0_MODE_Pos) /* (ISC_PFE_CFG0) Video source is interlaced, one field is captured starting with the top field. Position */
+#define ISC_PFE_CFG0_MODE_SF_BOTTOM           (ISC_PFE_CFG0_MODE_SF_BOTTOM_Val << ISC_PFE_CFG0_MODE_Pos) /* (ISC_PFE_CFG0) Video source is interlaced, one field is captured starting with the bottom field. Position */
+#define ISC_PFE_CFG0_MODE_SF_IMMEDIATE        (ISC_PFE_CFG0_MODE_SF_IMMEDIATE_Val << ISC_PFE_CFG0_MODE_Pos) /* (ISC_PFE_CFG0) Video source is interlaced, one field is captured starting immediately. Position */
 #define ISC_PFE_CFG0_CONT_Pos                 _UINT32_(7)                                          /* (ISC_PFE_CFG0) Continuous Acquisition Position */
 #define ISC_PFE_CFG0_CONT_Msk                 (_UINT32_(0x1) << ISC_PFE_CFG0_CONT_Pos)             /* (ISC_PFE_CFG0) Continuous Acquisition Mask */
-#define ISC_PFE_CFG0_CONT(value)              (ISC_PFE_CFG0_CONT_Msk & (_UINT32_(value) << ISC_PFE_CFG0_CONT_Pos)) /* Assigment of value for CONT in the ISC_PFE_CFG0 register */
+#define ISC_PFE_CFG0_CONT(value)              (ISC_PFE_CFG0_CONT_Msk & (_UINT32_(value) << ISC_PFE_CFG0_CONT_Pos)) /* Assignment of value for CONT in the ISC_PFE_CFG0 register */
 #define   ISC_PFE_CFG0_CONT_0_Val             _UINT32_(0x0)                                        /* (ISC_PFE_CFG0) Single Shot mode.  */
 #define   ISC_PFE_CFG0_CONT_1_Val             _UINT32_(0x1)                                        /* (ISC_PFE_CFG0) Video mode.  */
-#define ISC_PFE_CFG0_CONT_0                   (ISC_PFE_CFG0_CONT_0_Val << ISC_PFE_CFG0_CONT_Pos)   /* (ISC_PFE_CFG0) Single Shot mode. Position  */
-#define ISC_PFE_CFG0_CONT_1                   (ISC_PFE_CFG0_CONT_1_Val << ISC_PFE_CFG0_CONT_Pos)   /* (ISC_PFE_CFG0) Video mode. Position  */
+#define ISC_PFE_CFG0_CONT_0                   (ISC_PFE_CFG0_CONT_0_Val << ISC_PFE_CFG0_CONT_Pos)   /* (ISC_PFE_CFG0) Single Shot mode. Position */
+#define ISC_PFE_CFG0_CONT_1                   (ISC_PFE_CFG0_CONT_1_Val << ISC_PFE_CFG0_CONT_Pos)   /* (ISC_PFE_CFG0) Video mode. Position */
 #define ISC_PFE_CFG0_GATED_Pos                _UINT32_(8)                                          /* (ISC_PFE_CFG0) Gated input clock Position */
 #define ISC_PFE_CFG0_GATED_Msk                (_UINT32_(0x1) << ISC_PFE_CFG0_GATED_Pos)            /* (ISC_PFE_CFG0) Gated input clock Mask */
-#define ISC_PFE_CFG0_GATED(value)             (ISC_PFE_CFG0_GATED_Msk & (_UINT32_(value) << ISC_PFE_CFG0_GATED_Pos)) /* Assigment of value for GATED in the ISC_PFE_CFG0 register */
+#define ISC_PFE_CFG0_GATED(value)             (ISC_PFE_CFG0_GATED_Msk & (_UINT32_(value) << ISC_PFE_CFG0_GATED_Pos)) /* Assignment of value for GATED in the ISC_PFE_CFG0 register */
 #define   ISC_PFE_CFG0_GATED_0_Val            _UINT32_(0x0)                                        /* (ISC_PFE_CFG0) The external pixel clock is free running.  */
 #define   ISC_PFE_CFG0_GATED_1_Val            _UINT32_(0x1)                                        /* (ISC_PFE_CFG0) The external pixel clock is gated.  */
-#define ISC_PFE_CFG0_GATED_0                  (ISC_PFE_CFG0_GATED_0_Val << ISC_PFE_CFG0_GATED_Pos) /* (ISC_PFE_CFG0) The external pixel clock is free running. Position  */
-#define ISC_PFE_CFG0_GATED_1                  (ISC_PFE_CFG0_GATED_1_Val << ISC_PFE_CFG0_GATED_Pos) /* (ISC_PFE_CFG0) The external pixel clock is gated. Position  */
+#define ISC_PFE_CFG0_GATED_0                  (ISC_PFE_CFG0_GATED_0_Val << ISC_PFE_CFG0_GATED_Pos) /* (ISC_PFE_CFG0) The external pixel clock is free running. Position */
+#define ISC_PFE_CFG0_GATED_1                  (ISC_PFE_CFG0_GATED_1_Val << ISC_PFE_CFG0_GATED_Pos) /* (ISC_PFE_CFG0) The external pixel clock is gated. Position */
 #define ISC_PFE_CFG0_CCIR656_Pos              _UINT32_(9)                                          /* (ISC_PFE_CFG0) CCIR656 input mode Position */
 #define ISC_PFE_CFG0_CCIR656_Msk              (_UINT32_(0x1) << ISC_PFE_CFG0_CCIR656_Pos)          /* (ISC_PFE_CFG0) CCIR656 input mode Mask */
-#define ISC_PFE_CFG0_CCIR656(value)           (ISC_PFE_CFG0_CCIR656_Msk & (_UINT32_(value) << ISC_PFE_CFG0_CCIR656_Pos)) /* Assigment of value for CCIR656 in the ISC_PFE_CFG0 register */
+#define ISC_PFE_CFG0_CCIR656(value)           (ISC_PFE_CFG0_CCIR656_Msk & (_UINT32_(value) << ISC_PFE_CFG0_CCIR656_Pos)) /* Assignment of value for CCIR656 in the ISC_PFE_CFG0 register */
 #define   ISC_PFE_CFG0_CCIR656_0_Val          _UINT32_(0x0)                                        /* (ISC_PFE_CFG0) HSYNC and VSYNC signals are used to synchronize the input stream.  */
 #define   ISC_PFE_CFG0_CCIR656_1_Val          _UINT32_(0x1)                                        /* (ISC_PFE_CFG0) Embedded synchronization is used.  */
-#define ISC_PFE_CFG0_CCIR656_0                (ISC_PFE_CFG0_CCIR656_0_Val << ISC_PFE_CFG0_CCIR656_Pos) /* (ISC_PFE_CFG0) HSYNC and VSYNC signals are used to synchronize the input stream. Position  */
-#define ISC_PFE_CFG0_CCIR656_1                (ISC_PFE_CFG0_CCIR656_1_Val << ISC_PFE_CFG0_CCIR656_Pos) /* (ISC_PFE_CFG0) Embedded synchronization is used. Position  */
+#define ISC_PFE_CFG0_CCIR656_0                (ISC_PFE_CFG0_CCIR656_0_Val << ISC_PFE_CFG0_CCIR656_Pos) /* (ISC_PFE_CFG0) HSYNC and VSYNC signals are used to synchronize the input stream. Position */
+#define ISC_PFE_CFG0_CCIR656_1                (ISC_PFE_CFG0_CCIR656_1_Val << ISC_PFE_CFG0_CCIR656_Pos) /* (ISC_PFE_CFG0) Embedded synchronization is used. Position */
 #define ISC_PFE_CFG0_CCIR_CRC_Pos             _UINT32_(10)                                         /* (ISC_PFE_CFG0) CCIR656 CRC Decoder Position */
 #define ISC_PFE_CFG0_CCIR_CRC_Msk             (_UINT32_(0x1) << ISC_PFE_CFG0_CCIR_CRC_Pos)         /* (ISC_PFE_CFG0) CCIR656 CRC Decoder Mask */
-#define ISC_PFE_CFG0_CCIR_CRC(value)          (ISC_PFE_CFG0_CCIR_CRC_Msk & (_UINT32_(value) << ISC_PFE_CFG0_CCIR_CRC_Pos)) /* Assigment of value for CCIR_CRC in the ISC_PFE_CFG0 register */
+#define ISC_PFE_CFG0_CCIR_CRC(value)          (ISC_PFE_CFG0_CCIR_CRC_Msk & (_UINT32_(value) << ISC_PFE_CFG0_CCIR_CRC_Pos)) /* Assignment of value for CCIR_CRC in the ISC_PFE_CFG0 register */
 #define   ISC_PFE_CFG0_CCIR_CRC_0_Val         _UINT32_(0x0)                                        /* (ISC_PFE_CFG0) Embedded CRC is discarded.  */
 #define   ISC_PFE_CFG0_CCIR_CRC_1_Val         _UINT32_(0x1)                                        /* (ISC_PFE_CFG0) Embedded CRC is decoded.  */
-#define ISC_PFE_CFG0_CCIR_CRC_0               (ISC_PFE_CFG0_CCIR_CRC_0_Val << ISC_PFE_CFG0_CCIR_CRC_Pos) /* (ISC_PFE_CFG0) Embedded CRC is discarded. Position  */
-#define ISC_PFE_CFG0_CCIR_CRC_1               (ISC_PFE_CFG0_CCIR_CRC_1_Val << ISC_PFE_CFG0_CCIR_CRC_Pos) /* (ISC_PFE_CFG0) Embedded CRC is decoded. Position  */
+#define ISC_PFE_CFG0_CCIR_CRC_0               (ISC_PFE_CFG0_CCIR_CRC_0_Val << ISC_PFE_CFG0_CCIR_CRC_Pos) /* (ISC_PFE_CFG0) Embedded CRC is discarded. Position */
+#define ISC_PFE_CFG0_CCIR_CRC_1               (ISC_PFE_CFG0_CCIR_CRC_1_Val << ISC_PFE_CFG0_CCIR_CRC_Pos) /* (ISC_PFE_CFG0) Embedded CRC is decoded. Position */
 #define ISC_PFE_CFG0_CCIR10_8N_Pos            _UINT32_(11)                                         /* (ISC_PFE_CFG0) CCIR 10 bits or 8 bits Position */
 #define ISC_PFE_CFG0_CCIR10_8N_Msk            (_UINT32_(0x1) << ISC_PFE_CFG0_CCIR10_8N_Pos)        /* (ISC_PFE_CFG0) CCIR 10 bits or 8 bits Mask */
-#define ISC_PFE_CFG0_CCIR10_8N(value)         (ISC_PFE_CFG0_CCIR10_8N_Msk & (_UINT32_(value) << ISC_PFE_CFG0_CCIR10_8N_Pos)) /* Assigment of value for CCIR10_8N in the ISC_PFE_CFG0 register */
+#define ISC_PFE_CFG0_CCIR10_8N(value)         (ISC_PFE_CFG0_CCIR10_8N_Msk & (_UINT32_(value) << ISC_PFE_CFG0_CCIR10_8N_Pos)) /* Assignment of value for CCIR10_8N in the ISC_PFE_CFG0 register */
 #define   ISC_PFE_CFG0_CCIR10_8N_0_Val        _UINT32_(0x0)                                        /* (ISC_PFE_CFG0) 8-bit mode.  */
 #define   ISC_PFE_CFG0_CCIR10_8N_1_Val        _UINT32_(0x1)                                        /* (ISC_PFE_CFG0) 10-bit mode.  */
-#define ISC_PFE_CFG0_CCIR10_8N_0              (ISC_PFE_CFG0_CCIR10_8N_0_Val << ISC_PFE_CFG0_CCIR10_8N_Pos) /* (ISC_PFE_CFG0) 8-bit mode. Position  */
-#define ISC_PFE_CFG0_CCIR10_8N_1              (ISC_PFE_CFG0_CCIR10_8N_1_Val << ISC_PFE_CFG0_CCIR10_8N_Pos) /* (ISC_PFE_CFG0) 10-bit mode. Position  */
+#define ISC_PFE_CFG0_CCIR10_8N_0              (ISC_PFE_CFG0_CCIR10_8N_0_Val << ISC_PFE_CFG0_CCIR10_8N_Pos) /* (ISC_PFE_CFG0) 8-bit mode. Position */
+#define ISC_PFE_CFG0_CCIR10_8N_1              (ISC_PFE_CFG0_CCIR10_8N_1_Val << ISC_PFE_CFG0_CCIR10_8N_Pos) /* (ISC_PFE_CFG0) 10-bit mode. Position */
 #define ISC_PFE_CFG0_COLEN_Pos                _UINT32_(12)                                         /* (ISC_PFE_CFG0) Column Cropping Enable Position */
 #define ISC_PFE_CFG0_COLEN_Msk                (_UINT32_(0x1) << ISC_PFE_CFG0_COLEN_Pos)            /* (ISC_PFE_CFG0) Column Cropping Enable Mask */
-#define ISC_PFE_CFG0_COLEN(value)             (ISC_PFE_CFG0_COLEN_Msk & (_UINT32_(value) << ISC_PFE_CFG0_COLEN_Pos)) /* Assigment of value for COLEN in the ISC_PFE_CFG0 register */
+#define ISC_PFE_CFG0_COLEN(value)             (ISC_PFE_CFG0_COLEN_Msk & (_UINT32_(value) << ISC_PFE_CFG0_COLEN_Pos)) /* Assignment of value for COLEN in the ISC_PFE_CFG0 register */
 #define   ISC_PFE_CFG0_COLEN_0_Val            _UINT32_(0x0)                                        /* (ISC_PFE_CFG0) Column Cropping is disabled.  */
 #define   ISC_PFE_CFG0_COLEN_1_Val            _UINT32_(0x1)                                        /* (ISC_PFE_CFG0) Column Cropping is enabled.  */
-#define ISC_PFE_CFG0_COLEN_0                  (ISC_PFE_CFG0_COLEN_0_Val << ISC_PFE_CFG0_COLEN_Pos) /* (ISC_PFE_CFG0) Column Cropping is disabled. Position  */
-#define ISC_PFE_CFG0_COLEN_1                  (ISC_PFE_CFG0_COLEN_1_Val << ISC_PFE_CFG0_COLEN_Pos) /* (ISC_PFE_CFG0) Column Cropping is enabled. Position  */
+#define ISC_PFE_CFG0_COLEN_0                  (ISC_PFE_CFG0_COLEN_0_Val << ISC_PFE_CFG0_COLEN_Pos) /* (ISC_PFE_CFG0) Column Cropping is disabled. Position */
+#define ISC_PFE_CFG0_COLEN_1                  (ISC_PFE_CFG0_COLEN_1_Val << ISC_PFE_CFG0_COLEN_Pos) /* (ISC_PFE_CFG0) Column Cropping is enabled. Position */
 #define ISC_PFE_CFG0_ROWEN_Pos                _UINT32_(13)                                         /* (ISC_PFE_CFG0) Row Cropping Enable Position */
 #define ISC_PFE_CFG0_ROWEN_Msk                (_UINT32_(0x1) << ISC_PFE_CFG0_ROWEN_Pos)            /* (ISC_PFE_CFG0) Row Cropping Enable Mask */
-#define ISC_PFE_CFG0_ROWEN(value)             (ISC_PFE_CFG0_ROWEN_Msk & (_UINT32_(value) << ISC_PFE_CFG0_ROWEN_Pos)) /* Assigment of value for ROWEN in the ISC_PFE_CFG0 register */
+#define ISC_PFE_CFG0_ROWEN(value)             (ISC_PFE_CFG0_ROWEN_Msk & (_UINT32_(value) << ISC_PFE_CFG0_ROWEN_Pos)) /* Assignment of value for ROWEN in the ISC_PFE_CFG0 register */
 #define   ISC_PFE_CFG0_ROWEN_0_Val            _UINT32_(0x0)                                        /* (ISC_PFE_CFG0) Row Cropping is disabled.  */
 #define   ISC_PFE_CFG0_ROWEN_1_Val            _UINT32_(0x1)                                        /* (ISC_PFE_CFG0) Row Cropping is enabled.  */
-#define ISC_PFE_CFG0_ROWEN_0                  (ISC_PFE_CFG0_ROWEN_0_Val << ISC_PFE_CFG0_ROWEN_Pos) /* (ISC_PFE_CFG0) Row Cropping is disabled. Position  */
-#define ISC_PFE_CFG0_ROWEN_1                  (ISC_PFE_CFG0_ROWEN_1_Val << ISC_PFE_CFG0_ROWEN_Pos) /* (ISC_PFE_CFG0) Row Cropping is enabled. Position  */
+#define ISC_PFE_CFG0_ROWEN_0                  (ISC_PFE_CFG0_ROWEN_0_Val << ISC_PFE_CFG0_ROWEN_Pos) /* (ISC_PFE_CFG0) Row Cropping is disabled. Position */
+#define ISC_PFE_CFG0_ROWEN_1                  (ISC_PFE_CFG0_ROWEN_1_Val << ISC_PFE_CFG0_ROWEN_Pos) /* (ISC_PFE_CFG0) Row Cropping is enabled. Position */
 #define ISC_PFE_CFG0_MIPI_Pos                 _UINT32_(14)                                         /* (ISC_PFE_CFG0) MIPI Interface Connection Position */
 #define ISC_PFE_CFG0_MIPI_Msk                 (_UINT32_(0x1) << ISC_PFE_CFG0_MIPI_Pos)             /* (ISC_PFE_CFG0) MIPI Interface Connection Mask */
-#define ISC_PFE_CFG0_MIPI(value)              (ISC_PFE_CFG0_MIPI_Msk & (_UINT32_(value) << ISC_PFE_CFG0_MIPI_Pos)) /* Assigment of value for MIPI in the ISC_PFE_CFG0 register */
-#define   ISC_PFE_CFG0_MIPI_0_Val             _UINT32_(0x0)                                        /* (ISC_PFE_CFG0) Input Data are coming from the physical Parallel interface.  */
-#define   ISC_PFE_CFG0_MIPI_1_Val             _UINT32_(0x1)                                        /* (ISC_PFE_CFG0) Input Data are coming from the physical MIPI interface.  */
-#define ISC_PFE_CFG0_MIPI_0                   (ISC_PFE_CFG0_MIPI_0_Val << ISC_PFE_CFG0_MIPI_Pos)   /* (ISC_PFE_CFG0) Input Data are coming from the physical Parallel interface. Position  */
-#define ISC_PFE_CFG0_MIPI_1                   (ISC_PFE_CFG0_MIPI_1_Val << ISC_PFE_CFG0_MIPI_Pos)   /* (ISC_PFE_CFG0) Input Data are coming from the physical MIPI interface. Position  */
+#define ISC_PFE_CFG0_MIPI(value)              (ISC_PFE_CFG0_MIPI_Msk & (_UINT32_(value) << ISC_PFE_CFG0_MIPI_Pos)) /* Assignment of value for MIPI in the ISC_PFE_CFG0 register */
+#define   ISC_PFE_CFG0_MIPI_0_Val             _UINT32_(0x0)                                        /* (ISC_PFE_CFG0) Input data come from the physical parallel interface.  */
+#define   ISC_PFE_CFG0_MIPI_1_Val             _UINT32_(0x1)                                        /* (ISC_PFE_CFG0) Input data come from the physical MIPI interface.  */
+#define ISC_PFE_CFG0_MIPI_0                   (ISC_PFE_CFG0_MIPI_0_Val << ISC_PFE_CFG0_MIPI_Pos)   /* (ISC_PFE_CFG0) Input data come from the physical parallel interface. Position */
+#define ISC_PFE_CFG0_MIPI_1                   (ISC_PFE_CFG0_MIPI_1_Val << ISC_PFE_CFG0_MIPI_Pos)   /* (ISC_PFE_CFG0) Input data come from the physical MIPI interface. Position */
 #define ISC_PFE_CFG0_SKIPCNT_Pos              _UINT32_(16)                                         /* (ISC_PFE_CFG0) Frame Skipping Counter Position */
 #define ISC_PFE_CFG0_SKIPCNT_Msk              (_UINT32_(0xFF) << ISC_PFE_CFG0_SKIPCNT_Pos)         /* (ISC_PFE_CFG0) Frame Skipping Counter Mask */
-#define ISC_PFE_CFG0_SKIPCNT(value)           (ISC_PFE_CFG0_SKIPCNT_Msk & (_UINT32_(value) << ISC_PFE_CFG0_SKIPCNT_Pos)) /* Assigment of value for SKIPCNT in the ISC_PFE_CFG0 register */
+#define ISC_PFE_CFG0_SKIPCNT(value)           (ISC_PFE_CFG0_SKIPCNT_Msk & (_UINT32_(value) << ISC_PFE_CFG0_SKIPCNT_Pos)) /* Assignment of value for SKIPCNT in the ISC_PFE_CFG0 register */
 #define ISC_PFE_CFG0_CCIR_REP_Pos             _UINT32_(27)                                         /* (ISC_PFE_CFG0) CCIR Replication Position */
 #define ISC_PFE_CFG0_CCIR_REP_Msk             (_UINT32_(0x1) << ISC_PFE_CFG0_CCIR_REP_Pos)         /* (ISC_PFE_CFG0) CCIR Replication Mask */
-#define ISC_PFE_CFG0_CCIR_REP(value)          (ISC_PFE_CFG0_CCIR_REP_Msk & (_UINT32_(value) << ISC_PFE_CFG0_CCIR_REP_Pos)) /* Assigment of value for CCIR_REP in the ISC_PFE_CFG0 register */
+#define ISC_PFE_CFG0_CCIR_REP(value)          (ISC_PFE_CFG0_CCIR_REP_Msk & (_UINT32_(value) << ISC_PFE_CFG0_CCIR_REP_Pos)) /* Assignment of value for CCIR_REP in the ISC_PFE_CFG0 register */
 #define   ISC_PFE_CFG0_CCIR_REP_0_Val         _UINT32_(0x0)                                        /* (ISC_PFE_CFG0) Unused bits are stuck at 0.  */
 #define   ISC_PFE_CFG0_CCIR_REP_1_Val         _UINT32_(0x1)                                        /* (ISC_PFE_CFG0) Unused bits are copied from MSB.  */
-#define ISC_PFE_CFG0_CCIR_REP_0               (ISC_PFE_CFG0_CCIR_REP_0_Val << ISC_PFE_CFG0_CCIR_REP_Pos) /* (ISC_PFE_CFG0) Unused bits are stuck at 0. Position  */
-#define ISC_PFE_CFG0_CCIR_REP_1               (ISC_PFE_CFG0_CCIR_REP_1_Val << ISC_PFE_CFG0_CCIR_REP_Pos) /* (ISC_PFE_CFG0) Unused bits are copied from MSB. Position  */
+#define ISC_PFE_CFG0_CCIR_REP_0               (ISC_PFE_CFG0_CCIR_REP_0_Val << ISC_PFE_CFG0_CCIR_REP_Pos) /* (ISC_PFE_CFG0) Unused bits are stuck at 0. Position */
+#define ISC_PFE_CFG0_CCIR_REP_1               (ISC_PFE_CFG0_CCIR_REP_1_Val << ISC_PFE_CFG0_CCIR_REP_Pos) /* (ISC_PFE_CFG0) Unused bits are copied from MSB. Position */
 #define ISC_PFE_CFG0_BPS_Pos                  _UINT32_(28)                                         /* (ISC_PFE_CFG0) Bits Per Sample Position */
 #define ISC_PFE_CFG0_BPS_Msk                  (_UINT32_(0x7) << ISC_PFE_CFG0_BPS_Pos)              /* (ISC_PFE_CFG0) Bits Per Sample Mask */
-#define ISC_PFE_CFG0_BPS(value)               (ISC_PFE_CFG0_BPS_Msk & (_UINT32_(value) << ISC_PFE_CFG0_BPS_Pos)) /* Assigment of value for BPS in the ISC_PFE_CFG0 register */
+#define ISC_PFE_CFG0_BPS(value)               (ISC_PFE_CFG0_BPS_Msk & (_UINT32_(value) << ISC_PFE_CFG0_BPS_Pos)) /* Assignment of value for BPS in the ISC_PFE_CFG0 register */
 #define   ISC_PFE_CFG0_BPS_TWELVE_Val         _UINT32_(0x0)                                        /* (ISC_PFE_CFG0) 12-bit input  */
 #define   ISC_PFE_CFG0_BPS_ELEVEN_Val         _UINT32_(0x1)                                        /* (ISC_PFE_CFG0) 11-bit input  */
 #define   ISC_PFE_CFG0_BPS_TEN_Val            _UINT32_(0x2)                                        /* (ISC_PFE_CFG0) 10-bit input  */
 #define   ISC_PFE_CFG0_BPS_NINE_Val           _UINT32_(0x3)                                        /* (ISC_PFE_CFG0) 9-bit input  */
 #define   ISC_PFE_CFG0_BPS_EIGHT_Val          _UINT32_(0x4)                                        /* (ISC_PFE_CFG0) 8-bit input  */
 #define   ISC_PFE_CFG0_BPS_FORTY_Val          _UINT32_(0x5)                                        /* (ISC_PFE_CFG0) 40-bit input (used for MIPI formats up to forty bits per pixel)  */
-#define ISC_PFE_CFG0_BPS_TWELVE               (ISC_PFE_CFG0_BPS_TWELVE_Val << ISC_PFE_CFG0_BPS_Pos) /* (ISC_PFE_CFG0) 12-bit input Position  */
-#define ISC_PFE_CFG0_BPS_ELEVEN               (ISC_PFE_CFG0_BPS_ELEVEN_Val << ISC_PFE_CFG0_BPS_Pos) /* (ISC_PFE_CFG0) 11-bit input Position  */
-#define ISC_PFE_CFG0_BPS_TEN                  (ISC_PFE_CFG0_BPS_TEN_Val << ISC_PFE_CFG0_BPS_Pos)   /* (ISC_PFE_CFG0) 10-bit input Position  */
-#define ISC_PFE_CFG0_BPS_NINE                 (ISC_PFE_CFG0_BPS_NINE_Val << ISC_PFE_CFG0_BPS_Pos)  /* (ISC_PFE_CFG0) 9-bit input Position  */
-#define ISC_PFE_CFG0_BPS_EIGHT                (ISC_PFE_CFG0_BPS_EIGHT_Val << ISC_PFE_CFG0_BPS_Pos) /* (ISC_PFE_CFG0) 8-bit input Position  */
-#define ISC_PFE_CFG0_BPS_FORTY                (ISC_PFE_CFG0_BPS_FORTY_Val << ISC_PFE_CFG0_BPS_Pos) /* (ISC_PFE_CFG0) 40-bit input (used for MIPI formats up to forty bits per pixel) Position  */
+#define ISC_PFE_CFG0_BPS_TWELVE               (ISC_PFE_CFG0_BPS_TWELVE_Val << ISC_PFE_CFG0_BPS_Pos) /* (ISC_PFE_CFG0) 12-bit input Position */
+#define ISC_PFE_CFG0_BPS_ELEVEN               (ISC_PFE_CFG0_BPS_ELEVEN_Val << ISC_PFE_CFG0_BPS_Pos) /* (ISC_PFE_CFG0) 11-bit input Position */
+#define ISC_PFE_CFG0_BPS_TEN                  (ISC_PFE_CFG0_BPS_TEN_Val << ISC_PFE_CFG0_BPS_Pos)   /* (ISC_PFE_CFG0) 10-bit input Position */
+#define ISC_PFE_CFG0_BPS_NINE                 (ISC_PFE_CFG0_BPS_NINE_Val << ISC_PFE_CFG0_BPS_Pos)  /* (ISC_PFE_CFG0) 9-bit input Position */
+#define ISC_PFE_CFG0_BPS_EIGHT                (ISC_PFE_CFG0_BPS_EIGHT_Val << ISC_PFE_CFG0_BPS_Pos) /* (ISC_PFE_CFG0) 8-bit input Position */
+#define ISC_PFE_CFG0_BPS_FORTY                (ISC_PFE_CFG0_BPS_FORTY_Val << ISC_PFE_CFG0_BPS_Pos) /* (ISC_PFE_CFG0) 40-bit input (used for MIPI formats up to forty bits per pixel) Position */
 #define ISC_PFE_CFG0_REP_Pos                  _UINT32_(31)                                         /* (ISC_PFE_CFG0) Up Multiply with Replication Position */
 #define ISC_PFE_CFG0_REP_Msk                  (_UINT32_(0x1) << ISC_PFE_CFG0_REP_Pos)              /* (ISC_PFE_CFG0) Up Multiply with Replication Mask */
-#define ISC_PFE_CFG0_REP(value)               (ISC_PFE_CFG0_REP_Msk & (_UINT32_(value) << ISC_PFE_CFG0_REP_Pos)) /* Assigment of value for REP in the ISC_PFE_CFG0 register */
+#define ISC_PFE_CFG0_REP(value)               (ISC_PFE_CFG0_REP_Msk & (_UINT32_(value) << ISC_PFE_CFG0_REP_Pos)) /* Assignment of value for REP in the ISC_PFE_CFG0 register */
 #define   ISC_PFE_CFG0_REP_0_Val              _UINT32_(0x0)                                        /* (ISC_PFE_CFG0) Unused bits are stuck at 0.  */
 #define   ISC_PFE_CFG0_REP_1_Val              _UINT32_(0x1)                                        /* (ISC_PFE_CFG0) Unused bits are copied from MSB.  */
-#define ISC_PFE_CFG0_REP_0                    (ISC_PFE_CFG0_REP_0_Val << ISC_PFE_CFG0_REP_Pos)     /* (ISC_PFE_CFG0) Unused bits are stuck at 0. Position  */
-#define ISC_PFE_CFG0_REP_1                    (ISC_PFE_CFG0_REP_1_Val << ISC_PFE_CFG0_REP_Pos)     /* (ISC_PFE_CFG0) Unused bits are copied from MSB. Position  */
+#define ISC_PFE_CFG0_REP_0                    (ISC_PFE_CFG0_REP_0_Val << ISC_PFE_CFG0_REP_Pos)     /* (ISC_PFE_CFG0) Unused bits are stuck at 0. Position */
+#define ISC_PFE_CFG0_REP_1                    (ISC_PFE_CFG0_REP_1_Val << ISC_PFE_CFG0_REP_Pos)     /* (ISC_PFE_CFG0) Unused bits are copied from MSB. Position */
 #define ISC_PFE_CFG0_Msk                      _UINT32_(0xF8FF7FFF)                                 /* (ISC_PFE_CFG0) Register Mask  */
 
 #define ISC_PFE_CFG0_CCIR_Pos                 _UINT32_(9)                                          /* (ISC_PFE_CFG0 Position) CCIR656 input mode */
@@ -293,10 +292,10 @@
 
 #define ISC_PFE_CFG1_COLMIN_Pos               _UINT32_(0)                                          /* (ISC_PFE_CFG1) Column Minimum Limit Position */
 #define ISC_PFE_CFG1_COLMIN_Msk               (_UINT32_(0xFFFF) << ISC_PFE_CFG1_COLMIN_Pos)        /* (ISC_PFE_CFG1) Column Minimum Limit Mask */
-#define ISC_PFE_CFG1_COLMIN(value)            (ISC_PFE_CFG1_COLMIN_Msk & (_UINT32_(value) << ISC_PFE_CFG1_COLMIN_Pos)) /* Assigment of value for COLMIN in the ISC_PFE_CFG1 register */
+#define ISC_PFE_CFG1_COLMIN(value)            (ISC_PFE_CFG1_COLMIN_Msk & (_UINT32_(value) << ISC_PFE_CFG1_COLMIN_Pos)) /* Assignment of value for COLMIN in the ISC_PFE_CFG1 register */
 #define ISC_PFE_CFG1_COLMAX_Pos               _UINT32_(16)                                         /* (ISC_PFE_CFG1) Column Maximum Limit Position */
 #define ISC_PFE_CFG1_COLMAX_Msk               (_UINT32_(0xFFFF) << ISC_PFE_CFG1_COLMAX_Pos)        /* (ISC_PFE_CFG1) Column Maximum Limit Mask */
-#define ISC_PFE_CFG1_COLMAX(value)            (ISC_PFE_CFG1_COLMAX_Msk & (_UINT32_(value) << ISC_PFE_CFG1_COLMAX_Pos)) /* Assigment of value for COLMAX in the ISC_PFE_CFG1 register */
+#define ISC_PFE_CFG1_COLMAX(value)            (ISC_PFE_CFG1_COLMAX_Msk & (_UINT32_(value) << ISC_PFE_CFG1_COLMAX_Pos)) /* Assignment of value for COLMAX in the ISC_PFE_CFG1 register */
 #define ISC_PFE_CFG1_Msk                      _UINT32_(0xFFFFFFFF)                                 /* (ISC_PFE_CFG1) Register Mask  */
 
 
@@ -305,184 +304,184 @@
 
 #define ISC_PFE_CFG2_ROWMIN_Pos               _UINT32_(0)                                          /* (ISC_PFE_CFG2) Row Minimum Limit Position */
 #define ISC_PFE_CFG2_ROWMIN_Msk               (_UINT32_(0xFFFF) << ISC_PFE_CFG2_ROWMIN_Pos)        /* (ISC_PFE_CFG2) Row Minimum Limit Mask */
-#define ISC_PFE_CFG2_ROWMIN(value)            (ISC_PFE_CFG2_ROWMIN_Msk & (_UINT32_(value) << ISC_PFE_CFG2_ROWMIN_Pos)) /* Assigment of value for ROWMIN in the ISC_PFE_CFG2 register */
+#define ISC_PFE_CFG2_ROWMIN(value)            (ISC_PFE_CFG2_ROWMIN_Msk & (_UINT32_(value) << ISC_PFE_CFG2_ROWMIN_Pos)) /* Assignment of value for ROWMIN in the ISC_PFE_CFG2 register */
 #define ISC_PFE_CFG2_ROWMAX_Pos               _UINT32_(16)                                         /* (ISC_PFE_CFG2) Row Maximum Limit Position */
 #define ISC_PFE_CFG2_ROWMAX_Msk               (_UINT32_(0xFFFF) << ISC_PFE_CFG2_ROWMAX_Pos)        /* (ISC_PFE_CFG2) Row Maximum Limit Mask */
-#define ISC_PFE_CFG2_ROWMAX(value)            (ISC_PFE_CFG2_ROWMAX_Msk & (_UINT32_(value) << ISC_PFE_CFG2_ROWMAX_Pos)) /* Assigment of value for ROWMAX in the ISC_PFE_CFG2 register */
+#define ISC_PFE_CFG2_ROWMAX(value)            (ISC_PFE_CFG2_ROWMAX_Msk & (_UINT32_(value) << ISC_PFE_CFG2_ROWMAX_Pos)) /* Assignment of value for ROWMAX in the ISC_PFE_CFG2 register */
 #define ISC_PFE_CFG2_Msk                      _UINT32_(0xFFFFFFFF)                                 /* (ISC_PFE_CFG2) Register Mask  */
 
 
 /* -------- ISC_CLKEN : (ISC Offset: 0x18) ( /W 32) Clock Enable Register -------- */
 #define ISC_CLKEN_ICEN_Pos                    _UINT32_(0)                                          /* (ISC_CLKEN) ISP Clock Enable Position */
 #define ISC_CLKEN_ICEN_Msk                    (_UINT32_(0x1) << ISC_CLKEN_ICEN_Pos)                /* (ISC_CLKEN) ISP Clock Enable Mask */
-#define ISC_CLKEN_ICEN(value)                 (ISC_CLKEN_ICEN_Msk & (_UINT32_(value) << ISC_CLKEN_ICEN_Pos)) /* Assigment of value for ICEN in the ISC_CLKEN register */
+#define ISC_CLKEN_ICEN(value)                 (ISC_CLKEN_ICEN_Msk & (_UINT32_(value) << ISC_CLKEN_ICEN_Pos)) /* Assignment of value for ICEN in the ISC_CLKEN register */
 #define   ISC_CLKEN_ICEN_0_Val                _UINT32_(0x0)                                        /* (ISC_CLKEN) No effect.  */
 #define   ISC_CLKEN_ICEN_1_Val                _UINT32_(0x1)                                        /* (ISC_CLKEN) Enables the ISP clock.  */
-#define ISC_CLKEN_ICEN_0                      (ISC_CLKEN_ICEN_0_Val << ISC_CLKEN_ICEN_Pos)         /* (ISC_CLKEN) No effect. Position  */
-#define ISC_CLKEN_ICEN_1                      (ISC_CLKEN_ICEN_1_Val << ISC_CLKEN_ICEN_Pos)         /* (ISC_CLKEN) Enables the ISP clock. Position  */
-#define ISC_CLKEN_MCEN_Pos                    _UINT32_(1)                                          /* (ISC_CLKEN) Master Clock Enable Position */
-#define ISC_CLKEN_MCEN_Msk                    (_UINT32_(0x1) << ISC_CLKEN_MCEN_Pos)                /* (ISC_CLKEN) Master Clock Enable Mask */
-#define ISC_CLKEN_MCEN(value)                 (ISC_CLKEN_MCEN_Msk & (_UINT32_(value) << ISC_CLKEN_MCEN_Pos)) /* Assigment of value for MCEN in the ISC_CLKEN register */
+#define ISC_CLKEN_ICEN_0                      (ISC_CLKEN_ICEN_0_Val << ISC_CLKEN_ICEN_Pos)         /* (ISC_CLKEN) No effect. Position */
+#define ISC_CLKEN_ICEN_1                      (ISC_CLKEN_ICEN_1_Val << ISC_CLKEN_ICEN_Pos)         /* (ISC_CLKEN) Enables the ISP clock. Position */
+#define ISC_CLKEN_MCEN_Pos                    _UINT32_(1)                                          /* (ISC_CLKEN) Camera Sensor Clock Domain Enable Position */
+#define ISC_CLKEN_MCEN_Msk                    (_UINT32_(0x1) << ISC_CLKEN_MCEN_Pos)                /* (ISC_CLKEN) Camera Sensor Clock Domain Enable Mask */
+#define ISC_CLKEN_MCEN(value)                 (ISC_CLKEN_MCEN_Msk & (_UINT32_(value) << ISC_CLKEN_MCEN_Pos)) /* Assignment of value for MCEN in the ISC_CLKEN register */
 #define   ISC_CLKEN_MCEN_0_Val                _UINT32_(0x0)                                        /* (ISC_CLKEN) No effect.  */
-#define   ISC_CLKEN_MCEN_1_Val                _UINT32_(0x1)                                        /* (ISC_CLKEN) Enables the master clock.  */
-#define ISC_CLKEN_MCEN_0                      (ISC_CLKEN_MCEN_0_Val << ISC_CLKEN_MCEN_Pos)         /* (ISC_CLKEN) No effect. Position  */
-#define ISC_CLKEN_MCEN_1                      (ISC_CLKEN_MCEN_1_Val << ISC_CLKEN_MCEN_Pos)         /* (ISC_CLKEN) Enables the master clock. Position  */
+#define   ISC_CLKEN_MCEN_1_Val                _UINT32_(0x1)                                        /* (ISC_CLKEN) Enables the camera sensor clock.  */
+#define ISC_CLKEN_MCEN_0                      (ISC_CLKEN_MCEN_0_Val << ISC_CLKEN_MCEN_Pos)         /* (ISC_CLKEN) No effect. Position */
+#define ISC_CLKEN_MCEN_1                      (ISC_CLKEN_MCEN_1_Val << ISC_CLKEN_MCEN_Pos)         /* (ISC_CLKEN) Enables the camera sensor clock. Position */
 #define ISC_CLKEN_Msk                         _UINT32_(0x00000003)                                 /* (ISC_CLKEN) Register Mask  */
 
 
 /* -------- ISC_CLKDIS : (ISC Offset: 0x1C) ( /W 32) Clock Disable Register -------- */
 #define ISC_CLKDIS_ICDIS_Pos                  _UINT32_(0)                                          /* (ISC_CLKDIS) ISP Clock Disable Position */
 #define ISC_CLKDIS_ICDIS_Msk                  (_UINT32_(0x1) << ISC_CLKDIS_ICDIS_Pos)              /* (ISC_CLKDIS) ISP Clock Disable Mask */
-#define ISC_CLKDIS_ICDIS(value)               (ISC_CLKDIS_ICDIS_Msk & (_UINT32_(value) << ISC_CLKDIS_ICDIS_Pos)) /* Assigment of value for ICDIS in the ISC_CLKDIS register */
-#define ISC_CLKDIS_MCDIS_Pos                  _UINT32_(1)                                          /* (ISC_CLKDIS) Master Clock Disable Position */
-#define ISC_CLKDIS_MCDIS_Msk                  (_UINT32_(0x1) << ISC_CLKDIS_MCDIS_Pos)              /* (ISC_CLKDIS) Master Clock Disable Mask */
-#define ISC_CLKDIS_MCDIS(value)               (ISC_CLKDIS_MCDIS_Msk & (_UINT32_(value) << ISC_CLKDIS_MCDIS_Pos)) /* Assigment of value for MCDIS in the ISC_CLKDIS register */
+#define ISC_CLKDIS_ICDIS(value)               (ISC_CLKDIS_ICDIS_Msk & (_UINT32_(value) << ISC_CLKDIS_ICDIS_Pos)) /* Assignment of value for ICDIS in the ISC_CLKDIS register */
+#define ISC_CLKDIS_MCDIS_Pos                  _UINT32_(1)                                          /* (ISC_CLKDIS) Camera Sensor Clock Domain Disable Position */
+#define ISC_CLKDIS_MCDIS_Msk                  (_UINT32_(0x1) << ISC_CLKDIS_MCDIS_Pos)              /* (ISC_CLKDIS) Camera Sensor Clock Domain Disable Mask */
+#define ISC_CLKDIS_MCDIS(value)               (ISC_CLKDIS_MCDIS_Msk & (_UINT32_(value) << ISC_CLKDIS_MCDIS_Pos)) /* Assignment of value for MCDIS in the ISC_CLKDIS register */
 #define ISC_CLKDIS_ICSWRST_Pos                _UINT32_(8)                                          /* (ISC_CLKDIS) ISP Clock Software Reset Position */
 #define ISC_CLKDIS_ICSWRST_Msk                (_UINT32_(0x1) << ISC_CLKDIS_ICSWRST_Pos)            /* (ISC_CLKDIS) ISP Clock Software Reset Mask */
-#define ISC_CLKDIS_ICSWRST(value)             (ISC_CLKDIS_ICSWRST_Msk & (_UINT32_(value) << ISC_CLKDIS_ICSWRST_Pos)) /* Assigment of value for ICSWRST in the ISC_CLKDIS register */
-#define ISC_CLKDIS_MCSWRST_Pos                _UINT32_(9)                                          /* (ISC_CLKDIS) Master Clock Software Reset Position */
-#define ISC_CLKDIS_MCSWRST_Msk                (_UINT32_(0x1) << ISC_CLKDIS_MCSWRST_Pos)            /* (ISC_CLKDIS) Master Clock Software Reset Mask */
-#define ISC_CLKDIS_MCSWRST(value)             (ISC_CLKDIS_MCSWRST_Msk & (_UINT32_(value) << ISC_CLKDIS_MCSWRST_Pos)) /* Assigment of value for MCSWRST in the ISC_CLKDIS register */
+#define ISC_CLKDIS_ICSWRST(value)             (ISC_CLKDIS_ICSWRST_Msk & (_UINT32_(value) << ISC_CLKDIS_ICSWRST_Pos)) /* Assignment of value for ICSWRST in the ISC_CLKDIS register */
+#define ISC_CLKDIS_MCSWRST_Pos                _UINT32_(9)                                          /* (ISC_CLKDIS) Camera Sensor Clock Domain Software Reset Position */
+#define ISC_CLKDIS_MCSWRST_Msk                (_UINT32_(0x1) << ISC_CLKDIS_MCSWRST_Pos)            /* (ISC_CLKDIS) Camera Sensor Clock Domain Software Reset Mask */
+#define ISC_CLKDIS_MCSWRST(value)             (ISC_CLKDIS_MCSWRST_Msk & (_UINT32_(value) << ISC_CLKDIS_MCSWRST_Pos)) /* Assignment of value for MCSWRST in the ISC_CLKDIS register */
 #define ISC_CLKDIS_Msk                        _UINT32_(0x00000303)                                 /* (ISC_CLKDIS) Register Mask  */
 
 
 /* -------- ISC_CLKSR : (ISC Offset: 0x20) ( R/ 32) Clock Status Register -------- */
-#define ISC_CLKSR_RESETVALUE                  _UINT32_(0x00)                                       /*  (ISC_CLKSR) Clock Status Register  Reset Value */
+#define ISC_CLKSR_RESETVALUE                  _UINT32_(0x01)                                       /*  (ISC_CLKSR) Clock Status Register  Reset Value */
 
 #define ISC_CLKSR_ICSR_Pos                    _UINT32_(0)                                          /* (ISC_CLKSR) ISP Clock Status Register Position */
 #define ISC_CLKSR_ICSR_Msk                    (_UINT32_(0x1) << ISC_CLKSR_ICSR_Pos)                /* (ISC_CLKSR) ISP Clock Status Register Mask */
-#define ISC_CLKSR_ICSR(value)                 (ISC_CLKSR_ICSR_Msk & (_UINT32_(value) << ISC_CLKSR_ICSR_Pos)) /* Assigment of value for ICSR in the ISC_CLKSR register */
+#define ISC_CLKSR_ICSR(value)                 (ISC_CLKSR_ICSR_Msk & (_UINT32_(value) << ISC_CLKSR_ICSR_Pos)) /* Assignment of value for ICSR in the ISC_CLKSR register */
 #define   ISC_CLKSR_ICSR_0_Val                _UINT32_(0x0)                                        /* (ISC_CLKSR) The ISP clock is disabled.  */
 #define   ISC_CLKSR_ICSR_1_Val                _UINT32_(0x1)                                        /* (ISC_CLKSR) The ISP clock is enabled.  */
-#define ISC_CLKSR_ICSR_0                      (ISC_CLKSR_ICSR_0_Val << ISC_CLKSR_ICSR_Pos)         /* (ISC_CLKSR) The ISP clock is disabled. Position  */
-#define ISC_CLKSR_ICSR_1                      (ISC_CLKSR_ICSR_1_Val << ISC_CLKSR_ICSR_Pos)         /* (ISC_CLKSR) The ISP clock is enabled. Position  */
-#define ISC_CLKSR_MCSR_Pos                    _UINT32_(1)                                          /* (ISC_CLKSR) Master Clock Status Register Position */
-#define ISC_CLKSR_MCSR_Msk                    (_UINT32_(0x1) << ISC_CLKSR_MCSR_Pos)                /* (ISC_CLKSR) Master Clock Status Register Mask */
-#define ISC_CLKSR_MCSR(value)                 (ISC_CLKSR_MCSR_Msk & (_UINT32_(value) << ISC_CLKSR_MCSR_Pos)) /* Assigment of value for MCSR in the ISC_CLKSR register */
-#define   ISC_CLKSR_MCSR_0_Val                _UINT32_(0x0)                                        /* (ISC_CLKSR) The master clock is disabled.  */
-#define   ISC_CLKSR_MCSR_1_Val                _UINT32_(0x1)                                        /* (ISC_CLKSR) The master clock is enabled.  */
-#define ISC_CLKSR_MCSR_0                      (ISC_CLKSR_MCSR_0_Val << ISC_CLKSR_MCSR_Pos)         /* (ISC_CLKSR) The master clock is disabled. Position  */
-#define ISC_CLKSR_MCSR_1                      (ISC_CLKSR_MCSR_1_Val << ISC_CLKSR_MCSR_Pos)         /* (ISC_CLKSR) The master clock is enabled. Position  */
+#define ISC_CLKSR_ICSR_0                      (ISC_CLKSR_ICSR_0_Val << ISC_CLKSR_ICSR_Pos)         /* (ISC_CLKSR) The ISP clock is disabled. Position */
+#define ISC_CLKSR_ICSR_1                      (ISC_CLKSR_ICSR_1_Val << ISC_CLKSR_ICSR_Pos)         /* (ISC_CLKSR) The ISP clock is enabled. Position */
+#define ISC_CLKSR_MCSR_Pos                    _UINT32_(1)                                          /* (ISC_CLKSR) Camera Sensor Clock Status Register Position */
+#define ISC_CLKSR_MCSR_Msk                    (_UINT32_(0x1) << ISC_CLKSR_MCSR_Pos)                /* (ISC_CLKSR) Camera Sensor Clock Status Register Mask */
+#define ISC_CLKSR_MCSR(value)                 (ISC_CLKSR_MCSR_Msk & (_UINT32_(value) << ISC_CLKSR_MCSR_Pos)) /* Assignment of value for MCSR in the ISC_CLKSR register */
+#define   ISC_CLKSR_MCSR_0_Val                _UINT32_(0x0)                                        /* (ISC_CLKSR) The camera sensor clock is disabled.  */
+#define   ISC_CLKSR_MCSR_1_Val                _UINT32_(0x1)                                        /* (ISC_CLKSR) The camera sensor clock is enabled.  */
+#define ISC_CLKSR_MCSR_0                      (ISC_CLKSR_MCSR_0_Val << ISC_CLKSR_MCSR_Pos)         /* (ISC_CLKSR) The camera sensor clock is disabled. Position */
+#define ISC_CLKSR_MCSR_1                      (ISC_CLKSR_MCSR_1_Val << ISC_CLKSR_MCSR_Pos)         /* (ISC_CLKSR) The camera sensor clock is enabled. Position */
 #define ISC_CLKSR_SIP_Pos                     _UINT32_(31)                                         /* (ISC_CLKSR) Synchronization In Progress Position */
 #define ISC_CLKSR_SIP_Msk                     (_UINT32_(0x1) << ISC_CLKSR_SIP_Pos)                 /* (ISC_CLKSR) Synchronization In Progress Mask */
-#define ISC_CLKSR_SIP(value)                  (ISC_CLKSR_SIP_Msk & (_UINT32_(value) << ISC_CLKSR_SIP_Pos)) /* Assigment of value for SIP in the ISC_CLKSR register */
+#define ISC_CLKSR_SIP(value)                  (ISC_CLKSR_SIP_Msk & (_UINT32_(value) << ISC_CLKSR_SIP_Pos)) /* Assignment of value for SIP in the ISC_CLKSR register */
 #define   ISC_CLKSR_SIP_0_Val                 _UINT32_(0x0)                                        /* (ISC_CLKSR) The double domain synchronization operation is over.  */
 #define   ISC_CLKSR_SIP_1_Val                 _UINT32_(0x1)                                        /* (ISC_CLKSR) The double domain synchronization operation is in progress.  */
-#define ISC_CLKSR_SIP_0                       (ISC_CLKSR_SIP_0_Val << ISC_CLKSR_SIP_Pos)           /* (ISC_CLKSR) The double domain synchronization operation is over. Position  */
-#define ISC_CLKSR_SIP_1                       (ISC_CLKSR_SIP_1_Val << ISC_CLKSR_SIP_Pos)           /* (ISC_CLKSR) The double domain synchronization operation is in progress. Position  */
+#define ISC_CLKSR_SIP_0                       (ISC_CLKSR_SIP_0_Val << ISC_CLKSR_SIP_Pos)           /* (ISC_CLKSR) The double domain synchronization operation is over. Position */
+#define ISC_CLKSR_SIP_1                       (ISC_CLKSR_SIP_1_Val << ISC_CLKSR_SIP_Pos)           /* (ISC_CLKSR) The double domain synchronization operation is in progress. Position */
 #define ISC_CLKSR_Msk                         _UINT32_(0x80000003)                                 /* (ISC_CLKSR) Register Mask  */
 
 
 /* -------- ISC_CLKCFG : (ISC Offset: 0x24) (R/W 32) Clock Configuration Register -------- */
 #define ISC_CLKCFG_RESETVALUE                 _UINT32_(0x00)                                       /*  (ISC_CLKCFG) Clock Configuration Register  Reset Value */
 
-#define ISC_CLKCFG_MCDIV_Pos                  _UINT32_(16)                                         /* (ISC_CLKCFG) Master Clock Divider Position */
-#define ISC_CLKCFG_MCDIV_Msk                  (_UINT32_(0xFF) << ISC_CLKCFG_MCDIV_Pos)             /* (ISC_CLKCFG) Master Clock Divider Mask */
-#define ISC_CLKCFG_MCDIV(value)               (ISC_CLKCFG_MCDIV_Msk & (_UINT32_(value) << ISC_CLKCFG_MCDIV_Pos)) /* Assigment of value for MCDIV in the ISC_CLKCFG register */
+#define ISC_CLKCFG_MCDIV_Pos                  _UINT32_(16)                                         /* (ISC_CLKCFG) Camera Sensor Reference Clock Divider Position */
+#define ISC_CLKCFG_MCDIV_Msk                  (_UINT32_(0xFF) << ISC_CLKCFG_MCDIV_Pos)             /* (ISC_CLKCFG) Camera Sensor Reference Clock Divider Mask */
+#define ISC_CLKCFG_MCDIV(value)               (ISC_CLKCFG_MCDIV_Msk & (_UINT32_(value) << ISC_CLKCFG_MCDIV_Pos)) /* Assignment of value for MCDIV in the ISC_CLKCFG register */
 #define ISC_CLKCFG_Msk                        _UINT32_(0x00FF0000)                                 /* (ISC_CLKCFG) Register Mask  */
 
 
 /* -------- ISC_INTEN : (ISC Offset: 0x28) ( /W 32) Interrupt Enable Register -------- */
 #define ISC_INTEN_VD_Pos                      _UINT32_(0)                                          /* (ISC_INTEN) Vertical Synchronization Detection Interrupt Enable Position */
 #define ISC_INTEN_VD_Msk                      (_UINT32_(0x1) << ISC_INTEN_VD_Pos)                  /* (ISC_INTEN) Vertical Synchronization Detection Interrupt Enable Mask */
-#define ISC_INTEN_VD(value)                   (ISC_INTEN_VD_Msk & (_UINT32_(value) << ISC_INTEN_VD_Pos)) /* Assigment of value for VD in the ISC_INTEN register */
+#define ISC_INTEN_VD(value)                   (ISC_INTEN_VD_Msk & (_UINT32_(value) << ISC_INTEN_VD_Pos)) /* Assignment of value for VD in the ISC_INTEN register */
 #define ISC_INTEN_HD_Pos                      _UINT32_(1)                                          /* (ISC_INTEN) Horizontal Synchronization Detection Interrupt Enable Position */
 #define ISC_INTEN_HD_Msk                      (_UINT32_(0x1) << ISC_INTEN_HD_Pos)                  /* (ISC_INTEN) Horizontal Synchronization Detection Interrupt Enable Mask */
-#define ISC_INTEN_HD(value)                   (ISC_INTEN_HD_Msk & (_UINT32_(value) << ISC_INTEN_HD_Pos)) /* Assigment of value for HD in the ISC_INTEN register */
+#define ISC_INTEN_HD(value)                   (ISC_INTEN_HD_Msk & (_UINT32_(value) << ISC_INTEN_HD_Pos)) /* Assignment of value for HD in the ISC_INTEN register */
 #define ISC_INTEN_SWRST_Pos                   _UINT32_(4)                                          /* (ISC_INTEN) Software Reset Completed Interrupt Enable Position */
 #define ISC_INTEN_SWRST_Msk                   (_UINT32_(0x1) << ISC_INTEN_SWRST_Pos)               /* (ISC_INTEN) Software Reset Completed Interrupt Enable Mask */
-#define ISC_INTEN_SWRST(value)                (ISC_INTEN_SWRST_Msk & (_UINT32_(value) << ISC_INTEN_SWRST_Pos)) /* Assigment of value for SWRST in the ISC_INTEN register */
+#define ISC_INTEN_SWRST(value)                (ISC_INTEN_SWRST_Msk & (_UINT32_(value) << ISC_INTEN_SWRST_Pos)) /* Assignment of value for SWRST in the ISC_INTEN register */
 #define ISC_INTEN_DIS_Pos                     _UINT32_(5)                                          /* (ISC_INTEN) Disable Completed Interrupt Enable Position */
 #define ISC_INTEN_DIS_Msk                     (_UINT32_(0x1) << ISC_INTEN_DIS_Pos)                 /* (ISC_INTEN) Disable Completed Interrupt Enable Mask */
-#define ISC_INTEN_DIS(value)                  (ISC_INTEN_DIS_Msk & (_UINT32_(value) << ISC_INTEN_DIS_Pos)) /* Assigment of value for DIS in the ISC_INTEN register */
+#define ISC_INTEN_DIS(value)                  (ISC_INTEN_DIS_Msk & (_UINT32_(value) << ISC_INTEN_DIS_Pos)) /* Assignment of value for DIS in the ISC_INTEN register */
 #define ISC_INTEN_DDONE_Pos                   _UINT32_(8)                                          /* (ISC_INTEN) DMA Done Interrupt Enable Position */
 #define ISC_INTEN_DDONE_Msk                   (_UINT32_(0x1) << ISC_INTEN_DDONE_Pos)               /* (ISC_INTEN) DMA Done Interrupt Enable Mask */
-#define ISC_INTEN_DDONE(value)                (ISC_INTEN_DDONE_Msk & (_UINT32_(value) << ISC_INTEN_DDONE_Pos)) /* Assigment of value for DDONE in the ISC_INTEN register */
-#define ISC_INTEN_LDONE_Pos                   _UINT32_(9)                                          /* (ISC_INTEN) DMA List Done Interrupt Enable Position */
-#define ISC_INTEN_LDONE_Msk                   (_UINT32_(0x1) << ISC_INTEN_LDONE_Pos)               /* (ISC_INTEN) DMA List Done Interrupt Enable Mask */
-#define ISC_INTEN_LDONE(value)                (ISC_INTEN_LDONE_Msk & (_UINT32_(value) << ISC_INTEN_LDONE_Pos)) /* Assigment of value for LDONE in the ISC_INTEN register */
+#define ISC_INTEN_DDONE(value)                (ISC_INTEN_DDONE_Msk & (_UINT32_(value) << ISC_INTEN_DDONE_Pos)) /* Assignment of value for DDONE in the ISC_INTEN register */
+#define ISC_INTEN_LDONE_Pos                   _UINT32_(9)                                          /* (ISC_INTEN) DMA  List Done Interrupt Enable Position */
+#define ISC_INTEN_LDONE_Msk                   (_UINT32_(0x1) << ISC_INTEN_LDONE_Pos)               /* (ISC_INTEN) DMA  List Done Interrupt Enable Mask */
+#define ISC_INTEN_LDONE(value)                (ISC_INTEN_LDONE_Msk & (_UINT32_(value) << ISC_INTEN_LDONE_Pos)) /* Assignment of value for LDONE in the ISC_INTEN register */
 #define ISC_INTEN_HISDONE_Pos                 _UINT32_(12)                                         /* (ISC_INTEN) Histogram Completed Interrupt Enable Position */
 #define ISC_INTEN_HISDONE_Msk                 (_UINT32_(0x1) << ISC_INTEN_HISDONE_Pos)             /* (ISC_INTEN) Histogram Completed Interrupt Enable Mask */
-#define ISC_INTEN_HISDONE(value)              (ISC_INTEN_HISDONE_Msk & (_UINT32_(value) << ISC_INTEN_HISDONE_Pos)) /* Assigment of value for HISDONE in the ISC_INTEN register */
+#define ISC_INTEN_HISDONE(value)              (ISC_INTEN_HISDONE_Msk & (_UINT32_(value) << ISC_INTEN_HISDONE_Pos)) /* Assignment of value for HISDONE in the ISC_INTEN register */
 #define ISC_INTEN_HISCLR_Pos                  _UINT32_(13)                                         /* (ISC_INTEN) Histogram Clear Interrupt Enable Position */
 #define ISC_INTEN_HISCLR_Msk                  (_UINT32_(0x1) << ISC_INTEN_HISCLR_Pos)              /* (ISC_INTEN) Histogram Clear Interrupt Enable Mask */
-#define ISC_INTEN_HISCLR(value)               (ISC_INTEN_HISCLR_Msk & (_UINT32_(value) << ISC_INTEN_HISCLR_Pos)) /* Assigment of value for HISCLR in the ISC_INTEN register */
+#define ISC_INTEN_HISCLR(value)               (ISC_INTEN_HISCLR_Msk & (_UINT32_(value) << ISC_INTEN_HISCLR_Pos)) /* Assignment of value for HISCLR in the ISC_INTEN register */
 #define ISC_INTEN_WERR_Pos                    _UINT32_(16)                                         /* (ISC_INTEN) Write Channel Error Interrupt Enable Position */
 #define ISC_INTEN_WERR_Msk                    (_UINT32_(0x1) << ISC_INTEN_WERR_Pos)                /* (ISC_INTEN) Write Channel Error Interrupt Enable Mask */
-#define ISC_INTEN_WERR(value)                 (ISC_INTEN_WERR_Msk & (_UINT32_(value) << ISC_INTEN_WERR_Pos)) /* Assigment of value for WERR in the ISC_INTEN register */
+#define ISC_INTEN_WERR(value)                 (ISC_INTEN_WERR_Msk & (_UINT32_(value) << ISC_INTEN_WERR_Pos)) /* Assignment of value for WERR in the ISC_INTEN register */
 #define ISC_INTEN_RERR_Pos                    _UINT32_(20)                                         /* (ISC_INTEN) Read Channel Error Interrupt Enable Position */
 #define ISC_INTEN_RERR_Msk                    (_UINT32_(0x1) << ISC_INTEN_RERR_Pos)                /* (ISC_INTEN) Read Channel Error Interrupt Enable Mask */
-#define ISC_INTEN_RERR(value)                 (ISC_INTEN_RERR_Msk & (_UINT32_(value) << ISC_INTEN_RERR_Pos)) /* Assigment of value for RERR in the ISC_INTEN register */
+#define ISC_INTEN_RERR(value)                 (ISC_INTEN_RERR_Msk & (_UINT32_(value) << ISC_INTEN_RERR_Pos)) /* Assignment of value for RERR in the ISC_INTEN register */
 #define ISC_INTEN_VFPOV_Pos                   _UINT32_(24)                                         /* (ISC_INTEN) Vertical Front Porch Overflow Interrupt Enable Position */
 #define ISC_INTEN_VFPOV_Msk                   (_UINT32_(0x1) << ISC_INTEN_VFPOV_Pos)               /* (ISC_INTEN) Vertical Front Porch Overflow Interrupt Enable Mask */
-#define ISC_INTEN_VFPOV(value)                (ISC_INTEN_VFPOV_Msk & (_UINT32_(value) << ISC_INTEN_VFPOV_Pos)) /* Assigment of value for VFPOV in the ISC_INTEN register */
+#define ISC_INTEN_VFPOV(value)                (ISC_INTEN_VFPOV_Msk & (_UINT32_(value) << ISC_INTEN_VFPOV_Pos)) /* Assignment of value for VFPOV in the ISC_INTEN register */
 #define ISC_INTEN_DAOV_Pos                    _UINT32_(25)                                         /* (ISC_INTEN) Data Overflow Interrupt Enable Position */
 #define ISC_INTEN_DAOV_Msk                    (_UINT32_(0x1) << ISC_INTEN_DAOV_Pos)                /* (ISC_INTEN) Data Overflow Interrupt Enable Mask */
-#define ISC_INTEN_DAOV(value)                 (ISC_INTEN_DAOV_Msk & (_UINT32_(value) << ISC_INTEN_DAOV_Pos)) /* Assigment of value for DAOV in the ISC_INTEN register */
+#define ISC_INTEN_DAOV(value)                 (ISC_INTEN_DAOV_Msk & (_UINT32_(value) << ISC_INTEN_DAOV_Pos)) /* Assignment of value for DAOV in the ISC_INTEN register */
 #define ISC_INTEN_VDTO_Pos                    _UINT32_(26)                                         /* (ISC_INTEN) Vertical Synchronization Timeout Interrupt Enable Position */
 #define ISC_INTEN_VDTO_Msk                    (_UINT32_(0x1) << ISC_INTEN_VDTO_Pos)                /* (ISC_INTEN) Vertical Synchronization Timeout Interrupt Enable Mask */
-#define ISC_INTEN_VDTO(value)                 (ISC_INTEN_VDTO_Msk & (_UINT32_(value) << ISC_INTEN_VDTO_Pos)) /* Assigment of value for VDTO in the ISC_INTEN register */
+#define ISC_INTEN_VDTO(value)                 (ISC_INTEN_VDTO_Msk & (_UINT32_(value) << ISC_INTEN_VDTO_Pos)) /* Assignment of value for VDTO in the ISC_INTEN register */
 #define ISC_INTEN_HDTO_Pos                    _UINT32_(27)                                         /* (ISC_INTEN) Horizontal Synchronization Timeout Interrupt Enable Position */
 #define ISC_INTEN_HDTO_Msk                    (_UINT32_(0x1) << ISC_INTEN_HDTO_Pos)                /* (ISC_INTEN) Horizontal Synchronization Timeout Interrupt Enable Mask */
-#define ISC_INTEN_HDTO(value)                 (ISC_INTEN_HDTO_Msk & (_UINT32_(value) << ISC_INTEN_HDTO_Pos)) /* Assigment of value for HDTO in the ISC_INTEN register */
+#define ISC_INTEN_HDTO(value)                 (ISC_INTEN_HDTO_Msk & (_UINT32_(value) << ISC_INTEN_HDTO_Pos)) /* Assignment of value for HDTO in the ISC_INTEN register */
 #define ISC_INTEN_CCIRERR_Pos                 _UINT32_(28)                                         /* (ISC_INTEN) CCIR Decoder Error Interrupt Enable Position */
 #define ISC_INTEN_CCIRERR_Msk                 (_UINT32_(0x1) << ISC_INTEN_CCIRERR_Pos)             /* (ISC_INTEN) CCIR Decoder Error Interrupt Enable Mask */
-#define ISC_INTEN_CCIRERR(value)              (ISC_INTEN_CCIRERR_Msk & (_UINT32_(value) << ISC_INTEN_CCIRERR_Pos)) /* Assigment of value for CCIRERR in the ISC_INTEN register */
+#define ISC_INTEN_CCIRERR(value)              (ISC_INTEN_CCIRERR_Msk & (_UINT32_(value) << ISC_INTEN_CCIRERR_Pos)) /* Assignment of value for CCIRERR in the ISC_INTEN register */
 #define ISC_INTEN_GFOV_Pos                    _UINT32_(29)                                         /* (ISC_INTEN) Input FIFO Overflow Interrupt Enable Position */
 #define ISC_INTEN_GFOV_Msk                    (_UINT32_(0x1) << ISC_INTEN_GFOV_Pos)                /* (ISC_INTEN) Input FIFO Overflow Interrupt Enable Mask */
-#define ISC_INTEN_GFOV(value)                 (ISC_INTEN_GFOV_Msk & (_UINT32_(value) << ISC_INTEN_GFOV_Pos)) /* Assigment of value for GFOV in the ISC_INTEN register */
+#define ISC_INTEN_GFOV(value)                 (ISC_INTEN_GFOV_Msk & (_UINT32_(value) << ISC_INTEN_GFOV_Pos)) /* Assignment of value for GFOV in the ISC_INTEN register */
 #define ISC_INTEN_Msk                         _UINT32_(0x3F113333)                                 /* (ISC_INTEN) Register Mask  */
 
 
 /* -------- ISC_INTDIS : (ISC Offset: 0x2C) ( /W 32) Interrupt Disable Register -------- */
 #define ISC_INTDIS_VD_Pos                     _UINT32_(0)                                          /* (ISC_INTDIS) Vertical Synchronization Detection Interrupt Disable Position */
 #define ISC_INTDIS_VD_Msk                     (_UINT32_(0x1) << ISC_INTDIS_VD_Pos)                 /* (ISC_INTDIS) Vertical Synchronization Detection Interrupt Disable Mask */
-#define ISC_INTDIS_VD(value)                  (ISC_INTDIS_VD_Msk & (_UINT32_(value) << ISC_INTDIS_VD_Pos)) /* Assigment of value for VD in the ISC_INTDIS register */
+#define ISC_INTDIS_VD(value)                  (ISC_INTDIS_VD_Msk & (_UINT32_(value) << ISC_INTDIS_VD_Pos)) /* Assignment of value for VD in the ISC_INTDIS register */
 #define ISC_INTDIS_HD_Pos                     _UINT32_(1)                                          /* (ISC_INTDIS) Horizontal Synchronization Detection Interrupt Disable Position */
 #define ISC_INTDIS_HD_Msk                     (_UINT32_(0x1) << ISC_INTDIS_HD_Pos)                 /* (ISC_INTDIS) Horizontal Synchronization Detection Interrupt Disable Mask */
-#define ISC_INTDIS_HD(value)                  (ISC_INTDIS_HD_Msk & (_UINT32_(value) << ISC_INTDIS_HD_Pos)) /* Assigment of value for HD in the ISC_INTDIS register */
+#define ISC_INTDIS_HD(value)                  (ISC_INTDIS_HD_Msk & (_UINT32_(value) << ISC_INTDIS_HD_Pos)) /* Assignment of value for HD in the ISC_INTDIS register */
 #define ISC_INTDIS_SWRST_Pos                  _UINT32_(4)                                          /* (ISC_INTDIS) Software Reset Completed Interrupt Disable Position */
 #define ISC_INTDIS_SWRST_Msk                  (_UINT32_(0x1) << ISC_INTDIS_SWRST_Pos)              /* (ISC_INTDIS) Software Reset Completed Interrupt Disable Mask */
-#define ISC_INTDIS_SWRST(value)               (ISC_INTDIS_SWRST_Msk & (_UINT32_(value) << ISC_INTDIS_SWRST_Pos)) /* Assigment of value for SWRST in the ISC_INTDIS register */
+#define ISC_INTDIS_SWRST(value)               (ISC_INTDIS_SWRST_Msk & (_UINT32_(value) << ISC_INTDIS_SWRST_Pos)) /* Assignment of value for SWRST in the ISC_INTDIS register */
 #define ISC_INTDIS_DIS_Pos                    _UINT32_(5)                                          /* (ISC_INTDIS) Disable Completed Interrupt Disable Position */
 #define ISC_INTDIS_DIS_Msk                    (_UINT32_(0x1) << ISC_INTDIS_DIS_Pos)                /* (ISC_INTDIS) Disable Completed Interrupt Disable Mask */
-#define ISC_INTDIS_DIS(value)                 (ISC_INTDIS_DIS_Msk & (_UINT32_(value) << ISC_INTDIS_DIS_Pos)) /* Assigment of value for DIS in the ISC_INTDIS register */
+#define ISC_INTDIS_DIS(value)                 (ISC_INTDIS_DIS_Msk & (_UINT32_(value) << ISC_INTDIS_DIS_Pos)) /* Assignment of value for DIS in the ISC_INTDIS register */
 #define ISC_INTDIS_DDONE_Pos                  _UINT32_(8)                                          /* (ISC_INTDIS) DMA Done Interrupt Disable Position */
 #define ISC_INTDIS_DDONE_Msk                  (_UINT32_(0x1) << ISC_INTDIS_DDONE_Pos)              /* (ISC_INTDIS) DMA Done Interrupt Disable Mask */
-#define ISC_INTDIS_DDONE(value)               (ISC_INTDIS_DDONE_Msk & (_UINT32_(value) << ISC_INTDIS_DDONE_Pos)) /* Assigment of value for DDONE in the ISC_INTDIS register */
-#define ISC_INTDIS_LDONE_Pos                  _UINT32_(9)                                          /* (ISC_INTDIS) DMA List Done Interrupt Disable Position */
-#define ISC_INTDIS_LDONE_Msk                  (_UINT32_(0x1) << ISC_INTDIS_LDONE_Pos)              /* (ISC_INTDIS) DMA List Done Interrupt Disable Mask */
-#define ISC_INTDIS_LDONE(value)               (ISC_INTDIS_LDONE_Msk & (_UINT32_(value) << ISC_INTDIS_LDONE_Pos)) /* Assigment of value for LDONE in the ISC_INTDIS register */
+#define ISC_INTDIS_DDONE(value)               (ISC_INTDIS_DDONE_Msk & (_UINT32_(value) << ISC_INTDIS_DDONE_Pos)) /* Assignment of value for DDONE in the ISC_INTDIS register */
+#define ISC_INTDIS_LDONE_Pos                  _UINT32_(9)                                          /* (ISC_INTDIS) DMA  List Done Interrupt Disable Position */
+#define ISC_INTDIS_LDONE_Msk                  (_UINT32_(0x1) << ISC_INTDIS_LDONE_Pos)              /* (ISC_INTDIS) DMA  List Done Interrupt Disable Mask */
+#define ISC_INTDIS_LDONE(value)               (ISC_INTDIS_LDONE_Msk & (_UINT32_(value) << ISC_INTDIS_LDONE_Pos)) /* Assignment of value for LDONE in the ISC_INTDIS register */
 #define ISC_INTDIS_HISDONE_Pos                _UINT32_(12)                                         /* (ISC_INTDIS) Histogram Completed Interrupt Disable Position */
 #define ISC_INTDIS_HISDONE_Msk                (_UINT32_(0x1) << ISC_INTDIS_HISDONE_Pos)            /* (ISC_INTDIS) Histogram Completed Interrupt Disable Mask */
-#define ISC_INTDIS_HISDONE(value)             (ISC_INTDIS_HISDONE_Msk & (_UINT32_(value) << ISC_INTDIS_HISDONE_Pos)) /* Assigment of value for HISDONE in the ISC_INTDIS register */
+#define ISC_INTDIS_HISDONE(value)             (ISC_INTDIS_HISDONE_Msk & (_UINT32_(value) << ISC_INTDIS_HISDONE_Pos)) /* Assignment of value for HISDONE in the ISC_INTDIS register */
 #define ISC_INTDIS_HISCLR_Pos                 _UINT32_(13)                                         /* (ISC_INTDIS) Histogram Clear Interrupt Disable Position */
 #define ISC_INTDIS_HISCLR_Msk                 (_UINT32_(0x1) << ISC_INTDIS_HISCLR_Pos)             /* (ISC_INTDIS) Histogram Clear Interrupt Disable Mask */
-#define ISC_INTDIS_HISCLR(value)              (ISC_INTDIS_HISCLR_Msk & (_UINT32_(value) << ISC_INTDIS_HISCLR_Pos)) /* Assigment of value for HISCLR in the ISC_INTDIS register */
+#define ISC_INTDIS_HISCLR(value)              (ISC_INTDIS_HISCLR_Msk & (_UINT32_(value) << ISC_INTDIS_HISCLR_Pos)) /* Assignment of value for HISCLR in the ISC_INTDIS register */
 #define ISC_INTDIS_WERR_Pos                   _UINT32_(16)                                         /* (ISC_INTDIS) Write Channel Error Interrupt Disable Position */
 #define ISC_INTDIS_WERR_Msk                   (_UINT32_(0x1) << ISC_INTDIS_WERR_Pos)               /* (ISC_INTDIS) Write Channel Error Interrupt Disable Mask */
-#define ISC_INTDIS_WERR(value)                (ISC_INTDIS_WERR_Msk & (_UINT32_(value) << ISC_INTDIS_WERR_Pos)) /* Assigment of value for WERR in the ISC_INTDIS register */
+#define ISC_INTDIS_WERR(value)                (ISC_INTDIS_WERR_Msk & (_UINT32_(value) << ISC_INTDIS_WERR_Pos)) /* Assignment of value for WERR in the ISC_INTDIS register */
 #define ISC_INTDIS_RERR_Pos                   _UINT32_(20)                                         /* (ISC_INTDIS) Read Channel Error Interrupt Disable Position */
 #define ISC_INTDIS_RERR_Msk                   (_UINT32_(0x1) << ISC_INTDIS_RERR_Pos)               /* (ISC_INTDIS) Read Channel Error Interrupt Disable Mask */
-#define ISC_INTDIS_RERR(value)                (ISC_INTDIS_RERR_Msk & (_UINT32_(value) << ISC_INTDIS_RERR_Pos)) /* Assigment of value for RERR in the ISC_INTDIS register */
+#define ISC_INTDIS_RERR(value)                (ISC_INTDIS_RERR_Msk & (_UINT32_(value) << ISC_INTDIS_RERR_Pos)) /* Assignment of value for RERR in the ISC_INTDIS register */
 #define ISC_INTDIS_VFPOV_Pos                  _UINT32_(24)                                         /* (ISC_INTDIS) Vertical Front Porch Overflow Interrupt Disable Position */
 #define ISC_INTDIS_VFPOV_Msk                  (_UINT32_(0x1) << ISC_INTDIS_VFPOV_Pos)              /* (ISC_INTDIS) Vertical Front Porch Overflow Interrupt Disable Mask */
-#define ISC_INTDIS_VFPOV(value)               (ISC_INTDIS_VFPOV_Msk & (_UINT32_(value) << ISC_INTDIS_VFPOV_Pos)) /* Assigment of value for VFPOV in the ISC_INTDIS register */
+#define ISC_INTDIS_VFPOV(value)               (ISC_INTDIS_VFPOV_Msk & (_UINT32_(value) << ISC_INTDIS_VFPOV_Pos)) /* Assignment of value for VFPOV in the ISC_INTDIS register */
 #define ISC_INTDIS_DAOV_Pos                   _UINT32_(25)                                         /* (ISC_INTDIS) Data Overflow Interrupt Disable Position */
 #define ISC_INTDIS_DAOV_Msk                   (_UINT32_(0x1) << ISC_INTDIS_DAOV_Pos)               /* (ISC_INTDIS) Data Overflow Interrupt Disable Mask */
-#define ISC_INTDIS_DAOV(value)                (ISC_INTDIS_DAOV_Msk & (_UINT32_(value) << ISC_INTDIS_DAOV_Pos)) /* Assigment of value for DAOV in the ISC_INTDIS register */
+#define ISC_INTDIS_DAOV(value)                (ISC_INTDIS_DAOV_Msk & (_UINT32_(value) << ISC_INTDIS_DAOV_Pos)) /* Assignment of value for DAOV in the ISC_INTDIS register */
 #define ISC_INTDIS_VDTO_Pos                   _UINT32_(26)                                         /* (ISC_INTDIS) Vertical Synchronization Timeout Interrupt Disable Position */
 #define ISC_INTDIS_VDTO_Msk                   (_UINT32_(0x1) << ISC_INTDIS_VDTO_Pos)               /* (ISC_INTDIS) Vertical Synchronization Timeout Interrupt Disable Mask */
-#define ISC_INTDIS_VDTO(value)                (ISC_INTDIS_VDTO_Msk & (_UINT32_(value) << ISC_INTDIS_VDTO_Pos)) /* Assigment of value for VDTO in the ISC_INTDIS register */
+#define ISC_INTDIS_VDTO(value)                (ISC_INTDIS_VDTO_Msk & (_UINT32_(value) << ISC_INTDIS_VDTO_Pos)) /* Assignment of value for VDTO in the ISC_INTDIS register */
 #define ISC_INTDIS_HDTO_Pos                   _UINT32_(27)                                         /* (ISC_INTDIS) Horizontal Synchronization Timeout Interrupt Disable Position */
 #define ISC_INTDIS_HDTO_Msk                   (_UINT32_(0x1) << ISC_INTDIS_HDTO_Pos)               /* (ISC_INTDIS) Horizontal Synchronization Timeout Interrupt Disable Mask */
-#define ISC_INTDIS_HDTO(value)                (ISC_INTDIS_HDTO_Msk & (_UINT32_(value) << ISC_INTDIS_HDTO_Pos)) /* Assigment of value for HDTO in the ISC_INTDIS register */
+#define ISC_INTDIS_HDTO(value)                (ISC_INTDIS_HDTO_Msk & (_UINT32_(value) << ISC_INTDIS_HDTO_Pos)) /* Assignment of value for HDTO in the ISC_INTDIS register */
 #define ISC_INTDIS_CCIRERR_Pos                _UINT32_(28)                                         /* (ISC_INTDIS) CCIR Decoder Error Interrupt Disable Position */
 #define ISC_INTDIS_CCIRERR_Msk                (_UINT32_(0x1) << ISC_INTDIS_CCIRERR_Pos)            /* (ISC_INTDIS) CCIR Decoder Error Interrupt Disable Mask */
-#define ISC_INTDIS_CCIRERR(value)             (ISC_INTDIS_CCIRERR_Msk & (_UINT32_(value) << ISC_INTDIS_CCIRERR_Pos)) /* Assigment of value for CCIRERR in the ISC_INTDIS register */
+#define ISC_INTDIS_CCIRERR(value)             (ISC_INTDIS_CCIRERR_Msk & (_UINT32_(value) << ISC_INTDIS_CCIRERR_Pos)) /* Assignment of value for CCIRERR in the ISC_INTDIS register */
 #define ISC_INTDIS_GFOV_Pos                   _UINT32_(29)                                         /* (ISC_INTDIS) FIFO Overflow Interrupt Disable Position */
 #define ISC_INTDIS_GFOV_Msk                   (_UINT32_(0x1) << ISC_INTDIS_GFOV_Pos)               /* (ISC_INTDIS) FIFO Overflow Interrupt Disable Mask */
-#define ISC_INTDIS_GFOV(value)                (ISC_INTDIS_GFOV_Msk & (_UINT32_(value) << ISC_INTDIS_GFOV_Pos)) /* Assigment of value for GFOV in the ISC_INTDIS register */
+#define ISC_INTDIS_GFOV(value)                (ISC_INTDIS_GFOV_Msk & (_UINT32_(value) << ISC_INTDIS_GFOV_Pos)) /* Assignment of value for GFOV in the ISC_INTDIS register */
 #define ISC_INTDIS_Msk                        _UINT32_(0x3F113333)                                 /* (ISC_INTDIS) Register Mask  */
 
 
@@ -491,52 +490,52 @@
 
 #define ISC_INTMASK_VD_Pos                    _UINT32_(0)                                          /* (ISC_INTMASK) Vertical Synchronization Detection Interrupt Mask Position */
 #define ISC_INTMASK_VD_Msk                    (_UINT32_(0x1) << ISC_INTMASK_VD_Pos)                /* (ISC_INTMASK) Vertical Synchronization Detection Interrupt Mask Mask */
-#define ISC_INTMASK_VD(value)                 (ISC_INTMASK_VD_Msk & (_UINT32_(value) << ISC_INTMASK_VD_Pos)) /* Assigment of value for VD in the ISC_INTMASK register */
+#define ISC_INTMASK_VD(value)                 (ISC_INTMASK_VD_Msk & (_UINT32_(value) << ISC_INTMASK_VD_Pos)) /* Assignment of value for VD in the ISC_INTMASK register */
 #define ISC_INTMASK_HD_Pos                    _UINT32_(1)                                          /* (ISC_INTMASK) Horizontal Synchronization Detection Interrupt Mask Position */
 #define ISC_INTMASK_HD_Msk                    (_UINT32_(0x1) << ISC_INTMASK_HD_Pos)                /* (ISC_INTMASK) Horizontal Synchronization Detection Interrupt Mask Mask */
-#define ISC_INTMASK_HD(value)                 (ISC_INTMASK_HD_Msk & (_UINT32_(value) << ISC_INTMASK_HD_Pos)) /* Assigment of value for HD in the ISC_INTMASK register */
+#define ISC_INTMASK_HD(value)                 (ISC_INTMASK_HD_Msk & (_UINT32_(value) << ISC_INTMASK_HD_Pos)) /* Assignment of value for HD in the ISC_INTMASK register */
 #define ISC_INTMASK_SWRST_Pos                 _UINT32_(4)                                          /* (ISC_INTMASK) Software Reset Completed Interrupt Mask Position */
 #define ISC_INTMASK_SWRST_Msk                 (_UINT32_(0x1) << ISC_INTMASK_SWRST_Pos)             /* (ISC_INTMASK) Software Reset Completed Interrupt Mask Mask */
-#define ISC_INTMASK_SWRST(value)              (ISC_INTMASK_SWRST_Msk & (_UINT32_(value) << ISC_INTMASK_SWRST_Pos)) /* Assigment of value for SWRST in the ISC_INTMASK register */
+#define ISC_INTMASK_SWRST(value)              (ISC_INTMASK_SWRST_Msk & (_UINT32_(value) << ISC_INTMASK_SWRST_Pos)) /* Assignment of value for SWRST in the ISC_INTMASK register */
 #define ISC_INTMASK_DIS_Pos                   _UINT32_(5)                                          /* (ISC_INTMASK) Disable Completed Interrupt Mask Position */
 #define ISC_INTMASK_DIS_Msk                   (_UINT32_(0x1) << ISC_INTMASK_DIS_Pos)               /* (ISC_INTMASK) Disable Completed Interrupt Mask Mask */
-#define ISC_INTMASK_DIS(value)                (ISC_INTMASK_DIS_Msk & (_UINT32_(value) << ISC_INTMASK_DIS_Pos)) /* Assigment of value for DIS in the ISC_INTMASK register */
+#define ISC_INTMASK_DIS(value)                (ISC_INTMASK_DIS_Msk & (_UINT32_(value) << ISC_INTMASK_DIS_Pos)) /* Assignment of value for DIS in the ISC_INTMASK register */
 #define ISC_INTMASK_DDONE_Pos                 _UINT32_(8)                                          /* (ISC_INTMASK) DMA Done Interrupt Mask Position */
 #define ISC_INTMASK_DDONE_Msk                 (_UINT32_(0x1) << ISC_INTMASK_DDONE_Pos)             /* (ISC_INTMASK) DMA Done Interrupt Mask Mask */
-#define ISC_INTMASK_DDONE(value)              (ISC_INTMASK_DDONE_Msk & (_UINT32_(value) << ISC_INTMASK_DDONE_Pos)) /* Assigment of value for DDONE in the ISC_INTMASK register */
-#define ISC_INTMASK_LDONE_Pos                 _UINT32_(9)                                          /* (ISC_INTMASK) DMA List Done Interrupt Mask Position */
-#define ISC_INTMASK_LDONE_Msk                 (_UINT32_(0x1) << ISC_INTMASK_LDONE_Pos)             /* (ISC_INTMASK) DMA List Done Interrupt Mask Mask */
-#define ISC_INTMASK_LDONE(value)              (ISC_INTMASK_LDONE_Msk & (_UINT32_(value) << ISC_INTMASK_LDONE_Pos)) /* Assigment of value for LDONE in the ISC_INTMASK register */
+#define ISC_INTMASK_DDONE(value)              (ISC_INTMASK_DDONE_Msk & (_UINT32_(value) << ISC_INTMASK_DDONE_Pos)) /* Assignment of value for DDONE in the ISC_INTMASK register */
+#define ISC_INTMASK_LDONE_Pos                 _UINT32_(9)                                          /* (ISC_INTMASK) DMA  List Done Interrupt Mask Position */
+#define ISC_INTMASK_LDONE_Msk                 (_UINT32_(0x1) << ISC_INTMASK_LDONE_Pos)             /* (ISC_INTMASK) DMA  List Done Interrupt Mask Mask */
+#define ISC_INTMASK_LDONE(value)              (ISC_INTMASK_LDONE_Msk & (_UINT32_(value) << ISC_INTMASK_LDONE_Pos)) /* Assignment of value for LDONE in the ISC_INTMASK register */
 #define ISC_INTMASK_HISDONE_Pos               _UINT32_(12)                                         /* (ISC_INTMASK) Histogram Completed Interrupt Mask Position */
 #define ISC_INTMASK_HISDONE_Msk               (_UINT32_(0x1) << ISC_INTMASK_HISDONE_Pos)           /* (ISC_INTMASK) Histogram Completed Interrupt Mask Mask */
-#define ISC_INTMASK_HISDONE(value)            (ISC_INTMASK_HISDONE_Msk & (_UINT32_(value) << ISC_INTMASK_HISDONE_Pos)) /* Assigment of value for HISDONE in the ISC_INTMASK register */
+#define ISC_INTMASK_HISDONE(value)            (ISC_INTMASK_HISDONE_Msk & (_UINT32_(value) << ISC_INTMASK_HISDONE_Pos)) /* Assignment of value for HISDONE in the ISC_INTMASK register */
 #define ISC_INTMASK_HISCLR_Pos                _UINT32_(13)                                         /* (ISC_INTMASK) Histogram Clear Interrupt Mask Position */
 #define ISC_INTMASK_HISCLR_Msk                (_UINT32_(0x1) << ISC_INTMASK_HISCLR_Pos)            /* (ISC_INTMASK) Histogram Clear Interrupt Mask Mask */
-#define ISC_INTMASK_HISCLR(value)             (ISC_INTMASK_HISCLR_Msk & (_UINT32_(value) << ISC_INTMASK_HISCLR_Pos)) /* Assigment of value for HISCLR in the ISC_INTMASK register */
+#define ISC_INTMASK_HISCLR(value)             (ISC_INTMASK_HISCLR_Msk & (_UINT32_(value) << ISC_INTMASK_HISCLR_Pos)) /* Assignment of value for HISCLR in the ISC_INTMASK register */
 #define ISC_INTMASK_WERR_Pos                  _UINT32_(16)                                         /* (ISC_INTMASK) Write Channel Error Interrupt Mask Position */
 #define ISC_INTMASK_WERR_Msk                  (_UINT32_(0x1) << ISC_INTMASK_WERR_Pos)              /* (ISC_INTMASK) Write Channel Error Interrupt Mask Mask */
-#define ISC_INTMASK_WERR(value)               (ISC_INTMASK_WERR_Msk & (_UINT32_(value) << ISC_INTMASK_WERR_Pos)) /* Assigment of value for WERR in the ISC_INTMASK register */
+#define ISC_INTMASK_WERR(value)               (ISC_INTMASK_WERR_Msk & (_UINT32_(value) << ISC_INTMASK_WERR_Pos)) /* Assignment of value for WERR in the ISC_INTMASK register */
 #define ISC_INTMASK_RERR_Pos                  _UINT32_(20)                                         /* (ISC_INTMASK) Read Channel Error Interrupt Mask Position */
 #define ISC_INTMASK_RERR_Msk                  (_UINT32_(0x1) << ISC_INTMASK_RERR_Pos)              /* (ISC_INTMASK) Read Channel Error Interrupt Mask Mask */
-#define ISC_INTMASK_RERR(value)               (ISC_INTMASK_RERR_Msk & (_UINT32_(value) << ISC_INTMASK_RERR_Pos)) /* Assigment of value for RERR in the ISC_INTMASK register */
+#define ISC_INTMASK_RERR(value)               (ISC_INTMASK_RERR_Msk & (_UINT32_(value) << ISC_INTMASK_RERR_Pos)) /* Assignment of value for RERR in the ISC_INTMASK register */
 #define ISC_INTMASK_VFPOV_Pos                 _UINT32_(24)                                         /* (ISC_INTMASK) Vertical Front Porch Overflow Interrupt Mask Position */
 #define ISC_INTMASK_VFPOV_Msk                 (_UINT32_(0x1) << ISC_INTMASK_VFPOV_Pos)             /* (ISC_INTMASK) Vertical Front Porch Overflow Interrupt Mask Mask */
-#define ISC_INTMASK_VFPOV(value)              (ISC_INTMASK_VFPOV_Msk & (_UINT32_(value) << ISC_INTMASK_VFPOV_Pos)) /* Assigment of value for VFPOV in the ISC_INTMASK register */
+#define ISC_INTMASK_VFPOV(value)              (ISC_INTMASK_VFPOV_Msk & (_UINT32_(value) << ISC_INTMASK_VFPOV_Pos)) /* Assignment of value for VFPOV in the ISC_INTMASK register */
 #define ISC_INTMASK_DAOV_Pos                  _UINT32_(25)                                         /* (ISC_INTMASK) Data Overflow Interrupt Mask Position */
 #define ISC_INTMASK_DAOV_Msk                  (_UINT32_(0x1) << ISC_INTMASK_DAOV_Pos)              /* (ISC_INTMASK) Data Overflow Interrupt Mask Mask */
-#define ISC_INTMASK_DAOV(value)               (ISC_INTMASK_DAOV_Msk & (_UINT32_(value) << ISC_INTMASK_DAOV_Pos)) /* Assigment of value for DAOV in the ISC_INTMASK register */
+#define ISC_INTMASK_DAOV(value)               (ISC_INTMASK_DAOV_Msk & (_UINT32_(value) << ISC_INTMASK_DAOV_Pos)) /* Assignment of value for DAOV in the ISC_INTMASK register */
 #define ISC_INTMASK_VDTO_Pos                  _UINT32_(26)                                         /* (ISC_INTMASK) Vertical Synchronization Timeout Interrupt Mask Position */
 #define ISC_INTMASK_VDTO_Msk                  (_UINT32_(0x1) << ISC_INTMASK_VDTO_Pos)              /* (ISC_INTMASK) Vertical Synchronization Timeout Interrupt Mask Mask */
-#define ISC_INTMASK_VDTO(value)               (ISC_INTMASK_VDTO_Msk & (_UINT32_(value) << ISC_INTMASK_VDTO_Pos)) /* Assigment of value for VDTO in the ISC_INTMASK register */
+#define ISC_INTMASK_VDTO(value)               (ISC_INTMASK_VDTO_Msk & (_UINT32_(value) << ISC_INTMASK_VDTO_Pos)) /* Assignment of value for VDTO in the ISC_INTMASK register */
 #define ISC_INTMASK_HDTO_Pos                  _UINT32_(27)                                         /* (ISC_INTMASK) Horizontal Synchronization Timeout Interrupt Mask Position */
 #define ISC_INTMASK_HDTO_Msk                  (_UINT32_(0x1) << ISC_INTMASK_HDTO_Pos)              /* (ISC_INTMASK) Horizontal Synchronization Timeout Interrupt Mask Mask */
-#define ISC_INTMASK_HDTO(value)               (ISC_INTMASK_HDTO_Msk & (_UINT32_(value) << ISC_INTMASK_HDTO_Pos)) /* Assigment of value for HDTO in the ISC_INTMASK register */
+#define ISC_INTMASK_HDTO(value)               (ISC_INTMASK_HDTO_Msk & (_UINT32_(value) << ISC_INTMASK_HDTO_Pos)) /* Assignment of value for HDTO in the ISC_INTMASK register */
 #define ISC_INTMASK_CCIRERR_Pos               _UINT32_(28)                                         /* (ISC_INTMASK) CCIR Decoder Error Interrupt Mask Position */
 #define ISC_INTMASK_CCIRERR_Msk               (_UINT32_(0x1) << ISC_INTMASK_CCIRERR_Pos)           /* (ISC_INTMASK) CCIR Decoder Error Interrupt Mask Mask */
-#define ISC_INTMASK_CCIRERR(value)            (ISC_INTMASK_CCIRERR_Msk & (_UINT32_(value) << ISC_INTMASK_CCIRERR_Pos)) /* Assigment of value for CCIRERR in the ISC_INTMASK register */
+#define ISC_INTMASK_CCIRERR(value)            (ISC_INTMASK_CCIRERR_Msk & (_UINT32_(value) << ISC_INTMASK_CCIRERR_Pos)) /* Assignment of value for CCIRERR in the ISC_INTMASK register */
 #define ISC_INTMASK_GFOV_Pos                  _UINT32_(29)                                         /* (ISC_INTMASK) FIFO Overflow Interrupt Mask Position */
 #define ISC_INTMASK_GFOV_Msk                  (_UINT32_(0x1) << ISC_INTMASK_GFOV_Pos)              /* (ISC_INTMASK) FIFO Overflow Interrupt Mask Mask */
-#define ISC_INTMASK_GFOV(value)               (ISC_INTMASK_GFOV_Msk & (_UINT32_(value) << ISC_INTMASK_GFOV_Pos)) /* Assigment of value for GFOV in the ISC_INTMASK register */
+#define ISC_INTMASK_GFOV(value)               (ISC_INTMASK_GFOV_Msk & (_UINT32_(value) << ISC_INTMASK_GFOV_Pos)) /* Assignment of value for GFOV in the ISC_INTMASK register */
 #define ISC_INTMASK_Msk                       _UINT32_(0x3F113333)                                 /* (ISC_INTMASK) Register Mask  */
 
 
@@ -545,127 +544,127 @@
 
 #define ISC_INTSR_VD_Pos                      _UINT32_(0)                                          /* (ISC_INTSR) Vertical Synchronization Detected Interrupt (cleared on read) Position */
 #define ISC_INTSR_VD_Msk                      (_UINT32_(0x1) << ISC_INTSR_VD_Pos)                  /* (ISC_INTSR) Vertical Synchronization Detected Interrupt (cleared on read) Mask */
-#define ISC_INTSR_VD(value)                   (ISC_INTSR_VD_Msk & (_UINT32_(value) << ISC_INTSR_VD_Pos)) /* Assigment of value for VD in the ISC_INTSR register */
+#define ISC_INTSR_VD(value)                   (ISC_INTSR_VD_Msk & (_UINT32_(value) << ISC_INTSR_VD_Pos)) /* Assignment of value for VD in the ISC_INTSR register */
 #define   ISC_INTSR_VD_0_Val                  _UINT32_(0x0)                                        /* (ISC_INTSR) No vertical synchronization detection since the last read of the Interrupt Status register.  */
 #define   ISC_INTSR_VD_1_Val                  _UINT32_(0x1)                                        /* (ISC_INTSR) A vertical synchronization has been detected.  */
-#define ISC_INTSR_VD_0                        (ISC_INTSR_VD_0_Val << ISC_INTSR_VD_Pos)             /* (ISC_INTSR) No vertical synchronization detection since the last read of the Interrupt Status register. Position  */
-#define ISC_INTSR_VD_1                        (ISC_INTSR_VD_1_Val << ISC_INTSR_VD_Pos)             /* (ISC_INTSR) A vertical synchronization has been detected. Position  */
+#define ISC_INTSR_VD_0                        (ISC_INTSR_VD_0_Val << ISC_INTSR_VD_Pos)             /* (ISC_INTSR) No vertical synchronization detection since the last read of the Interrupt Status register. Position */
+#define ISC_INTSR_VD_1                        (ISC_INTSR_VD_1_Val << ISC_INTSR_VD_Pos)             /* (ISC_INTSR) A vertical synchronization has been detected. Position */
 #define ISC_INTSR_HD_Pos                      _UINT32_(1)                                          /* (ISC_INTSR) Horizontal Synchronization Detected Interrupt (cleared on read) Position */
 #define ISC_INTSR_HD_Msk                      (_UINT32_(0x1) << ISC_INTSR_HD_Pos)                  /* (ISC_INTSR) Horizontal Synchronization Detected Interrupt (cleared on read) Mask */
-#define ISC_INTSR_HD(value)                   (ISC_INTSR_HD_Msk & (_UINT32_(value) << ISC_INTSR_HD_Pos)) /* Assigment of value for HD in the ISC_INTSR register */
+#define ISC_INTSR_HD(value)                   (ISC_INTSR_HD_Msk & (_UINT32_(value) << ISC_INTSR_HD_Pos)) /* Assignment of value for HD in the ISC_INTSR register */
 #define   ISC_INTSR_HD_0_Val                  _UINT32_(0x0)                                        /* (ISC_INTSR) No horizontal synchronization detection since the last read of the Interrupt Status register.  */
 #define   ISC_INTSR_HD_1_Val                  _UINT32_(0x1)                                        /* (ISC_INTSR) A horizontal synchronization has been detected.  */
-#define ISC_INTSR_HD_0                        (ISC_INTSR_HD_0_Val << ISC_INTSR_HD_Pos)             /* (ISC_INTSR) No horizontal synchronization detection since the last read of the Interrupt Status register. Position  */
-#define ISC_INTSR_HD_1                        (ISC_INTSR_HD_1_Val << ISC_INTSR_HD_Pos)             /* (ISC_INTSR) A horizontal synchronization has been detected. Position  */
+#define ISC_INTSR_HD_0                        (ISC_INTSR_HD_0_Val << ISC_INTSR_HD_Pos)             /* (ISC_INTSR) No horizontal synchronization detection since the last read of the Interrupt Status register. Position */
+#define ISC_INTSR_HD_1                        (ISC_INTSR_HD_1_Val << ISC_INTSR_HD_Pos)             /* (ISC_INTSR) A horizontal synchronization has been detected. Position */
 #define ISC_INTSR_SWRST_Pos                   _UINT32_(4)                                          /* (ISC_INTSR) Software Reset Completed Interrupt (cleared on read) Position */
 #define ISC_INTSR_SWRST_Msk                   (_UINT32_(0x1) << ISC_INTSR_SWRST_Pos)               /* (ISC_INTSR) Software Reset Completed Interrupt (cleared on read) Mask */
-#define ISC_INTSR_SWRST(value)                (ISC_INTSR_SWRST_Msk & (_UINT32_(value) << ISC_INTSR_SWRST_Pos)) /* Assigment of value for SWRST in the ISC_INTSR register */
+#define ISC_INTSR_SWRST(value)                (ISC_INTSR_SWRST_Msk & (_UINT32_(value) << ISC_INTSR_SWRST_Pos)) /* Assignment of value for SWRST in the ISC_INTSR register */
 #define   ISC_INTSR_SWRST_0_Val               _UINT32_(0x0)                                        /* (ISC_INTSR) No software reset completion since the last read of the Interrupt Status register.  */
 #define   ISC_INTSR_SWRST_1_Val               _UINT32_(0x1)                                        /* (ISC_INTSR) The software reset has completed.  */
-#define ISC_INTSR_SWRST_0                     (ISC_INTSR_SWRST_0_Val << ISC_INTSR_SWRST_Pos)       /* (ISC_INTSR) No software reset completion since the last read of the Interrupt Status register. Position  */
-#define ISC_INTSR_SWRST_1                     (ISC_INTSR_SWRST_1_Val << ISC_INTSR_SWRST_Pos)       /* (ISC_INTSR) The software reset has completed. Position  */
+#define ISC_INTSR_SWRST_0                     (ISC_INTSR_SWRST_0_Val << ISC_INTSR_SWRST_Pos)       /* (ISC_INTSR) No software reset completion since the last read of the Interrupt Status register. Position */
+#define ISC_INTSR_SWRST_1                     (ISC_INTSR_SWRST_1_Val << ISC_INTSR_SWRST_Pos)       /* (ISC_INTSR) The software reset has completed. Position */
 #define ISC_INTSR_DIS_Pos                     _UINT32_(5)                                          /* (ISC_INTSR) Disable Completed Interrupt (cleared on read) Position */
 #define ISC_INTSR_DIS_Msk                     (_UINT32_(0x1) << ISC_INTSR_DIS_Pos)                 /* (ISC_INTSR) Disable Completed Interrupt (cleared on read) Mask */
-#define ISC_INTSR_DIS(value)                  (ISC_INTSR_DIS_Msk & (_UINT32_(value) << ISC_INTSR_DIS_Pos)) /* Assigment of value for DIS in the ISC_INTSR register */
+#define ISC_INTSR_DIS(value)                  (ISC_INTSR_DIS_Msk & (_UINT32_(value) << ISC_INTSR_DIS_Pos)) /* Assignment of value for DIS in the ISC_INTSR register */
 #define   ISC_INTSR_DIS_0_Val                 _UINT32_(0x0)                                        /* (ISC_INTSR) The disable has not occurred since the last read of the Interrupt Status register.  */
 #define   ISC_INTSR_DIS_1_Val                 _UINT32_(0x1)                                        /* (ISC_INTSR) The disable has completed.  */
-#define ISC_INTSR_DIS_0                       (ISC_INTSR_DIS_0_Val << ISC_INTSR_DIS_Pos)           /* (ISC_INTSR) The disable has not occurred since the last read of the Interrupt Status register. Position  */
-#define ISC_INTSR_DIS_1                       (ISC_INTSR_DIS_1_Val << ISC_INTSR_DIS_Pos)           /* (ISC_INTSR) The disable has completed. Position  */
+#define ISC_INTSR_DIS_0                       (ISC_INTSR_DIS_0_Val << ISC_INTSR_DIS_Pos)           /* (ISC_INTSR) The disable has not occurred since the last read of the Interrupt Status register. Position */
+#define ISC_INTSR_DIS_1                       (ISC_INTSR_DIS_1_Val << ISC_INTSR_DIS_Pos)           /* (ISC_INTSR) The disable has completed. Position */
 #define ISC_INTSR_DDONE_Pos                   _UINT32_(8)                                          /* (ISC_INTSR) DMA Done Interrupt (cleared on read) Position */
 #define ISC_INTSR_DDONE_Msk                   (_UINT32_(0x1) << ISC_INTSR_DDONE_Pos)               /* (ISC_INTSR) DMA Done Interrupt (cleared on read) Mask */
-#define ISC_INTSR_DDONE(value)                (ISC_INTSR_DDONE_Msk & (_UINT32_(value) << ISC_INTSR_DDONE_Pos)) /* Assigment of value for DDONE in the ISC_INTSR register */
+#define ISC_INTSR_DDONE(value)                (ISC_INTSR_DDONE_Msk & (_UINT32_(value) << ISC_INTSR_DDONE_Pos)) /* Assignment of value for DDONE in the ISC_INTSR register */
 #define   ISC_INTSR_DDONE_0_Val               _UINT32_(0x0)                                        /* (ISC_INTSR) No DMA Transfer Done interrupt has occurred since the last read of the Interrupt Status register.  */
 #define   ISC_INTSR_DDONE_1_Val               _UINT32_(0x1)                                        /* (ISC_INTSR) The DMA Transfer Done interrupt has occurred.  */
-#define ISC_INTSR_DDONE_0                     (ISC_INTSR_DDONE_0_Val << ISC_INTSR_DDONE_Pos)       /* (ISC_INTSR) No DMA Transfer Done interrupt has occurred since the last read of the Interrupt Status register. Position  */
-#define ISC_INTSR_DDONE_1                     (ISC_INTSR_DDONE_1_Val << ISC_INTSR_DDONE_Pos)       /* (ISC_INTSR) The DMA Transfer Done interrupt has occurred. Position  */
-#define ISC_INTSR_LDONE_Pos                   _UINT32_(9)                                          /* (ISC_INTSR) DMA List Done Interrupt (cleared on read) Position */
-#define ISC_INTSR_LDONE_Msk                   (_UINT32_(0x1) << ISC_INTSR_LDONE_Pos)               /* (ISC_INTSR) DMA List Done Interrupt (cleared on read) Mask */
-#define ISC_INTSR_LDONE(value)                (ISC_INTSR_LDONE_Msk & (_UINT32_(value) << ISC_INTSR_LDONE_Pos)) /* Assigment of value for LDONE in the ISC_INTSR register */
+#define ISC_INTSR_DDONE_0                     (ISC_INTSR_DDONE_0_Val << ISC_INTSR_DDONE_Pos)       /* (ISC_INTSR) No DMA Transfer Done interrupt has occurred since the last read of the Interrupt Status register. Position */
+#define ISC_INTSR_DDONE_1                     (ISC_INTSR_DDONE_1_Val << ISC_INTSR_DDONE_Pos)       /* (ISC_INTSR) The DMA Transfer Done interrupt has occurred. Position */
+#define ISC_INTSR_LDONE_Pos                   _UINT32_(9)                                          /* (ISC_INTSR) DMA  List Done Interrupt (cleared on read) Position */
+#define ISC_INTSR_LDONE_Msk                   (_UINT32_(0x1) << ISC_INTSR_LDONE_Pos)               /* (ISC_INTSR) DMA  List Done Interrupt (cleared on read) Mask */
+#define ISC_INTSR_LDONE(value)                (ISC_INTSR_LDONE_Msk & (_UINT32_(value) << ISC_INTSR_LDONE_Pos)) /* Assignment of value for LDONE in the ISC_INTSR register */
 #define   ISC_INTSR_LDONE_0_Val               _UINT32_(0x0)                                        /* (ISC_INTSR) No DMA List Done interrupt has occurred since the last read of the Interrupt Status register.  */
 #define   ISC_INTSR_LDONE_1_Val               _UINT32_(0x1)                                        /* (ISC_INTSR) The DMA List Done interrupt has occurred.  */
-#define ISC_INTSR_LDONE_0                     (ISC_INTSR_LDONE_0_Val << ISC_INTSR_LDONE_Pos)       /* (ISC_INTSR) No DMA List Done interrupt has occurred since the last read of the Interrupt Status register. Position  */
-#define ISC_INTSR_LDONE_1                     (ISC_INTSR_LDONE_1_Val << ISC_INTSR_LDONE_Pos)       /* (ISC_INTSR) The DMA List Done interrupt has occurred. Position  */
+#define ISC_INTSR_LDONE_0                     (ISC_INTSR_LDONE_0_Val << ISC_INTSR_LDONE_Pos)       /* (ISC_INTSR) No DMA List Done interrupt has occurred since the last read of the Interrupt Status register. Position */
+#define ISC_INTSR_LDONE_1                     (ISC_INTSR_LDONE_1_Val << ISC_INTSR_LDONE_Pos)       /* (ISC_INTSR) The DMA List Done interrupt has occurred. Position */
 #define ISC_INTSR_HISDONE_Pos                 _UINT32_(12)                                         /* (ISC_INTSR) Histogram Completed Interrupt (cleared on read) Position */
 #define ISC_INTSR_HISDONE_Msk                 (_UINT32_(0x1) << ISC_INTSR_HISDONE_Pos)             /* (ISC_INTSR) Histogram Completed Interrupt (cleared on read) Mask */
-#define ISC_INTSR_HISDONE(value)              (ISC_INTSR_HISDONE_Msk & (_UINT32_(value) << ISC_INTSR_HISDONE_Pos)) /* Assigment of value for HISDONE in the ISC_INTSR register */
+#define ISC_INTSR_HISDONE(value)              (ISC_INTSR_HISDONE_Msk & (_UINT32_(value) << ISC_INTSR_HISDONE_Pos)) /* Assignment of value for HISDONE in the ISC_INTSR register */
 #define   ISC_INTSR_HISDONE_0_Val             _UINT32_(0x0)                                        /* (ISC_INTSR) No Histogram Completed interrupt has been raised since the last read of the Interrupt Status register.  */
 #define   ISC_INTSR_HISDONE_1_Val             _UINT32_(0x1)                                        /* (ISC_INTSR) The Histogram Completed interrupt has occurred.  */
-#define ISC_INTSR_HISDONE_0                   (ISC_INTSR_HISDONE_0_Val << ISC_INTSR_HISDONE_Pos)   /* (ISC_INTSR) No Histogram Completed interrupt has been raised since the last read of the Interrupt Status register. Position  */
-#define ISC_INTSR_HISDONE_1                   (ISC_INTSR_HISDONE_1_Val << ISC_INTSR_HISDONE_Pos)   /* (ISC_INTSR) The Histogram Completed interrupt has occurred. Position  */
+#define ISC_INTSR_HISDONE_0                   (ISC_INTSR_HISDONE_0_Val << ISC_INTSR_HISDONE_Pos)   /* (ISC_INTSR) No Histogram Completed interrupt has been raised since the last read of the Interrupt Status register. Position */
+#define ISC_INTSR_HISDONE_1                   (ISC_INTSR_HISDONE_1_Val << ISC_INTSR_HISDONE_Pos)   /* (ISC_INTSR) The Histogram Completed interrupt has occurred. Position */
 #define ISC_INTSR_HISCLR_Pos                  _UINT32_(13)                                         /* (ISC_INTSR) Histogram Clear Interrupt (cleared on read) Position */
 #define ISC_INTSR_HISCLR_Msk                  (_UINT32_(0x1) << ISC_INTSR_HISCLR_Pos)              /* (ISC_INTSR) Histogram Clear Interrupt (cleared on read) Mask */
-#define ISC_INTSR_HISCLR(value)               (ISC_INTSR_HISCLR_Msk & (_UINT32_(value) << ISC_INTSR_HISCLR_Pos)) /* Assigment of value for HISCLR in the ISC_INTSR register */
+#define ISC_INTSR_HISCLR(value)               (ISC_INTSR_HISCLR_Msk & (_UINT32_(value) << ISC_INTSR_HISCLR_Pos)) /* Assignment of value for HISCLR in the ISC_INTSR register */
 #define   ISC_INTSR_HISCLR_0_Val              _UINT32_(0x0)                                        /* (ISC_INTSR) No Histogram Clear interrupt has been raised since the last read of the Interrupt Status register.  */
 #define   ISC_INTSR_HISCLR_1_Val              _UINT32_(0x1)                                        /* (ISC_INTSR) The Histogram Clear interrupt has occurred.  */
-#define ISC_INTSR_HISCLR_0                    (ISC_INTSR_HISCLR_0_Val << ISC_INTSR_HISCLR_Pos)     /* (ISC_INTSR) No Histogram Clear interrupt has been raised since the last read of the Interrupt Status register. Position  */
-#define ISC_INTSR_HISCLR_1                    (ISC_INTSR_HISCLR_1_Val << ISC_INTSR_HISCLR_Pos)     /* (ISC_INTSR) The Histogram Clear interrupt has occurred. Position  */
+#define ISC_INTSR_HISCLR_0                    (ISC_INTSR_HISCLR_0_Val << ISC_INTSR_HISCLR_Pos)     /* (ISC_INTSR) No Histogram Clear interrupt has been raised since the last read of the Interrupt Status register. Position */
+#define ISC_INTSR_HISCLR_1                    (ISC_INTSR_HISCLR_1_Val << ISC_INTSR_HISCLR_Pos)     /* (ISC_INTSR) The Histogram Clear interrupt has occurred. Position */
 #define ISC_INTSR_WERR_Pos                    _UINT32_(16)                                         /* (ISC_INTSR) Write Channel Error Interrupt (cleared on read) Position */
 #define ISC_INTSR_WERR_Msk                    (_UINT32_(0x1) << ISC_INTSR_WERR_Pos)                /* (ISC_INTSR) Write Channel Error Interrupt (cleared on read) Mask */
-#define ISC_INTSR_WERR(value)                 (ISC_INTSR_WERR_Msk & (_UINT32_(value) << ISC_INTSR_WERR_Pos)) /* Assigment of value for WERR in the ISC_INTSR register */
+#define ISC_INTSR_WERR(value)                 (ISC_INTSR_WERR_Msk & (_UINT32_(value) << ISC_INTSR_WERR_Pos)) /* Assignment of value for WERR in the ISC_INTSR register */
 #define   ISC_INTSR_WERR_0_Val                _UINT32_(0x0)                                        /* (ISC_INTSR) No write channel error since the last read of the Interrupt Status register.  */
 #define   ISC_INTSR_WERR_1_Val                _UINT32_(0x1)                                        /* (ISC_INTSR) A write channel error occurred.  */
-#define ISC_INTSR_WERR_0                      (ISC_INTSR_WERR_0_Val << ISC_INTSR_WERR_Pos)         /* (ISC_INTSR) No write channel error since the last read of the Interrupt Status register. Position  */
-#define ISC_INTSR_WERR_1                      (ISC_INTSR_WERR_1_Val << ISC_INTSR_WERR_Pos)         /* (ISC_INTSR) A write channel error occurred. Position  */
+#define ISC_INTSR_WERR_0                      (ISC_INTSR_WERR_0_Val << ISC_INTSR_WERR_Pos)         /* (ISC_INTSR) No write channel error since the last read of the Interrupt Status register. Position */
+#define ISC_INTSR_WERR_1                      (ISC_INTSR_WERR_1_Val << ISC_INTSR_WERR_Pos)         /* (ISC_INTSR) A write channel error occurred. Position */
 #define ISC_INTSR_WERRID_Pos                  _UINT32_(17)                                         /* (ISC_INTSR) Write Channel Error Identifier Position */
 #define ISC_INTSR_WERRID_Msk                  (_UINT32_(0x3) << ISC_INTSR_WERRID_Pos)              /* (ISC_INTSR) Write Channel Error Identifier Mask */
-#define ISC_INTSR_WERRID(value)               (ISC_INTSR_WERRID_Msk & (_UINT32_(value) << ISC_INTSR_WERRID_Pos)) /* Assigment of value for WERRID in the ISC_INTSR register */
+#define ISC_INTSR_WERRID(value)               (ISC_INTSR_WERRID_Msk & (_UINT32_(value) << ISC_INTSR_WERRID_Pos)) /* Assignment of value for WERRID in the ISC_INTSR register */
 #define   ISC_INTSR_WERRID_CH0_Val            _UINT32_(0x0)                                        /* (ISC_INTSR) An error occurred for Channel 0 (RAW/RGB/Y)  */
 #define   ISC_INTSR_WERRID_CH1_Val            _UINT32_(0x1)                                        /* (ISC_INTSR) An error occurred for Channel 1 (CbCr/Cb)  */
 #define   ISC_INTSR_WERRID_CH2_Val            _UINT32_(0x2)                                        /* (ISC_INTSR) An error occurred for Channel 2 (Cr)  */
 #define   ISC_INTSR_WERRID_WB_Val             _UINT32_(0x3)                                        /* (ISC_INTSR) Write back channel error  */
-#define ISC_INTSR_WERRID_CH0                  (ISC_INTSR_WERRID_CH0_Val << ISC_INTSR_WERRID_Pos)   /* (ISC_INTSR) An error occurred for Channel 0 (RAW/RGB/Y) Position  */
-#define ISC_INTSR_WERRID_CH1                  (ISC_INTSR_WERRID_CH1_Val << ISC_INTSR_WERRID_Pos)   /* (ISC_INTSR) An error occurred for Channel 1 (CbCr/Cb) Position  */
-#define ISC_INTSR_WERRID_CH2                  (ISC_INTSR_WERRID_CH2_Val << ISC_INTSR_WERRID_Pos)   /* (ISC_INTSR) An error occurred for Channel 2 (Cr) Position  */
-#define ISC_INTSR_WERRID_WB                   (ISC_INTSR_WERRID_WB_Val << ISC_INTSR_WERRID_Pos)    /* (ISC_INTSR) Write back channel error Position  */
+#define ISC_INTSR_WERRID_CH0                  (ISC_INTSR_WERRID_CH0_Val << ISC_INTSR_WERRID_Pos)   /* (ISC_INTSR) An error occurred for Channel 0 (RAW/RGB/Y) Position */
+#define ISC_INTSR_WERRID_CH1                  (ISC_INTSR_WERRID_CH1_Val << ISC_INTSR_WERRID_Pos)   /* (ISC_INTSR) An error occurred for Channel 1 (CbCr/Cb) Position */
+#define ISC_INTSR_WERRID_CH2                  (ISC_INTSR_WERRID_CH2_Val << ISC_INTSR_WERRID_Pos)   /* (ISC_INTSR) An error occurred for Channel 2 (Cr) Position */
+#define ISC_INTSR_WERRID_WB                   (ISC_INTSR_WERRID_WB_Val << ISC_INTSR_WERRID_Pos)    /* (ISC_INTSR) Write back channel error Position */
 #define ISC_INTSR_RERR_Pos                    _UINT32_(20)                                         /* (ISC_INTSR) Read Channel Error Interrupt (cleared on read) Position */
 #define ISC_INTSR_RERR_Msk                    (_UINT32_(0x1) << ISC_INTSR_RERR_Pos)                /* (ISC_INTSR) Read Channel Error Interrupt (cleared on read) Mask */
-#define ISC_INTSR_RERR(value)                 (ISC_INTSR_RERR_Msk & (_UINT32_(value) << ISC_INTSR_RERR_Pos)) /* Assigment of value for RERR in the ISC_INTSR register */
+#define ISC_INTSR_RERR(value)                 (ISC_INTSR_RERR_Msk & (_UINT32_(value) << ISC_INTSR_RERR_Pos)) /* Assignment of value for RERR in the ISC_INTSR register */
 #define   ISC_INTSR_RERR_0_Val                _UINT32_(0x0)                                        /* (ISC_INTSR) No read channel error since the last read of the Interrupt Status register.  */
 #define   ISC_INTSR_RERR_1_Val                _UINT32_(0x1)                                        /* (ISC_INTSR) A read channel error occurred when the ISC read the descriptor.  */
-#define ISC_INTSR_RERR_0                      (ISC_INTSR_RERR_0_Val << ISC_INTSR_RERR_Pos)         /* (ISC_INTSR) No read channel error since the last read of the Interrupt Status register. Position  */
-#define ISC_INTSR_RERR_1                      (ISC_INTSR_RERR_1_Val << ISC_INTSR_RERR_Pos)         /* (ISC_INTSR) A read channel error occurred when the ISC read the descriptor. Position  */
+#define ISC_INTSR_RERR_0                      (ISC_INTSR_RERR_0_Val << ISC_INTSR_RERR_Pos)         /* (ISC_INTSR) No read channel error since the last read of the Interrupt Status register. Position */
+#define ISC_INTSR_RERR_1                      (ISC_INTSR_RERR_1_Val << ISC_INTSR_RERR_Pos)         /* (ISC_INTSR) A read channel error occurred when the ISC read the descriptor. Position */
 #define ISC_INTSR_VFPOV_Pos                   _UINT32_(24)                                         /* (ISC_INTSR) Vertical Front Porch Overflow Interrupt (cleared on read) Position */
 #define ISC_INTSR_VFPOV_Msk                   (_UINT32_(0x1) << ISC_INTSR_VFPOV_Pos)               /* (ISC_INTSR) Vertical Front Porch Overflow Interrupt (cleared on read) Mask */
-#define ISC_INTSR_VFPOV(value)                (ISC_INTSR_VFPOV_Msk & (_UINT32_(value) << ISC_INTSR_VFPOV_Pos)) /* Assigment of value for VFPOV in the ISC_INTSR register */
+#define ISC_INTSR_VFPOV(value)                (ISC_INTSR_VFPOV_Msk & (_UINT32_(value) << ISC_INTSR_VFPOV_Pos)) /* Assignment of value for VFPOV in the ISC_INTSR register */
 #define   ISC_INTSR_VFPOV_0_Val               _UINT32_(0x0)                                        /* (ISC_INTSR) No vertical front porch error occurred since the last read of the Interrupt Status register.  */
 #define   ISC_INTSR_VFPOV_1_Val               _UINT32_(0x1)                                        /* (ISC_INTSR) The vertical synchronization has been detected but the DMA channel is still busy.  */
-#define ISC_INTSR_VFPOV_0                     (ISC_INTSR_VFPOV_0_Val << ISC_INTSR_VFPOV_Pos)       /* (ISC_INTSR) No vertical front porch error occurred since the last read of the Interrupt Status register. Position  */
-#define ISC_INTSR_VFPOV_1                     (ISC_INTSR_VFPOV_1_Val << ISC_INTSR_VFPOV_Pos)       /* (ISC_INTSR) The vertical synchronization has been detected but the DMA channel is still busy. Position  */
+#define ISC_INTSR_VFPOV_0                     (ISC_INTSR_VFPOV_0_Val << ISC_INTSR_VFPOV_Pos)       /* (ISC_INTSR) No vertical front porch error occurred since the last read of the Interrupt Status register. Position */
+#define ISC_INTSR_VFPOV_1                     (ISC_INTSR_VFPOV_1_Val << ISC_INTSR_VFPOV_Pos)       /* (ISC_INTSR) The vertical synchronization has been detected but the DMA channel is still busy. Position */
 #define ISC_INTSR_DAOV_Pos                    _UINT32_(25)                                         /* (ISC_INTSR) Data Overflow Interrupt (cleared on read) Position */
 #define ISC_INTSR_DAOV_Msk                    (_UINT32_(0x1) << ISC_INTSR_DAOV_Pos)                /* (ISC_INTSR) Data Overflow Interrupt (cleared on read) Mask */
-#define ISC_INTSR_DAOV(value)                 (ISC_INTSR_DAOV_Msk & (_UINT32_(value) << ISC_INTSR_DAOV_Pos)) /* Assigment of value for DAOV in the ISC_INTSR register */
+#define ISC_INTSR_DAOV(value)                 (ISC_INTSR_DAOV_Msk & (_UINT32_(value) << ISC_INTSR_DAOV_Pos)) /* Assignment of value for DAOV in the ISC_INTSR register */
 #define   ISC_INTSR_DAOV_0_Val                _UINT32_(0x0)                                        /* (ISC_INTSR) No data overflow error occurred since the last reset of the Interrupt Status register.  */
 #define   ISC_INTSR_DAOV_1_Val                _UINT32_(0x1)                                        /* (ISC_INTSR) A data overflow occurred.  */
-#define ISC_INTSR_DAOV_0                      (ISC_INTSR_DAOV_0_Val << ISC_INTSR_DAOV_Pos)         /* (ISC_INTSR) No data overflow error occurred since the last reset of the Interrupt Status register. Position  */
-#define ISC_INTSR_DAOV_1                      (ISC_INTSR_DAOV_1_Val << ISC_INTSR_DAOV_Pos)         /* (ISC_INTSR) A data overflow occurred. Position  */
+#define ISC_INTSR_DAOV_0                      (ISC_INTSR_DAOV_0_Val << ISC_INTSR_DAOV_Pos)         /* (ISC_INTSR) No data overflow error occurred since the last reset of the Interrupt Status register. Position */
+#define ISC_INTSR_DAOV_1                      (ISC_INTSR_DAOV_1_Val << ISC_INTSR_DAOV_Pos)         /* (ISC_INTSR) A data overflow occurred. Position */
 #define ISC_INTSR_VDTO_Pos                    _UINT32_(26)                                         /* (ISC_INTSR) Vertical Synchronization Timeout Interrupt (cleared on read) Position */
 #define ISC_INTSR_VDTO_Msk                    (_UINT32_(0x1) << ISC_INTSR_VDTO_Pos)                /* (ISC_INTSR) Vertical Synchronization Timeout Interrupt (cleared on read) Mask */
-#define ISC_INTSR_VDTO(value)                 (ISC_INTSR_VDTO_Msk & (_UINT32_(value) << ISC_INTSR_VDTO_Pos)) /* Assigment of value for VDTO in the ISC_INTSR register */
+#define ISC_INTSR_VDTO(value)                 (ISC_INTSR_VDTO_Msk & (_UINT32_(value) << ISC_INTSR_VDTO_Pos)) /* Assignment of value for VDTO in the ISC_INTSR register */
 #define   ISC_INTSR_VDTO_0_Val                _UINT32_(0x0)                                        /* (ISC_INTSR) A vertical synchronization is detected since the last reset of the Interrupt Status register.  */
 #define   ISC_INTSR_VDTO_1_Val                _UINT32_(0x1)                                        /* (ISC_INTSR) No vertical synchronization is detected.  */
-#define ISC_INTSR_VDTO_0                      (ISC_INTSR_VDTO_0_Val << ISC_INTSR_VDTO_Pos)         /* (ISC_INTSR) A vertical synchronization is detected since the last reset of the Interrupt Status register. Position  */
-#define ISC_INTSR_VDTO_1                      (ISC_INTSR_VDTO_1_Val << ISC_INTSR_VDTO_Pos)         /* (ISC_INTSR) No vertical synchronization is detected. Position  */
+#define ISC_INTSR_VDTO_0                      (ISC_INTSR_VDTO_0_Val << ISC_INTSR_VDTO_Pos)         /* (ISC_INTSR) A vertical synchronization is detected since the last reset of the Interrupt Status register. Position */
+#define ISC_INTSR_VDTO_1                      (ISC_INTSR_VDTO_1_Val << ISC_INTSR_VDTO_Pos)         /* (ISC_INTSR) No vertical synchronization is detected. Position */
 #define ISC_INTSR_HDTO_Pos                    _UINT32_(27)                                         /* (ISC_INTSR) Horizontal Synchronization Timeout Interrupt (cleared on read) Position */
 #define ISC_INTSR_HDTO_Msk                    (_UINT32_(0x1) << ISC_INTSR_HDTO_Pos)                /* (ISC_INTSR) Horizontal Synchronization Timeout Interrupt (cleared on read) Mask */
-#define ISC_INTSR_HDTO(value)                 (ISC_INTSR_HDTO_Msk & (_UINT32_(value) << ISC_INTSR_HDTO_Pos)) /* Assigment of value for HDTO in the ISC_INTSR register */
+#define ISC_INTSR_HDTO(value)                 (ISC_INTSR_HDTO_Msk & (_UINT32_(value) << ISC_INTSR_HDTO_Pos)) /* Assignment of value for HDTO in the ISC_INTSR register */
 #define   ISC_INTSR_HDTO_0_Val                _UINT32_(0x0)                                        /* (ISC_INTSR) Horizontal synchronization is detected since the last reset of the Interrupt Status register.  */
 #define   ISC_INTSR_HDTO_1_Val                _UINT32_(0x1)                                        /* (ISC_INTSR) No horizontal synchronization is detected.  */
-#define ISC_INTSR_HDTO_0                      (ISC_INTSR_HDTO_0_Val << ISC_INTSR_HDTO_Pos)         /* (ISC_INTSR) Horizontal synchronization is detected since the last reset of the Interrupt Status register. Position  */
-#define ISC_INTSR_HDTO_1                      (ISC_INTSR_HDTO_1_Val << ISC_INTSR_HDTO_Pos)         /* (ISC_INTSR) No horizontal synchronization is detected. Position  */
+#define ISC_INTSR_HDTO_0                      (ISC_INTSR_HDTO_0_Val << ISC_INTSR_HDTO_Pos)         /* (ISC_INTSR) Horizontal synchronization is detected since the last reset of the Interrupt Status register. Position */
+#define ISC_INTSR_HDTO_1                      (ISC_INTSR_HDTO_1_Val << ISC_INTSR_HDTO_Pos)         /* (ISC_INTSR) No horizontal synchronization is detected. Position */
 #define ISC_INTSR_CCIRERR_Pos                 _UINT32_(28)                                         /* (ISC_INTSR) CCIR Decoder Error Interrupt (cleared on read) Position */
 #define ISC_INTSR_CCIRERR_Msk                 (_UINT32_(0x1) << ISC_INTSR_CCIRERR_Pos)             /* (ISC_INTSR) CCIR Decoder Error Interrupt (cleared on read) Mask */
-#define ISC_INTSR_CCIRERR(value)              (ISC_INTSR_CCIRERR_Msk & (_UINT32_(value) << ISC_INTSR_CCIRERR_Pos)) /* Assigment of value for CCIRERR in the ISC_INTSR register */
+#define ISC_INTSR_CCIRERR(value)              (ISC_INTSR_CCIRERR_Msk & (_UINT32_(value) << ISC_INTSR_CCIRERR_Pos)) /* Assignment of value for CCIRERR in the ISC_INTSR register */
 #define   ISC_INTSR_CCIRERR_0_Val             _UINT32_(0x0)                                        /* (ISC_INTSR) No CCIR CRC error detected since the last read of the Interrupt Status register  */
 #define   ISC_INTSR_CCIRERR_1_Val             _UINT32_(0x1)                                        /* (ISC_INTSR) A CCIR CRC error has been detected.  */
-#define ISC_INTSR_CCIRERR_0                   (ISC_INTSR_CCIRERR_0_Val << ISC_INTSR_CCIRERR_Pos)   /* (ISC_INTSR) No CCIR CRC error detected since the last read of the Interrupt Status register Position  */
-#define ISC_INTSR_CCIRERR_1                   (ISC_INTSR_CCIRERR_1_Val << ISC_INTSR_CCIRERR_Pos)   /* (ISC_INTSR) A CCIR CRC error has been detected. Position  */
+#define ISC_INTSR_CCIRERR_0                   (ISC_INTSR_CCIRERR_0_Val << ISC_INTSR_CCIRERR_Pos)   /* (ISC_INTSR) No CCIR CRC error detected since the last read of the Interrupt Status register Position */
+#define ISC_INTSR_CCIRERR_1                   (ISC_INTSR_CCIRERR_1_Val << ISC_INTSR_CCIRERR_Pos)   /* (ISC_INTSR) A CCIR CRC error has been detected. Position */
 #define ISC_INTSR_GFOV_Pos                    _UINT32_(29)                                         /* (ISC_INTSR) FIFO Overflow Interrupt (relevant if MIPI interface is not selected) (cleared on read) Position */
 #define ISC_INTSR_GFOV_Msk                    (_UINT32_(0x1) << ISC_INTSR_GFOV_Pos)                /* (ISC_INTSR) FIFO Overflow Interrupt (relevant if MIPI interface is not selected) (cleared on read) Mask */
-#define ISC_INTSR_GFOV(value)                 (ISC_INTSR_GFOV_Msk & (_UINT32_(value) << ISC_INTSR_GFOV_Pos)) /* Assigment of value for GFOV in the ISC_INTSR register */
+#define ISC_INTSR_GFOV(value)                 (ISC_INTSR_GFOV_Msk & (_UINT32_(value) << ISC_INTSR_GFOV_Pos)) /* Assignment of value for GFOV in the ISC_INTSR register */
 #define   ISC_INTSR_GFOV_0_Val                _UINT32_(0x0)                                        /* (ISC_INTSR) No FIFO overflow detected since the last read of the Interrupt Status register.  */
 #define   ISC_INTSR_GFOV_1_Val                _UINT32_(0x1)                                        /* (ISC_INTSR) A FIFO overflow has been detected.  */
-#define ISC_INTSR_GFOV_0                      (ISC_INTSR_GFOV_0_Val << ISC_INTSR_GFOV_Pos)         /* (ISC_INTSR) No FIFO overflow detected since the last read of the Interrupt Status register. Position  */
-#define ISC_INTSR_GFOV_1                      (ISC_INTSR_GFOV_1_Val << ISC_INTSR_GFOV_Pos)         /* (ISC_INTSR) A FIFO overflow has been detected. Position  */
+#define ISC_INTSR_GFOV_0                      (ISC_INTSR_GFOV_0_Val << ISC_INTSR_GFOV_Pos)         /* (ISC_INTSR) No FIFO overflow detected since the last read of the Interrupt Status register. Position */
+#define ISC_INTSR_GFOV_1                      (ISC_INTSR_GFOV_1_Val << ISC_INTSR_GFOV_Pos)         /* (ISC_INTSR) A FIFO overflow has been detected. Position */
 #define ISC_INTSR_Msk                         _UINT32_(0x3F173333)                                 /* (ISC_INTSR) Register Mask  */
 
 
@@ -674,25 +673,25 @@
 
 #define ISC_DPC_CTRL_DPCEN_Pos                _UINT32_(0)                                          /* (ISC_DPC_CTRL) Defective Pixel Correction Enable Position */
 #define ISC_DPC_CTRL_DPCEN_Msk                (_UINT32_(0x1) << ISC_DPC_CTRL_DPCEN_Pos)            /* (ISC_DPC_CTRL) Defective Pixel Correction Enable Mask */
-#define ISC_DPC_CTRL_DPCEN(value)             (ISC_DPC_CTRL_DPCEN_Msk & (_UINT32_(value) << ISC_DPC_CTRL_DPCEN_Pos)) /* Assigment of value for DPCEN in the ISC_DPC_CTRL register */
+#define ISC_DPC_CTRL_DPCEN(value)             (ISC_DPC_CTRL_DPCEN_Msk & (_UINT32_(value) << ISC_DPC_CTRL_DPCEN_Pos)) /* Assignment of value for DPCEN in the ISC_DPC_CTRL register */
 #define   ISC_DPC_CTRL_DPCEN_0_Val            _UINT32_(0x0)                                        /* (ISC_DPC_CTRL) Defective pixel correction is disabled.  */
 #define   ISC_DPC_CTRL_DPCEN_1_Val            _UINT32_(0x1)                                        /* (ISC_DPC_CTRL) Defective pixel correction is enabled.  */
-#define ISC_DPC_CTRL_DPCEN_0                  (ISC_DPC_CTRL_DPCEN_0_Val << ISC_DPC_CTRL_DPCEN_Pos) /* (ISC_DPC_CTRL) Defective pixel correction is disabled. Position  */
-#define ISC_DPC_CTRL_DPCEN_1                  (ISC_DPC_CTRL_DPCEN_1_Val << ISC_DPC_CTRL_DPCEN_Pos) /* (ISC_DPC_CTRL) Defective pixel correction is enabled. Position  */
+#define ISC_DPC_CTRL_DPCEN_0                  (ISC_DPC_CTRL_DPCEN_0_Val << ISC_DPC_CTRL_DPCEN_Pos) /* (ISC_DPC_CTRL) Defective pixel correction is disabled. Position */
+#define ISC_DPC_CTRL_DPCEN_1                  (ISC_DPC_CTRL_DPCEN_1_Val << ISC_DPC_CTRL_DPCEN_Pos) /* (ISC_DPC_CTRL) Defective pixel correction is enabled. Position */
 #define ISC_DPC_CTRL_GDCEN_Pos                _UINT32_(1)                                          /* (ISC_DPC_CTRL) Green Disparity Correction Enable Position */
 #define ISC_DPC_CTRL_GDCEN_Msk                (_UINT32_(0x1) << ISC_DPC_CTRL_GDCEN_Pos)            /* (ISC_DPC_CTRL) Green Disparity Correction Enable Mask */
-#define ISC_DPC_CTRL_GDCEN(value)             (ISC_DPC_CTRL_GDCEN_Msk & (_UINT32_(value) << ISC_DPC_CTRL_GDCEN_Pos)) /* Assigment of value for GDCEN in the ISC_DPC_CTRL register */
+#define ISC_DPC_CTRL_GDCEN(value)             (ISC_DPC_CTRL_GDCEN_Msk & (_UINT32_(value) << ISC_DPC_CTRL_GDCEN_Pos)) /* Assignment of value for GDCEN in the ISC_DPC_CTRL register */
 #define   ISC_DPC_CTRL_GDCEN_0_Val            _UINT32_(0x0)                                        /* (ISC_DPC_CTRL) Green disparity correction is disabled.  */
 #define   ISC_DPC_CTRL_GDCEN_1_Val            _UINT32_(0x1)                                        /* (ISC_DPC_CTRL) Green disparity correction is enabled.  */
-#define ISC_DPC_CTRL_GDCEN_0                  (ISC_DPC_CTRL_GDCEN_0_Val << ISC_DPC_CTRL_GDCEN_Pos) /* (ISC_DPC_CTRL) Green disparity correction is disabled. Position  */
-#define ISC_DPC_CTRL_GDCEN_1                  (ISC_DPC_CTRL_GDCEN_1_Val << ISC_DPC_CTRL_GDCEN_Pos) /* (ISC_DPC_CTRL) Green disparity correction is enabled. Position  */
+#define ISC_DPC_CTRL_GDCEN_0                  (ISC_DPC_CTRL_GDCEN_0_Val << ISC_DPC_CTRL_GDCEN_Pos) /* (ISC_DPC_CTRL) Green disparity correction is disabled. Position */
+#define ISC_DPC_CTRL_GDCEN_1                  (ISC_DPC_CTRL_GDCEN_1_Val << ISC_DPC_CTRL_GDCEN_Pos) /* (ISC_DPC_CTRL) Green disparity correction is enabled. Position */
 #define ISC_DPC_CTRL_BLCEN_Pos                _UINT32_(2)                                          /* (ISC_DPC_CTRL) Black Level Correction Enable Position */
 #define ISC_DPC_CTRL_BLCEN_Msk                (_UINT32_(0x1) << ISC_DPC_CTRL_BLCEN_Pos)            /* (ISC_DPC_CTRL) Black Level Correction Enable Mask */
-#define ISC_DPC_CTRL_BLCEN(value)             (ISC_DPC_CTRL_BLCEN_Msk & (_UINT32_(value) << ISC_DPC_CTRL_BLCEN_Pos)) /* Assigment of value for BLCEN in the ISC_DPC_CTRL register */
+#define ISC_DPC_CTRL_BLCEN(value)             (ISC_DPC_CTRL_BLCEN_Msk & (_UINT32_(value) << ISC_DPC_CTRL_BLCEN_Pos)) /* Assignment of value for BLCEN in the ISC_DPC_CTRL register */
 #define   ISC_DPC_CTRL_BLCEN_0_Val            _UINT32_(0x0)                                        /* (ISC_DPC_CTRL) Black level correction is disabled.  */
 #define   ISC_DPC_CTRL_BLCEN_1_Val            _UINT32_(0x1)                                        /* (ISC_DPC_CTRL) Black level correction is enabled.  */
-#define ISC_DPC_CTRL_BLCEN_0                  (ISC_DPC_CTRL_BLCEN_0_Val << ISC_DPC_CTRL_BLCEN_Pos) /* (ISC_DPC_CTRL) Black level correction is disabled. Position  */
-#define ISC_DPC_CTRL_BLCEN_1                  (ISC_DPC_CTRL_BLCEN_1_Val << ISC_DPC_CTRL_BLCEN_Pos) /* (ISC_DPC_CTRL) Black level correction is enabled. Position  */
+#define ISC_DPC_CTRL_BLCEN_0                  (ISC_DPC_CTRL_BLCEN_0_Val << ISC_DPC_CTRL_BLCEN_Pos) /* (ISC_DPC_CTRL) Black level correction is disabled. Position */
+#define ISC_DPC_CTRL_BLCEN_1                  (ISC_DPC_CTRL_BLCEN_1_Val << ISC_DPC_CTRL_BLCEN_Pos) /* (ISC_DPC_CTRL) Black level correction is enabled. Position */
 #define ISC_DPC_CTRL_Msk                      _UINT32_(0x00000007)                                 /* (ISC_DPC_CTRL) Register Mask  */
 
 
@@ -701,63 +700,63 @@
 
 #define ISC_DPC_CFG_BAYCFG_Pos                _UINT32_(0)                                          /* (ISC_DPC_CFG) Color Filter Array Pattern Position */
 #define ISC_DPC_CFG_BAYCFG_Msk                (_UINT32_(0x3) << ISC_DPC_CFG_BAYCFG_Pos)            /* (ISC_DPC_CFG) Color Filter Array Pattern Mask */
-#define ISC_DPC_CFG_BAYCFG(value)             (ISC_DPC_CFG_BAYCFG_Msk & (_UINT32_(value) << ISC_DPC_CFG_BAYCFG_Pos)) /* Assigment of value for BAYCFG in the ISC_DPC_CFG register */
+#define ISC_DPC_CFG_BAYCFG(value)             (ISC_DPC_CFG_BAYCFG_Msk & (_UINT32_(value) << ISC_DPC_CFG_BAYCFG_Pos)) /* Assignment of value for BAYCFG in the ISC_DPC_CFG register */
 #define   ISC_DPC_CFG_BAYCFG_GRGR_Val         _UINT32_(0x0)                                        /* (ISC_DPC_CFG) Starting row configuration is G R G R (red row)  */
 #define   ISC_DPC_CFG_BAYCFG_RGRG_Val         _UINT32_(0x1)                                        /* (ISC_DPC_CFG) Starting row configuration is R G R G (red row)  */
 #define   ISC_DPC_CFG_BAYCFG_GBGB_Val         _UINT32_(0x2)                                        /* (ISC_DPC_CFG) Starting row configuration is G B G B (blue row)  */
 #define   ISC_DPC_CFG_BAYCFG_BGBG_Val         _UINT32_(0x3)                                        /* (ISC_DPC_CFG) Starting row configuration is B G B G (blue row)  */
-#define ISC_DPC_CFG_BAYCFG_GRGR               (ISC_DPC_CFG_BAYCFG_GRGR_Val << ISC_DPC_CFG_BAYCFG_Pos) /* (ISC_DPC_CFG) Starting row configuration is G R G R (red row) Position  */
-#define ISC_DPC_CFG_BAYCFG_RGRG               (ISC_DPC_CFG_BAYCFG_RGRG_Val << ISC_DPC_CFG_BAYCFG_Pos) /* (ISC_DPC_CFG) Starting row configuration is R G R G (red row) Position  */
-#define ISC_DPC_CFG_BAYCFG_GBGB               (ISC_DPC_CFG_BAYCFG_GBGB_Val << ISC_DPC_CFG_BAYCFG_Pos) /* (ISC_DPC_CFG) Starting row configuration is G B G B (blue row) Position  */
-#define ISC_DPC_CFG_BAYCFG_BGBG               (ISC_DPC_CFG_BAYCFG_BGBG_Val << ISC_DPC_CFG_BAYCFG_Pos) /* (ISC_DPC_CFG) Starting row configuration is B G B G (blue row) Position  */
+#define ISC_DPC_CFG_BAYCFG_GRGR               (ISC_DPC_CFG_BAYCFG_GRGR_Val << ISC_DPC_CFG_BAYCFG_Pos) /* (ISC_DPC_CFG) Starting row configuration is G R G R (red row) Position */
+#define ISC_DPC_CFG_BAYCFG_RGRG               (ISC_DPC_CFG_BAYCFG_RGRG_Val << ISC_DPC_CFG_BAYCFG_Pos) /* (ISC_DPC_CFG) Starting row configuration is R G R G (red row) Position */
+#define ISC_DPC_CFG_BAYCFG_GBGB               (ISC_DPC_CFG_BAYCFG_GBGB_Val << ISC_DPC_CFG_BAYCFG_Pos) /* (ISC_DPC_CFG) Starting row configuration is G B G B (blue row) Position */
+#define ISC_DPC_CFG_BAYCFG_BGBG               (ISC_DPC_CFG_BAYCFG_BGBG_Val << ISC_DPC_CFG_BAYCFG_Pos) /* (ISC_DPC_CFG) Starting row configuration is B G B G (blue row) Position */
 #define ISC_DPC_CFG_EITPOL_Pos                _UINT32_(4)                                          /* (ISC_DPC_CFG) Edge Interpolation Position */
 #define ISC_DPC_CFG_EITPOL_Msk                (_UINT32_(0x1) << ISC_DPC_CFG_EITPOL_Pos)            /* (ISC_DPC_CFG) Edge Interpolation Mask */
-#define ISC_DPC_CFG_EITPOL(value)             (ISC_DPC_CFG_EITPOL_Msk & (_UINT32_(value) << ISC_DPC_CFG_EITPOL_Pos)) /* Assigment of value for EITPOL in the ISC_DPC_CFG register */
+#define ISC_DPC_CFG_EITPOL(value)             (ISC_DPC_CFG_EITPOL_Msk & (_UINT32_(value) << ISC_DPC_CFG_EITPOL_Pos)) /* Assignment of value for EITPOL in the ISC_DPC_CFG register */
 #define   ISC_DPC_CFG_EITPOL_0_Val            _UINT32_(0x0)                                        /* (ISC_DPC_CFG) No edge interpolation is performed.  */
 #define   ISC_DPC_CFG_EITPOL_1_Val            _UINT32_(0x1)                                        /* (ISC_DPC_CFG) Edge interpolation is performed.  */
-#define ISC_DPC_CFG_EITPOL_0                  (ISC_DPC_CFG_EITPOL_0_Val << ISC_DPC_CFG_EITPOL_Pos) /* (ISC_DPC_CFG) No edge interpolation is performed. Position  */
-#define ISC_DPC_CFG_EITPOL_1                  (ISC_DPC_CFG_EITPOL_1_Val << ISC_DPC_CFG_EITPOL_Pos) /* (ISC_DPC_CFG) Edge interpolation is performed. Position  */
+#define ISC_DPC_CFG_EITPOL_0                  (ISC_DPC_CFG_EITPOL_0_Val << ISC_DPC_CFG_EITPOL_Pos) /* (ISC_DPC_CFG) No edge interpolation is performed. Position */
+#define ISC_DPC_CFG_EITPOL_1                  (ISC_DPC_CFG_EITPOL_1_Val << ISC_DPC_CFG_EITPOL_Pos) /* (ISC_DPC_CFG) Edge interpolation is performed. Position */
 #define ISC_DPC_CFG_TM_ENABLE_Pos             _UINT32_(12)                                         /* (ISC_DPC_CFG) Median Threshold Enable Position */
 #define ISC_DPC_CFG_TM_ENABLE_Msk             (_UINT32_(0x1) << ISC_DPC_CFG_TM_ENABLE_Pos)         /* (ISC_DPC_CFG) Median Threshold Enable Mask */
-#define ISC_DPC_CFG_TM_ENABLE(value)          (ISC_DPC_CFG_TM_ENABLE_Msk & (_UINT32_(value) << ISC_DPC_CFG_TM_ENABLE_Pos)) /* Assigment of value for TM_ENABLE in the ISC_DPC_CFG register */
+#define ISC_DPC_CFG_TM_ENABLE(value)          (ISC_DPC_CFG_TM_ENABLE_Msk & (_UINT32_(value) << ISC_DPC_CFG_TM_ENABLE_Pos)) /* Assignment of value for TM_ENABLE in the ISC_DPC_CFG register */
 #define   ISC_DPC_CFG_TM_ENABLE_0_Val         _UINT32_(0x0)                                        /* (ISC_DPC_CFG) Median detector is disabled.  */
 #define   ISC_DPC_CFG_TM_ENABLE_1_Val         _UINT32_(0x1)                                        /* (ISC_DPC_CFG) Median detector is enabled.  */
-#define ISC_DPC_CFG_TM_ENABLE_0               (ISC_DPC_CFG_TM_ENABLE_0_Val << ISC_DPC_CFG_TM_ENABLE_Pos) /* (ISC_DPC_CFG) Median detector is disabled. Position  */
-#define ISC_DPC_CFG_TM_ENABLE_1               (ISC_DPC_CFG_TM_ENABLE_1_Val << ISC_DPC_CFG_TM_ENABLE_Pos) /* (ISC_DPC_CFG) Median detector is enabled. Position  */
+#define ISC_DPC_CFG_TM_ENABLE_0               (ISC_DPC_CFG_TM_ENABLE_0_Val << ISC_DPC_CFG_TM_ENABLE_Pos) /* (ISC_DPC_CFG) Median detector is disabled. Position */
+#define ISC_DPC_CFG_TM_ENABLE_1               (ISC_DPC_CFG_TM_ENABLE_1_Val << ISC_DPC_CFG_TM_ENABLE_Pos) /* (ISC_DPC_CFG) Median detector is enabled. Position */
 #define ISC_DPC_CFG_TC_ENABLE_Pos             _UINT32_(13)                                         /* (ISC_DPC_CFG) Closest Pixels Threshold Enable Position */
 #define ISC_DPC_CFG_TC_ENABLE_Msk             (_UINT32_(0x1) << ISC_DPC_CFG_TC_ENABLE_Pos)         /* (ISC_DPC_CFG) Closest Pixels Threshold Enable Mask */
-#define ISC_DPC_CFG_TC_ENABLE(value)          (ISC_DPC_CFG_TC_ENABLE_Msk & (_UINT32_(value) << ISC_DPC_CFG_TC_ENABLE_Pos)) /* Assigment of value for TC_ENABLE in the ISC_DPC_CFG register */
+#define ISC_DPC_CFG_TC_ENABLE(value)          (ISC_DPC_CFG_TC_ENABLE_Msk & (_UINT32_(value) << ISC_DPC_CFG_TC_ENABLE_Pos)) /* Assignment of value for TC_ENABLE in the ISC_DPC_CFG register */
 #define   ISC_DPC_CFG_TC_ENABLE_0_Val         _UINT32_(0x0)                                        /* (ISC_DPC_CFG) Closest Pixels detector is disabled.  */
 #define   ISC_DPC_CFG_TC_ENABLE_1_Val         _UINT32_(0x1)                                        /* (ISC_DPC_CFG) Closest Pixels detector is enabled.  */
-#define ISC_DPC_CFG_TC_ENABLE_0               (ISC_DPC_CFG_TC_ENABLE_0_Val << ISC_DPC_CFG_TC_ENABLE_Pos) /* (ISC_DPC_CFG) Closest Pixels detector is disabled. Position  */
-#define ISC_DPC_CFG_TC_ENABLE_1               (ISC_DPC_CFG_TC_ENABLE_1_Val << ISC_DPC_CFG_TC_ENABLE_Pos) /* (ISC_DPC_CFG) Closest Pixels detector is enabled. Position  */
+#define ISC_DPC_CFG_TC_ENABLE_0               (ISC_DPC_CFG_TC_ENABLE_0_Val << ISC_DPC_CFG_TC_ENABLE_Pos) /* (ISC_DPC_CFG) Closest Pixels detector is disabled. Position */
+#define ISC_DPC_CFG_TC_ENABLE_1               (ISC_DPC_CFG_TC_ENABLE_1_Val << ISC_DPC_CFG_TC_ENABLE_Pos) /* (ISC_DPC_CFG) Closest Pixels detector is enabled. Position */
 #define ISC_DPC_CFG_TA_ENABLE_Pos             _UINT32_(14)                                         /* (ISC_DPC_CFG) Average Threshold Enable Position */
 #define ISC_DPC_CFG_TA_ENABLE_Msk             (_UINT32_(0x1) << ISC_DPC_CFG_TA_ENABLE_Pos)         /* (ISC_DPC_CFG) Average Threshold Enable Mask */
-#define ISC_DPC_CFG_TA_ENABLE(value)          (ISC_DPC_CFG_TA_ENABLE_Msk & (_UINT32_(value) << ISC_DPC_CFG_TA_ENABLE_Pos)) /* Assigment of value for TA_ENABLE in the ISC_DPC_CFG register */
+#define ISC_DPC_CFG_TA_ENABLE(value)          (ISC_DPC_CFG_TA_ENABLE_Msk & (_UINT32_(value) << ISC_DPC_CFG_TA_ENABLE_Pos)) /* Assignment of value for TA_ENABLE in the ISC_DPC_CFG register */
 #define   ISC_DPC_CFG_TA_ENABLE_0_Val         _UINT32_(0x0)                                        /* (ISC_DPC_CFG) Average detector is disabled.  */
 #define   ISC_DPC_CFG_TA_ENABLE_1_Val         _UINT32_(0x1)                                        /* (ISC_DPC_CFG) Average detector is enabled.  */
-#define ISC_DPC_CFG_TA_ENABLE_0               (ISC_DPC_CFG_TA_ENABLE_0_Val << ISC_DPC_CFG_TA_ENABLE_Pos) /* (ISC_DPC_CFG) Average detector is disabled. Position  */
-#define ISC_DPC_CFG_TA_ENABLE_1               (ISC_DPC_CFG_TA_ENABLE_1_Val << ISC_DPC_CFG_TA_ENABLE_Pos) /* (ISC_DPC_CFG) Average detector is enabled. Position  */
+#define ISC_DPC_CFG_TA_ENABLE_0               (ISC_DPC_CFG_TA_ENABLE_0_Val << ISC_DPC_CFG_TA_ENABLE_Pos) /* (ISC_DPC_CFG) Average detector is disabled. Position */
+#define ISC_DPC_CFG_TA_ENABLE_1               (ISC_DPC_CFG_TA_ENABLE_1_Val << ISC_DPC_CFG_TA_ENABLE_Pos) /* (ISC_DPC_CFG) Average detector is enabled. Position */
 #define ISC_DPC_CFG_ND_MODE_Pos               _UINT32_(16)                                         /* (ISC_DPC_CFG) Noise Detection Mode Position */
 #define ISC_DPC_CFG_ND_MODE_Msk               (_UINT32_(0x1) << ISC_DPC_CFG_ND_MODE_Pos)           /* (ISC_DPC_CFG) Noise Detection Mode Mask */
-#define ISC_DPC_CFG_ND_MODE(value)            (ISC_DPC_CFG_ND_MODE_Msk & (_UINT32_(value) << ISC_DPC_CFG_ND_MODE_Pos)) /* Assigment of value for ND_MODE in the ISC_DPC_CFG register */
+#define ISC_DPC_CFG_ND_MODE(value)            (ISC_DPC_CFG_ND_MODE_Msk & (_UINT32_(value) << ISC_DPC_CFG_ND_MODE_Pos)) /* Assignment of value for ND_MODE in the ISC_DPC_CFG register */
 #define   ISC_DPC_CFG_ND_MODE_0_Val           _UINT32_(0x0)                                        /* (ISC_DPC_CFG) At least one detector flag is necessary to trigger the correction.  */
 #define   ISC_DPC_CFG_ND_MODE_1_Val           _UINT32_(0x1)                                        /* (ISC_DPC_CFG) All detector flags are required to trigger the correction.  */
-#define ISC_DPC_CFG_ND_MODE_0                 (ISC_DPC_CFG_ND_MODE_0_Val << ISC_DPC_CFG_ND_MODE_Pos) /* (ISC_DPC_CFG) At least one detector flag is necessary to trigger the correction. Position  */
-#define ISC_DPC_CFG_ND_MODE_1                 (ISC_DPC_CFG_ND_MODE_1_Val << ISC_DPC_CFG_ND_MODE_Pos) /* (ISC_DPC_CFG) All detector flags are required to trigger the correction. Position  */
+#define ISC_DPC_CFG_ND_MODE_0                 (ISC_DPC_CFG_ND_MODE_0_Val << ISC_DPC_CFG_ND_MODE_Pos) /* (ISC_DPC_CFG) At least one detector flag is necessary to trigger the correction. Position */
+#define ISC_DPC_CFG_ND_MODE_1                 (ISC_DPC_CFG_ND_MODE_1_Val << ISC_DPC_CFG_ND_MODE_Pos) /* (ISC_DPC_CFG) All detector flags are required to trigger the correction. Position */
 #define ISC_DPC_CFG_RE_MODE_Pos               _UINT32_(17)                                         /* (ISC_DPC_CFG) Replacement Algorithm Position */
 #define ISC_DPC_CFG_RE_MODE_Msk               (_UINT32_(0x1) << ISC_DPC_CFG_RE_MODE_Pos)           /* (ISC_DPC_CFG) Replacement Algorithm Mask */
-#define ISC_DPC_CFG_RE_MODE(value)            (ISC_DPC_CFG_RE_MODE_Msk & (_UINT32_(value) << ISC_DPC_CFG_RE_MODE_Pos)) /* Assigment of value for RE_MODE in the ISC_DPC_CFG register */
+#define ISC_DPC_CFG_RE_MODE(value)            (ISC_DPC_CFG_RE_MODE_Msk & (_UINT32_(value) << ISC_DPC_CFG_RE_MODE_Pos)) /* Assignment of value for RE_MODE in the ISC_DPC_CFG register */
 #define   ISC_DPC_CFG_RE_MODE_0_Val           _UINT32_(0x0)                                        /* (ISC_DPC_CFG) Median pixel is used.  */
 #define   ISC_DPC_CFG_RE_MODE_1_Val           _UINT32_(0x1)                                        /* (ISC_DPC_CFG) Average pixel is used.  */
-#define ISC_DPC_CFG_RE_MODE_0                 (ISC_DPC_CFG_RE_MODE_0_Val << ISC_DPC_CFG_RE_MODE_Pos) /* (ISC_DPC_CFG) Median pixel is used. Position  */
-#define ISC_DPC_CFG_RE_MODE_1                 (ISC_DPC_CFG_RE_MODE_1_Val << ISC_DPC_CFG_RE_MODE_Pos) /* (ISC_DPC_CFG) Average pixel is used. Position  */
+#define ISC_DPC_CFG_RE_MODE_0                 (ISC_DPC_CFG_RE_MODE_0_Val << ISC_DPC_CFG_RE_MODE_Pos) /* (ISC_DPC_CFG) Median pixel is used. Position */
+#define ISC_DPC_CFG_RE_MODE_1                 (ISC_DPC_CFG_RE_MODE_1_Val << ISC_DPC_CFG_RE_MODE_Pos) /* (ISC_DPC_CFG) Average pixel is used. Position */
 #define ISC_DPC_CFG_GDCCLP_Pos                _UINT32_(20)                                         /* (ISC_DPC_CFG) Green Disparity Clipping Value Position */
 #define ISC_DPC_CFG_GDCCLP_Msk                (_UINT32_(0x7) << ISC_DPC_CFG_GDCCLP_Pos)            /* (ISC_DPC_CFG) Green Disparity Clipping Value Mask */
-#define ISC_DPC_CFG_GDCCLP(value)             (ISC_DPC_CFG_GDCCLP_Msk & (_UINT32_(value) << ISC_DPC_CFG_GDCCLP_Pos)) /* Assigment of value for GDCCLP in the ISC_DPC_CFG register */
+#define ISC_DPC_CFG_GDCCLP(value)             (ISC_DPC_CFG_GDCCLP_Msk & (_UINT32_(value) << ISC_DPC_CFG_GDCCLP_Pos)) /* Assignment of value for GDCCLP in the ISC_DPC_CFG register */
 #define ISC_DPC_CFG_BLOFST_Pos                _UINT32_(23)                                         /* (ISC_DPC_CFG) Black Level Offset Value Position */
 #define ISC_DPC_CFG_BLOFST_Msk                (_UINT32_(0x1FF) << ISC_DPC_CFG_BLOFST_Pos)          /* (ISC_DPC_CFG) Black Level Offset Value Mask */
-#define ISC_DPC_CFG_BLOFST(value)             (ISC_DPC_CFG_BLOFST_Msk & (_UINT32_(value) << ISC_DPC_CFG_BLOFST_Pos)) /* Assigment of value for BLOFST in the ISC_DPC_CFG register */
+#define ISC_DPC_CFG_BLOFST(value)             (ISC_DPC_CFG_BLOFST_Msk & (_UINT32_(value) << ISC_DPC_CFG_BLOFST_Pos)) /* Assignment of value for BLOFST in the ISC_DPC_CFG register */
 #define ISC_DPC_CFG_Msk                       _UINT32_(0xFFF37013)                                 /* (ISC_DPC_CFG) Register Mask  */
 
 
@@ -766,7 +765,7 @@
 
 #define ISC_DPC_THRESHM_THRESHM_Pos           _UINT32_(0)                                          /* (ISC_DPC_THRESHM) Median Threshold Position */
 #define ISC_DPC_THRESHM_THRESHM_Msk           (_UINT32_(0xFFF) << ISC_DPC_THRESHM_THRESHM_Pos)     /* (ISC_DPC_THRESHM) Median Threshold Mask */
-#define ISC_DPC_THRESHM_THRESHM(value)        (ISC_DPC_THRESHM_THRESHM_Msk & (_UINT32_(value) << ISC_DPC_THRESHM_THRESHM_Pos)) /* Assigment of value for THRESHM in the ISC_DPC_THRESHM register */
+#define ISC_DPC_THRESHM_THRESHM(value)        (ISC_DPC_THRESHM_THRESHM_Msk & (_UINT32_(value) << ISC_DPC_THRESHM_THRESHM_Pos)) /* Assignment of value for THRESHM in the ISC_DPC_THRESHM register */
 #define ISC_DPC_THRESHM_Msk                   _UINT32_(0x00000FFF)                                 /* (ISC_DPC_THRESHM) Register Mask  */
 
 
@@ -775,7 +774,7 @@
 
 #define ISC_DPC_THRESHC_THRESHC_Pos           _UINT32_(0)                                          /* (ISC_DPC_THRESHC) Closest Pixel Threshold Position */
 #define ISC_DPC_THRESHC_THRESHC_Msk           (_UINT32_(0xFFF) << ISC_DPC_THRESHC_THRESHC_Pos)     /* (ISC_DPC_THRESHC) Closest Pixel Threshold Mask */
-#define ISC_DPC_THRESHC_THRESHC(value)        (ISC_DPC_THRESHC_THRESHC_Msk & (_UINT32_(value) << ISC_DPC_THRESHC_THRESHC_Pos)) /* Assigment of value for THRESHC in the ISC_DPC_THRESHC register */
+#define ISC_DPC_THRESHC_THRESHC(value)        (ISC_DPC_THRESHC_THRESHC_Msk & (_UINT32_(value) << ISC_DPC_THRESHC_THRESHC_Pos)) /* Assignment of value for THRESHC in the ISC_DPC_THRESHC register */
 #define ISC_DPC_THRESHC_Msk                   _UINT32_(0x00000FFF)                                 /* (ISC_DPC_THRESHC) Register Mask  */
 
 
@@ -784,7 +783,7 @@
 
 #define ISC_DPC_THRESHA_THRESHA_Pos           _UINT32_(0)                                          /* (ISC_DPC_THRESHA) Average Threshold Position */
 #define ISC_DPC_THRESHA_THRESHA_Msk           (_UINT32_(0xFFF) << ISC_DPC_THRESHA_THRESHA_Pos)     /* (ISC_DPC_THRESHA) Average Threshold Mask */
-#define ISC_DPC_THRESHA_THRESHA(value)        (ISC_DPC_THRESHA_THRESHA_Msk & (_UINT32_(value) << ISC_DPC_THRESHA_THRESHA_Pos)) /* Assigment of value for THRESHA in the ISC_DPC_THRESHA register */
+#define ISC_DPC_THRESHA_THRESHA(value)        (ISC_DPC_THRESHA_THRESHA_Msk & (_UINT32_(value) << ISC_DPC_THRESHA_THRESHA_Pos)) /* Assignment of value for THRESHA in the ISC_DPC_THRESHA register */
 #define ISC_DPC_THRESHA_Msk                   _UINT32_(0x00000FFF)                                 /* (ISC_DPC_THRESHA) Register Mask  */
 
 
@@ -793,7 +792,7 @@
 
 #define ISC_DPC_SR_COUNTER_Pos                _UINT32_(0)                                          /* (ISC_DPC_SR) Defective Pixel Counter (cleared on read) Position */
 #define ISC_DPC_SR_COUNTER_Msk                (_UINT32_(0xFFFFFF) << ISC_DPC_SR_COUNTER_Pos)       /* (ISC_DPC_SR) Defective Pixel Counter (cleared on read) Mask */
-#define ISC_DPC_SR_COUNTER(value)             (ISC_DPC_SR_COUNTER_Msk & (_UINT32_(value) << ISC_DPC_SR_COUNTER_Pos)) /* Assigment of value for COUNTER in the ISC_DPC_SR register */
+#define ISC_DPC_SR_COUNTER(value)             (ISC_DPC_SR_COUNTER_Msk & (_UINT32_(value) << ISC_DPC_SR_COUNTER_Pos)) /* Assignment of value for COUNTER in the ISC_DPC_SR register */
 #define ISC_DPC_SR_Msk                        _UINT32_(0x00FFFFFF)                                 /* (ISC_DPC_SR) Register Mask  */
 
 
@@ -802,11 +801,11 @@
 
 #define ISC_WB_CTRL_ENABLE_Pos                _UINT32_(0)                                          /* (ISC_WB_CTRL) White Balance Enable Position */
 #define ISC_WB_CTRL_ENABLE_Msk                (_UINT32_(0x1) << ISC_WB_CTRL_ENABLE_Pos)            /* (ISC_WB_CTRL) White Balance Enable Mask */
-#define ISC_WB_CTRL_ENABLE(value)             (ISC_WB_CTRL_ENABLE_Msk & (_UINT32_(value) << ISC_WB_CTRL_ENABLE_Pos)) /* Assigment of value for ENABLE in the ISC_WB_CTRL register */
+#define ISC_WB_CTRL_ENABLE(value)             (ISC_WB_CTRL_ENABLE_Msk & (_UINT32_(value) << ISC_WB_CTRL_ENABLE_Pos)) /* Assignment of value for ENABLE in the ISC_WB_CTRL register */
 #define   ISC_WB_CTRL_ENABLE_0_Val            _UINT32_(0x0)                                        /* (ISC_WB_CTRL) The white balance is disabled.  */
 #define   ISC_WB_CTRL_ENABLE_1_Val            _UINT32_(0x1)                                        /* (ISC_WB_CTRL) The white balance is enabled.  */
-#define ISC_WB_CTRL_ENABLE_0                  (ISC_WB_CTRL_ENABLE_0_Val << ISC_WB_CTRL_ENABLE_Pos) /* (ISC_WB_CTRL) The white balance is disabled. Position  */
-#define ISC_WB_CTRL_ENABLE_1                  (ISC_WB_CTRL_ENABLE_1_Val << ISC_WB_CTRL_ENABLE_Pos) /* (ISC_WB_CTRL) The white balance is enabled. Position  */
+#define ISC_WB_CTRL_ENABLE_0                  (ISC_WB_CTRL_ENABLE_0_Val << ISC_WB_CTRL_ENABLE_Pos) /* (ISC_WB_CTRL) The white balance is disabled. Position */
+#define ISC_WB_CTRL_ENABLE_1                  (ISC_WB_CTRL_ENABLE_1_Val << ISC_WB_CTRL_ENABLE_Pos) /* (ISC_WB_CTRL) The white balance is enabled. Position */
 #define ISC_WB_CTRL_Msk                       _UINT32_(0x00000001)                                 /* (ISC_WB_CTRL) Register Mask  */
 
 
@@ -815,15 +814,15 @@
 
 #define ISC_WB_CFG_BAYCFG_Pos                 _UINT32_(0)                                          /* (ISC_WB_CFG) White Balance Bayer Configuration (Pixel Color Pattern) Position */
 #define ISC_WB_CFG_BAYCFG_Msk                 (_UINT32_(0x3) << ISC_WB_CFG_BAYCFG_Pos)             /* (ISC_WB_CFG) White Balance Bayer Configuration (Pixel Color Pattern) Mask */
-#define ISC_WB_CFG_BAYCFG(value)              (ISC_WB_CFG_BAYCFG_Msk & (_UINT32_(value) << ISC_WB_CFG_BAYCFG_Pos)) /* Assigment of value for BAYCFG in the ISC_WB_CFG register */
+#define ISC_WB_CFG_BAYCFG(value)              (ISC_WB_CFG_BAYCFG_Msk & (_UINT32_(value) << ISC_WB_CFG_BAYCFG_Pos)) /* Assignment of value for BAYCFG in the ISC_WB_CFG register */
 #define   ISC_WB_CFG_BAYCFG_GRGR_Val          _UINT32_(0x0)                                        /* (ISC_WB_CFG) Starting Row configuration is G R G R (Red Row)  */
 #define   ISC_WB_CFG_BAYCFG_RGRG_Val          _UINT32_(0x1)                                        /* (ISC_WB_CFG) Starting Row configuration is R G R G (Red Row)  */
 #define   ISC_WB_CFG_BAYCFG_GBGB_Val          _UINT32_(0x2)                                        /* (ISC_WB_CFG) Starting Row configuration is G B G B (Blue Row)  */
 #define   ISC_WB_CFG_BAYCFG_BGBG_Val          _UINT32_(0x3)                                        /* (ISC_WB_CFG) Starting Row configuration is B G B G (Blue Row)  */
-#define ISC_WB_CFG_BAYCFG_GRGR                (ISC_WB_CFG_BAYCFG_GRGR_Val << ISC_WB_CFG_BAYCFG_Pos) /* (ISC_WB_CFG) Starting Row configuration is G R G R (Red Row) Position  */
-#define ISC_WB_CFG_BAYCFG_RGRG                (ISC_WB_CFG_BAYCFG_RGRG_Val << ISC_WB_CFG_BAYCFG_Pos) /* (ISC_WB_CFG) Starting Row configuration is R G R G (Red Row) Position  */
-#define ISC_WB_CFG_BAYCFG_GBGB                (ISC_WB_CFG_BAYCFG_GBGB_Val << ISC_WB_CFG_BAYCFG_Pos) /* (ISC_WB_CFG) Starting Row configuration is G B G B (Blue Row) Position  */
-#define ISC_WB_CFG_BAYCFG_BGBG                (ISC_WB_CFG_BAYCFG_BGBG_Val << ISC_WB_CFG_BAYCFG_Pos) /* (ISC_WB_CFG) Starting Row configuration is B G B G (Blue Row) Position  */
+#define ISC_WB_CFG_BAYCFG_GRGR                (ISC_WB_CFG_BAYCFG_GRGR_Val << ISC_WB_CFG_BAYCFG_Pos) /* (ISC_WB_CFG) Starting Row configuration is G R G R (Red Row) Position */
+#define ISC_WB_CFG_BAYCFG_RGRG                (ISC_WB_CFG_BAYCFG_RGRG_Val << ISC_WB_CFG_BAYCFG_Pos) /* (ISC_WB_CFG) Starting Row configuration is R G R G (Red Row) Position */
+#define ISC_WB_CFG_BAYCFG_GBGB                (ISC_WB_CFG_BAYCFG_GBGB_Val << ISC_WB_CFG_BAYCFG_Pos) /* (ISC_WB_CFG) Starting Row configuration is G B G B (Blue Row) Position */
+#define ISC_WB_CFG_BAYCFG_BGBG                (ISC_WB_CFG_BAYCFG_BGBG_Val << ISC_WB_CFG_BAYCFG_Pos) /* (ISC_WB_CFG) Starting Row configuration is B G B G (Blue Row) Position */
 #define ISC_WB_CFG_Msk                        _UINT32_(0x00000003)                                 /* (ISC_WB_CFG) Register Mask  */
 
 
@@ -832,10 +831,10 @@
 
 #define ISC_WB_O_RGR_ROFST_Pos                _UINT32_(0)                                          /* (ISC_WB_O_RGR) Offset Red Component (signed 13 bits 1:12:0) Position */
 #define ISC_WB_O_RGR_ROFST_Msk                (_UINT32_(0x1FFF) << ISC_WB_O_RGR_ROFST_Pos)         /* (ISC_WB_O_RGR) Offset Red Component (signed 13 bits 1:12:0) Mask */
-#define ISC_WB_O_RGR_ROFST(value)             (ISC_WB_O_RGR_ROFST_Msk & (_UINT32_(value) << ISC_WB_O_RGR_ROFST_Pos)) /* Assigment of value for ROFST in the ISC_WB_O_RGR register */
+#define ISC_WB_O_RGR_ROFST(value)             (ISC_WB_O_RGR_ROFST_Msk & (_UINT32_(value) << ISC_WB_O_RGR_ROFST_Pos)) /* Assignment of value for ROFST in the ISC_WB_O_RGR register */
 #define ISC_WB_O_RGR_GROFST_Pos               _UINT32_(16)                                         /* (ISC_WB_O_RGR) Offset Green Component for Red Row (signed 13 bits 1:12:0) Position */
 #define ISC_WB_O_RGR_GROFST_Msk               (_UINT32_(0x1FFF) << ISC_WB_O_RGR_GROFST_Pos)        /* (ISC_WB_O_RGR) Offset Green Component for Red Row (signed 13 bits 1:12:0) Mask */
-#define ISC_WB_O_RGR_GROFST(value)            (ISC_WB_O_RGR_GROFST_Msk & (_UINT32_(value) << ISC_WB_O_RGR_GROFST_Pos)) /* Assigment of value for GROFST in the ISC_WB_O_RGR register */
+#define ISC_WB_O_RGR_GROFST(value)            (ISC_WB_O_RGR_GROFST_Msk & (_UINT32_(value) << ISC_WB_O_RGR_GROFST_Pos)) /* Assignment of value for GROFST in the ISC_WB_O_RGR register */
 #define ISC_WB_O_RGR_Msk                      _UINT32_(0x1FFF1FFF)                                 /* (ISC_WB_O_RGR) Register Mask  */
 
 
@@ -844,10 +843,10 @@
 
 #define ISC_WB_O_BGB_BOFST_Pos                _UINT32_(0)                                          /* (ISC_WB_O_BGB) Offset Blue Component (signed 13 bits, 1:12:0) Position */
 #define ISC_WB_O_BGB_BOFST_Msk                (_UINT32_(0x1FFF) << ISC_WB_O_BGB_BOFST_Pos)         /* (ISC_WB_O_BGB) Offset Blue Component (signed 13 bits, 1:12:0) Mask */
-#define ISC_WB_O_BGB_BOFST(value)             (ISC_WB_O_BGB_BOFST_Msk & (_UINT32_(value) << ISC_WB_O_BGB_BOFST_Pos)) /* Assigment of value for BOFST in the ISC_WB_O_BGB register */
+#define ISC_WB_O_BGB_BOFST(value)             (ISC_WB_O_BGB_BOFST_Msk & (_UINT32_(value) << ISC_WB_O_BGB_BOFST_Pos)) /* Assignment of value for BOFST in the ISC_WB_O_BGB register */
 #define ISC_WB_O_BGB_GBOFST_Pos               _UINT32_(16)                                         /* (ISC_WB_O_BGB) Offset Green Component for Blue Row (signed 13 bits, 1:12:0) Position */
 #define ISC_WB_O_BGB_GBOFST_Msk               (_UINT32_(0x1FFF) << ISC_WB_O_BGB_GBOFST_Pos)        /* (ISC_WB_O_BGB) Offset Green Component for Blue Row (signed 13 bits, 1:12:0) Mask */
-#define ISC_WB_O_BGB_GBOFST(value)            (ISC_WB_O_BGB_GBOFST_Msk & (_UINT32_(value) << ISC_WB_O_BGB_GBOFST_Pos)) /* Assigment of value for GBOFST in the ISC_WB_O_BGB register */
+#define ISC_WB_O_BGB_GBOFST(value)            (ISC_WB_O_BGB_GBOFST_Msk & (_UINT32_(value) << ISC_WB_O_BGB_GBOFST_Pos)) /* Assignment of value for GBOFST in the ISC_WB_O_BGB register */
 #define ISC_WB_O_BGB_Msk                      _UINT32_(0x1FFF1FFF)                                 /* (ISC_WB_O_BGB) Register Mask  */
 
 
@@ -856,10 +855,10 @@
 
 #define ISC_WB_G_RGR_RGAIN_Pos                _UINT32_(0)                                          /* (ISC_WB_G_RGR) Red Component Gain (unsigned 13 bits, 0:4:9) Position */
 #define ISC_WB_G_RGR_RGAIN_Msk                (_UINT32_(0x1FFF) << ISC_WB_G_RGR_RGAIN_Pos)         /* (ISC_WB_G_RGR) Red Component Gain (unsigned 13 bits, 0:4:9) Mask */
-#define ISC_WB_G_RGR_RGAIN(value)             (ISC_WB_G_RGR_RGAIN_Msk & (_UINT32_(value) << ISC_WB_G_RGR_RGAIN_Pos)) /* Assigment of value for RGAIN in the ISC_WB_G_RGR register */
+#define ISC_WB_G_RGR_RGAIN(value)             (ISC_WB_G_RGR_RGAIN_Msk & (_UINT32_(value) << ISC_WB_G_RGR_RGAIN_Pos)) /* Assignment of value for RGAIN in the ISC_WB_G_RGR register */
 #define ISC_WB_G_RGR_GRGAIN_Pos               _UINT32_(16)                                         /* (ISC_WB_G_RGR) Green Component (Red row) Gain (unsigned 13 bits, 0:4:9) Position */
 #define ISC_WB_G_RGR_GRGAIN_Msk               (_UINT32_(0x1FFF) << ISC_WB_G_RGR_GRGAIN_Pos)        /* (ISC_WB_G_RGR) Green Component (Red row) Gain (unsigned 13 bits, 0:4:9) Mask */
-#define ISC_WB_G_RGR_GRGAIN(value)            (ISC_WB_G_RGR_GRGAIN_Msk & (_UINT32_(value) << ISC_WB_G_RGR_GRGAIN_Pos)) /* Assigment of value for GRGAIN in the ISC_WB_G_RGR register */
+#define ISC_WB_G_RGR_GRGAIN(value)            (ISC_WB_G_RGR_GRGAIN_Msk & (_UINT32_(value) << ISC_WB_G_RGR_GRGAIN_Pos)) /* Assignment of value for GRGAIN in the ISC_WB_G_RGR register */
 #define ISC_WB_G_RGR_Msk                      _UINT32_(0x1FFF1FFF)                                 /* (ISC_WB_G_RGR) Register Mask  */
 
 
@@ -868,10 +867,10 @@
 
 #define ISC_WB_G_BGB_BGAIN_Pos                _UINT32_(0)                                          /* (ISC_WB_G_BGB) Blue Component Gain (unsigned 13 bits, 0:4:9) Position */
 #define ISC_WB_G_BGB_BGAIN_Msk                (_UINT32_(0x1FFF) << ISC_WB_G_BGB_BGAIN_Pos)         /* (ISC_WB_G_BGB) Blue Component Gain (unsigned 13 bits, 0:4:9) Mask */
-#define ISC_WB_G_BGB_BGAIN(value)             (ISC_WB_G_BGB_BGAIN_Msk & (_UINT32_(value) << ISC_WB_G_BGB_BGAIN_Pos)) /* Assigment of value for BGAIN in the ISC_WB_G_BGB register */
+#define ISC_WB_G_BGB_BGAIN(value)             (ISC_WB_G_BGB_BGAIN_Msk & (_UINT32_(value) << ISC_WB_G_BGB_BGAIN_Pos)) /* Assignment of value for BGAIN in the ISC_WB_G_BGB register */
 #define ISC_WB_G_BGB_GBGAIN_Pos               _UINT32_(16)                                         /* (ISC_WB_G_BGB) Green Component (Blue Row) Gain (unsigned 13 bits, 0:4:9) Position */
 #define ISC_WB_G_BGB_GBGAIN_Msk               (_UINT32_(0x1FFF) << ISC_WB_G_BGB_GBGAIN_Pos)        /* (ISC_WB_G_BGB) Green Component (Blue Row) Gain (unsigned 13 bits, 0:4:9) Mask */
-#define ISC_WB_G_BGB_GBGAIN(value)            (ISC_WB_G_BGB_GBGAIN_Msk & (_UINT32_(value) << ISC_WB_G_BGB_GBGAIN_Pos)) /* Assigment of value for GBGAIN in the ISC_WB_G_BGB register */
+#define ISC_WB_G_BGB_GBGAIN(value)            (ISC_WB_G_BGB_GBGAIN_Msk & (_UINT32_(value) << ISC_WB_G_BGB_GBGAIN_Pos)) /* Assignment of value for GBGAIN in the ISC_WB_G_BGB register */
 #define ISC_WB_G_BGB_Msk                      _UINT32_(0x1FFF1FFF)                                 /* (ISC_WB_G_BGB) Register Mask  */
 
 
@@ -880,11 +879,11 @@
 
 #define ISC_CFA_CTRL_ENABLE_Pos               _UINT32_(0)                                          /* (ISC_CFA_CTRL) Color Filter Array Interpolation Enable Position */
 #define ISC_CFA_CTRL_ENABLE_Msk               (_UINT32_(0x1) << ISC_CFA_CTRL_ENABLE_Pos)           /* (ISC_CFA_CTRL) Color Filter Array Interpolation Enable Mask */
-#define ISC_CFA_CTRL_ENABLE(value)            (ISC_CFA_CTRL_ENABLE_Msk & (_UINT32_(value) << ISC_CFA_CTRL_ENABLE_Pos)) /* Assigment of value for ENABLE in the ISC_CFA_CTRL register */
+#define ISC_CFA_CTRL_ENABLE(value)            (ISC_CFA_CTRL_ENABLE_Msk & (_UINT32_(value) << ISC_CFA_CTRL_ENABLE_Pos)) /* Assignment of value for ENABLE in the ISC_CFA_CTRL register */
 #define   ISC_CFA_CTRL_ENABLE_0_Val           _UINT32_(0x0)                                        /* (ISC_CFA_CTRL) Color Filter Array Interpolation is disabled.  */
 #define   ISC_CFA_CTRL_ENABLE_1_Val           _UINT32_(0x1)                                        /* (ISC_CFA_CTRL) Color Filter Array Interpolation is enabled.  */
-#define ISC_CFA_CTRL_ENABLE_0                 (ISC_CFA_CTRL_ENABLE_0_Val << ISC_CFA_CTRL_ENABLE_Pos) /* (ISC_CFA_CTRL) Color Filter Array Interpolation is disabled. Position  */
-#define ISC_CFA_CTRL_ENABLE_1                 (ISC_CFA_CTRL_ENABLE_1_Val << ISC_CFA_CTRL_ENABLE_Pos) /* (ISC_CFA_CTRL) Color Filter Array Interpolation is enabled. Position  */
+#define ISC_CFA_CTRL_ENABLE_0                 (ISC_CFA_CTRL_ENABLE_0_Val << ISC_CFA_CTRL_ENABLE_Pos) /* (ISC_CFA_CTRL) Color Filter Array Interpolation is disabled. Position */
+#define ISC_CFA_CTRL_ENABLE_1                 (ISC_CFA_CTRL_ENABLE_1_Val << ISC_CFA_CTRL_ENABLE_Pos) /* (ISC_CFA_CTRL) Color Filter Array Interpolation is enabled. Position */
 #define ISC_CFA_CTRL_Msk                      _UINT32_(0x00000001)                                 /* (ISC_CFA_CTRL) Register Mask  */
 
 
@@ -893,31 +892,31 @@
 
 #define ISC_CFA_CFG_BAYCFG_Pos                _UINT32_(0)                                          /* (ISC_CFA_CFG) Bayer Color Filter Array Pattern Position */
 #define ISC_CFA_CFG_BAYCFG_Msk                (_UINT32_(0x3) << ISC_CFA_CFG_BAYCFG_Pos)            /* (ISC_CFA_CFG) Bayer Color Filter Array Pattern Mask */
-#define ISC_CFA_CFG_BAYCFG(value)             (ISC_CFA_CFG_BAYCFG_Msk & (_UINT32_(value) << ISC_CFA_CFG_BAYCFG_Pos)) /* Assigment of value for BAYCFG in the ISC_CFA_CFG register */
+#define ISC_CFA_CFG_BAYCFG(value)             (ISC_CFA_CFG_BAYCFG_Msk & (_UINT32_(value) << ISC_CFA_CFG_BAYCFG_Pos)) /* Assignment of value for BAYCFG in the ISC_CFA_CFG register */
 #define   ISC_CFA_CFG_BAYCFG_GRGR_Val         _UINT32_(0x0)                                        /* (ISC_CFA_CFG) Starting row configuration is G R G R (red row)  */
 #define   ISC_CFA_CFG_BAYCFG_RGRG_Val         _UINT32_(0x1)                                        /* (ISC_CFA_CFG) Starting row configuration is R G R G (red row  */
 #define   ISC_CFA_CFG_BAYCFG_GBGB_Val         _UINT32_(0x2)                                        /* (ISC_CFA_CFG) Starting row configuration is G B G B (blue row)  */
 #define   ISC_CFA_CFG_BAYCFG_BGBG_Val         _UINT32_(0x3)                                        /* (ISC_CFA_CFG) Starting row configuration is B G B G (blue row)  */
-#define ISC_CFA_CFG_BAYCFG_GRGR               (ISC_CFA_CFG_BAYCFG_GRGR_Val << ISC_CFA_CFG_BAYCFG_Pos) /* (ISC_CFA_CFG) Starting row configuration is G R G R (red row) Position  */
-#define ISC_CFA_CFG_BAYCFG_RGRG               (ISC_CFA_CFG_BAYCFG_RGRG_Val << ISC_CFA_CFG_BAYCFG_Pos) /* (ISC_CFA_CFG) Starting row configuration is R G R G (red row Position  */
-#define ISC_CFA_CFG_BAYCFG_GBGB               (ISC_CFA_CFG_BAYCFG_GBGB_Val << ISC_CFA_CFG_BAYCFG_Pos) /* (ISC_CFA_CFG) Starting row configuration is G B G B (blue row) Position  */
-#define ISC_CFA_CFG_BAYCFG_BGBG               (ISC_CFA_CFG_BAYCFG_BGBG_Val << ISC_CFA_CFG_BAYCFG_Pos) /* (ISC_CFA_CFG) Starting row configuration is B G B G (blue row) Position  */
+#define ISC_CFA_CFG_BAYCFG_GRGR               (ISC_CFA_CFG_BAYCFG_GRGR_Val << ISC_CFA_CFG_BAYCFG_Pos) /* (ISC_CFA_CFG) Starting row configuration is G R G R (red row) Position */
+#define ISC_CFA_CFG_BAYCFG_RGRG               (ISC_CFA_CFG_BAYCFG_RGRG_Val << ISC_CFA_CFG_BAYCFG_Pos) /* (ISC_CFA_CFG) Starting row configuration is R G R G (red row Position */
+#define ISC_CFA_CFG_BAYCFG_GBGB               (ISC_CFA_CFG_BAYCFG_GBGB_Val << ISC_CFA_CFG_BAYCFG_Pos) /* (ISC_CFA_CFG) Starting row configuration is G B G B (blue row) Position */
+#define ISC_CFA_CFG_BAYCFG_BGBG               (ISC_CFA_CFG_BAYCFG_BGBG_Val << ISC_CFA_CFG_BAYCFG_Pos) /* (ISC_CFA_CFG) Starting row configuration is B G B G (blue row) Position */
 #define ISC_CFA_CFG_EITPOL_Pos                _UINT32_(4)                                          /* (ISC_CFA_CFG) Edge Interpolation Position */
 #define ISC_CFA_CFG_EITPOL_Msk                (_UINT32_(0x1) << ISC_CFA_CFG_EITPOL_Pos)            /* (ISC_CFA_CFG) Edge Interpolation Mask */
-#define ISC_CFA_CFG_EITPOL(value)             (ISC_CFA_CFG_EITPOL_Msk & (_UINT32_(value) << ISC_CFA_CFG_EITPOL_Pos)) /* Assigment of value for EITPOL in the ISC_CFA_CFG register */
+#define ISC_CFA_CFG_EITPOL(value)             (ISC_CFA_CFG_EITPOL_Msk & (_UINT32_(value) << ISC_CFA_CFG_EITPOL_Pos)) /* Assignment of value for EITPOL in the ISC_CFA_CFG register */
 #define   ISC_CFA_CFG_EITPOL_0_Val            _UINT32_(0x0)                                        /* (ISC_CFA_CFG) Edges are not interpolated.  */
 #define   ISC_CFA_CFG_EITPOL_1_Val            _UINT32_(0x1)                                        /* (ISC_CFA_CFG) Edge interpolation is performed.  */
-#define ISC_CFA_CFG_EITPOL_0                  (ISC_CFA_CFG_EITPOL_0_Val << ISC_CFA_CFG_EITPOL_Pos) /* (ISC_CFA_CFG) Edges are not interpolated. Position  */
-#define ISC_CFA_CFG_EITPOL_1                  (ISC_CFA_CFG_EITPOL_1_Val << ISC_CFA_CFG_EITPOL_Pos) /* (ISC_CFA_CFG) Edge interpolation is performed. Position  */
+#define ISC_CFA_CFG_EITPOL_0                  (ISC_CFA_CFG_EITPOL_0_Val << ISC_CFA_CFG_EITPOL_Pos) /* (ISC_CFA_CFG) Edges are not interpolated. Position */
+#define ISC_CFA_CFG_EITPOL_1                  (ISC_CFA_CFG_EITPOL_1_Val << ISC_CFA_CFG_EITPOL_Pos) /* (ISC_CFA_CFG) Edge interpolation is performed. Position */
 #define ISC_CFA_CFG_EAL_Pos                   _UINT32_(10)                                         /* (ISC_CFA_CFG) Green Channel Edge Adaptive Level Position */
 #define ISC_CFA_CFG_EAL_Msk                   (_UINT32_(0x3) << ISC_CFA_CFG_EAL_Pos)               /* (ISC_CFA_CFG) Green Channel Edge Adaptive Level Mask */
-#define ISC_CFA_CFG_EAL(value)                (ISC_CFA_CFG_EAL_Msk & (_UINT32_(value) << ISC_CFA_CFG_EAL_Pos)) /* Assigment of value for EAL in the ISC_CFA_CFG register */
+#define ISC_CFA_CFG_EAL(value)                (ISC_CFA_CFG_EAL_Msk & (_UINT32_(value) << ISC_CFA_CFG_EAL_Pos)) /* Assignment of value for EAL in the ISC_CFA_CFG register */
 #define   ISC_CFA_CFG_EAL_GLINEAR_Val         _UINT32_(0x0)                                        /* (ISC_CFA_CFG) Green plane is linearly interpolated.  */
 #define   ISC_CFA_CFG_EAL_GMEAN_Val           _UINT32_(0x1)                                        /* (ISC_CFA_CFG) Green plane is the mean value between the linearly interpolated plane and adaptive method plane.  */
 #define   ISC_CFA_CFG_EAL_GADAPTIVE_Val       _UINT32_(0x2)                                        /* (ISC_CFA_CFG) Green plane is interpolated with edge adaptive method.  */
-#define ISC_CFA_CFG_EAL_GLINEAR               (ISC_CFA_CFG_EAL_GLINEAR_Val << ISC_CFA_CFG_EAL_Pos) /* (ISC_CFA_CFG) Green plane is linearly interpolated. Position  */
-#define ISC_CFA_CFG_EAL_GMEAN                 (ISC_CFA_CFG_EAL_GMEAN_Val << ISC_CFA_CFG_EAL_Pos)   /* (ISC_CFA_CFG) Green plane is the mean value between the linearly interpolated plane and adaptive method plane. Position  */
-#define ISC_CFA_CFG_EAL_GADAPTIVE             (ISC_CFA_CFG_EAL_GADAPTIVE_Val << ISC_CFA_CFG_EAL_Pos) /* (ISC_CFA_CFG) Green plane is interpolated with edge adaptive method. Position  */
+#define ISC_CFA_CFG_EAL_GLINEAR               (ISC_CFA_CFG_EAL_GLINEAR_Val << ISC_CFA_CFG_EAL_Pos) /* (ISC_CFA_CFG) Green plane is linearly interpolated. Position */
+#define ISC_CFA_CFG_EAL_GMEAN                 (ISC_CFA_CFG_EAL_GMEAN_Val << ISC_CFA_CFG_EAL_Pos)   /* (ISC_CFA_CFG) Green plane is the mean value between the linearly interpolated plane and adaptive method plane. Position */
+#define ISC_CFA_CFG_EAL_GADAPTIVE             (ISC_CFA_CFG_EAL_GADAPTIVE_Val << ISC_CFA_CFG_EAL_Pos) /* (ISC_CFA_CFG) Green plane is interpolated with edge adaptive method. Position */
 #define ISC_CFA_CFG_Msk                       _UINT32_(0x00000C13)                                 /* (ISC_CFA_CFG) Register Mask  */
 
 
@@ -926,11 +925,11 @@
 
 #define ISC_CC_CTRL_ENABLE_Pos                _UINT32_(0)                                          /* (ISC_CC_CTRL) Color Correction Enable Position */
 #define ISC_CC_CTRL_ENABLE_Msk                (_UINT32_(0x1) << ISC_CC_CTRL_ENABLE_Pos)            /* (ISC_CC_CTRL) Color Correction Enable Mask */
-#define ISC_CC_CTRL_ENABLE(value)             (ISC_CC_CTRL_ENABLE_Msk & (_UINT32_(value) << ISC_CC_CTRL_ENABLE_Pos)) /* Assigment of value for ENABLE in the ISC_CC_CTRL register */
+#define ISC_CC_CTRL_ENABLE(value)             (ISC_CC_CTRL_ENABLE_Msk & (_UINT32_(value) << ISC_CC_CTRL_ENABLE_Pos)) /* Assignment of value for ENABLE in the ISC_CC_CTRL register */
 #define   ISC_CC_CTRL_ENABLE_0_Val            _UINT32_(0x0)                                        /* (ISC_CC_CTRL) Color correction is disabled.  */
 #define   ISC_CC_CTRL_ENABLE_1_Val            _UINT32_(0x1)                                        /* (ISC_CC_CTRL) Color correction is enabled.  */
-#define ISC_CC_CTRL_ENABLE_0                  (ISC_CC_CTRL_ENABLE_0_Val << ISC_CC_CTRL_ENABLE_Pos) /* (ISC_CC_CTRL) Color correction is disabled. Position  */
-#define ISC_CC_CTRL_ENABLE_1                  (ISC_CC_CTRL_ENABLE_1_Val << ISC_CC_CTRL_ENABLE_Pos) /* (ISC_CC_CTRL) Color correction is enabled. Position  */
+#define ISC_CC_CTRL_ENABLE_0                  (ISC_CC_CTRL_ENABLE_0_Val << ISC_CC_CTRL_ENABLE_Pos) /* (ISC_CC_CTRL) Color correction is disabled. Position */
+#define ISC_CC_CTRL_ENABLE_1                  (ISC_CC_CTRL_ENABLE_1_Val << ISC_CC_CTRL_ENABLE_Pos) /* (ISC_CC_CTRL) Color correction is enabled. Position */
 #define ISC_CC_CTRL_Msk                       _UINT32_(0x00000001)                                 /* (ISC_CC_CTRL) Register Mask  */
 
 
@@ -939,10 +938,10 @@
 
 #define ISC_CC_RR_RG_RRGAIN_Pos               _UINT32_(0)                                          /* (ISC_CC_RR_RG) Red Gain for Red Component (signed 12 bits, 1:3:8) Position */
 #define ISC_CC_RR_RG_RRGAIN_Msk               (_UINT32_(0xFFF) << ISC_CC_RR_RG_RRGAIN_Pos)         /* (ISC_CC_RR_RG) Red Gain for Red Component (signed 12 bits, 1:3:8) Mask */
-#define ISC_CC_RR_RG_RRGAIN(value)            (ISC_CC_RR_RG_RRGAIN_Msk & (_UINT32_(value) << ISC_CC_RR_RG_RRGAIN_Pos)) /* Assigment of value for RRGAIN in the ISC_CC_RR_RG register */
+#define ISC_CC_RR_RG_RRGAIN(value)            (ISC_CC_RR_RG_RRGAIN_Msk & (_UINT32_(value) << ISC_CC_RR_RG_RRGAIN_Pos)) /* Assignment of value for RRGAIN in the ISC_CC_RR_RG register */
 #define ISC_CC_RR_RG_RGGAIN_Pos               _UINT32_(16)                                         /* (ISC_CC_RR_RG) Green Gain for Red Component (signed 12 bits, 1:3:8) Position */
 #define ISC_CC_RR_RG_RGGAIN_Msk               (_UINT32_(0xFFF) << ISC_CC_RR_RG_RGGAIN_Pos)         /* (ISC_CC_RR_RG) Green Gain for Red Component (signed 12 bits, 1:3:8) Mask */
-#define ISC_CC_RR_RG_RGGAIN(value)            (ISC_CC_RR_RG_RGGAIN_Msk & (_UINT32_(value) << ISC_CC_RR_RG_RGGAIN_Pos)) /* Assigment of value for RGGAIN in the ISC_CC_RR_RG register */
+#define ISC_CC_RR_RG_RGGAIN(value)            (ISC_CC_RR_RG_RGGAIN_Msk & (_UINT32_(value) << ISC_CC_RR_RG_RGGAIN_Pos)) /* Assignment of value for RGGAIN in the ISC_CC_RR_RG register */
 #define ISC_CC_RR_RG_Msk                      _UINT32_(0x0FFF0FFF)                                 /* (ISC_CC_RR_RG) Register Mask  */
 
 
@@ -951,10 +950,10 @@
 
 #define ISC_CC_RB_OR_RBGAIN_Pos               _UINT32_(0)                                          /* (ISC_CC_RB_OR) Blue Gain for Red Component (signed 12 bits, 1:3:8) Position */
 #define ISC_CC_RB_OR_RBGAIN_Msk               (_UINT32_(0xFFF) << ISC_CC_RB_OR_RBGAIN_Pos)         /* (ISC_CC_RB_OR) Blue Gain for Red Component (signed 12 bits, 1:3:8) Mask */
-#define ISC_CC_RB_OR_RBGAIN(value)            (ISC_CC_RB_OR_RBGAIN_Msk & (_UINT32_(value) << ISC_CC_RB_OR_RBGAIN_Pos)) /* Assigment of value for RBGAIN in the ISC_CC_RB_OR register */
+#define ISC_CC_RB_OR_RBGAIN(value)            (ISC_CC_RB_OR_RBGAIN_Msk & (_UINT32_(value) << ISC_CC_RB_OR_RBGAIN_Pos)) /* Assignment of value for RBGAIN in the ISC_CC_RB_OR register */
 #define ISC_CC_RB_OR_ROFST_Pos                _UINT32_(16)                                         /* (ISC_CC_RB_OR) Red Component Offset (signed 13 bits, 1:12:0) Position */
 #define ISC_CC_RB_OR_ROFST_Msk                (_UINT32_(0x1FFF) << ISC_CC_RB_OR_ROFST_Pos)         /* (ISC_CC_RB_OR) Red Component Offset (signed 13 bits, 1:12:0) Mask */
-#define ISC_CC_RB_OR_ROFST(value)             (ISC_CC_RB_OR_ROFST_Msk & (_UINT32_(value) << ISC_CC_RB_OR_ROFST_Pos)) /* Assigment of value for ROFST in the ISC_CC_RB_OR register */
+#define ISC_CC_RB_OR_ROFST(value)             (ISC_CC_RB_OR_ROFST_Msk & (_UINT32_(value) << ISC_CC_RB_OR_ROFST_Pos)) /* Assignment of value for ROFST in the ISC_CC_RB_OR register */
 #define ISC_CC_RB_OR_Msk                      _UINT32_(0x1FFF0FFF)                                 /* (ISC_CC_RB_OR) Register Mask  */
 
 
@@ -963,10 +962,10 @@
 
 #define ISC_CC_GR_GG_GRGAIN_Pos               _UINT32_(0)                                          /* (ISC_CC_GR_GG) Red Gain for Green Component (signed 12 bits, 1:3:8) Position */
 #define ISC_CC_GR_GG_GRGAIN_Msk               (_UINT32_(0xFFF) << ISC_CC_GR_GG_GRGAIN_Pos)         /* (ISC_CC_GR_GG) Red Gain for Green Component (signed 12 bits, 1:3:8) Mask */
-#define ISC_CC_GR_GG_GRGAIN(value)            (ISC_CC_GR_GG_GRGAIN_Msk & (_UINT32_(value) << ISC_CC_GR_GG_GRGAIN_Pos)) /* Assigment of value for GRGAIN in the ISC_CC_GR_GG register */
+#define ISC_CC_GR_GG_GRGAIN(value)            (ISC_CC_GR_GG_GRGAIN_Msk & (_UINT32_(value) << ISC_CC_GR_GG_GRGAIN_Pos)) /* Assignment of value for GRGAIN in the ISC_CC_GR_GG register */
 #define ISC_CC_GR_GG_GGGAIN_Pos               _UINT32_(16)                                         /* (ISC_CC_GR_GG) Green Gain for Green Component (signed 12 bits, 1:3:8) Position */
 #define ISC_CC_GR_GG_GGGAIN_Msk               (_UINT32_(0xFFF) << ISC_CC_GR_GG_GGGAIN_Pos)         /* (ISC_CC_GR_GG) Green Gain for Green Component (signed 12 bits, 1:3:8) Mask */
-#define ISC_CC_GR_GG_GGGAIN(value)            (ISC_CC_GR_GG_GGGAIN_Msk & (_UINT32_(value) << ISC_CC_GR_GG_GGGAIN_Pos)) /* Assigment of value for GGGAIN in the ISC_CC_GR_GG register */
+#define ISC_CC_GR_GG_GGGAIN(value)            (ISC_CC_GR_GG_GGGAIN_Msk & (_UINT32_(value) << ISC_CC_GR_GG_GGGAIN_Pos)) /* Assignment of value for GGGAIN in the ISC_CC_GR_GG register */
 #define ISC_CC_GR_GG_Msk                      _UINT32_(0x0FFF0FFF)                                 /* (ISC_CC_GR_GG) Register Mask  */
 
 
@@ -975,10 +974,10 @@
 
 #define ISC_CC_GB_OG_GBGAIN_Pos               _UINT32_(0)                                          /* (ISC_CC_GB_OG) Blue Gain for Green Component (signed 12 bits, 1:3:8) Position */
 #define ISC_CC_GB_OG_GBGAIN_Msk               (_UINT32_(0xFFF) << ISC_CC_GB_OG_GBGAIN_Pos)         /* (ISC_CC_GB_OG) Blue Gain for Green Component (signed 12 bits, 1:3:8) Mask */
-#define ISC_CC_GB_OG_GBGAIN(value)            (ISC_CC_GB_OG_GBGAIN_Msk & (_UINT32_(value) << ISC_CC_GB_OG_GBGAIN_Pos)) /* Assigment of value for GBGAIN in the ISC_CC_GB_OG register */
-#define ISC_CC_GB_OG_ROFST_Pos                _UINT32_(16)                                         /* (ISC_CC_GB_OG) Green Component Offset (signed 13 bits, 1:12:0) Position */
-#define ISC_CC_GB_OG_ROFST_Msk                (_UINT32_(0x1FFF) << ISC_CC_GB_OG_ROFST_Pos)         /* (ISC_CC_GB_OG) Green Component Offset (signed 13 bits, 1:12:0) Mask */
-#define ISC_CC_GB_OG_ROFST(value)             (ISC_CC_GB_OG_ROFST_Msk & (_UINT32_(value) << ISC_CC_GB_OG_ROFST_Pos)) /* Assigment of value for ROFST in the ISC_CC_GB_OG register */
+#define ISC_CC_GB_OG_GBGAIN(value)            (ISC_CC_GB_OG_GBGAIN_Msk & (_UINT32_(value) << ISC_CC_GB_OG_GBGAIN_Pos)) /* Assignment of value for GBGAIN in the ISC_CC_GB_OG register */
+#define ISC_CC_GB_OG_GOFST_Pos                _UINT32_(16)                                         /* (ISC_CC_GB_OG) Green Component Offset (signed 13 bits, 1:12:0) Position */
+#define ISC_CC_GB_OG_GOFST_Msk                (_UINT32_(0x1FFF) << ISC_CC_GB_OG_GOFST_Pos)         /* (ISC_CC_GB_OG) Green Component Offset (signed 13 bits, 1:12:0) Mask */
+#define ISC_CC_GB_OG_GOFST(value)             (ISC_CC_GB_OG_GOFST_Msk & (_UINT32_(value) << ISC_CC_GB_OG_GOFST_Pos)) /* Assignment of value for GOFST in the ISC_CC_GB_OG register */
 #define ISC_CC_GB_OG_Msk                      _UINT32_(0x1FFF0FFF)                                 /* (ISC_CC_GB_OG) Register Mask  */
 
 
@@ -987,10 +986,10 @@
 
 #define ISC_CC_BR_BG_BRGAIN_Pos               _UINT32_(0)                                          /* (ISC_CC_BR_BG) Red Gain for Blue Component (signed 12 bits, 1:3:8) Position */
 #define ISC_CC_BR_BG_BRGAIN_Msk               (_UINT32_(0xFFF) << ISC_CC_BR_BG_BRGAIN_Pos)         /* (ISC_CC_BR_BG) Red Gain for Blue Component (signed 12 bits, 1:3:8) Mask */
-#define ISC_CC_BR_BG_BRGAIN(value)            (ISC_CC_BR_BG_BRGAIN_Msk & (_UINT32_(value) << ISC_CC_BR_BG_BRGAIN_Pos)) /* Assigment of value for BRGAIN in the ISC_CC_BR_BG register */
+#define ISC_CC_BR_BG_BRGAIN(value)            (ISC_CC_BR_BG_BRGAIN_Msk & (_UINT32_(value) << ISC_CC_BR_BG_BRGAIN_Pos)) /* Assignment of value for BRGAIN in the ISC_CC_BR_BG register */
 #define ISC_CC_BR_BG_BGGAIN_Pos               _UINT32_(16)                                         /* (ISC_CC_BR_BG) Green Gain for Blue Component (signed 12 bits, 1:3:8) Position */
 #define ISC_CC_BR_BG_BGGAIN_Msk               (_UINT32_(0xFFF) << ISC_CC_BR_BG_BGGAIN_Pos)         /* (ISC_CC_BR_BG) Green Gain for Blue Component (signed 12 bits, 1:3:8) Mask */
-#define ISC_CC_BR_BG_BGGAIN(value)            (ISC_CC_BR_BG_BGGAIN_Msk & (_UINT32_(value) << ISC_CC_BR_BG_BGGAIN_Pos)) /* Assigment of value for BGGAIN in the ISC_CC_BR_BG register */
+#define ISC_CC_BR_BG_BGGAIN(value)            (ISC_CC_BR_BG_BGGAIN_Msk & (_UINT32_(value) << ISC_CC_BR_BG_BGGAIN_Pos)) /* Assignment of value for BGGAIN in the ISC_CC_BR_BG register */
 #define ISC_CC_BR_BG_Msk                      _UINT32_(0x0FFF0FFF)                                 /* (ISC_CC_BR_BG) Register Mask  */
 
 
@@ -999,10 +998,10 @@
 
 #define ISC_CC_BB_OB_BBGAIN_Pos               _UINT32_(0)                                          /* (ISC_CC_BB_OB) Blue Gain for Blue Component (signed 12 bits, 1:3:8) Position */
 #define ISC_CC_BB_OB_BBGAIN_Msk               (_UINT32_(0xFFF) << ISC_CC_BB_OB_BBGAIN_Pos)         /* (ISC_CC_BB_OB) Blue Gain for Blue Component (signed 12 bits, 1:3:8) Mask */
-#define ISC_CC_BB_OB_BBGAIN(value)            (ISC_CC_BB_OB_BBGAIN_Msk & (_UINT32_(value) << ISC_CC_BB_OB_BBGAIN_Pos)) /* Assigment of value for BBGAIN in the ISC_CC_BB_OB register */
+#define ISC_CC_BB_OB_BBGAIN(value)            (ISC_CC_BB_OB_BBGAIN_Msk & (_UINT32_(value) << ISC_CC_BB_OB_BBGAIN_Pos)) /* Assignment of value for BBGAIN in the ISC_CC_BB_OB register */
 #define ISC_CC_BB_OB_BOFST_Pos                _UINT32_(16)                                         /* (ISC_CC_BB_OB) Blue Component Offset (signed 13 bits, 1:12:0) Position */
 #define ISC_CC_BB_OB_BOFST_Msk                (_UINT32_(0x1FFF) << ISC_CC_BB_OB_BOFST_Pos)         /* (ISC_CC_BB_OB) Blue Component Offset (signed 13 bits, 1:12:0) Mask */
-#define ISC_CC_BB_OB_BOFST(value)             (ISC_CC_BB_OB_BOFST_Msk & (_UINT32_(value) << ISC_CC_BB_OB_BOFST_Pos)) /* Assigment of value for BOFST in the ISC_CC_BB_OB register */
+#define ISC_CC_BB_OB_BOFST(value)             (ISC_CC_BB_OB_BOFST_Msk & (_UINT32_(value) << ISC_CC_BB_OB_BOFST_Pos)) /* Assignment of value for BOFST in the ISC_CC_BB_OB register */
 #define ISC_CC_BB_OB_Msk                      _UINT32_(0x1FFF0FFF)                                 /* (ISC_CC_BB_OB) Register Mask  */
 
 
@@ -1011,39 +1010,39 @@
 
 #define ISC_GAM_CTRL_ENABLE_Pos               _UINT32_(0)                                          /* (ISC_GAM_CTRL) Gamma Correction Enable Position */
 #define ISC_GAM_CTRL_ENABLE_Msk               (_UINT32_(0x1) << ISC_GAM_CTRL_ENABLE_Pos)           /* (ISC_GAM_CTRL) Gamma Correction Enable Mask */
-#define ISC_GAM_CTRL_ENABLE(value)            (ISC_GAM_CTRL_ENABLE_Msk & (_UINT32_(value) << ISC_GAM_CTRL_ENABLE_Pos)) /* Assigment of value for ENABLE in the ISC_GAM_CTRL register */
+#define ISC_GAM_CTRL_ENABLE(value)            (ISC_GAM_CTRL_ENABLE_Msk & (_UINT32_(value) << ISC_GAM_CTRL_ENABLE_Pos)) /* Assignment of value for ENABLE in the ISC_GAM_CTRL register */
 #define   ISC_GAM_CTRL_ENABLE_0_Val           _UINT32_(0x0)                                        /* (ISC_GAM_CTRL) Gamma correction is disabled.  */
 #define   ISC_GAM_CTRL_ENABLE_1_Val           _UINT32_(0x1)                                        /* (ISC_GAM_CTRL) Gamma correction is enabled.  */
-#define ISC_GAM_CTRL_ENABLE_0                 (ISC_GAM_CTRL_ENABLE_0_Val << ISC_GAM_CTRL_ENABLE_Pos) /* (ISC_GAM_CTRL) Gamma correction is disabled. Position  */
-#define ISC_GAM_CTRL_ENABLE_1                 (ISC_GAM_CTRL_ENABLE_1_Val << ISC_GAM_CTRL_ENABLE_Pos) /* (ISC_GAM_CTRL) Gamma correction is enabled. Position  */
+#define ISC_GAM_CTRL_ENABLE_0                 (ISC_GAM_CTRL_ENABLE_0_Val << ISC_GAM_CTRL_ENABLE_Pos) /* (ISC_GAM_CTRL) Gamma correction is disabled. Position */
+#define ISC_GAM_CTRL_ENABLE_1                 (ISC_GAM_CTRL_ENABLE_1_Val << ISC_GAM_CTRL_ENABLE_Pos) /* (ISC_GAM_CTRL) Gamma correction is enabled. Position */
 #define ISC_GAM_CTRL_BENABLE_Pos              _UINT32_(1)                                          /* (ISC_GAM_CTRL) Gamma Correction Enable for B Channel Position */
 #define ISC_GAM_CTRL_BENABLE_Msk              (_UINT32_(0x1) << ISC_GAM_CTRL_BENABLE_Pos)          /* (ISC_GAM_CTRL) Gamma Correction Enable for B Channel Mask */
-#define ISC_GAM_CTRL_BENABLE(value)           (ISC_GAM_CTRL_BENABLE_Msk & (_UINT32_(value) << ISC_GAM_CTRL_BENABLE_Pos)) /* Assigment of value for BENABLE in the ISC_GAM_CTRL register */
+#define ISC_GAM_CTRL_BENABLE(value)           (ISC_GAM_CTRL_BENABLE_Msk & (_UINT32_(value) << ISC_GAM_CTRL_BENABLE_Pos)) /* Assignment of value for BENABLE in the ISC_GAM_CTRL register */
 #define   ISC_GAM_CTRL_BENABLE_0_Val          _UINT32_(0x0)                                        /* (ISC_GAM_CTRL) 12-bit to 10-bit compression is performed skipping two bits.  */
 #define   ISC_GAM_CTRL_BENABLE_1_Val          _UINT32_(0x1)                                        /* (ISC_GAM_CTRL) Piecewise interpolation is used to perform 112-bit to 10-bit compression for the blue channel.  */
-#define ISC_GAM_CTRL_BENABLE_0                (ISC_GAM_CTRL_BENABLE_0_Val << ISC_GAM_CTRL_BENABLE_Pos) /* (ISC_GAM_CTRL) 12-bit to 10-bit compression is performed skipping two bits. Position  */
-#define ISC_GAM_CTRL_BENABLE_1                (ISC_GAM_CTRL_BENABLE_1_Val << ISC_GAM_CTRL_BENABLE_Pos) /* (ISC_GAM_CTRL) Piecewise interpolation is used to perform 112-bit to 10-bit compression for the blue channel. Position  */
+#define ISC_GAM_CTRL_BENABLE_0                (ISC_GAM_CTRL_BENABLE_0_Val << ISC_GAM_CTRL_BENABLE_Pos) /* (ISC_GAM_CTRL) 12-bit to 10-bit compression is performed skipping two bits. Position */
+#define ISC_GAM_CTRL_BENABLE_1                (ISC_GAM_CTRL_BENABLE_1_Val << ISC_GAM_CTRL_BENABLE_Pos) /* (ISC_GAM_CTRL) Piecewise interpolation is used to perform 112-bit to 10-bit compression for the blue channel. Position */
 #define ISC_GAM_CTRL_GENABLE_Pos              _UINT32_(2)                                          /* (ISC_GAM_CTRL) Gamma Correction Enable for G Channel Position */
 #define ISC_GAM_CTRL_GENABLE_Msk              (_UINT32_(0x1) << ISC_GAM_CTRL_GENABLE_Pos)          /* (ISC_GAM_CTRL) Gamma Correction Enable for G Channel Mask */
-#define ISC_GAM_CTRL_GENABLE(value)           (ISC_GAM_CTRL_GENABLE_Msk & (_UINT32_(value) << ISC_GAM_CTRL_GENABLE_Pos)) /* Assigment of value for GENABLE in the ISC_GAM_CTRL register */
+#define ISC_GAM_CTRL_GENABLE(value)           (ISC_GAM_CTRL_GENABLE_Msk & (_UINT32_(value) << ISC_GAM_CTRL_GENABLE_Pos)) /* Assignment of value for GENABLE in the ISC_GAM_CTRL register */
 #define   ISC_GAM_CTRL_GENABLE_0_Val          _UINT32_(0x0)                                        /* (ISC_GAM_CTRL) 12-bit to 10-bit compression is performed skipping two bits.  */
 #define   ISC_GAM_CTRL_GENABLE_1_Val          _UINT32_(0x1)                                        /* (ISC_GAM_CTRL) Piecewise interpolation is used to perform 12-bit to 10-bit compression for the green channel.  */
-#define ISC_GAM_CTRL_GENABLE_0                (ISC_GAM_CTRL_GENABLE_0_Val << ISC_GAM_CTRL_GENABLE_Pos) /* (ISC_GAM_CTRL) 12-bit to 10-bit compression is performed skipping two bits. Position  */
-#define ISC_GAM_CTRL_GENABLE_1                (ISC_GAM_CTRL_GENABLE_1_Val << ISC_GAM_CTRL_GENABLE_Pos) /* (ISC_GAM_CTRL) Piecewise interpolation is used to perform 12-bit to 10-bit compression for the green channel. Position  */
+#define ISC_GAM_CTRL_GENABLE_0                (ISC_GAM_CTRL_GENABLE_0_Val << ISC_GAM_CTRL_GENABLE_Pos) /* (ISC_GAM_CTRL) 12-bit to 10-bit compression is performed skipping two bits. Position */
+#define ISC_GAM_CTRL_GENABLE_1                (ISC_GAM_CTRL_GENABLE_1_Val << ISC_GAM_CTRL_GENABLE_Pos) /* (ISC_GAM_CTRL) Piecewise interpolation is used to perform 12-bit to 10-bit compression for the green channel. Position */
 #define ISC_GAM_CTRL_RENABLE_Pos              _UINT32_(3)                                          /* (ISC_GAM_CTRL) Gamma Correction Enable for R Channel Position */
 #define ISC_GAM_CTRL_RENABLE_Msk              (_UINT32_(0x1) << ISC_GAM_CTRL_RENABLE_Pos)          /* (ISC_GAM_CTRL) Gamma Correction Enable for R Channel Mask */
-#define ISC_GAM_CTRL_RENABLE(value)           (ISC_GAM_CTRL_RENABLE_Msk & (_UINT32_(value) << ISC_GAM_CTRL_RENABLE_Pos)) /* Assigment of value for RENABLE in the ISC_GAM_CTRL register */
+#define ISC_GAM_CTRL_RENABLE(value)           (ISC_GAM_CTRL_RENABLE_Msk & (_UINT32_(value) << ISC_GAM_CTRL_RENABLE_Pos)) /* Assignment of value for RENABLE in the ISC_GAM_CTRL register */
 #define   ISC_GAM_CTRL_RENABLE_0_Val          _UINT32_(0x0)                                        /* (ISC_GAM_CTRL) 12-bit to 10-bit compression is performed skipping two bits.  */
 #define   ISC_GAM_CTRL_RENABLE_1_Val          _UINT32_(0x1)                                        /* (ISC_GAM_CTRL) Piecewise interpolation is used to perform 12-bit to 10-bit compression for the red channel.  */
-#define ISC_GAM_CTRL_RENABLE_0                (ISC_GAM_CTRL_RENABLE_0_Val << ISC_GAM_CTRL_RENABLE_Pos) /* (ISC_GAM_CTRL) 12-bit to 10-bit compression is performed skipping two bits. Position  */
-#define ISC_GAM_CTRL_RENABLE_1                (ISC_GAM_CTRL_RENABLE_1_Val << ISC_GAM_CTRL_RENABLE_Pos) /* (ISC_GAM_CTRL) Piecewise interpolation is used to perform 12-bit to 10-bit compression for the red channel. Position  */
+#define ISC_GAM_CTRL_RENABLE_0                (ISC_GAM_CTRL_RENABLE_0_Val << ISC_GAM_CTRL_RENABLE_Pos) /* (ISC_GAM_CTRL) 12-bit to 10-bit compression is performed skipping two bits. Position */
+#define ISC_GAM_CTRL_RENABLE_1                (ISC_GAM_CTRL_RENABLE_1_Val << ISC_GAM_CTRL_RENABLE_Pos) /* (ISC_GAM_CTRL) Piecewise interpolation is used to perform 12-bit to 10-bit compression for the red channel. Position */
 #define ISC_GAM_CTRL_BIPART_Pos               _UINT32_(4)                                          /* (ISC_GAM_CTRL) Bipartite Table Configuration Position */
 #define ISC_GAM_CTRL_BIPART_Msk               (_UINT32_(0x1) << ISC_GAM_CTRL_BIPART_Pos)           /* (ISC_GAM_CTRL) Bipartite Table Configuration Mask */
-#define ISC_GAM_CTRL_BIPART(value)            (ISC_GAM_CTRL_BIPART_Msk & (_UINT32_(value) << ISC_GAM_CTRL_BIPART_Pos)) /* Assigment of value for BIPART in the ISC_GAM_CTRL register */
+#define ISC_GAM_CTRL_BIPART(value)            (ISC_GAM_CTRL_BIPART_Msk & (_UINT32_(value) << ISC_GAM_CTRL_BIPART_Pos)) /* Assignment of value for BIPART in the ISC_GAM_CTRL register */
 #define   ISC_GAM_CTRL_BIPART_0_Val           _UINT32_(0x0)                                        /* (ISC_GAM_CTRL) Bipartite table is disabled. There are 64 points of interpolation from 0 to 4095.  */
 #define   ISC_GAM_CTRL_BIPART_1_Val           _UINT32_(0x1)                                        /* (ISC_GAM_CTRL) Bipartite table is enabled. There are 32 points of interpolation (spacing is 8) from 0 to 255, then there are 30 points of interpolation from 256 to 4095.  */
-#define ISC_GAM_CTRL_BIPART_0                 (ISC_GAM_CTRL_BIPART_0_Val << ISC_GAM_CTRL_BIPART_Pos) /* (ISC_GAM_CTRL) Bipartite table is disabled. There are 64 points of interpolation from 0 to 4095. Position  */
-#define ISC_GAM_CTRL_BIPART_1                 (ISC_GAM_CTRL_BIPART_1_Val << ISC_GAM_CTRL_BIPART_Pos) /* (ISC_GAM_CTRL) Bipartite table is enabled. There are 32 points of interpolation (spacing is 8) from 0 to 255, then there are 30 points of interpolation from 256 to 4095. Position  */
+#define ISC_GAM_CTRL_BIPART_0                 (ISC_GAM_CTRL_BIPART_0_Val << ISC_GAM_CTRL_BIPART_Pos) /* (ISC_GAM_CTRL) Bipartite table is disabled. There are 64 points of interpolation from 0 to 4095. Position */
+#define ISC_GAM_CTRL_BIPART_1                 (ISC_GAM_CTRL_BIPART_1_Val << ISC_GAM_CTRL_BIPART_Pos) /* (ISC_GAM_CTRL) Bipartite table is enabled. There are 32 points of interpolation (spacing is 8) from 0 to 255, then there are 30 points of interpolation from 256 to 4095. Position */
 #define ISC_GAM_CTRL_Msk                      _UINT32_(0x0000001F)                                 /* (ISC_GAM_CTRL) Register Mask  */
 
 
@@ -1052,10 +1051,10 @@
 
 #define ISC_GAM_BENTRY_BSLOPE_Pos             _UINT32_(0)                                          /* (ISC_GAM_BENTRY) Blue Color Slope for Piecewise Interpolation (signed 10 bits 1:3:6) Position */
 #define ISC_GAM_BENTRY_BSLOPE_Msk             (_UINT32_(0x3FF) << ISC_GAM_BENTRY_BSLOPE_Pos)       /* (ISC_GAM_BENTRY) Blue Color Slope for Piecewise Interpolation (signed 10 bits 1:3:6) Mask */
-#define ISC_GAM_BENTRY_BSLOPE(value)          (ISC_GAM_BENTRY_BSLOPE_Msk & (_UINT32_(value) << ISC_GAM_BENTRY_BSLOPE_Pos)) /* Assigment of value for BSLOPE in the ISC_GAM_BENTRY register */
+#define ISC_GAM_BENTRY_BSLOPE(value)          (ISC_GAM_BENTRY_BSLOPE_Msk & (_UINT32_(value) << ISC_GAM_BENTRY_BSLOPE_Pos)) /* Assignment of value for BSLOPE in the ISC_GAM_BENTRY register */
 #define ISC_GAM_BENTRY_BCONSTANT_Pos          _UINT32_(16)                                         /* (ISC_GAM_BENTRY) Blue Color Constant for Piecewise Interpolation (unsigned 10 bits 0:10:0) Position */
 #define ISC_GAM_BENTRY_BCONSTANT_Msk          (_UINT32_(0x3FF) << ISC_GAM_BENTRY_BCONSTANT_Pos)    /* (ISC_GAM_BENTRY) Blue Color Constant for Piecewise Interpolation (unsigned 10 bits 0:10:0) Mask */
-#define ISC_GAM_BENTRY_BCONSTANT(value)       (ISC_GAM_BENTRY_BCONSTANT_Msk & (_UINT32_(value) << ISC_GAM_BENTRY_BCONSTANT_Pos)) /* Assigment of value for BCONSTANT in the ISC_GAM_BENTRY register */
+#define ISC_GAM_BENTRY_BCONSTANT(value)       (ISC_GAM_BENTRY_BCONSTANT_Msk & (_UINT32_(value) << ISC_GAM_BENTRY_BCONSTANT_Pos)) /* Assignment of value for BCONSTANT in the ISC_GAM_BENTRY register */
 #define ISC_GAM_BENTRY_Msk                    _UINT32_(0x03FF03FF)                                 /* (ISC_GAM_BENTRY) Register Mask  */
 
 
@@ -1064,10 +1063,10 @@
 
 #define ISC_GAM_GENTRY_GSLOPE_Pos             _UINT32_(0)                                          /* (ISC_GAM_GENTRY) Green Color Slope for Piecewise Interpolation (signed 10 bits 1:3:6) Position */
 #define ISC_GAM_GENTRY_GSLOPE_Msk             (_UINT32_(0x3FF) << ISC_GAM_GENTRY_GSLOPE_Pos)       /* (ISC_GAM_GENTRY) Green Color Slope for Piecewise Interpolation (signed 10 bits 1:3:6) Mask */
-#define ISC_GAM_GENTRY_GSLOPE(value)          (ISC_GAM_GENTRY_GSLOPE_Msk & (_UINT32_(value) << ISC_GAM_GENTRY_GSLOPE_Pos)) /* Assigment of value for GSLOPE in the ISC_GAM_GENTRY register */
+#define ISC_GAM_GENTRY_GSLOPE(value)          (ISC_GAM_GENTRY_GSLOPE_Msk & (_UINT32_(value) << ISC_GAM_GENTRY_GSLOPE_Pos)) /* Assignment of value for GSLOPE in the ISC_GAM_GENTRY register */
 #define ISC_GAM_GENTRY_GCONSTANT_Pos          _UINT32_(16)                                         /* (ISC_GAM_GENTRY) Green Color Constant for Piecewise Interpolation (unsigned 10 bits 0:10:0) Position */
 #define ISC_GAM_GENTRY_GCONSTANT_Msk          (_UINT32_(0x3FF) << ISC_GAM_GENTRY_GCONSTANT_Pos)    /* (ISC_GAM_GENTRY) Green Color Constant for Piecewise Interpolation (unsigned 10 bits 0:10:0) Mask */
-#define ISC_GAM_GENTRY_GCONSTANT(value)       (ISC_GAM_GENTRY_GCONSTANT_Msk & (_UINT32_(value) << ISC_GAM_GENTRY_GCONSTANT_Pos)) /* Assigment of value for GCONSTANT in the ISC_GAM_GENTRY register */
+#define ISC_GAM_GENTRY_GCONSTANT(value)       (ISC_GAM_GENTRY_GCONSTANT_Msk & (_UINT32_(value) << ISC_GAM_GENTRY_GCONSTANT_Pos)) /* Assignment of value for GCONSTANT in the ISC_GAM_GENTRY register */
 #define ISC_GAM_GENTRY_Msk                    _UINT32_(0x03FF03FF)                                 /* (ISC_GAM_GENTRY) Register Mask  */
 
 
@@ -1076,10 +1075,10 @@
 
 #define ISC_GAM_RENTRY_RSLOPE_Pos             _UINT32_(0)                                          /* (ISC_GAM_RENTRY) Red Color Slope for Piecewise Interpolation (signed 10 bits 1:3:6) Position */
 #define ISC_GAM_RENTRY_RSLOPE_Msk             (_UINT32_(0x3FF) << ISC_GAM_RENTRY_RSLOPE_Pos)       /* (ISC_GAM_RENTRY) Red Color Slope for Piecewise Interpolation (signed 10 bits 1:3:6) Mask */
-#define ISC_GAM_RENTRY_RSLOPE(value)          (ISC_GAM_RENTRY_RSLOPE_Msk & (_UINT32_(value) << ISC_GAM_RENTRY_RSLOPE_Pos)) /* Assigment of value for RSLOPE in the ISC_GAM_RENTRY register */
+#define ISC_GAM_RENTRY_RSLOPE(value)          (ISC_GAM_RENTRY_RSLOPE_Msk & (_UINT32_(value) << ISC_GAM_RENTRY_RSLOPE_Pos)) /* Assignment of value for RSLOPE in the ISC_GAM_RENTRY register */
 #define ISC_GAM_RENTRY_RCONSTANT_Pos          _UINT32_(16)                                         /* (ISC_GAM_RENTRY) Red Color Constant for Piecewise Interpolation (unsigned 10 bits 0:10:0) Position */
 #define ISC_GAM_RENTRY_RCONSTANT_Msk          (_UINT32_(0x3FF) << ISC_GAM_RENTRY_RCONSTANT_Pos)    /* (ISC_GAM_RENTRY) Red Color Constant for Piecewise Interpolation (unsigned 10 bits 0:10:0) Mask */
-#define ISC_GAM_RENTRY_RCONSTANT(value)       (ISC_GAM_RENTRY_RCONSTANT_Msk & (_UINT32_(value) << ISC_GAM_RENTRY_RCONSTANT_Pos)) /* Assigment of value for RCONSTANT in the ISC_GAM_RENTRY register */
+#define ISC_GAM_RENTRY_RCONSTANT(value)       (ISC_GAM_RENTRY_RCONSTANT_Msk & (_UINT32_(value) << ISC_GAM_RENTRY_RCONSTANT_Pos)) /* Assignment of value for RCONSTANT in the ISC_GAM_RENTRY register */
 #define ISC_GAM_RENTRY_Msk                    _UINT32_(0x03FF03FF)                                 /* (ISC_GAM_RENTRY) Register Mask  */
 
 
@@ -1088,18 +1087,18 @@
 
 #define ISC_VHXS_CTRL_VXSEN_Pos               _UINT32_(0)                                          /* (ISC_VHXS_CTRL) Vertical Scaler Enable Position */
 #define ISC_VHXS_CTRL_VXSEN_Msk               (_UINT32_(0x1) << ISC_VHXS_CTRL_VXSEN_Pos)           /* (ISC_VHXS_CTRL) Vertical Scaler Enable Mask */
-#define ISC_VHXS_CTRL_VXSEN(value)            (ISC_VHXS_CTRL_VXSEN_Msk & (_UINT32_(value) << ISC_VHXS_CTRL_VXSEN_Pos)) /* Assigment of value for VXSEN in the ISC_VHXS_CTRL register */
+#define ISC_VHXS_CTRL_VXSEN(value)            (ISC_VHXS_CTRL_VXSEN_Msk & (_UINT32_(value) << ISC_VHXS_CTRL_VXSEN_Pos)) /* Assignment of value for VXSEN in the ISC_VHXS_CTRL register */
 #define   ISC_VHXS_CTRL_VXSEN_0_Val           _UINT32_(0x0)                                        /* (ISC_VHXS_CTRL) Vertical scaler is disabled.  */
 #define   ISC_VHXS_CTRL_VXSEN_1_Val           _UINT32_(0x1)                                        /* (ISC_VHXS_CTRL) Vertical scaler is enabled.  */
-#define ISC_VHXS_CTRL_VXSEN_0                 (ISC_VHXS_CTRL_VXSEN_0_Val << ISC_VHXS_CTRL_VXSEN_Pos) /* (ISC_VHXS_CTRL) Vertical scaler is disabled. Position  */
-#define ISC_VHXS_CTRL_VXSEN_1                 (ISC_VHXS_CTRL_VXSEN_1_Val << ISC_VHXS_CTRL_VXSEN_Pos) /* (ISC_VHXS_CTRL) Vertical scaler is enabled. Position  */
+#define ISC_VHXS_CTRL_VXSEN_0                 (ISC_VHXS_CTRL_VXSEN_0_Val << ISC_VHXS_CTRL_VXSEN_Pos) /* (ISC_VHXS_CTRL) Vertical scaler is disabled. Position */
+#define ISC_VHXS_CTRL_VXSEN_1                 (ISC_VHXS_CTRL_VXSEN_1_Val << ISC_VHXS_CTRL_VXSEN_Pos) /* (ISC_VHXS_CTRL) Vertical scaler is enabled. Position */
 #define ISC_VHXS_CTRL_HXSEN_Pos               _UINT32_(1)                                          /* (ISC_VHXS_CTRL) Horizontal Scaler Enable Position */
 #define ISC_VHXS_CTRL_HXSEN_Msk               (_UINT32_(0x1) << ISC_VHXS_CTRL_HXSEN_Pos)           /* (ISC_VHXS_CTRL) Horizontal Scaler Enable Mask */
-#define ISC_VHXS_CTRL_HXSEN(value)            (ISC_VHXS_CTRL_HXSEN_Msk & (_UINT32_(value) << ISC_VHXS_CTRL_HXSEN_Pos)) /* Assigment of value for HXSEN in the ISC_VHXS_CTRL register */
+#define ISC_VHXS_CTRL_HXSEN(value)            (ISC_VHXS_CTRL_HXSEN_Msk & (_UINT32_(value) << ISC_VHXS_CTRL_HXSEN_Pos)) /* Assignment of value for HXSEN in the ISC_VHXS_CTRL register */
 #define   ISC_VHXS_CTRL_HXSEN_0_Val           _UINT32_(0x0)                                        /* (ISC_VHXS_CTRL) Horizontal scaler is disabled.  */
 #define   ISC_VHXS_CTRL_HXSEN_1_Val           _UINT32_(0x1)                                        /* (ISC_VHXS_CTRL) Horizontal scaler is enabled.  */
-#define ISC_VHXS_CTRL_HXSEN_0                 (ISC_VHXS_CTRL_HXSEN_0_Val << ISC_VHXS_CTRL_HXSEN_Pos) /* (ISC_VHXS_CTRL) Horizontal scaler is disabled. Position  */
-#define ISC_VHXS_CTRL_HXSEN_1                 (ISC_VHXS_CTRL_HXSEN_1_Val << ISC_VHXS_CTRL_HXSEN_Pos) /* (ISC_VHXS_CTRL) Horizontal scaler is enabled. Position  */
+#define ISC_VHXS_CTRL_HXSEN_0                 (ISC_VHXS_CTRL_HXSEN_0_Val << ISC_VHXS_CTRL_HXSEN_Pos) /* (ISC_VHXS_CTRL) Horizontal scaler is disabled. Position */
+#define ISC_VHXS_CTRL_HXSEN_1                 (ISC_VHXS_CTRL_HXSEN_1_Val << ISC_VHXS_CTRL_HXSEN_Pos) /* (ISC_VHXS_CTRL) Horizontal scaler is enabled. Position */
 #define ISC_VHXS_CTRL_Msk                     _UINT32_(0x00000003)                                 /* (ISC_VHXS_CTRL) Register Mask  */
 
 
@@ -1108,10 +1107,10 @@
 
 #define ISC_VHXS_SS_XS_Pos                    _UINT32_(0)                                          /* (ISC_VHXS_SS) Source Image Horizontal Size Position */
 #define ISC_VHXS_SS_XS_Msk                    (_UINT32_(0xFFF) << ISC_VHXS_SS_XS_Pos)              /* (ISC_VHXS_SS) Source Image Horizontal Size Mask */
-#define ISC_VHXS_SS_XS(value)                 (ISC_VHXS_SS_XS_Msk & (_UINT32_(value) << ISC_VHXS_SS_XS_Pos)) /* Assigment of value for XS in the ISC_VHXS_SS register */
+#define ISC_VHXS_SS_XS(value)                 (ISC_VHXS_SS_XS_Msk & (_UINT32_(value) << ISC_VHXS_SS_XS_Pos)) /* Assignment of value for XS in the ISC_VHXS_SS register */
 #define ISC_VHXS_SS_YS_Pos                    _UINT32_(16)                                         /* (ISC_VHXS_SS) Source Image Vertical Size Position */
 #define ISC_VHXS_SS_YS_Msk                    (_UINT32_(0xFFF) << ISC_VHXS_SS_YS_Pos)              /* (ISC_VHXS_SS) Source Image Vertical Size Mask */
-#define ISC_VHXS_SS_YS(value)                 (ISC_VHXS_SS_YS_Msk & (_UINT32_(value) << ISC_VHXS_SS_YS_Pos)) /* Assigment of value for YS in the ISC_VHXS_SS register */
+#define ISC_VHXS_SS_YS(value)                 (ISC_VHXS_SS_YS_Msk & (_UINT32_(value) << ISC_VHXS_SS_YS_Pos)) /* Assignment of value for YS in the ISC_VHXS_SS register */
 #define ISC_VHXS_SS_Msk                       _UINT32_(0x0FFF0FFF)                                 /* (ISC_VHXS_SS) Register Mask  */
 
 
@@ -1120,10 +1119,10 @@
 
 #define ISC_VHXS_DS_XD_Pos                    _UINT32_(0)                                          /* (ISC_VHXS_DS) Destination Image Horizontal Size Position */
 #define ISC_VHXS_DS_XD_Msk                    (_UINT32_(0xFFF) << ISC_VHXS_DS_XD_Pos)              /* (ISC_VHXS_DS) Destination Image Horizontal Size Mask */
-#define ISC_VHXS_DS_XD(value)                 (ISC_VHXS_DS_XD_Msk & (_UINT32_(value) << ISC_VHXS_DS_XD_Pos)) /* Assigment of value for XD in the ISC_VHXS_DS register */
-#define ISC_VHXS_DS_YD_Pos                    _UINT32_(16)                                         /* (ISC_VHXS_DS) Destination Image Horizontal Size Position */
-#define ISC_VHXS_DS_YD_Msk                    (_UINT32_(0xFFF) << ISC_VHXS_DS_YD_Pos)              /* (ISC_VHXS_DS) Destination Image Horizontal Size Mask */
-#define ISC_VHXS_DS_YD(value)                 (ISC_VHXS_DS_YD_Msk & (_UINT32_(value) << ISC_VHXS_DS_YD_Pos)) /* Assigment of value for YD in the ISC_VHXS_DS register */
+#define ISC_VHXS_DS_XD(value)                 (ISC_VHXS_DS_XD_Msk & (_UINT32_(value) << ISC_VHXS_DS_XD_Pos)) /* Assignment of value for XD in the ISC_VHXS_DS register */
+#define ISC_VHXS_DS_YD_Pos                    _UINT32_(16)                                         /* (ISC_VHXS_DS) Destination Image Vertical Size Position */
+#define ISC_VHXS_DS_YD_Msk                    (_UINT32_(0xFFF) << ISC_VHXS_DS_YD_Pos)              /* (ISC_VHXS_DS) Destination Image Vertical Size Mask */
+#define ISC_VHXS_DS_YD(value)                 (ISC_VHXS_DS_YD_Msk & (_UINT32_(value) << ISC_VHXS_DS_YD_Pos)) /* Assignment of value for YD in the ISC_VHXS_DS register */
 #define ISC_VHXS_DS_Msk                       _UINT32_(0x0FFF0FFF)                                 /* (ISC_VHXS_DS) Register Mask  */
 
 
@@ -1132,7 +1131,7 @@
 
 #define ISC_VXS_FACT_VFACT_Pos                _UINT32_(0)                                          /* (ISC_VXS_FACT) Vertical Scaling Factor Position */
 #define ISC_VXS_FACT_VFACT_Msk                (_UINT32_(0xFFFFFF) << ISC_VXS_FACT_VFACT_Pos)       /* (ISC_VXS_FACT) Vertical Scaling Factor Mask */
-#define ISC_VXS_FACT_VFACT(value)             (ISC_VXS_FACT_VFACT_Msk & (_UINT32_(value) << ISC_VXS_FACT_VFACT_Pos)) /* Assigment of value for VFACT in the ISC_VXS_FACT register */
+#define ISC_VXS_FACT_VFACT(value)             (ISC_VXS_FACT_VFACT_Msk & (_UINT32_(value) << ISC_VXS_FACT_VFACT_Pos)) /* Assignment of value for VFACT in the ISC_VXS_FACT register */
 #define ISC_VXS_FACT_Msk                      _UINT32_(0x00FFFFFF)                                 /* (ISC_VXS_FACT) Register Mask  */
 
 
@@ -1141,32 +1140,32 @@
 
 #define ISC_HXS_FACT_HFACT_Pos                _UINT32_(0)                                          /* (ISC_HXS_FACT) Horizontal Scaling Factor Position */
 #define ISC_HXS_FACT_HFACT_Msk                (_UINT32_(0xFFFFFF) << ISC_HXS_FACT_HFACT_Pos)       /* (ISC_HXS_FACT) Horizontal Scaling Factor Mask */
-#define ISC_HXS_FACT_HFACT(value)             (ISC_HXS_FACT_HFACT_Msk & (_UINT32_(value) << ISC_HXS_FACT_HFACT_Pos)) /* Assigment of value for HFACT in the ISC_HXS_FACT register */
+#define ISC_HXS_FACT_HFACT(value)             (ISC_HXS_FACT_HFACT_Msk & (_UINT32_(value) << ISC_HXS_FACT_HFACT_Pos)) /* Assignment of value for HFACT in the ISC_HXS_FACT register */
 #define ISC_HXS_FACT_Msk                      _UINT32_(0x00FFFFFF)                                 /* (ISC_HXS_FACT) Register Mask  */
 
 
 /* -------- ISC_VXS_CFG : (ISC Offset: 0x3AC) (R/W 32) VXS Configuration Register -------- */
-#define ISC_VXS_CFG_RESETVALUE                _UINT32_(0x00)                                       /*  (ISC_VXS_CFG) VXS Configuration Register  Reset Value */
+#define ISC_VXS_CFG_RESETVALUE                _UINT32_(0x80000000)                                 /*  (ISC_VXS_CFG) VXS Configuration Register  Reset Value */
 
 #define ISC_VXS_CFG_FILTCFG_Pos               _UINT32_(0)                                          /* (ISC_VXS_CFG) Vertical Filter Initial Configuration Position */
 #define ISC_VXS_CFG_FILTCFG_Msk               (_UINT32_(0x3) << ISC_VXS_CFG_FILTCFG_Pos)           /* (ISC_VXS_CFG) Vertical Filter Initial Configuration Mask */
-#define ISC_VXS_CFG_FILTCFG(value)            (ISC_VXS_CFG_FILTCFG_Msk & (_UINT32_(value) << ISC_VXS_CFG_FILTCFG_Pos)) /* Assigment of value for FILTCFG in the ISC_VXS_CFG register */
+#define ISC_VXS_CFG_FILTCFG(value)            (ISC_VXS_CFG_FILTCFG_Msk & (_UINT32_(value) << ISC_VXS_CFG_FILTCFG_Pos)) /* Assignment of value for FILTCFG in the ISC_VXS_CFG register */
 #define ISC_VXS_CFG_TAP2_Pos                  _UINT32_(4)                                          /* (ISC_VXS_CFG) Bilinear Interpolation Position */
 #define ISC_VXS_CFG_TAP2_Msk                  (_UINT32_(0x1) << ISC_VXS_CFG_TAP2_Pos)              /* (ISC_VXS_CFG) Bilinear Interpolation Mask */
-#define ISC_VXS_CFG_TAP2(value)               (ISC_VXS_CFG_TAP2_Msk & (_UINT32_(value) << ISC_VXS_CFG_TAP2_Pos)) /* Assigment of value for TAP2 in the ISC_VXS_CFG register */
-#define   ISC_VXS_CFG_TAP2_0_Val              _UINT32_(0x0)                                        /* (ISC_VXS_CFG) Bicubic interpolation is used.  */
+#define ISC_VXS_CFG_TAP2(value)               (ISC_VXS_CFG_TAP2_Msk & (_UINT32_(value) << ISC_VXS_CFG_TAP2_Pos)) /* Assignment of value for TAP2 in the ISC_VXS_CFG register */
+#define   ISC_VXS_CFG_TAP2_0_Val              _UINT32_(0x0)                                        /* (ISC_VXS_CFG) Custom tap values are used (see Section 8.47 "ISC VXS TAP10 Phase x [x = 0..15] Register").  */
 #define   ISC_VXS_CFG_TAP2_1_Val              _UINT32_(0x1)                                        /* (ISC_VXS_CFG) Bilinear interpolation is used.  */
-#define ISC_VXS_CFG_TAP2_0                    (ISC_VXS_CFG_TAP2_0_Val << ISC_VXS_CFG_TAP2_Pos)     /* (ISC_VXS_CFG) Bicubic interpolation is used. Position  */
-#define ISC_VXS_CFG_TAP2_1                    (ISC_VXS_CFG_TAP2_1_Val << ISC_VXS_CFG_TAP2_Pos)     /* (ISC_VXS_CFG) Bilinear interpolation is used. Position  */
+#define ISC_VXS_CFG_TAP2_0                    (ISC_VXS_CFG_TAP2_0_Val << ISC_VXS_CFG_TAP2_Pos)     /* (ISC_VXS_CFG) Custom tap values are used (see Section 8.47 "ISC VXS TAP10 Phase x [x = 0..15] Register"). Position */
+#define ISC_VXS_CFG_TAP2_1                    (ISC_VXS_CFG_TAP2_1_Val << ISC_VXS_CFG_TAP2_Pos)     /* (ISC_VXS_CFG) Bilinear interpolation is used. Position */
 #define ISC_VXS_CFG_OFFSET_Pos                _UINT32_(8)                                          /* (ISC_VXS_CFG) Resampling Default Phase Position */
 #define ISC_VXS_CFG_OFFSET_Msk                (_UINT32_(0xF) << ISC_VXS_CFG_OFFSET_Pos)            /* (ISC_VXS_CFG) Resampling Default Phase Mask */
-#define ISC_VXS_CFG_OFFSET(value)             (ISC_VXS_CFG_OFFSET_Msk & (_UINT32_(value) << ISC_VXS_CFG_OFFSET_Pos)) /* Assigment of value for OFFSET in the ISC_VXS_CFG register */
-#define ISC_VXS_CFG_FLMIN_Pos                 _UINT32_(24)                                         /* (ISC_VXS_CFG) flush latency min Position */
-#define ISC_VXS_CFG_FLMIN_Msk                 (_UINT32_(0xF) << ISC_VXS_CFG_FLMIN_Pos)             /* (ISC_VXS_CFG) flush latency min Mask */
-#define ISC_VXS_CFG_FLMIN(value)              (ISC_VXS_CFG_FLMIN_Msk & (_UINT32_(value) << ISC_VXS_CFG_FLMIN_Pos)) /* Assigment of value for FLMIN in the ISC_VXS_CFG register */
-#define ISC_VXS_CFG_FLMAX_Pos                 _UINT32_(28)                                         /* (ISC_VXS_CFG) flush latency max Position */
-#define ISC_VXS_CFG_FLMAX_Msk                 (_UINT32_(0xF) << ISC_VXS_CFG_FLMAX_Pos)             /* (ISC_VXS_CFG) flush latency max Mask */
-#define ISC_VXS_CFG_FLMAX(value)              (ISC_VXS_CFG_FLMAX_Msk & (_UINT32_(value) << ISC_VXS_CFG_FLMAX_Pos)) /* Assigment of value for FLMAX in the ISC_VXS_CFG register */
+#define ISC_VXS_CFG_OFFSET(value)             (ISC_VXS_CFG_OFFSET_Msk & (_UINT32_(value) << ISC_VXS_CFG_OFFSET_Pos)) /* Assignment of value for OFFSET in the ISC_VXS_CFG register */
+#define ISC_VXS_CFG_FLMIN_Pos                 _UINT32_(24)                                         /* (ISC_VXS_CFG) Flush Latency Min Position */
+#define ISC_VXS_CFG_FLMIN_Msk                 (_UINT32_(0xF) << ISC_VXS_CFG_FLMIN_Pos)             /* (ISC_VXS_CFG) Flush Latency Min Mask */
+#define ISC_VXS_CFG_FLMIN(value)              (ISC_VXS_CFG_FLMIN_Msk & (_UINT32_(value) << ISC_VXS_CFG_FLMIN_Pos)) /* Assignment of value for FLMIN in the ISC_VXS_CFG register */
+#define ISC_VXS_CFG_FLMAX_Pos                 _UINT32_(28)                                         /* (ISC_VXS_CFG) Flush Latency Max Position */
+#define ISC_VXS_CFG_FLMAX_Msk                 (_UINT32_(0xF) << ISC_VXS_CFG_FLMAX_Pos)             /* (ISC_VXS_CFG) Flush Latency Max Mask */
+#define ISC_VXS_CFG_FLMAX(value)              (ISC_VXS_CFG_FLMAX_Msk & (_UINT32_(value) << ISC_VXS_CFG_FLMAX_Pos)) /* Assignment of value for FLMAX in the ISC_VXS_CFG register */
 #define ISC_VXS_CFG_Msk                       _UINT32_(0xFF000F13)                                 /* (ISC_VXS_CFG) Register Mask  */
 
 #define ISC_VXS_CFG_TAP_Pos                   _UINT32_(4)                                          /* (ISC_VXS_CFG Position) Bilinear Interpolation */
@@ -1178,20 +1177,20 @@
 
 #define ISC_HXS_CFG_FILTCFG_Pos               _UINT32_(0)                                          /* (ISC_HXS_CFG) Horizontal Filter Initial Configuration Position */
 #define ISC_HXS_CFG_FILTCFG_Msk               (_UINT32_(0x3) << ISC_HXS_CFG_FILTCFG_Pos)           /* (ISC_HXS_CFG) Horizontal Filter Initial Configuration Mask */
-#define ISC_HXS_CFG_FILTCFG(value)            (ISC_HXS_CFG_FILTCFG_Msk & (_UINT32_(value) << ISC_HXS_CFG_FILTCFG_Pos)) /* Assigment of value for FILTCFG in the ISC_HXS_CFG register */
+#define ISC_HXS_CFG_FILTCFG(value)            (ISC_HXS_CFG_FILTCFG_Msk & (_UINT32_(value) << ISC_HXS_CFG_FILTCFG_Pos)) /* Assignment of value for FILTCFG in the ISC_HXS_CFG register */
 #define ISC_HXS_CFG_TAP2_Pos                  _UINT32_(4)                                          /* (ISC_HXS_CFG) Bilinear Interpolation Position */
 #define ISC_HXS_CFG_TAP2_Msk                  (_UINT32_(0x1) << ISC_HXS_CFG_TAP2_Pos)              /* (ISC_HXS_CFG) Bilinear Interpolation Mask */
-#define ISC_HXS_CFG_TAP2(value)               (ISC_HXS_CFG_TAP2_Msk & (_UINT32_(value) << ISC_HXS_CFG_TAP2_Pos)) /* Assigment of value for TAP2 in the ISC_HXS_CFG register */
-#define   ISC_HXS_CFG_TAP2_0_Val              _UINT32_(0x0)                                        /* (ISC_HXS_CFG) Bicubic interpolation is used.  */
+#define ISC_HXS_CFG_TAP2(value)               (ISC_HXS_CFG_TAP2_Msk & (_UINT32_(value) << ISC_HXS_CFG_TAP2_Pos)) /* Assignment of value for TAP2 in the ISC_HXS_CFG register */
+#define   ISC_HXS_CFG_TAP2_0_Val              _UINT32_(0x0)                                        /* (ISC_HXS_CFG) Custom tap values are used (see Section 8.49 "ISC HXS TAP10 Phase x [x = 0..15] Register").  */
 #define   ISC_HXS_CFG_TAP2_1_Val              _UINT32_(0x1)                                        /* (ISC_HXS_CFG) Bilinear interpolation is used.  */
-#define ISC_HXS_CFG_TAP2_0                    (ISC_HXS_CFG_TAP2_0_Val << ISC_HXS_CFG_TAP2_Pos)     /* (ISC_HXS_CFG) Bicubic interpolation is used. Position  */
-#define ISC_HXS_CFG_TAP2_1                    (ISC_HXS_CFG_TAP2_1_Val << ISC_HXS_CFG_TAP2_Pos)     /* (ISC_HXS_CFG) Bilinear interpolation is used. Position  */
+#define ISC_HXS_CFG_TAP2_0                    (ISC_HXS_CFG_TAP2_0_Val << ISC_HXS_CFG_TAP2_Pos)     /* (ISC_HXS_CFG) Custom tap values are used (see Section 8.49 "ISC HXS TAP10 Phase x [x = 0..15] Register"). Position */
+#define ISC_HXS_CFG_TAP2_1                    (ISC_HXS_CFG_TAP2_1_Val << ISC_HXS_CFG_TAP2_Pos)     /* (ISC_HXS_CFG) Bilinear interpolation is used. Position */
 #define ISC_HXS_CFG_OFFSET_Pos                _UINT32_(8)                                          /* (ISC_HXS_CFG) Resampling Default Phase Position */
 #define ISC_HXS_CFG_OFFSET_Msk                (_UINT32_(0xF) << ISC_HXS_CFG_OFFSET_Pos)            /* (ISC_HXS_CFG) Resampling Default Phase Mask */
-#define ISC_HXS_CFG_OFFSET(value)             (ISC_HXS_CFG_OFFSET_Msk & (_UINT32_(value) << ISC_HXS_CFG_OFFSET_Pos)) /* Assigment of value for OFFSET in the ISC_HXS_CFG register */
+#define ISC_HXS_CFG_OFFSET(value)             (ISC_HXS_CFG_OFFSET_Msk & (_UINT32_(value) << ISC_HXS_CFG_OFFSET_Pos)) /* Assignment of value for OFFSET in the ISC_HXS_CFG register */
 #define ISC_HXS_CFG_FL_Pos                    _UINT32_(24)                                         /* (ISC_HXS_CFG) Flush Latency Position */
 #define ISC_HXS_CFG_FL_Msk                    (_UINT32_(0xF) << ISC_HXS_CFG_FL_Pos)                /* (ISC_HXS_CFG) Flush Latency Mask */
-#define ISC_HXS_CFG_FL(value)                 (ISC_HXS_CFG_FL_Msk & (_UINT32_(value) << ISC_HXS_CFG_FL_Pos)) /* Assigment of value for FL in the ISC_HXS_CFG register */
+#define ISC_HXS_CFG_FL(value)                 (ISC_HXS_CFG_FL_Msk & (_UINT32_(value) << ISC_HXS_CFG_FL_Pos)) /* Assignment of value for FL in the ISC_HXS_CFG register */
 #define ISC_HXS_CFG_Msk                       _UINT32_(0x0F000F13)                                 /* (ISC_HXS_CFG) Register Mask  */
 
 #define ISC_HXS_CFG_TAP_Pos                   _UINT32_(4)                                          /* (ISC_HXS_CFG Position) Bilinear Interpolation */
@@ -1203,11 +1202,11 @@
 
 #define ISC_CSC_CTRL_ENABLE_Pos               _UINT32_(0)                                          /* (ISC_CSC_CTRL) RGB to YCbCr Color Space Conversion Enable Position */
 #define ISC_CSC_CTRL_ENABLE_Msk               (_UINT32_(0x1) << ISC_CSC_CTRL_ENABLE_Pos)           /* (ISC_CSC_CTRL) RGB to YCbCr Color Space Conversion Enable Mask */
-#define ISC_CSC_CTRL_ENABLE(value)            (ISC_CSC_CTRL_ENABLE_Msk & (_UINT32_(value) << ISC_CSC_CTRL_ENABLE_Pos)) /* Assigment of value for ENABLE in the ISC_CSC_CTRL register */
+#define ISC_CSC_CTRL_ENABLE(value)            (ISC_CSC_CTRL_ENABLE_Msk & (_UINT32_(value) << ISC_CSC_CTRL_ENABLE_Pos)) /* Assignment of value for ENABLE in the ISC_CSC_CTRL register */
 #define   ISC_CSC_CTRL_ENABLE_0_Val           _UINT32_(0x0)                                        /* (ISC_CSC_CTRL) Color space conversion is disabled.  */
 #define   ISC_CSC_CTRL_ENABLE_1_Val           _UINT32_(0x1)                                        /* (ISC_CSC_CTRL) Color space conversion is enabled.  */
-#define ISC_CSC_CTRL_ENABLE_0                 (ISC_CSC_CTRL_ENABLE_0_Val << ISC_CSC_CTRL_ENABLE_Pos) /* (ISC_CSC_CTRL) Color space conversion is disabled. Position  */
-#define ISC_CSC_CTRL_ENABLE_1                 (ISC_CSC_CTRL_ENABLE_1_Val << ISC_CSC_CTRL_ENABLE_Pos) /* (ISC_CSC_CTRL) Color space conversion is enabled. Position  */
+#define ISC_CSC_CTRL_ENABLE_0                 (ISC_CSC_CTRL_ENABLE_0_Val << ISC_CSC_CTRL_ENABLE_Pos) /* (ISC_CSC_CTRL) Color space conversion is disabled. Position */
+#define ISC_CSC_CTRL_ENABLE_1                 (ISC_CSC_CTRL_ENABLE_1_Val << ISC_CSC_CTRL_ENABLE_Pos) /* (ISC_CSC_CTRL) Color space conversion is enabled. Position */
 #define ISC_CSC_CTRL_Msk                      _UINT32_(0x00000001)                                 /* (ISC_CSC_CTRL) Register Mask  */
 
 
@@ -1216,10 +1215,10 @@
 
 #define ISC_CSC_YR_YG_YRGAIN_Pos              _UINT32_(0)                                          /* (ISC_CSC_YR_YG) Reg Gain for Luminance (signed 12 bits 1:3:8) Position */
 #define ISC_CSC_YR_YG_YRGAIN_Msk              (_UINT32_(0xFFF) << ISC_CSC_YR_YG_YRGAIN_Pos)        /* (ISC_CSC_YR_YG) Reg Gain for Luminance (signed 12 bits 1:3:8) Mask */
-#define ISC_CSC_YR_YG_YRGAIN(value)           (ISC_CSC_YR_YG_YRGAIN_Msk & (_UINT32_(value) << ISC_CSC_YR_YG_YRGAIN_Pos)) /* Assigment of value for YRGAIN in the ISC_CSC_YR_YG register */
+#define ISC_CSC_YR_YG_YRGAIN(value)           (ISC_CSC_YR_YG_YRGAIN_Msk & (_UINT32_(value) << ISC_CSC_YR_YG_YRGAIN_Pos)) /* Assignment of value for YRGAIN in the ISC_CSC_YR_YG register */
 #define ISC_CSC_YR_YG_YGGAIN_Pos              _UINT32_(16)                                         /* (ISC_CSC_YR_YG) Green Gain for Luminance (signed 12 bits 1:3:8) Position */
 #define ISC_CSC_YR_YG_YGGAIN_Msk              (_UINT32_(0xFFF) << ISC_CSC_YR_YG_YGGAIN_Pos)        /* (ISC_CSC_YR_YG) Green Gain for Luminance (signed 12 bits 1:3:8) Mask */
-#define ISC_CSC_YR_YG_YGGAIN(value)           (ISC_CSC_YR_YG_YGGAIN_Msk & (_UINT32_(value) << ISC_CSC_YR_YG_YGGAIN_Pos)) /* Assigment of value for YGGAIN in the ISC_CSC_YR_YG register */
+#define ISC_CSC_YR_YG_YGGAIN(value)           (ISC_CSC_YR_YG_YGGAIN_Msk & (_UINT32_(value) << ISC_CSC_YR_YG_YGGAIN_Pos)) /* Assignment of value for YGGAIN in the ISC_CSC_YR_YG register */
 #define ISC_CSC_YR_YG_Msk                     _UINT32_(0x0FFF0FFF)                                 /* (ISC_CSC_YR_YG) Register Mask  */
 
 
@@ -1228,10 +1227,10 @@
 
 #define ISC_CSC_YB_OY_YBGAIN_Pos              _UINT32_(0)                                          /* (ISC_CSC_YB_OY) Blue Gain for Luminance Component (12 bits signed 1:3:8) Position */
 #define ISC_CSC_YB_OY_YBGAIN_Msk              (_UINT32_(0xFFF) << ISC_CSC_YB_OY_YBGAIN_Pos)        /* (ISC_CSC_YB_OY) Blue Gain for Luminance Component (12 bits signed 1:3:8) Mask */
-#define ISC_CSC_YB_OY_YBGAIN(value)           (ISC_CSC_YB_OY_YBGAIN_Msk & (_UINT32_(value) << ISC_CSC_YB_OY_YBGAIN_Pos)) /* Assigment of value for YBGAIN in the ISC_CSC_YB_OY register */
+#define ISC_CSC_YB_OY_YBGAIN(value)           (ISC_CSC_YB_OY_YBGAIN_Msk & (_UINT32_(value) << ISC_CSC_YB_OY_YBGAIN_Pos)) /* Assignment of value for YBGAIN in the ISC_CSC_YB_OY register */
 #define ISC_CSC_YB_OY_YOFST_Pos               _UINT32_(16)                                         /* (ISC_CSC_YB_OY) Luminance Offset (11 bits signed 1:10:0) Position */
 #define ISC_CSC_YB_OY_YOFST_Msk               (_UINT32_(0x7FF) << ISC_CSC_YB_OY_YOFST_Pos)         /* (ISC_CSC_YB_OY) Luminance Offset (11 bits signed 1:10:0) Mask */
-#define ISC_CSC_YB_OY_YOFST(value)            (ISC_CSC_YB_OY_YOFST_Msk & (_UINT32_(value) << ISC_CSC_YB_OY_YOFST_Pos)) /* Assigment of value for YOFST in the ISC_CSC_YB_OY register */
+#define ISC_CSC_YB_OY_YOFST(value)            (ISC_CSC_YB_OY_YOFST_Msk & (_UINT32_(value) << ISC_CSC_YB_OY_YOFST_Pos)) /* Assignment of value for YOFST in the ISC_CSC_YB_OY register */
 #define ISC_CSC_YB_OY_Msk                     _UINT32_(0x07FF0FFF)                                 /* (ISC_CSC_YB_OY) Register Mask  */
 
 
@@ -1240,10 +1239,10 @@
 
 #define ISC_CSC_CBR_CBG_CBRGAIN_Pos           _UINT32_(0)                                          /* (ISC_CSC_CBR_CBG) Red Gain for Blue Chrominance (signed 12 bits, 1:3:8) Position */
 #define ISC_CSC_CBR_CBG_CBRGAIN_Msk           (_UINT32_(0xFFF) << ISC_CSC_CBR_CBG_CBRGAIN_Pos)     /* (ISC_CSC_CBR_CBG) Red Gain for Blue Chrominance (signed 12 bits, 1:3:8) Mask */
-#define ISC_CSC_CBR_CBG_CBRGAIN(value)        (ISC_CSC_CBR_CBG_CBRGAIN_Msk & (_UINT32_(value) << ISC_CSC_CBR_CBG_CBRGAIN_Pos)) /* Assigment of value for CBRGAIN in the ISC_CSC_CBR_CBG register */
+#define ISC_CSC_CBR_CBG_CBRGAIN(value)        (ISC_CSC_CBR_CBG_CBRGAIN_Msk & (_UINT32_(value) << ISC_CSC_CBR_CBG_CBRGAIN_Pos)) /* Assignment of value for CBRGAIN in the ISC_CSC_CBR_CBG register */
 #define ISC_CSC_CBR_CBG_CBGGAIN_Pos           _UINT32_(16)                                         /* (ISC_CSC_CBR_CBG) Green Gain for Blue Chrominance (signed 12 bits 1:3:8) Position */
 #define ISC_CSC_CBR_CBG_CBGGAIN_Msk           (_UINT32_(0xFFF) << ISC_CSC_CBR_CBG_CBGGAIN_Pos)     /* (ISC_CSC_CBR_CBG) Green Gain for Blue Chrominance (signed 12 bits 1:3:8) Mask */
-#define ISC_CSC_CBR_CBG_CBGGAIN(value)        (ISC_CSC_CBR_CBG_CBGGAIN_Msk & (_UINT32_(value) << ISC_CSC_CBR_CBG_CBGGAIN_Pos)) /* Assigment of value for CBGGAIN in the ISC_CSC_CBR_CBG register */
+#define ISC_CSC_CBR_CBG_CBGGAIN(value)        (ISC_CSC_CBR_CBG_CBGGAIN_Msk & (_UINT32_(value) << ISC_CSC_CBR_CBG_CBGGAIN_Pos)) /* Assignment of value for CBGGAIN in the ISC_CSC_CBR_CBG register */
 #define ISC_CSC_CBR_CBG_Msk                   _UINT32_(0x0FFF0FFF)                                 /* (ISC_CSC_CBR_CBG) Register Mask  */
 
 
@@ -1252,10 +1251,10 @@
 
 #define ISC_CSC_CBB_OCB_CBBGAIN_Pos           _UINT32_(0)                                          /* (ISC_CSC_CBB_OCB) Blue Gain for Blue Chrominance (signed 12 bits 1:3:8) Position */
 #define ISC_CSC_CBB_OCB_CBBGAIN_Msk           (_UINT32_(0xFFF) << ISC_CSC_CBB_OCB_CBBGAIN_Pos)     /* (ISC_CSC_CBB_OCB) Blue Gain for Blue Chrominance (signed 12 bits 1:3:8) Mask */
-#define ISC_CSC_CBB_OCB_CBBGAIN(value)        (ISC_CSC_CBB_OCB_CBBGAIN_Msk & (_UINT32_(value) << ISC_CSC_CBB_OCB_CBBGAIN_Pos)) /* Assigment of value for CBBGAIN in the ISC_CSC_CBB_OCB register */
+#define ISC_CSC_CBB_OCB_CBBGAIN(value)        (ISC_CSC_CBB_OCB_CBBGAIN_Msk & (_UINT32_(value) << ISC_CSC_CBB_OCB_CBBGAIN_Pos)) /* Assignment of value for CBBGAIN in the ISC_CSC_CBB_OCB register */
 #define ISC_CSC_CBB_OCB_CBOFST_Pos            _UINT32_(16)                                         /* (ISC_CSC_CBB_OCB) Blue Chrominance Offset (signed 11 bits 1:10:0) Position */
 #define ISC_CSC_CBB_OCB_CBOFST_Msk            (_UINT32_(0x7FF) << ISC_CSC_CBB_OCB_CBOFST_Pos)      /* (ISC_CSC_CBB_OCB) Blue Chrominance Offset (signed 11 bits 1:10:0) Mask */
-#define ISC_CSC_CBB_OCB_CBOFST(value)         (ISC_CSC_CBB_OCB_CBOFST_Msk & (_UINT32_(value) << ISC_CSC_CBB_OCB_CBOFST_Pos)) /* Assigment of value for CBOFST in the ISC_CSC_CBB_OCB register */
+#define ISC_CSC_CBB_OCB_CBOFST(value)         (ISC_CSC_CBB_OCB_CBOFST_Msk & (_UINT32_(value) << ISC_CSC_CBB_OCB_CBOFST_Pos)) /* Assignment of value for CBOFST in the ISC_CSC_CBB_OCB register */
 #define ISC_CSC_CBB_OCB_Msk                   _UINT32_(0x07FF0FFF)                                 /* (ISC_CSC_CBB_OCB) Register Mask  */
 
 
@@ -1264,10 +1263,10 @@
 
 #define ISC_CSC_CRR_CRG_CRRGAIN_Pos           _UINT32_(0)                                          /* (ISC_CSC_CRR_CRG) Red Gain for Red Chrominance (signed 12 bits 1:3:8) Position */
 #define ISC_CSC_CRR_CRG_CRRGAIN_Msk           (_UINT32_(0xFFF) << ISC_CSC_CRR_CRG_CRRGAIN_Pos)     /* (ISC_CSC_CRR_CRG) Red Gain for Red Chrominance (signed 12 bits 1:3:8) Mask */
-#define ISC_CSC_CRR_CRG_CRRGAIN(value)        (ISC_CSC_CRR_CRG_CRRGAIN_Msk & (_UINT32_(value) << ISC_CSC_CRR_CRG_CRRGAIN_Pos)) /* Assigment of value for CRRGAIN in the ISC_CSC_CRR_CRG register */
+#define ISC_CSC_CRR_CRG_CRRGAIN(value)        (ISC_CSC_CRR_CRG_CRRGAIN_Msk & (_UINT32_(value) << ISC_CSC_CRR_CRG_CRRGAIN_Pos)) /* Assignment of value for CRRGAIN in the ISC_CSC_CRR_CRG register */
 #define ISC_CSC_CRR_CRG_CRGGAIN_Pos           _UINT32_(16)                                         /* (ISC_CSC_CRR_CRG) Green Gain for Red Chrominance (signed 12 bits 1:3:8) Position */
 #define ISC_CSC_CRR_CRG_CRGGAIN_Msk           (_UINT32_(0xFFF) << ISC_CSC_CRR_CRG_CRGGAIN_Pos)     /* (ISC_CSC_CRR_CRG) Green Gain for Red Chrominance (signed 12 bits 1:3:8) Mask */
-#define ISC_CSC_CRR_CRG_CRGGAIN(value)        (ISC_CSC_CRR_CRG_CRGGAIN_Msk & (_UINT32_(value) << ISC_CSC_CRR_CRG_CRGGAIN_Pos)) /* Assigment of value for CRGGAIN in the ISC_CSC_CRR_CRG register */
+#define ISC_CSC_CRR_CRG_CRGGAIN(value)        (ISC_CSC_CRR_CRG_CRGGAIN_Msk & (_UINT32_(value) << ISC_CSC_CRR_CRG_CRGGAIN_Pos)) /* Assignment of value for CRGGAIN in the ISC_CSC_CRR_CRG register */
 #define ISC_CSC_CRR_CRG_Msk                   _UINT32_(0x0FFF0FFF)                                 /* (ISC_CSC_CRR_CRG) Register Mask  */
 
 
@@ -1276,10 +1275,10 @@
 
 #define ISC_CSC_CRB_OCR_CRBGAIN_Pos           _UINT32_(0)                                          /* (ISC_CSC_CRB_OCR) Blue Gain for Red Chrominance (signed 12 bits 1:3:8) Position */
 #define ISC_CSC_CRB_OCR_CRBGAIN_Msk           (_UINT32_(0xFFF) << ISC_CSC_CRB_OCR_CRBGAIN_Pos)     /* (ISC_CSC_CRB_OCR) Blue Gain for Red Chrominance (signed 12 bits 1:3:8) Mask */
-#define ISC_CSC_CRB_OCR_CRBGAIN(value)        (ISC_CSC_CRB_OCR_CRBGAIN_Msk & (_UINT32_(value) << ISC_CSC_CRB_OCR_CRBGAIN_Pos)) /* Assigment of value for CRBGAIN in the ISC_CSC_CRB_OCR register */
+#define ISC_CSC_CRB_OCR_CRBGAIN(value)        (ISC_CSC_CRB_OCR_CRBGAIN_Msk & (_UINT32_(value) << ISC_CSC_CRB_OCR_CRBGAIN_Pos)) /* Assignment of value for CRBGAIN in the ISC_CSC_CRB_OCR register */
 #define ISC_CSC_CRB_OCR_CROFST_Pos            _UINT32_(16)                                         /* (ISC_CSC_CRB_OCR) Red Chrominance Offset (signed 11 bits 1:10:0) Position */
 #define ISC_CSC_CRB_OCR_CROFST_Msk            (_UINT32_(0x7FF) << ISC_CSC_CRB_OCR_CROFST_Pos)      /* (ISC_CSC_CRB_OCR) Red Chrominance Offset (signed 11 bits 1:10:0) Mask */
-#define ISC_CSC_CRB_OCR_CROFST(value)         (ISC_CSC_CRB_OCR_CROFST_Msk & (_UINT32_(value) << ISC_CSC_CRB_OCR_CROFST_Pos)) /* Assigment of value for CROFST in the ISC_CSC_CRB_OCR register */
+#define ISC_CSC_CRB_OCR_CROFST(value)         (ISC_CSC_CRB_OCR_CROFST_Msk & (_UINT32_(value) << ISC_CSC_CRB_OCR_CROFST_Pos)) /* Assignment of value for CROFST in the ISC_CSC_CRB_OCR register */
 #define ISC_CSC_CRB_OCR_Msk                   _UINT32_(0x07FF0FFF)                                 /* (ISC_CSC_CRB_OCR) Register Mask  */
 
 
@@ -1288,11 +1287,11 @@
 
 #define ISC_CBHS_CTRL_ENABLE_Pos              _UINT32_(0)                                          /* (ISC_CBHS_CTRL) Contrast, Brightness, Hue and Saturation Control Enable Position */
 #define ISC_CBHS_CTRL_ENABLE_Msk              (_UINT32_(0x1) << ISC_CBHS_CTRL_ENABLE_Pos)          /* (ISC_CBHS_CTRL) Contrast, Brightness, Hue and Saturation Control Enable Mask */
-#define ISC_CBHS_CTRL_ENABLE(value)           (ISC_CBHS_CTRL_ENABLE_Msk & (_UINT32_(value) << ISC_CBHS_CTRL_ENABLE_Pos)) /* Assigment of value for ENABLE in the ISC_CBHS_CTRL register */
+#define ISC_CBHS_CTRL_ENABLE(value)           (ISC_CBHS_CTRL_ENABLE_Msk & (_UINT32_(value) << ISC_CBHS_CTRL_ENABLE_Pos)) /* Assignment of value for ENABLE in the ISC_CBHS_CTRL register */
 #define   ISC_CBHS_CTRL_ENABLE_0_Val          _UINT32_(0x0)                                        /* (ISC_CBHS_CTRL) CBHS control is disabled.  */
 #define   ISC_CBHS_CTRL_ENABLE_1_Val          _UINT32_(0x1)                                        /* (ISC_CBHS_CTRL) CBHS control is enabled.  */
-#define ISC_CBHS_CTRL_ENABLE_0                (ISC_CBHS_CTRL_ENABLE_0_Val << ISC_CBHS_CTRL_ENABLE_Pos) /* (ISC_CBHS_CTRL) CBHS control is disabled. Position  */
-#define ISC_CBHS_CTRL_ENABLE_1                (ISC_CBHS_CTRL_ENABLE_1_Val << ISC_CBHS_CTRL_ENABLE_Pos) /* (ISC_CBHS_CTRL) CBHS control is enabled. Position  */
+#define ISC_CBHS_CTRL_ENABLE_0                (ISC_CBHS_CTRL_ENABLE_0_Val << ISC_CBHS_CTRL_ENABLE_Pos) /* (ISC_CBHS_CTRL) CBHS control is disabled. Position */
+#define ISC_CBHS_CTRL_ENABLE_1                (ISC_CBHS_CTRL_ENABLE_1_Val << ISC_CBHS_CTRL_ENABLE_Pos) /* (ISC_CBHS_CTRL) CBHS control is enabled. Position */
 #define ISC_CBHS_CTRL_Msk                     _UINT32_(0x00000001)                                 /* (ISC_CBHS_CTRL) Register Mask  */
 
 
@@ -1301,22 +1300,22 @@
 
 #define ISC_CBHS_CFG_CCIR_Pos                 _UINT32_(0)                                          /* (ISC_CBHS_CFG) CCIR656 Stream Enable Position */
 #define ISC_CBHS_CFG_CCIR_Msk                 (_UINT32_(0x1) << ISC_CBHS_CFG_CCIR_Pos)             /* (ISC_CBHS_CFG) CCIR656 Stream Enable Mask */
-#define ISC_CBHS_CFG_CCIR(value)              (ISC_CBHS_CFG_CCIR_Msk & (_UINT32_(value) << ISC_CBHS_CFG_CCIR_Pos)) /* Assigment of value for CCIR in the ISC_CBHS_CFG register */
+#define ISC_CBHS_CFG_CCIR(value)              (ISC_CBHS_CFG_CCIR_Msk & (_UINT32_(value) << ISC_CBHS_CFG_CCIR_Pos)) /* Assignment of value for CCIR in the ISC_CBHS_CFG register */
 #define   ISC_CBHS_CFG_CCIR_0_Val             _UINT32_(0x0)                                        /* (ISC_CBHS_CFG) Raw mode.  */
 #define   ISC_CBHS_CFG_CCIR_1_Val             _UINT32_(0x1)                                        /* (ISC_CBHS_CFG) CCIR656 stream.  */
-#define ISC_CBHS_CFG_CCIR_0                   (ISC_CBHS_CFG_CCIR_0_Val << ISC_CBHS_CFG_CCIR_Pos)   /* (ISC_CBHS_CFG) Raw mode. Position  */
-#define ISC_CBHS_CFG_CCIR_1                   (ISC_CBHS_CFG_CCIR_1_Val << ISC_CBHS_CFG_CCIR_Pos)   /* (ISC_CBHS_CFG) CCIR656 stream. Position  */
+#define ISC_CBHS_CFG_CCIR_0                   (ISC_CBHS_CFG_CCIR_0_Val << ISC_CBHS_CFG_CCIR_Pos)   /* (ISC_CBHS_CFG) Raw mode. Position */
+#define ISC_CBHS_CFG_CCIR_1                   (ISC_CBHS_CFG_CCIR_1_Val << ISC_CBHS_CFG_CCIR_Pos)   /* (ISC_CBHS_CFG) CCIR656 stream. Position */
 #define ISC_CBHS_CFG_CCIRMODE_Pos             _UINT32_(1)                                          /* (ISC_CBHS_CFG) CCIR656 Byte Ordering Position */
 #define ISC_CBHS_CFG_CCIRMODE_Msk             (_UINT32_(0x3) << ISC_CBHS_CFG_CCIRMODE_Pos)         /* (ISC_CBHS_CFG) CCIR656 Byte Ordering Mask */
-#define ISC_CBHS_CFG_CCIRMODE(value)          (ISC_CBHS_CFG_CCIRMODE_Msk & (_UINT32_(value) << ISC_CBHS_CFG_CCIRMODE_Pos)) /* Assigment of value for CCIRMODE in the ISC_CBHS_CFG register */
+#define ISC_CBHS_CFG_CCIRMODE(value)          (ISC_CBHS_CFG_CCIRMODE_Msk & (_UINT32_(value) << ISC_CBHS_CFG_CCIRMODE_Pos)) /* Assignment of value for CCIRMODE in the ISC_CBHS_CFG register */
 #define   ISC_CBHS_CFG_CCIRMODE_CBY_Val       _UINT32_(0x0)                                        /* (ISC_CBHS_CFG) Byte ordering Cb0, Y0, Cr0, Y1  */
 #define   ISC_CBHS_CFG_CCIRMODE_CRY_Val       _UINT32_(0x1)                                        /* (ISC_CBHS_CFG) Byte ordering Cr0, Y0, Cb0, Y1  */
 #define   ISC_CBHS_CFG_CCIRMODE_YCB_Val       _UINT32_(0x2)                                        /* (ISC_CBHS_CFG) Byte ordering Y0, Cb0, Y1, Cr0  */
 #define   ISC_CBHS_CFG_CCIRMODE_YCR_Val       _UINT32_(0x3)                                        /* (ISC_CBHS_CFG) Byte ordering Y0, Cr0, Y1, Cb0  */
-#define ISC_CBHS_CFG_CCIRMODE_CBY             (ISC_CBHS_CFG_CCIRMODE_CBY_Val << ISC_CBHS_CFG_CCIRMODE_Pos) /* (ISC_CBHS_CFG) Byte ordering Cb0, Y0, Cr0, Y1 Position  */
-#define ISC_CBHS_CFG_CCIRMODE_CRY             (ISC_CBHS_CFG_CCIRMODE_CRY_Val << ISC_CBHS_CFG_CCIRMODE_Pos) /* (ISC_CBHS_CFG) Byte ordering Cr0, Y0, Cb0, Y1 Position  */
-#define ISC_CBHS_CFG_CCIRMODE_YCB             (ISC_CBHS_CFG_CCIRMODE_YCB_Val << ISC_CBHS_CFG_CCIRMODE_Pos) /* (ISC_CBHS_CFG) Byte ordering Y0, Cb0, Y1, Cr0 Position  */
-#define ISC_CBHS_CFG_CCIRMODE_YCR             (ISC_CBHS_CFG_CCIRMODE_YCR_Val << ISC_CBHS_CFG_CCIRMODE_Pos) /* (ISC_CBHS_CFG) Byte ordering Y0, Cr0, Y1, Cb0 Position  */
+#define ISC_CBHS_CFG_CCIRMODE_CBY             (ISC_CBHS_CFG_CCIRMODE_CBY_Val << ISC_CBHS_CFG_CCIRMODE_Pos) /* (ISC_CBHS_CFG) Byte ordering Cb0, Y0, Cr0, Y1 Position */
+#define ISC_CBHS_CFG_CCIRMODE_CRY             (ISC_CBHS_CFG_CCIRMODE_CRY_Val << ISC_CBHS_CFG_CCIRMODE_Pos) /* (ISC_CBHS_CFG) Byte ordering Cr0, Y0, Cb0, Y1 Position */
+#define ISC_CBHS_CFG_CCIRMODE_YCB             (ISC_CBHS_CFG_CCIRMODE_YCB_Val << ISC_CBHS_CFG_CCIRMODE_Pos) /* (ISC_CBHS_CFG) Byte ordering Y0, Cb0, Y1, Cr0 Position */
+#define ISC_CBHS_CFG_CCIRMODE_YCR             (ISC_CBHS_CFG_CCIRMODE_YCR_Val << ISC_CBHS_CFG_CCIRMODE_Pos) /* (ISC_CBHS_CFG) Byte ordering Y0, Cr0, Y1, Cb0 Position */
 #define ISC_CBHS_CFG_Msk                      _UINT32_(0x00000007)                                 /* (ISC_CBHS_CFG) Register Mask  */
 
 
@@ -1325,7 +1324,7 @@
 
 #define ISC_CBHS_BRIGHT_BRIGHT_Pos            _UINT32_(0)                                          /* (ISC_CBHS_BRIGHT) Image Brightness Control (signed 11 bits 1:10:0) Position */
 #define ISC_CBHS_BRIGHT_BRIGHT_Msk            (_UINT32_(0x7FF) << ISC_CBHS_BRIGHT_BRIGHT_Pos)      /* (ISC_CBHS_BRIGHT) Image Brightness Control (signed 11 bits 1:10:0) Mask */
-#define ISC_CBHS_BRIGHT_BRIGHT(value)         (ISC_CBHS_BRIGHT_BRIGHT_Msk & (_UINT32_(value) << ISC_CBHS_BRIGHT_BRIGHT_Pos)) /* Assigment of value for BRIGHT in the ISC_CBHS_BRIGHT register */
+#define ISC_CBHS_BRIGHT_BRIGHT(value)         (ISC_CBHS_BRIGHT_BRIGHT_Msk & (_UINT32_(value) << ISC_CBHS_BRIGHT_BRIGHT_Pos)) /* Assignment of value for BRIGHT in the ISC_CBHS_BRIGHT register */
 #define ISC_CBHS_BRIGHT_Msk                   _UINT32_(0x000007FF)                                 /* (ISC_CBHS_BRIGHT) Register Mask  */
 
 
@@ -1334,7 +1333,7 @@
 
 #define ISC_CBHS_CONT_CONTRAST_Pos            _UINT32_(0)                                          /* (ISC_CBHS_CONT) Image Contrast (unsigned 12 bits 0:4:8) Position */
 #define ISC_CBHS_CONT_CONTRAST_Msk            (_UINT32_(0xFFF) << ISC_CBHS_CONT_CONTRAST_Pos)      /* (ISC_CBHS_CONT) Image Contrast (unsigned 12 bits 0:4:8) Mask */
-#define ISC_CBHS_CONT_CONTRAST(value)         (ISC_CBHS_CONT_CONTRAST_Msk & (_UINT32_(value) << ISC_CBHS_CONT_CONTRAST_Pos)) /* Assigment of value for CONTRAST in the ISC_CBHS_CONT register */
+#define ISC_CBHS_CONT_CONTRAST(value)         (ISC_CBHS_CONT_CONTRAST_Msk & (_UINT32_(value) << ISC_CBHS_CONT_CONTRAST_Pos)) /* Assignment of value for CONTRAST in the ISC_CBHS_CONT register */
 #define ISC_CBHS_CONT_Msk                     _UINT32_(0x00000FFF)                                 /* (ISC_CBHS_CONT) Register Mask  */
 
 
@@ -1343,7 +1342,7 @@
 
 #define ISC_CBHS_HUE_HUE_Pos                  _UINT32_(0)                                          /* (ISC_CBHS_HUE) Image Hue value (unsigned 9 bits 0:9:0) Position */
 #define ISC_CBHS_HUE_HUE_Msk                  (_UINT32_(0x1FF) << ISC_CBHS_HUE_HUE_Pos)            /* (ISC_CBHS_HUE) Image Hue value (unsigned 9 bits 0:9:0) Mask */
-#define ISC_CBHS_HUE_HUE(value)               (ISC_CBHS_HUE_HUE_Msk & (_UINT32_(value) << ISC_CBHS_HUE_HUE_Pos)) /* Assigment of value for HUE in the ISC_CBHS_HUE register */
+#define ISC_CBHS_HUE_HUE(value)               (ISC_CBHS_HUE_HUE_Msk & (_UINT32_(value) << ISC_CBHS_HUE_HUE_Pos)) /* Assignment of value for HUE in the ISC_CBHS_HUE register */
 #define ISC_CBHS_HUE_Msk                      _UINT32_(0x000001FF)                                 /* (ISC_CBHS_HUE) Register Mask  */
 
 
@@ -1352,7 +1351,7 @@
 
 #define ISC_CBHS_SAT_SATURATION_Pos           _UINT32_(0)                                          /* (ISC_CBHS_SAT) Image Saturation Value (unsigned 12 bits 0:8:4) Position */
 #define ISC_CBHS_SAT_SATURATION_Msk           (_UINT32_(0xFFF) << ISC_CBHS_SAT_SATURATION_Pos)     /* (ISC_CBHS_SAT) Image Saturation Value (unsigned 12 bits 0:8:4) Mask */
-#define ISC_CBHS_SAT_SATURATION(value)        (ISC_CBHS_SAT_SATURATION_Msk & (_UINT32_(value) << ISC_CBHS_SAT_SATURATION_Pos)) /* Assigment of value for SATURATION in the ISC_CBHS_SAT register */
+#define ISC_CBHS_SAT_SATURATION(value)        (ISC_CBHS_SAT_SATURATION_Msk & (_UINT32_(value) << ISC_CBHS_SAT_SATURATION_Pos)) /* Assignment of value for SATURATION in the ISC_CBHS_SAT register */
 #define ISC_CBHS_SAT_Msk                      _UINT32_(0x00000FFF)                                 /* (ISC_CBHS_SAT) Register Mask  */
 
 
@@ -1361,11 +1360,11 @@
 
 #define ISC_SUB422_CTRL_ENABLE_Pos            _UINT32_(0)                                          /* (ISC_SUB422_CTRL) 4:4:4 to 4:2:2 Chrominance Horizontal Subsampling Filter Enable Position */
 #define ISC_SUB422_CTRL_ENABLE_Msk            (_UINT32_(0x1) << ISC_SUB422_CTRL_ENABLE_Pos)        /* (ISC_SUB422_CTRL) 4:4:4 to 4:2:2 Chrominance Horizontal Subsampling Filter Enable Mask */
-#define ISC_SUB422_CTRL_ENABLE(value)         (ISC_SUB422_CTRL_ENABLE_Msk & (_UINT32_(value) << ISC_SUB422_CTRL_ENABLE_Pos)) /* Assigment of value for ENABLE in the ISC_SUB422_CTRL register */
+#define ISC_SUB422_CTRL_ENABLE(value)         (ISC_SUB422_CTRL_ENABLE_Msk & (_UINT32_(value) << ISC_SUB422_CTRL_ENABLE_Pos)) /* Assignment of value for ENABLE in the ISC_SUB422_CTRL register */
 #define   ISC_SUB422_CTRL_ENABLE_0_Val        _UINT32_(0x0)                                        /* (ISC_SUB422_CTRL) Subsampler is disabled.  */
 #define   ISC_SUB422_CTRL_ENABLE_1_Val        _UINT32_(0x1)                                        /* (ISC_SUB422_CTRL) Subsampler is enabled.  */
-#define ISC_SUB422_CTRL_ENABLE_0              (ISC_SUB422_CTRL_ENABLE_0_Val << ISC_SUB422_CTRL_ENABLE_Pos) /* (ISC_SUB422_CTRL) Subsampler is disabled. Position  */
-#define ISC_SUB422_CTRL_ENABLE_1              (ISC_SUB422_CTRL_ENABLE_1_Val << ISC_SUB422_CTRL_ENABLE_Pos) /* (ISC_SUB422_CTRL) Subsampler is enabled. Position  */
+#define ISC_SUB422_CTRL_ENABLE_0              (ISC_SUB422_CTRL_ENABLE_0_Val << ISC_SUB422_CTRL_ENABLE_Pos) /* (ISC_SUB422_CTRL) Subsampler is disabled. Position */
+#define ISC_SUB422_CTRL_ENABLE_1              (ISC_SUB422_CTRL_ENABLE_1_Val << ISC_SUB422_CTRL_ENABLE_Pos) /* (ISC_SUB422_CTRL) Subsampler is enabled. Position */
 #define ISC_SUB422_CTRL_Msk                   _UINT32_(0x00000001)                                 /* (ISC_SUB422_CTRL) Register Mask  */
 
 
@@ -1374,33 +1373,33 @@
 
 #define ISC_SUB422_CFG_CCIR_Pos               _UINT32_(0)                                          /* (ISC_SUB422_CFG) CCIR656 Input Stream Position */
 #define ISC_SUB422_CFG_CCIR_Msk               (_UINT32_(0x1) << ISC_SUB422_CFG_CCIR_Pos)           /* (ISC_SUB422_CFG) CCIR656 Input Stream Mask */
-#define ISC_SUB422_CFG_CCIR(value)            (ISC_SUB422_CFG_CCIR_Msk & (_UINT32_(value) << ISC_SUB422_CFG_CCIR_Pos)) /* Assigment of value for CCIR in the ISC_SUB422_CFG register */
+#define ISC_SUB422_CFG_CCIR(value)            (ISC_SUB422_CFG_CCIR_Msk & (_UINT32_(value) << ISC_SUB422_CFG_CCIR_Pos)) /* Assignment of value for CCIR in the ISC_SUB422_CFG register */
 #define   ISC_SUB422_CFG_CCIR_0_Val           _UINT32_(0x0)                                        /* (ISC_SUB422_CFG) Raw mode.  */
 #define   ISC_SUB422_CFG_CCIR_1_Val           _UINT32_(0x1)                                        /* (ISC_SUB422_CFG) CCIR mode.  */
-#define ISC_SUB422_CFG_CCIR_0                 (ISC_SUB422_CFG_CCIR_0_Val << ISC_SUB422_CFG_CCIR_Pos) /* (ISC_SUB422_CFG) Raw mode. Position  */
-#define ISC_SUB422_CFG_CCIR_1                 (ISC_SUB422_CFG_CCIR_1_Val << ISC_SUB422_CFG_CCIR_Pos) /* (ISC_SUB422_CFG) CCIR mode. Position  */
+#define ISC_SUB422_CFG_CCIR_0                 (ISC_SUB422_CFG_CCIR_0_Val << ISC_SUB422_CFG_CCIR_Pos) /* (ISC_SUB422_CFG) Raw mode. Position */
+#define ISC_SUB422_CFG_CCIR_1                 (ISC_SUB422_CFG_CCIR_1_Val << ISC_SUB422_CFG_CCIR_Pos) /* (ISC_SUB422_CFG) CCIR mode. Position */
 #define ISC_SUB422_CFG_CCIRMODE_Pos           _UINT32_(1)                                          /* (ISC_SUB422_CFG) CCIR656 Byte Ordering Position */
 #define ISC_SUB422_CFG_CCIRMODE_Msk           (_UINT32_(0x3) << ISC_SUB422_CFG_CCIRMODE_Pos)       /* (ISC_SUB422_CFG) CCIR656 Byte Ordering Mask */
-#define ISC_SUB422_CFG_CCIRMODE(value)        (ISC_SUB422_CFG_CCIRMODE_Msk & (_UINT32_(value) << ISC_SUB422_CFG_CCIRMODE_Pos)) /* Assigment of value for CCIRMODE in the ISC_SUB422_CFG register */
+#define ISC_SUB422_CFG_CCIRMODE(value)        (ISC_SUB422_CFG_CCIRMODE_Msk & (_UINT32_(value) << ISC_SUB422_CFG_CCIRMODE_Pos)) /* Assignment of value for CCIRMODE in the ISC_SUB422_CFG register */
 #define   ISC_SUB422_CFG_CCIRMODE_CBY_Val     _UINT32_(0x0)                                        /* (ISC_SUB422_CFG) Byte ordering Cb0, Y0, Cr0, Y1  */
 #define   ISC_SUB422_CFG_CCIRMODE_CRY_Val     _UINT32_(0x1)                                        /* (ISC_SUB422_CFG) Byte ordering Cr0, Y0, Cb0, Y1  */
 #define   ISC_SUB422_CFG_CCIRMODE_YCB_Val     _UINT32_(0x2)                                        /* (ISC_SUB422_CFG) Byte ordering Y0, Cb0, Y1, Cr0  */
 #define   ISC_SUB422_CFG_CCIRMODE_YCR_Val     _UINT32_(0x3)                                        /* (ISC_SUB422_CFG) Byte ordering Y0, Cr0, Y1, Cb0  */
-#define ISC_SUB422_CFG_CCIRMODE_CBY           (ISC_SUB422_CFG_CCIRMODE_CBY_Val << ISC_SUB422_CFG_CCIRMODE_Pos) /* (ISC_SUB422_CFG) Byte ordering Cb0, Y0, Cr0, Y1 Position  */
-#define ISC_SUB422_CFG_CCIRMODE_CRY           (ISC_SUB422_CFG_CCIRMODE_CRY_Val << ISC_SUB422_CFG_CCIRMODE_Pos) /* (ISC_SUB422_CFG) Byte ordering Cr0, Y0, Cb0, Y1 Position  */
-#define ISC_SUB422_CFG_CCIRMODE_YCB           (ISC_SUB422_CFG_CCIRMODE_YCB_Val << ISC_SUB422_CFG_CCIRMODE_Pos) /* (ISC_SUB422_CFG) Byte ordering Y0, Cb0, Y1, Cr0 Position  */
-#define ISC_SUB422_CFG_CCIRMODE_YCR           (ISC_SUB422_CFG_CCIRMODE_YCR_Val << ISC_SUB422_CFG_CCIRMODE_Pos) /* (ISC_SUB422_CFG) Byte ordering Y0, Cr0, Y1, Cb0 Position  */
+#define ISC_SUB422_CFG_CCIRMODE_CBY           (ISC_SUB422_CFG_CCIRMODE_CBY_Val << ISC_SUB422_CFG_CCIRMODE_Pos) /* (ISC_SUB422_CFG) Byte ordering Cb0, Y0, Cr0, Y1 Position */
+#define ISC_SUB422_CFG_CCIRMODE_CRY           (ISC_SUB422_CFG_CCIRMODE_CRY_Val << ISC_SUB422_CFG_CCIRMODE_Pos) /* (ISC_SUB422_CFG) Byte ordering Cr0, Y0, Cb0, Y1 Position */
+#define ISC_SUB422_CFG_CCIRMODE_YCB           (ISC_SUB422_CFG_CCIRMODE_YCB_Val << ISC_SUB422_CFG_CCIRMODE_Pos) /* (ISC_SUB422_CFG) Byte ordering Y0, Cb0, Y1, Cr0 Position */
+#define ISC_SUB422_CFG_CCIRMODE_YCR           (ISC_SUB422_CFG_CCIRMODE_YCR_Val << ISC_SUB422_CFG_CCIRMODE_Pos) /* (ISC_SUB422_CFG) Byte ordering Y0, Cr0, Y1, Cb0 Position */
 #define ISC_SUB422_CFG_FILTER_Pos             _UINT32_(4)                                          /* (ISC_SUB422_CFG) Low Pass Filter Selection Position */
 #define ISC_SUB422_CFG_FILTER_Msk             (_UINT32_(0x3) << ISC_SUB422_CFG_FILTER_Pos)         /* (ISC_SUB422_CFG) Low Pass Filter Selection Mask */
-#define ISC_SUB422_CFG_FILTER(value)          (ISC_SUB422_CFG_FILTER_Msk & (_UINT32_(value) << ISC_SUB422_CFG_FILTER_Pos)) /* Assigment of value for FILTER in the ISC_SUB422_CFG register */
+#define ISC_SUB422_CFG_FILTER(value)          (ISC_SUB422_CFG_FILTER_Msk & (_UINT32_(value) << ISC_SUB422_CFG_FILTER_Pos)) /* Assignment of value for FILTER in the ISC_SUB422_CFG register */
 #define   ISC_SUB422_CFG_FILTER_FILT0CO_Val   _UINT32_(0x0)                                        /* (ISC_SUB422_CFG) Cosited, {1}  */
 #define   ISC_SUB422_CFG_FILTER_FILT1CE_Val   _UINT32_(0x1)                                        /* (ISC_SUB422_CFG) Centered {1, 1}  */
 #define   ISC_SUB422_CFG_FILTER_FILT2CO_Val   _UINT32_(0x2)                                        /* (ISC_SUB422_CFG) Cosited {1,2,1}  */
 #define   ISC_SUB422_CFG_FILTER_FILT3CE_Val   _UINT32_(0x3)                                        /* (ISC_SUB422_CFG) Centered {1, 3, 3, 1}  */
-#define ISC_SUB422_CFG_FILTER_FILT0CO         (ISC_SUB422_CFG_FILTER_FILT0CO_Val << ISC_SUB422_CFG_FILTER_Pos) /* (ISC_SUB422_CFG) Cosited, {1} Position  */
-#define ISC_SUB422_CFG_FILTER_FILT1CE         (ISC_SUB422_CFG_FILTER_FILT1CE_Val << ISC_SUB422_CFG_FILTER_Pos) /* (ISC_SUB422_CFG) Centered {1, 1} Position  */
-#define ISC_SUB422_CFG_FILTER_FILT2CO         (ISC_SUB422_CFG_FILTER_FILT2CO_Val << ISC_SUB422_CFG_FILTER_Pos) /* (ISC_SUB422_CFG) Cosited {1,2,1} Position  */
-#define ISC_SUB422_CFG_FILTER_FILT3CE         (ISC_SUB422_CFG_FILTER_FILT3CE_Val << ISC_SUB422_CFG_FILTER_Pos) /* (ISC_SUB422_CFG) Centered {1, 3, 3, 1} Position  */
+#define ISC_SUB422_CFG_FILTER_FILT0CO         (ISC_SUB422_CFG_FILTER_FILT0CO_Val << ISC_SUB422_CFG_FILTER_Pos) /* (ISC_SUB422_CFG) Cosited, {1} Position */
+#define ISC_SUB422_CFG_FILTER_FILT1CE         (ISC_SUB422_CFG_FILTER_FILT1CE_Val << ISC_SUB422_CFG_FILTER_Pos) /* (ISC_SUB422_CFG) Centered {1, 1} Position */
+#define ISC_SUB422_CFG_FILTER_FILT2CO         (ISC_SUB422_CFG_FILTER_FILT2CO_Val << ISC_SUB422_CFG_FILTER_Pos) /* (ISC_SUB422_CFG) Cosited {1,2,1} Position */
+#define ISC_SUB422_CFG_FILTER_FILT3CE         (ISC_SUB422_CFG_FILTER_FILT3CE_Val << ISC_SUB422_CFG_FILTER_Pos) /* (ISC_SUB422_CFG) Centered {1, 3, 3, 1} Position */
 #define ISC_SUB422_CFG_Msk                    _UINT32_(0x00000037)                                 /* (ISC_SUB422_CFG) Register Mask  */
 
 
@@ -1409,25 +1408,25 @@
 
 #define ISC_SUB420_CTRL_ENABLE_Pos            _UINT32_(0)                                          /* (ISC_SUB420_CTRL) 4:2:2 to 4:2:0 Vertical Subsampling Filter Enable (Center Aligned) Position */
 #define ISC_SUB420_CTRL_ENABLE_Msk            (_UINT32_(0x1) << ISC_SUB420_CTRL_ENABLE_Pos)        /* (ISC_SUB420_CTRL) 4:2:2 to 4:2:0 Vertical Subsampling Filter Enable (Center Aligned) Mask */
-#define ISC_SUB420_CTRL_ENABLE(value)         (ISC_SUB420_CTRL_ENABLE_Msk & (_UINT32_(value) << ISC_SUB420_CTRL_ENABLE_Pos)) /* Assigment of value for ENABLE in the ISC_SUB420_CTRL register */
+#define ISC_SUB420_CTRL_ENABLE(value)         (ISC_SUB420_CTRL_ENABLE_Msk & (_UINT32_(value) << ISC_SUB420_CTRL_ENABLE_Pos)) /* Assignment of value for ENABLE in the ISC_SUB420_CTRL register */
 #define   ISC_SUB420_CTRL_ENABLE_0_Val        _UINT32_(0x0)                                        /* (ISC_SUB420_CTRL) Subsampler disabled.  */
 #define   ISC_SUB420_CTRL_ENABLE_1_Val        _UINT32_(0x1)                                        /* (ISC_SUB420_CTRL) Subsampler enabled.  */
-#define ISC_SUB420_CTRL_ENABLE_0              (ISC_SUB420_CTRL_ENABLE_0_Val << ISC_SUB420_CTRL_ENABLE_Pos) /* (ISC_SUB420_CTRL) Subsampler disabled. Position  */
-#define ISC_SUB420_CTRL_ENABLE_1              (ISC_SUB420_CTRL_ENABLE_1_Val << ISC_SUB420_CTRL_ENABLE_Pos) /* (ISC_SUB420_CTRL) Subsampler enabled. Position  */
+#define ISC_SUB420_CTRL_ENABLE_0              (ISC_SUB420_CTRL_ENABLE_0_Val << ISC_SUB420_CTRL_ENABLE_Pos) /* (ISC_SUB420_CTRL) Subsampler disabled. Position */
+#define ISC_SUB420_CTRL_ENABLE_1              (ISC_SUB420_CTRL_ENABLE_1_Val << ISC_SUB420_CTRL_ENABLE_Pos) /* (ISC_SUB420_CTRL) Subsampler enabled. Position */
 #define ISC_SUB420_CTRL_FILTER_Pos            _UINT32_(4)                                          /* (ISC_SUB420_CTRL) Interlaced or Progressive Chrominance Filter Position */
 #define ISC_SUB420_CTRL_FILTER_Msk            (_UINT32_(0x1) << ISC_SUB420_CTRL_FILTER_Pos)        /* (ISC_SUB420_CTRL) Interlaced or Progressive Chrominance Filter Mask */
-#define ISC_SUB420_CTRL_FILTER(value)         (ISC_SUB420_CTRL_FILTER_Msk & (_UINT32_(value) << ISC_SUB420_CTRL_FILTER_Pos)) /* Assigment of value for FILTER in the ISC_SUB420_CTRL register */
+#define ISC_SUB420_CTRL_FILTER(value)         (ISC_SUB420_CTRL_FILTER_Msk & (_UINT32_(value) << ISC_SUB420_CTRL_FILTER_Pos)) /* Assignment of value for FILTER in the ISC_SUB420_CTRL register */
 #define   ISC_SUB420_CTRL_FILTER_0_Val        _UINT32_(0x0)                                        /* (ISC_SUB420_CTRL) Progressive filter {0.5, 0.5}.  */
 #define   ISC_SUB420_CTRL_FILTER_1_Val        _UINT32_(0x1)                                        /* (ISC_SUB420_CTRL) Field-dependent filter, top field filter is {0.75, 0.25}, bottom field filter is {0.25, 0.75}.  */
-#define ISC_SUB420_CTRL_FILTER_0              (ISC_SUB420_CTRL_FILTER_0_Val << ISC_SUB420_CTRL_FILTER_Pos) /* (ISC_SUB420_CTRL) Progressive filter {0.5, 0.5}. Position  */
-#define ISC_SUB420_CTRL_FILTER_1              (ISC_SUB420_CTRL_FILTER_1_Val << ISC_SUB420_CTRL_FILTER_Pos) /* (ISC_SUB420_CTRL) Field-dependent filter, top field filter is {0.75, 0.25}, bottom field filter is {0.25, 0.75}. Position  */
+#define ISC_SUB420_CTRL_FILTER_0              (ISC_SUB420_CTRL_FILTER_0_Val << ISC_SUB420_CTRL_FILTER_Pos) /* (ISC_SUB420_CTRL) Progressive filter {0.5, 0.5}. Position */
+#define ISC_SUB420_CTRL_FILTER_1              (ISC_SUB420_CTRL_FILTER_1_Val << ISC_SUB420_CTRL_FILTER_Pos) /* (ISC_SUB420_CTRL) Field-dependent filter, top field filter is {0.75, 0.25}, bottom field filter is {0.25, 0.75}. Position */
 #define ISC_SUB420_CTRL_MIPI420_Pos           _UINT32_(5)                                          /* (ISC_SUB420_CTRL) MIPI YUV 420 8-bpp or 10-bpp Even Odd Splitter Position */
 #define ISC_SUB420_CTRL_MIPI420_Msk           (_UINT32_(0x1) << ISC_SUB420_CTRL_MIPI420_Pos)       /* (ISC_SUB420_CTRL) MIPI YUV 420 8-bpp or 10-bpp Even Odd Splitter Mask */
-#define ISC_SUB420_CTRL_MIPI420(value)        (ISC_SUB420_CTRL_MIPI420_Msk & (_UINT32_(value) << ISC_SUB420_CTRL_MIPI420_Pos)) /* Assigment of value for MIPI420 in the ISC_SUB420_CTRL register */
+#define ISC_SUB420_CTRL_MIPI420(value)        (ISC_SUB420_CTRL_MIPI420_Msk & (_UINT32_(value) << ISC_SUB420_CTRL_MIPI420_Pos)) /* Assignment of value for MIPI420 in the ISC_SUB420_CTRL register */
 #define   ISC_SUB420_CTRL_MIPI420_0_Val       _UINT32_(0x0)                                        /* (ISC_SUB420_CTRL) Normal mode.  */
 #define   ISC_SUB420_CTRL_MIPI420_1_Val       _UINT32_(0x1)                                        /* (ISC_SUB420_CTRL) When the MIPI interface is selected and the source format is YUV 420 RMS (recommended memory storage), the sub420 submodule routes data lanes depending on the parity of the line received (odd or even).  */
-#define ISC_SUB420_CTRL_MIPI420_0             (ISC_SUB420_CTRL_MIPI420_0_Val << ISC_SUB420_CTRL_MIPI420_Pos) /* (ISC_SUB420_CTRL) Normal mode. Position  */
-#define ISC_SUB420_CTRL_MIPI420_1             (ISC_SUB420_CTRL_MIPI420_1_Val << ISC_SUB420_CTRL_MIPI420_Pos) /* (ISC_SUB420_CTRL) When the MIPI interface is selected and the source format is YUV 420 RMS (recommended memory storage), the sub420 submodule routes data lanes depending on the parity of the line received (odd or even). Position  */
+#define ISC_SUB420_CTRL_MIPI420_0             (ISC_SUB420_CTRL_MIPI420_0_Val << ISC_SUB420_CTRL_MIPI420_Pos) /* (ISC_SUB420_CTRL) Normal mode. Position */
+#define ISC_SUB420_CTRL_MIPI420_1             (ISC_SUB420_CTRL_MIPI420_1_Val << ISC_SUB420_CTRL_MIPI420_Pos) /* (ISC_SUB420_CTRL) When the MIPI interface is selected and the source format is YUV 420 RMS (recommended memory storage), the sub420 submodule routes data lanes depending on the parity of the line received (odd or even). Position */
 #define ISC_SUB420_CTRL_Msk                   _UINT32_(0x00000031)                                 /* (ISC_SUB420_CTRL) Register Mask  */
 
 #define ISC_SUB420_CTRL_MIPI_Pos              _UINT32_(5)                                          /* (ISC_SUB420_CTRL Position) MIPI YUV 42x 8-bpp or xx-bpp Even Odd Splitter */
@@ -1439,7 +1438,7 @@
 
 #define ISC_RLP_CFG_MODE_Pos                  _UINT32_(0)                                          /* (ISC_RLP_CFG) Rounding, Limiting and Packing Mode Position */
 #define ISC_RLP_CFG_MODE_Msk                  (_UINT32_(0xF) << ISC_RLP_CFG_MODE_Pos)              /* (ISC_RLP_CFG) Rounding, Limiting and Packing Mode Mask */
-#define ISC_RLP_CFG_MODE(value)               (ISC_RLP_CFG_MODE_Msk & (_UINT32_(value) << ISC_RLP_CFG_MODE_Pos)) /* Assigment of value for MODE in the ISC_RLP_CFG register */
+#define ISC_RLP_CFG_MODE(value)               (ISC_RLP_CFG_MODE_Msk & (_UINT32_(value) << ISC_RLP_CFG_MODE_Pos)) /* Assignment of value for MODE in the ISC_RLP_CFG register */
 #define   ISC_RLP_CFG_MODE_DAT8_Val           _UINT32_(0x0)                                        /* (ISC_RLP_CFG) 8-bit data  */
 #define   ISC_RLP_CFG_MODE_DAT9_Val           _UINT32_(0x1)                                        /* (ISC_RLP_CFG) 9-bit data  */
 #define   ISC_RLP_CFG_MODE_DAT10_Val          _UINT32_(0x2)                                        /* (ISC_RLP_CFG) 10-bit data  */
@@ -1456,50 +1455,50 @@
 #define   ISC_RLP_CFG_MODE_YCYC_Val           _UINT32_(0xD)                                        /* (ISC_RLP_CFG) Y(n+1)CbY(n)Cr 422 interleaved full range per component 8-bit [0-255]  */
 #define   ISC_RLP_CFG_MODE_YCYC_LIMITED_Val   _UINT32_(0xE)                                        /* (ISC_RLP_CFG) Y(n+1)CbY(n)Cr 422 interleaved limited range per component 8-bit  */
 #define   ISC_RLP_CFG_MODE_BYPASS_Val         _UINT32_(0xF)                                        /* (ISC_RLP_CFG) 32-bit input is sampled and written to the rlp output port. Select this mode for MIPI RMS mode.  */
-#define ISC_RLP_CFG_MODE_DAT8                 (ISC_RLP_CFG_MODE_DAT8_Val << ISC_RLP_CFG_MODE_Pos)  /* (ISC_RLP_CFG) 8-bit data Position  */
-#define ISC_RLP_CFG_MODE_DAT9                 (ISC_RLP_CFG_MODE_DAT9_Val << ISC_RLP_CFG_MODE_Pos)  /* (ISC_RLP_CFG) 9-bit data Position  */
-#define ISC_RLP_CFG_MODE_DAT10                (ISC_RLP_CFG_MODE_DAT10_Val << ISC_RLP_CFG_MODE_Pos) /* (ISC_RLP_CFG) 10-bit data Position  */
-#define ISC_RLP_CFG_MODE_DAT11                (ISC_RLP_CFG_MODE_DAT11_Val << ISC_RLP_CFG_MODE_Pos) /* (ISC_RLP_CFG) 11-bit data Position  */
-#define ISC_RLP_CFG_MODE_DAT12                (ISC_RLP_CFG_MODE_DAT12_Val << ISC_RLP_CFG_MODE_Pos) /* (ISC_RLP_CFG) 12-bit data Position  */
-#define ISC_RLP_CFG_MODE_DATY8                (ISC_RLP_CFG_MODE_DATY8_Val << ISC_RLP_CFG_MODE_Pos) /* (ISC_RLP_CFG) 8-bit luminance only Position  */
-#define ISC_RLP_CFG_MODE_DATY10               (ISC_RLP_CFG_MODE_DATY10_Val << ISC_RLP_CFG_MODE_Pos) /* (ISC_RLP_CFG) 10-bit luminance only Position  */
-#define ISC_RLP_CFG_MODE_ARGB444              (ISC_RLP_CFG_MODE_ARGB444_Val << ISC_RLP_CFG_MODE_Pos) /* (ISC_RLP_CFG) 12-bit RGB+4-bit Alpha (MSB) Position  */
-#define ISC_RLP_CFG_MODE_ARGB555              (ISC_RLP_CFG_MODE_ARGB555_Val << ISC_RLP_CFG_MODE_Pos) /* (ISC_RLP_CFG) 15-bit RGB+1-bit Alpha (MSB) Position  */
-#define ISC_RLP_CFG_MODE_RGB565               (ISC_RLP_CFG_MODE_RGB565_Val << ISC_RLP_CFG_MODE_Pos) /* (ISC_RLP_CFG) 16-bit RGB Position  */
-#define ISC_RLP_CFG_MODE_ARGB32               (ISC_RLP_CFG_MODE_ARGB32_Val << ISC_RLP_CFG_MODE_Pos) /* (ISC_RLP_CFG) 24-bits RGB mode+8-bit Alpha Position  */
-#define ISC_RLP_CFG_MODE_YYCC                 (ISC_RLP_CFG_MODE_YYCC_Val << ISC_RLP_CFG_MODE_Pos)  /* (ISC_RLP_CFG) YCbCr mode (full range, [0-255]) Position  */
-#define ISC_RLP_CFG_MODE_YYCC_LIMITED         (ISC_RLP_CFG_MODE_YYCC_LIMITED_Val << ISC_RLP_CFG_MODE_Pos) /* (ISC_RLP_CFG) YCbCr mode (limited range) Position  */
-#define ISC_RLP_CFG_MODE_YCYC                 (ISC_RLP_CFG_MODE_YCYC_Val << ISC_RLP_CFG_MODE_Pos)  /* (ISC_RLP_CFG) Y(n+1)CbY(n)Cr 422 interleaved full range per component 8-bit [0-255] Position  */
-#define ISC_RLP_CFG_MODE_YCYC_LIMITED         (ISC_RLP_CFG_MODE_YCYC_LIMITED_Val << ISC_RLP_CFG_MODE_Pos) /* (ISC_RLP_CFG) Y(n+1)CbY(n)Cr 422 interleaved limited range per component 8-bit Position  */
-#define ISC_RLP_CFG_MODE_BYPASS               (ISC_RLP_CFG_MODE_BYPASS_Val << ISC_RLP_CFG_MODE_Pos) /* (ISC_RLP_CFG) 32-bit input is sampled and written to the rlp output port. Select this mode for MIPI RMS mode. Position  */
+#define ISC_RLP_CFG_MODE_DAT8                 (ISC_RLP_CFG_MODE_DAT8_Val << ISC_RLP_CFG_MODE_Pos)  /* (ISC_RLP_CFG) 8-bit data Position */
+#define ISC_RLP_CFG_MODE_DAT9                 (ISC_RLP_CFG_MODE_DAT9_Val << ISC_RLP_CFG_MODE_Pos)  /* (ISC_RLP_CFG) 9-bit data Position */
+#define ISC_RLP_CFG_MODE_DAT10                (ISC_RLP_CFG_MODE_DAT10_Val << ISC_RLP_CFG_MODE_Pos) /* (ISC_RLP_CFG) 10-bit data Position */
+#define ISC_RLP_CFG_MODE_DAT11                (ISC_RLP_CFG_MODE_DAT11_Val << ISC_RLP_CFG_MODE_Pos) /* (ISC_RLP_CFG) 11-bit data Position */
+#define ISC_RLP_CFG_MODE_DAT12                (ISC_RLP_CFG_MODE_DAT12_Val << ISC_RLP_CFG_MODE_Pos) /* (ISC_RLP_CFG) 12-bit data Position */
+#define ISC_RLP_CFG_MODE_DATY8                (ISC_RLP_CFG_MODE_DATY8_Val << ISC_RLP_CFG_MODE_Pos) /* (ISC_RLP_CFG) 8-bit luminance only Position */
+#define ISC_RLP_CFG_MODE_DATY10               (ISC_RLP_CFG_MODE_DATY10_Val << ISC_RLP_CFG_MODE_Pos) /* (ISC_RLP_CFG) 10-bit luminance only Position */
+#define ISC_RLP_CFG_MODE_ARGB444              (ISC_RLP_CFG_MODE_ARGB444_Val << ISC_RLP_CFG_MODE_Pos) /* (ISC_RLP_CFG) 12-bit RGB+4-bit Alpha (MSB) Position */
+#define ISC_RLP_CFG_MODE_ARGB555              (ISC_RLP_CFG_MODE_ARGB555_Val << ISC_RLP_CFG_MODE_Pos) /* (ISC_RLP_CFG) 15-bit RGB+1-bit Alpha (MSB) Position */
+#define ISC_RLP_CFG_MODE_RGB565               (ISC_RLP_CFG_MODE_RGB565_Val << ISC_RLP_CFG_MODE_Pos) /* (ISC_RLP_CFG) 16-bit RGB Position */
+#define ISC_RLP_CFG_MODE_ARGB32               (ISC_RLP_CFG_MODE_ARGB32_Val << ISC_RLP_CFG_MODE_Pos) /* (ISC_RLP_CFG) 24-bits RGB mode+8-bit Alpha Position */
+#define ISC_RLP_CFG_MODE_YYCC                 (ISC_RLP_CFG_MODE_YYCC_Val << ISC_RLP_CFG_MODE_Pos)  /* (ISC_RLP_CFG) YCbCr mode (full range, [0-255]) Position */
+#define ISC_RLP_CFG_MODE_YYCC_LIMITED         (ISC_RLP_CFG_MODE_YYCC_LIMITED_Val << ISC_RLP_CFG_MODE_Pos) /* (ISC_RLP_CFG) YCbCr mode (limited range) Position */
+#define ISC_RLP_CFG_MODE_YCYC                 (ISC_RLP_CFG_MODE_YCYC_Val << ISC_RLP_CFG_MODE_Pos)  /* (ISC_RLP_CFG) Y(n+1)CbY(n)Cr 422 interleaved full range per component 8-bit [0-255] Position */
+#define ISC_RLP_CFG_MODE_YCYC_LIMITED         (ISC_RLP_CFG_MODE_YCYC_LIMITED_Val << ISC_RLP_CFG_MODE_Pos) /* (ISC_RLP_CFG) Y(n+1)CbY(n)Cr 422 interleaved limited range per component 8-bit Position */
+#define ISC_RLP_CFG_MODE_BYPASS               (ISC_RLP_CFG_MODE_BYPASS_Val << ISC_RLP_CFG_MODE_Pos) /* (ISC_RLP_CFG) 32-bit input is sampled and written to the rlp output port. Select this mode for MIPI RMS mode. Position */
 #define ISC_RLP_CFG_REP_Pos                   _UINT32_(4)                                          /* (ISC_RLP_CFG) Pixel Expansion with Replication Logic Position */
 #define ISC_RLP_CFG_REP_Msk                   (_UINT32_(0x1) << ISC_RLP_CFG_REP_Pos)               /* (ISC_RLP_CFG) Pixel Expansion with Replication Logic Mask */
-#define ISC_RLP_CFG_REP(value)                (ISC_RLP_CFG_REP_Msk & (_UINT32_(value) << ISC_RLP_CFG_REP_Pos)) /* Assigment of value for REP in the ISC_RLP_CFG register */
+#define ISC_RLP_CFG_REP(value)                (ISC_RLP_CFG_REP_Msk & (_UINT32_(value) << ISC_RLP_CFG_REP_Pos)) /* Assignment of value for REP in the ISC_RLP_CFG register */
 #define   ISC_RLP_CFG_REP_0_Val               _UINT32_(0x0)                                        /* (ISC_RLP_CFG) Replication is disabled.  */
 #define   ISC_RLP_CFG_REP_1_Val               _UINT32_(0x1)                                        /* (ISC_RLP_CFG) Replication is enabled.  */
-#define ISC_RLP_CFG_REP_0                     (ISC_RLP_CFG_REP_0_Val << ISC_RLP_CFG_REP_Pos)       /* (ISC_RLP_CFG) Replication is disabled. Position  */
-#define ISC_RLP_CFG_REP_1                     (ISC_RLP_CFG_REP_1_Val << ISC_RLP_CFG_REP_Pos)       /* (ISC_RLP_CFG) Replication is enabled. Position  */
+#define ISC_RLP_CFG_REP_0                     (ISC_RLP_CFG_REP_0_Val << ISC_RLP_CFG_REP_Pos)       /* (ISC_RLP_CFG) Replication is disabled. Position */
+#define ISC_RLP_CFG_REP_1                     (ISC_RLP_CFG_REP_1_Val << ISC_RLP_CFG_REP_Pos)       /* (ISC_RLP_CFG) Replication is enabled. Position */
 #define ISC_RLP_CFG_LSH_Pos                   _UINT32_(5)                                          /* (ISC_RLP_CFG) Logical Left Shift for Pixel to 16-bit Container Mapping Position */
 #define ISC_RLP_CFG_LSH_Msk                   (_UINT32_(0x1) << ISC_RLP_CFG_LSH_Pos)               /* (ISC_RLP_CFG) Logical Left Shift for Pixel to 16-bit Container Mapping Mask */
-#define ISC_RLP_CFG_LSH(value)                (ISC_RLP_CFG_LSH_Msk & (_UINT32_(value) << ISC_RLP_CFG_LSH_Pos)) /* Assigment of value for LSH in the ISC_RLP_CFG register */
+#define ISC_RLP_CFG_LSH(value)                (ISC_RLP_CFG_LSH_Msk & (_UINT32_(value) << ISC_RLP_CFG_LSH_Pos)) /* Assignment of value for LSH in the ISC_RLP_CFG register */
 #define   ISC_RLP_CFG_LSH_0_Val               _UINT32_(0x0)                                        /* (ISC_RLP_CFG) Logical left shift is disabled.  */
 #define   ISC_RLP_CFG_LSH_1_Val               _UINT32_(0x1)                                        /* (ISC_RLP_CFG) Pixel value is left-justified in a 16-bit container.  */
-#define ISC_RLP_CFG_LSH_0                     (ISC_RLP_CFG_LSH_0_Val << ISC_RLP_CFG_LSH_Pos)       /* (ISC_RLP_CFG) Logical left shift is disabled. Position  */
-#define ISC_RLP_CFG_LSH_1                     (ISC_RLP_CFG_LSH_1_Val << ISC_RLP_CFG_LSH_Pos)       /* (ISC_RLP_CFG) Pixel value is left-justified in a 16-bit container. Position  */
+#define ISC_RLP_CFG_LSH_0                     (ISC_RLP_CFG_LSH_0_Val << ISC_RLP_CFG_LSH_Pos)       /* (ISC_RLP_CFG) Logical left shift is disabled. Position */
+#define ISC_RLP_CFG_LSH_1                     (ISC_RLP_CFG_LSH_1_Val << ISC_RLP_CFG_LSH_Pos)       /* (ISC_RLP_CFG) Pixel value is left-justified in a 16-bit container. Position */
 #define ISC_RLP_CFG_YMODE_Pos                 _UINT32_(6)                                          /* (ISC_RLP_CFG) YCbCr  Memory Mapping Configuration Mode Position */
 #define ISC_RLP_CFG_YMODE_Msk                 (_UINT32_(0x3) << ISC_RLP_CFG_YMODE_Pos)             /* (ISC_RLP_CFG) YCbCr  Memory Mapping Configuration Mode Mask */
-#define ISC_RLP_CFG_YMODE(value)              (ISC_RLP_CFG_YMODE_Msk & (_UINT32_(value) << ISC_RLP_CFG_YMODE_Pos)) /* Assigment of value for YMODE in the ISC_RLP_CFG register */
+#define ISC_RLP_CFG_YMODE(value)              (ISC_RLP_CFG_YMODE_Msk & (_UINT32_(value) << ISC_RLP_CFG_YMODE_Pos)) /* Assignment of value for YMODE in the ISC_RLP_CFG register */
 #define   ISC_RLP_CFG_YMODE_RLP_YCBYCR_Val    _UINT32_(0x0)                                        /* (ISC_RLP_CFG) Byte 0 is Cr, Byte 1 is Y(n), Byte 2 is Cb, Byte 3 is Y(n+1)  */
 #define   ISC_RLP_CFG_YMODE_RLP_YCRYCB_Val    _UINT32_(0x1)                                        /* (ISC_RLP_CFG) Byte 0 is Cb, Byte 1 is Y(n), Byte 2 is Cb, Byte 3 is Y(n+1)  */
 #define   ISC_RLP_CFG_YMODE_RLP_CBYCRY_Val    _UINT32_(0x2)                                        /* (ISC_RLP_CFG) Byte 0 is Y(n), Byte 1 is Cr, Byte 2 is Y(n+1), Byte 3 is Cb  */
 #define   ISC_RLP_CFG_YMODE_RLP_CRYCBY_Val    _UINT32_(0x3)                                        /* (ISC_RLP_CFG) Byte 0 is Y (n), Byte 1 is Cb, Byte 2 is Y(n+1), Byte 3 is Cr  */
-#define ISC_RLP_CFG_YMODE_RLP_YCBYCR          (ISC_RLP_CFG_YMODE_RLP_YCBYCR_Val << ISC_RLP_CFG_YMODE_Pos) /* (ISC_RLP_CFG) Byte 0 is Cr, Byte 1 is Y(n), Byte 2 is Cb, Byte 3 is Y(n+1) Position  */
-#define ISC_RLP_CFG_YMODE_RLP_YCRYCB          (ISC_RLP_CFG_YMODE_RLP_YCRYCB_Val << ISC_RLP_CFG_YMODE_Pos) /* (ISC_RLP_CFG) Byte 0 is Cb, Byte 1 is Y(n), Byte 2 is Cb, Byte 3 is Y(n+1) Position  */
-#define ISC_RLP_CFG_YMODE_RLP_CBYCRY          (ISC_RLP_CFG_YMODE_RLP_CBYCRY_Val << ISC_RLP_CFG_YMODE_Pos) /* (ISC_RLP_CFG) Byte 0 is Y(n), Byte 1 is Cr, Byte 2 is Y(n+1), Byte 3 is Cb Position  */
-#define ISC_RLP_CFG_YMODE_RLP_CRYCBY          (ISC_RLP_CFG_YMODE_RLP_CRYCBY_Val << ISC_RLP_CFG_YMODE_Pos) /* (ISC_RLP_CFG) Byte 0 is Y (n), Byte 1 is Cb, Byte 2 is Y(n+1), Byte 3 is Cr Position  */
+#define ISC_RLP_CFG_YMODE_RLP_YCBYCR          (ISC_RLP_CFG_YMODE_RLP_YCBYCR_Val << ISC_RLP_CFG_YMODE_Pos) /* (ISC_RLP_CFG) Byte 0 is Cr, Byte 1 is Y(n), Byte 2 is Cb, Byte 3 is Y(n+1) Position */
+#define ISC_RLP_CFG_YMODE_RLP_YCRYCB          (ISC_RLP_CFG_YMODE_RLP_YCRYCB_Val << ISC_RLP_CFG_YMODE_Pos) /* (ISC_RLP_CFG) Byte 0 is Cb, Byte 1 is Y(n), Byte 2 is Cb, Byte 3 is Y(n+1) Position */
+#define ISC_RLP_CFG_YMODE_RLP_CBYCRY          (ISC_RLP_CFG_YMODE_RLP_CBYCRY_Val << ISC_RLP_CFG_YMODE_Pos) /* (ISC_RLP_CFG) Byte 0 is Y(n), Byte 1 is Cr, Byte 2 is Y(n+1), Byte 3 is Cb Position */
+#define ISC_RLP_CFG_YMODE_RLP_CRYCBY          (ISC_RLP_CFG_YMODE_RLP_CRYCBY_Val << ISC_RLP_CFG_YMODE_Pos) /* (ISC_RLP_CFG) Byte 0 is Y (n), Byte 1 is Cb, Byte 2 is Y(n+1), Byte 3 is Cr Position */
 #define ISC_RLP_CFG_ALPHA_Pos                 _UINT32_(8)                                          /* (ISC_RLP_CFG) Alpha Value for Alpha-enabled RGB Mode Position */
 #define ISC_RLP_CFG_ALPHA_Msk                 (_UINT32_(0xFF) << ISC_RLP_CFG_ALPHA_Pos)            /* (ISC_RLP_CFG) Alpha Value for Alpha-enabled RGB Mode Mask */
-#define ISC_RLP_CFG_ALPHA(value)              (ISC_RLP_CFG_ALPHA_Msk & (_UINT32_(value) << ISC_RLP_CFG_ALPHA_Pos)) /* Assigment of value for ALPHA in the ISC_RLP_CFG register */
+#define ISC_RLP_CFG_ALPHA(value)              (ISC_RLP_CFG_ALPHA_Msk & (_UINT32_(value) << ISC_RLP_CFG_ALPHA_Pos)) /* Assignment of value for ALPHA in the ISC_RLP_CFG register */
 #define ISC_RLP_CFG_Msk                       _UINT32_(0x0000FFFF)                                 /* (ISC_RLP_CFG) Register Mask  */
 
 
@@ -1508,11 +1507,11 @@
 
 #define ISC_HIS_CTRL_ENABLE_Pos               _UINT32_(0)                                          /* (ISC_HIS_CTRL) Histogram Sub Module Enable Position */
 #define ISC_HIS_CTRL_ENABLE_Msk               (_UINT32_(0x1) << ISC_HIS_CTRL_ENABLE_Pos)           /* (ISC_HIS_CTRL) Histogram Sub Module Enable Mask */
-#define ISC_HIS_CTRL_ENABLE(value)            (ISC_HIS_CTRL_ENABLE_Msk & (_UINT32_(value) << ISC_HIS_CTRL_ENABLE_Pos)) /* Assigment of value for ENABLE in the ISC_HIS_CTRL register */
+#define ISC_HIS_CTRL_ENABLE(value)            (ISC_HIS_CTRL_ENABLE_Msk & (_UINT32_(value) << ISC_HIS_CTRL_ENABLE_Pos)) /* Assignment of value for ENABLE in the ISC_HIS_CTRL register */
 #define   ISC_HIS_CTRL_ENABLE_0_Val           _UINT32_(0x0)                                        /* (ISC_HIS_CTRL) Histogram disabled.  */
 #define   ISC_HIS_CTRL_ENABLE_1_Val           _UINT32_(0x1)                                        /* (ISC_HIS_CTRL) Histogram enabled.  */
-#define ISC_HIS_CTRL_ENABLE_0                 (ISC_HIS_CTRL_ENABLE_0_Val << ISC_HIS_CTRL_ENABLE_Pos) /* (ISC_HIS_CTRL) Histogram disabled. Position  */
-#define ISC_HIS_CTRL_ENABLE_1                 (ISC_HIS_CTRL_ENABLE_1_Val << ISC_HIS_CTRL_ENABLE_Pos) /* (ISC_HIS_CTRL) Histogram enabled. Position  */
+#define ISC_HIS_CTRL_ENABLE_0                 (ISC_HIS_CTRL_ENABLE_0_Val << ISC_HIS_CTRL_ENABLE_Pos) /* (ISC_HIS_CTRL) Histogram disabled. Position */
+#define ISC_HIS_CTRL_ENABLE_1                 (ISC_HIS_CTRL_ENABLE_1_Val << ISC_HIS_CTRL_ENABLE_Pos) /* (ISC_HIS_CTRL) Histogram enabled. Position */
 #define ISC_HIS_CTRL_Msk                      _UINT32_(0x00000001)                                 /* (ISC_HIS_CTRL) Register Mask  */
 
 
@@ -1521,7 +1520,7 @@
 
 #define ISC_HIS_CFG_MODE_Pos                  _UINT32_(0)                                          /* (ISC_HIS_CFG) Histogram Operating Mode Position */
 #define ISC_HIS_CFG_MODE_Msk                  (_UINT32_(0x7) << ISC_HIS_CFG_MODE_Pos)              /* (ISC_HIS_CFG) Histogram Operating Mode Mask */
-#define ISC_HIS_CFG_MODE(value)               (ISC_HIS_CFG_MODE_Msk & (_UINT32_(value) << ISC_HIS_CFG_MODE_Pos)) /* Assigment of value for MODE in the ISC_HIS_CFG register */
+#define ISC_HIS_CFG_MODE(value)               (ISC_HIS_CFG_MODE_Msk & (_UINT32_(value) << ISC_HIS_CFG_MODE_Pos)) /* Assignment of value for MODE in the ISC_HIS_CFG register */
 #define   ISC_HIS_CFG_MODE_GR_Val             _UINT32_(0x0)                                        /* (ISC_HIS_CFG) Gr sampling  */
 #define   ISC_HIS_CFG_MODE_R_Val              _UINT32_(0x1)                                        /* (ISC_HIS_CFG) R sampling  */
 #define   ISC_HIS_CFG_MODE_GB_Val             _UINT32_(0x2)                                        /* (ISC_HIS_CFG) Gb sampling  */
@@ -1529,31 +1528,31 @@
 #define   ISC_HIS_CFG_MODE_Y_Val              _UINT32_(0x4)                                        /* (ISC_HIS_CFG) Luminance-only mode  */
 #define   ISC_HIS_CFG_MODE_RAW_Val            _UINT32_(0x5)                                        /* (ISC_HIS_CFG) Raw sampling  */
 #define   ISC_HIS_CFG_MODE_YCCIR656_Val       _UINT32_(0x6)                                        /* (ISC_HIS_CFG) Luminance only with CCIR656 10-bit or 8-bit mode  */
-#define ISC_HIS_CFG_MODE_GR                   (ISC_HIS_CFG_MODE_GR_Val << ISC_HIS_CFG_MODE_Pos)    /* (ISC_HIS_CFG) Gr sampling Position  */
-#define ISC_HIS_CFG_MODE_R                    (ISC_HIS_CFG_MODE_R_Val << ISC_HIS_CFG_MODE_Pos)     /* (ISC_HIS_CFG) R sampling Position  */
-#define ISC_HIS_CFG_MODE_GB                   (ISC_HIS_CFG_MODE_GB_Val << ISC_HIS_CFG_MODE_Pos)    /* (ISC_HIS_CFG) Gb sampling Position  */
-#define ISC_HIS_CFG_MODE_B                    (ISC_HIS_CFG_MODE_B_Val << ISC_HIS_CFG_MODE_Pos)     /* (ISC_HIS_CFG) B sampling Position  */
-#define ISC_HIS_CFG_MODE_Y                    (ISC_HIS_CFG_MODE_Y_Val << ISC_HIS_CFG_MODE_Pos)     /* (ISC_HIS_CFG) Luminance-only mode Position  */
-#define ISC_HIS_CFG_MODE_RAW                  (ISC_HIS_CFG_MODE_RAW_Val << ISC_HIS_CFG_MODE_Pos)   /* (ISC_HIS_CFG) Raw sampling Position  */
-#define ISC_HIS_CFG_MODE_YCCIR656             (ISC_HIS_CFG_MODE_YCCIR656_Val << ISC_HIS_CFG_MODE_Pos) /* (ISC_HIS_CFG) Luminance only with CCIR656 10-bit or 8-bit mode Position  */
+#define ISC_HIS_CFG_MODE_GR                   (ISC_HIS_CFG_MODE_GR_Val << ISC_HIS_CFG_MODE_Pos)    /* (ISC_HIS_CFG) Gr sampling Position */
+#define ISC_HIS_CFG_MODE_R                    (ISC_HIS_CFG_MODE_R_Val << ISC_HIS_CFG_MODE_Pos)     /* (ISC_HIS_CFG) R sampling Position */
+#define ISC_HIS_CFG_MODE_GB                   (ISC_HIS_CFG_MODE_GB_Val << ISC_HIS_CFG_MODE_Pos)    /* (ISC_HIS_CFG) Gb sampling Position */
+#define ISC_HIS_CFG_MODE_B                    (ISC_HIS_CFG_MODE_B_Val << ISC_HIS_CFG_MODE_Pos)     /* (ISC_HIS_CFG) B sampling Position */
+#define ISC_HIS_CFG_MODE_Y                    (ISC_HIS_CFG_MODE_Y_Val << ISC_HIS_CFG_MODE_Pos)     /* (ISC_HIS_CFG) Luminance-only mode Position */
+#define ISC_HIS_CFG_MODE_RAW                  (ISC_HIS_CFG_MODE_RAW_Val << ISC_HIS_CFG_MODE_Pos)   /* (ISC_HIS_CFG) Raw sampling Position */
+#define ISC_HIS_CFG_MODE_YCCIR656             (ISC_HIS_CFG_MODE_YCCIR656_Val << ISC_HIS_CFG_MODE_Pos) /* (ISC_HIS_CFG) Luminance only with CCIR656 10-bit or 8-bit mode Position */
 #define ISC_HIS_CFG_BAYSEL_Pos                _UINT32_(4)                                          /* (ISC_HIS_CFG) Bayer Color Component Selection Position */
 #define ISC_HIS_CFG_BAYSEL_Msk                (_UINT32_(0x3) << ISC_HIS_CFG_BAYSEL_Pos)            /* (ISC_HIS_CFG) Bayer Color Component Selection Mask */
-#define ISC_HIS_CFG_BAYSEL(value)             (ISC_HIS_CFG_BAYSEL_Msk & (_UINT32_(value) << ISC_HIS_CFG_BAYSEL_Pos)) /* Assigment of value for BAYSEL in the ISC_HIS_CFG register */
+#define ISC_HIS_CFG_BAYSEL(value)             (ISC_HIS_CFG_BAYSEL_Msk & (_UINT32_(value) << ISC_HIS_CFG_BAYSEL_Pos)) /* Assignment of value for BAYSEL in the ISC_HIS_CFG register */
 #define   ISC_HIS_CFG_BAYSEL_GRGR_Val         _UINT32_(0x0)                                        /* (ISC_HIS_CFG) Starting row configuration is G R G R (red row)  */
 #define   ISC_HIS_CFG_BAYSEL_RGRG_Val         _UINT32_(0x1)                                        /* (ISC_HIS_CFG) Starting row configuration is R G R G (red row)  */
 #define   ISC_HIS_CFG_BAYSEL_GBGB_Val         _UINT32_(0x2)                                        /* (ISC_HIS_CFG) Starting row configuration is G B G B (blue row  */
 #define   ISC_HIS_CFG_BAYSEL_BGBG_Val         _UINT32_(0x3)                                        /* (ISC_HIS_CFG) Starting row configuration is B G B G (blue row)  */
-#define ISC_HIS_CFG_BAYSEL_GRGR               (ISC_HIS_CFG_BAYSEL_GRGR_Val << ISC_HIS_CFG_BAYSEL_Pos) /* (ISC_HIS_CFG) Starting row configuration is G R G R (red row) Position  */
-#define ISC_HIS_CFG_BAYSEL_RGRG               (ISC_HIS_CFG_BAYSEL_RGRG_Val << ISC_HIS_CFG_BAYSEL_Pos) /* (ISC_HIS_CFG) Starting row configuration is R G R G (red row) Position  */
-#define ISC_HIS_CFG_BAYSEL_GBGB               (ISC_HIS_CFG_BAYSEL_GBGB_Val << ISC_HIS_CFG_BAYSEL_Pos) /* (ISC_HIS_CFG) Starting row configuration is G B G B (blue row Position  */
-#define ISC_HIS_CFG_BAYSEL_BGBG               (ISC_HIS_CFG_BAYSEL_BGBG_Val << ISC_HIS_CFG_BAYSEL_Pos) /* (ISC_HIS_CFG) Starting row configuration is B G B G (blue row) Position  */
+#define ISC_HIS_CFG_BAYSEL_GRGR               (ISC_HIS_CFG_BAYSEL_GRGR_Val << ISC_HIS_CFG_BAYSEL_Pos) /* (ISC_HIS_CFG) Starting row configuration is G R G R (red row) Position */
+#define ISC_HIS_CFG_BAYSEL_RGRG               (ISC_HIS_CFG_BAYSEL_RGRG_Val << ISC_HIS_CFG_BAYSEL_Pos) /* (ISC_HIS_CFG) Starting row configuration is R G R G (red row) Position */
+#define ISC_HIS_CFG_BAYSEL_GBGB               (ISC_HIS_CFG_BAYSEL_GBGB_Val << ISC_HIS_CFG_BAYSEL_Pos) /* (ISC_HIS_CFG) Starting row configuration is G B G B (blue row Position */
+#define ISC_HIS_CFG_BAYSEL_BGBG               (ISC_HIS_CFG_BAYSEL_BGBG_Val << ISC_HIS_CFG_BAYSEL_Pos) /* (ISC_HIS_CFG) Starting row configuration is B G B G (blue row) Position */
 #define ISC_HIS_CFG_RAR_Pos                   _UINT32_(8)                                          /* (ISC_HIS_CFG) Histogram Reset After Read Position */
 #define ISC_HIS_CFG_RAR_Msk                   (_UINT32_(0x1) << ISC_HIS_CFG_RAR_Pos)               /* (ISC_HIS_CFG) Histogram Reset After Read Mask */
-#define ISC_HIS_CFG_RAR(value)                (ISC_HIS_CFG_RAR_Msk & (_UINT32_(value) << ISC_HIS_CFG_RAR_Pos)) /* Assigment of value for RAR in the ISC_HIS_CFG register */
-#define   ISC_HIS_CFG_RAR_0_Val               _UINT32_(0x0)                                        /* (ISC_HIS_CFG) Reset after read mode is disabled.  */
-#define   ISC_HIS_CFG_RAR_1_Val               _UINT32_(0x1)                                        /* (ISC_HIS_CFG) Reset after read mode is enabled.  */
-#define ISC_HIS_CFG_RAR_0                     (ISC_HIS_CFG_RAR_0_Val << ISC_HIS_CFG_RAR_Pos)       /* (ISC_HIS_CFG) Reset after read mode is disabled. Position  */
-#define ISC_HIS_CFG_RAR_1                     (ISC_HIS_CFG_RAR_1_Val << ISC_HIS_CFG_RAR_Pos)       /* (ISC_HIS_CFG) Reset after read mode is enabled. Position  */
+#define ISC_HIS_CFG_RAR(value)                (ISC_HIS_CFG_RAR_Msk & (_UINT32_(value) << ISC_HIS_CFG_RAR_Pos)) /* Assignment of value for RAR in the ISC_HIS_CFG register */
+#define   ISC_HIS_CFG_RAR_0_Val               _UINT32_(0x0)                                        /* (ISC_HIS_CFG) Reset after Read mode is disabled.  */
+#define   ISC_HIS_CFG_RAR_1_Val               _UINT32_(0x1)                                        /* (ISC_HIS_CFG) Reset after Read mode is enabled.  */
+#define ISC_HIS_CFG_RAR_0                     (ISC_HIS_CFG_RAR_0_Val << ISC_HIS_CFG_RAR_Pos)       /* (ISC_HIS_CFG) Reset after Read mode is disabled. Position */
+#define ISC_HIS_CFG_RAR_1                     (ISC_HIS_CFG_RAR_1_Val << ISC_HIS_CFG_RAR_Pos)       /* (ISC_HIS_CFG) Reset after Read mode is enabled. Position */
 #define ISC_HIS_CFG_Msk                       _UINT32_(0x00000137)                                 /* (ISC_HIS_CFG) Register Mask  */
 
 
@@ -1562,7 +1561,7 @@
 
 #define ISC_DCFG_IMODE_Pos                    _UINT32_(0)                                          /* (ISC_DCFG) DMA Input Mode Selection Position */
 #define ISC_DCFG_IMODE_Msk                    (_UINT32_(0x7) << ISC_DCFG_IMODE_Pos)                /* (ISC_DCFG) DMA Input Mode Selection Mask */
-#define ISC_DCFG_IMODE(value)                 (ISC_DCFG_IMODE_Msk & (_UINT32_(value) << ISC_DCFG_IMODE_Pos)) /* Assigment of value for IMODE in the ISC_DCFG register */
+#define ISC_DCFG_IMODE(value)                 (ISC_DCFG_IMODE_Msk & (_UINT32_(value) << ISC_DCFG_IMODE_Pos)) /* Assignment of value for IMODE in the ISC_DCFG register */
 #define   ISC_DCFG_IMODE_PACKED8_Val          _UINT32_(0x0)                                        /* (ISC_DCFG) 8 bits, single channel packed  */
 #define   ISC_DCFG_IMODE_PACKED16_Val         _UINT32_(0x1)                                        /* (ISC_DCFG) 16 bits, single channel packed  */
 #define   ISC_DCFG_IMODE_PACKED32_Val         _UINT32_(0x2)                                        /* (ISC_DCFG) 32 bits, single channel packed  */
@@ -1570,45 +1569,45 @@
 #define   ISC_DCFG_IMODE_YC422P_Val           _UINT32_(0x4)                                        /* (ISC_DCFG) 32 bits, triple channel  */
 #define   ISC_DCFG_IMODE_YC420SP_Val          _UINT32_(0x5)                                        /* (ISC_DCFG) 32 bits, dual channel  */
 #define   ISC_DCFG_IMODE_YC420P_Val           _UINT32_(0x6)                                        /* (ISC_DCFG) 32 bits, triple channel  */
-#define ISC_DCFG_IMODE_PACKED8                (ISC_DCFG_IMODE_PACKED8_Val << ISC_DCFG_IMODE_Pos)   /* (ISC_DCFG) 8 bits, single channel packed Position  */
-#define ISC_DCFG_IMODE_PACKED16               (ISC_DCFG_IMODE_PACKED16_Val << ISC_DCFG_IMODE_Pos)  /* (ISC_DCFG) 16 bits, single channel packed Position  */
-#define ISC_DCFG_IMODE_PACKED32               (ISC_DCFG_IMODE_PACKED32_Val << ISC_DCFG_IMODE_Pos)  /* (ISC_DCFG) 32 bits, single channel packed Position  */
-#define ISC_DCFG_IMODE_YC422SP                (ISC_DCFG_IMODE_YC422SP_Val << ISC_DCFG_IMODE_Pos)   /* (ISC_DCFG) 32 bits, dual channel Position  */
-#define ISC_DCFG_IMODE_YC422P                 (ISC_DCFG_IMODE_YC422P_Val << ISC_DCFG_IMODE_Pos)    /* (ISC_DCFG) 32 bits, triple channel Position  */
-#define ISC_DCFG_IMODE_YC420SP                (ISC_DCFG_IMODE_YC420SP_Val << ISC_DCFG_IMODE_Pos)   /* (ISC_DCFG) 32 bits, dual channel Position  */
-#define ISC_DCFG_IMODE_YC420P                 (ISC_DCFG_IMODE_YC420P_Val << ISC_DCFG_IMODE_Pos)    /* (ISC_DCFG) 32 bits, triple channel Position  */
+#define ISC_DCFG_IMODE_PACKED8                (ISC_DCFG_IMODE_PACKED8_Val << ISC_DCFG_IMODE_Pos)   /* (ISC_DCFG) 8 bits, single channel packed Position */
+#define ISC_DCFG_IMODE_PACKED16               (ISC_DCFG_IMODE_PACKED16_Val << ISC_DCFG_IMODE_Pos)  /* (ISC_DCFG) 16 bits, single channel packed Position */
+#define ISC_DCFG_IMODE_PACKED32               (ISC_DCFG_IMODE_PACKED32_Val << ISC_DCFG_IMODE_Pos)  /* (ISC_DCFG) 32 bits, single channel packed Position */
+#define ISC_DCFG_IMODE_YC422SP                (ISC_DCFG_IMODE_YC422SP_Val << ISC_DCFG_IMODE_Pos)   /* (ISC_DCFG) 32 bits, dual channel Position */
+#define ISC_DCFG_IMODE_YC422P                 (ISC_DCFG_IMODE_YC422P_Val << ISC_DCFG_IMODE_Pos)    /* (ISC_DCFG) 32 bits, triple channel Position */
+#define ISC_DCFG_IMODE_YC420SP                (ISC_DCFG_IMODE_YC420SP_Val << ISC_DCFG_IMODE_Pos)   /* (ISC_DCFG) 32 bits, dual channel Position */
+#define ISC_DCFG_IMODE_YC420P                 (ISC_DCFG_IMODE_YC420P_Val << ISC_DCFG_IMODE_Pos)    /* (ISC_DCFG) 32 bits, triple channel Position */
 #define ISC_DCFG_YMBSIZE_Pos                  _UINT32_(4)                                          /* (ISC_DCFG) DMA Memory Burst Size Y channel Position */
 #define ISC_DCFG_YMBSIZE_Msk                  (_UINT32_(0x7) << ISC_DCFG_YMBSIZE_Pos)              /* (ISC_DCFG) DMA Memory Burst Size Y channel Mask */
-#define ISC_DCFG_YMBSIZE(value)               (ISC_DCFG_YMBSIZE_Msk & (_UINT32_(value) << ISC_DCFG_YMBSIZE_Pos)) /* Assigment of value for YMBSIZE in the ISC_DCFG register */
+#define ISC_DCFG_YMBSIZE(value)               (ISC_DCFG_YMBSIZE_Msk & (_UINT32_(value) << ISC_DCFG_YMBSIZE_Pos)) /* Assignment of value for YMBSIZE in the ISC_DCFG register */
 #define   ISC_DCFG_YMBSIZE_SINGLE_Val         _UINT32_(0x0)                                        /* (ISC_DCFG) DMA single access  */
 #define   ISC_DCFG_YMBSIZE_BEATS4_Val         _UINT32_(0x1)                                        /* (ISC_DCFG) 4-beat burst access  */
 #define   ISC_DCFG_YMBSIZE_BEATS8_Val         _UINT32_(0x2)                                        /* (ISC_DCFG) 8-beat burst access  */
 #define   ISC_DCFG_YMBSIZE_BEATS16_Val        _UINT32_(0x3)                                        /* (ISC_DCFG) 16-beat burst access  */
 #define   ISC_DCFG_YMBSIZE_BEATS32_Val        _UINT32_(0x4)                                        /* (ISC_DCFG) 32-beat burst access  */
-#define ISC_DCFG_YMBSIZE_SINGLE               (ISC_DCFG_YMBSIZE_SINGLE_Val << ISC_DCFG_YMBSIZE_Pos) /* (ISC_DCFG) DMA single access Position  */
-#define ISC_DCFG_YMBSIZE_BEATS4               (ISC_DCFG_YMBSIZE_BEATS4_Val << ISC_DCFG_YMBSIZE_Pos) /* (ISC_DCFG) 4-beat burst access Position  */
-#define ISC_DCFG_YMBSIZE_BEATS8               (ISC_DCFG_YMBSIZE_BEATS8_Val << ISC_DCFG_YMBSIZE_Pos) /* (ISC_DCFG) 8-beat burst access Position  */
-#define ISC_DCFG_YMBSIZE_BEATS16              (ISC_DCFG_YMBSIZE_BEATS16_Val << ISC_DCFG_YMBSIZE_Pos) /* (ISC_DCFG) 16-beat burst access Position  */
-#define ISC_DCFG_YMBSIZE_BEATS32              (ISC_DCFG_YMBSIZE_BEATS32_Val << ISC_DCFG_YMBSIZE_Pos) /* (ISC_DCFG) 32-beat burst access Position  */
+#define ISC_DCFG_YMBSIZE_SINGLE               (ISC_DCFG_YMBSIZE_SINGLE_Val << ISC_DCFG_YMBSIZE_Pos) /* (ISC_DCFG) DMA single access Position */
+#define ISC_DCFG_YMBSIZE_BEATS4               (ISC_DCFG_YMBSIZE_BEATS4_Val << ISC_DCFG_YMBSIZE_Pos) /* (ISC_DCFG) 4-beat burst access Position */
+#define ISC_DCFG_YMBSIZE_BEATS8               (ISC_DCFG_YMBSIZE_BEATS8_Val << ISC_DCFG_YMBSIZE_Pos) /* (ISC_DCFG) 8-beat burst access Position */
+#define ISC_DCFG_YMBSIZE_BEATS16              (ISC_DCFG_YMBSIZE_BEATS16_Val << ISC_DCFG_YMBSIZE_Pos) /* (ISC_DCFG) 16-beat burst access Position */
+#define ISC_DCFG_YMBSIZE_BEATS32              (ISC_DCFG_YMBSIZE_BEATS32_Val << ISC_DCFG_YMBSIZE_Pos) /* (ISC_DCFG) 32-beat burst access Position */
 #define ISC_DCFG_CMBSIZE_Pos                  _UINT32_(8)                                          /* (ISC_DCFG) DMA Memory Burst Size C channel Position */
 #define ISC_DCFG_CMBSIZE_Msk                  (_UINT32_(0x7) << ISC_DCFG_CMBSIZE_Pos)              /* (ISC_DCFG) DMA Memory Burst Size C channel Mask */
-#define ISC_DCFG_CMBSIZE(value)               (ISC_DCFG_CMBSIZE_Msk & (_UINT32_(value) << ISC_DCFG_CMBSIZE_Pos)) /* Assigment of value for CMBSIZE in the ISC_DCFG register */
+#define ISC_DCFG_CMBSIZE(value)               (ISC_DCFG_CMBSIZE_Msk & (_UINT32_(value) << ISC_DCFG_CMBSIZE_Pos)) /* Assignment of value for CMBSIZE in the ISC_DCFG register */
 #define   ISC_DCFG_CMBSIZE_SINGLE_Val         _UINT32_(0x0)                                        /* (ISC_DCFG) DMA single access  */
 #define   ISC_DCFG_CMBSIZE_BEATS4_Val         _UINT32_(0x1)                                        /* (ISC_DCFG) 4-beat burst access  */
 #define   ISC_DCFG_CMBSIZE_BEATS8_Val         _UINT32_(0x2)                                        /* (ISC_DCFG) 8-beat burst access  */
 #define   ISC_DCFG_CMBSIZE_BEATS16_Val        _UINT32_(0x3)                                        /* (ISC_DCFG) 16-beat burst access  */
 #define   ISC_DCFG_CMBSIZE_BEATS32_Val        _UINT32_(0x4)                                        /* (ISC_DCFG) 32-beat burst access  */
-#define ISC_DCFG_CMBSIZE_SINGLE               (ISC_DCFG_CMBSIZE_SINGLE_Val << ISC_DCFG_CMBSIZE_Pos) /* (ISC_DCFG) DMA single access Position  */
-#define ISC_DCFG_CMBSIZE_BEATS4               (ISC_DCFG_CMBSIZE_BEATS4_Val << ISC_DCFG_CMBSIZE_Pos) /* (ISC_DCFG) 4-beat burst access Position  */
-#define ISC_DCFG_CMBSIZE_BEATS8               (ISC_DCFG_CMBSIZE_BEATS8_Val << ISC_DCFG_CMBSIZE_Pos) /* (ISC_DCFG) 8-beat burst access Position  */
-#define ISC_DCFG_CMBSIZE_BEATS16              (ISC_DCFG_CMBSIZE_BEATS16_Val << ISC_DCFG_CMBSIZE_Pos) /* (ISC_DCFG) 16-beat burst access Position  */
-#define ISC_DCFG_CMBSIZE_BEATS32              (ISC_DCFG_CMBSIZE_BEATS32_Val << ISC_DCFG_CMBSIZE_Pos) /* (ISC_DCFG) 32-beat burst access Position  */
+#define ISC_DCFG_CMBSIZE_SINGLE               (ISC_DCFG_CMBSIZE_SINGLE_Val << ISC_DCFG_CMBSIZE_Pos) /* (ISC_DCFG) DMA single access Position */
+#define ISC_DCFG_CMBSIZE_BEATS4               (ISC_DCFG_CMBSIZE_BEATS4_Val << ISC_DCFG_CMBSIZE_Pos) /* (ISC_DCFG) 4-beat burst access Position */
+#define ISC_DCFG_CMBSIZE_BEATS8               (ISC_DCFG_CMBSIZE_BEATS8_Val << ISC_DCFG_CMBSIZE_Pos) /* (ISC_DCFG) 8-beat burst access Position */
+#define ISC_DCFG_CMBSIZE_BEATS16              (ISC_DCFG_CMBSIZE_BEATS16_Val << ISC_DCFG_CMBSIZE_Pos) /* (ISC_DCFG) 16-beat burst access Position */
+#define ISC_DCFG_CMBSIZE_BEATS32              (ISC_DCFG_CMBSIZE_BEATS32_Val << ISC_DCFG_CMBSIZE_Pos) /* (ISC_DCFG) 32-beat burst access Position */
 #define ISC_DCFG_ARQOS_Pos                    _UINT32_(16)                                         /* (ISC_DCFG) Read QoS Value Position */
 #define ISC_DCFG_ARQOS_Msk                    (_UINT32_(0xF) << ISC_DCFG_ARQOS_Pos)                /* (ISC_DCFG) Read QoS Value Mask */
-#define ISC_DCFG_ARQOS(value)                 (ISC_DCFG_ARQOS_Msk & (_UINT32_(value) << ISC_DCFG_ARQOS_Pos)) /* Assigment of value for ARQOS in the ISC_DCFG register */
+#define ISC_DCFG_ARQOS(value)                 (ISC_DCFG_ARQOS_Msk & (_UINT32_(value) << ISC_DCFG_ARQOS_Pos)) /* Assignment of value for ARQOS in the ISC_DCFG register */
 #define ISC_DCFG_AWQOS_Pos                    _UINT32_(20)                                         /* (ISC_DCFG) Write QoS Value Position */
 #define ISC_DCFG_AWQOS_Msk                    (_UINT32_(0xF) << ISC_DCFG_AWQOS_Pos)                /* (ISC_DCFG) Write QoS Value Mask */
-#define ISC_DCFG_AWQOS(value)                 (ISC_DCFG_AWQOS_Msk & (_UINT32_(value) << ISC_DCFG_AWQOS_Pos)) /* Assigment of value for AWQOS in the ISC_DCFG register */
+#define ISC_DCFG_AWQOS(value)                 (ISC_DCFG_AWQOS_Msk & (_UINT32_(value) << ISC_DCFG_AWQOS_Pos)) /* Assignment of value for AWQOS in the ISC_DCFG register */
 #define ISC_DCFG_Msk                          _UINT32_(0x00FF0777)                                 /* (ISC_DCFG) Register Mask  */
 
 
@@ -1617,48 +1616,48 @@
 
 #define ISC_DCTRL_DE_Pos                      _UINT32_(0)                                          /* (ISC_DCTRL) Descriptor Enable Position */
 #define ISC_DCTRL_DE_Msk                      (_UINT32_(0x1) << ISC_DCTRL_DE_Pos)                  /* (ISC_DCTRL) Descriptor Enable Mask */
-#define ISC_DCTRL_DE(value)                   (ISC_DCTRL_DE_Msk & (_UINT32_(value) << ISC_DCTRL_DE_Pos)) /* Assigment of value for DE in the ISC_DCTRL register */
+#define ISC_DCTRL_DE(value)                   (ISC_DCTRL_DE_Msk & (_UINT32_(value) << ISC_DCTRL_DE_Pos)) /* Assignment of value for DE in the ISC_DCTRL register */
 #define   ISC_DCTRL_DE_0_Val                  _UINT32_(0x0)                                        /* (ISC_DCTRL) Descriptor disabled.  */
 #define   ISC_DCTRL_DE_1_Val                  _UINT32_(0x1)                                        /* (ISC_DCTRL) Descriptor enabled.  */
-#define ISC_DCTRL_DE_0                        (ISC_DCTRL_DE_0_Val << ISC_DCTRL_DE_Pos)             /* (ISC_DCTRL) Descriptor disabled. Position  */
-#define ISC_DCTRL_DE_1                        (ISC_DCTRL_DE_1_Val << ISC_DCTRL_DE_Pos)             /* (ISC_DCTRL) Descriptor enabled. Position  */
+#define ISC_DCTRL_DE_0                        (ISC_DCTRL_DE_0_Val << ISC_DCTRL_DE_Pos)             /* (ISC_DCTRL) Descriptor disabled. Position */
+#define ISC_DCTRL_DE_1                        (ISC_DCTRL_DE_1_Val << ISC_DCTRL_DE_Pos)             /* (ISC_DCTRL) Descriptor enabled. Position */
 #define ISC_DCTRL_DVIEW_Pos                   _UINT32_(1)                                          /* (ISC_DCTRL) Descriptor View Position */
 #define ISC_DCTRL_DVIEW_Msk                   (_UINT32_(0x3) << ISC_DCTRL_DVIEW_Pos)               /* (ISC_DCTRL) Descriptor View Mask */
-#define ISC_DCTRL_DVIEW(value)                (ISC_DCTRL_DVIEW_Msk & (_UINT32_(value) << ISC_DCTRL_DVIEW_Pos)) /* Assigment of value for DVIEW in the ISC_DCTRL register */
-#define   ISC_DCTRL_DVIEW_PACKED_Val          _UINT32_(0x0)                                        /* (ISC_DCTRL) Address {0} Stride {0} are updated  */
-#define   ISC_DCTRL_DVIEW_SEMIPLANAR_Val      _UINT32_(0x1)                                        /* (ISC_DCTRL) Address {0,1} Stride {0,1} are updated  */
-#define   ISC_DCTRL_DVIEW_PLANAR_Val          _UINT32_(0x2)                                        /* (ISC_DCTRL) Address {0,1,2} Stride {0,1,2} are updated  */
-#define ISC_DCTRL_DVIEW_PACKED                (ISC_DCTRL_DVIEW_PACKED_Val << ISC_DCTRL_DVIEW_Pos)  /* (ISC_DCTRL) Address {0} Stride {0} are updated Position  */
-#define ISC_DCTRL_DVIEW_SEMIPLANAR            (ISC_DCTRL_DVIEW_SEMIPLANAR_Val << ISC_DCTRL_DVIEW_Pos) /* (ISC_DCTRL) Address {0,1} Stride {0,1} are updated Position  */
-#define ISC_DCTRL_DVIEW_PLANAR                (ISC_DCTRL_DVIEW_PLANAR_Val << ISC_DCTRL_DVIEW_Pos)  /* (ISC_DCTRL) Address {0,1,2} Stride {0,1,2} are updated Position  */
+#define ISC_DCTRL_DVIEW(value)                (ISC_DCTRL_DVIEW_Msk & (_UINT32_(value) << ISC_DCTRL_DVIEW_Pos)) /* Assignment of value for DVIEW in the ISC_DCTRL register */
+#define   ISC_DCTRL_DVIEW_PACKED_Val          _UINT32_(0x0)                                        /* (ISC_DCTRL) Packed frame buffer (see Table 7-3)  */
+#define   ISC_DCTRL_DVIEW_SEMIPLANAR_Val      _UINT32_(0x1)                                        /* (ISC_DCTRL) Semi planar frame buffer (see Table 7-4)  */
+#define   ISC_DCTRL_DVIEW_PLANAR_Val          _UINT32_(0x2)                                        /* (ISC_DCTRL) Planar frame buffer (see Table 7-5)  */
+#define ISC_DCTRL_DVIEW_PACKED                (ISC_DCTRL_DVIEW_PACKED_Val << ISC_DCTRL_DVIEW_Pos)  /* (ISC_DCTRL) Packed frame buffer (see Table 7-3) Position */
+#define ISC_DCTRL_DVIEW_SEMIPLANAR            (ISC_DCTRL_DVIEW_SEMIPLANAR_Val << ISC_DCTRL_DVIEW_Pos) /* (ISC_DCTRL) Semi planar frame buffer (see Table 7-4) Position */
+#define ISC_DCTRL_DVIEW_PLANAR                (ISC_DCTRL_DVIEW_PLANAR_Val << ISC_DCTRL_DVIEW_Pos)  /* (ISC_DCTRL) Planar frame buffer (see Table 7-5) Position */
 #define ISC_DCTRL_IE_Pos                      _UINT32_(4)                                          /* (ISC_DCTRL) Interrupt Enable Position */
 #define ISC_DCTRL_IE_Msk                      (_UINT32_(0x1) << ISC_DCTRL_IE_Pos)                  /* (ISC_DCTRL) Interrupt Enable Mask */
-#define ISC_DCTRL_IE(value)                   (ISC_DCTRL_IE_Msk & (_UINT32_(value) << ISC_DCTRL_IE_Pos)) /* Assigment of value for IE in the ISC_DCTRL register */
+#define ISC_DCTRL_IE(value)                   (ISC_DCTRL_IE_Msk & (_UINT32_(value) << ISC_DCTRL_IE_Pos)) /* Assignment of value for IE in the ISC_DCTRL register */
 #define   ISC_DCTRL_IE_0_Val                  _UINT32_(0x0)                                        /* (ISC_DCTRL) DMA Done interrupt is generated.  */
 #define   ISC_DCTRL_IE_1_Val                  _UINT32_(0x1)                                        /* (ISC_DCTRL) DMA Done interrupt is not set.  */
-#define ISC_DCTRL_IE_0                        (ISC_DCTRL_IE_0_Val << ISC_DCTRL_IE_Pos)             /* (ISC_DCTRL) DMA Done interrupt is generated. Position  */
-#define ISC_DCTRL_IE_1                        (ISC_DCTRL_IE_1_Val << ISC_DCTRL_IE_Pos)             /* (ISC_DCTRL) DMA Done interrupt is not set. Position  */
+#define ISC_DCTRL_IE_0                        (ISC_DCTRL_IE_0_Val << ISC_DCTRL_IE_Pos)             /* (ISC_DCTRL) DMA Done interrupt is generated. Position */
+#define ISC_DCTRL_IE_1                        (ISC_DCTRL_IE_1_Val << ISC_DCTRL_IE_Pos)             /* (ISC_DCTRL) DMA Done interrupt is not set. Position */
 #define ISC_DCTRL_WB_Pos                      _UINT32_(5)                                          /* (ISC_DCTRL) Write Back Operation Enable Position */
 #define ISC_DCTRL_WB_Msk                      (_UINT32_(0x1) << ISC_DCTRL_WB_Pos)                  /* (ISC_DCTRL) Write Back Operation Enable Mask */
-#define ISC_DCTRL_WB(value)                   (ISC_DCTRL_WB_Msk & (_UINT32_(value) << ISC_DCTRL_WB_Pos)) /* Assigment of value for WB in the ISC_DCTRL register */
+#define ISC_DCTRL_WB(value)                   (ISC_DCTRL_WB_Msk & (_UINT32_(value) << ISC_DCTRL_WB_Pos)) /* Assignment of value for WB in the ISC_DCTRL register */
 #define   ISC_DCTRL_WB_0_Val                  _UINT32_(0x0)                                        /* (ISC_DCTRL) Write Back operation is skipped.  */
 #define   ISC_DCTRL_WB_1_Val                  _UINT32_(0x1)                                        /* (ISC_DCTRL) Write Back operation is performed.  */
-#define ISC_DCTRL_WB_0                        (ISC_DCTRL_WB_0_Val << ISC_DCTRL_WB_Pos)             /* (ISC_DCTRL) Write Back operation is skipped. Position  */
-#define ISC_DCTRL_WB_1                        (ISC_DCTRL_WB_1_Val << ISC_DCTRL_WB_Pos)             /* (ISC_DCTRL) Write Back operation is performed. Position  */
+#define ISC_DCTRL_WB_0                        (ISC_DCTRL_WB_0_Val << ISC_DCTRL_WB_Pos)             /* (ISC_DCTRL) Write Back operation is skipped. Position */
+#define ISC_DCTRL_WB_1                        (ISC_DCTRL_WB_1_Val << ISC_DCTRL_WB_Pos)             /* (ISC_DCTRL) Write Back operation is performed. Position */
 #define ISC_DCTRL_FIELD_Pos                   _UINT32_(6)                                          /* (ISC_DCTRL) Value of Captured Frame Field Signal Position */
 #define ISC_DCTRL_FIELD_Msk                   (_UINT32_(0x1) << ISC_DCTRL_FIELD_Pos)               /* (ISC_DCTRL) Value of Captured Frame Field Signal Mask */
-#define ISC_DCTRL_FIELD(value)                (ISC_DCTRL_FIELD_Msk & (_UINT32_(value) << ISC_DCTRL_FIELD_Pos)) /* Assigment of value for FIELD in the ISC_DCTRL register */
+#define ISC_DCTRL_FIELD(value)                (ISC_DCTRL_FIELD_Msk & (_UINT32_(value) << ISC_DCTRL_FIELD_Pos)) /* Assignment of value for FIELD in the ISC_DCTRL register */
 #define   ISC_DCTRL_FIELD_0_Val               _UINT32_(0x0)                                        /* (ISC_DCTRL) Field value is 0.  */
 #define   ISC_DCTRL_FIELD_1_Val               _UINT32_(0x1)                                        /* (ISC_DCTRL) Field value is 1.  */
-#define ISC_DCTRL_FIELD_0                     (ISC_DCTRL_FIELD_0_Val << ISC_DCTRL_FIELD_Pos)       /* (ISC_DCTRL) Field value is 0. Position  */
-#define ISC_DCTRL_FIELD_1                     (ISC_DCTRL_FIELD_1_Val << ISC_DCTRL_FIELD_Pos)       /* (ISC_DCTRL) Field value is 1. Position  */
+#define ISC_DCTRL_FIELD_0                     (ISC_DCTRL_FIELD_0_Val << ISC_DCTRL_FIELD_Pos)       /* (ISC_DCTRL) Field value is 0. Position */
+#define ISC_DCTRL_FIELD_1                     (ISC_DCTRL_FIELD_1_Val << ISC_DCTRL_FIELD_Pos)       /* (ISC_DCTRL) Field value is 1. Position */
 #define ISC_DCTRL_DONE_Pos                    _UINT32_(7)                                          /* (ISC_DCTRL) Descriptor Processing Status Position */
 #define ISC_DCTRL_DONE_Msk                    (_UINT32_(0x1) << ISC_DCTRL_DONE_Pos)                /* (ISC_DCTRL) Descriptor Processing Status Mask */
-#define ISC_DCTRL_DONE(value)                 (ISC_DCTRL_DONE_Msk & (_UINT32_(value) << ISC_DCTRL_DONE_Pos)) /* Assigment of value for DONE in the ISC_DCTRL register */
+#define ISC_DCTRL_DONE(value)                 (ISC_DCTRL_DONE_Msk & (_UINT32_(value) << ISC_DCTRL_DONE_Pos)) /* Assignment of value for DONE in the ISC_DCTRL register */
 #define   ISC_DCTRL_DONE_0_Val                _UINT32_(0x0)                                        /* (ISC_DCTRL) Descriptor not processed yet.  */
 #define   ISC_DCTRL_DONE_1_Val                _UINT32_(0x1)                                        /* (ISC_DCTRL) Descriptor processed.  */
-#define ISC_DCTRL_DONE_0                      (ISC_DCTRL_DONE_0_Val << ISC_DCTRL_DONE_Pos)         /* (ISC_DCTRL) Descriptor not processed yet. Position  */
-#define ISC_DCTRL_DONE_1                      (ISC_DCTRL_DONE_1_Val << ISC_DCTRL_DONE_Pos)         /* (ISC_DCTRL) Descriptor processed. Position  */
+#define ISC_DCTRL_DONE_0                      (ISC_DCTRL_DONE_0_Val << ISC_DCTRL_DONE_Pos)         /* (ISC_DCTRL) Descriptor not processed yet. Position */
+#define ISC_DCTRL_DONE_1                      (ISC_DCTRL_DONE_1_Val << ISC_DCTRL_DONE_Pos)         /* (ISC_DCTRL) Descriptor processed. Position */
 #define ISC_DCTRL_Msk                         _UINT32_(0x000000F7)                                 /* (ISC_DCTRL) Register Mask  */
 
 
@@ -1667,7 +1666,7 @@
 
 #define ISC_DNDA_NDA_Pos                      _UINT32_(2)                                          /* (ISC_DNDA) Next Descriptor Address Register Position */
 #define ISC_DNDA_NDA_Msk                      (_UINT32_(0x3FFFFFFF) << ISC_DNDA_NDA_Pos)           /* (ISC_DNDA) Next Descriptor Address Register Mask */
-#define ISC_DNDA_NDA(value)                   (ISC_DNDA_NDA_Msk & (_UINT32_(value) << ISC_DNDA_NDA_Pos)) /* Assigment of value for NDA in the ISC_DNDA register */
+#define ISC_DNDA_NDA(value)                   (ISC_DNDA_NDA_Msk & (_UINT32_(value) << ISC_DNDA_NDA_Pos)) /* Assignment of value for NDA in the ISC_DNDA register */
 #define ISC_DNDA_Msk                          _UINT32_(0xFFFFFFFC)                                 /* (ISC_DNDA) Register Mask  */
 
 
@@ -1676,7 +1675,7 @@
 
 #define ISC_DAD0_AD0_Pos                      _UINT32_(0)                                          /* (ISC_DAD0) Channel 0 Address Position */
 #define ISC_DAD0_AD0_Msk                      (_UINT32_(0xFFFFFFFF) << ISC_DAD0_AD0_Pos)           /* (ISC_DAD0) Channel 0 Address Mask */
-#define ISC_DAD0_AD0(value)                   (ISC_DAD0_AD0_Msk & (_UINT32_(value) << ISC_DAD0_AD0_Pos)) /* Assigment of value for AD0 in the ISC_DAD0 register */
+#define ISC_DAD0_AD0(value)                   (ISC_DAD0_AD0_Msk & (_UINT32_(value) << ISC_DAD0_AD0_Pos)) /* Assignment of value for AD0 in the ISC_DAD0 register */
 #define ISC_DAD0_Msk                          _UINT32_(0xFFFFFFFF)                                 /* (ISC_DAD0) Register Mask  */
 
 
@@ -1684,9 +1683,9 @@
 #define ISC_DST0_RESETVALUE                   _UINT32_(0x00)                                       /*  (ISC_DST0) DMA Stride 0 Register  Reset Value */
 
 #define ISC_DST0_ST0_Pos                      _UINT32_(0)                                          /* (ISC_DST0) Channel 0 Stride Position */
-#define ISC_DST0_ST0_Msk                      (_UINT32_(0xFFFFFFFF) << ISC_DST0_ST0_Pos)           /* (ISC_DST0) Channel 0 Stride Mask */
-#define ISC_DST0_ST0(value)                   (ISC_DST0_ST0_Msk & (_UINT32_(value) << ISC_DST0_ST0_Pos)) /* Assigment of value for ST0 in the ISC_DST0 register */
-#define ISC_DST0_Msk                          _UINT32_(0xFFFFFFFF)                                 /* (ISC_DST0) Register Mask  */
+#define ISC_DST0_ST0_Msk                      (_UINT32_(0xFFFF) << ISC_DST0_ST0_Pos)               /* (ISC_DST0) Channel 0 Stride Mask */
+#define ISC_DST0_ST0(value)                   (ISC_DST0_ST0_Msk & (_UINT32_(value) << ISC_DST0_ST0_Pos)) /* Assignment of value for ST0 in the ISC_DST0 register */
+#define ISC_DST0_Msk                          _UINT32_(0x0000FFFF)                                 /* (ISC_DST0) Register Mask  */
 
 
 /* -------- ISC_DAD1 : (ISC Offset: 0x530) (R/W 32) DMA Address 1 Register -------- */
@@ -1694,7 +1693,7 @@
 
 #define ISC_DAD1_AD1_Pos                      _UINT32_(0)                                          /* (ISC_DAD1) Channel 1 Address Position */
 #define ISC_DAD1_AD1_Msk                      (_UINT32_(0xFFFFFFFF) << ISC_DAD1_AD1_Pos)           /* (ISC_DAD1) Channel 1 Address Mask */
-#define ISC_DAD1_AD1(value)                   (ISC_DAD1_AD1_Msk & (_UINT32_(value) << ISC_DAD1_AD1_Pos)) /* Assigment of value for AD1 in the ISC_DAD1 register */
+#define ISC_DAD1_AD1(value)                   (ISC_DAD1_AD1_Msk & (_UINT32_(value) << ISC_DAD1_AD1_Pos)) /* Assignment of value for AD1 in the ISC_DAD1 register */
 #define ISC_DAD1_Msk                          _UINT32_(0xFFFFFFFF)                                 /* (ISC_DAD1) Register Mask  */
 
 
@@ -1702,9 +1701,9 @@
 #define ISC_DST1_RESETVALUE                   _UINT32_(0x00)                                       /*  (ISC_DST1) DMA Stride 1 Register  Reset Value */
 
 #define ISC_DST1_ST1_Pos                      _UINT32_(0)                                          /* (ISC_DST1) Channel 1 Stride Position */
-#define ISC_DST1_ST1_Msk                      (_UINT32_(0xFFFFFFFF) << ISC_DST1_ST1_Pos)           /* (ISC_DST1) Channel 1 Stride Mask */
-#define ISC_DST1_ST1(value)                   (ISC_DST1_ST1_Msk & (_UINT32_(value) << ISC_DST1_ST1_Pos)) /* Assigment of value for ST1 in the ISC_DST1 register */
-#define ISC_DST1_Msk                          _UINT32_(0xFFFFFFFF)                                 /* (ISC_DST1) Register Mask  */
+#define ISC_DST1_ST1_Msk                      (_UINT32_(0xFFFF) << ISC_DST1_ST1_Pos)               /* (ISC_DST1) Channel 1 Stride Mask */
+#define ISC_DST1_ST1(value)                   (ISC_DST1_ST1_Msk & (_UINT32_(value) << ISC_DST1_ST1_Pos)) /* Assignment of value for ST1 in the ISC_DST1 register */
+#define ISC_DST1_Msk                          _UINT32_(0x0000FFFF)                                 /* (ISC_DST1) Register Mask  */
 
 
 /* -------- ISC_DAD2 : (ISC Offset: 0x538) (R/W 32) DMA Address 2 Register -------- */
@@ -1712,7 +1711,7 @@
 
 #define ISC_DAD2_AD2_Pos                      _UINT32_(0)                                          /* (ISC_DAD2) Channel 2 Address Position */
 #define ISC_DAD2_AD2_Msk                      (_UINT32_(0xFFFFFFFF) << ISC_DAD2_AD2_Pos)           /* (ISC_DAD2) Channel 2 Address Mask */
-#define ISC_DAD2_AD2(value)                   (ISC_DAD2_AD2_Msk & (_UINT32_(value) << ISC_DAD2_AD2_Pos)) /* Assigment of value for AD2 in the ISC_DAD2 register */
+#define ISC_DAD2_AD2(value)                   (ISC_DAD2_AD2_Msk & (_UINT32_(value) << ISC_DAD2_AD2_Pos)) /* Assignment of value for AD2 in the ISC_DAD2 register */
 #define ISC_DAD2_Msk                          _UINT32_(0xFFFFFFFF)                                 /* (ISC_DAD2) Register Mask  */
 
 
@@ -1720,9 +1719,53 @@
 #define ISC_DST2_RESETVALUE                   _UINT32_(0x00)                                       /*  (ISC_DST2) DMA Stride 2 Register  Reset Value */
 
 #define ISC_DST2_ST2_Pos                      _UINT32_(0)                                          /* (ISC_DST2) Channel 2 Stride Position */
-#define ISC_DST2_ST2_Msk                      (_UINT32_(0xFFFFFFFF) << ISC_DST2_ST2_Pos)           /* (ISC_DST2) Channel 2 Stride Mask */
-#define ISC_DST2_ST2(value)                   (ISC_DST2_ST2_Msk & (_UINT32_(value) << ISC_DST2_ST2_Pos)) /* Assigment of value for ST2 in the ISC_DST2 register */
-#define ISC_DST2_Msk                          _UINT32_(0xFFFFFFFF)                                 /* (ISC_DST2) Register Mask  */
+#define ISC_DST2_ST2_Msk                      (_UINT32_(0xFFFF) << ISC_DST2_ST2_Pos)               /* (ISC_DST2) Channel 2 Stride Mask */
+#define ISC_DST2_ST2(value)                   (ISC_DST2_ST2_Msk & (_UINT32_(value) << ISC_DST2_ST2_Pos)) /* Assignment of value for ST2 in the ISC_DST2 register */
+#define ISC_DST2_Msk                          _UINT32_(0x0000FFFF)                                 /* (ISC_DST2) Register Mask  */
+
+
+/* -------- ISC_WPMR : (ISC Offset: 0x540) (R/W 32) Write protection Mode Register -------- */
+#define ISC_WPMR_RESETVALUE                   _UINT32_(0x00)                                       /*  (ISC_WPMR) Write protection Mode Register  Reset Value */
+
+#define ISC_WPMR_WPCFGEN_Pos                  _UINT32_(0)                                          /* (ISC_WPMR) Write Protection Configuration Registers Enable Position */
+#define ISC_WPMR_WPCFGEN_Msk                  (_UINT32_(0x1) << ISC_WPMR_WPCFGEN_Pos)              /* (ISC_WPMR) Write Protection Configuration Registers Enable Mask */
+#define ISC_WPMR_WPCFGEN(value)               (ISC_WPMR_WPCFGEN_Msk & (_UINT32_(value) << ISC_WPMR_WPCFGEN_Pos)) /* Assignment of value for WPCFGEN in the ISC_WPMR register */
+#define   ISC_WPMR_WPCFGEN_0_Val              _UINT32_(0x0)                                        /* (ISC_WPMR) Disables the write protection of configuration registers if WPKEY corresponds to 0x584953 ("XIS" in ASCII).  */
+#define   ISC_WPMR_WPCFGEN_1_Val              _UINT32_(0x1)                                        /* (ISC_WPMR) Enables the write protection of configuration registers if WPKEY corresponds to 0x584953 ("XIS" in ASCII).  */
+#define ISC_WPMR_WPCFGEN_0                    (ISC_WPMR_WPCFGEN_0_Val << ISC_WPMR_WPCFGEN_Pos)     /* (ISC_WPMR) Disables the write protection of configuration registers if WPKEY corresponds to 0x584953 ("XIS" in ASCII). Position */
+#define ISC_WPMR_WPCFGEN_1                    (ISC_WPMR_WPCFGEN_1_Val << ISC_WPMR_WPCFGEN_Pos)     /* (ISC_WPMR) Enables the write protection of configuration registers if WPKEY corresponds to 0x584953 ("XIS" in ASCII). Position */
+#define ISC_WPMR_WPITEN_Pos                   _UINT32_(1)                                          /* (ISC_WPMR) Write Protection Interrupt Registers Enable Position */
+#define ISC_WPMR_WPITEN_Msk                   (_UINT32_(0x1) << ISC_WPMR_WPITEN_Pos)               /* (ISC_WPMR) Write Protection Interrupt Registers Enable Mask */
+#define ISC_WPMR_WPITEN(value)                (ISC_WPMR_WPITEN_Msk & (_UINT32_(value) << ISC_WPMR_WPITEN_Pos)) /* Assignment of value for WPITEN in the ISC_WPMR register */
+#define   ISC_WPMR_WPITEN_0_Val               _UINT32_(0x0)                                        /* (ISC_WPMR) Disables the write protection of interrupt enable/disable registers if WPKEY corresponds to 0x584953 ("XIS" in ASCII).  */
+#define   ISC_WPMR_WPITEN_1_Val               _UINT32_(0x1)                                        /* (ISC_WPMR) Enables the write protection of interrupt enable/disable registers if WPKEY corresponds to 0x584953 ("XIS" in ASCII).  */
+#define ISC_WPMR_WPITEN_0                     (ISC_WPMR_WPITEN_0_Val << ISC_WPMR_WPITEN_Pos)       /* (ISC_WPMR) Disables the write protection of interrupt enable/disable registers if WPKEY corresponds to 0x584953 ("XIS" in ASCII). Position */
+#define ISC_WPMR_WPITEN_1                     (ISC_WPMR_WPITEN_1_Val << ISC_WPMR_WPITEN_Pos)       /* (ISC_WPMR) Enables the write protection of interrupt enable/disable registers if WPKEY corresponds to 0x584953 ("XIS" in ASCII). Position */
+#define ISC_WPMR_WPCREN_Pos                   _UINT32_(2)                                          /* (ISC_WPMR) Write Protection Control Registers Enable Position */
+#define ISC_WPMR_WPCREN_Msk                   (_UINT32_(0x1) << ISC_WPMR_WPCREN_Pos)               /* (ISC_WPMR) Write Protection Control Registers Enable Mask */
+#define ISC_WPMR_WPCREN(value)                (ISC_WPMR_WPCREN_Msk & (_UINT32_(value) << ISC_WPMR_WPCREN_Pos)) /* Assignment of value for WPCREN in the ISC_WPMR register */
+#define   ISC_WPMR_WPCREN_0_Val               _UINT32_(0x0)                                        /* (ISC_WPMR) Disables the write protection of control registers if WPKEY corresponds to 0x584953 ("XIS" in ASCII).  */
+#define   ISC_WPMR_WPCREN_1_Val               _UINT32_(0x1)                                        /* (ISC_WPMR) Enables the write protection of control enable/disable registers if WPKEY corresponds to 0x584953 ("XIS" in ASCII).  */
+#define ISC_WPMR_WPCREN_0                     (ISC_WPMR_WPCREN_0_Val << ISC_WPMR_WPCREN_Pos)       /* (ISC_WPMR) Disables the write protection of control registers if WPKEY corresponds to 0x584953 ("XIS" in ASCII). Position */
+#define ISC_WPMR_WPCREN_1                     (ISC_WPMR_WPCREN_1_Val << ISC_WPMR_WPCREN_Pos)       /* (ISC_WPMR) Enables the write protection of control enable/disable registers if WPKEY corresponds to 0x584953 ("XIS" in ASCII). Position */
+#define ISC_WPMR_WPKEY_Pos                    _UINT32_(8)                                          /* (ISC_WPMR) Write Protection Key Password Position */
+#define ISC_WPMR_WPKEY_Msk                    (_UINT32_(0xFFFFFF) << ISC_WPMR_WPKEY_Pos)           /* (ISC_WPMR) Write Protection Key Password Mask */
+#define ISC_WPMR_WPKEY(value)                 (ISC_WPMR_WPKEY_Msk & (_UINT32_(value) << ISC_WPMR_WPKEY_Pos)) /* Assignment of value for WPKEY in the ISC_WPMR register */
+#define   ISC_WPMR_WPKEY_PASSWD_Val           _UINT32_(0x584953)                                   /* (ISC_WPMR) Writing any other value in this field aborts the write operation of the WPCFGEN,WPITEN,WPCREN bits.  Always reads as 0.  */
+#define ISC_WPMR_WPKEY_PASSWD                 (ISC_WPMR_WPKEY_PASSWD_Val << ISC_WPMR_WPKEY_Pos)    /* (ISC_WPMR) Writing any other value in this field aborts the write operation of the WPCFGEN,WPITEN,WPCREN bits.  Always reads as 0. Position */
+#define ISC_WPMR_Msk                          _UINT32_(0xFFFFFF07)                                 /* (ISC_WPMR) Register Mask  */
+
+
+/* -------- ISC_WPSR : (ISC Offset: 0x544) ( R/ 32) Write Protection Status Register -------- */
+#define ISC_WPSR_RESETVALUE                   _UINT32_(0x00)                                       /*  (ISC_WPSR) Write Protection Status Register  Reset Value */
+
+#define ISC_WPSR_WPVS_Pos                     _UINT32_(0)                                          /* (ISC_WPSR) Write Protection Violation Status Position */
+#define ISC_WPSR_WPVS_Msk                     (_UINT32_(0x1) << ISC_WPSR_WPVS_Pos)                 /* (ISC_WPSR) Write Protection Violation Status Mask */
+#define ISC_WPSR_WPVS(value)                  (ISC_WPSR_WPVS_Msk & (_UINT32_(value) << ISC_WPSR_WPVS_Pos)) /* Assignment of value for WPVS in the ISC_WPSR register */
+#define ISC_WPSR_WPVSRC_Pos                   _UINT32_(8)                                          /* (ISC_WPSR) Write Protection Violation Source Position */
+#define ISC_WPSR_WPVSRC_Msk                   (_UINT32_(0xFFFF) << ISC_WPSR_WPVSRC_Pos)            /* (ISC_WPSR) Write Protection Violation Source Mask */
+#define ISC_WPSR_WPVSRC(value)                (ISC_WPSR_WPVSRC_Msk & (_UINT32_(value) << ISC_WPSR_WPVSRC_Pos)) /* Assignment of value for WPVSRC in the ISC_WPSR register */
+#define ISC_WPSR_Msk                          _UINT32_(0x00FFFF01)                                 /* (ISC_WPSR) Register Mask  */
 
 
 /* -------- ISC_HIS_ENTRY : (ISC Offset: 0x55C) ( R/ 32) Histogram Entry x -------- */
@@ -1730,11 +1773,11 @@
 
 #define ISC_HIS_ENTRY_COUNT_Pos               _UINT32_(0)                                          /* (ISC_HIS_ENTRY) Entry Counter Position */
 #define ISC_HIS_ENTRY_COUNT_Msk               (_UINT32_(0xFFFFF) << ISC_HIS_ENTRY_COUNT_Pos)       /* (ISC_HIS_ENTRY) Entry Counter Mask */
-#define ISC_HIS_ENTRY_COUNT(value)            (ISC_HIS_ENTRY_COUNT_Msk & (_UINT32_(value) << ISC_HIS_ENTRY_COUNT_Pos)) /* Assigment of value for COUNT in the ISC_HIS_ENTRY register */
+#define ISC_HIS_ENTRY_COUNT(value)            (ISC_HIS_ENTRY_COUNT_Msk & (_UINT32_(value) << ISC_HIS_ENTRY_COUNT_Pos)) /* Assignment of value for COUNT in the ISC_HIS_ENTRY register */
 #define ISC_HIS_ENTRY_Msk                     _UINT32_(0x000FFFFF)                                 /* (ISC_HIS_ENTRY) Register Mask  */
 
 
-/** \brief ISC register offsets definitions */
+/* ISC register offsets definitions */
 #define ISC_HXS_TAP10PHI_REG_OFST      _UINT32_(0x00)      /* (ISC_HXS_TAP10PHI) HXS TAP10 Phase Register  Offset */
 #define ISC_HXS_TAP32PHI_REG_OFST      _UINT32_(0x04)      /* (ISC_HXS_TAP32PHI) HXS TAP32 Phase Register  Offset */
 #define ISC_VXS_TAP10PHI_REG_OFST      _UINT32_(0x00)      /* (ISC_VXS_TAP10PHI) VXS TAP10 Phase Register  Offset */
@@ -2005,6 +2048,8 @@
 #define ISC_DST1_REG_OFST              _UINT32_(0x534)     /* (ISC_DST1) DMA Stride 1 Register Offset */
 #define ISC_DAD2_REG_OFST              _UINT32_(0x538)     /* (ISC_DAD2) DMA Address 2 Register Offset */
 #define ISC_DST2_REG_OFST              _UINT32_(0x53C)     /* (ISC_DST2) DMA Stride 2 Register Offset */
+#define ISC_WPMR_REG_OFST              _UINT32_(0x540)     /* (ISC_WPMR) Write protection Mode Register Offset */
+#define ISC_WPSR_REG_OFST              _UINT32_(0x544)     /* (ISC_WPSR) Write Protection Status Register Offset */
 #define ISC_HIS_ENTRY_REG_OFST         _UINT32_(0x55C)     /* (ISC_HIS_ENTRY) Histogram Entry x Offset */
 #define ISC_HIS_ENTRY0_REG_OFST        _UINT32_(0x55C)     /* (ISC_HIS_ENTRY0) Histogram Entry x Offset */
 #define ISC_HIS_ENTRY1_REG_OFST        _UINT32_(0x560)     /* (ISC_HIS_ENTRY1) Histogram Entry x Offset */
@@ -2520,109 +2565,111 @@
 #define ISC_HIS_ENTRY511_REG_OFST      _UINT32_(0xD58)     /* (ISC_HIS_ENTRY511) Histogram Entry x Offset */
 
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
-/** \brief ISC_HXS_TAP register API structure */
+/* ISC_HXS_TAP register API structure */
 typedef struct
 {
-  __IO  uint32_t                       ISC_HXS_TAP10PHI;   /**< Offset: 0x00 (R/W  32) HXS TAP10 Phase Register  */
-  __IO  uint32_t                       ISC_HXS_TAP32PHI;   /**< Offset: 0x04 (R/W  32) HXS TAP32 Phase Register  */
+  __IO  uint32_t                       ISC_HXS_TAP10PHI;   /* Offset: 0x00 (R/W  32) HXS TAP10 Phase Register  */
+  __IO  uint32_t                       ISC_HXS_TAP32PHI;   /* Offset: 0x04 (R/W  32) HXS TAP32 Phase Register  */
 } isc_hxs_tap_registers_t;
 
-/** \brief ISC_VXS_TAP register API structure */
+/* ISC_VXS_TAP register API structure */
 typedef struct
 {
-  __IO  uint32_t                       ISC_VXS_TAP10PHI;   /**< Offset: 0x00 (R/W  32) VXS TAP10 Phase Register  */
-  __IO  uint32_t                       ISC_VXS_TAP32PHI;   /**< Offset: 0x04 (R/W  32) VXS TAP32 Phase Register  */
+  __IO  uint32_t                       ISC_VXS_TAP10PHI;   /* Offset: 0x00 (R/W  32) VXS TAP10 Phase Register  */
+  __IO  uint32_t                       ISC_VXS_TAP32PHI;   /* Offset: 0x04 (R/W  32) VXS TAP32 Phase Register  */
 } isc_vxs_tap_registers_t;
 
 #define ISC_VXS_TAP_NUMBER 16
 
 #define ISC_HXS_TAP_NUMBER 16
 
-/** \brief ISC register API structure */
+/* ISC register API structure */
 typedef struct
 {  /* Image Sensor Controller */
-  __O   uint32_t                       ISC_CTRLEN;         /**< Offset: 0x00 ( /W  32) Control Enable Register */
-  __O   uint32_t                       ISC_CTRLDIS;        /**< Offset: 0x04 ( /W  32) Control Disable Register */
-  __I   uint32_t                       ISC_CTRLSR;         /**< Offset: 0x08 (R/   32) Control Status Register */
-  __IO  uint32_t                       ISC_PFE_CFG0;       /**< Offset: 0x0C (R/W  32) Parallel Front End Configuration 0 Register */
-  __IO  uint32_t                       ISC_PFE_CFG1;       /**< Offset: 0x10 (R/W  32) Parallel Front End Configuration 1 Register */
-  __IO  uint32_t                       ISC_PFE_CFG2;       /**< Offset: 0x14 (R/W  32) Parallel Front End Configuration 2 Register */
-  __O   uint32_t                       ISC_CLKEN;          /**< Offset: 0x18 ( /W  32) Clock Enable Register */
-  __O   uint32_t                       ISC_CLKDIS;         /**< Offset: 0x1C ( /W  32) Clock Disable Register */
-  __I   uint32_t                       ISC_CLKSR;          /**< Offset: 0x20 (R/   32) Clock Status Register */
-  __IO  uint32_t                       ISC_CLKCFG;         /**< Offset: 0x24 (R/W  32) Clock Configuration Register */
-  __O   uint32_t                       ISC_INTEN;          /**< Offset: 0x28 ( /W  32) Interrupt Enable Register */
-  __O   uint32_t                       ISC_INTDIS;         /**< Offset: 0x2C ( /W  32) Interrupt Disable Register */
-  __I   uint32_t                       ISC_INTMASK;        /**< Offset: 0x30 (R/   32) Interrupt Mask Register */
-  __I   uint32_t                       ISC_INTSR;          /**< Offset: 0x34 (R/   32) Interrupt Status Register */
+  __O   uint32_t                       ISC_CTRLEN;         /* Offset: 0x00 ( /W  32) Control Enable Register */
+  __O   uint32_t                       ISC_CTRLDIS;        /* Offset: 0x04 ( /W  32) Control Disable Register */
+  __I   uint32_t                       ISC_CTRLSR;         /* Offset: 0x08 (R/   32) Control Status Register */
+  __IO  uint32_t                       ISC_PFE_CFG0;       /* Offset: 0x0C (R/W  32) Parallel Front End Configuration 0 Register */
+  __IO  uint32_t                       ISC_PFE_CFG1;       /* Offset: 0x10 (R/W  32) Parallel Front End Configuration 1 Register */
+  __IO  uint32_t                       ISC_PFE_CFG2;       /* Offset: 0x14 (R/W  32) Parallel Front End Configuration 2 Register */
+  __O   uint32_t                       ISC_CLKEN;          /* Offset: 0x18 ( /W  32) Clock Enable Register */
+  __O   uint32_t                       ISC_CLKDIS;         /* Offset: 0x1C ( /W  32) Clock Disable Register */
+  __I   uint32_t                       ISC_CLKSR;          /* Offset: 0x20 (R/   32) Clock Status Register */
+  __IO  uint32_t                       ISC_CLKCFG;         /* Offset: 0x24 (R/W  32) Clock Configuration Register */
+  __O   uint32_t                       ISC_INTEN;          /* Offset: 0x28 ( /W  32) Interrupt Enable Register */
+  __O   uint32_t                       ISC_INTDIS;         /* Offset: 0x2C ( /W  32) Interrupt Disable Register */
+  __I   uint32_t                       ISC_INTMASK;        /* Offset: 0x30 (R/   32) Interrupt Mask Register */
+  __I   uint32_t                       ISC_INTSR;          /* Offset: 0x34 (R/   32) Interrupt Status Register */
   __I   uint8_t                        Reserved1[0x08];
-  __IO  uint32_t                       ISC_DPC_CTRL;       /**< Offset: 0x40 (R/W  32) Defective Pixel Correction Control Register */
-  __IO  uint32_t                       ISC_DPC_CFG;        /**< Offset: 0x44 (R/W  32) Defective Pixel Correction Configuration Register */
-  __IO  uint32_t                       ISC_DPC_THRESHM;    /**< Offset: 0x48 (R/W  32) Defective Pixel Correction Threshold M Register */
-  __IO  uint32_t                       ISC_DPC_THRESHC;    /**< Offset: 0x4C (R/W  32) Defective Pixel Correction Threshold C Register */
-  __IO  uint32_t                       ISC_DPC_THRESHA;    /**< Offset: 0x50 (R/W  32) Defective Pixel Correction Threshold A Register */
-  __I   uint32_t                       ISC_DPC_SR;         /**< Offset: 0x54 (R/   32) Defective Pixel Correction Status Register */
-  __IO  uint32_t                       ISC_WB_CTRL;        /**< Offset: 0x58 (R/W  32) White Balance Control Register */
-  __IO  uint32_t                       ISC_WB_CFG;         /**< Offset: 0x5C (R/W  32) White Balance Configuration Register */
-  __IO  uint32_t                       ISC_WB_O_RGR;       /**< Offset: 0x60 (R/W  32) White Balance Offset for R, GR Register */
-  __IO  uint32_t                       ISC_WB_O_BGB;       /**< Offset: 0x64 (R/W  32) White Balance Offset for B, GB Register */
-  __IO  uint32_t                       ISC_WB_G_RGR;       /**< Offset: 0x68 (R/W  32) White Balance Gain for R, GR Register */
-  __IO  uint32_t                       ISC_WB_G_BGB;       /**< Offset: 0x6C (R/W  32) White Balance Gain for B, GB Register */
-  __IO  uint32_t                       ISC_CFA_CTRL;       /**< Offset: 0x70 (R/W  32) Color Filter Array Control Register */
-  __IO  uint32_t                       ISC_CFA_CFG;        /**< Offset: 0x74 (R/W  32) Color Filter Array Configuration Register */
-  __IO  uint32_t                       ISC_CC_CTRL;        /**< Offset: 0x78 (R/W  32) Color Correction Control Register */
-  __IO  uint32_t                       ISC_CC_RR_RG;       /**< Offset: 0x7C (R/W  32) Color Correction RR RG Register */
-  __IO  uint32_t                       ISC_CC_RB_OR;       /**< Offset: 0x80 (R/W  32) Color Correction RB OR Register */
-  __IO  uint32_t                       ISC_CC_GR_GG;       /**< Offset: 0x84 (R/W  32) Color Correction GR GG Register */
-  __IO  uint32_t                       ISC_CC_GB_OG;       /**< Offset: 0x88 (R/W  32) Color Correction GB OG Register */
-  __IO  uint32_t                       ISC_CC_BR_BG;       /**< Offset: 0x8C (R/W  32) Color Correction BR BG Register */
-  __IO  uint32_t                       ISC_CC_BB_OB;       /**< Offset: 0x90 (R/W  32) Color Correction BB OB Register */
-  __IO  uint32_t                       ISC_GAM_CTRL;       /**< Offset: 0x94 (R/W  32) Gamma Correction Control Register */
-  __IO  uint32_t                       ISC_GAM_BENTRY[64]; /**< Offset: 0x98 (R/W  32) Gamma Correction Blue Entry x */
-  __IO  uint32_t                       ISC_GAM_GENTRY[64]; /**< Offset: 0x198 (R/W  32) Gamma Correction Green Entry x */
-  __IO  uint32_t                       ISC_GAM_RENTRY[64]; /**< Offset: 0x298 (R/W  32) Gamma Correction Red Entry x */
-  __IO  uint32_t                       ISC_VHXS_CTRL;      /**< Offset: 0x398 (R/W  32) VHXS Control Register */
-  __IO  uint32_t                       ISC_VHXS_SS;        /**< Offset: 0x39C (R/W  32) VHXS Source Size Register */
-  __IO  uint32_t                       ISC_VHXS_DS;        /**< Offset: 0x3A0 (R/W  32) VHXS Destination Size Register */
-  __IO  uint32_t                       ISC_VXS_FACT;       /**< Offset: 0x3A4 (R/W  32) VXS Scaling Factor Register */
-  __IO  uint32_t                       ISC_HXS_FACT;       /**< Offset: 0x3A8 (R/W  32) HXS Scaling Factor Register */
-  __IO  uint32_t                       ISC_VXS_CFG;        /**< Offset: 0x3AC (R/W  32) VXS Configuration Register */
-  __IO  uint32_t                       ISC_HXS_CFG;        /**< Offset: 0x3B0 (R/W  32) HXS Configuration Register */
-        isc_vxs_tap_registers_t        ISC_VXS_TAP[ISC_VXS_TAP_NUMBER]; /**< Offset: 0x3B4  */
-        isc_hxs_tap_registers_t        ISC_HXS_TAP[ISC_HXS_TAP_NUMBER]; /**< Offset: 0x434  */
-  __IO  uint32_t                       ISC_CSC_CTRL;       /**< Offset: 0x4B4 (R/W  32) Color Space Conversion Control Register */
-  __IO  uint32_t                       ISC_CSC_YR_YG;      /**< Offset: 0x4B8 (R/W  32) Color Space Conversion YR, YG Register */
-  __IO  uint32_t                       ISC_CSC_YB_OY;      /**< Offset: 0x4BC (R/W  32) Color Space Conversion YB, OY Register */
-  __IO  uint32_t                       ISC_CSC_CBR_CBG;    /**< Offset: 0x4C0 (R/W  32) Color Space Conversion CBR CBG Register */
-  __IO  uint32_t                       ISC_CSC_CBB_OCB;    /**< Offset: 0x4C4 (R/W  32) Color Space Conversion CBB OCB Register */
-  __IO  uint32_t                       ISC_CSC_CRR_CRG;    /**< Offset: 0x4C8 (R/W  32) Color Space Conversion CRR CRG Register */
-  __IO  uint32_t                       ISC_CSC_CRB_OCR;    /**< Offset: 0x4CC (R/W  32) Color Space Conversion CRB OCR Register */
-  __IO  uint32_t                       ISC_CBHS_CTRL;      /**< Offset: 0x4D0 (R/W  32) CBHS Control Register */
-  __IO  uint32_t                       ISC_CBHS_CFG;       /**< Offset: 0x4D4 (R/W  32) CBHS Configuration Register */
-  __IO  uint32_t                       ISC_CBHS_BRIGHT;    /**< Offset: 0x4D8 (R/W  32) CBHS Brightness Register */
-  __IO  uint32_t                       ISC_CBHS_CONT;      /**< Offset: 0x4DC (R/W  32) CBHS Contrast Register */
-  __IO  uint32_t                       ISC_CBHS_HUE;       /**< Offset: 0x4E0 (R/W  32) CBHS Hue Register */
-  __IO  uint32_t                       ISC_CBHS_SAT;       /**< Offset: 0x4E4 (R/W  32) CBHS Saturation Register */
-  __IO  uint32_t                       ISC_SUB422_CTRL;    /**< Offset: 0x4E8 (R/W  32) Subsampling 4:4:4 to 4:2:2 Control Register */
-  __IO  uint32_t                       ISC_SUB422_CFG;     /**< Offset: 0x4EC (R/W  32) Subsampling 4:4:4 to 4:2:2 Configuration Register */
-  __IO  uint32_t                       ISC_SUB420_CTRL;    /**< Offset: 0x4F0 (R/W  32) Subsampling 4:2:2 to 4:2:0 Control Register */
-  __IO  uint32_t                       ISC_RLP_CFG;        /**< Offset: 0x4F4 (R/W  32) Rounding, Limiting and Packing Configuration Register */
-  __IO  uint32_t                       ISC_HIS_CTRL;       /**< Offset: 0x4F8 (R/W  32) Histogram Control Register */
-  __IO  uint32_t                       ISC_HIS_CFG;        /**< Offset: 0x4FC (R/W  32) Histogram Configuration Register */
+  __IO  uint32_t                       ISC_DPC_CTRL;       /* Offset: 0x40 (R/W  32) Defective Pixel Correction Control Register */
+  __IO  uint32_t                       ISC_DPC_CFG;        /* Offset: 0x44 (R/W  32) Defective Pixel Correction Configuration Register */
+  __IO  uint32_t                       ISC_DPC_THRESHM;    /* Offset: 0x48 (R/W  32) Defective Pixel Correction Threshold M Register */
+  __IO  uint32_t                       ISC_DPC_THRESHC;    /* Offset: 0x4C (R/W  32) Defective Pixel Correction Threshold C Register */
+  __IO  uint32_t                       ISC_DPC_THRESHA;    /* Offset: 0x50 (R/W  32) Defective Pixel Correction Threshold A Register */
+  __I   uint32_t                       ISC_DPC_SR;         /* Offset: 0x54 (R/   32) Defective Pixel Correction Status Register */
+  __IO  uint32_t                       ISC_WB_CTRL;        /* Offset: 0x58 (R/W  32) White Balance Control Register */
+  __IO  uint32_t                       ISC_WB_CFG;         /* Offset: 0x5C (R/W  32) White Balance Configuration Register */
+  __IO  uint32_t                       ISC_WB_O_RGR;       /* Offset: 0x60 (R/W  32) White Balance Offset for R, GR Register */
+  __IO  uint32_t                       ISC_WB_O_BGB;       /* Offset: 0x64 (R/W  32) White Balance Offset for B, GB Register */
+  __IO  uint32_t                       ISC_WB_G_RGR;       /* Offset: 0x68 (R/W  32) White Balance Gain for R, GR Register */
+  __IO  uint32_t                       ISC_WB_G_BGB;       /* Offset: 0x6C (R/W  32) White Balance Gain for B, GB Register */
+  __IO  uint32_t                       ISC_CFA_CTRL;       /* Offset: 0x70 (R/W  32) Color Filter Array Control Register */
+  __IO  uint32_t                       ISC_CFA_CFG;        /* Offset: 0x74 (R/W  32) Color Filter Array Configuration Register */
+  __IO  uint32_t                       ISC_CC_CTRL;        /* Offset: 0x78 (R/W  32) Color Correction Control Register */
+  __IO  uint32_t                       ISC_CC_RR_RG;       /* Offset: 0x7C (R/W  32) Color Correction RR RG Register */
+  __IO  uint32_t                       ISC_CC_RB_OR;       /* Offset: 0x80 (R/W  32) Color Correction RB OR Register */
+  __IO  uint32_t                       ISC_CC_GR_GG;       /* Offset: 0x84 (R/W  32) Color Correction GR GG Register */
+  __IO  uint32_t                       ISC_CC_GB_OG;       /* Offset: 0x88 (R/W  32) Color Correction GB OG Register */
+  __IO  uint32_t                       ISC_CC_BR_BG;       /* Offset: 0x8C (R/W  32) Color Correction BR BG Register */
+  __IO  uint32_t                       ISC_CC_BB_OB;       /* Offset: 0x90 (R/W  32) Color Correction BB OB Register */
+  __IO  uint32_t                       ISC_GAM_CTRL;       /* Offset: 0x94 (R/W  32) Gamma Correction Control Register */
+  __IO  uint32_t                       ISC_GAM_BENTRY[64]; /* Offset: 0x98 (R/W  32) Gamma Correction Blue Entry x */
+  __IO  uint32_t                       ISC_GAM_GENTRY[64]; /* Offset: 0x198 (R/W  32) Gamma Correction Green Entry x */
+  __IO  uint32_t                       ISC_GAM_RENTRY[64]; /* Offset: 0x298 (R/W  32) Gamma Correction Red Entry x */
+  __IO  uint32_t                       ISC_VHXS_CTRL;      /* Offset: 0x398 (R/W  32) VHXS Control Register */
+  __IO  uint32_t                       ISC_VHXS_SS;        /* Offset: 0x39C (R/W  32) VHXS Source Size Register */
+  __IO  uint32_t                       ISC_VHXS_DS;        /* Offset: 0x3A0 (R/W  32) VHXS Destination Size Register */
+  __IO  uint32_t                       ISC_VXS_FACT;       /* Offset: 0x3A4 (R/W  32) VXS Scaling Factor Register */
+  __IO  uint32_t                       ISC_HXS_FACT;       /* Offset: 0x3A8 (R/W  32) HXS Scaling Factor Register */
+  __IO  uint32_t                       ISC_VXS_CFG;        /* Offset: 0x3AC (R/W  32) VXS Configuration Register */
+  __IO  uint32_t                       ISC_HXS_CFG;        /* Offset: 0x3B0 (R/W  32) HXS Configuration Register */
+        isc_vxs_tap_registers_t        ISC_VXS_TAP[ISC_VXS_TAP_NUMBER]; /* Offset: 0x3B4  */
+        isc_hxs_tap_registers_t        ISC_HXS_TAP[ISC_HXS_TAP_NUMBER]; /* Offset: 0x434  */
+  __IO  uint32_t                       ISC_CSC_CTRL;       /* Offset: 0x4B4 (R/W  32) Color Space Conversion Control Register */
+  __IO  uint32_t                       ISC_CSC_YR_YG;      /* Offset: 0x4B8 (R/W  32) Color Space Conversion YR, YG Register */
+  __IO  uint32_t                       ISC_CSC_YB_OY;      /* Offset: 0x4BC (R/W  32) Color Space Conversion YB, OY Register */
+  __IO  uint32_t                       ISC_CSC_CBR_CBG;    /* Offset: 0x4C0 (R/W  32) Color Space Conversion CBR CBG Register */
+  __IO  uint32_t                       ISC_CSC_CBB_OCB;    /* Offset: 0x4C4 (R/W  32) Color Space Conversion CBB OCB Register */
+  __IO  uint32_t                       ISC_CSC_CRR_CRG;    /* Offset: 0x4C8 (R/W  32) Color Space Conversion CRR CRG Register */
+  __IO  uint32_t                       ISC_CSC_CRB_OCR;    /* Offset: 0x4CC (R/W  32) Color Space Conversion CRB OCR Register */
+  __IO  uint32_t                       ISC_CBHS_CTRL;      /* Offset: 0x4D0 (R/W  32) CBHS Control Register */
+  __IO  uint32_t                       ISC_CBHS_CFG;       /* Offset: 0x4D4 (R/W  32) CBHS Configuration Register */
+  __IO  uint32_t                       ISC_CBHS_BRIGHT;    /* Offset: 0x4D8 (R/W  32) CBHS Brightness Register */
+  __IO  uint32_t                       ISC_CBHS_CONT;      /* Offset: 0x4DC (R/W  32) CBHS Contrast Register */
+  __IO  uint32_t                       ISC_CBHS_HUE;       /* Offset: 0x4E0 (R/W  32) CBHS Hue Register */
+  __IO  uint32_t                       ISC_CBHS_SAT;       /* Offset: 0x4E4 (R/W  32) CBHS Saturation Register */
+  __IO  uint32_t                       ISC_SUB422_CTRL;    /* Offset: 0x4E8 (R/W  32) Subsampling 4:4:4 to 4:2:2 Control Register */
+  __IO  uint32_t                       ISC_SUB422_CFG;     /* Offset: 0x4EC (R/W  32) Subsampling 4:4:4 to 4:2:2 Configuration Register */
+  __IO  uint32_t                       ISC_SUB420_CTRL;    /* Offset: 0x4F0 (R/W  32) Subsampling 4:2:2 to 4:2:0 Control Register */
+  __IO  uint32_t                       ISC_RLP_CFG;        /* Offset: 0x4F4 (R/W  32) Rounding, Limiting and Packing Configuration Register */
+  __IO  uint32_t                       ISC_HIS_CTRL;       /* Offset: 0x4F8 (R/W  32) Histogram Control Register */
+  __IO  uint32_t                       ISC_HIS_CFG;        /* Offset: 0x4FC (R/W  32) Histogram Configuration Register */
   __I   uint8_t                        Reserved2[0x1C];
-  __IO  uint32_t                       ISC_DCFG;           /**< Offset: 0x51C (R/W  32) DMA Configuration Register */
-  __IO  uint32_t                       ISC_DCTRL;          /**< Offset: 0x520 (R/W  32) DMA Control Register */
-  __IO  uint32_t                       ISC_DNDA;           /**< Offset: 0x524 (R/W  32) DMA Descriptor Address Register */
-  __IO  uint32_t                       ISC_DAD0;           /**< Offset: 0x528 (R/W  32) DMA Address 0 Register */
-  __IO  uint32_t                       ISC_DST0;           /**< Offset: 0x52C (R/W  32) DMA Stride 0 Register */
-  __IO  uint32_t                       ISC_DAD1;           /**< Offset: 0x530 (R/W  32) DMA Address 1 Register */
-  __IO  uint32_t                       ISC_DST1;           /**< Offset: 0x534 (R/W  32) DMA Stride 1 Register */
-  __IO  uint32_t                       ISC_DAD2;           /**< Offset: 0x538 (R/W  32) DMA Address 2 Register */
-  __IO  uint32_t                       ISC_DST2;           /**< Offset: 0x53C (R/W  32) DMA Stride 2 Register */
-  __I   uint8_t                        Reserved3[0x1C];
-  __I   uint32_t                       ISC_HIS_ENTRY[512]; /**< Offset: 0x55C (R/   32) Histogram Entry x */
+  __IO  uint32_t                       ISC_DCFG;           /* Offset: 0x51C (R/W  32) DMA Configuration Register */
+  __IO  uint32_t                       ISC_DCTRL;          /* Offset: 0x520 (R/W  32) DMA Control Register */
+  __IO  uint32_t                       ISC_DNDA;           /* Offset: 0x524 (R/W  32) DMA Descriptor Address Register */
+  __IO  uint32_t                       ISC_DAD0;           /* Offset: 0x528 (R/W  32) DMA Address 0 Register */
+  __IO  uint32_t                       ISC_DST0;           /* Offset: 0x52C (R/W  32) DMA Stride 0 Register */
+  __IO  uint32_t                       ISC_DAD1;           /* Offset: 0x530 (R/W  32) DMA Address 1 Register */
+  __IO  uint32_t                       ISC_DST1;           /* Offset: 0x534 (R/W  32) DMA Stride 1 Register */
+  __IO  uint32_t                       ISC_DAD2;           /* Offset: 0x538 (R/W  32) DMA Address 2 Register */
+  __IO  uint32_t                       ISC_DST2;           /* Offset: 0x53C (R/W  32) DMA Stride 2 Register */
+  __IO  uint32_t                       ISC_WPMR;           /* Offset: 0x540 (R/W  32) Write protection Mode Register */
+  __I   uint32_t                       ISC_WPSR;           /* Offset: 0x544 (R/   32) Write Protection Status Register */
+  __I   uint8_t                        Reserved3[0x14];
+  __I   uint32_t                       ISC_HIS_ENTRY[512]; /* Offset: 0x55C (R/   32) Histogram Entry x */
 } isc_registers_t;
 
 
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
-#endif /* _SAMA7G_ISC_COMPONENT_H_ */
+#endif /* _SAMA7G5_ISC_COMPONENT_H_ */

@@ -1,7 +1,9 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <configurationDescriptor version="65">
   <logicalFolder name="root" displayName="root" projectFiles="true">
-    <logicalFolder name="HeaderFiles" displayName="Header Files" projectFiles="true">
+    <logicalFolder name="HeaderFiles"
+                   displayName="Header Files"
+                   projectFiles="true">
       <logicalFolder name="config" displayName="config" projectFiles="true">
         <logicalFolder name="sam_a7g5_ek" displayName="sam_a7g5_ek" projectFiles="true">
           <logicalFolder name="bootloader" displayName="bootloader" projectFiles="true">
@@ -43,9 +45,6 @@
             <logicalFolder name="gic" displayName="gic" projectFiles="true">
               <itemPath>../src/config/sam_a7g5_ek/peripheral/gic/plib_gic.h</itemPath>
             </logicalFolder>
-            <logicalFolder name="matrix" displayName="matrix" projectFiles="true">
-              <itemPath>../src/config/sam_a7g5_ek/peripheral/matrix/plib_matrix.h</itemPath>
-            </logicalFolder>
             <logicalFolder name="mmu" displayName="mmu" projectFiles="true">
               <itemPath>../src/config/sam_a7g5_ek/peripheral/mmu/plib_mmu.h</itemPath>
             </logicalFolder>
@@ -71,7 +70,9 @@
                   <itemPath>../src/config/sam_a7g5_ek/system/fs/fat_fs/file_system/ffconf.h</itemPath>
                   <itemPath>../src/config/sam_a7g5_ek/system/fs/fat_fs/file_system/ff.h</itemPath>
                 </logicalFolder>
-                <logicalFolder name="hardware_access" displayName="hardware_access" projectFiles="true">
+                <logicalFolder name="hardware_access"
+                               displayName="hardware_access"
+                               projectFiles="true">
                   <itemPath>../src/config/sam_a7g5_ek/system/fs/fat_fs/hardware_access/diskio.h</itemPath>
                 </logicalFolder>
               </logicalFolder>
@@ -119,7 +120,9 @@
             </logicalFolder>
           </logicalFolder>
         </logicalFolder>
-        <logicalFolder name="SAMA7G54_DFP" displayName="SAMA7G54_DFP" projectFiles="true">
+        <logicalFolder name="SAMA7G54_DFP"
+                       displayName="SAMA7G54_DFP"
+                       projectFiles="true">
           <logicalFolder name="component" displayName="component" projectFiles="true">
             <itemPath>../src/packs/SAMA7G54_DFP/component/rstc.h</itemPath>
             <itemPath>../src/packs/SAMA7G54_DFP/component/tzc.h</itemPath>
@@ -269,6 +272,14 @@
             <itemPath>../src/packs/SAMA7G54_DFP/instance/pit64b4.h</itemPath>
             <itemPath>../src/packs/SAMA7G54_DFP/instance/csi2dc.h</itemPath>
             <itemPath>../src/packs/SAMA7G54_DFP/instance/flexcom6.h</itemPath>
+            <itemPath>../src/packs/SAMA7G54_DFP/instance/tzaesb.h</itemPath>
+            <itemPath>../src/packs/SAMA7G54_DFP/instance/piob.h</itemPath>
+            <itemPath>../src/packs/SAMA7G54_DFP/instance/pioa.h</itemPath>
+            <itemPath>../src/packs/SAMA7G54_DFP/instance/piod.h</itemPath>
+            <itemPath>../src/packs/SAMA7G54_DFP/instance/securam.h</itemPath>
+            <itemPath>../src/packs/SAMA7G54_DFP/instance/uhphs.h</itemPath>
+            <itemPath>../src/packs/SAMA7G54_DFP/instance/pioc.h</itemPath>
+            <itemPath>../src/packs/SAMA7G54_DFP/instance/pioe.h</itemPath>
           </logicalFolder>
           <logicalFolder name="pio" displayName="pio" projectFiles="true">
             <itemPath>../src/packs/SAMA7G54_DFP/pio/sama7g54.h</itemPath>
@@ -278,14 +289,24 @@
       </logicalFolder>
       <itemPath>../src/app.h</itemPath>
     </logicalFolder>
-    <logicalFolder name="LinkerScript" displayName="Linker Files" projectFiles="true">
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="true">
+      <itemPath>Makefile</itemPath>
+      <itemPath>uart_bootloader_bootloader_sam_a7g5_ek.mc3</itemPath>
+    </logicalFolder>
+    <logicalFolder name="LinkerScript"
+                   displayName="Linker Files"
+                   projectFiles="true">
       <logicalFolder name="config" displayName="config" projectFiles="true">
         <logicalFolder name="sam_a7g5_ek" displayName="sam_a7g5_ek" projectFiles="true">
           <itemPath>../src/config/sam_a7g5_ek/ddr.ld</itemPath>
         </logicalFolder>
       </logicalFolder>
     </logicalFolder>
-    <logicalFolder name="SourceFiles" displayName="Source Files" projectFiles="true">
+    <logicalFolder name="SourceFiles"
+                   displayName="Source Files"
+                   projectFiles="true">
       <logicalFolder name="config" displayName="config" projectFiles="true">
         <logicalFolder name="sam_a7g5_ek" displayName="sam_a7g5_ek" projectFiles="true">
           <logicalFolder name="bootloader" displayName="bootloader" projectFiles="true">
@@ -317,9 +338,6 @@
             <logicalFolder name="gic" displayName="gic" projectFiles="true">
               <itemPath>../src/config/sam_a7g5_ek/peripheral/gic/plib_gic.c</itemPath>
             </logicalFolder>
-            <logicalFolder name="matrix" displayName="matrix" projectFiles="true">
-              <itemPath>../src/config/sam_a7g5_ek/peripheral/matrix/plib_matrix.c</itemPath>
-            </logicalFolder>
             <logicalFolder name="mmu" displayName="mmu" projectFiles="true">
               <itemPath>../src/config/sam_a7g5_ek/peripheral/mmu/plib_mmu.c</itemPath>
             </logicalFolder>
@@ -343,7 +361,9 @@
                   <itemPath>../src/config/sam_a7g5_ek/system/fs/fat_fs/file_system/ffunicode.c</itemPath>
                   <itemPath>../src/config/sam_a7g5_ek/system/fs/fat_fs/file_system/ff.c</itemPath>
                 </logicalFolder>
-                <logicalFolder name="hardware_access" displayName="hardware_access" projectFiles="true">
+                <logicalFolder name="hardware_access"
+                               displayName="hardware_access"
+                               projectFiles="true">
                   <itemPath>../src/config/sam_a7g5_ek/system/fs/fat_fs/hardware_access/diskio.c</itemPath>
                 </logicalFolder>
               </logicalFolder>
@@ -369,10 +389,6 @@
       <itemPath>../src/app.c</itemPath>
       <itemPath>../src/main_sama_arm9.c</itemPath>
     </logicalFolder>
-    <logicalFolder name="ExternalFiles" displayName="Important Files" projectFiles="false">
-      <itemPath>Makefile</itemPath>
-      <itemPath>uart_bootloader_bootloader_sam_a7g5_ek.mc3</itemPath>
-    </logicalFolder>
   </logicalFolder>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
@@ -380,8 +396,8 @@
       <toolsSet>
         <developmentServer>localhost</developmentServer>
         <targetDevice>SAMA7G54</targetDevice>
-        <targetHeader/>
-        <targetPluginBoard/>
+        <targetHeader></targetHeader>
+        <targetPluginBoard></targetPluginBoard>
         <platformTool>noID</platformTool>
         <languageToolchain>XC32</languageToolchain>
         <languageToolchainVersion>4.35</languageToolchainVersion>
@@ -394,7 +410,8 @@
         <ScriptingSetting key="boot.load_adr" value=""/>
         <ScriptingSetting key="boot.use" value="true"/>
         <ScriptingSetting key="boot.entry_adr" value=""/>
-        <ScriptingSetting key="boot.path" value="${ProjectDir}\..\..\..\..\deps\at91bootstrap_binaries_sam_a7g5_ek\at91bootstrap.elf"/>
+        <ScriptingSetting key="boot.path"
+                          value="${ProjectDir}\..\..\..\..\deps\at91bootstrap_binaries_sam_a7g5_ek\at91bootstrap.elf"/>
         <ScriptingSetting key="boot.prj" value=""/>
       </ScriptingSettings>
       <compileType>
@@ -407,7 +424,7 @@
         <loading>
           <useAlternateLoadableFile>false</useAlternateLoadableFile>
           <parseOnProdLoad>false</parseOnProdLoad>
-          <alternateLoadableFile/>
+          <alternateLoadableFile></alternateLoadableFile>
         </loading>
         <subordinates>
         </subordinates>
@@ -415,7 +432,7 @@
       <makeCustomizationType>
         <makeCustomizationPreStepEnabled>false</makeCustomizationPreStepEnabled>
         <makeUseCleanTarget>false</makeUseCleanTarget>
-        <makeCustomizationPreStep/>
+        <makeCustomizationPreStep></makeCustomizationPreStep>
         <makeCustomizationPostStepEnabled>true</makeCustomizationPostStepEnabled>
         <makeCustomizationPostStep>${MP_CC_DIR}/xc32-objcopy -Obinary ${ImageDir}/${ConfName}.X.${IMAGE_TYPE}.elf ${ImageDir}/harmony_bootloader.bin</makeCustomizationPostStep>
         <makeCustomizationPutChecksumInUserID>false</makeCustomizationPutChecksumInUserID>
@@ -425,12 +442,14 @@
       <C32>
         <property key="additional-warnings" value="true"/>
         <property key="addresss-attribute-use" value="false"/>
+        <property key="appendMe" value="-marm"/>
         <property key="enable-app-io" value="false"/>
         <property key="enable-omit-frame-pointer" value="false"/>
         <property key="enable-symbols" value="true"/>
         <property key="enable-unroll-loops" value="false"/>
         <property key="exclude-floating-point" value="false"/>
-        <property key="extra-include-directories" value="../src;../src/config/sam_a7g5_ek;../src/config/sam_a7g5_ek/system/fs/fat_fs/file_system;../src/config/sam_a7g5_ek/system/fs/fat_fs/hardware_access;../src/packs/CMSIS/;../src/packs/CMSIS/CMSIS/Core_A/Include;../src/packs/SAMA7G54_DFP"/>
+        <property key="extra-include-directories"
+                  value="../src;../src/config/sam_a7g5_ek;../src/config/sam_a7g5_ek/system/fs/fat_fs/file_system;../src/config/sam_a7g5_ek/system/fs/fat_fs/hardware_access;../src/packs/CMSIS/;../src/packs/CMSIS/CMSIS/Core_A/Include;../src/packs/SAMA7G54_DFP"/>
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="true"/>
@@ -448,6 +467,7 @@
         <property key="use-cci" value="false"/>
         <property key="use-iar" value="false"/>
         <property key="use-indirect-calls" value="false"/>
+        <appendMe value="-marm"/>
       </C32>
       <C32-AR>
         <property key="additional-options-chop-files" value="false"/>
@@ -480,6 +500,7 @@
         <property key="additional-options-use-response-files" value="false"/>
         <property key="additional-options-write-sla" value="false"/>
         <property key="allocate-dinit" value="false"/>
+        <property key="appendMe" value=""/>
         <property key="code-dinit" value="false"/>
         <property key="ebase-addr" value=""/>
         <property key="enable-check-sections" value="false"/>
@@ -519,6 +540,7 @@
       <C32CPP>
         <property key="additional-warnings" value="false"/>
         <property key="addresss-attribute-use" value="false"/>
+        <property key="appendMe" value=""/>
         <property key="check-new" value="false"/>
         <property key="eh-specs" value="true"/>
         <property key="enable-app-io" value="false"/>
@@ -527,7 +549,8 @@
         <property key="enable-unroll-loops" value="false"/>
         <property key="exceptions" value="true"/>
         <property key="exclude-floating-point" value="false"/>
-        <property key="extra-include-directories" value="../src;../src/config/sam_a7g5_ek;../src/config/sam_a7g5_ek/system/fs/fat_fs/file_system;../src/config/sam_a7g5_ek/system/fs/fat_fs/hardware_access;../src/packs/CMSIS/;../src/packs/CMSIS/CMSIS/Core_A/Include;../src/packs/SAMA7G54_DFP"/>
+        <property key="extra-include-directories"
+                  value="../src;../src/config/sam_a7g5_ek;../src/config/sam_a7g5_ek/system/fs/fat_fs/file_system;../src/config/sam_a7g5_ek/system/fs/fat_fs/hardware_access;../src/packs/CMSIS/;../src/packs/CMSIS/CMSIS/Core_A/Include;../src/packs/SAMA7G54_DFP"/>
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="true"/>
