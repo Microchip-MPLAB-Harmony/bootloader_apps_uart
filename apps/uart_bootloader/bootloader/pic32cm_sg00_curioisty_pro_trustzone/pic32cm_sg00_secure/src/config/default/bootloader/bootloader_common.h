@@ -69,7 +69,7 @@
 #define NVM_USER_ROW_SIZE_1                       (0x1000UL)
 
 
-#define BOOTLOADER_SIZE                         8192
+#define BOOTLOADER_SIZE                         4096
 
 #define FLASH_END_ADDRESS                       (FLASH_START + FLASH_LENGTH)
 
@@ -311,7 +311,5 @@ Example:
 void bootloader_TriggerReset(void);
 
 
-/* Function to refresh watchdog timer */
-void kickdog(void);
 
 #endif      //BOOTLOADER_COMMON_H

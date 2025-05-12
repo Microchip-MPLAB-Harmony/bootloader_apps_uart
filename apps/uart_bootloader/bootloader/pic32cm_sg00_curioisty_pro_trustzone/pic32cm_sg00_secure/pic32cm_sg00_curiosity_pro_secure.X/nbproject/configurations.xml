@@ -109,6 +109,7 @@
             <itemPath>../src/packs/PIC32CM5112SG00100_DFP/component/ptc.h</itemPath>
             <itemPath>../src/packs/PIC32CM5112SG00100_DFP/component/can.h</itemPath>
             <itemPath>../src/packs/PIC32CM5112SG00100_DFP/component/oscctrl.h</itemPath>
+            <itemPath>../src/packs/PIC32CM5112SG00100_DFP/component/hsm.h</itemPath>
           </logicalFolder>
           <logicalFolder name="instance" displayName="instance" projectFiles="true">
             <itemPath>../src/packs/PIC32CM5112SG00100_DFP/instance/adc.h</itemPath>
@@ -162,6 +163,7 @@
             <itemPath>../src/packs/PIC32CM5112SG00100_DFP/instance/sercom0.h</itemPath>
             <itemPath>../src/packs/PIC32CM5112SG00100_DFP/instance/sercom4.h</itemPath>
             <itemPath>../src/packs/PIC32CM5112SG00100_DFP/instance/oscctrl.h</itemPath>
+            <itemPath>../src/packs/PIC32CM5112SG00100_DFP/instance/hsm.h</itemPath>
           </logicalFolder>
           <logicalFolder name="pio" displayName="pio" projectFiles="true">
             <itemPath>../src/packs/PIC32CM5112SG00100_DFP/pio/pic32cm5112sg00100.h</itemPath>

@@ -221,7 +221,7 @@ typedef struct _H3DeviceVectors
   pfn_handler_t pfnUSB_TRCPT00_Handler;             /* 136 None */
   pfn_handler_t pfnUSB_TRCPT10_Handler;             /* 137 None */
   pfn_handler_t pfnAT_Handler;                      /* 138 None */
-  pfn_handler_t pfnCAM_Handler;                     /* 139 None */
+  pfn_handler_t pfnHSM_Handler;                     /* 139 None */
   pfn_handler_t pfnPUF_Handler;                     /* 140 None */
 }H3DeviceVectors;
 

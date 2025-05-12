@@ -119,6 +119,12 @@ static bool     flash_data_ready    = false;
 
 static bool     uartBLActive        = false;
 
+
+/* Following MISRA-C rules are deviated in the below code block */
+/* MISRA C-2012 Rule 8.2 */
+/* MISRA C-2012 Rule 11.1 */
+/* MISRA C-2012 Rule 17.7 */
+
 typedef bool (*FLASH_ERASE_FPTR)(uint32_t address);
 
 typedef bool (*FLASH_WRITE_FPTR)(uint32_t* data, uint32_t address);
@@ -333,7 +339,6 @@ static void flash_task(void)
     {
         input_task();
     
-    
     }
     // Check if the address falls in Device Configuration Space
     if (BL_CMD_DEVCFG_DATA == current_command)
@@ -353,7 +358,6 @@ static void flash_task(void)
     {
         input_task();
     
-    
     }
 
     for (bytes_written = 0; bytes_written < bytes_to_write; bytes_written += PAGE_SIZE)
@@ -364,7 +368,6 @@ static void flash_task(void)
         while(FCW_IsBusy() == true)
         {
             input_task();
-        
         
         }
 
@@ -393,7 +396,6 @@ void bootloader_UART_Tasks(void)
 
     do
     {
-
         input_task();
 
         if (flash_data_ready)
@@ -410,3 +412,4 @@ void bootloader_UART_Tasks(void)
         }
     } while (uartBLActive);
 }
+/* MISRAC 2012 deviation block end */

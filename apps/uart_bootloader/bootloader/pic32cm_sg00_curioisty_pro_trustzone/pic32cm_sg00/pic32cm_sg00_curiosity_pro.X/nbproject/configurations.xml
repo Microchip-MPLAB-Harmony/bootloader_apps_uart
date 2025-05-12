@@ -45,7 +45,6 @@
                        displayName="PIC32CM5112SG00100_DFP"
                        projectFiles="true">
           <logicalFolder name="component" displayName="component" projectFiles="true">
-            <itemPath>../src/packs/PIC32CM5112SG00100_DFP/component/cam.h</itemPath>
             <itemPath>../src/packs/PIC32CM5112SG00100_DFP/component/ccl.h</itemPath>
             <itemPath>../src/packs/PIC32CM5112SG00100_DFP/component/puf.h</itemPath>
             <itemPath>../src/packs/PIC32CM5112SG00100_DFP/component/freqm.h</itemPath>
@@ -81,6 +80,7 @@
             <itemPath>../src/packs/PIC32CM5112SG00100_DFP/component/bromc.h</itemPath>
             <itemPath>../src/packs/PIC32CM5112SG00100_DFP/component/dmac.h</itemPath>
             <itemPath>../src/packs/PIC32CM5112SG00100_DFP/component/supc.h</itemPath>
+            <itemPath>../src/packs/PIC32CM5112SG00100_DFP/component/hsm.h</itemPath>
           </logicalFolder>
           <logicalFolder name="instance" displayName="instance" projectFiles="true">
             <itemPath>../src/packs/PIC32CM5112SG00100_DFP/instance/tcc1.h</itemPath>
@@ -113,7 +113,6 @@
             <itemPath>../src/packs/PIC32CM5112SG00100_DFP/instance/puf.h</itemPath>
             <itemPath>../src/packs/PIC32CM5112SG00100_DFP/instance/at.h</itemPath>
             <itemPath>../src/packs/PIC32CM5112SG00100_DFP/instance/gclk.h</itemPath>
-            <itemPath>../src/packs/PIC32CM5112SG00100_DFP/instance/cam.h</itemPath>
             <itemPath>../src/packs/PIC32CM5112SG00100_DFP/instance/tcc3.h</itemPath>
             <itemPath>../src/packs/PIC32CM5112SG00100_DFP/instance/sercom2.h</itemPath>
             <itemPath>../src/packs/PIC32CM5112SG00100_DFP/instance/h2pb1.h</itemPath>
@@ -134,6 +133,7 @@
             <itemPath>../src/packs/PIC32CM5112SG00100_DFP/instance/dmac.h</itemPath>
             <itemPath>../src/packs/PIC32CM5112SG00100_DFP/instance/rstc.h</itemPath>
             <itemPath>../src/packs/PIC32CM5112SG00100_DFP/instance/rtc.h</itemPath>
+            <itemPath>../src/packs/PIC32CM5112SG00100_DFP/instance/hsm.h</itemPath>
           </logicalFolder>
           <logicalFolder name="pio" displayName="pio" projectFiles="true">
             <itemPath>../src/packs/PIC32CM5112SG00100_DFP/pio/pic32cm5112sg00100.h</itemPath>
