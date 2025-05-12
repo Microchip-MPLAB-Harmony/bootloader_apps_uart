@@ -322,12 +322,12 @@ void SYS_Initialize ( void* data )
 	SDMMC0_Initialize();
 
 	BSP_Initialize();
+    DBGU_Initialize();
+
  
     TC0_CH0_TimerInitialize(); 
      
     
-    DBGU_Initialize();
-
 
     /* MISRAC 2012 deviation block start */
     /* Following MISRA-C rules deviated in this block  */
