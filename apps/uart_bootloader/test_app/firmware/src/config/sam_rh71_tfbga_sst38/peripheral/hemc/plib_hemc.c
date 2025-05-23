@@ -55,13 +55,7 @@
 
 
 
-/*
-   Set attribute "ramfunc" on HMSC initialize function to execute it in FlexRAM :
- * When the application boots from HEMC NSC0 and HSMC timings are reconfigured
- * the code should be executed in a different memory than the one that is 
- * reconfigured.
- */
-__attribute__ ((ramfunc,section(".ramfunc"), long_call, unique_section, noinline))
+
 static void HSMC_Initialize( void )
 {
     /* Chip Select CS0 Timings */

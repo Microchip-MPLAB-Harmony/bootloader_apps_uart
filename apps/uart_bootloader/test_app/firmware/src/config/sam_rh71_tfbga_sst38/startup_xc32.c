@@ -250,10 +250,6 @@ void __attribute__((optimize("-O1"), section(".text.Reset_Handler"), long_call, 
 #endif
     __asm__ volatile ("add r7, sp, #0" : : : "r7");
 #endif
-    
-    /* Disable watchdog on reset as boot in external memory is slower
-     *  until HEMC timings are configured */
-    WDT_REGS->WDT_MR = WDT_MR_WDDIS_Msk; 		// Disable WDT 
 
     /* Call the optional application-provided _on_reset() function. */
     _on_reset();
