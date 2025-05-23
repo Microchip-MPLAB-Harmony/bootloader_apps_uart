@@ -30,9 +30,10 @@
 
 /* MISRAC 2012 deviation block start */
 /* MISRA C-2012 Rule 21.2 deviated 1 times. Deviation record ID -  H3_MISRAC_2012_R_21_2_DR_1 */
-/* MISRA C-2012 Rule 8.6 deviated 7 times.  Deviation record ID -  H3_MISRAC_2012_R_8_6_DR_1 */
+/* MISRA C-2012 Rule 8.6 deviated 8 times.  Deviation record ID -  H3_MISRAC_2012_R_8_6_DR_1 */
 /* Initialize segments */
 extern uint32_t _sfixed;
+extern void _stack(void);
 extern void _ram_end_(void);
 
 extern int main(void);
@@ -45,7 +46,7 @@ extern void (* const vectors[])(void);
 __attribute__ ((used, section(".vectors")))
 void (* const vectors[])(void) =
 {
-    &_ram_end_,
+    &_stack,
     Reset_Handler,
 };
 
@@ -68,7 +69,7 @@ __STATIC_INLINE void  __attribute__((optimize("-O1"))) __attribute__((always_inl
 
     // SRAM initialization loop (to handle ECC properly)
     // We need to initialize all of SRAM with 32 bit aligned writes
-    for (pSRam = (uint32_t*)(uintptr_t)&_sdata; pSRam < (uint32_t*)(uintptr_t)_ram_end_ ; pSRam++)
+    for (pSRam = (uint32_t*)(uintptr_t)&_sdata; (uintptr_t)pSRam < (uintptr_t)_ram_end_ ; pSRam++)
     {
         *pSRam = 0;
 

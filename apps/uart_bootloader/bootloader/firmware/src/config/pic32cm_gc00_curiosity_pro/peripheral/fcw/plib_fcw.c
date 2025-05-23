@@ -51,6 +51,9 @@
 #include "plib_fcw.h"
 #include "device_cache.h"
 
+/* MISRAC 2012 deviation block start */
+/* MISRA C-2012 Rule 10.3 deviated 2 times.  Deviation record ID -  H3_MISRAC_2012_R_10_3_DR_1 */
+
 /* ************************************************************************** */
 /* ************************************************************************** */
 /* Section: File Scope or Global Data                                         */
@@ -95,9 +98,9 @@ typedef enum
 // *****************************************************************************
 void FCW_PFM_PageWriteProtectRestore(uint32_t* pwp_region)
 {
-    for (uint32_t region = 0; region < FCW_PWP_REGIONS; region++)
+    for (uint32_t region = 0; region < (uint32_t)FCW_PWP_REGIONS; region++)
     {
-        if (*pwp_region & (1 << region))
+        if ((*pwp_region & ((uint32_t)1 << region)) != 0U)
         {
            FCW_PFM_WriteProtectEnable(region);
         }
@@ -114,22 +117,22 @@ bool FCW_PFM_PageWriteProtectDisable(uint32_t pageStartAddr, uint32_t* pwp_regio
 
     if ((pageStartAddr >= FCW_FLASH_START_ADDRESS) && (pageStartAddr < (FCW_FLASH_START_ADDRESS + FCW_FLASH_PFM_SIZE)))
     {
-        for (uint32_t region = 0; region < FCW_PWP_REGIONS; region++)
+        for (uint32_t region = 0; region < (uint32_t)FCW_PWP_REGIONS; region++)
         {
-            if (FCW_REGS->FCW_PWP[region] & FCW_PWP_PWPEN_Msk)
+            if ((FCW_REGS->FCW_PWP[region] & FCW_PWP_PWPEN_Msk) != 0U)
             {
                 region_start_addr = FCW_FLASH_START_ADDRESS;
                 region_start_addr += (FCW_REGS->FCW_PWP[region] & FCW_PWP_PWPBASE_Msk >> FCW_PWP_PWPBASE_Pos) << 12U;
 
                 region_end_addr = region_start_addr;
 
-                region_end_addr += ((FCW_REGS->FCW_PWP[region] & FCW_PWP_PWPSIZE_Msk) + 1) << 12U;
+                region_end_addr += ((FCW_REGS->FCW_PWP[region] & FCW_PWP_PWPSIZE_Msk) + 1U) << 12U;
 
                 if (pageStartAddr >= region_start_addr && pageStartAddr < region_end_addr)
                 {
                     FCW_PFM_WriteProtectDisable(region);
                     status = true;
-                    *pwp_region |= (1 << region);
+                    *pwp_region |= ((uint32_t)1 << region);
                 }
             }
         }
@@ -167,6 +170,8 @@ static void FCW_StartOperationAtAddress( uint32_t address,  FCW_OPERATION_MODE o
     FCW_UnlockSequence(FCW_UNLOCK_WRKEY);
     FCW_REGS->FCW_CTRLOP = FCW_CTRLOP_PREPG_Msk | (FCW_CTRLOP_NVMOP_Msk & (((uint32_t)operation) << FCW_CTRLOP_NVMOP_Pos));
 }
+
+/* MISRAC 2012 deviation block end */
 
 /* ************************************************************************** */
 /* ************************************************************************** */

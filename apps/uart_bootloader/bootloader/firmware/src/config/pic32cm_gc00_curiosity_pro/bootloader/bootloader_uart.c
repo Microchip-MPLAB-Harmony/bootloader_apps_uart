@@ -119,6 +119,12 @@ static bool     flash_data_ready    = false;
 
 static bool     uartBLActive        = false;
 
+
+/* Following MISRA-C rules are deviated in the below code block */
+/* MISRA C-2012 Rule 8.2 */
+/* MISRA C-2012 Rule 11.1 */
+/* MISRA C-2012 Rule 17.7 */
+
 typedef bool (*FLASH_ERASE_FPTR)(uint32_t address);
 
 typedef bool (*FLASH_WRITE_FPTR)(uint32_t* data, uint32_t address);
@@ -414,3 +420,4 @@ void bootloader_UART_Tasks(void)
         }
     } while (uartBLActive);
 }
+/* MISRAC 2012 deviation block end */

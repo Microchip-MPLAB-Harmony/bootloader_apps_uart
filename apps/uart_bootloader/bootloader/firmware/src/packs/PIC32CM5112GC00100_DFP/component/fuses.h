@@ -1,7 +1,7 @@
 /*
  * Component description for FUSES
  *
- * Copyright (c) 2024 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2025 Microchip Technology Inc. and its subsidiaries.
  *
  * SPDX-License-Identifier: Apache-2.0
  *
@@ -19,7 +19,7 @@
  *
  */
 
-/*  file generated from device description file (ATDF) version 2024-07-26T17:56:39Z  */
+/*  file generated from device description file (ATDF) version 2024-11-05T16:47:43Z  */
 #ifndef _PIC32CMGC00_FUSES_COMPONENT_H_
 #define _PIC32CMGC00_FUSES_COMPONENT_H_
 
@@ -2199,13 +2199,13 @@
 
 
 /* -------- FUSES_FCCFG33 : (FUSES Offset: 0x104) ( R/ 32) DSU Device Configuration 1 Register -------- */
-#define FUSES_FCCFG33_ME_CAM_Pos              _UINT32_(7)                                          /* (FUSES_FCCFG33) Module enables for Variant configuration Position */
-#define FUSES_FCCFG33_ME_CAM_Msk              (_UINT32_(0x1) << FUSES_FCCFG33_ME_CAM_Pos)          /* (FUSES_FCCFG33) Module enables for Variant configuration Mask */
-#define FUSES_FCCFG33_ME_CAM(value)           (FUSES_FCCFG33_ME_CAM_Msk & (_UINT32_(value) << FUSES_FCCFG33_ME_CAM_Pos)) /* Assignment of value for ME_CAM in the FUSES_FCCFG33 register */
-#define   FUSES_FCCFG33_ME_CAM_0_Val          _UINT32_(0x0)                                        /* (FUSES_FCCFG33) Module is Disabled  */
-#define   FUSES_FCCFG33_ME_CAM_1_Val          _UINT32_(0x1)                                        /* (FUSES_FCCFG33) Module is Enabled  */
-#define FUSES_FCCFG33_ME_CAM_0                (FUSES_FCCFG33_ME_CAM_0_Val << FUSES_FCCFG33_ME_CAM_Pos) /* (FUSES_FCCFG33) Module is Disabled Position */
-#define FUSES_FCCFG33_ME_CAM_1                (FUSES_FCCFG33_ME_CAM_1_Val << FUSES_FCCFG33_ME_CAM_Pos) /* (FUSES_FCCFG33) Module is Enabled Position */
+#define FUSES_FCCFG33_ME_HSM_Pos              _UINT32_(7)                                          /* (FUSES_FCCFG33) Module enables for Variant configuration Position */
+#define FUSES_FCCFG33_ME_HSM_Msk              (_UINT32_(0x1) << FUSES_FCCFG33_ME_HSM_Pos)          /* (FUSES_FCCFG33) Module enables for Variant configuration Mask */
+#define FUSES_FCCFG33_ME_HSM(value)           (FUSES_FCCFG33_ME_HSM_Msk & (_UINT32_(value) << FUSES_FCCFG33_ME_HSM_Pos)) /* Assignment of value for ME_HSM in the FUSES_FCCFG33 register */
+#define   FUSES_FCCFG33_ME_HSM_0_Val          _UINT32_(0x0)                                        /* (FUSES_FCCFG33) Module is Disabled  */
+#define   FUSES_FCCFG33_ME_HSM_1_Val          _UINT32_(0x1)                                        /* (FUSES_FCCFG33) Module is Enabled  */
+#define FUSES_FCCFG33_ME_HSM_0                (FUSES_FCCFG33_ME_HSM_0_Val << FUSES_FCCFG33_ME_HSM_Pos) /* (FUSES_FCCFG33) Module is Disabled Position */
+#define FUSES_FCCFG33_ME_HSM_1                (FUSES_FCCFG33_ME_HSM_1_Val << FUSES_FCCFG33_ME_HSM_Pos) /* (FUSES_FCCFG33) Module is Enabled Position */
 #define FUSES_FCCFG33_ME_TCC0_Pos             _UINT32_(8)                                          /* (FUSES_FCCFG33) Module enables for Variant configuration Position */
 #define FUSES_FCCFG33_ME_TCC0_Msk             (_UINT32_(0x1) << FUSES_FCCFG33_ME_TCC0_Pos)         /* (FUSES_FCCFG33) Module enables for Variant configuration Mask */
 #define FUSES_FCCFG33_ME_TCC0(value)          (FUSES_FCCFG33_ME_TCC0_Msk & (_UINT32_(value) << FUSES_FCCFG33_ME_TCC0_Pos)) /* Assignment of value for ME_TCC0 in the FUSES_FCCFG33 register */
@@ -2339,9 +2339,9 @@
 #define FUSES_FCCFG34_ME_DPA_Msk              (_UINT32_(0x1) << FUSES_FCCFG34_ME_DPA_Pos)          /* (FUSES_FCCFG34) Module enables for Variant configuration Mask */
 #define FUSES_FCCFG34_ME_DPA(value)           (FUSES_FCCFG34_ME_DPA_Msk & (_UINT32_(value) << FUSES_FCCFG34_ME_DPA_Pos)) /* Assignment of value for ME_DPA in the FUSES_FCCFG34 register */
 #define   FUSES_FCCFG34_ME_DPA_0_Val          _UINT32_(0x0)                                        /* (FUSES_FCCFG34) DPA is Disabled  */
-#define   FUSES_FCCFG34_ME_DPA_1_Val          _UINT32_(0x1)                                        /* (FUSES_FCCFG34) DPA functions in CAM is Operational  */
+#define   FUSES_FCCFG34_ME_DPA_1_Val          _UINT32_(0x1)                                        /* (FUSES_FCCFG34) DPA functions in HSM is Operational  */
 #define FUSES_FCCFG34_ME_DPA_0                (FUSES_FCCFG34_ME_DPA_0_Val << FUSES_FCCFG34_ME_DPA_Pos) /* (FUSES_FCCFG34) DPA is Disabled Position */
-#define FUSES_FCCFG34_ME_DPA_1                (FUSES_FCCFG34_ME_DPA_1_Val << FUSES_FCCFG34_ME_DPA_Pos) /* (FUSES_FCCFG34) DPA functions in CAM is Operational Position */
+#define FUSES_FCCFG34_ME_DPA_1                (FUSES_FCCFG34_ME_DPA_1_Val << FUSES_FCCFG34_ME_DPA_Pos) /* (FUSES_FCCFG34) DPA functions in HSM is Operational Position */
 #define FUSES_FCCFG34_ME_TRAM_Pos             _UINT32_(30)                                         /* (FUSES_FCCFG34) Module enables for Variant configuration Position */
 #define FUSES_FCCFG34_ME_TRAM_Msk             (_UINT32_(0x1) << FUSES_FCCFG34_ME_TRAM_Pos)         /* (FUSES_FCCFG34) Module enables for Variant configuration Mask */
 #define FUSES_FCCFG34_ME_TRAM(value)          (FUSES_FCCFG34_ME_TRAM_Msk & (_UINT32_(value) << FUSES_FCCFG34_ME_TRAM_Pos)) /* Assignment of value for ME_TRAM in the FUSES_FCCFG34 register */
