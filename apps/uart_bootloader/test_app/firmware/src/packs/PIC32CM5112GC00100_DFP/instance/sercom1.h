@@ -1,7 +1,7 @@
 /*
  * Instance header file for PIC32CM5112GC00100
  *
- * Copyright (c) 2024 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2025 Microchip Technology Inc. and its subsidiaries.
  *
  * SPDX-License-Identifier: Apache-2.0
  *
@@ -19,7 +19,7 @@
  *
  */
 
-/* file generated from device description file (ATDF) version 2024-07-26T17:56:39Z */
+/* file generated from device description file (ATDF) version 2024-11-05T16:47:43Z */
 #ifndef _PIC32CMGC00_SERCOM1_INSTANCE_
 #define _PIC32CMGC00_SERCOM1_INSTANCE_
 
@@ -42,7 +42,6 @@
 #define SERCOM1_SPI                              (1)        /* SPI mode implemented? */
 #define SERCOM1_TWIM                             (1)        /* TWI Master mode implemented? */
 #define SERCOM1_TWIS                             (1)        /* TWI Slave mode implemented? */
-#define SERCOM1_TWI_HSMODE                       (1)        /* TWI HighSpeed mode implemented? */
 #define SERCOM1_ULTRA_IMPLEMENTATION             (0)        /* ULTRA platform compatibility? */
 #define SERCOM1_USART                            (1)        /* USART mode implemented? */
 #define SERCOM1_USART_AUTOBAUD                   (1)        /* USART autobaud implemented? */

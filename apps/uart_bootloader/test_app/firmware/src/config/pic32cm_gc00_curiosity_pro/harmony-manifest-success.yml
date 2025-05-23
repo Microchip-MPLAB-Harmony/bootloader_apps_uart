@@ -4,21 +4,21 @@
 
 
 project: test_app
-creation_date: 2025-01-24T12:35:36.253+05:30[Asia/Calcutta]    # ISO 8601 format: https://www.w3.org/TR/NOTE-datetime
+creation_date: 2025-05-23T13:01:10.878+05:30[Asia/Calcutta]    # ISO 8601 format: https://www.w3.org/TR/NOTE-datetime
 operating_system: Windows 10
-mcc_mode: IDE            # [IDE|Standalone|Headless]
+mcc_mode: Headless            # [IDE|Standalone|Headless]
 mcc_version: v5.5.1
 mcc_core_version: v5.7.1
-mplabx_version: v6.20        # if MPLAB X plugin only
-harmony_version: v1.5.3
-compiler: XC32 4.45
+mplabx_version: NA        # if MPLAB X plugin only
+harmony_version: v1.5.5
+compiler: NA
 
 modules:
-    - {name: "csp", version: "qs_fpb"}
-    - {name: "core", version: "dev"}
-    - {name: "CMSIS_5", version: "5.9.0"}
-    - {name: "bsp", version: "dev"}
+    - {name: "csp", version: "v3.22.2-42-g413852b"}
+    - {name: "core", version: "v3.15.2"}
+    - {name: "CMSIS_5", version: "5.8.0"}
+    - {name: "bsp", version: "v3.22.0"}
 
 packs:
-    - {name: "PIC32CM-GC00_DFP", version: "1.0.23"}
+    - {name: "PIC32CM-GC00_DFP", version: "1.0.27"}
 

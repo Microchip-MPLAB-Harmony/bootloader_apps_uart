@@ -1,7 +1,7 @@
 /*
  * Component description for FCR
  *
- * Copyright (c) 2024 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2025 Microchip Technology Inc. and its subsidiaries.
  *
  * SPDX-License-Identifier: Apache-2.0
  *
@@ -19,7 +19,7 @@
  *
  */
 
-/*  file generated from device description file (ATDF) version 2024-07-26T17:56:39Z  */
+/*  file generated from device description file (ATDF) version 2024-11-05T16:47:43Z  */
 #ifndef _PIC32CMGC00_FCR_COMPONENT_H_
 #define _PIC32CMGC00_FCR_COMPONENT_H_
 
@@ -520,12 +520,12 @@
 #define FCR_FFLTPTR_RESETVALUE                _UINT32_(0x00)                                       /*  (FCR_FFLTPTR) Flash ECC Fault Pointer REGISTER  Reset Value */
 
 #define FCR_FFLTPTR_FLTPTR1_Pos               _UINT32_(0)                                          /* (FCR_FFLTPTR) Fault 1 Injection Pointer Position */
-#define FCR_FFLTPTR_FLTPTR1_Msk               (_UINT32_(0x1FF) << FCR_FFLTPTR_FLTPTR1_Pos)         /* (FCR_FFLTPTR) Fault 1 Injection Pointer Mask */
+#define FCR_FFLTPTR_FLTPTR1_Msk               (_UINT32_(0xFF) << FCR_FFLTPTR_FLTPTR1_Pos)          /* (FCR_FFLTPTR) Fault 1 Injection Pointer Mask */
 #define FCR_FFLTPTR_FLTPTR1(value)            (FCR_FFLTPTR_FLTPTR1_Msk & (_UINT32_(value) << FCR_FFLTPTR_FLTPTR1_Pos)) /* Assignment of value for FLTPTR1 in the FCR_FFLTPTR register */
 #define FCR_FFLTPTR_FLTPTR2_Pos               _UINT32_(16)                                         /* (FCR_FFLTPTR) Fault 2 Injection Pointer Position */
-#define FCR_FFLTPTR_FLTPTR2_Msk               (_UINT32_(0x1FF) << FCR_FFLTPTR_FLTPTR2_Pos)         /* (FCR_FFLTPTR) Fault 2 Injection Pointer Mask */
+#define FCR_FFLTPTR_FLTPTR2_Msk               (_UINT32_(0xFF) << FCR_FFLTPTR_FLTPTR2_Pos)          /* (FCR_FFLTPTR) Fault 2 Injection Pointer Mask */
 #define FCR_FFLTPTR_FLTPTR2(value)            (FCR_FFLTPTR_FLTPTR2_Msk & (_UINT32_(value) << FCR_FFLTPTR_FLTPTR2_Pos)) /* Assignment of value for FLTPTR2 in the FCR_FFLTPTR register */
-#define FCR_FFLTPTR_Msk                       _UINT32_(0x01FF01FF)                                 /* (FCR_FFLTPTR) Register Mask  */
+#define FCR_FFLTPTR_Msk                       _UINT32_(0x00FF00FF)                                 /* (FCR_FFLTPTR) Register Mask  */
 
 
 /* -------- FCR_FFLTADR : (FCR Offset: 0x58) (R/W 32) Flash ECC Fault Address REGISTER -------- */
@@ -550,25 +550,25 @@
 #define FCR_FFLTPAR_RESETVALUE                _UINT32_(0x00)                                       /*  (FCR_FFLTPAR) Flash ECC Fault Parity REGISTER  Reset Value */
 
 #define FCR_FFLTPAR_SECIN_Pos                 _UINT32_(0)                                          /* (FCR_FFLTPAR) The Single Error Parity bits from Flash Position */
-#define FCR_FFLTPAR_SECIN_Msk                 (_UINT32_(0x1FF) << FCR_FFLTPAR_SECIN_Pos)           /* (FCR_FFLTPAR) The Single Error Parity bits from Flash Mask */
+#define FCR_FFLTPAR_SECIN_Msk                 (_UINT32_(0xFF) << FCR_FFLTPAR_SECIN_Pos)            /* (FCR_FFLTPAR) The Single Error Parity bits from Flash Mask */
 #define FCR_FFLTPAR_SECIN(value)              (FCR_FFLTPAR_SECIN_Msk & (_UINT32_(value) << FCR_FFLTPAR_SECIN_Pos)) /* Assignment of value for SECIN in the FCR_FFLTPAR register */
 #define FCR_FFLTPAR_DEDIN_Pos                 _UINT32_(15)                                         /* (FCR_FFLTPAR) The Overall Parity from Flash Position */
 #define FCR_FFLTPAR_DEDIN_Msk                 (_UINT32_(0x1) << FCR_FFLTPAR_DEDIN_Pos)             /* (FCR_FFLTPAR) The Overall Parity from Flash Mask */
 #define FCR_FFLTPAR_DEDIN(value)              (FCR_FFLTPAR_DEDIN_Msk & (_UINT32_(value) << FCR_FFLTPAR_DEDIN_Pos)) /* Assignment of value for DEDIN in the FCR_FFLTPAR register */
 #define FCR_FFLTPAR_SECOUT_Pos                _UINT32_(16)                                         /* (FCR_FFLTPAR) The Calculated Single Error Parity bits Position */
-#define FCR_FFLTPAR_SECOUT_Msk                (_UINT32_(0x1FF) << FCR_FFLTPAR_SECOUT_Pos)          /* (FCR_FFLTPAR) The Calculated Single Error Parity bits Mask */
+#define FCR_FFLTPAR_SECOUT_Msk                (_UINT32_(0xFF) << FCR_FFLTPAR_SECOUT_Pos)           /* (FCR_FFLTPAR) The Calculated Single Error Parity bits Mask */
 #define FCR_FFLTPAR_SECOUT(value)             (FCR_FFLTPAR_SECOUT_Msk & (_UINT32_(value) << FCR_FFLTPAR_SECOUT_Pos)) /* Assignment of value for SECOUT in the FCR_FFLTPAR register */
 #define FCR_FFLTPAR_DEDOUT_Pos                _UINT32_(31)                                         /* (FCR_FFLTPAR) The Calculated Overall Parity used in Double Error Detection Position */
 #define FCR_FFLTPAR_DEDOUT_Msk                (_UINT32_(0x1) << FCR_FFLTPAR_DEDOUT_Pos)            /* (FCR_FFLTPAR) The Calculated Overall Parity used in Double Error Detection Mask */
 #define FCR_FFLTPAR_DEDOUT(value)             (FCR_FFLTPAR_DEDOUT_Msk & (_UINT32_(value) << FCR_FFLTPAR_DEDOUT_Pos)) /* Assignment of value for DEDOUT in the FCR_FFLTPAR register */
-#define FCR_FFLTPAR_Msk                       _UINT32_(0x81FF81FF)                                 /* (FCR_FFLTPAR) Register Mask  */
+#define FCR_FFLTPAR_Msk                       _UINT32_(0x80FF80FF)                                 /* (FCR_FFLTPAR) Register Mask  */
 
 
 /* -------- FCR_FFLTSYN : (FCR Offset: 0x64) ( R/ 32) Flash ECC Fault Syndrome REGISTER -------- */
 #define FCR_FFLTSYN_RESETVALUE                _UINT32_(0x00)                                       /*  (FCR_FFLTSYN) Flash ECC Fault Syndrome REGISTER  Reset Value */
 
 #define FCR_FFLTSYN_SECSYN_Pos                _UINT32_(0)                                          /* (FCR_FFLTSYN) Single Error Correction Syndrome Position */
-#define FCR_FFLTSYN_SECSYN_Msk                (_UINT32_(0x1FF) << FCR_FFLTSYN_SECSYN_Pos)          /* (FCR_FFLTSYN) Single Error Correction Syndrome Mask */
+#define FCR_FFLTSYN_SECSYN_Msk                (_UINT32_(0xFF) << FCR_FFLTSYN_SECSYN_Pos)           /* (FCR_FFLTSYN) Single Error Correction Syndrome Mask */
 #define FCR_FFLTSYN_SECSYN(value)             (FCR_FFLTSYN_SECSYN_Msk & (_UINT32_(value) << FCR_FFLTSYN_SECSYN_Pos)) /* Assignment of value for SECSYN in the FCR_FFLTSYN register */
 #define FCR_FFLTSYN_DEDSYN_Pos                _UINT32_(15)                                         /* (FCR_FFLTSYN) DED Syndrome Position */
 #define FCR_FFLTSYN_DEDSYN_Msk                (_UINT32_(0x1) << FCR_FFLTSYN_DEDSYN_Pos)            /* (FCR_FFLTSYN) DED Syndrome Mask */
@@ -577,8 +577,8 @@
 #define   FCR_FFLTSYN_DEDSYN_1_Val            _UINT32_(0x1)                                        /* (FCR_FFLTSYN) Calculated Overall Parity Differs from Read Overall Parity  */
 #define FCR_FFLTSYN_DEDSYN_0                  (FCR_FFLTSYN_DEDSYN_0_Val << FCR_FFLTSYN_DEDSYN_Pos) /* (FCR_FFLTSYN) Calculated Overall Parity Concurs with Read Overall Parity Position */
 #define FCR_FFLTSYN_DEDSYN_1                  (FCR_FFLTSYN_DEDSYN_1_Val << FCR_FFLTSYN_DEDSYN_Pos) /* (FCR_FFLTSYN) Calculated Overall Parity Differs from Read Overall Parity Position */
-#define FCR_FFLTSYN_DSERR_Pos                 _UINT32_(16)                                         /* (FCR_FFLTSYN) Double Error Detected &amp; Single Error Corrected Position */
-#define FCR_FFLTSYN_DSERR_Msk                 (_UINT32_(0x3) << FCR_FFLTSYN_DSERR_Pos)             /* (FCR_FFLTSYN) Double Error Detected &amp; Single Error Corrected Mask */
+#define FCR_FFLTSYN_DSERR_Pos                 _UINT32_(16)                                         /* (FCR_FFLTSYN) Double Error Detected & Single Error Corrected Position */
+#define FCR_FFLTSYN_DSERR_Msk                 (_UINT32_(0x3) << FCR_FFLTSYN_DSERR_Pos)             /* (FCR_FFLTSYN) Double Error Detected & Single Error Corrected Mask */
 #define FCR_FFLTSYN_DSERR(value)              (FCR_FFLTSYN_DSERR_Msk & (_UINT32_(value) << FCR_FFLTSYN_DSERR_Pos)) /* Assignment of value for DSERR in the FCR_FFLTSYN register */
 #define   FCR_FFLTSYN_DSERR_NONE_Val          _UINT32_(0x0)                                        /* (FCR_FFLTSYN) No Errors  */
 #define   FCR_FFLTSYN_DSERR_SINGLE_Val        _UINT32_(0x1)                                        /* (FCR_FFLTSYN) Single Error Corrected  */
@@ -621,7 +621,7 @@
 #define   FCR_FFLTSYN_PERR_ERROR_Val          _UINT32_(0x1)                                        /* (FCR_FFLTSYN) Parity Error on Word n  */
 #define FCR_FFLTSYN_PERR_NONE                 (FCR_FFLTSYN_PERR_NONE_Val << FCR_FFLTSYN_PERR_Pos)  /* (FCR_FFLTSYN) No Parity Error on Word n Position */
 #define FCR_FFLTSYN_PERR_ERROR                (FCR_FFLTSYN_PERR_ERROR_Val << FCR_FFLTSYN_PERR_Pos) /* (FCR_FFLTSYN) Parity Error on Word n Position */
-#define FCR_FFLTSYN_Msk                       _UINT32_(0xF70781FF)                                 /* (FCR_FFLTSYN) Register Mask  */
+#define FCR_FFLTSYN_Msk                       _UINT32_(0xF70780FF)                                 /* (FCR_FFLTSYN) Register Mask  */
 
 
 /* -------- FCR_CRP : (FCR Offset: 0x68) (R/W 32) CFM Page Read Protection REGISTER (CFM8) -------- */

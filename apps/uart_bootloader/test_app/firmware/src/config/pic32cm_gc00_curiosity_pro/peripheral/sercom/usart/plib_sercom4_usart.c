@@ -65,7 +65,7 @@
 // *****************************************************************************
 // *****************************************************************************
 
-void static SERCOM4_USART_ErrorClear( void )
+static void SERCOM4_USART_ErrorClear( void )
 {
     uint8_t  u8dummyData = 0U;
     USART_ERROR errorStatus = (USART_ERROR) (SERCOM4_REGS->USART.SERCOM_STATUS & (uint16_t)(SERCOM_USART_STATUS_PERR_Msk | SERCOM_USART_STATUS_FERR_Msk | SERCOM_USART_STATUS_BUFOVF_Msk ));

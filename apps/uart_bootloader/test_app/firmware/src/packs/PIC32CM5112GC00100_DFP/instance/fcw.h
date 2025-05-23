@@ -1,7 +1,7 @@
 /*
  * Instance header file for PIC32CM5112GC00100
  *
- * Copyright (c) 2024 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2025 Microchip Technology Inc. and its subsidiaries.
  *
  * SPDX-License-Identifier: Apache-2.0
  *
@@ -19,7 +19,7 @@
  *
  */
 
-/* file generated from device description file (ATDF) version 2024-07-26T17:56:39Z */
+/* file generated from device description file (ATDF) version 2024-11-05T16:47:43Z */
 #ifndef _PIC32CMGC00_FCW_INSTANCE_
 #define _PIC32CMGC00_FCW_INSTANCE_
 
@@ -33,7 +33,6 @@
 #define FCW_BFM_ADDR_BASE                        (0x08000000) /* -- */
 #define FCW_CFM_ADDR_BASE                        (0x0A000000) /* -- */
 #define FCW_CTRLAPRIV_IMPLEMENTED                (1)        /* -- */
-#define FCW_HSM_PRESENT                          (0)        /* -- */
 #define FCW_INTFLAGSET_IMPLEMENTED               (1)        /* -- */
 #define FCW_NUM_DATA_SFR                         (4)        /* (PFM_DATA_MSB+1)/32 */
 #define FCW_PERIOD_MIN                           (75)       /* -- */

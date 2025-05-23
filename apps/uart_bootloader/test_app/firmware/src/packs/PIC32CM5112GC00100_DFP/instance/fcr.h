@@ -1,7 +1,7 @@
 /*
  * Instance header file for PIC32CM5112GC00100
  *
- * Copyright (c) 2024 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2025 Microchip Technology Inc. and its subsidiaries.
  *
  * SPDX-License-Identifier: Apache-2.0
  *
@@ -19,7 +19,7 @@
  *
  */
 
-/* file generated from device description file (ATDF) version 2024-07-26T17:56:39Z */
+/* file generated from device description file (ATDF) version 2024-11-05T16:47:43Z */
 #ifndef _PIC32CMGC00_FCR_INSTANCE_
 #define _PIC32CMGC00_FCR_INSTANCE_
 
@@ -46,7 +46,6 @@
 #define FCR_FUSES_DATA_CYCLES                    (4)        /* -- */
 #define FCR_FUSES_READY_CYCLES                   (2)        /* -- */
 #define FCR_HDATA_SIZE                           (32)       /* -- */
-#define FCR_HSM_PRESENT                          (0)        /* -- */
 #define FCR_INTFLAGSET_IMPLEMENTED               (1)        /* -- */
 #define FCR_NOT_FFF_VALUE                        (0xA5A5A5A5) /* -- */
 #define FCR_NUM_RR_SFR                           (1)        /* -- */

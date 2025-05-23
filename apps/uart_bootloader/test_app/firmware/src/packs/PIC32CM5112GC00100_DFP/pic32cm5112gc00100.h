@@ -1,7 +1,7 @@
 /*
  * Header file for PIC32CM5112GC00100
  *
- * Copyright (c) 2024 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2025 Microchip Technology Inc. and its subsidiaries.
  *
  * SPDX-License-Identifier: Apache-2.0
  *
@@ -19,7 +19,7 @@
  *
  */
 
-/* File generated from device description file (ATDF) version 2024-07-26T17:56:39Z */
+/* File generated from device description file (ATDF) version 2024-11-05T16:47:43Z */
 #ifndef _PIC32CM5112GC00100_H_
 #define _PIC32CM5112GC00100_H_
 
