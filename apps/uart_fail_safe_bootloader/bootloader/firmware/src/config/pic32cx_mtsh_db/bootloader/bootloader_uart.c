@@ -120,6 +120,10 @@ static bool     flash_data_ready    = false;
 static bool     uartBLActive        = false;
 
 
+/* Following MISRA-C rules are deviated in the below code block */
+/* MISRA C-2012 Rule 8.2 */
+/* MISRA C-2012 Rule 11.1 */
+/* MISRA C-2012 Rule 17.7 */
 
 typedef bool (*FLASH_ERASE_FPTR)(uint32_t address);
 
@@ -258,7 +262,7 @@ static void command_task(void)
 
             flash_data_ready = true;
 
-            //FLEXCOM0_USART_WriteByte(BL_RESP_OK);
+            FLEXCOM0_USART_WriteByte(BL_RESP_OK);
         }
         else
         {
@@ -313,7 +317,7 @@ static void command_task(void)
         }
 
         SEFC_BankSwap();
-        
+
         bootloader_TriggerReset();
     }
     else
@@ -370,8 +374,6 @@ static void flash_task(void)
         addr += PAGE_SIZE;
         write_idx += WORDS(PAGE_SIZE);
     }
-    
-    FLEXCOM0_USART_WriteByte(BL_RESP_OK);
 
 
 
@@ -405,3 +407,4 @@ void bootloader_UART_Tasks(void)
         }
     } while (uartBLActive);
 }
+/* MISRAC 2012 deviation block end */

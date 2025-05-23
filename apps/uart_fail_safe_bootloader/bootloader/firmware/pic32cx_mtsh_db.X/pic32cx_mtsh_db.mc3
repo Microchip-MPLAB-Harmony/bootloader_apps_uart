@@ -31,7 +31,7 @@
       </entry>
    </usedClasses>
    <usedLibraries class="java.util.ArrayList">
-      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.5.3"/>
+      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.5.5"/>
    </usedLibraries>
    <tokenMap class="java.util.TreeMap">
       <entry>
@@ -2553,7 +2553,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32cx_mtsh_db\bootloader\bootloader_common.h</file>
-         <hash>d42079950fc0977bf24d4044c3443d6ac6c662870fbe15373724fefdbf71edc4</hash>
+         <hash>e987e7f0c482b45d3604bfdba712009ced77d80c718cf5633ad150d4010f76e4</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32cx_mtsh_db\bootloader\bootloader_interrupt.h</file>
@@ -2561,7 +2561,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32cx_mtsh_db\bootloader\bootloader_uart.c</file>
-         <hash/>
+         <hash>d4485ecb66fbdd804e5bb60b9e6a6e7450e89910503a343ed5b16d4d2ac117c5</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32cx_mtsh_db\bootloader\bootloader_uart.h</file>
@@ -2569,7 +2569,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32cx_mtsh_db\btl.ld</file>
-         <hash>463d97a771e542702cf2993facd7f0a85761ddb21314a326a0ef679f6c21eac5</hash>
+         <hash>c51e9ee1618085a8ca8079858b80d59fd8a59f62f715440f06b1acccbe98ef0d</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32cx_mtsh_db\definitions.h</file>
@@ -2673,7 +2673,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32cx_mtsh_db\peripheral\sefc\plib_sefc_common.c</file>
-         <hash>766b9eb13c07428c2dafc6c41dcd600af07d25838a59c9ff607757de4d6b7c1a</hash>
+         <hash>0c27fb9a65f685636ea4c67725983303f364c576d7608fe4b36b4294e0e0a968</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32cx_mtsh_db\peripheral\sefc\plib_sefc_common.h</file>
@@ -2701,7 +2701,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32cx_mtsh_db\startup_xc32.c</file>
-         <hash>a407a14a8c1aff540dd4a4518809c63d5263da51ed543d81a1043a90ec78e8ff</hash>
+         <hash>f700e024c270d1eecb4afb966b37951c20d2218c68a41e416f87bd08d05976e7</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32cx_mtsh_db\toolchain_specifics.h</file>
@@ -2741,7 +2741,7 @@
       </entry>
       <entry>
          <file>..\src\packs\CMSIS\CMSIS\Core\Include\cmsis_version.h</file>
-         <hash>8cda7ac3ff6f0eb5e83c4fe613dd195151b24da54167f5c3c007e599a03f1edc</hash>
+         <hash>2de01ae2556a38eb82c389de23c701805ec63308cfbcf3f84cb12141589b0858</hash>
       </entry>
       <entry>
          <file>..\src\packs\CMSIS\CMSIS\Core\Include\core_cm4.h</file>

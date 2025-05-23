@@ -56,7 +56,7 @@
 // *****************************************************************************
 
 #define FLASH_START                             (0x01000000UL)
-#define FLASH_LENGTH                            (0x00100000UL)
+#define FLASH_LENGTH                            (0x200000UL)
 #define PAGE_SIZE                               (512UL)
 #define ERASE_BLOCK_SIZE                        (8192UL)
 #define PAGES_IN_ERASE_BLOCK                    (ERASE_BLOCK_SIZE / PAGE_SIZE)
