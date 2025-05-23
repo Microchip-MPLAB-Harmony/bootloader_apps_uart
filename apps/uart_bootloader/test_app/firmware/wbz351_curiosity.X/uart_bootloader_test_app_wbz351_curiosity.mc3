@@ -35,7 +35,7 @@
       </entry>
    </usedClasses>
    <usedLibraries class="java.util.ArrayList">
-      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.5.3"/>
+      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.5.5"/>
    </usedLibraries>
    <tokenMap class="java.util.TreeMap">
       <entry>
@@ -5404,7 +5404,7 @@
       </entry>
       <entry>
          <file>..\src\config\wbz351_curiosity\interrupts.c</file>
-         <hash>2fe480ef8dcf3a517244d4e0a52116d1133a620a91818a11404a6e0e483a0ae9</hash>
+         <hash>64dbc1c092216a9a45efc4985607fe1bbda882e4b1211129d57f726ec218a9d1</hash>
       </entry>
       <entry>
          <file>..\src\config\wbz351_curiosity\interrupts.h</file>
@@ -5416,7 +5416,7 @@
       </entry>
       <entry>
          <file>..\src\config\wbz351_curiosity\peripheral\clk\plib_clk.c</file>
-         <hash>927be44108b496803153a2609da7cc37fa1b9daee35b50b4e34178269cdf506b</hash>
+         <hash>a83134183589e5c5e5dff0a5b814fcb9bab4e532201b8da9944b3f1f54472a1d</hash>
       </entry>
       <entry>
          <file>..\src\config\wbz351_curiosity\peripheral\clk\plib_clk.h</file>
@@ -5532,7 +5532,7 @@
       </entry>
       <entry>
          <file>..\src\packs\CMSIS\CMSIS\Core\Include\cmsis_version.h</file>
-         <hash>8cda7ac3ff6f0eb5e83c4fe613dd195151b24da54167f5c3c007e599a03f1edc</hash>
+         <hash>2de01ae2556a38eb82c389de23c701805ec63308cfbcf3f84cb12141589b0858</hash>
       </entry>
       <entry>
          <file>..\src\packs\CMSIS\CMSIS\Core\Include\core_cm4.h</file>

@@ -127,8 +127,9 @@ void CLOCK_Initialize( void )
 
     // Set MISC[24]=0, CLKGEN_PLLRST = 0
     CFG_REGS->CFG_MISCSTAT  &= 0x00FFFFFFU;
-	// Setting CPU QoS and FC QoS to same priority
-	CFG_REGS->CFG_CFGPGQOS = (CFG_REGS->CFG_CFGPGQOS & ~(CFG_CFGPGQOS_FCQOS_Msk | CFG_CFGPGQOS_CPUQOS_Msk)) | ((0x03 << CFG_CFGPGQOS_FCQOS_Pos) | (0x03 << CFG_CFGPGQOS_CPUQOS_Pos));
+    // Setting CPU QoS and FC QoS to same priority
+        CFG_REGS->CFG_CFGPGQOS = (CFG_REGS->CFG_CFGPGQOS & ~(CFG_CFGPGQOS_FCQOS_Msk | CFG_CFGPGQOS_CPUQOS_Msk)) | ((0x03UL << CFG_CFGPGQOS_FCQOS_Pos) | (0x03UL << CFG_CFGPGQOS_CPUQOS_Pos));
+
     //programming delay for pll lock - 500 us
     //32 us steps - check pll spec for final value
     BTZBSYS_REGS->BTZBSYS_SUBSYS_CNTRL_REG3 = ((BTZBSYS_REGS->BTZBSYS_SUBSYS_CNTRL_REG3 & ~BTZBSYS_SUBSYS_CNTRL_REG3_subsys_pll_ready_delay_Msk )
