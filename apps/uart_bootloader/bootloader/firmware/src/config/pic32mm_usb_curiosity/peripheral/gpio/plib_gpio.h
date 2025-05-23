@@ -69,6 +69,7 @@
 #define SWITCH_OutputEnable()      (TRISBCLR = (1<<9))
 #define SWITCH_InputEnable()       (TRISBSET = (1<<9))
 #define SWITCH_Get()               ((PORTB >> 9) & 0x1)
+#define SWITCH_GetLatch()          ((LATB >> 9) & 0x1)
 #define SWITCH_PIN                  GPIO_PIN_RB9
 
 
