@@ -1,7 +1,7 @@
 /*
  * Instance header file for ATSAMRH71F20C
  *
- * Copyright (c) 2022 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2023 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,24 +20,24 @@
  *
  */
 
-/* file generated from device description version 2022-01-06T10:24:17Z */
+/* file generated from device description version 2022-06-28T12:38:50Z */
 #ifndef _SAMRH71_NMIC_INSTANCE_
 #define _SAMRH71_NMIC_INSTANCE_
 
 
 /* ========== Instance Parameter definitions for NMIC peripheral ========== */
-#define NMIC_INSTANCE_ID                         (9)        
 #define NMIC_CLOCK_ID                            (9)        
-#define NMIC_NUM_NMIC_SOURCE                     (9)        
-#define NMIC_SOURCE_NMI                          (0)        /* External Pin NMI */
+#define NMIC_INSTANCE_ID                         (9)        
+#define NMIC_READ_ONLY_GLFEN                     (0)        /* NMIC Glitch filter is read only */
 #define NMIC_SOURCE_CPU_FAIL                     (1)        /* Wrong CPU Frequency Monitor Detection */
+#define NMIC_SOURCE_NMI                          (0)        /* External Pin NMI */
+#define NMIC_SOURCE_NOFIX_FLEXRAM                (8)        /* FlexRAM non fixable error detection */
+#define NMIC_SOURCE_NOFIX_HEFC                   (7)        /* HEFC non fixable error detection */
+#define NMIC_SOURCE_NOFIX_HEMC                   (6)        /* HEMC non fixable error detection */
+#define NMIC_SOURCE_NOFIX_TCM                    (5)        /* TCM non fixable error Detection */
+#define NMIC_SOURCE_VDDCORE_FAIL                 (4)        /* VDDCORE Failure Detection */
 #define NMIC_SOURCE_XTAL_12M_FAIL                (2)        /* Fast XTAL Clock Failure Detection */
 #define NMIC_SOURCE_XTAL_32K_FAIL                (3)        /* Slow XTAL 32KHZ Clock Failure Detection */
-#define NMIC_SOURCE_VDDCORE_FAIL                 (4)        /* VDDCORE Failure Detection */
-#define NMIC_SOURCE_NOFIX_TCM                    (5)        /* TCM non fixable error Detection */
-#define NMIC_SOURCE_NOFIX_HEMC                   (6)        /* HEMC non fixable error detection */
-#define NMIC_SOURCE_NOFIX_HEFC                   (7)        /* HEFC non fixable error detection */
-#define NMIC_SOURCE_NOFIX_FLEXRAM                (8)        /* FlexRAM non fixable error detection */
-#define NMIC_READ_ONLY_GLFEN                     (0)        /* NMIC Glitch filter is read only */
+#define NMIC_NUM_NMIC_SOURCE                     (9)        
 
 #endif /* _SAMRH71_NMIC_INSTANCE_ */

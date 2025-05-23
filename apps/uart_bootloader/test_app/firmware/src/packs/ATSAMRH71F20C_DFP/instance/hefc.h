@@ -1,7 +1,7 @@
 /*
  * Instance header file for ATSAMRH71F20C
  *
- * Copyright (c) 2022 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2023 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,16 +20,16 @@
  *
  */
 
-/* file generated from device description version 2022-01-06T10:24:17Z */
+/* file generated from device description version 2022-06-28T12:38:50Z */
 #ifndef _SAMRH71_HEFC_INSTANCE_
 #define _SAMRH71_HEFC_INSTANCE_
 
 
 /* ========== Instance Parameter definitions for HEFC peripheral ========== */
-#define HEFC_FLASH_SIZE                          (131072)   
-#define HEFC_PAGE_SIZE                           (256)      
-#define HEFC_INSTANCE_ID                         (50)       
 #define HEFC_CLOCK_ID                            (50)       
+#define HEFC_FLASH_SIZE                          (131072)   
+#define HEFC_INSTANCE_ID                         (50)       
 #define HEFC_PAGES_PR_REGION                     (512)      
+#define HEFC_PAGE_SIZE                           (256)      
 
 #endif /* _SAMRH71_HEFC_INSTANCE_ */
