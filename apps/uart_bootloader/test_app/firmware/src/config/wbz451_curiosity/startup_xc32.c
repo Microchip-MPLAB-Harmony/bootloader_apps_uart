@@ -85,6 +85,8 @@ __STATIC_INLINE void __attribute__((optimize("-O1"))) CMCC_Configure(void)
     CMCC_REGS->CMCC_CTRL = (CMCC_CTRL_CEN_Msk);
 }
 
+
+
 #if (__ARM_FP==14) || (__ARM_FP==4)
 
 /* Enable FPU */

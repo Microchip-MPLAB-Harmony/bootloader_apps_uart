@@ -86,7 +86,7 @@ typedef struct
     uintptr_t Context;
 }nvmCallbackObjType;
 
-volatile static nvmCallbackObjType nvmCallbackObj;
+static volatile nvmCallbackObjType nvmCallbackObj;
 /* ************************************************************************** */
 /* ************************************************************************** */
 // Section: Local Functions                                                   */
