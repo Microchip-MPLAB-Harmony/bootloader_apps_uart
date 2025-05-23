@@ -1,4 +1,4 @@
-<config configName="sam_g55_xpro" projectName="uart_bootloader_sam_g55_xpro" configVersion="1.1" device="ATSAMG55J19" deviceLibraryClass="com.microchip.mcc.harmony.Harmony3Library" coreVersion="5.6.1">
+<config configName="sam_g55_xpro" projectName="uart_bootloader_sam_g55_xpro" configVersion="1.1" device="ATSAMG55J19" deviceLibraryClass="com.microchip.mcc.harmony.Harmony3Library" coreVersion="5.7.1">
    <usedPackages class="java.util.ArrayList">
       <package packageName="bootloader" version="" contentType="HARMONY">
          <modules class="java.util.ArrayList"/>
@@ -37,7 +37,7 @@
       </entry>
    </usedClasses>
    <usedLibraries class="java.util.ArrayList">
-      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.4.1"/>
+      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.5.5"/>
    </usedLibraries>
    <tokenMap class="java.util.TreeMap">
       <entry>
@@ -1835,7 +1835,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_g55_xpro\bootloader\bootloader_common.h</file>
-         <hash>0ffbe71ac04d62544dcdb553581a6980c795bf57f05b370880866ae6495e6087</hash>
+         <hash>94f9620230e6efddbeeb39c45a4259c025166ca6b4cea5a304f67e5bc3b725b1</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_g55_xpro\bootloader\bootloader_interrupt.h</file>
@@ -1843,7 +1843,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_g55_xpro\bootloader\bootloader_uart.c</file>
-         <hash>e53de9861284247d00caf4793a7b1c453948b562a5fc01febecb018d204d2ecf</hash>
+         <hash>c1786ec660108ac8dabf5903646b217534a97de13ce6e995d67e98a67b36b031</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_g55_xpro\bootloader\bootloader_uart.h</file>
@@ -1851,15 +1851,15 @@
       </entry>
       <entry>
          <file>..\src\config\sam_g55_xpro\btl.ld</file>
-         <hash>4402ea2e640b378d430054016a25a3d278d2d964b6b76d9ce302ed17df457ec7</hash>
+         <hash>809401e652c7e03bec8d1ac0a32101b35dc46541410b46d02875451e2af04115</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_g55_xpro\definitions.h</file>
-         <hash>544634a553fa2bf16d4ec4d314f0bd63cb170e8b75fba0dcc94b8556d65de2c7</hash>
+         <hash>af0b11a582f38162a2d9017fab0cf64a4e7ed52e270da2a9e27b94aa381af2d9</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_g55_xpro\device.h</file>
-         <hash>ac7c9017a408c815efb99446859d9ea2bf71ed5f4946c10100367105f4e747dd</hash>
+         <hash>21966390fb35665dd6bdebaed2947df8c51b384ab2cc0b41c0e041574ce7210a</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_g55_xpro\device_cache.h</file>
@@ -1871,7 +1871,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_g55_xpro\initialization.c</file>
-         <hash>73869391a3bf6ad222930c4f7c828aed8af2c72854caffd69f60359e32a14198</hash>
+         <hash>d3e66b5ee73de1401589e6c27882603bb39b052cb0e4e3fda17f697998d8b815</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_g55_xpro\libc_syscalls.c</file>
@@ -1895,7 +1895,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_g55_xpro\peripheral\efc\plib_efc.c</file>
-         <hash>2f2d728c6cdb0a721f95ab9cc309e15583dde21b7b5358768db9150968e5d651</hash>
+         <hash>71056106783a75e30a934e6f3d1b1eeec140e870fa69214febadceeed5690d92</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_g55_xpro\peripheral\efc\plib_efc.h</file>
@@ -1903,7 +1903,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_g55_xpro\peripheral\flexcom\usart\plib_flexcom7_usart.c</file>
-         <hash>fd23119b8f2a7b42f13ff28351bf200ebc3e1a30b1fc8d708646abc22f2dc242</hash>
+         <hash>5ba2afc4ff67b7c60dfd7d8e82ddd23c0cff059c2c5922ae48937644a8097ba9</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_g55_xpro\peripheral\flexcom\usart\plib_flexcom7_usart.h</file>
@@ -1915,11 +1915,11 @@
       </entry>
       <entry>
          <file>..\src\config\sam_g55_xpro\peripheral\nvic\plib_nvic.c</file>
-         <hash>3d89f9371ce4e519ebca69b0bda48169332067a95f4dbfdb90c6131ced1470c4</hash>
+         <hash>dd717044dd36bdaf83a852c95160c3e8184a8cd8eb45179b6fa65d159c1e7306</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_g55_xpro\peripheral\nvic\plib_nvic.h</file>
-         <hash>81e813a093101d546799e00723cbf7245e2d18471fa51c8d130c5809cecca03e</hash>
+         <hash>9936ac782115af41003255283fa2f603f4ff2212d16275b7c80ea8d067a9e208</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_g55_xpro\peripheral\pio\plib_pio.c</file>
@@ -1943,7 +1943,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_g55_xpro\startup_xc32.c</file>
-         <hash>d61c5a7becdd58e76df4fa51b964845db4d699198c0b65c603e2f283d59d793f</hash>
+         <hash>f700e024c270d1eecb4afb966b37951c20d2218c68a41e416f87bd08d05976e7</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_g55_xpro\toolchain_specifics.h</file>
@@ -1955,343 +1955,343 @@
       </entry>
       <entry>
          <file>..\src\packs\ATSAMG55J19_DFP\component\adc.h</file>
-         <hash>78f6df50de8d2453553362631f8323988d2c9771ec5d7dbcc0561ec5f283e94b</hash>
+         <hash>8ce442bf5155820fcf8d7bcb230877ed331f20818709fb1b1e6802c863896643</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMG55J19_DFP\component\chipid.h</file>
-         <hash>141b50b48196d6f5a6246791138c497f565af12c27f6a2dee678ccc7443f1852</hash>
+         <hash>99642cc5bd1fafc5b7ea3c8960609a33717d6168309d1f9406a21e273999d1f5</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMG55J19_DFP\component\cmcc.h</file>
-         <hash>72bfe5119a79463a900df98979f37f370e971be4d4041a30e61d1dd411abff6a</hash>
+         <hash>087593fcad8f51a416504fa80b60422caf2c7caf277591f9b568603c4fa25a35</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMG55J19_DFP\component\crccu.h</file>
-         <hash>9139aa1ac7ea9ab5b7095940d29ba3d115a81449d66235bbc20c237b057f9faf</hash>
+         <hash>311ec11dc17008a80af103c5d57b7c571a720447f3f780bb2637a769d251334b</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMG55J19_DFP\component\efc.h</file>
-         <hash>806d2cf6104d86601ff7501554667ab24e8e9c1a1c2e9788791cdc158b6b5fe7</hash>
+         <hash>b36a1e08f5064337e624a34fba9fd4e9e3c42ba2862751088f730cc3c50c0d94</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMG55J19_DFP\component\flexcom.h</file>
-         <hash>16b626085bcb5031736880d91d8faeaf8f0948b40bcde32fa9a4343ffd99fef1</hash>
+         <hash>d0a991e65d20ef7a63d5019d0d03fda8d16da89b818c892f6b57eb0d5efa6e8a</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMG55J19_DFP\component\fuses.h</file>
-         <hash>23ea29eef33b40a549333df87b73a0e28a1c9558591a3822ec055e6a97ec6222</hash>
+         <hash>3ddd6ad2ae5bcf24334a1792f3e4f60289be466c34b3286faf283a74df0de3b1</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMG55J19_DFP\component\gpbr.h</file>
-         <hash>c22a695ee4b2f2f915064b29c17d2727f99f1f8d3f04aef8be63b439b90cae71</hash>
+         <hash>b01d2de2ddf1bba4d7d036653531a73386538f27ec2c8383c710f09dd662cf22</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMG55J19_DFP\component\i2sc.h</file>
-         <hash>88dcb69510d08d0e20e8a9c50d787f0543c9f80f02a9b3cdaa19e74c27ee13c1</hash>
+         <hash>e89e1bd7528415ea5c36f4aa7800f1debd3cf6dce2ad681ab7ea7b841eec5ad2</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMG55J19_DFP\component\matrix.h</file>
-         <hash>9167b826bc77b28b6c7d60a6097a81888b8cb6c2964436b09156dab0aa75b523</hash>
+         <hash>62c8f3f2328852aa4b390e0af6b9cccd8bd95b24119480fc40c047cf21e3d3ea</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMG55J19_DFP\component\mem2mem.h</file>
-         <hash>3d974291ff2b7f90bb3a7ab781e6d799f74f37115e638a9a05219b123c3e9857</hash>
+         <hash>64595bfbcf4f9e2d50aeff96758059fdcac8871ae2d7a363a10580676ea7fb19</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMG55J19_DFP\component\pdc.h</file>
-         <hash>507f645ad688578bcf030a4fca542f4c0e8a10c8d8a4d83de98475d336c0c85d</hash>
+         <hash>1f29f9cfed26dfa22072f2f9f2cbb1ae87bdd2dc42f625a0241f7dbd68e95ec4</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMG55J19_DFP\component\pdmic.h</file>
-         <hash>5502d3ae06e4d12cad20087286534f25c76885809bbf96a7e5d4400de2fcf268</hash>
+         <hash>c7ad42bcd7043b782f67d8f521bd7ad5f11369425f571525ead275115d159243</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMG55J19_DFP\component\pio.h</file>
-         <hash>34cf536c0c8a45d5800813466328878b079a0bdb162d2cc045fd1dfcee2f0bf7</hash>
+         <hash>ef1582911dc7f750820627b532cc7f4a985fd994c596d8014e80cdaea0baab3b</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMG55J19_DFP\component\pmc.h</file>
-         <hash>79a8fc2936b3bce0564b19bb99722217f6c3288caeeb96f9449ec99fb3709796</hash>
+         <hash>8d94c44132f80642cfd8fc172bb1fbf14644420f8f866700f06176a9f830ac47</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMG55J19_DFP\component\rstc.h</file>
-         <hash>9dbb3945f993eed1114708efdff47cb0cc0e0ec7e645a007cbb1ada87814a207</hash>
+         <hash>bb6aa60081ee39f9382744d0337a611367125e31eac83e846d1fd49e4fb38f69</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMG55J19_DFP\component\rtc.h</file>
-         <hash>7f8096e32ebfa149ca4ebc3f49ef1a743ae3e91d2072ee04318ac2b1514b00df</hash>
+         <hash>5003cdc0e95d726821dc3269c2f1a7eaed5a95bf9c8818d164e61b06ce429d4d</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMG55J19_DFP\component\rtt.h</file>
-         <hash>6c83a297252f4e935a29e5bfaa1bef42cc58e43a3af07b4dc85627ad9f2dd919</hash>
+         <hash>0cc8b1a5f8eecd51887128e6b01783107c2785a35cb6f5d0b7499791db43521d</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMG55J19_DFP\component\spi.h</file>
-         <hash>db342fea7f8a574d46ebe5391dc72028c942f82770dffc2a0a8d9ee56db3d507</hash>
+         <hash>4717dde9b6146e331d1a486c8e4e578344f82e42fe720c552c4f6810a2f4da4e</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMG55J19_DFP\component\supc.h</file>
-         <hash>ed2f6cb3859c0332015a71ff36120a29ae36215722de1b1a62bdc797b099b827</hash>
+         <hash>f566d95e7daa628f5a8d1db9497136d53b1b983d741b451015ecaca6e73747b8</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMG55J19_DFP\component\tc.h</file>
-         <hash>b73c9f182fac166d9a894cd48eb64d3193e501b25b5b51bd5bdde6f11cfd65b6</hash>
+         <hash>615436e2b91ba0673f8df13063d636a5eccdfa4ed0120724587bc91bbab6e3e2</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMG55J19_DFP\component\twi.h</file>
-         <hash>7cfe435b482987e8f941d73b63482c06a20aa645a63c954d5de08b3e30582d8b</hash>
+         <hash>f689eb9c698354101ce4af352d92c73524d749332e58213ef5ec51eeff0a2b4a</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMG55J19_DFP\component\udp.h</file>
-         <hash>a46aab159e9d5fef335c0515bf0f906ee95c9f528fe652d6e45d8da0241dd4f8</hash>
+         <hash>6b4a915add776624e3ab2c6604c815916777a546082d2351a7db346d18d8428a</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMG55J19_DFP\component\uhp.h</file>
-         <hash>a3b9c481ba3c3d541dca55fd61b37e09119ac64fd15c686a705f208cddfdda6d</hash>
+         <hash>e56649540d8062454720ae754b0448edfb20564c64021900d8eb94efa8a87878</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMG55J19_DFP\component\usart.h</file>
-         <hash>425d13c90ee99e2f7519e5260988ca6e223ead950f30a82f8c8193d0ec16be55</hash>
+         <hash>b4df3ae20ea84b349567dba7a974ab7a6d378b6721366d53aa52ff2cbab6715d</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMG55J19_DFP\component\wdt.h</file>
-         <hash>e4b00ff194d574f4b8c9578fdb6a1780c05aaa3090207640d271c4410d7c5fe3</hash>
+         <hash>442d0352ebd339ce0267508cb257661ef00b7f28fb308a49766ffbc31d9f007f</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMG55J19_DFP\instance\adc.h</file>
-         <hash>638cb0cb8abd548792dac4c43350deaf6d9e21632472d4f413ffb81a031326a4</hash>
+         <hash>a2d04da6a5112580da6b17a83019de3206949c21ff62249b51c21de230939206</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMG55J19_DFP\instance\chipid.h</file>
-         <hash>9cfd799072718d95bec1cdfea3272159682a8d2b0005f97ef03570d2d70ca534</hash>
+         <hash>f283c5fc24837c8ab1043ecdac44d36444bf1e483a67bad0e6db04c8d6afc0b5</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMG55J19_DFP\instance\cmcc.h</file>
-         <hash>0032ed0cc9d489eb6cdec7f182293db32fa1d5e6f3669e99ac8297054482bfd8</hash>
+         <hash>0f56ed8fc2d108a6d6c6f7d6d857085a9eff494e97fa4dd3497d8d78c269a9bd</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMG55J19_DFP\instance\crccu.h</file>
-         <hash>5288da35157d9bbb6c60883c6754a8e5f4e33b60872f39498802cbb41ca2f08d</hash>
+         <hash>c8002cca88709df0576b1b1f8213f3114da29f1427d8ad5e3992f8fdc929b547</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMG55J19_DFP\instance\efc.h</file>
-         <hash>0d5a3e2712dc671c7644973c8c30cfa44294432352537578c96c07e8ccbd52d4</hash>
+         <hash>a90e4ec3396259649aae045567b4a52d2275c64b2208da87fe0cfc9f65e0d538</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMG55J19_DFP\instance\flexcom0.h</file>
-         <hash>a96f8821c9bccf77c1da9c56388c069ec6a76998ac6c4cdca217192f4eb3955c</hash>
+         <hash>4130eca2f9039c3cd421c848fcb388700406bfb9d902bc0c8be27b72eb52458e</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMG55J19_DFP\instance\flexcom1.h</file>
-         <hash>d66a97091468f2bd575967f3250250dbaf79eb962db6489d0b814fd734dd2d1f</hash>
+         <hash>23a3a9aec9c44419e49f64734c09f38f0abf050c935521023e5cc76d970e8cda</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMG55J19_DFP\instance\flexcom2.h</file>
-         <hash>43229a5c9408432ba194269d0ab66fa6373c18ae27f880e88550e335874a1258</hash>
+         <hash>da95156fc66b0ec86e2905d60c343df99354bc9509e7fd1194789ec9ff2c24a7</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMG55J19_DFP\instance\flexcom3.h</file>
-         <hash>a452dce72da3be2db7e14b9d755167babc1f1df0652db404f1ca709d0e059f66</hash>
+         <hash>59708c741c86f10268b862c80f4776373cac185e8ac59f39baedf941813d5cb9</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMG55J19_DFP\instance\flexcom4.h</file>
-         <hash>c0850ea3cb016d14ce7e83168c5d85d58265dde9abb6ac8fb628366f522a2183</hash>
+         <hash>6ce07191a7835c849a360a3985dfb393d59d3dd8fe9437503e59ab2f3897ac81</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMG55J19_DFP\instance\flexcom5.h</file>
-         <hash>05da5f9f92ff9a146ac196d48b4adfd0ede21371ee6b493d41e318785e969dfa</hash>
+         <hash>483b653890b5767244bfa6d930daa8c108b301dfd685b552e668d85121c75b1e</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMG55J19_DFP\instance\flexcom6.h</file>
-         <hash>e85268456bf7168e200225613aa10238b358b6263d0799fdbe632781b9356082</hash>
+         <hash>dea8742f3c7c04551c1a461a272aebdbeeb78da9b51969c3799d5e7cc296c56e</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMG55J19_DFP\instance\flexcom7.h</file>
-         <hash>1234bff0bf88ebfab664f719d2decd67c8a23e0f480332a96b8d2c703d134564</hash>
+         <hash>fc4756268ea6db7faa774b81586894cc5bfddd85016c8782e14eaa38846f91d2</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMG55J19_DFP\instance\fuses.h</file>
-         <hash>870362d811190f86a92608d0b47496fc9a1be9d2b5c87eb1a1842ca36b765b3d</hash>
+         <hash>341c952fb955d184e2a97455257e0153a0c9ac3a997cd00927a5c21075b2ef98</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMG55J19_DFP\instance\gpbr.h</file>
-         <hash>cdf33f810b458f4a48bf63d420bc4674ec7b0695490cdde3ce351561f995b552</hash>
+         <hash>350ad3c3d64996ca96acddef747c3e74065d00874fd6e9a8136a43b77ad95d26</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMG55J19_DFP\instance\i2sc0.h</file>
-         <hash>60ab88254d5f76aa907225beea1d805053a37b52d672580dd866772fc7a7733a</hash>
+         <hash>7b7530f02d0649febd5de87be8a491c343323bf8022459bdecdb0845b6113142</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMG55J19_DFP\instance\i2sc1.h</file>
-         <hash>83a2cb671a1b9fb761d6a1637f05ef0564ad66b6f5edbf0e6c7056cd4757dc26</hash>
+         <hash>e3e2fa1f7c4f66fc65aa29db7076da56e242e8a876b52c3e8d2f438ca8698581</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMG55J19_DFP\instance\matrix.h</file>
-         <hash>d1e2c4cc59cec5ed7b2cc3ad61474f597c95e4cfb9440838baa8960e2a9382ac</hash>
+         <hash>97c86a193c418c41a49e2b9b96946fa0f51e40cf2559494cbba138cb29123f5b</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMG55J19_DFP\instance\mem2mem.h</file>
-         <hash>dcaf140c2147ab867319207b5aac02f87311eb8bca921b83fae335dd8278b29b</hash>
+         <hash>bd34528dc089aa05e863a7c02d43652566f94d648ae78718b42651b405736bb2</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMG55J19_DFP\instance\pdmic0.h</file>
-         <hash>830f4d9555ab83ea22d3b1e50ca2bed3064e0dd5d624e435dba2e10b50b30603</hash>
+         <hash>f420314d836fe9ad68411d2010fae19fc52227f450f3f8ad75676d9aa7125b35</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMG55J19_DFP\instance\pdmic1.h</file>
-         <hash>a6c7716fbd00f6ee944de55d94dcb3c29c7ba8593ee9b7e7fef25610b7180dae</hash>
+         <hash>1c7e8b4363e6bac7ff434f5d20a7ceee620ef68a3427bdd625991a43e96899ee</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMG55J19_DFP\instance\pioa.h</file>
-         <hash>9ca0b3ecc8174ae655dd04e27625efba8f68da7d1bb682f281367fc38b1ba424</hash>
+         <hash>87ba0e554535eff2e55aea5e0aff68e7355d1d72c64099174ed132a961fd7b17</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMG55J19_DFP\instance\piob.h</file>
-         <hash>634ef7fec56f1dffaa12a09778e46da2f4cf561e9e97ae3ca55786fcaac98ac2</hash>
+         <hash>427a6619f85361cf42e37398998e2681e4487860fdcd41f2aace95eccd7c82f1</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMG55J19_DFP\instance\pmc.h</file>
-         <hash>82619b63fb342233ccbbba48e23e360bb8ac3555a6bd806b1d3706c5defa9bb6</hash>
+         <hash>7b4c7cafe218363871950d84e96c4fa55aefce61fb5e111e865024150beb721e</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMG55J19_DFP\instance\rstc.h</file>
-         <hash>e0ab3156ef2ae91e8cf92f5338f883baf1009a2436c8721d0a6eb26adeb2f10f</hash>
+         <hash>31c7dbb58530765a8ea00ce0f1bf977610ffda047e3b0b316237c39c3817facd</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMG55J19_DFP\instance\rtc.h</file>
-         <hash>0ce54cb3f02af42f79f4b3fd652fce7001651a9dcd9a57de66ed263b2cf8fd9c</hash>
+         <hash>99fe91a63940917db3535024a36d29420627a97f8c01a35ce8839bab41300455</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMG55J19_DFP\instance\rtt.h</file>
-         <hash>9d10d4b13c68e1f5724847ae9240d8baa60988fe0bbfe177b708ad8c52ce481c</hash>
+         <hash>1f795a2b08b8ead3e09a63c2338eb4d4efbee14f2547c2adc3b9abd9081f6cbf</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMG55J19_DFP\instance\spi0.h</file>
-         <hash>b01282f402188c434515bd570ec56c0cd85f54aa4112110bcf860acea0116ec0</hash>
+         <hash>70e943dbfa994e1827fdcccc0e11ec2ac1ea70c9280c57d665fa040a12438081</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMG55J19_DFP\instance\spi1.h</file>
-         <hash>13ca68e4638014ef3dabedd4149225eb8b6c0caa25c6f48ba60a7307be224c49</hash>
+         <hash>6c63093238a7f9bc293d481ac01e98f484558cb50482183b5ad24bab6578445f</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMG55J19_DFP\instance\spi2.h</file>
-         <hash>8f5baf2df55ae7f6674c03a7ec6b5272251996fd26025fa0b7e2eb59e18683d9</hash>
+         <hash>54da5e319730b7a8af80fecadfb829e52e17e5d49c13a36df24a98a8c775e979</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMG55J19_DFP\instance\spi3.h</file>
-         <hash>b80f5d42679a17d64ddea426bf2ef51a2377a3bebf232bad68ca74415b65dd8c</hash>
+         <hash>0378a43b85bd0ce967bae2a7615281f28e1771e988be1b524c5e5a0a81ebb9be</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMG55J19_DFP\instance\spi4.h</file>
-         <hash>8573f3c0ac4b6ae8821e3786fb03b2a7f0b956e5589da518fa2f78155e30e80f</hash>
+         <hash>c7d20d3a760f2e9c5ab39fe2667bb89aa9372b24280cc0e2dca08eebfe68ee43</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMG55J19_DFP\instance\spi5.h</file>
-         <hash>92efa47f598d615952e82d66f517abad02ed4101a3008c29d137a304938f8a89</hash>
+         <hash>9738fab3bec1a6d4403617b0f366c44b1832e188cfb29a704f3067207bbab5bc</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMG55J19_DFP\instance\spi6.h</file>
-         <hash>75679176b7ba938b772926a90458bf6b0f2df1fe4e5f0d330e2c2e93b1f26b7a</hash>
+         <hash>aed481adcf165bea2b381d483ea336be82a49c1658da86298d27e85d458e5558</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMG55J19_DFP\instance\spi7.h</file>
-         <hash>7f404ae769851d481c06106f21d2d9bbb828f0a827c30efd7d979ea57ce20a13</hash>
+         <hash>e7b311b5c6ab9099f836673552c63a31aa06c382b986999ffa82b15742351d94</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMG55J19_DFP\instance\supc.h</file>
-         <hash>9020c57fe43918a539bdeaa26e21e017453e3577e57e20bcaf1c59230e7a5d2d</hash>
+         <hash>d540de65802afc6cdc6fafee9eea3aba77d54e148aaf95e06d2e371c568915db</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMG55J19_DFP\instance\tc0.h</file>
-         <hash>68ff3b796ee92e6f37a3850f56eba6fabcf6abfb41139b19bc56792395477f22</hash>
+         <hash>911cd623751e9f2523f30c9bd7a32ad84b00f05ea5f9961f47d94e83d161d42a</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMG55J19_DFP\instance\tc1.h</file>
-         <hash>4cea0b64db538e28830da136f5dcf34f9f362d149a6cb3a0eb13e10a5a188abb</hash>
+         <hash>ca4f9c22135ca6681b953603817fcf5fc823a0b87f2ec5c8d5eac537bceb0f78</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMG55J19_DFP\instance\twi0.h</file>
-         <hash>c1ac9f83c04f392155011f4acd6949b0617e8ba9d6c29b8b4c9db9afcca5b815</hash>
+         <hash>f1fe6648677387583deb22b23aa6acfbb5c60b178ef119359562de89d99ce1ad</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMG55J19_DFP\instance\twi1.h</file>
-         <hash>1e7ba3b043499de0d3ffbf39e44120d29ba67bc8dbaeacffa30fa126cb775ea1</hash>
+         <hash>7ddfe8ce346e205d40af6e94365cde30b71c20d153e6c3c5394b906faad8c399</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMG55J19_DFP\instance\twi2.h</file>
-         <hash>adf0b366c1e9016830e5900fb0e0921b171e8abd544552884705cf9e15b85600</hash>
+         <hash>d9195bf4602cbb9faec1f4c782c76dea748c81fac90cf8992b4c382824a49b56</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMG55J19_DFP\instance\twi3.h</file>
-         <hash>e4c25e34346de2b19303e82576cdf757a685383972e8fad0f7e222a976ca2b22</hash>
+         <hash>7ce7eccd34d77394cc1f98a540775b6276253b089c442da261e128cbe16f6918</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMG55J19_DFP\instance\twi4.h</file>
-         <hash>2b63bc939a8f367b85b6b5f013e090365570693e33cd4afe970d2795542572f7</hash>
+         <hash>5e247f43c74a97b0c637561a5f195b31caebf8a081dfd6bb44b649b95c231adc</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMG55J19_DFP\instance\twi5.h</file>
-         <hash>2026f58e98a8f807b7daf0793e51bc75ee46f94212c89a0e78d4a227b800927a</hash>
+         <hash>80fe5dd292c338ba3e32d70851e646402ce5ec4ab0266a541f5d848089b758fe</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMG55J19_DFP\instance\twi6.h</file>
-         <hash>95444dcd89e712e25a9bb77701c9073b832cd0ac9ad14f007591af1e045c33a8</hash>
+         <hash>91f4f44ab842f4ea266343ce0931c71aff93c596f505feb5f081853e9968c594</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMG55J19_DFP\instance\twi7.h</file>
-         <hash>312c3362ea44a98343932ef05fab5b9befc27043f499af90a136f80f5de0069e</hash>
+         <hash>c821f6f2db4ea68915982923bb2c6a01c35d6d504d6b2b0786c307fac82a0293</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMG55J19_DFP\instance\udp.h</file>
-         <hash>365ea28f837260ca060c45240a9122ed9dd319105e387c586492d6d39b05e303</hash>
+         <hash>b305e265767c5630c8682b23a8b5d048d01d6333706a12717406f9c7ce32776a</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMG55J19_DFP\instance\uhp.h</file>
-         <hash>d6b644f6391b6bf61e0dde97f2661099215c41411285f658775f7ebdc3d2d5c3</hash>
+         <hash>5258753a56a994a73d690fbb972f50ce3d3bac5662dfc5a4c1c13dd2a355dbaf</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMG55J19_DFP\instance\usart0.h</file>
-         <hash>f54a76b61921d3804bb29e87bb91d34775bfdc7738f21ba6a1de894410794fd7</hash>
+         <hash>cfe33940c3d8a973873bb32a4bf6eda69cd90d768854d2404809ae83e6ac5942</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMG55J19_DFP\instance\usart1.h</file>
-         <hash>b09000d5cf99af7da03a00ee2d30caf5dbba3099a098db90a79b65bd38115a0f</hash>
+         <hash>244d7c0619a7a74a58f8e8be7db6d7559674b4440ffd3f54934974ad4b3fafd6</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMG55J19_DFP\instance\usart2.h</file>
-         <hash>12a6f84e382cc7cd811bfdb5c8b1874b20b8d7cd3666d15cabcecc195736ae9b</hash>
+         <hash>725046a3410bc10772a3255919ab0231818248839dfe00885923661b0ac36d09</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMG55J19_DFP\instance\usart3.h</file>
-         <hash>853741c2746fc39ce185772397f084ceb7dffa5e826dc2035a658d4681676451</hash>
+         <hash>a65d6550c011d5743142b0497a07846bd37e58802fff85ba5143624c55c8dc3f</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMG55J19_DFP\instance\usart4.h</file>
-         <hash>8f644acced085a93f6fe191f738aaa953d529fdebaa153ca4cd224a7680a53c8</hash>
+         <hash>77b83f9580e644f1f2165563981d70f35c636af734bfb4f10e109b476fc5c622</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMG55J19_DFP\instance\usart5.h</file>
-         <hash>e66903de67674f458f3eb2bcfd5c245570ba067a2f02961d19a907c294e7b1b2</hash>
+         <hash>8aad176fb395fe1143b574772ecc3297f444a0a6a8a8de3aff29f30a45ea1529</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMG55J19_DFP\instance\usart6.h</file>
-         <hash>e985edf11e4e6a53d1bfb8f05f69ad89e3ba9767608a31bc5322b7b61fdc7fe5</hash>
+         <hash>cff85e250bd6ae95030c1623f8c134164d23157a71dcb37394eda5c5944a1a1a</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMG55J19_DFP\instance\usart7.h</file>
-         <hash>687733c2a3517b90f699c83f765bc56fe10813b729d6312bf79666045e70e14f</hash>
+         <hash>b128dcc1c9516c43bae49b16278edfff25bf832e8fb0baed0d51b2b6715d98ba</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMG55J19_DFP\instance\wdt.h</file>
-         <hash>8dec197ed9040fbe4456733b949699ab770e5984b3b5aafc923c4a590b91ac1f</hash>
+         <hash>7e81f3c917a6c9d193d606b3f5a44a628876e4ca6d550c18974057a7b1379198</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMG55J19_DFP\pio\samg55j19.h</file>
-         <hash>773ae6f30eb0f3cb3fde273e0b3cc4051ec34a481780eec6ced178cffc8c182f</hash>
+         <hash>d55fd57c9cd1852ee2697290f05f0c6b37648d317f042d1ddf5b7835954e290b</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMG55J19_DFP\samg55j19.h</file>
-         <hash>d2f50897896e3ac5e87ef06ff135cf1bd4a4d9e0cc114229d2c5a4e569528049</hash>
+         <hash>73de118eb46ef73c8f0a8ec7ef3a1f6cf9fbcf2986022f032cce3fea52b1aebb</hash>
       </entry>
       <entry>
          <file>..\src\packs\CMSIS\CMSIS\Core\Include\cachel1_armv7.h</file>
