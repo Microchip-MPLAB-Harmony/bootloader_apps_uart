@@ -103,6 +103,7 @@ USART_ERROR SERCOM4_USART_ErrorGet( void );
 
 uint32_t SERCOM4_USART_FrequencyGet( void );
 
+
 // DOM-IGNORE-BEGIN
 #ifdef __cplusplus  // Provide C++ Compatibility
 

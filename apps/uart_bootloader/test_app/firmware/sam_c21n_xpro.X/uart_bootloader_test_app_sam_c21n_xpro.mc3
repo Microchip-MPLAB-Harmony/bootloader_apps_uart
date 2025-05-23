@@ -1,4 +1,4 @@
-<config configName="sam_c21n_xpro" projectName="uart_bootloader_test_app_sam_c21n_xpro" configVersion="1.1" device="ATSAMC21N18A" deviceLibraryClass="com.microchip.mcc.harmony.Harmony3Library" coreVersion="5.6.1">
+<config configName="sam_c21n_xpro" projectName="uart_bootloader_test_app_sam_c21n_xpro" configVersion="1.1" device="ATSAMC21N18A" deviceLibraryClass="com.microchip.mcc.harmony.Harmony3Library" coreVersion="5.7.1">
    <usedPackages class="java.util.ArrayList">
       <package packageName="bsp" version="3.13.0" contentType="HARMONY">
          <modules class="java.util.ArrayList"/>
@@ -52,7 +52,7 @@
       </entry>
    </usedClasses>
    <usedLibraries class="java.util.ArrayList">
-      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.4.1"/>
+      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.5.5"/>
    </usedLibraries>
    <tokenMap class="java.util.TreeMap">
       <entry>
@@ -1998,11 +1998,11 @@
       </entry>
       <entry>
          <file>..\src\config\sam_c21n_xpro\definitions.h</file>
-         <hash>5d334af15ec767c415400826efb8789ee5e3d0346f5e8c7a27bd82eca344e986</hash>
+         <hash>5bed3715d47a1ebe28eb6ff59d472bcf720b4c1f4de7756a2891e42a68b6d371</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_c21n_xpro\device.h</file>
-         <hash>9767b7c6ccb02f5fcf816122c92f23650e8c254e753bbde49ffe4f286e8b0fdb</hash>
+         <hash>27c4489785a0dc0d30b84aa5e0ea6097342d0f02035cf68c068136991e205455</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_c21n_xpro\device_cache.h</file>
@@ -2014,19 +2014,19 @@
       </entry>
       <entry>
          <file>..\src\config\sam_c21n_xpro\exceptions.c</file>
-         <hash>3d788ce1bd25caaaf6b533ec5b06e4b1e753044c1a217dd5cdf8629628ae85a9</hash>
+         <hash>b0b65c30aa1f7a01ef7be6c1628c331a5ca3eae7dc3bd76ebe647703b76f432d</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_c21n_xpro\initialization.c</file>
-         <hash>e151c063273668d2fe4901c66c5d5411fde4f0270b2c4bfd0f584503c1ec7fea</hash>
+         <hash>80d9774025537700e026583196578923d395ab388402e4ecf8f28a0a2d105c4c</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_c21n_xpro\interrupts.c</file>
-         <hash>215d82ac85f6a15b0cd2d6880591419d5ed846c16c195e2a3846762acca61d40</hash>
+         <hash>e5e65cf50af7bb2b27e8f1beaed3c3e68ac8738c6fe449084fbdb9077914a67f</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_c21n_xpro\interrupts.h</file>
-         <hash>4077b6d65b6f1734f0c235a2a1a7ca812a2d0c015309e2d0b28cb9d154650c62</hash>
+         <hash>357a65d22e4943c710d61b3659af8a67e9d0d21fdf417f4e3180ccf121db1fca</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_c21n_xpro\libc_syscalls.c</file>
@@ -2034,7 +2034,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_c21n_xpro\peripheral\clock\plib_clock.c</file>
-         <hash>889a3beb4e39c894c420e3eada6320e34ccbf1a3e1d7ba309d11ea8acb904762</hash>
+         <hash>8b75864df1d02a2d705da2fd9cf14828ad525d425f6100afdae296ccfec42123</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_c21n_xpro\peripheral\clock\plib_clock.h</file>
@@ -2050,11 +2050,11 @@
       </entry>
       <entry>
          <file>..\src\config\sam_c21n_xpro\peripheral\nvic\plib_nvic.c</file>
-         <hash>056a589ef1f8f3bbb9c37fd4685b97207b957116104636b2ead4e442cc135a46</hash>
+         <hash>d17bdfa86168bdfc1dd73f6785fdae850b5e041462997d96caf174cad18431f6</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_c21n_xpro\peripheral\nvic\plib_nvic.h</file>
-         <hash>81e813a093101d546799e00723cbf7245e2d18471fa51c8d130c5809cecca03e</hash>
+         <hash>9936ac782115af41003255283fa2f603f4ff2212d16275b7c80ea8d067a9e208</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_c21n_xpro\peripheral\nvmctrl\plib_nvmctrl.c</file>
@@ -2062,11 +2062,11 @@
       </entry>
       <entry>
          <file>..\src\config\sam_c21n_xpro\peripheral\nvmctrl\plib_nvmctrl.h</file>
-         <hash>3706575d02d502967b3a77c5d6c33f26721148603934715fcbd98c62d20a2663</hash>
+         <hash>a2f572d8ba174971959f4a9319fc61b460c00432512d38e19e28e2dfddf6cde5</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_c21n_xpro\peripheral\port\plib_port.c</file>
-         <hash>09b8655ae766c4279a9e27af7d225de59a7c0ee62fc2f592304a2e7090acd1bf</hash>
+         <hash>1a8b58db9ce2a45ee26f55cdcca1b9409512b8d03194db7b6a7f91ed8de6ab85</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_c21n_xpro\peripheral\port\plib_port.h</file>
@@ -2074,19 +2074,19 @@
       </entry>
       <entry>
          <file>..\src\config\sam_c21n_xpro\peripheral\sercom\usart\plib_sercom4_usart.c</file>
-         <hash>4a428ffefff2845ab73ab604aaf5e81886d3ff435bc86429b4035cacf0b0dbc3</hash>
+         <hash>1cfea5cbca2bbdd402ce0a7d52407d0827b7f770bce8ca20d3d9b22ffb5495b2</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_c21n_xpro\peripheral\sercom\usart\plib_sercom4_usart.h</file>
-         <hash>be8cd2940feb28f5a61b48e614f3d8f9367eb48da752d972639c3f1dba93be1c</hash>
+         <hash>535ef288711860aebfe81da1cf22d8f977f3637fd77c260d588b7302251453f8</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_c21n_xpro\peripheral\sercom\usart\plib_sercom_usart_common.h</file>
-         <hash>f19dafabe0928d60dd83d7e19f35889f200e3fbadff09e2f42523d320acf780a</hash>
+         <hash>3653b66472c558c50f7037a1dd25d2678e9a13aa718f3c53a2195e6f3919ea48</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_c21n_xpro\peripheral\systick\plib_systick.c</file>
-         <hash>9178af8001492763213e84e6cf11aa357f1e344cbea0988699771364ef69c749</hash>
+         <hash>477dc28931fc8765d8ec33d4afa79cc5659731d4f37e20139b3f17242407c06c</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_c21n_xpro\peripheral\systick\plib_systick.h</file>
