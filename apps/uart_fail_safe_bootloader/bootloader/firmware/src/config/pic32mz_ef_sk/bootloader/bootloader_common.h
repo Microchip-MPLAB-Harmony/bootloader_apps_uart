@@ -149,7 +149,7 @@ Returns:
 
 Example:
     <code>
-    
+
     #define BTL_MAJOR_VERSION       3U
     #define BTL_MINOR_VERSION       7U
 
@@ -296,15 +296,15 @@ Example:
 
         appImageStartAddr = 0x00002000;
         appImageSize = 0x8000;
-        
+
 
         if (bootloader_CRCGenerate(appImageStartAddr, appImageSize) != receivedCRC)
         {
-            
+
         }
         else
         {
-            
+
         }
 
     </code>
@@ -333,7 +333,7 @@ Returns:
     None
 
 Example:
-    <code>        
+    <code>
 
         bootloader_TriggerReset();
 

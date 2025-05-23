@@ -511,6 +511,10 @@ bool EVIC_INT_Disable( void );
 
 void EVIC_INT_Restore( bool state );
 
+bool EVIC_INT_SourceDisable( INT_SOURCE source );
+
+void EVIC_INT_SourceRestore( INT_SOURCE source, bool status );
+
 
 // DOM-IGNORE-BEGIN
 #ifdef __cplusplus  // Provide C++ Compatibility
