@@ -1,248 +1,245 @@
 /*
  * Peripheral I/O description for PIC32CK2051GC01144
  *
- * Copyright (c) 2023 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2024 Microchip Technology Inc. and its subsidiaries.
  *
- * Subject to your compliance with these terms, you may use Microchip software and any derivatives
- * exclusively with Microchip products. It is your responsibility to comply with third party license
- * terms applicable to your use of third party software (including open source software) that may
- * accompany Microchip software.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
  *
- * THIS SOFTWARE IS SUPPLIED BY MICROCHIP "AS IS". NO WARRANTIES, WHETHER EXPRESS, IMPLIED OR STATUTORY,
- * APPLY TO THIS SOFTWARE, INCLUDING ANY IMPLIED WARRANTIES OF NON-INFRINGEMENT, MERCHANTABILITY, AND
- * FITNESS FOR A PARTICULAR PURPOSE.
+ *   http://www.apache.org/licenses/LICENSE-2.0
  *
- * IN NO EVENT WILL MICROCHIP BE LIABLE FOR ANY INDIRECT, SPECIAL, PUNITIVE, INCIDENTAL OR CONSEQUENTIAL
- * LOSS, DAMAGE, COST OR EXPENSE OF ANY KIND WHATSOEVER RELATED TO THE SOFTWARE, HOWEVER CAUSED, EVEN IF
- * MICROCHIP HAS BEEN ADVISED OF THE POSSIBILITY OR THE DAMAGES ARE FORESEEABLE. TO THE FULLEST EXTENT
- * ALLOWED BY LAW, MICROCHIP'S TOTAL LIABILITY ON ALL CLAIMS IN ANY WAY RELATED TO THIS SOFTWARE WILL NOT
- * EXCEED THE AMOUNT OF FEES, IF ANY, THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
  *
  */
 
-/* file generated from device description version 2023-04-05T13:26:38Z */
+/*  file generated from device description file (ATDF) version 2024-04-02T09:16:01Z  */
 #ifndef _PIC32CK2051GC01144_GPIO_H_
 #define _PIC32CK2051GC01144_GPIO_H_
 
-/* ========== Peripheral I/O pin numbers ========== */
-#define PIN_PA00                    (    0)  /**< Pin Number for PA00 */
-#define PIN_PA01                    (    1)  /**< Pin Number for PA01 */
-#define PIN_PA02                    (    2)  /**< Pin Number for PA02 */
-#define PIN_PA03                    (    3)  /**< Pin Number for PA03 */
-#define PIN_PA04                    (    4)  /**< Pin Number for PA04 */
-#define PIN_PA05                    (    5)  /**< Pin Number for PA05 */
-#define PIN_PA06                    (    6)  /**< Pin Number for PA06 */
-#define PIN_PA07                    (    7)  /**< Pin Number for PA07 */
-#define PIN_PA08                    (    8)  /**< Pin Number for PA08 */
-#define PIN_PA09                    (    9)  /**< Pin Number for PA09 */
-#define PIN_PA10                    (   10)  /**< Pin Number for PA10 */
-#define PIN_PA11                    (   11)  /**< Pin Number for PA11 */
-#define PIN_PA12                    (   12)  /**< Pin Number for PA12 */
-#define PIN_PA13                    (   13)  /**< Pin Number for PA13 */
-#define PIN_PA14                    (   14)  /**< Pin Number for PA14 */
-#define PIN_PA15                    (   15)  /**< Pin Number for PA15 */
-#define PIN_PA16                    (   16)  /**< Pin Number for PA16 */
-#define PIN_PA17                    (   17)  /**< Pin Number for PA17 */
-#define PIN_PA18                    (   18)  /**< Pin Number for PA18 */
-#define PIN_PA19                    (   19)  /**< Pin Number for PA19 */
-#define PIN_PA20                    (   20)  /**< Pin Number for PA20 */
-#define PIN_PA21                    (   21)  /**< Pin Number for PA21 */
-#define PIN_PA22                    (   22)  /**< Pin Number for PA22 */
-#define PIN_PA23                    (   23)  /**< Pin Number for PA23 */
-#define PIN_PA24                    (   24)  /**< Pin Number for PA24 */
-#define PIN_PA25                    (   25)  /**< Pin Number for PA25 */
-#define PIN_PA26                    (   26)  /**< Pin Number for PA26 */
-#define PIN_PA27                    (   27)  /**< Pin Number for PA27 */
-#define PIN_PA28                    (   28)  /**< Pin Number for PA28 */
-#define PIN_PB00                    (   32)  /**< Pin Number for PB00 */
-#define PIN_PB01                    (   33)  /**< Pin Number for PB01 */
-#define PIN_PB02                    (   34)  /**< Pin Number for PB02 */
-#define PIN_PB03                    (   35)  /**< Pin Number for PB03 */
-#define PIN_PB04                    (   36)  /**< Pin Number for PB04 */
-#define PIN_PB05                    (   37)  /**< Pin Number for PB05 */
-#define PIN_PB06                    (   38)  /**< Pin Number for PB06 */
-#define PIN_PB07                    (   39)  /**< Pin Number for PB07 */
-#define PIN_PB08                    (   40)  /**< Pin Number for PB08 */
-#define PIN_PB09                    (   41)  /**< Pin Number for PB09 */
-#define PIN_PB10                    (   42)  /**< Pin Number for PB10 */
-#define PIN_PB11                    (   43)  /**< Pin Number for PB11 */
-#define PIN_PB12                    (   44)  /**< Pin Number for PB12 */
-#define PIN_PB13                    (   45)  /**< Pin Number for PB13 */
-#define PIN_PB14                    (   46)  /**< Pin Number for PB14 */
-#define PIN_PB15                    (   47)  /**< Pin Number for PB15 */
-#define PIN_PB16                    (   48)  /**< Pin Number for PB16 */
-#define PIN_PB17                    (   49)  /**< Pin Number for PB17 */
-#define PIN_PB18                    (   50)  /**< Pin Number for PB18 */
-#define PIN_PB19                    (   51)  /**< Pin Number for PB19 */
-#define PIN_PB20                    (   52)  /**< Pin Number for PB20 */
-#define PIN_PB21                    (   53)  /**< Pin Number for PB21 */
-#define PIN_PB22                    (   54)  /**< Pin Number for PB22 */
-#define PIN_PB23                    (   55)  /**< Pin Number for PB23 */
-#define PIN_PB24                    (   56)  /**< Pin Number for PB24 */
-#define PIN_PB25                    (   57)  /**< Pin Number for PB25 */
-#define PIN_PB26                    (   58)  /**< Pin Number for PB26 */
-#define PIN_PC00                    (   64)  /**< Pin Number for PC00 */
-#define PIN_PC01                    (   65)  /**< Pin Number for PC01 */
-#define PIN_PC02                    (   66)  /**< Pin Number for PC02 */
-#define PIN_PC03                    (   67)  /**< Pin Number for PC03 */
-#define PIN_PC04                    (   68)  /**< Pin Number for PC04 */
-#define PIN_PC05                    (   69)  /**< Pin Number for PC05 */
-#define PIN_PC06                    (   70)  /**< Pin Number for PC06 */
-#define PIN_PC07                    (   71)  /**< Pin Number for PC07 */
-#define PIN_PC09                    (   73)  /**< Pin Number for PC09 */
-#define PIN_PC10                    (   74)  /**< Pin Number for PC10 */
-#define PIN_PC11                    (   75)  /**< Pin Number for PC11 */
-#define PIN_PC12                    (   76)  /**< Pin Number for PC12 */
-#define PIN_PC13                    (   77)  /**< Pin Number for PC13 */
-#define PIN_PC14                    (   78)  /**< Pin Number for PC14 */
-#define PIN_PC15                    (   79)  /**< Pin Number for PC15 */
-#define PIN_PC16                    (   80)  /**< Pin Number for PC16 */
-#define PIN_PC17                    (   81)  /**< Pin Number for PC17 */
-#define PIN_PC18                    (   82)  /**< Pin Number for PC18 */
-#define PIN_PC19                    (   83)  /**< Pin Number for PC19 */
-#define PIN_PC20                    (   84)  /**< Pin Number for PC20 */
-#define PIN_PC21                    (   85)  /**< Pin Number for PC21 */
-#define PIN_PC22                    (   86)  /**< Pin Number for PC22 */
-#define PIN_PC23                    (   87)  /**< Pin Number for PC23 */
-#define PIN_PC24                    (   88)  /**< Pin Number for PC24 */
-#define PIN_PC25                    (   89)  /**< Pin Number for PC25 */
-#define PIN_PC26                    (   90)  /**< Pin Number for PC26 */
-#define PIN_PC27                    (   91)  /**< Pin Number for PC27 */
-#define PIN_PC28                    (   92)  /**< Pin Number for PC28 */
-#define PIN_PC29                    (   93)  /**< Pin Number for PC29 */
-#define PIN_PD00                    (   96)  /**< Pin Number for PD00 */
-#define PIN_PD01                    (   97)  /**< Pin Number for PD01 */
-#define PIN_PD02                    (   98)  /**< Pin Number for PD02 */
-#define PIN_PD03                    (   99)  /**< Pin Number for PD03 */
-#define PIN_PD04                    (  100)  /**< Pin Number for PD04 */
-#define PIN_PD05                    (  101)  /**< Pin Number for PD05 */
-#define PIN_PD06                    (  102)  /**< Pin Number for PD06 */
-#define PIN_PD07                    (  103)  /**< Pin Number for PD07 */
-#define PIN_PD08                    (  104)  /**< Pin Number for PD08 */
-#define PIN_PD09                    (  105)  /**< Pin Number for PD09 */
-#define PIN_PD10                    (  106)  /**< Pin Number for PD10 */
-#define PIN_PD11                    (  107)  /**< Pin Number for PD11 */
-#define PIN_PD12                    (  108)  /**< Pin Number for PD12 */
-#define PIN_PD13                    (  109)  /**< Pin Number for PD13 */
-#define PIN_PD14                    (  110)  /**< Pin Number for PD14 */
-#define PIN_PD15                    (  111)  /**< Pin Number for PD15 */
-#define PIN_PD16                    (  112)  /**< Pin Number for PD16 */
-#define PIN_PD17                    (  113)  /**< Pin Number for PD17 */
-#define PIN_PD18                    (  114)  /**< Pin Number for PD18 */
-#define PIN_PD19                    (  115)  /**< Pin Number for PD19 */
-#define PIN_PD20                    (  116)  /**< Pin Number for PD20 */
-#define PIN_PD21                    (  117)  /**< Pin Number for PD21 */
+/* ======================= Peripheral I/O pin numbers ======================= */
+#define PIN_PA00                    (    0)  /* Pin Number for PA00 */
+#define PIN_PA01                    (    1)  /* Pin Number for PA01 */
+#define PIN_PA02                    (    2)  /* Pin Number for PA02 */
+#define PIN_PA03                    (    3)  /* Pin Number for PA03 */
+#define PIN_PA04                    (    4)  /* Pin Number for PA04 */
+#define PIN_PA05                    (    5)  /* Pin Number for PA05 */
+#define PIN_PA06                    (    6)  /* Pin Number for PA06 */
+#define PIN_PA07                    (    7)  /* Pin Number for PA07 */
+#define PIN_PA08                    (    8)  /* Pin Number for PA08 */
+#define PIN_PA09                    (    9)  /* Pin Number for PA09 */
+#define PIN_PA10                    (   10)  /* Pin Number for PA10 */
+#define PIN_PA11                    (   11)  /* Pin Number for PA11 */
+#define PIN_PA12                    (   12)  /* Pin Number for PA12 */
+#define PIN_PA13                    (   13)  /* Pin Number for PA13 */
+#define PIN_PA14                    (   14)  /* Pin Number for PA14 */
+#define PIN_PA15                    (   15)  /* Pin Number for PA15 */
+#define PIN_PA16                    (   16)  /* Pin Number for PA16 */
+#define PIN_PA17                    (   17)  /* Pin Number for PA17 */
+#define PIN_PA18                    (   18)  /* Pin Number for PA18 */
+#define PIN_PA19                    (   19)  /* Pin Number for PA19 */
+#define PIN_PA20                    (   20)  /* Pin Number for PA20 */
+#define PIN_PA21                    (   21)  /* Pin Number for PA21 */
+#define PIN_PA22                    (   22)  /* Pin Number for PA22 */
+#define PIN_PA23                    (   23)  /* Pin Number for PA23 */
+#define PIN_PA24                    (   24)  /* Pin Number for PA24 */
+#define PIN_PA25                    (   25)  /* Pin Number for PA25 */
+#define PIN_PA26                    (   26)  /* Pin Number for PA26 */
+#define PIN_PA27                    (   27)  /* Pin Number for PA27 */
+#define PIN_PA28                    (   28)  /* Pin Number for PA28 */
+#define PIN_PB00                    (   32)  /* Pin Number for PB00 */
+#define PIN_PB01                    (   33)  /* Pin Number for PB01 */
+#define PIN_PB02                    (   34)  /* Pin Number for PB02 */
+#define PIN_PB03                    (   35)  /* Pin Number for PB03 */
+#define PIN_PB04                    (   36)  /* Pin Number for PB04 */
+#define PIN_PB05                    (   37)  /* Pin Number for PB05 */
+#define PIN_PB06                    (   38)  /* Pin Number for PB06 */
+#define PIN_PB07                    (   39)  /* Pin Number for PB07 */
+#define PIN_PB08                    (   40)  /* Pin Number for PB08 */
+#define PIN_PB09                    (   41)  /* Pin Number for PB09 */
+#define PIN_PB10                    (   42)  /* Pin Number for PB10 */
+#define PIN_PB11                    (   43)  /* Pin Number for PB11 */
+#define PIN_PB12                    (   44)  /* Pin Number for PB12 */
+#define PIN_PB13                    (   45)  /* Pin Number for PB13 */
+#define PIN_PB14                    (   46)  /* Pin Number for PB14 */
+#define PIN_PB15                    (   47)  /* Pin Number for PB15 */
+#define PIN_PB16                    (   48)  /* Pin Number for PB16 */
+#define PIN_PB17                    (   49)  /* Pin Number for PB17 */
+#define PIN_PB18                    (   50)  /* Pin Number for PB18 */
+#define PIN_PB19                    (   51)  /* Pin Number for PB19 */
+#define PIN_PB20                    (   52)  /* Pin Number for PB20 */
+#define PIN_PB21                    (   53)  /* Pin Number for PB21 */
+#define PIN_PB22                    (   54)  /* Pin Number for PB22 */
+#define PIN_PB23                    (   55)  /* Pin Number for PB23 */
+#define PIN_PB24                    (   56)  /* Pin Number for PB24 */
+#define PIN_PB25                    (   57)  /* Pin Number for PB25 */
+#define PIN_PB26                    (   58)  /* Pin Number for PB26 */
+#define PIN_PC00                    (   64)  /* Pin Number for PC00 */
+#define PIN_PC01                    (   65)  /* Pin Number for PC01 */
+#define PIN_PC02                    (   66)  /* Pin Number for PC02 */
+#define PIN_PC03                    (   67)  /* Pin Number for PC03 */
+#define PIN_PC04                    (   68)  /* Pin Number for PC04 */
+#define PIN_PC05                    (   69)  /* Pin Number for PC05 */
+#define PIN_PC06                    (   70)  /* Pin Number for PC06 */
+#define PIN_PC07                    (   71)  /* Pin Number for PC07 */
+#define PIN_PC09                    (   73)  /* Pin Number for PC09 */
+#define PIN_PC10                    (   74)  /* Pin Number for PC10 */
+#define PIN_PC11                    (   75)  /* Pin Number for PC11 */
+#define PIN_PC12                    (   76)  /* Pin Number for PC12 */
+#define PIN_PC13                    (   77)  /* Pin Number for PC13 */
+#define PIN_PC14                    (   78)  /* Pin Number for PC14 */
+#define PIN_PC15                    (   79)  /* Pin Number for PC15 */
+#define PIN_PC16                    (   80)  /* Pin Number for PC16 */
+#define PIN_PC17                    (   81)  /* Pin Number for PC17 */
+#define PIN_PC18                    (   82)  /* Pin Number for PC18 */
+#define PIN_PC19                    (   83)  /* Pin Number for PC19 */
+#define PIN_PC20                    (   84)  /* Pin Number for PC20 */
+#define PIN_PC21                    (   85)  /* Pin Number for PC21 */
+#define PIN_PC22                    (   86)  /* Pin Number for PC22 */
+#define PIN_PC23                    (   87)  /* Pin Number for PC23 */
+#define PIN_PC24                    (   88)  /* Pin Number for PC24 */
+#define PIN_PC25                    (   89)  /* Pin Number for PC25 */
+#define PIN_PC26                    (   90)  /* Pin Number for PC26 */
+#define PIN_PC27                    (   91)  /* Pin Number for PC27 */
+#define PIN_PC28                    (   92)  /* Pin Number for PC28 */
+#define PIN_PC29                    (   93)  /* Pin Number for PC29 */
+#define PIN_PD00                    (   96)  /* Pin Number for PD00 */
+#define PIN_PD01                    (   97)  /* Pin Number for PD01 */
+#define PIN_PD02                    (   98)  /* Pin Number for PD02 */
+#define PIN_PD03                    (   99)  /* Pin Number for PD03 */
+#define PIN_PD04                    (  100)  /* Pin Number for PD04 */
+#define PIN_PD05                    (  101)  /* Pin Number for PD05 */
+#define PIN_PD06                    (  102)  /* Pin Number for PD06 */
+#define PIN_PD07                    (  103)  /* Pin Number for PD07 */
+#define PIN_PD08                    (  104)  /* Pin Number for PD08 */
+#define PIN_PD09                    (  105)  /* Pin Number for PD09 */
+#define PIN_PD10                    (  106)  /* Pin Number for PD10 */
+#define PIN_PD11                    (  107)  /* Pin Number for PD11 */
+#define PIN_PD12                    (  108)  /* Pin Number for PD12 */
+#define PIN_PD13                    (  109)  /* Pin Number for PD13 */
+#define PIN_PD14                    (  110)  /* Pin Number for PD14 */
+#define PIN_PD15                    (  111)  /* Pin Number for PD15 */
+#define PIN_PD16                    (  112)  /* Pin Number for PD16 */
+#define PIN_PD17                    (  113)  /* Pin Number for PD17 */
+#define PIN_PD18                    (  114)  /* Pin Number for PD18 */
+#define PIN_PD19                    (  115)  /* Pin Number for PD19 */
+#define PIN_PD20                    (  116)  /* Pin Number for PD20 */
+#define PIN_PD21                    (  117)  /* Pin Number for PD21 */
 
-/* ========== Peripheral I/O masks ========== */
-#define PORT_PA00                   (_UINT32_(1) << 0) /**< PORT mask for PA00 */
-#define PORT_PA01                   (_UINT32_(1) << 1) /**< PORT mask for PA01 */
-#define PORT_PA02                   (_UINT32_(1) << 2) /**< PORT mask for PA02 */
-#define PORT_PA03                   (_UINT32_(1) << 3) /**< PORT mask for PA03 */
-#define PORT_PA04                   (_UINT32_(1) << 4) /**< PORT mask for PA04 */
-#define PORT_PA05                   (_UINT32_(1) << 5) /**< PORT mask for PA05 */
-#define PORT_PA06                   (_UINT32_(1) << 6) /**< PORT mask for PA06 */
-#define PORT_PA07                   (_UINT32_(1) << 7) /**< PORT mask for PA07 */
-#define PORT_PA08                   (_UINT32_(1) << 8) /**< PORT mask for PA08 */
-#define PORT_PA09                   (_UINT32_(1) << 9) /**< PORT mask for PA09 */
-#define PORT_PA10                   (_UINT32_(1) << 10) /**< PORT mask for PA10 */
-#define PORT_PA11                   (_UINT32_(1) << 11) /**< PORT mask for PA11 */
-#define PORT_PA12                   (_UINT32_(1) << 12) /**< PORT mask for PA12 */
-#define PORT_PA13                   (_UINT32_(1) << 13) /**< PORT mask for PA13 */
-#define PORT_PA14                   (_UINT32_(1) << 14) /**< PORT mask for PA14 */
-#define PORT_PA15                   (_UINT32_(1) << 15) /**< PORT mask for PA15 */
-#define PORT_PA16                   (_UINT32_(1) << 16) /**< PORT mask for PA16 */
-#define PORT_PA17                   (_UINT32_(1) << 17) /**< PORT mask for PA17 */
-#define PORT_PA18                   (_UINT32_(1) << 18) /**< PORT mask for PA18 */
-#define PORT_PA19                   (_UINT32_(1) << 19) /**< PORT mask for PA19 */
-#define PORT_PA20                   (_UINT32_(1) << 20) /**< PORT mask for PA20 */
-#define PORT_PA21                   (_UINT32_(1) << 21) /**< PORT mask for PA21 */
-#define PORT_PA22                   (_UINT32_(1) << 22) /**< PORT mask for PA22 */
-#define PORT_PA23                   (_UINT32_(1) << 23) /**< PORT mask for PA23 */
-#define PORT_PA24                   (_UINT32_(1) << 24) /**< PORT mask for PA24 */
-#define PORT_PA25                   (_UINT32_(1) << 25) /**< PORT mask for PA25 */
-#define PORT_PA26                   (_UINT32_(1) << 26) /**< PORT mask for PA26 */
-#define PORT_PA27                   (_UINT32_(1) << 27) /**< PORT mask for PA27 */
-#define PORT_PA28                   (_UINT32_(1) << 28) /**< PORT mask for PA28 */
-#define PORT_PB00                   (_UINT32_(1) << 0) /**< PORT mask for PB00 */
-#define PORT_PB01                   (_UINT32_(1) << 1) /**< PORT mask for PB01 */
-#define PORT_PB02                   (_UINT32_(1) << 2) /**< PORT mask for PB02 */
-#define PORT_PB03                   (_UINT32_(1) << 3) /**< PORT mask for PB03 */
-#define PORT_PB04                   (_UINT32_(1) << 4) /**< PORT mask for PB04 */
-#define PORT_PB05                   (_UINT32_(1) << 5) /**< PORT mask for PB05 */
-#define PORT_PB06                   (_UINT32_(1) << 6) /**< PORT mask for PB06 */
-#define PORT_PB07                   (_UINT32_(1) << 7) /**< PORT mask for PB07 */
-#define PORT_PB08                   (_UINT32_(1) << 8) /**< PORT mask for PB08 */
-#define PORT_PB09                   (_UINT32_(1) << 9) /**< PORT mask for PB09 */
-#define PORT_PB10                   (_UINT32_(1) << 10) /**< PORT mask for PB10 */
-#define PORT_PB11                   (_UINT32_(1) << 11) /**< PORT mask for PB11 */
-#define PORT_PB12                   (_UINT32_(1) << 12) /**< PORT mask for PB12 */
-#define PORT_PB13                   (_UINT32_(1) << 13) /**< PORT mask for PB13 */
-#define PORT_PB14                   (_UINT32_(1) << 14) /**< PORT mask for PB14 */
-#define PORT_PB15                   (_UINT32_(1) << 15) /**< PORT mask for PB15 */
-#define PORT_PB16                   (_UINT32_(1) << 16) /**< PORT mask for PB16 */
-#define PORT_PB17                   (_UINT32_(1) << 17) /**< PORT mask for PB17 */
-#define PORT_PB18                   (_UINT32_(1) << 18) /**< PORT mask for PB18 */
-#define PORT_PB19                   (_UINT32_(1) << 19) /**< PORT mask for PB19 */
-#define PORT_PB20                   (_UINT32_(1) << 20) /**< PORT mask for PB20 */
-#define PORT_PB21                   (_UINT32_(1) << 21) /**< PORT mask for PB21 */
-#define PORT_PB22                   (_UINT32_(1) << 22) /**< PORT mask for PB22 */
-#define PORT_PB23                   (_UINT32_(1) << 23) /**< PORT mask for PB23 */
-#define PORT_PB24                   (_UINT32_(1) << 24) /**< PORT mask for PB24 */
-#define PORT_PB25                   (_UINT32_(1) << 25) /**< PORT mask for PB25 */
-#define PORT_PB26                   (_UINT32_(1) << 26) /**< PORT mask for PB26 */
-#define PORT_PC00                   (_UINT32_(1) << 0) /**< PORT mask for PC00 */
-#define PORT_PC01                   (_UINT32_(1) << 1) /**< PORT mask for PC01 */
-#define PORT_PC02                   (_UINT32_(1) << 2) /**< PORT mask for PC02 */
-#define PORT_PC03                   (_UINT32_(1) << 3) /**< PORT mask for PC03 */
-#define PORT_PC04                   (_UINT32_(1) << 4) /**< PORT mask for PC04 */
-#define PORT_PC05                   (_UINT32_(1) << 5) /**< PORT mask for PC05 */
-#define PORT_PC06                   (_UINT32_(1) << 6) /**< PORT mask for PC06 */
-#define PORT_PC07                   (_UINT32_(1) << 7) /**< PORT mask for PC07 */
-#define PORT_PC09                   (_UINT32_(1) << 9) /**< PORT mask for PC09 */
-#define PORT_PC10                   (_UINT32_(1) << 10) /**< PORT mask for PC10 */
-#define PORT_PC11                   (_UINT32_(1) << 11) /**< PORT mask for PC11 */
-#define PORT_PC12                   (_UINT32_(1) << 12) /**< PORT mask for PC12 */
-#define PORT_PC13                   (_UINT32_(1) << 13) /**< PORT mask for PC13 */
-#define PORT_PC14                   (_UINT32_(1) << 14) /**< PORT mask for PC14 */
-#define PORT_PC15                   (_UINT32_(1) << 15) /**< PORT mask for PC15 */
-#define PORT_PC16                   (_UINT32_(1) << 16) /**< PORT mask for PC16 */
-#define PORT_PC17                   (_UINT32_(1) << 17) /**< PORT mask for PC17 */
-#define PORT_PC18                   (_UINT32_(1) << 18) /**< PORT mask for PC18 */
-#define PORT_PC19                   (_UINT32_(1) << 19) /**< PORT mask for PC19 */
-#define PORT_PC20                   (_UINT32_(1) << 20) /**< PORT mask for PC20 */
-#define PORT_PC21                   (_UINT32_(1) << 21) /**< PORT mask for PC21 */
-#define PORT_PC22                   (_UINT32_(1) << 22) /**< PORT mask for PC22 */
-#define PORT_PC23                   (_UINT32_(1) << 23) /**< PORT mask for PC23 */
-#define PORT_PC24                   (_UINT32_(1) << 24) /**< PORT mask for PC24 */
-#define PORT_PC25                   (_UINT32_(1) << 25) /**< PORT mask for PC25 */
-#define PORT_PC26                   (_UINT32_(1) << 26) /**< PORT mask for PC26 */
-#define PORT_PC27                   (_UINT32_(1) << 27) /**< PORT mask for PC27 */
-#define PORT_PC28                   (_UINT32_(1) << 28) /**< PORT mask for PC28 */
-#define PORT_PC29                   (_UINT32_(1) << 29) /**< PORT mask for PC29 */
-#define PORT_PD00                   (_UINT32_(1) << 0) /**< PORT mask for PD00 */
-#define PORT_PD01                   (_UINT32_(1) << 1) /**< PORT mask for PD01 */
-#define PORT_PD02                   (_UINT32_(1) << 2) /**< PORT mask for PD02 */
-#define PORT_PD03                   (_UINT32_(1) << 3) /**< PORT mask for PD03 */
-#define PORT_PD04                   (_UINT32_(1) << 4) /**< PORT mask for PD04 */
-#define PORT_PD05                   (_UINT32_(1) << 5) /**< PORT mask for PD05 */
-#define PORT_PD06                   (_UINT32_(1) << 6) /**< PORT mask for PD06 */
-#define PORT_PD07                   (_UINT32_(1) << 7) /**< PORT mask for PD07 */
-#define PORT_PD08                   (_UINT32_(1) << 8) /**< PORT mask for PD08 */
-#define PORT_PD09                   (_UINT32_(1) << 9) /**< PORT mask for PD09 */
-#define PORT_PD10                   (_UINT32_(1) << 10) /**< PORT mask for PD10 */
-#define PORT_PD11                   (_UINT32_(1) << 11) /**< PORT mask for PD11 */
-#define PORT_PD12                   (_UINT32_(1) << 12) /**< PORT mask for PD12 */
-#define PORT_PD13                   (_UINT32_(1) << 13) /**< PORT mask for PD13 */
-#define PORT_PD14                   (_UINT32_(1) << 14) /**< PORT mask for PD14 */
-#define PORT_PD15                   (_UINT32_(1) << 15) /**< PORT mask for PD15 */
-#define PORT_PD16                   (_UINT32_(1) << 16) /**< PORT mask for PD16 */
-#define PORT_PD17                   (_UINT32_(1) << 17) /**< PORT mask for PD17 */
-#define PORT_PD18                   (_UINT32_(1) << 18) /**< PORT mask for PD18 */
-#define PORT_PD19                   (_UINT32_(1) << 19) /**< PORT mask for PD19 */
-#define PORT_PD20                   (_UINT32_(1) << 20) /**< PORT mask for PD20 */
-#define PORT_PD21                   (_UINT32_(1) << 21) /**< PORT mask for PD21 */
+/* ========================== Peripheral I/O masks ========================== */
+#define PORT_PA00                   (_UINT32_(1) << 0) /* PORT mask for PA00 */
+#define PORT_PA01                   (_UINT32_(1) << 1) /* PORT mask for PA01 */
+#define PORT_PA02                   (_UINT32_(1) << 2) /* PORT mask for PA02 */
+#define PORT_PA03                   (_UINT32_(1) << 3) /* PORT mask for PA03 */
+#define PORT_PA04                   (_UINT32_(1) << 4) /* PORT mask for PA04 */
+#define PORT_PA05                   (_UINT32_(1) << 5) /* PORT mask for PA05 */
+#define PORT_PA06                   (_UINT32_(1) << 6) /* PORT mask for PA06 */
+#define PORT_PA07                   (_UINT32_(1) << 7) /* PORT mask for PA07 */
+#define PORT_PA08                   (_UINT32_(1) << 8) /* PORT mask for PA08 */
+#define PORT_PA09                   (_UINT32_(1) << 9) /* PORT mask for PA09 */
+#define PORT_PA10                   (_UINT32_(1) << 10) /* PORT mask for PA10 */
+#define PORT_PA11                   (_UINT32_(1) << 11) /* PORT mask for PA11 */
+#define PORT_PA12                   (_UINT32_(1) << 12) /* PORT mask for PA12 */
+#define PORT_PA13                   (_UINT32_(1) << 13) /* PORT mask for PA13 */
+#define PORT_PA14                   (_UINT32_(1) << 14) /* PORT mask for PA14 */
+#define PORT_PA15                   (_UINT32_(1) << 15) /* PORT mask for PA15 */
+#define PORT_PA16                   (_UINT32_(1) << 16) /* PORT mask for PA16 */
+#define PORT_PA17                   (_UINT32_(1) << 17) /* PORT mask for PA17 */
+#define PORT_PA18                   (_UINT32_(1) << 18) /* PORT mask for PA18 */
+#define PORT_PA19                   (_UINT32_(1) << 19) /* PORT mask for PA19 */
+#define PORT_PA20                   (_UINT32_(1) << 20) /* PORT mask for PA20 */
+#define PORT_PA21                   (_UINT32_(1) << 21) /* PORT mask for PA21 */
+#define PORT_PA22                   (_UINT32_(1) << 22) /* PORT mask for PA22 */
+#define PORT_PA23                   (_UINT32_(1) << 23) /* PORT mask for PA23 */
+#define PORT_PA24                   (_UINT32_(1) << 24) /* PORT mask for PA24 */
+#define PORT_PA25                   (_UINT32_(1) << 25) /* PORT mask for PA25 */
+#define PORT_PA26                   (_UINT32_(1) << 26) /* PORT mask for PA26 */
+#define PORT_PA27                   (_UINT32_(1) << 27) /* PORT mask for PA27 */
+#define PORT_PA28                   (_UINT32_(1) << 28) /* PORT mask for PA28 */
+#define PORT_PB00                   (_UINT32_(1) << 0) /* PORT mask for PB00 */
+#define PORT_PB01                   (_UINT32_(1) << 1) /* PORT mask for PB01 */
+#define PORT_PB02                   (_UINT32_(1) << 2) /* PORT mask for PB02 */
+#define PORT_PB03                   (_UINT32_(1) << 3) /* PORT mask for PB03 */
+#define PORT_PB04                   (_UINT32_(1) << 4) /* PORT mask for PB04 */
+#define PORT_PB05                   (_UINT32_(1) << 5) /* PORT mask for PB05 */
+#define PORT_PB06                   (_UINT32_(1) << 6) /* PORT mask for PB06 */
+#define PORT_PB07                   (_UINT32_(1) << 7) /* PORT mask for PB07 */
+#define PORT_PB08                   (_UINT32_(1) << 8) /* PORT mask for PB08 */
+#define PORT_PB09                   (_UINT32_(1) << 9) /* PORT mask for PB09 */
+#define PORT_PB10                   (_UINT32_(1) << 10) /* PORT mask for PB10 */
+#define PORT_PB11                   (_UINT32_(1) << 11) /* PORT mask for PB11 */
+#define PORT_PB12                   (_UINT32_(1) << 12) /* PORT mask for PB12 */
+#define PORT_PB13                   (_UINT32_(1) << 13) /* PORT mask for PB13 */
+#define PORT_PB14                   (_UINT32_(1) << 14) /* PORT mask for PB14 */
+#define PORT_PB15                   (_UINT32_(1) << 15) /* PORT mask for PB15 */
+#define PORT_PB16                   (_UINT32_(1) << 16) /* PORT mask for PB16 */
+#define PORT_PB17                   (_UINT32_(1) << 17) /* PORT mask for PB17 */
+#define PORT_PB18                   (_UINT32_(1) << 18) /* PORT mask for PB18 */
+#define PORT_PB19                   (_UINT32_(1) << 19) /* PORT mask for PB19 */
+#define PORT_PB20                   (_UINT32_(1) << 20) /* PORT mask for PB20 */
+#define PORT_PB21                   (_UINT32_(1) << 21) /* PORT mask for PB21 */
+#define PORT_PB22                   (_UINT32_(1) << 22) /* PORT mask for PB22 */
+#define PORT_PB23                   (_UINT32_(1) << 23) /* PORT mask for PB23 */
+#define PORT_PB24                   (_UINT32_(1) << 24) /* PORT mask for PB24 */
+#define PORT_PB25                   (_UINT32_(1) << 25) /* PORT mask for PB25 */
+#define PORT_PB26                   (_UINT32_(1) << 26) /* PORT mask for PB26 */
+#define PORT_PC00                   (_UINT32_(1) << 0) /* PORT mask for PC00 */
+#define PORT_PC01                   (_UINT32_(1) << 1) /* PORT mask for PC01 */
+#define PORT_PC02                   (_UINT32_(1) << 2) /* PORT mask for PC02 */
+#define PORT_PC03                   (_UINT32_(1) << 3) /* PORT mask for PC03 */
+#define PORT_PC04                   (_UINT32_(1) << 4) /* PORT mask for PC04 */
+#define PORT_PC05                   (_UINT32_(1) << 5) /* PORT mask for PC05 */
+#define PORT_PC06                   (_UINT32_(1) << 6) /* PORT mask for PC06 */
+#define PORT_PC07                   (_UINT32_(1) << 7) /* PORT mask for PC07 */
+#define PORT_PC09                   (_UINT32_(1) << 9) /* PORT mask for PC09 */
+#define PORT_PC10                   (_UINT32_(1) << 10) /* PORT mask for PC10 */
+#define PORT_PC11                   (_UINT32_(1) << 11) /* PORT mask for PC11 */
+#define PORT_PC12                   (_UINT32_(1) << 12) /* PORT mask for PC12 */
+#define PORT_PC13                   (_UINT32_(1) << 13) /* PORT mask for PC13 */
+#define PORT_PC14                   (_UINT32_(1) << 14) /* PORT mask for PC14 */
+#define PORT_PC15                   (_UINT32_(1) << 15) /* PORT mask for PC15 */
+#define PORT_PC16                   (_UINT32_(1) << 16) /* PORT mask for PC16 */
+#define PORT_PC17                   (_UINT32_(1) << 17) /* PORT mask for PC17 */
+#define PORT_PC18                   (_UINT32_(1) << 18) /* PORT mask for PC18 */
+#define PORT_PC19                   (_UINT32_(1) << 19) /* PORT mask for PC19 */
+#define PORT_PC20                   (_UINT32_(1) << 20) /* PORT mask for PC20 */
+#define PORT_PC21                   (_UINT32_(1) << 21) /* PORT mask for PC21 */
+#define PORT_PC22                   (_UINT32_(1) << 22) /* PORT mask for PC22 */
+#define PORT_PC23                   (_UINT32_(1) << 23) /* PORT mask for PC23 */
+#define PORT_PC24                   (_UINT32_(1) << 24) /* PORT mask for PC24 */
+#define PORT_PC25                   (_UINT32_(1) << 25) /* PORT mask for PC25 */
+#define PORT_PC26                   (_UINT32_(1) << 26) /* PORT mask for PC26 */
+#define PORT_PC27                   (_UINT32_(1) << 27) /* PORT mask for PC27 */
+#define PORT_PC28                   (_UINT32_(1) << 28) /* PORT mask for PC28 */
+#define PORT_PC29                   (_UINT32_(1) << 29) /* PORT mask for PC29 */
+#define PORT_PD00                   (_UINT32_(1) << 0) /* PORT mask for PD00 */
+#define PORT_PD01                   (_UINT32_(1) << 1) /* PORT mask for PD01 */
+#define PORT_PD02                   (_UINT32_(1) << 2) /* PORT mask for PD02 */
+#define PORT_PD03                   (_UINT32_(1) << 3) /* PORT mask for PD03 */
+#define PORT_PD04                   (_UINT32_(1) << 4) /* PORT mask for PD04 */
+#define PORT_PD05                   (_UINT32_(1) << 5) /* PORT mask for PD05 */
+#define PORT_PD06                   (_UINT32_(1) << 6) /* PORT mask for PD06 */
+#define PORT_PD07                   (_UINT32_(1) << 7) /* PORT mask for PD07 */
+#define PORT_PD08                   (_UINT32_(1) << 8) /* PORT mask for PD08 */
+#define PORT_PD09                   (_UINT32_(1) << 9) /* PORT mask for PD09 */
+#define PORT_PD10                   (_UINT32_(1) << 10) /* PORT mask for PD10 */
+#define PORT_PD11                   (_UINT32_(1) << 11) /* PORT mask for PD11 */
+#define PORT_PD12                   (_UINT32_(1) << 12) /* PORT mask for PD12 */
+#define PORT_PD13                   (_UINT32_(1) << 13) /* PORT mask for PD13 */
+#define PORT_PD14                   (_UINT32_(1) << 14) /* PORT mask for PD14 */
+#define PORT_PD15                   (_UINT32_(1) << 15) /* PORT mask for PD15 */
+#define PORT_PD16                   (_UINT32_(1) << 16) /* PORT mask for PD16 */
+#define PORT_PD17                   (_UINT32_(1) << 17) /* PORT mask for PD17 */
+#define PORT_PD18                   (_UINT32_(1) << 18) /* PORT mask for PD18 */
+#define PORT_PD19                   (_UINT32_(1) << 19) /* PORT mask for PD19 */
+#define PORT_PD20                   (_UINT32_(1) << 20) /* PORT mask for PD20 */
+#define PORT_PD21                   (_UINT32_(1) << 21) /* PORT mask for PD21 */
 
-/* ========== PORT definition for AC peripheral ========== */
+/* =================== PORT definition for AC peripheral ==================== */
 #define PIN_PA06B_AC_AIN0                          _UINT32_(6) 
 #define MUX_PA06B_AC_AIN0                          _UINT32_(1) 
 #define PINMUX_PA06B_AC_AIN0                       ((PIN_PA06B_AC_AIN0 << 16) | MUX_PA06B_AC_AIN0)
@@ -293,7 +290,7 @@
 #define PINMUX_PC22M_AC_CMP1                       ((PIN_PC22M_AC_CMP1 << 16) | MUX_PC22M_AC_CMP1)
 #define PORT_PC22M_AC_CMP1                         (_UINT32_(1) << 22)
 
-/* ========== PORT definition for ADC peripheral ========== */
+/* =================== PORT definition for ADC peripheral =================== */
 #define PIN_PA05B_ADC_VINM0                        _UINT32_(5) 
 #define MUX_PA05B_ADC_VINM0                        _UINT32_(1) 
 #define PINMUX_PA05B_ADC_VINM0                     ((PIN_PA05B_ADC_VINM0 << 16) | MUX_PA05B_ADC_VINM0)
@@ -374,7 +371,28 @@
 #define PINMUX_PB01B_ADC_VREFP0                    ((PIN_PB01B_ADC_VREFP0 << 16) | MUX_PB01B_ADC_VREFP0)
 #define PORT_PB01B_ADC_VREFP0                      (_UINT32_(1) << 1)
 
-/* ========== PORT definition for CAN0 peripheral ========== */
+/* ================== PORT definition for BSDAP peripheral ================== */
+#define PIN_PA03G_BSDAP_TCK_SWCLK                  _UINT32_(3) 
+#define MUX_PA03G_BSDAP_TCK_SWCLK                  _UINT32_(6) 
+#define PINMUX_PA03G_BSDAP_TCK_SWCLK               ((PIN_PA03G_BSDAP_TCK_SWCLK << 16) | MUX_PA03G_BSDAP_TCK_SWCLK)
+#define PORT_PA03G_BSDAP_TCK_SWCLK                 (_UINT32_(1) << 3)
+
+#define PIN_PA00G_BSDAP_TDI                        _UINT32_(0) 
+#define MUX_PA00G_BSDAP_TDI                        _UINT32_(6) 
+#define PINMUX_PA00G_BSDAP_TDI                     ((PIN_PA00G_BSDAP_TDI << 16) | MUX_PA00G_BSDAP_TDI)
+#define PORT_PA00G_BSDAP_TDI                       (_UINT32_(1) << 0)
+
+#define PIN_PA01G_BSDAP_TDO                        _UINT32_(1) 
+#define MUX_PA01G_BSDAP_TDO                        _UINT32_(6) 
+#define PINMUX_PA01G_BSDAP_TDO                     ((PIN_PA01G_BSDAP_TDO << 16) | MUX_PA01G_BSDAP_TDO)
+#define PORT_PA01G_BSDAP_TDO                       (_UINT32_(1) << 1)
+
+#define PIN_PA02G_BSDAP_TMS_SWDIO                  _UINT32_(2) 
+#define MUX_PA02G_BSDAP_TMS_SWDIO                  _UINT32_(6) 
+#define PINMUX_PA02G_BSDAP_TMS_SWDIO               ((PIN_PA02G_BSDAP_TMS_SWDIO << 16) | MUX_PA02G_BSDAP_TMS_SWDIO)
+#define PORT_PA02G_BSDAP_TMS_SWDIO                 (_UINT32_(1) << 2)
+
+/* ================== PORT definition for CAN0 peripheral =================== */
 #define PIN_PB09H_CAN0_RX                          _UINT32_(41)
 #define MUX_PB09H_CAN0_RX                          _UINT32_(7) 
 #define PINMUX_PB09H_CAN0_RX                       ((PIN_PB09H_CAN0_RX << 16) | MUX_PB09H_CAN0_RX)
@@ -425,7 +443,7 @@
 #define PINMUX_PD18H_CAN0_TX                       ((PIN_PD18H_CAN0_TX << 16) | MUX_PD18H_CAN0_TX)
 #define PORT_PD18H_CAN0_TX                         (_UINT32_(1) << 18)
 
-/* ========== PORT definition for CAN1 peripheral ========== */
+/* ================== PORT definition for CAN1 peripheral =================== */
 #define PIN_PB01H_CAN1_RX                          _UINT32_(33)
 #define MUX_PB01H_CAN1_RX                          _UINT32_(7) 
 #define PINMUX_PB01H_CAN1_RX                       ((PIN_PB01H_CAN1_RX << 16) | MUX_PB01H_CAN1_RX)
@@ -466,7 +484,7 @@
 #define PINMUX_PD20H_CAN1_TX                       ((PIN_PD20H_CAN1_TX << 16) | MUX_PD20H_CAN1_TX)
 #define PORT_PD20H_CAN1_TX                         (_UINT32_(1) << 20)
 
-/* ========== PORT definition for CCL peripheral ========== */
+/* =================== PORT definition for CCL peripheral =================== */
 #define PIN_PB07M_CCL_IN0                          _UINT32_(39)
 #define MUX_PB07M_CCL_IN0                          _UINT32_(12)
 #define PINMUX_PB07M_CCL_IN0                       ((PIN_PB07M_CCL_IN0 << 16) | MUX_PB07M_CCL_IN0)
@@ -627,7 +645,7 @@
 #define PINMUX_PA16M_CCL_OUT3                      ((PIN_PA16M_CCL_OUT3 << 16) | MUX_PA16M_CCL_OUT3)
 #define PORT_PA16M_CCL_OUT3                        (_UINT32_(1) << 16)
 
-/* ========== PORT definition for EBI peripheral ========== */
+/* =================== PORT definition for EBI peripheral =================== */
 #define PIN_PC19E_EBI_A2                           _UINT32_(83)
 #define MUX_PC19E_EBI_A2                           _UINT32_(4) 
 #define PINMUX_PC19E_EBI_A2                        ((PIN_PC19E_EBI_A2 << 16) | MUX_PC19E_EBI_A2)
@@ -913,7 +931,7 @@
 #define PINMUX_PD05E_EBI_NWE_NWR0                  ((PIN_PD05E_EBI_NWE_NWR0 << 16) | MUX_PD05E_EBI_NWE_NWR0)
 #define PORT_PD05E_EBI_NWE_NWR0                    (_UINT32_(1) << 5)
 
-/* ========== PORT definition for EIC peripheral ========== */
+/* =================== PORT definition for EIC peripheral =================== */
 #define PIN_PA16A_EIC_EXTINT0                      _UINT32_(16)
 #define MUX_PA16A_EIC_EXTINT0                      _UINT32_(0) 
 #define PINMUX_PA16A_EIC_EXTINT0                   ((PIN_PA16A_EIC_EXTINT0 << 16) | MUX_PA16A_EIC_EXTINT0)
@@ -1555,7 +1573,7 @@
 #define PINMUX_PD02A_EIC_NMI                       ((PIN_PD02A_EIC_NMI << 16) | MUX_PD02A_EIC_NMI)
 #define PORT_PD02A_EIC_NMI                         (_UINT32_(1) << 2)
 
-/* ========== PORT definition for ETH peripheral ========== */
+/* =================== PORT definition for ETH peripheral =================== */
 #define PIN_PC18L_ETH_COL                          _UINT32_(82)
 #define MUX_PC18L_ETH_COL                          _UINT32_(11)
 #define PINMUX_PC18L_ETH_COL                       ((PIN_PC18L_ETH_COL << 16) | MUX_PC18L_ETH_COL)
@@ -1696,7 +1714,7 @@
 #define PINMUX_PC00L_ETH_TX_CLK                    ((PIN_PC00L_ETH_TX_CLK << 16) | MUX_PC00L_ETH_TX_CLK)
 #define PORT_PC00L_ETH_TX_CLK                      (_UINT32_(1) << 0)
 
-/* ========== PORT definition for GCLK peripheral ========== */
+/* ================== PORT definition for GCLK peripheral =================== */
 #define PIN_PA09M_GCLK_IO0                         _UINT32_(9) 
 #define MUX_PA09M_GCLK_IO0                         _UINT32_(12)
 #define PINMUX_PA09M_GCLK_IO0                      ((PIN_PA09M_GCLK_IO0 << 16) | MUX_PA09M_GCLK_IO0)
@@ -1797,7 +1815,7 @@
 #define PINMUX_PC05M_GCLK_IO7                      ((PIN_PC05M_GCLK_IO7 << 16) | MUX_PC05M_GCLK_IO7)
 #define PORT_PC05M_GCLK_IO7                        (_UINT32_(1) << 5)
 
-/* ========== PORT definition for PCC peripheral ========== */
+/* =================== PORT definition for PCC peripheral =================== */
 #define PIN_PA20K_PCC_CLK                          _UINT32_(20)
 #define MUX_PA20K_PCC_CLK                          _UINT32_(10)
 #define PINMUX_PA20K_PCC_CLK                       ((PIN_PA20K_PCC_CLK << 16) | MUX_PA20K_PCC_CLK)
@@ -1978,7 +1996,7 @@
 #define PINMUX_PD20K_PCC_DEN2                      ((PIN_PD20K_PCC_DEN2 << 16) | MUX_PD20K_PCC_DEN2)
 #define PORT_PD20K_PCC_DEN2                        (_UINT32_(1) << 20)
 
-/* ========== PORT definition for PDEC peripheral ========== */
+/* ================== PORT definition for PDEC peripheral =================== */
 #define PIN_PA20G_PDEC_QDI0                        _UINT32_(20)
 #define MUX_PA20G_PDEC_QDI0                        _UINT32_(6) 
 #define PINMUX_PA20G_PDEC_QDI0                     ((PIN_PA20G_PDEC_QDI0 << 16) | MUX_PA20G_PDEC_QDI0)
@@ -2024,7 +2042,7 @@
 #define PINMUX_PB13G_PDEC_QDI2                     ((PIN_PB13G_PDEC_QDI2 << 16) | MUX_PB13G_PDEC_QDI2)
 #define PORT_PB13G_PDEC_QDI2                       (_UINT32_(1) << 13)
 
-/* ========== PORT definition for PTC peripheral ========== */
+/* =================== PORT definition for PTC peripheral =================== */
 #define PIN_PA09N_PTC_DRV0                         _UINT32_(9) 
 #define MUX_PA09N_PTC_DRV0                         _UINT32_(13)
 #define PINMUX_PA09N_PTC_DRV0                      ((PIN_PA09N_PTC_DRV0 << 16) | MUX_PA09N_PTC_DRV0)
@@ -2195,7 +2213,7 @@
 #define PINMUX_PA19N_PTC_ECI1                      ((PIN_PA19N_PTC_ECI1 << 16) | MUX_PA19N_PTC_ECI1)
 #define PORT_PA19N_PTC_ECI1                        (_UINT32_(1) << 19)
 
-/* ========== PORT definition for SDMMC0 peripheral ========== */
+/* ================= PORT definition for SDMMC0 peripheral ================== */
 #define PIN_PA10I_SDMMC0_SDCD                      _UINT32_(10)
 #define MUX_PA10I_SDMMC0_SDCD                      _UINT32_(8) 
 #define PINMUX_PA10I_SDMMC0_SDCD                   ((PIN_PA10I_SDMMC0_SDCD << 16) | MUX_PA10I_SDMMC0_SDCD)
@@ -2251,7 +2269,7 @@
 #define PINMUX_PD05I_SDMMC0_SDWP                   ((PIN_PD05I_SDMMC0_SDWP << 16) | MUX_PD05I_SDMMC0_SDWP)
 #define PORT_PD05I_SDMMC0_SDWP                     (_UINT32_(1) << 5)
 
-/* ========== PORT definition for SDMMC1 peripheral ========== */
+/* ================= PORT definition for SDMMC1 peripheral ================== */
 #define PIN_PC04I_SDMMC1_SDCD                      _UINT32_(68)
 #define MUX_PC04I_SDMMC1_SDCD                      _UINT32_(8) 
 #define PINMUX_PC04I_SDMMC1_SDCD                   ((PIN_PC04I_SDMMC1_SDCD << 16) | MUX_PC04I_SDMMC1_SDCD)
@@ -2292,7 +2310,7 @@
 #define PINMUX_PC03I_SDMMC1_SDWP                   ((PIN_PC03I_SDMMC1_SDWP << 16) | MUX_PC03I_SDMMC1_SDWP)
 #define PORT_PC03I_SDMMC1_SDWP                     (_UINT32_(1) << 3)
 
-/* ========== PORT definition for SERCOM0 peripheral ========== */
+/* ================= PORT definition for SERCOM0 peripheral ================= */
 #define PIN_PC10C_SERCOM0_PAD0                     _UINT32_(74)
 #define MUX_PC10C_SERCOM0_PAD0                     _UINT32_(2) 
 #define PINMUX_PC10C_SERCOM0_PAD0                  ((PIN_PC10C_SERCOM0_PAD0 << 16) | MUX_PC10C_SERCOM0_PAD0)
@@ -2353,7 +2371,7 @@
 #define PINMUX_PD20C_SERCOM0_PAD3                  ((PIN_PD20C_SERCOM0_PAD3 << 16) | MUX_PD20C_SERCOM0_PAD3)
 #define PORT_PD20C_SERCOM0_PAD3                    (_UINT32_(1) << 20)
 
-/* ========== PORT definition for SERCOM1 peripheral ========== */
+/* ================= PORT definition for SERCOM1 peripheral ================= */
 #define PIN_PD08C_SERCOM1_PAD0                     _UINT32_(104)
 #define MUX_PD08C_SERCOM1_PAD0                     _UINT32_(2) 
 #define PINMUX_PD08C_SERCOM1_PAD0                  ((PIN_PD08C_SERCOM1_PAD0 << 16) | MUX_PD08C_SERCOM1_PAD0)
@@ -2394,7 +2412,7 @@
 #define PINMUX_PD16C_SERCOM1_PAD3                  ((PIN_PD16C_SERCOM1_PAD3 << 16) | MUX_PD16C_SERCOM1_PAD3)
 #define PORT_PD16C_SERCOM1_PAD3                    (_UINT32_(1) << 16)
 
-/* ========== PORT definition for SERCOM2 peripheral ========== */
+/* ================= PORT definition for SERCOM2 peripheral ================= */
 #define PIN_PC11D_SERCOM2_PAD0                     _UINT32_(75)
 #define MUX_PC11D_SERCOM2_PAD0                     _UINT32_(3) 
 #define PINMUX_PC11D_SERCOM2_PAD0                  ((PIN_PC11D_SERCOM2_PAD0 << 16) | MUX_PC11D_SERCOM2_PAD0)
@@ -2475,7 +2493,7 @@
 #define PINMUX_PC26C_SERCOM2_PAD3                  ((PIN_PC26C_SERCOM2_PAD3 << 16) | MUX_PC26C_SERCOM2_PAD3)
 #define PORT_PC26C_SERCOM2_PAD3                    (_UINT32_(1) << 26)
 
-/* ========== PORT definition for SERCOM3 peripheral ========== */
+/* ================= PORT definition for SERCOM3 peripheral ================= */
 #define PIN_PC07D_SERCOM3_PAD0                     _UINT32_(71)
 #define MUX_PC07D_SERCOM3_PAD0                     _UINT32_(3) 
 #define PINMUX_PC07D_SERCOM3_PAD0                  ((PIN_PC07D_SERCOM3_PAD0 << 16) | MUX_PC07D_SERCOM3_PAD0)
@@ -2556,7 +2574,7 @@
 #define PINMUX_PC05C_SERCOM3_PAD3                  ((PIN_PC05C_SERCOM3_PAD3 << 16) | MUX_PC05C_SERCOM3_PAD3)
 #define PORT_PC05C_SERCOM3_PAD3                    (_UINT32_(1) << 5)
 
-/* ========== PORT definition for SERCOM4 peripheral ========== */
+/* ================= PORT definition for SERCOM4 peripheral ================= */
 #define PIN_PB10D_SERCOM4_PAD0                     _UINT32_(42)
 #define MUX_PB10D_SERCOM4_PAD0                     _UINT32_(3) 
 #define PINMUX_PB10D_SERCOM4_PAD0                  ((PIN_PB10D_SERCOM4_PAD0 << 16) | MUX_PB10D_SERCOM4_PAD0)
@@ -2637,7 +2655,7 @@
 #define PINMUX_PC01C_SERCOM4_PAD3                  ((PIN_PC01C_SERCOM4_PAD3 << 16) | MUX_PC01C_SERCOM4_PAD3)
 #define PORT_PC01C_SERCOM4_PAD3                    (_UINT32_(1) << 1)
 
-/* ========== PORT definition for SERCOM5 peripheral ========== */
+/* ================= PORT definition for SERCOM5 peripheral ================= */
 #define PIN_PA05D_SERCOM5_PAD0                     _UINT32_(5) 
 #define MUX_PA05D_SERCOM5_PAD0                     _UINT32_(3) 
 #define PINMUX_PA05D_SERCOM5_PAD0                  ((PIN_PA05D_SERCOM5_PAD0 << 16) | MUX_PA05D_SERCOM5_PAD0)
@@ -2718,7 +2736,7 @@
 #define PINMUX_PB01C_SERCOM5_PAD3                  ((PIN_PB01C_SERCOM5_PAD3 << 16) | MUX_PB01C_SERCOM5_PAD3)
 #define PORT_PB01C_SERCOM5_PAD3                    (_UINT32_(1) << 1)
 
-/* ========== PORT definition for SERCOM6 peripheral ========== */
+/* ================= PORT definition for SERCOM6 peripheral ================= */
 #define PIN_PA00D_SERCOM6_PAD0                     _UINT32_(0) 
 #define MUX_PA00D_SERCOM6_PAD0                     _UINT32_(3) 
 #define PINMUX_PA00D_SERCOM6_PAD0                  ((PIN_PA00D_SERCOM6_PAD0 << 16) | MUX_PA00D_SERCOM6_PAD0)
@@ -2779,7 +2797,7 @@
 #define PINMUX_PA10C_SERCOM6_PAD3                  ((PIN_PA10C_SERCOM6_PAD3 << 16) | MUX_PA10C_SERCOM6_PAD3)
 #define PORT_PA10C_SERCOM6_PAD3                    (_UINT32_(1) << 10)
 
-/* ========== PORT definition for SERCOM7 peripheral ========== */
+/* ================= PORT definition for SERCOM7 peripheral ================= */
 #define PIN_PA12D_SERCOM7_PAD0                     _UINT32_(12)
 #define MUX_PA12D_SERCOM7_PAD0                     _UINT32_(3) 
 #define PINMUX_PA12D_SERCOM7_PAD0                  ((PIN_PA12D_SERCOM7_PAD0 << 16) | MUX_PA12D_SERCOM7_PAD0)
@@ -2860,7 +2878,7 @@
 #define PINMUX_PA23C_SERCOM7_PAD3                  ((PIN_PA23C_SERCOM7_PAD3 << 16) | MUX_PA23C_SERCOM7_PAD3)
 #define PORT_PA23C_SERCOM7_PAD3                    (_UINT32_(1) << 23)
 
-/* ========== PORT definition for SPI_IXS peripheral ========== */
+/* ================= PORT definition for SPI_IXS peripheral ================= */
 #define PIN_PA09J_SPI_IXS_FSYNC                    _UINT32_(9) 
 #define MUX_PA09J_SPI_IXS_FSYNC                    _UINT32_(9) 
 #define PINMUX_PA09J_SPI_IXS_FSYNC                 ((PIN_PA09J_SPI_IXS_FSYNC << 16) | MUX_PA09J_SPI_IXS_FSYNC)
@@ -2921,7 +2939,7 @@
 #define PINMUX_PD17J_SPI_IXS_SDO                   ((PIN_PD17J_SPI_IXS_SDO << 16) | MUX_PD17J_SPI_IXS_SDO)
 #define PORT_PD17J_SPI_IXS_SDO                     (_UINT32_(1) << 17)
 
-/* ========== PORT definition for SQI peripheral ========== */
+/* =================== PORT definition for SQI peripheral =================== */
 #define PIN_PD10H_SQI_CLK                          _UINT32_(106)
 #define MUX_PD10H_SQI_CLK                          _UINT32_(7) 
 #define PINMUX_PD10H_SQI_CLK                       ((PIN_PD10H_SQI_CLK << 16) | MUX_PD10H_SQI_CLK)
@@ -2967,7 +2985,7 @@
 #define PINMUX_PD09H_SQI_DATA3                     ((PIN_PD09H_SQI_DATA3 << 16) | MUX_PD09H_SQI_DATA3)
 #define PORT_PD09H_SQI_DATA3                       (_UINT32_(1) << 9)
 
-/* ========== PORT definition for TCC0 peripheral ========== */
+/* ================== PORT definition for TCC0 peripheral =================== */
 #define PIN_PB10G_TCC0_WO0                         _UINT32_(42)
 #define MUX_PB10G_TCC0_WO0                         _UINT32_(6) 
 #define PINMUX_PB10G_TCC0_WO0                      ((PIN_PB10G_TCC0_WO0 << 16) | MUX_PB10G_TCC0_WO0)
@@ -3048,7 +3066,7 @@
 #define PINMUX_PB22F_TCC0_WO7                      ((PIN_PB22F_TCC0_WO7 << 16) | MUX_PB22F_TCC0_WO7)
 #define PORT_PB22F_TCC0_WO7                        (_UINT32_(1) << 22)
 
-/* ========== PORT definition for TCC1 peripheral ========== */
+/* ================== PORT definition for TCC1 peripheral =================== */
 #define PIN_PC05G_TCC1_WO0                         _UINT32_(69)
 #define MUX_PC05G_TCC1_WO0                         _UINT32_(6) 
 #define PINMUX_PC05G_TCC1_WO0                      ((PIN_PC05G_TCC1_WO0 << 16) | MUX_PC05G_TCC1_WO0)
@@ -3129,7 +3147,7 @@
 #define PINMUX_PC29F_TCC1_WO7                      ((PIN_PC29F_TCC1_WO7 << 16) | MUX_PC29F_TCC1_WO7)
 #define PORT_PC29F_TCC1_WO7                        (_UINT32_(1) << 29)
 
-/* ========== PORT definition for TCC2 peripheral ========== */
+/* ================== PORT definition for TCC2 peripheral =================== */
 #define PIN_PD05G_TCC2_WO0                         _UINT32_(101)
 #define MUX_PD05G_TCC2_WO0                         _UINT32_(6) 
 #define PINMUX_PD05G_TCC2_WO0                      ((PIN_PD05G_TCC2_WO0 << 16) | MUX_PD05G_TCC2_WO0)
@@ -3210,7 +3228,7 @@
 #define PINMUX_PD14F_TCC2_WO7                      ((PIN_PD14F_TCC2_WO7 << 16) | MUX_PD14F_TCC2_WO7)
 #define PORT_PD14F_TCC2_WO7                        (_UINT32_(1) << 14)
 
-/* ========== PORT definition for TCC3 peripheral ========== */
+/* ================== PORT definition for TCC3 peripheral =================== */
 #define PIN_PA09G_TCC3_WO0                         _UINT32_(9) 
 #define MUX_PA09G_TCC3_WO0                         _UINT32_(6) 
 #define PINMUX_PA09G_TCC3_WO0                      ((PIN_PA09G_TCC3_WO0 << 16) | MUX_PA09G_TCC3_WO0)
@@ -3291,7 +3309,7 @@
 #define PINMUX_PA19F_TCC3_WO7                      ((PIN_PA19F_TCC3_WO7 << 16) | MUX_PA19F_TCC3_WO7)
 #define PORT_PA19F_TCC3_WO7                        (_UINT32_(1) << 19)
 
-/* ========== PORT definition for TCC4 peripheral ========== */
+/* ================== PORT definition for TCC4 peripheral =================== */
 #define PIN_PA11F_TCC4_WO0                         _UINT32_(11)
 #define MUX_PA11F_TCC4_WO0                         _UINT32_(5) 
 #define PINMUX_PA11F_TCC4_WO0                      ((PIN_PA11F_TCC4_WO0 << 16) | MUX_PA11F_TCC4_WO0)
@@ -3332,7 +3350,7 @@
 #define PINMUX_PB18F_TCC4_WO1                      ((PIN_PB18F_TCC4_WO1 << 16) | MUX_PB18F_TCC4_WO1)
 #define PORT_PB18F_TCC4_WO1                        (_UINT32_(1) << 18)
 
-/* ========== PORT definition for TCC5 peripheral ========== */
+/* ================== PORT definition for TCC5 peripheral =================== */
 #define PIN_PA15F_TCC5_WO0                         _UINT32_(15)
 #define MUX_PA15F_TCC5_WO0                         _UINT32_(5) 
 #define PINMUX_PA15F_TCC5_WO0                      ((PIN_PA15F_TCC5_WO0 << 16) | MUX_PA15F_TCC5_WO0)
@@ -3373,7 +3391,7 @@
 #define PINMUX_PB20F_TCC5_WO1                      ((PIN_PB20F_TCC5_WO1 << 16) | MUX_PB20F_TCC5_WO1)
 #define PORT_PB20F_TCC5_WO1                        (_UINT32_(1) << 20)
 
-/* ========== PORT definition for TCC6 peripheral ========== */
+/* ================== PORT definition for TCC6 peripheral =================== */
 #define PIN_PB16F_TCC6_WO0                         _UINT32_(48)
 #define MUX_PB16F_TCC6_WO0                         _UINT32_(5) 
 #define PINMUX_PB16F_TCC6_WO0                      ((PIN_PB16F_TCC6_WO0 << 16) | MUX_PB16F_TCC6_WO0)
@@ -3404,7 +3422,7 @@
 #define PINMUX_PC02F_TCC6_WO1                      ((PIN_PC02F_TCC6_WO1 << 16) | MUX_PC02F_TCC6_WO1)
 #define PORT_PC02F_TCC6_WO1                        (_UINT32_(1) << 2)
 
-/* ========== PORT definition for TCC7 peripheral ========== */
+/* ================== PORT definition for TCC7 peripheral =================== */
 #define PIN_PB07F_TCC7_WO0                         _UINT32_(39)
 #define MUX_PB07F_TCC7_WO0                         _UINT32_(5) 
 #define PINMUX_PB07F_TCC7_WO0                      ((PIN_PB07F_TCC7_WO0 << 16) | MUX_PB07F_TCC7_WO0)
@@ -3435,7 +3453,7 @@
 #define PINMUX_PC04F_TCC7_WO1                      ((PIN_PC04F_TCC7_WO1 << 16) | MUX_PC04F_TCC7_WO1)
 #define PORT_PC04F_TCC7_WO1                        (_UINT32_(1) << 4)
 
-/* ========== PORT definition for USB peripheral ========== */
+/* =================== PORT definition for USB peripheral =================== */
 #define PIN_PD03H_USB_DM                           _UINT32_(99)
 #define MUX_PD03H_USB_DM                           _UINT32_(7) 
 #define PINMUX_PD03H_USB_DM                        ((PIN_PD03H_USB_DM << 16) | MUX_PD03H_USB_DM)

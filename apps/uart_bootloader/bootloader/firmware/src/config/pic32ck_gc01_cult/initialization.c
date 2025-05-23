@@ -373,7 +373,7 @@ void SYS_Initialize ( void* data )
 {
     /* MISRAC 2012 deviation block start */
     /* MISRA C-2012 Rule 2.2 deviated in this file.  Deviation record ID -  H3_MISRAC_2012_R_2_2_DR_1 */
-    FCW_Initialize();
+        FCW_Initialize();
 
 
     PORT_Initialize();
@@ -391,9 +391,9 @@ void SYS_Initialize ( void* data )
     EVSYS_Initialize();
 
 	SYSTICK_TimerInitialize();
-    PM_Initialize();
-
     SERCOM5_USART_Initialize();
+
+    PM_Initialize();
 
     FCR_Initialize();
 

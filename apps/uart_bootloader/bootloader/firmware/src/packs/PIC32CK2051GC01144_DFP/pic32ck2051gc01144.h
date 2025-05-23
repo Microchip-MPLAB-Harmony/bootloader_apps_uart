@@ -1,35 +1,32 @@
 /*
  * Header file for PIC32CK2051GC01144
  *
- * Copyright (c) 2023 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2024 Microchip Technology Inc. and its subsidiaries.
  *
- * Subject to your compliance with these terms, you may use Microchip software and any derivatives
- * exclusively with Microchip products. It is your responsibility to comply with third party license
- * terms applicable to your use of third party software (including open source software) that may
- * accompany Microchip software.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
  *
- * THIS SOFTWARE IS SUPPLIED BY MICROCHIP "AS IS". NO WARRANTIES, WHETHER EXPRESS, IMPLIED OR STATUTORY,
- * APPLY TO THIS SOFTWARE, INCLUDING ANY IMPLIED WARRANTIES OF NON-INFRINGEMENT, MERCHANTABILITY, AND
- * FITNESS FOR A PARTICULAR PURPOSE.
+ *   http://www.apache.org/licenses/LICENSE-2.0
  *
- * IN NO EVENT WILL MICROCHIP BE LIABLE FOR ANY INDIRECT, SPECIAL, PUNITIVE, INCIDENTAL OR CONSEQUENTIAL
- * LOSS, DAMAGE, COST OR EXPENSE OF ANY KIND WHATSOEVER RELATED TO THE SOFTWARE, HOWEVER CAUSED, EVEN IF
- * MICROCHIP HAS BEEN ADVISED OF THE POSSIBILITY OR THE DAMAGES ARE FORESEEABLE. TO THE FULLEST EXTENT
- * ALLOWED BY LAW, MICROCHIP'S TOTAL LIABILITY ON ALL CLAIMS IN ANY WAY RELATED TO THIS SOFTWARE WILL NOT
- * EXCEED THE AMOUNT OF FEES, IF ANY, THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
  *
  */
 
-/* File generated from device description version 2023-04-05T13:26:38Z */
+/* File generated from device description file (ATDF) version 2024-04-02T09:16:01Z */
 #ifndef _PIC32CK2051GC01144_H_
 #define _PIC32CK2051GC01144_H_
 
 /* Header version uses Semantic Versioning 2.0.0 (https://semver.org/) */
-#define HEADER_FORMAT_VERSION "2.1.0"
+#define HEADER_FORMAT_VERSION "2.1.1"
 
 #define HEADER_FORMAT_VERSION_MAJOR (2)
 #define HEADER_FORMAT_VERSION_MINOR (1)
-#define HEADER_FORMAT_VERSION_PATCH (0)
+#define HEADER_FORMAT_VERSION_PATCH (1)
 
 /* PIC32CK2051GC01144 definitions
   This file defines all structures and symbols for PIC32CK2051GC01144:
@@ -67,7 +64,7 @@
 #endif /* SKIP_INTEGER_LITERALS */
 
 /* ************************************************************************** */
-/* CMSIS DEFINITIONS FOR PIC32CK2051GC01144                                 */
+/*                  CMSIS DEFINITIONS FOR PIC32CK2051GC01144                  */
 /* ************************************************************************** */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
 /* Interrupt Number Definition */
@@ -86,7 +83,7 @@ typedef enum IRQn
   PendSV_IRQn               =  -2, /* -2  Pendable request for system service */
   SysTick_IRQn              =  -1, /* -1  System Tick Timer                   */
 
-/******  PIC32CK2051GC01144 specific Interrupt Numbers ***********************************/
+/* ************* PIC32CK2051GC01144 specific Interrupt Numbers ************** */
   FCR_ERR_IRQn              =   0, /* 0   Flash Read Controller (FCR) (FCR)   */
   FCR_FLT_IRQn              =   1, /* 1   Flash Read Controller (FCR) (FCR)   */
   FCW_IRQn                  =   2, /* 2   Flash Write Control (FCW) (FCW)     */
@@ -631,7 +628,7 @@ void USBHS_Handler                 ( void );
 #endif /* USE_CMSIS_INIT */
 
 /* ************************************************************************** */
-/*   SOFTWARE PERIPHERAL API DEFINITION FOR PIC32CK2051GC01144                */
+/*         SOFTWARE PERIPHERAL API DEFINITIONS FOR PIC32CK2051GC01144         */
 /* ************************************************************************** */
 #include "component/ac.h"
 #include "component/adc.h"
@@ -665,7 +662,6 @@ void USBHS_Handler                 ( void );
 #include "component/rtc.h"
 #include "component/sdmmc.h"
 #include "component/sercom.h"
-#include "component/sig.h"
 #include "component/spi_ixs.h"
 #include "component/sqi.h"
 #include "component/supc.h"
@@ -677,7 +673,7 @@ void USBHS_Handler                 ( void );
 #include "component/wdt.h"
 
 /* ************************************************************************** */
-/*   INSTANCE DEFINITIONS FOR PIC32CK2051GC01144 */
+/*                INSTANCE DEFINITIONS FOR PIC32CK2051GC01144                 */
 /* ************************************************************************** */
 #include "instance/ac.h"
 #include "instance/adc.h"
@@ -721,7 +717,6 @@ void USBHS_Handler                 ( void );
 #include "instance/sercom5.h"
 #include "instance/sercom6.h"
 #include "instance/sercom7.h"
-#include "instance/sig.h"
 #include "instance/spi_ixs.h"
 #include "instance/sqi.h"
 #include "instance/supc.h"
@@ -740,7 +735,7 @@ void USBHS_Handler                 ( void );
 #include "instance/wdt.h"
 
 /* ************************************************************************** */
-/*  PERIPHERAL ID DEFINITIONS FOR PIC32CK2051GC01144                          */
+/*              PERIPHERAL ID DEFINITIONS FOR PIC32CK2051GC01144              */
 /* ************************************************************************** */
 #define ID_DSU           (  0) /* Instance index for DSU (DSU) */
 #define ID_FCR           (  1) /* Instance index for FCR (FCR) */
@@ -803,7 +798,7 @@ void USBHS_Handler                 ( void );
 #define ID_PERIPH_MAX    ( 97) /* Number of peripheral IDs */
 
 /* ************************************************************************** */
-/*   REGISTER STRUCTURE ADDRESS DEFINITIONS FOR PIC32CK2051GC01144            */
+/*       REGISTER STRUCTURE ADDRESS DEFINITIONS FOR PIC32CK2051GC01144        */
 /* ************************************************************************** */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
 #define AC_REGS                          ((ac_registers_t*)0x45012000)                 /* AC Registers Address         */
@@ -853,7 +848,6 @@ void USBHS_Handler                 ( void );
 #define SERCOM5_REGS                     ((sercom_registers_t*)0x45002000)             /* SERCOM5 Registers Address    */
 #define SERCOM6_REGS                     ((sercom_registers_t*)0x45004000)             /* SERCOM6 Registers Address    */
 #define SERCOM7_REGS                     ((sercom_registers_t*)0x45006000)             /* SERCOM7 Registers Address    */
-#define SIG_REGS                         ((sig_registers_t*)0xe000ef00)                /* SIG Registers Address        */
 #define SPI_IXS_REGS                     ((spi_ixs_registers_t*)0x45016000)            /* SPI_IXS Registers Address    */
 #define SQI_REGS                         ((sqi_registers_t*)0x0ffff000)                /* SQI Registers Address        */
 #define SUPC_REGS                        ((supc_registers_t*)0x44008000)               /* SUPC Registers Address       */
@@ -873,7 +867,7 @@ void USBHS_Handler                 ( void );
 #endif /* (defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 /* ************************************************************************** */
-/*   BASE ADDRESS DEFINITIONS FOR PIC32CK2051GC01144                          */
+/*              BASE ADDRESS DEFINITIONS FOR PIC32CK2051GC01144               */
 /* ************************************************************************** */
 #define AC_BASE_ADDRESS                  _UINT32_(0x45012000)                          /* AC Base Address */
 #define ADC_BASE_ADDRESS                 _UINT32_(0x45010000)                          /* ADC Base Address */
@@ -922,7 +916,6 @@ void USBHS_Handler                 ( void );
 #define SERCOM5_BASE_ADDRESS             _UINT32_(0x45002000)                          /* SERCOM5 Base Address */
 #define SERCOM6_BASE_ADDRESS             _UINT32_(0x45004000)                          /* SERCOM6 Base Address */
 #define SERCOM7_BASE_ADDRESS             _UINT32_(0x45006000)                          /* SERCOM7 Base Address */
-#define SIG_BASE_ADDRESS                 _UINT32_(0xe000ef00)                          /* SIG Base Address */
 #define SPI_IXS_BASE_ADDRESS             _UINT32_(0x45016000)                          /* SPI_IXS Base Address */
 #define SQI_BASE_ADDRESS                 _UINT32_(0x0ffff000)                          /* SQI Base Address */
 #define SUPC_BASE_ADDRESS                _UINT32_(0x44008000)                          /* SUPC Base Address */
@@ -941,12 +934,12 @@ void USBHS_Handler                 ( void );
 #define WDT_BASE_ADDRESS                 _UINT32_(0x44016000)                          /* WDT Base Address */
 
 /* ************************************************************************** */
-/*   PIO DEFINITIONS FOR PIC32CK2051GC01144                                   */
+/*                   PIO DEFINITIONS FOR PIC32CK2051GC01144                   */
 /* ************************************************************************** */
 #include "pio/pic32ck2051gc01144.h"
 
 /* ************************************************************************** */
-/*   MEMORY MAPPING DEFINITIONS FOR PIC32CK2051GC01144                        */
+/*             MEMORY MAPPING DEFINITIONS FOR PIC32CK2051GC01144              */
 /* ************************************************************************** */
 #define CMCC_DATARAM_SIZE              _UINT32_(0x00001000)    /*    4kB Memory segment type: ram */
 #define CMCC_TAGRAM_SIZE               _UINT32_(0x00000400)    /*    1kB Memory segment type: ram */
@@ -1038,16 +1031,16 @@ void USBHS_Handler                 ( void );
 #define PPB_ADDR                       _UINT32_(0xe0000000)    /* PPB base address (type: io)*/
 
 /* ************************************************************************** */
-/*   DEVICE SIGNATURES FOR PIC32CK2051GC01144                                 */
+/*                  DEVICE SIGNATURES FOR PIC32CK2051GC01144                  */
 /* ************************************************************************** */
 #define CHIP_DSU_DID                   _UINT32_(0X09503053)
 
 /* ************************************************************************** */
-/*   ELECTRICAL DEFINITIONS FOR PIC32CK2051GC01144                            */
+/*               ELECTRICAL DEFINITIONS FOR PIC32CK2051GC01144                */
 /* ************************************************************************** */
 
 /* ************************************************************************** */
-/* Event Generator IDs for C32CK2051GC01144 */
+/*                  Event Generator IDs for C32CK2051GC01144                  */
 /* ************************************************************************** */
 #define EVENT_ID_GEN_SUPC_LVDET                           1 /* ID for SUPC event generator LVDET */
 #define EVENT_ID_GEN_OSCCTRL_XOSC_FAIL                    2 /* ID for OSCCTRL event generator XOSC_FAIL */
@@ -1174,7 +1167,7 @@ void USBHS_Handler                 ( void );
 #define EVENT_ID_GEN_TRNG_READY                         125 /* ID for TRNG event generator READY */
 
 /* ************************************************************************** */
-/*  Event User IDs for C32CK2051GC01144 */
+/*                    Event User IDs for C32CK2051GC01144                     */
 /* ************************************************************************** */
 #define EVENT_ID_USER_FREQM_START                         0 /* ID for FREQM event user START */
 #define EVENT_ID_USER_RTC_TAMPER                          1 /* ID for RTC event user TAMPER */

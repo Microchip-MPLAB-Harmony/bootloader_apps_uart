@@ -1,31 +1,28 @@
 /*
  * Component description for PORT
  *
- * Copyright (c) 2023 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2024 Microchip Technology Inc. and its subsidiaries.
  *
- * Subject to your compliance with these terms, you may use Microchip software and any derivatives
- * exclusively with Microchip products. It is your responsibility to comply with third party license
- * terms applicable to your use of third party software (including open source software) that may
- * accompany Microchip software.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
  *
- * THIS SOFTWARE IS SUPPLIED BY MICROCHIP "AS IS". NO WARRANTIES, WHETHER EXPRESS, IMPLIED OR STATUTORY,
- * APPLY TO THIS SOFTWARE, INCLUDING ANY IMPLIED WARRANTIES OF NON-INFRINGEMENT, MERCHANTABILITY, AND
- * FITNESS FOR A PARTICULAR PURPOSE.
+ *   http://www.apache.org/licenses/LICENSE-2.0
  *
- * IN NO EVENT WILL MICROCHIP BE LIABLE FOR ANY INDIRECT, SPECIAL, PUNITIVE, INCIDENTAL OR CONSEQUENTIAL
- * LOSS, DAMAGE, COST OR EXPENSE OF ANY KIND WHATSOEVER RELATED TO THE SOFTWARE, HOWEVER CAUSED, EVEN IF
- * MICROCHIP HAS BEEN ADVISED OF THE POSSIBILITY OR THE DAMAGES ARE FORESEEABLE. TO THE FULLEST EXTENT
- * ALLOWED BY LAW, MICROCHIP'S TOTAL LIABILITY ON ALL CLAIMS IN ANY WAY RELATED TO THIS SOFTWARE WILL NOT
- * EXCEED THE AMOUNT OF FEES, IF ANY, THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
  *
  */
 
-/* file generated from device description version 2023-04-05T13:26:38Z */
+/*  file generated from device description file (ATDF) version 2024-04-02T09:16:01Z  */
 #ifndef _PIC32CKGC01_PORT_COMPONENT_H_
 #define _PIC32CKGC01_PORT_COMPONENT_H_
 
 /* ************************************************************************** */
-/*   SOFTWARE API DEFINITION FOR PORT                                         */
+/*                      SOFTWARE API DEFINITION FOR PORT                      */
 /* ************************************************************************** */
 
 /* -------- PORT_DIR : (PORT Offset: 0x00) (R/W 32) Data Direction -------- */
@@ -33,7 +30,7 @@
 
 #define PORT_DIR_DIR_Pos                      _UINT32_(0)                                          /* (PORT_DIR) Port Data Direction Position */
 #define PORT_DIR_DIR_Msk                      (_UINT32_(0xFFFFFFFF) << PORT_DIR_DIR_Pos)           /* (PORT_DIR) Port Data Direction Mask */
-#define PORT_DIR_DIR(value)                   (PORT_DIR_DIR_Msk & (_UINT32_(value) << PORT_DIR_DIR_Pos)) /* Assigment of value for DIR in the PORT_DIR register */
+#define PORT_DIR_DIR(value)                   (PORT_DIR_DIR_Msk & (_UINT32_(value) << PORT_DIR_DIR_Pos)) /* Assignment of value for DIR in the PORT_DIR register */
 #define PORT_DIR_Msk                          _UINT32_(0xFFFFFFFF)                                 /* (PORT_DIR) Register Mask  */
 
 
@@ -42,7 +39,7 @@
 
 #define PORT_DIRCLR_DIRCLR_Pos                _UINT32_(0)                                          /* (PORT_DIRCLR) Port Data Direction Clear Position */
 #define PORT_DIRCLR_DIRCLR_Msk                (_UINT32_(0xFFFFFFFF) << PORT_DIRCLR_DIRCLR_Pos)     /* (PORT_DIRCLR) Port Data Direction Clear Mask */
-#define PORT_DIRCLR_DIRCLR(value)             (PORT_DIRCLR_DIRCLR_Msk & (_UINT32_(value) << PORT_DIRCLR_DIRCLR_Pos)) /* Assigment of value for DIRCLR in the PORT_DIRCLR register */
+#define PORT_DIRCLR_DIRCLR(value)             (PORT_DIRCLR_DIRCLR_Msk & (_UINT32_(value) << PORT_DIRCLR_DIRCLR_Pos)) /* Assignment of value for DIRCLR in the PORT_DIRCLR register */
 #define PORT_DIRCLR_Msk                       _UINT32_(0xFFFFFFFF)                                 /* (PORT_DIRCLR) Register Mask  */
 
 
@@ -51,7 +48,7 @@
 
 #define PORT_DIRSET_DIRSET_Pos                _UINT32_(0)                                          /* (PORT_DIRSET) Port Data Direction Set Position */
 #define PORT_DIRSET_DIRSET_Msk                (_UINT32_(0xFFFFFFFF) << PORT_DIRSET_DIRSET_Pos)     /* (PORT_DIRSET) Port Data Direction Set Mask */
-#define PORT_DIRSET_DIRSET(value)             (PORT_DIRSET_DIRSET_Msk & (_UINT32_(value) << PORT_DIRSET_DIRSET_Pos)) /* Assigment of value for DIRSET in the PORT_DIRSET register */
+#define PORT_DIRSET_DIRSET(value)             (PORT_DIRSET_DIRSET_Msk & (_UINT32_(value) << PORT_DIRSET_DIRSET_Pos)) /* Assignment of value for DIRSET in the PORT_DIRSET register */
 #define PORT_DIRSET_Msk                       _UINT32_(0xFFFFFFFF)                                 /* (PORT_DIRSET) Register Mask  */
 
 
@@ -60,7 +57,7 @@
 
 #define PORT_DIRTGL_DIRTGL_Pos                _UINT32_(0)                                          /* (PORT_DIRTGL) Port Data Direction Toggle Position */
 #define PORT_DIRTGL_DIRTGL_Msk                (_UINT32_(0xFFFFFFFF) << PORT_DIRTGL_DIRTGL_Pos)     /* (PORT_DIRTGL) Port Data Direction Toggle Mask */
-#define PORT_DIRTGL_DIRTGL(value)             (PORT_DIRTGL_DIRTGL_Msk & (_UINT32_(value) << PORT_DIRTGL_DIRTGL_Pos)) /* Assigment of value for DIRTGL in the PORT_DIRTGL register */
+#define PORT_DIRTGL_DIRTGL(value)             (PORT_DIRTGL_DIRTGL_Msk & (_UINT32_(value) << PORT_DIRTGL_DIRTGL_Pos)) /* Assignment of value for DIRTGL in the PORT_DIRTGL register */
 #define PORT_DIRTGL_Msk                       _UINT32_(0xFFFFFFFF)                                 /* (PORT_DIRTGL) Register Mask  */
 
 
@@ -69,7 +66,7 @@
 
 #define PORT_OUT_OUT_Pos                      _UINT32_(0)                                          /* (PORT_OUT) PORT Data Output Value Position */
 #define PORT_OUT_OUT_Msk                      (_UINT32_(0xFFFFFFFF) << PORT_OUT_OUT_Pos)           /* (PORT_OUT) PORT Data Output Value Mask */
-#define PORT_OUT_OUT(value)                   (PORT_OUT_OUT_Msk & (_UINT32_(value) << PORT_OUT_OUT_Pos)) /* Assigment of value for OUT in the PORT_OUT register */
+#define PORT_OUT_OUT(value)                   (PORT_OUT_OUT_Msk & (_UINT32_(value) << PORT_OUT_OUT_Pos)) /* Assignment of value for OUT in the PORT_OUT register */
 #define PORT_OUT_Msk                          _UINT32_(0xFFFFFFFF)                                 /* (PORT_OUT) Register Mask  */
 
 
@@ -78,7 +75,7 @@
 
 #define PORT_OUTCLR_OUTCLR_Pos                _UINT32_(0)                                          /* (PORT_OUTCLR) PORT Data Output Value Clear Position */
 #define PORT_OUTCLR_OUTCLR_Msk                (_UINT32_(0xFFFFFFFF) << PORT_OUTCLR_OUTCLR_Pos)     /* (PORT_OUTCLR) PORT Data Output Value Clear Mask */
-#define PORT_OUTCLR_OUTCLR(value)             (PORT_OUTCLR_OUTCLR_Msk & (_UINT32_(value) << PORT_OUTCLR_OUTCLR_Pos)) /* Assigment of value for OUTCLR in the PORT_OUTCLR register */
+#define PORT_OUTCLR_OUTCLR(value)             (PORT_OUTCLR_OUTCLR_Msk & (_UINT32_(value) << PORT_OUTCLR_OUTCLR_Pos)) /* Assignment of value for OUTCLR in the PORT_OUTCLR register */
 #define PORT_OUTCLR_Msk                       _UINT32_(0xFFFFFFFF)                                 /* (PORT_OUTCLR) Register Mask  */
 
 
@@ -87,7 +84,7 @@
 
 #define PORT_OUTSET_OUTSET_Pos                _UINT32_(0)                                          /* (PORT_OUTSET) PORT Data Output Value Set Position */
 #define PORT_OUTSET_OUTSET_Msk                (_UINT32_(0xFFFFFFFF) << PORT_OUTSET_OUTSET_Pos)     /* (PORT_OUTSET) PORT Data Output Value Set Mask */
-#define PORT_OUTSET_OUTSET(value)             (PORT_OUTSET_OUTSET_Msk & (_UINT32_(value) << PORT_OUTSET_OUTSET_Pos)) /* Assigment of value for OUTSET in the PORT_OUTSET register */
+#define PORT_OUTSET_OUTSET(value)             (PORT_OUTSET_OUTSET_Msk & (_UINT32_(value) << PORT_OUTSET_OUTSET_Pos)) /* Assignment of value for OUTSET in the PORT_OUTSET register */
 #define PORT_OUTSET_Msk                       _UINT32_(0xFFFFFFFF)                                 /* (PORT_OUTSET) Register Mask  */
 
 
@@ -96,7 +93,7 @@
 
 #define PORT_OUTTGL_OUTTGL_Pos                _UINT32_(0)                                          /* (PORT_OUTTGL) PORT Data Output Value Toggle Position */
 #define PORT_OUTTGL_OUTTGL_Msk                (_UINT32_(0xFFFFFFFF) << PORT_OUTTGL_OUTTGL_Pos)     /* (PORT_OUTTGL) PORT Data Output Value Toggle Mask */
-#define PORT_OUTTGL_OUTTGL(value)             (PORT_OUTTGL_OUTTGL_Msk & (_UINT32_(value) << PORT_OUTTGL_OUTTGL_Pos)) /* Assigment of value for OUTTGL in the PORT_OUTTGL register */
+#define PORT_OUTTGL_OUTTGL(value)             (PORT_OUTTGL_OUTTGL_Msk & (_UINT32_(value) << PORT_OUTTGL_OUTTGL_Pos)) /* Assignment of value for OUTTGL in the PORT_OUTTGL register */
 #define PORT_OUTTGL_Msk                       _UINT32_(0xFFFFFFFF)                                 /* (PORT_OUTTGL) Register Mask  */
 
 
@@ -105,7 +102,7 @@
 
 #define PORT_IN_IN_Pos                        _UINT32_(0)                                          /* (PORT_IN) PORT Data Input Value Position */
 #define PORT_IN_IN_Msk                        (_UINT32_(0xFFFFFFFF) << PORT_IN_IN_Pos)             /* (PORT_IN) PORT Data Input Value Mask */
-#define PORT_IN_IN(value)                     (PORT_IN_IN_Msk & (_UINT32_(value) << PORT_IN_IN_Pos)) /* Assigment of value for IN in the PORT_IN register */
+#define PORT_IN_IN(value)                     (PORT_IN_IN_Msk & (_UINT32_(value) << PORT_IN_IN_Pos)) /* Assignment of value for IN in the PORT_IN register */
 #define PORT_IN_Msk                           _UINT32_(0xFFFFFFFF)                                 /* (PORT_IN) Register Mask  */
 
 
@@ -114,7 +111,7 @@
 
 #define PORT_CTRL_SAMPLING_Pos                _UINT32_(0)                                          /* (PORT_CTRL) Input Sampling Mode Position */
 #define PORT_CTRL_SAMPLING_Msk                (_UINT32_(0xFFFFFFFF) << PORT_CTRL_SAMPLING_Pos)     /* (PORT_CTRL) Input Sampling Mode Mask */
-#define PORT_CTRL_SAMPLING(value)             (PORT_CTRL_SAMPLING_Msk & (_UINT32_(value) << PORT_CTRL_SAMPLING_Pos)) /* Assigment of value for SAMPLING in the PORT_CTRL register */
+#define PORT_CTRL_SAMPLING(value)             (PORT_CTRL_SAMPLING_Msk & (_UINT32_(value) << PORT_CTRL_SAMPLING_Pos)) /* Assignment of value for SAMPLING in the PORT_CTRL register */
 #define PORT_CTRL_Msk                         _UINT32_(0xFFFFFFFF)                                 /* (PORT_CTRL) Register Mask  */
 
 
@@ -123,34 +120,34 @@
 
 #define PORT_WRCONFIG_PINMASK_Pos             _UINT32_(0)                                          /* (PORT_WRCONFIG) Pin Mask for Multiple Pin Configuration Position */
 #define PORT_WRCONFIG_PINMASK_Msk             (_UINT32_(0xFFFF) << PORT_WRCONFIG_PINMASK_Pos)      /* (PORT_WRCONFIG) Pin Mask for Multiple Pin Configuration Mask */
-#define PORT_WRCONFIG_PINMASK(value)          (PORT_WRCONFIG_PINMASK_Msk & (_UINT32_(value) << PORT_WRCONFIG_PINMASK_Pos)) /* Assigment of value for PINMASK in the PORT_WRCONFIG register */
+#define PORT_WRCONFIG_PINMASK(value)          (PORT_WRCONFIG_PINMASK_Msk & (_UINT32_(value) << PORT_WRCONFIG_PINMASK_Pos)) /* Assignment of value for PINMASK in the PORT_WRCONFIG register */
 #define PORT_WRCONFIG_PMUXEN_Pos              _UINT32_(16)                                         /* (PORT_WRCONFIG) Peripheral Multiplexer Enable Position */
 #define PORT_WRCONFIG_PMUXEN_Msk              (_UINT32_(0x1) << PORT_WRCONFIG_PMUXEN_Pos)          /* (PORT_WRCONFIG) Peripheral Multiplexer Enable Mask */
-#define PORT_WRCONFIG_PMUXEN(value)           (PORT_WRCONFIG_PMUXEN_Msk & (_UINT32_(value) << PORT_WRCONFIG_PMUXEN_Pos)) /* Assigment of value for PMUXEN in the PORT_WRCONFIG register */
+#define PORT_WRCONFIG_PMUXEN(value)           (PORT_WRCONFIG_PMUXEN_Msk & (_UINT32_(value) << PORT_WRCONFIG_PMUXEN_Pos)) /* Assignment of value for PMUXEN in the PORT_WRCONFIG register */
 #define PORT_WRCONFIG_INEN_Pos                _UINT32_(17)                                         /* (PORT_WRCONFIG) Input Enable Position */
 #define PORT_WRCONFIG_INEN_Msk                (_UINT32_(0x1) << PORT_WRCONFIG_INEN_Pos)            /* (PORT_WRCONFIG) Input Enable Mask */
-#define PORT_WRCONFIG_INEN(value)             (PORT_WRCONFIG_INEN_Msk & (_UINT32_(value) << PORT_WRCONFIG_INEN_Pos)) /* Assigment of value for INEN in the PORT_WRCONFIG register */
+#define PORT_WRCONFIG_INEN(value)             (PORT_WRCONFIG_INEN_Msk & (_UINT32_(value) << PORT_WRCONFIG_INEN_Pos)) /* Assignment of value for INEN in the PORT_WRCONFIG register */
 #define PORT_WRCONFIG_PULLEN_Pos              _UINT32_(18)                                         /* (PORT_WRCONFIG) Pull Enable Position */
 #define PORT_WRCONFIG_PULLEN_Msk              (_UINT32_(0x1) << PORT_WRCONFIG_PULLEN_Pos)          /* (PORT_WRCONFIG) Pull Enable Mask */
-#define PORT_WRCONFIG_PULLEN(value)           (PORT_WRCONFIG_PULLEN_Msk & (_UINT32_(value) << PORT_WRCONFIG_PULLEN_Pos)) /* Assigment of value for PULLEN in the PORT_WRCONFIG register */
+#define PORT_WRCONFIG_PULLEN(value)           (PORT_WRCONFIG_PULLEN_Msk & (_UINT32_(value) << PORT_WRCONFIG_PULLEN_Pos)) /* Assignment of value for PULLEN in the PORT_WRCONFIG register */
 #define PORT_WRCONFIG_ODRAIN_Pos              _UINT32_(19)                                         /* (PORT_WRCONFIG) Open Drain Output Position */
 #define PORT_WRCONFIG_ODRAIN_Msk              (_UINT32_(0x1) << PORT_WRCONFIG_ODRAIN_Pos)          /* (PORT_WRCONFIG) Open Drain Output Mask */
-#define PORT_WRCONFIG_ODRAIN(value)           (PORT_WRCONFIG_ODRAIN_Msk & (_UINT32_(value) << PORT_WRCONFIG_ODRAIN_Pos)) /* Assigment of value for ODRAIN in the PORT_WRCONFIG register */
+#define PORT_WRCONFIG_ODRAIN(value)           (PORT_WRCONFIG_ODRAIN_Msk & (_UINT32_(value) << PORT_WRCONFIG_ODRAIN_Pos)) /* Assignment of value for ODRAIN in the PORT_WRCONFIG register */
 #define PORT_WRCONFIG_SLEWLIM_Pos             _UINT32_(20)                                         /* (PORT_WRCONFIG) Output Driver Slew Rate Selection Position */
 #define PORT_WRCONFIG_SLEWLIM_Msk             (_UINT32_(0x3) << PORT_WRCONFIG_SLEWLIM_Pos)         /* (PORT_WRCONFIG) Output Driver Slew Rate Selection Mask */
-#define PORT_WRCONFIG_SLEWLIM(value)          (PORT_WRCONFIG_SLEWLIM_Msk & (_UINT32_(value) << PORT_WRCONFIG_SLEWLIM_Pos)) /* Assigment of value for SLEWLIM in the PORT_WRCONFIG register */
+#define PORT_WRCONFIG_SLEWLIM(value)          (PORT_WRCONFIG_SLEWLIM_Msk & (_UINT32_(value) << PORT_WRCONFIG_SLEWLIM_Pos)) /* Assignment of value for SLEWLIM in the PORT_WRCONFIG register */
 #define PORT_WRCONFIG_PMUX_Pos                _UINT32_(24)                                         /* (PORT_WRCONFIG) Peripheral Multiplexing Position */
 #define PORT_WRCONFIG_PMUX_Msk                (_UINT32_(0xF) << PORT_WRCONFIG_PMUX_Pos)            /* (PORT_WRCONFIG) Peripheral Multiplexing Mask */
-#define PORT_WRCONFIG_PMUX(value)             (PORT_WRCONFIG_PMUX_Msk & (_UINT32_(value) << PORT_WRCONFIG_PMUX_Pos)) /* Assigment of value for PMUX in the PORT_WRCONFIG register */
+#define PORT_WRCONFIG_PMUX(value)             (PORT_WRCONFIG_PMUX_Msk & (_UINT32_(value) << PORT_WRCONFIG_PMUX_Pos)) /* Assignment of value for PMUX in the PORT_WRCONFIG register */
 #define PORT_WRCONFIG_WRPMUX_Pos              _UINT32_(28)                                         /* (PORT_WRCONFIG) Write PMUX Position */
 #define PORT_WRCONFIG_WRPMUX_Msk              (_UINT32_(0x1) << PORT_WRCONFIG_WRPMUX_Pos)          /* (PORT_WRCONFIG) Write PMUX Mask */
-#define PORT_WRCONFIG_WRPMUX(value)           (PORT_WRCONFIG_WRPMUX_Msk & (_UINT32_(value) << PORT_WRCONFIG_WRPMUX_Pos)) /* Assigment of value for WRPMUX in the PORT_WRCONFIG register */
+#define PORT_WRCONFIG_WRPMUX(value)           (PORT_WRCONFIG_WRPMUX_Msk & (_UINT32_(value) << PORT_WRCONFIG_WRPMUX_Pos)) /* Assignment of value for WRPMUX in the PORT_WRCONFIG register */
 #define PORT_WRCONFIG_WRPINCFG_Pos            _UINT32_(30)                                         /* (PORT_WRCONFIG) Write PINCFG Position */
 #define PORT_WRCONFIG_WRPINCFG_Msk            (_UINT32_(0x1) << PORT_WRCONFIG_WRPINCFG_Pos)        /* (PORT_WRCONFIG) Write PINCFG Mask */
-#define PORT_WRCONFIG_WRPINCFG(value)         (PORT_WRCONFIG_WRPINCFG_Msk & (_UINT32_(value) << PORT_WRCONFIG_WRPINCFG_Pos)) /* Assigment of value for WRPINCFG in the PORT_WRCONFIG register */
+#define PORT_WRCONFIG_WRPINCFG(value)         (PORT_WRCONFIG_WRPINCFG_Msk & (_UINT32_(value) << PORT_WRCONFIG_WRPINCFG_Pos)) /* Assignment of value for WRPINCFG in the PORT_WRCONFIG register */
 #define PORT_WRCONFIG_HWSEL_Pos               _UINT32_(31)                                         /* (PORT_WRCONFIG) Half-Word Select Position */
 #define PORT_WRCONFIG_HWSEL_Msk               (_UINT32_(0x1) << PORT_WRCONFIG_HWSEL_Pos)           /* (PORT_WRCONFIG) Half-Word Select Mask */
-#define PORT_WRCONFIG_HWSEL(value)            (PORT_WRCONFIG_HWSEL_Msk & (_UINT32_(value) << PORT_WRCONFIG_HWSEL_Pos)) /* Assigment of value for HWSEL in the PORT_WRCONFIG register */
+#define PORT_WRCONFIG_HWSEL(value)            (PORT_WRCONFIG_HWSEL_Msk & (_UINT32_(value) << PORT_WRCONFIG_HWSEL_Pos)) /* Assignment of value for HWSEL in the PORT_WRCONFIG register */
 #define PORT_WRCONFIG_Msk                     _UINT32_(0xDF3FFFFF)                                 /* (PORT_WRCONFIG) Register Mask  */
 
 
@@ -159,48 +156,48 @@
 
 #define PORT_EVCTRL_PID0_Pos                  _UINT32_(0)                                          /* (PORT_EVCTRL) PORT Event Pin Identifier 0 Position */
 #define PORT_EVCTRL_PID0_Msk                  (_UINT32_(0x1F) << PORT_EVCTRL_PID0_Pos)             /* (PORT_EVCTRL) PORT Event Pin Identifier 0 Mask */
-#define PORT_EVCTRL_PID0(value)               (PORT_EVCTRL_PID0_Msk & (_UINT32_(value) << PORT_EVCTRL_PID0_Pos)) /* Assigment of value for PID0 in the PORT_EVCTRL register */
+#define PORT_EVCTRL_PID0(value)               (PORT_EVCTRL_PID0_Msk & (_UINT32_(value) << PORT_EVCTRL_PID0_Pos)) /* Assignment of value for PID0 in the PORT_EVCTRL register */
 #define PORT_EVCTRL_EVACT0_Pos                _UINT32_(5)                                          /* (PORT_EVCTRL) PORT Event Action 0 Position */
 #define PORT_EVCTRL_EVACT0_Msk                (_UINT32_(0x3) << PORT_EVCTRL_EVACT0_Pos)            /* (PORT_EVCTRL) PORT Event Action 0 Mask */
-#define PORT_EVCTRL_EVACT0(value)             (PORT_EVCTRL_EVACT0_Msk & (_UINT32_(value) << PORT_EVCTRL_EVACT0_Pos)) /* Assigment of value for EVACT0 in the PORT_EVCTRL register */
+#define PORT_EVCTRL_EVACT0(value)             (PORT_EVCTRL_EVACT0_Msk & (_UINT32_(value) << PORT_EVCTRL_EVACT0_Pos)) /* Assignment of value for EVACT0 in the PORT_EVCTRL register */
 #define   PORT_EVCTRL_EVACT0_OUT_Val          _UINT32_(0x0)                                        /* (PORT_EVCTRL) Event output to pin  */
 #define   PORT_EVCTRL_EVACT0_SET_Val          _UINT32_(0x1)                                        /* (PORT_EVCTRL) Set output register of pin on event  */
 #define   PORT_EVCTRL_EVACT0_CLR_Val          _UINT32_(0x2)                                        /* (PORT_EVCTRL) Clear output register of pin on event  */
 #define   PORT_EVCTRL_EVACT0_TGL_Val          _UINT32_(0x3)                                        /* (PORT_EVCTRL) Toggle output register of pin on event  */
-#define PORT_EVCTRL_EVACT0_OUT                (PORT_EVCTRL_EVACT0_OUT_Val << PORT_EVCTRL_EVACT0_Pos) /* (PORT_EVCTRL) Event output to pin Position  */
-#define PORT_EVCTRL_EVACT0_SET                (PORT_EVCTRL_EVACT0_SET_Val << PORT_EVCTRL_EVACT0_Pos) /* (PORT_EVCTRL) Set output register of pin on event Position  */
-#define PORT_EVCTRL_EVACT0_CLR                (PORT_EVCTRL_EVACT0_CLR_Val << PORT_EVCTRL_EVACT0_Pos) /* (PORT_EVCTRL) Clear output register of pin on event Position  */
-#define PORT_EVCTRL_EVACT0_TGL                (PORT_EVCTRL_EVACT0_TGL_Val << PORT_EVCTRL_EVACT0_Pos) /* (PORT_EVCTRL) Toggle output register of pin on event Position  */
+#define PORT_EVCTRL_EVACT0_OUT                (PORT_EVCTRL_EVACT0_OUT_Val << PORT_EVCTRL_EVACT0_Pos) /* (PORT_EVCTRL) Event output to pin Position */
+#define PORT_EVCTRL_EVACT0_SET                (PORT_EVCTRL_EVACT0_SET_Val << PORT_EVCTRL_EVACT0_Pos) /* (PORT_EVCTRL) Set output register of pin on event Position */
+#define PORT_EVCTRL_EVACT0_CLR                (PORT_EVCTRL_EVACT0_CLR_Val << PORT_EVCTRL_EVACT0_Pos) /* (PORT_EVCTRL) Clear output register of pin on event Position */
+#define PORT_EVCTRL_EVACT0_TGL                (PORT_EVCTRL_EVACT0_TGL_Val << PORT_EVCTRL_EVACT0_Pos) /* (PORT_EVCTRL) Toggle output register of pin on event Position */
 #define PORT_EVCTRL_PORTEI0_Pos               _UINT32_(7)                                          /* (PORT_EVCTRL) PORT Event Input Enable 0 Position */
 #define PORT_EVCTRL_PORTEI0_Msk               (_UINT32_(0x1) << PORT_EVCTRL_PORTEI0_Pos)           /* (PORT_EVCTRL) PORT Event Input Enable 0 Mask */
-#define PORT_EVCTRL_PORTEI0(value)            (PORT_EVCTRL_PORTEI0_Msk & (_UINT32_(value) << PORT_EVCTRL_PORTEI0_Pos)) /* Assigment of value for PORTEI0 in the PORT_EVCTRL register */
+#define PORT_EVCTRL_PORTEI0(value)            (PORT_EVCTRL_PORTEI0_Msk & (_UINT32_(value) << PORT_EVCTRL_PORTEI0_Pos)) /* Assignment of value for PORTEI0 in the PORT_EVCTRL register */
 #define PORT_EVCTRL_PID1_Pos                  _UINT32_(8)                                          /* (PORT_EVCTRL) PORT Event Pin Identifier 1 Position */
 #define PORT_EVCTRL_PID1_Msk                  (_UINT32_(0x1F) << PORT_EVCTRL_PID1_Pos)             /* (PORT_EVCTRL) PORT Event Pin Identifier 1 Mask */
-#define PORT_EVCTRL_PID1(value)               (PORT_EVCTRL_PID1_Msk & (_UINT32_(value) << PORT_EVCTRL_PID1_Pos)) /* Assigment of value for PID1 in the PORT_EVCTRL register */
+#define PORT_EVCTRL_PID1(value)               (PORT_EVCTRL_PID1_Msk & (_UINT32_(value) << PORT_EVCTRL_PID1_Pos)) /* Assignment of value for PID1 in the PORT_EVCTRL register */
 #define PORT_EVCTRL_EVACT1_Pos                _UINT32_(13)                                         /* (PORT_EVCTRL) PORT Event Action 1 Position */
 #define PORT_EVCTRL_EVACT1_Msk                (_UINT32_(0x3) << PORT_EVCTRL_EVACT1_Pos)            /* (PORT_EVCTRL) PORT Event Action 1 Mask */
-#define PORT_EVCTRL_EVACT1(value)             (PORT_EVCTRL_EVACT1_Msk & (_UINT32_(value) << PORT_EVCTRL_EVACT1_Pos)) /* Assigment of value for EVACT1 in the PORT_EVCTRL register */
+#define PORT_EVCTRL_EVACT1(value)             (PORT_EVCTRL_EVACT1_Msk & (_UINT32_(value) << PORT_EVCTRL_EVACT1_Pos)) /* Assignment of value for EVACT1 in the PORT_EVCTRL register */
 #define PORT_EVCTRL_PORTEI1_Pos               _UINT32_(15)                                         /* (PORT_EVCTRL) PORT Event Input Enable 1 Position */
 #define PORT_EVCTRL_PORTEI1_Msk               (_UINT32_(0x1) << PORT_EVCTRL_PORTEI1_Pos)           /* (PORT_EVCTRL) PORT Event Input Enable 1 Mask */
-#define PORT_EVCTRL_PORTEI1(value)            (PORT_EVCTRL_PORTEI1_Msk & (_UINT32_(value) << PORT_EVCTRL_PORTEI1_Pos)) /* Assigment of value for PORTEI1 in the PORT_EVCTRL register */
+#define PORT_EVCTRL_PORTEI1(value)            (PORT_EVCTRL_PORTEI1_Msk & (_UINT32_(value) << PORT_EVCTRL_PORTEI1_Pos)) /* Assignment of value for PORTEI1 in the PORT_EVCTRL register */
 #define PORT_EVCTRL_PID2_Pos                  _UINT32_(16)                                         /* (PORT_EVCTRL) PORT Event Pin Identifier 2 Position */
 #define PORT_EVCTRL_PID2_Msk                  (_UINT32_(0x1F) << PORT_EVCTRL_PID2_Pos)             /* (PORT_EVCTRL) PORT Event Pin Identifier 2 Mask */
-#define PORT_EVCTRL_PID2(value)               (PORT_EVCTRL_PID2_Msk & (_UINT32_(value) << PORT_EVCTRL_PID2_Pos)) /* Assigment of value for PID2 in the PORT_EVCTRL register */
+#define PORT_EVCTRL_PID2(value)               (PORT_EVCTRL_PID2_Msk & (_UINT32_(value) << PORT_EVCTRL_PID2_Pos)) /* Assignment of value for PID2 in the PORT_EVCTRL register */
 #define PORT_EVCTRL_EVACT2_Pos                _UINT32_(21)                                         /* (PORT_EVCTRL) PORT Event Action 2 Position */
 #define PORT_EVCTRL_EVACT2_Msk                (_UINT32_(0x3) << PORT_EVCTRL_EVACT2_Pos)            /* (PORT_EVCTRL) PORT Event Action 2 Mask */
-#define PORT_EVCTRL_EVACT2(value)             (PORT_EVCTRL_EVACT2_Msk & (_UINT32_(value) << PORT_EVCTRL_EVACT2_Pos)) /* Assigment of value for EVACT2 in the PORT_EVCTRL register */
+#define PORT_EVCTRL_EVACT2(value)             (PORT_EVCTRL_EVACT2_Msk & (_UINT32_(value) << PORT_EVCTRL_EVACT2_Pos)) /* Assignment of value for EVACT2 in the PORT_EVCTRL register */
 #define PORT_EVCTRL_PORTEI2_Pos               _UINT32_(23)                                         /* (PORT_EVCTRL) PORT Event Input Enable 2 Position */
 #define PORT_EVCTRL_PORTEI2_Msk               (_UINT32_(0x1) << PORT_EVCTRL_PORTEI2_Pos)           /* (PORT_EVCTRL) PORT Event Input Enable 2 Mask */
-#define PORT_EVCTRL_PORTEI2(value)            (PORT_EVCTRL_PORTEI2_Msk & (_UINT32_(value) << PORT_EVCTRL_PORTEI2_Pos)) /* Assigment of value for PORTEI2 in the PORT_EVCTRL register */
+#define PORT_EVCTRL_PORTEI2(value)            (PORT_EVCTRL_PORTEI2_Msk & (_UINT32_(value) << PORT_EVCTRL_PORTEI2_Pos)) /* Assignment of value for PORTEI2 in the PORT_EVCTRL register */
 #define PORT_EVCTRL_PID3_Pos                  _UINT32_(24)                                         /* (PORT_EVCTRL) PORT Event Pin Identifier 3 Position */
 #define PORT_EVCTRL_PID3_Msk                  (_UINT32_(0x1F) << PORT_EVCTRL_PID3_Pos)             /* (PORT_EVCTRL) PORT Event Pin Identifier 3 Mask */
-#define PORT_EVCTRL_PID3(value)               (PORT_EVCTRL_PID3_Msk & (_UINT32_(value) << PORT_EVCTRL_PID3_Pos)) /* Assigment of value for PID3 in the PORT_EVCTRL register */
+#define PORT_EVCTRL_PID3(value)               (PORT_EVCTRL_PID3_Msk & (_UINT32_(value) << PORT_EVCTRL_PID3_Pos)) /* Assignment of value for PID3 in the PORT_EVCTRL register */
 #define PORT_EVCTRL_EVACT3_Pos                _UINT32_(29)                                         /* (PORT_EVCTRL) PORT Event Action 3 Position */
 #define PORT_EVCTRL_EVACT3_Msk                (_UINT32_(0x3) << PORT_EVCTRL_EVACT3_Pos)            /* (PORT_EVCTRL) PORT Event Action 3 Mask */
-#define PORT_EVCTRL_EVACT3(value)             (PORT_EVCTRL_EVACT3_Msk & (_UINT32_(value) << PORT_EVCTRL_EVACT3_Pos)) /* Assigment of value for EVACT3 in the PORT_EVCTRL register */
+#define PORT_EVCTRL_EVACT3(value)             (PORT_EVCTRL_EVACT3_Msk & (_UINT32_(value) << PORT_EVCTRL_EVACT3_Pos)) /* Assignment of value for EVACT3 in the PORT_EVCTRL register */
 #define PORT_EVCTRL_PORTEI3_Pos               _UINT32_(31)                                         /* (PORT_EVCTRL) PORT Event Input Enable 3 Position */
 #define PORT_EVCTRL_PORTEI3_Msk               (_UINT32_(0x1) << PORT_EVCTRL_PORTEI3_Pos)           /* (PORT_EVCTRL) PORT Event Input Enable 3 Mask */
-#define PORT_EVCTRL_PORTEI3(value)            (PORT_EVCTRL_PORTEI3_Msk & (_UINT32_(value) << PORT_EVCTRL_PORTEI3_Pos)) /* Assigment of value for PORTEI3 in the PORT_EVCTRL register */
+#define PORT_EVCTRL_PORTEI3(value)            (PORT_EVCTRL_PORTEI3_Msk & (_UINT32_(value) << PORT_EVCTRL_PORTEI3_Pos)) /* Assignment of value for PORTEI3 in the PORT_EVCTRL register */
 #define PORT_EVCTRL_Msk                       _UINT32_(0xFFFFFFFF)                                 /* (PORT_EVCTRL) Register Mask  */
 
 
@@ -209,7 +206,7 @@
 
 #define PORT_PMUX_PMUXE_Pos                   _UINT8_(0)                                           /* (PORT_PMUX) Peripheral Multiplexing for Even-Numbered Pin Position */
 #define PORT_PMUX_PMUXE_Msk                   (_UINT8_(0xF) << PORT_PMUX_PMUXE_Pos)                /* (PORT_PMUX) Peripheral Multiplexing for Even-Numbered Pin Mask */
-#define PORT_PMUX_PMUXE(value)                (PORT_PMUX_PMUXE_Msk & (_UINT8_(value) << PORT_PMUX_PMUXE_Pos)) /* Assigment of value for PMUXE in the PORT_PMUX register */
+#define PORT_PMUX_PMUXE(value)                (PORT_PMUX_PMUXE_Msk & (_UINT8_(value) << PORT_PMUX_PMUXE_Pos)) /* Assignment of value for PMUXE in the PORT_PMUX register */
 #define   PORT_PMUX_PMUXE_A_Val               _UINT8_(0x0)                                         /* (PORT_PMUX) Peripheral function A selected  */
 #define   PORT_PMUX_PMUXE_B_Val               _UINT8_(0x1)                                         /* (PORT_PMUX) Peripheral function B selected  */
 #define   PORT_PMUX_PMUXE_C_Val               _UINT8_(0x2)                                         /* (PORT_PMUX) Peripheral function C selected  */
@@ -224,23 +221,23 @@
 #define   PORT_PMUX_PMUXE_L_Val               _UINT8_(0xB)                                         /* (PORT_PMUX) Peripheral function L selected  */
 #define   PORT_PMUX_PMUXE_M_Val               _UINT8_(0xC)                                         /* (PORT_PMUX) Peripheral function M selected  */
 #define   PORT_PMUX_PMUXE_P_Val               _UINT8_(0xF)                                         /* (PORT_PMUX) Peripheral function P selected  */
-#define PORT_PMUX_PMUXE_A                     (PORT_PMUX_PMUXE_A_Val << PORT_PMUX_PMUXE_Pos)       /* (PORT_PMUX) Peripheral function A selected Position  */
-#define PORT_PMUX_PMUXE_B                     (PORT_PMUX_PMUXE_B_Val << PORT_PMUX_PMUXE_Pos)       /* (PORT_PMUX) Peripheral function B selected Position  */
-#define PORT_PMUX_PMUXE_C                     (PORT_PMUX_PMUXE_C_Val << PORT_PMUX_PMUXE_Pos)       /* (PORT_PMUX) Peripheral function C selected Position  */
-#define PORT_PMUX_PMUXE_D                     (PORT_PMUX_PMUXE_D_Val << PORT_PMUX_PMUXE_Pos)       /* (PORT_PMUX) Peripheral function D selected Position  */
-#define PORT_PMUX_PMUXE_E                     (PORT_PMUX_PMUXE_E_Val << PORT_PMUX_PMUXE_Pos)       /* (PORT_PMUX) Peripheral function E selected Position  */
-#define PORT_PMUX_PMUXE_F                     (PORT_PMUX_PMUXE_F_Val << PORT_PMUX_PMUXE_Pos)       /* (PORT_PMUX) Peripheral function F selected Position  */
-#define PORT_PMUX_PMUXE_G                     (PORT_PMUX_PMUXE_G_Val << PORT_PMUX_PMUXE_Pos)       /* (PORT_PMUX) Peripheral function G selected Position  */
-#define PORT_PMUX_PMUXE_H                     (PORT_PMUX_PMUXE_H_Val << PORT_PMUX_PMUXE_Pos)       /* (PORT_PMUX) Peripheral function H selected Position  */
-#define PORT_PMUX_PMUXE_I                     (PORT_PMUX_PMUXE_I_Val << PORT_PMUX_PMUXE_Pos)       /* (PORT_PMUX) Peripheral function I selected Position  */
-#define PORT_PMUX_PMUXE_J                     (PORT_PMUX_PMUXE_J_Val << PORT_PMUX_PMUXE_Pos)       /* (PORT_PMUX) Peripheral function J selected Position  */
-#define PORT_PMUX_PMUXE_K                     (PORT_PMUX_PMUXE_K_Val << PORT_PMUX_PMUXE_Pos)       /* (PORT_PMUX) Peripheral function K selected Position  */
-#define PORT_PMUX_PMUXE_L                     (PORT_PMUX_PMUXE_L_Val << PORT_PMUX_PMUXE_Pos)       /* (PORT_PMUX) Peripheral function L selected Position  */
-#define PORT_PMUX_PMUXE_M                     (PORT_PMUX_PMUXE_M_Val << PORT_PMUX_PMUXE_Pos)       /* (PORT_PMUX) Peripheral function M selected Position  */
-#define PORT_PMUX_PMUXE_P                     (PORT_PMUX_PMUXE_P_Val << PORT_PMUX_PMUXE_Pos)       /* (PORT_PMUX) Peripheral function P selected Position  */
+#define PORT_PMUX_PMUXE_A                     (PORT_PMUX_PMUXE_A_Val << PORT_PMUX_PMUXE_Pos)       /* (PORT_PMUX) Peripheral function A selected Position */
+#define PORT_PMUX_PMUXE_B                     (PORT_PMUX_PMUXE_B_Val << PORT_PMUX_PMUXE_Pos)       /* (PORT_PMUX) Peripheral function B selected Position */
+#define PORT_PMUX_PMUXE_C                     (PORT_PMUX_PMUXE_C_Val << PORT_PMUX_PMUXE_Pos)       /* (PORT_PMUX) Peripheral function C selected Position */
+#define PORT_PMUX_PMUXE_D                     (PORT_PMUX_PMUXE_D_Val << PORT_PMUX_PMUXE_Pos)       /* (PORT_PMUX) Peripheral function D selected Position */
+#define PORT_PMUX_PMUXE_E                     (PORT_PMUX_PMUXE_E_Val << PORT_PMUX_PMUXE_Pos)       /* (PORT_PMUX) Peripheral function E selected Position */
+#define PORT_PMUX_PMUXE_F                     (PORT_PMUX_PMUXE_F_Val << PORT_PMUX_PMUXE_Pos)       /* (PORT_PMUX) Peripheral function F selected Position */
+#define PORT_PMUX_PMUXE_G                     (PORT_PMUX_PMUXE_G_Val << PORT_PMUX_PMUXE_Pos)       /* (PORT_PMUX) Peripheral function G selected Position */
+#define PORT_PMUX_PMUXE_H                     (PORT_PMUX_PMUXE_H_Val << PORT_PMUX_PMUXE_Pos)       /* (PORT_PMUX) Peripheral function H selected Position */
+#define PORT_PMUX_PMUXE_I                     (PORT_PMUX_PMUXE_I_Val << PORT_PMUX_PMUXE_Pos)       /* (PORT_PMUX) Peripheral function I selected Position */
+#define PORT_PMUX_PMUXE_J                     (PORT_PMUX_PMUXE_J_Val << PORT_PMUX_PMUXE_Pos)       /* (PORT_PMUX) Peripheral function J selected Position */
+#define PORT_PMUX_PMUXE_K                     (PORT_PMUX_PMUXE_K_Val << PORT_PMUX_PMUXE_Pos)       /* (PORT_PMUX) Peripheral function K selected Position */
+#define PORT_PMUX_PMUXE_L                     (PORT_PMUX_PMUXE_L_Val << PORT_PMUX_PMUXE_Pos)       /* (PORT_PMUX) Peripheral function L selected Position */
+#define PORT_PMUX_PMUXE_M                     (PORT_PMUX_PMUXE_M_Val << PORT_PMUX_PMUXE_Pos)       /* (PORT_PMUX) Peripheral function M selected Position */
+#define PORT_PMUX_PMUXE_P                     (PORT_PMUX_PMUXE_P_Val << PORT_PMUX_PMUXE_Pos)       /* (PORT_PMUX) Peripheral function P selected Position */
 #define PORT_PMUX_PMUXO_Pos                   _UINT8_(4)                                           /* (PORT_PMUX) Peripheral Multiplexing for Odd-Numbered Pin Position */
 #define PORT_PMUX_PMUXO_Msk                   (_UINT8_(0xF) << PORT_PMUX_PMUXO_Pos)                /* (PORT_PMUX) Peripheral Multiplexing for Odd-Numbered Pin Mask */
-#define PORT_PMUX_PMUXO(value)                (PORT_PMUX_PMUXO_Msk & (_UINT8_(value) << PORT_PMUX_PMUXO_Pos)) /* Assigment of value for PMUXO in the PORT_PMUX register */
+#define PORT_PMUX_PMUXO(value)                (PORT_PMUX_PMUXO_Msk & (_UINT8_(value) << PORT_PMUX_PMUXO_Pos)) /* Assignment of value for PMUXO in the PORT_PMUX register */
 #define   PORT_PMUX_PMUXO_A_Val               _UINT8_(0x0)                                         /* (PORT_PMUX) Peripheral function A selected  */
 #define   PORT_PMUX_PMUXO_B_Val               _UINT8_(0x1)                                         /* (PORT_PMUX) Peripheral function B selected  */
 #define   PORT_PMUX_PMUXO_C_Val               _UINT8_(0x2)                                         /* (PORT_PMUX) Peripheral function C selected  */
@@ -255,20 +252,20 @@
 #define   PORT_PMUX_PMUXO_L_Val               _UINT8_(0xB)                                         /* (PORT_PMUX) Peripheral function L selected  */
 #define   PORT_PMUX_PMUXO_M_Val               _UINT8_(0xC)                                         /* (PORT_PMUX) Peripheral function M selected  */
 #define   PORT_PMUX_PMUXO_P_Val               _UINT8_(0xF)                                         /* (PORT_PMUX) Peripheral function P selected  */
-#define PORT_PMUX_PMUXO_A                     (PORT_PMUX_PMUXO_A_Val << PORT_PMUX_PMUXO_Pos)       /* (PORT_PMUX) Peripheral function A selected Position  */
-#define PORT_PMUX_PMUXO_B                     (PORT_PMUX_PMUXO_B_Val << PORT_PMUX_PMUXO_Pos)       /* (PORT_PMUX) Peripheral function B selected Position  */
-#define PORT_PMUX_PMUXO_C                     (PORT_PMUX_PMUXO_C_Val << PORT_PMUX_PMUXO_Pos)       /* (PORT_PMUX) Peripheral function C selected Position  */
-#define PORT_PMUX_PMUXO_D                     (PORT_PMUX_PMUXO_D_Val << PORT_PMUX_PMUXO_Pos)       /* (PORT_PMUX) Peripheral function D selected Position  */
-#define PORT_PMUX_PMUXO_E                     (PORT_PMUX_PMUXO_E_Val << PORT_PMUX_PMUXO_Pos)       /* (PORT_PMUX) Peripheral function E selected Position  */
-#define PORT_PMUX_PMUXO_F                     (PORT_PMUX_PMUXO_F_Val << PORT_PMUX_PMUXO_Pos)       /* (PORT_PMUX) Peripheral function F selected Position  */
-#define PORT_PMUX_PMUXO_G                     (PORT_PMUX_PMUXO_G_Val << PORT_PMUX_PMUXO_Pos)       /* (PORT_PMUX) Peripheral function G selected Position  */
-#define PORT_PMUX_PMUXO_H                     (PORT_PMUX_PMUXO_H_Val << PORT_PMUX_PMUXO_Pos)       /* (PORT_PMUX) Peripheral function H selected Position  */
-#define PORT_PMUX_PMUXO_I                     (PORT_PMUX_PMUXO_I_Val << PORT_PMUX_PMUXO_Pos)       /* (PORT_PMUX) Peripheral function I selected Position  */
-#define PORT_PMUX_PMUXO_J                     (PORT_PMUX_PMUXO_J_Val << PORT_PMUX_PMUXO_Pos)       /* (PORT_PMUX) Peripheral function J selected Position  */
-#define PORT_PMUX_PMUXO_K                     (PORT_PMUX_PMUXO_K_Val << PORT_PMUX_PMUXO_Pos)       /* (PORT_PMUX) Peripheral function K selected Position  */
-#define PORT_PMUX_PMUXO_L                     (PORT_PMUX_PMUXO_L_Val << PORT_PMUX_PMUXO_Pos)       /* (PORT_PMUX) Peripheral function L selected Position  */
-#define PORT_PMUX_PMUXO_M                     (PORT_PMUX_PMUXO_M_Val << PORT_PMUX_PMUXO_Pos)       /* (PORT_PMUX) Peripheral function M selected Position  */
-#define PORT_PMUX_PMUXO_P                     (PORT_PMUX_PMUXO_P_Val << PORT_PMUX_PMUXO_Pos)       /* (PORT_PMUX) Peripheral function P selected Position  */
+#define PORT_PMUX_PMUXO_A                     (PORT_PMUX_PMUXO_A_Val << PORT_PMUX_PMUXO_Pos)       /* (PORT_PMUX) Peripheral function A selected Position */
+#define PORT_PMUX_PMUXO_B                     (PORT_PMUX_PMUXO_B_Val << PORT_PMUX_PMUXO_Pos)       /* (PORT_PMUX) Peripheral function B selected Position */
+#define PORT_PMUX_PMUXO_C                     (PORT_PMUX_PMUXO_C_Val << PORT_PMUX_PMUXO_Pos)       /* (PORT_PMUX) Peripheral function C selected Position */
+#define PORT_PMUX_PMUXO_D                     (PORT_PMUX_PMUXO_D_Val << PORT_PMUX_PMUXO_Pos)       /* (PORT_PMUX) Peripheral function D selected Position */
+#define PORT_PMUX_PMUXO_E                     (PORT_PMUX_PMUXO_E_Val << PORT_PMUX_PMUXO_Pos)       /* (PORT_PMUX) Peripheral function E selected Position */
+#define PORT_PMUX_PMUXO_F                     (PORT_PMUX_PMUXO_F_Val << PORT_PMUX_PMUXO_Pos)       /* (PORT_PMUX) Peripheral function F selected Position */
+#define PORT_PMUX_PMUXO_G                     (PORT_PMUX_PMUXO_G_Val << PORT_PMUX_PMUXO_Pos)       /* (PORT_PMUX) Peripheral function G selected Position */
+#define PORT_PMUX_PMUXO_H                     (PORT_PMUX_PMUXO_H_Val << PORT_PMUX_PMUXO_Pos)       /* (PORT_PMUX) Peripheral function H selected Position */
+#define PORT_PMUX_PMUXO_I                     (PORT_PMUX_PMUXO_I_Val << PORT_PMUX_PMUXO_Pos)       /* (PORT_PMUX) Peripheral function I selected Position */
+#define PORT_PMUX_PMUXO_J                     (PORT_PMUX_PMUXO_J_Val << PORT_PMUX_PMUXO_Pos)       /* (PORT_PMUX) Peripheral function J selected Position */
+#define PORT_PMUX_PMUXO_K                     (PORT_PMUX_PMUXO_K_Val << PORT_PMUX_PMUXO_Pos)       /* (PORT_PMUX) Peripheral function K selected Position */
+#define PORT_PMUX_PMUXO_L                     (PORT_PMUX_PMUXO_L_Val << PORT_PMUX_PMUXO_Pos)       /* (PORT_PMUX) Peripheral function L selected Position */
+#define PORT_PMUX_PMUXO_M                     (PORT_PMUX_PMUXO_M_Val << PORT_PMUX_PMUXO_Pos)       /* (PORT_PMUX) Peripheral function M selected Position */
+#define PORT_PMUX_PMUXO_P                     (PORT_PMUX_PMUXO_P_Val << PORT_PMUX_PMUXO_Pos)       /* (PORT_PMUX) Peripheral function P selected Position */
 #define PORT_PMUX_Msk                         _UINT8_(0xFF)                                        /* (PORT_PMUX) Register Mask  */
 
 
@@ -277,31 +274,31 @@
 
 #define PORT_PINCFG_PMUXEN_Pos                _UINT8_(0)                                           /* (PORT_PINCFG) Peripheral Multiplexer Enable Position */
 #define PORT_PINCFG_PMUXEN_Msk                (_UINT8_(0x1) << PORT_PINCFG_PMUXEN_Pos)             /* (PORT_PINCFG) Peripheral Multiplexer Enable Mask */
-#define PORT_PINCFG_PMUXEN(value)             (PORT_PINCFG_PMUXEN_Msk & (_UINT8_(value) << PORT_PINCFG_PMUXEN_Pos)) /* Assigment of value for PMUXEN in the PORT_PINCFG register */
+#define PORT_PINCFG_PMUXEN(value)             (PORT_PINCFG_PMUXEN_Msk & (_UINT8_(value) << PORT_PINCFG_PMUXEN_Pos)) /* Assignment of value for PMUXEN in the PORT_PINCFG register */
 #define PORT_PINCFG_INEN_Pos                  _UINT8_(1)                                           /* (PORT_PINCFG) Input Enable Position */
 #define PORT_PINCFG_INEN_Msk                  (_UINT8_(0x1) << PORT_PINCFG_INEN_Pos)               /* (PORT_PINCFG) Input Enable Mask */
-#define PORT_PINCFG_INEN(value)               (PORT_PINCFG_INEN_Msk & (_UINT8_(value) << PORT_PINCFG_INEN_Pos)) /* Assigment of value for INEN in the PORT_PINCFG register */
+#define PORT_PINCFG_INEN(value)               (PORT_PINCFG_INEN_Msk & (_UINT8_(value) << PORT_PINCFG_INEN_Pos)) /* Assignment of value for INEN in the PORT_PINCFG register */
 #define PORT_PINCFG_PULLEN_Pos                _UINT8_(2)                                           /* (PORT_PINCFG) Pull Enable Position */
 #define PORT_PINCFG_PULLEN_Msk                (_UINT8_(0x1) << PORT_PINCFG_PULLEN_Pos)             /* (PORT_PINCFG) Pull Enable Mask */
-#define PORT_PINCFG_PULLEN(value)             (PORT_PINCFG_PULLEN_Msk & (_UINT8_(value) << PORT_PINCFG_PULLEN_Pos)) /* Assigment of value for PULLEN in the PORT_PINCFG register */
+#define PORT_PINCFG_PULLEN(value)             (PORT_PINCFG_PULLEN_Msk & (_UINT8_(value) << PORT_PINCFG_PULLEN_Pos)) /* Assignment of value for PULLEN in the PORT_PINCFG register */
 #define PORT_PINCFG_ODRAIN_Pos                _UINT8_(3)                                           /* (PORT_PINCFG) Open Drain Output Position */
 #define PORT_PINCFG_ODRAIN_Msk                (_UINT8_(0x1) << PORT_PINCFG_ODRAIN_Pos)             /* (PORT_PINCFG) Open Drain Output Mask */
-#define PORT_PINCFG_ODRAIN(value)             (PORT_PINCFG_ODRAIN_Msk & (_UINT8_(value) << PORT_PINCFG_ODRAIN_Pos)) /* Assigment of value for ODRAIN in the PORT_PINCFG register */
+#define PORT_PINCFG_ODRAIN(value)             (PORT_PINCFG_ODRAIN_Msk & (_UINT8_(value) << PORT_PINCFG_ODRAIN_Pos)) /* Assignment of value for ODRAIN in the PORT_PINCFG register */
 #define PORT_PINCFG_SLEWLIM_Pos               _UINT8_(4)                                           /* (PORT_PINCFG) Output Driver Slew Rate Selection Position */
 #define PORT_PINCFG_SLEWLIM_Msk               (_UINT8_(0x3) << PORT_PINCFG_SLEWLIM_Pos)            /* (PORT_PINCFG) Output Driver Slew Rate Selection Mask */
-#define PORT_PINCFG_SLEWLIM(value)            (PORT_PINCFG_SLEWLIM_Msk & (_UINT8_(value) << PORT_PINCFG_SLEWLIM_Pos)) /* Assigment of value for SLEWLIM in the PORT_PINCFG register */
+#define PORT_PINCFG_SLEWLIM(value)            (PORT_PINCFG_SLEWLIM_Msk & (_UINT8_(value) << PORT_PINCFG_SLEWLIM_Pos)) /* Assignment of value for SLEWLIM in the PORT_PINCFG register */
 #define   PORT_PINCFG_SLEWLIM_FAST_Val        _UINT8_(0x0)                                         /* (PORT_PINCFG) Slew rate control disabled (fast rise/fall time operation)  */
 #define   PORT_PINCFG_SLEWLIM_SLOW4_Val       _UINT8_(0x1)                                         /* (PORT_PINCFG) Slew rate control enabled (4x slower)  */
 #define   PORT_PINCFG_SLEWLIM_SLOW8_Val       _UINT8_(0x2)                                         /* (PORT_PINCFG) Slew rate control enabled (8x slower)  */
 #define   PORT_PINCFG_SLEWLIM_SLOW12_Val      _UINT8_(0x3)                                         /* (PORT_PINCFG) Slew rate control enabled (12x slower)  */
-#define PORT_PINCFG_SLEWLIM_FAST              (PORT_PINCFG_SLEWLIM_FAST_Val << PORT_PINCFG_SLEWLIM_Pos) /* (PORT_PINCFG) Slew rate control disabled (fast rise/fall time operation) Position  */
-#define PORT_PINCFG_SLEWLIM_SLOW4             (PORT_PINCFG_SLEWLIM_SLOW4_Val << PORT_PINCFG_SLEWLIM_Pos) /* (PORT_PINCFG) Slew rate control enabled (4x slower) Position  */
-#define PORT_PINCFG_SLEWLIM_SLOW8             (PORT_PINCFG_SLEWLIM_SLOW8_Val << PORT_PINCFG_SLEWLIM_Pos) /* (PORT_PINCFG) Slew rate control enabled (8x slower) Position  */
-#define PORT_PINCFG_SLEWLIM_SLOW12            (PORT_PINCFG_SLEWLIM_SLOW12_Val << PORT_PINCFG_SLEWLIM_Pos) /* (PORT_PINCFG) Slew rate control enabled (12x slower) Position  */
+#define PORT_PINCFG_SLEWLIM_FAST              (PORT_PINCFG_SLEWLIM_FAST_Val << PORT_PINCFG_SLEWLIM_Pos) /* (PORT_PINCFG) Slew rate control disabled (fast rise/fall time operation) Position */
+#define PORT_PINCFG_SLEWLIM_SLOW4             (PORT_PINCFG_SLEWLIM_SLOW4_Val << PORT_PINCFG_SLEWLIM_Pos) /* (PORT_PINCFG) Slew rate control enabled (4x slower) Position */
+#define PORT_PINCFG_SLEWLIM_SLOW8             (PORT_PINCFG_SLEWLIM_SLOW8_Val << PORT_PINCFG_SLEWLIM_Pos) /* (PORT_PINCFG) Slew rate control enabled (8x slower) Position */
+#define PORT_PINCFG_SLEWLIM_SLOW12            (PORT_PINCFG_SLEWLIM_SLOW12_Val << PORT_PINCFG_SLEWLIM_Pos) /* (PORT_PINCFG) Slew rate control enabled (12x slower) Position */
 #define PORT_PINCFG_Msk                       _UINT8_(0x3F)                                        /* (PORT_PINCFG) Register Mask  */
 
 
-/** \brief PORT register offsets definitions */
+/* PORT register offsets definitions */
 #define PORT_DIR_REG_OFST              _UINT32_(0x00)      /* (PORT_DIR) Data Direction Offset */
 #define PORT_DIRCLR_REG_OFST           _UINT32_(0x04)      /* (PORT_DIRCLR) Data Direction Clear Offset */
 #define PORT_DIRSET_REG_OFST           _UINT32_(0x08)      /* (PORT_DIRSET) Data Direction Set Offset */
@@ -366,32 +363,32 @@
 #define PORT_PINCFG31_REG_OFST         _UINT32_(0x5F)      /* (PORT_PINCFG31) Pin Configuration Offset */
 
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
-/** \brief GROUP register API structure */
+/* GROUP register API structure */
 typedef struct
 {
-  __IO  uint32_t                       PORT_DIR;           /**< Offset: 0x00 (R/W  32) Data Direction */
-  __IO  uint32_t                       PORT_DIRCLR;        /**< Offset: 0x04 (R/W  32) Data Direction Clear */
-  __IO  uint32_t                       PORT_DIRSET;        /**< Offset: 0x08 (R/W  32) Data Direction Set */
-  __IO  uint32_t                       PORT_DIRTGL;        /**< Offset: 0x0C (R/W  32) Data Direction Toggle */
-  __IO  uint32_t                       PORT_OUT;           /**< Offset: 0x10 (R/W  32) Data Output Value */
-  __IO  uint32_t                       PORT_OUTCLR;        /**< Offset: 0x14 (R/W  32) Data Output Value Clear */
-  __IO  uint32_t                       PORT_OUTSET;        /**< Offset: 0x18 (R/W  32) Data Output Value Set */
-  __IO  uint32_t                       PORT_OUTTGL;        /**< Offset: 0x1C (R/W  32) Data Output Value Toggle */
-  __I   uint32_t                       PORT_IN;            /**< Offset: 0x20 (R/   32) Data Input Value */
-  __IO  uint32_t                       PORT_CTRL;          /**< Offset: 0x24 (R/W  32) Control */
-  __O   uint32_t                       PORT_WRCONFIG;      /**< Offset: 0x28 ( /W  32) Write Configuration */
-  __IO  uint32_t                       PORT_EVCTRL;        /**< Offset: 0x2C (R/W  32) Event Input Control */
-  __IO  uint8_t                        PORT_PMUX[16];      /**< Offset: 0x30 (R/W  8) Peripheral Multiplexing */
-  __IO  uint8_t                        PORT_PINCFG[32];    /**< Offset: 0x40 (R/W  8) Pin Configuration */
+  __IO  uint32_t                       PORT_DIR;           /* Offset: 0x00 (R/W  32) Data Direction */
+  __IO  uint32_t                       PORT_DIRCLR;        /* Offset: 0x04 (R/W  32) Data Direction Clear */
+  __IO  uint32_t                       PORT_DIRSET;        /* Offset: 0x08 (R/W  32) Data Direction Set */
+  __IO  uint32_t                       PORT_DIRTGL;        /* Offset: 0x0C (R/W  32) Data Direction Toggle */
+  __IO  uint32_t                       PORT_OUT;           /* Offset: 0x10 (R/W  32) Data Output Value */
+  __IO  uint32_t                       PORT_OUTCLR;        /* Offset: 0x14 (R/W  32) Data Output Value Clear */
+  __IO  uint32_t                       PORT_OUTSET;        /* Offset: 0x18 (R/W  32) Data Output Value Set */
+  __IO  uint32_t                       PORT_OUTTGL;        /* Offset: 0x1C (R/W  32) Data Output Value Toggle */
+  __I   uint32_t                       PORT_IN;            /* Offset: 0x20 (R/   32) Data Input Value */
+  __IO  uint32_t                       PORT_CTRL;          /* Offset: 0x24 (R/W  32) Control */
+  __O   uint32_t                       PORT_WRCONFIG;      /* Offset: 0x28 ( /W  32) Write Configuration */
+  __IO  uint32_t                       PORT_EVCTRL;        /* Offset: 0x2C (R/W  32) Event Input Control */
+  __IO  uint8_t                        PORT_PMUX[16];      /* Offset: 0x30 (R/W  8) Peripheral Multiplexing */
+  __IO  uint8_t                        PORT_PINCFG[32];    /* Offset: 0x40 (R/W  8) Pin Configuration */
   __I   uint8_t                        Reserved1[0x20];
 } port_group_registers_t;
 
 #define PORT_GROUP_NUMBER 4
 
-/** \brief PORT register API structure */
+/* PORT register API structure */
 typedef struct
 {  /* Port Module */
-        port_group_registers_t         GROUP[PORT_GROUP_NUMBER]; /**< Offset: 0x00  */
+        port_group_registers_t         GROUP[PORT_GROUP_NUMBER]; /* Offset: 0x00  */
 } port_registers_t;
 
 
