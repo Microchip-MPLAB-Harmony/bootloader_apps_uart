@@ -95,7 +95,6 @@ typedef enum
 // *****************************************************************************
 // *****************************************************************************
 
-
 static void NVM_WriteUnlockSequence( void )
 {
     // Write the unlock key sequence
@@ -140,9 +139,7 @@ static void NVM_StartOperationAtAddress( uint32_t address,  NVM_OPERATION_MODE o
 
     NVM_WriteUnlockSequence();
 
-    // Start the operation
     NVMCONSET = _NVMCON_WR_MASK;
-
     __builtin_mtc0(12U, 0U, processorStatus);
 
 }

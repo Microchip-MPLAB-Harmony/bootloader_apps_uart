@@ -1,4 +1,4 @@
-<config configName="pic32mz_w1_curiosity" projectName="uart_bootloader_pic32mz_w1_curiosity" configVersion="1.1" device="PIC32MZ1025W104132" deviceLibraryClass="com.microchip.mcc.harmony.Harmony3Library" coreVersion="5.6.1">
+<config configName="pic32mz_w1_curiosity" projectName="uart_bootloader_pic32mz_w1_curiosity" configVersion="1.1" device="PIC32MZ1025W104132" deviceLibraryClass="com.microchip.mcc.harmony.Harmony3Library" coreVersion="5.7.1">
    <usedPackages class="java.util.ArrayList"/>
    <usedClasses class="java.util.TreeMap">
       <entry>
@@ -27,7 +27,7 @@
       </entry>
    </usedClasses>
    <usedLibraries class="java.util.ArrayList">
-      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.4.1"/>
+      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.5.5"/>
    </usedLibraries>
    <tokenMap class="java.util.TreeMap">
       <entry>
@@ -1577,7 +1577,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mz_w1_curiosity\bootloader\bootloader_common.h</file>
-         <hash>c602758857ba2527dc07cda328b95353199949c7132dfd5e72833c4e94b743aa</hash>
+         <hash>2fd5cd687ece99b9db69fe65c3840e24bfcf191fe907c20d20169e127f0d2224</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mz_w1_curiosity\bootloader\bootloader_uart.c</file>
@@ -1593,11 +1593,11 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mz_w1_curiosity\definitions.h</file>
-         <hash>d0706099560a38318f4a5fde37b46f957b73075e9e36bd88898d9387b40516ae</hash>
+         <hash>cf07495db7ede818cd5bea64756bd5d78a85f13849071f09d2294401dd478955</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mz_w1_curiosity\device.h</file>
-         <hash>10ec93c43a7b158a129ae05bd8f4a59ff5bcf3d0f3f062fdd64c374bc2d42099</hash>
+         <hash>4d4341a6f9628cea0bf73f980b639f7cb81089e55a60ad7e434be2a71e477442</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mz_w1_curiosity\initialization.c</file>
@@ -1621,11 +1621,11 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mz_w1_curiosity\peripheral\evic\plib_evic.c</file>
-         <hash>353a4e860c4dedcc45269eff9d046ab4ca6932601ea964278e65bc7d52630677</hash>
+         <hash>88add2ab44053a8a245e063c0abb23d0078a622af076cb284e33890562aee52d</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mz_w1_curiosity\peripheral\evic\plib_evic.h</file>
-         <hash>4d9c6de38398672e081c666b1cf471c1f7e1fa98e291f6dbcc14a625c82c6978</hash>
+         <hash>61f076457c5302ca6a2c990e31e4a588ae923795991315f68dd937bc31af9168</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mz_w1_curiosity\peripheral\gpio\plib_gpio.c</file>
@@ -1633,11 +1633,11 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mz_w1_curiosity\peripheral\gpio\plib_gpio.h</file>
-         <hash>9194d7013eaff799ebe0862f3a0d269ecd47f94bbb9353796a2dee077bfd44f9</hash>
+         <hash>be711b5bbee12fb1110d7766708dd96bf8de12cfcf4351050ade726d65acdb17</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mz_w1_curiosity\peripheral\nvm\plib_nvm.c</file>
-         <hash>84050509b17fc456e6253f9efaa7856ff88d8617fc8653095f62cb24507d12dd</hash>
+         <hash>ff7f54c750ffb604140c060aa6a463e46c61a05699c380493287405406738a05</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mz_w1_curiosity\peripheral\nvm\plib_nvm.h</file>
@@ -1645,7 +1645,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mz_w1_curiosity\peripheral\uart\plib_uart1.c</file>
-         <hash>285639d0135a2032d37ebe04153746180a61e33c6f5f6c6e61e0bfba87c16e30</hash>
+         <hash>990dd7d510b5b3f71802ac853b96b0f9f5bd110d2a5cac10a5e875e6f67f8d62</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mz_w1_curiosity\peripheral\uart\plib_uart1.h</file>
