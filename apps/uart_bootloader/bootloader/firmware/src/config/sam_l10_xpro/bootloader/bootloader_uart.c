@@ -111,11 +111,18 @@ static uint32_t unlock_end          = 0;
 static uint32_t data_size           = 0;
 
 static uint8_t  input_command       = 0;
+static uint8_t  current_command     = 0;
 
 static bool     packet_received     = false;
 static bool     flash_data_ready    = false;
 
 static bool     uartBLActive        = false;
+
+
+/* Following MISRA-C rules are deviated in the below code block */
+/* MISRA C-2012 Rule 8.2 */
+/* MISRA C-2012 Rule 11.1 */
+/* MISRA C-2012 Rule 17.7 */
 
 typedef bool (*FLASH_ERASE_FPTR)(uint32_t address);
 
@@ -220,6 +227,8 @@ static void command_task(void)
 {
     uint32_t i;
 
+    current_command = input_command;
+
     if (BL_CMD_UNLOCK == input_command)
     {
         uint32_t begin  = (input_buffer[ADDR_OFFSET] & OFFSET_ALIGN_MASK);
@@ -316,6 +325,7 @@ static void flash_task(void)
     // data_size = Actual data bytes to write + Address 4 Bytes
     uint32_t bytes_to_write = (data_size - 4U);
 
+
     FLASH_ERASE_FPTR flash_erase_fptr = (FLASH_ERASE_FPTR)NVMCTRL_RowErase;
     FLASH_WRITE_FPTR flash_write_fptr = (FLASH_WRITE_FPTR)NVMCTRL_PageWrite;
 
@@ -341,6 +351,7 @@ static void flash_task(void)
 
 
     }
+
     /* Erase the Current sector */
     (void) flash_erase_fptr(addr);
 
@@ -365,6 +376,7 @@ static void flash_task(void)
         addr += PAGE_SIZE;
         write_idx += WORDS(PAGE_SIZE);
     }
+
 
 
     flash_data_ready = false;
@@ -397,3 +409,4 @@ void bootloader_UART_Tasks(void)
         }
     } while (uartBLActive);
 }
+/* MISRAC 2012 deviation block end */
