@@ -231,11 +231,11 @@
         <targetPluginBoard/>
         <platformTool/>
         <languageToolchain>XC32</languageToolchain>
-        <languageToolchainVersion>4.35</languageToolchainVersion>
+        <languageToolchainVersion>4.60</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <packs>
-        <pack name="PIC32CX-BZ_DFP" vendor="Microchip" version="1.2.230"/>
+        <pack name="PIC32CX-BZ_DFP" vendor="Microchip" version="1.4.243"/>
         <pack name="CMSIS" vendor="ARM" version="5.4.0"/>
       </packs>
       <ScriptingSettings>
