@@ -199,9 +199,9 @@ void SYS_Initialize ( void* data )
 
 
     CORETIMER_Initialize();
-	UART6_Initialize();
-
     NVM_Initialize();
+
+	UART6_Initialize();
 
 
     /* MISRAC 2012 deviation block start */
