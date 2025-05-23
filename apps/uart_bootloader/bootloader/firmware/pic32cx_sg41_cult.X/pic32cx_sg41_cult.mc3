@@ -3428,7 +3428,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32cx_sg41_cult\bootloader\bootloader_uart.c</file>
-         <hash/>
+         <hash>2dfc6911aec3f533e45d77d961f0dbd70a30f9e845876722200fac81704c72a4</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32cx_sg41_cult\bootloader\bootloader_uart.h</file>
@@ -3436,7 +3436,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32cx_sg41_cult\btl.ld</file>
-         <hash>205c9b2bbfb1acd2aeb4947c7f8931565ed5d3d287086d72cf4cc472dffef02b</hash>
+         <hash>e47196dc35c939e363df6223c1ab35f0f699adc90b6ac3d406bec9b88e1e465a</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32cx_sg41_cult\definitions.h</file>
@@ -3548,7 +3548,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32cx_sg41_cult\startup_xc32.c</file>
-         <hash>a407a14a8c1aff540dd4a4518809c63d5263da51ed543d81a1043a90ec78e8ff</hash>
+         <hash>f700e024c270d1eecb4afb966b37951c20d2218c68a41e416f87bd08d05976e7</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32cx_sg41_cult\toolchain_specifics.h</file>
@@ -3588,7 +3588,7 @@
       </entry>
       <entry>
          <file>..\src\packs\CMSIS\CMSIS\Core\Include\cmsis_version.h</file>
-         <hash>8cda7ac3ff6f0eb5e83c4fe613dd195151b24da54167f5c3c007e599a03f1edc</hash>
+         <hash>2de01ae2556a38eb82c389de23c701805ec63308cfbcf3f84cb12141589b0858</hash>
       </entry>
       <entry>
          <file>..\src\packs\CMSIS\CMSIS\Core\Include\core_cm4.h</file>
