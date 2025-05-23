@@ -76,7 +76,7 @@
 #define LED_RED_On() (PIOD_REGS->PIO_SODR = (1UL<<17))
 #define LED_RED_Off() (PIOD_REGS->PIO_CODR = (1UL<<17))
 /*** SWITCH Macros for SW1 ***/
-#define SW1_Get() ((PIOA_REGS->PIO_PDSR >> 29) & 0x1)
+#define SW1_Get() ((PIOA_REGS->PIO_PDSR >> 29) & 0x1U)
 #define SW1_STATE_PRESSED 0
 #define SW1_STATE_RELEASED 1
 

@@ -4,21 +4,23 @@
 
 
 project: bootloader_sd_emmc
-creation_date: 2024-01-05T17:28:59.255+05:30[Asia/Calcutta]    # ISO 8601 format: https://www.w3.org/TR/NOTE-datetime
-operating_system: Windows 10
+creation_date: 2025-05-23T14:15:35.213+05:30[Asia/Calcutta]    # ISO 8601 format: https://www.w3.org/TR/NOTE-datetime
+operating_system: Windows 11
 mcc_mode: IDE            # [IDE|Standalone|Headless]
-mcc_version: v5.4.1
-mcc_core_version: v5.6.1
-mplabx_version: v6.15        # if MPLAB X plugin only
-harmony_version: v1.4.1
+mcc_version: v5.5.2
+mcc_core_version: v5.7.1
+mplabx_version: v6.25        # if MPLAB X plugin only
+harmony_version: v1.5.5
 compiler: XC32 4.35
 
 modules:
-    - {name: "csp", version: "v3.18.2"}
-    - {name: "bsp", version: "v3.17.0"}
-    - {name: "bootloader", version: "v3.7.0"}
-    - {name: "core", version: "v3.13.2"}
+    - {name: "core", version: "v3.15.2"}
+    - {name: "csp", version: "v3.22.2-42-g413852b"}
+    - {name: "filex", version: "v6.4.0_rel"}
+    - {name: "bootloader", version: "v3.8.0-rc.1-41-gf1befa3"}
+    - {name: "littlefs", version: "v2.10.1"}
+    - {name: "bsp", version: "v3.22.0"}
 
 packs:
-    - {name: "SAM9X6_DFP", version: "1.7.85"}
+    - {name: "SAM9X6_DFP", version: "1.9.218"}
 

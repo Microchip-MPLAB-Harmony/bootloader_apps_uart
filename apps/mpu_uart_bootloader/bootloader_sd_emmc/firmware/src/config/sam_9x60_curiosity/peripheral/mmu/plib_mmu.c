@@ -73,6 +73,13 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 /* TTB Section Descriptor: Section Base Address */
 #define TTB_SECT_ADDR(x)           ((x) & 0xFFF00000U)
 
+/* L1 data cache line size, Number of ways and Number of sets */
+#define L1_DATA_CACHE_BYTES        32U
+#define L1_DATA_CACHE_WAYS         4U
+#define L1_DATA_CACHE_SETS         256U
+#define L1_DATA_CACHE_SETWAY(set, way) (((set) << 5) | ((way) << 30))
+
+
 __ALIGNED(16384) static uint32_t trns_tbl[4096];
 
 // *****************************************************************************
@@ -115,7 +122,142 @@ static void mmu_enable(void)
     }
 }
 
+void icache_InvalidateAll(void)
+{
+    cp15_icache_invalidate();
+    __ISB();
+}
 
+void icache_Enable(void)
+{
+    uint32_t sctlr = cp15_read_sctlr();
+    if ((sctlr & CP15_SCTLR_I) == 0U)
+    {
+        icache_InvalidateAll();
+        cp15_write_sctlr(sctlr | CP15_SCTLR_I);
+    }
+}
+
+void icache_Disable(void)
+{
+    uint32_t sctlr = cp15_read_sctlr();
+    if ((sctlr & CP15_SCTLR_I) != 0U)
+    {
+        cp15_write_sctlr(sctlr & ~CP15_SCTLR_I);
+        icache_InvalidateAll();
+    }
+}
+
+void dcache_InvalidateAll(void)
+{
+    uint32_t set, way;
+
+    for (way = 0U; way < L1_DATA_CACHE_WAYS; way++)
+    {
+        for (set = 0U; set < L1_DATA_CACHE_SETS; set++)
+        {
+            cp15_dcache_invalidate_setway(L1_DATA_CACHE_SETWAY(set, way));
+        }
+    }
+    __DSB();
+}
+
+void dcache_CleanAll(void)
+{
+    uint32_t set, way;
+
+    for (way = 0U; way < L1_DATA_CACHE_WAYS; way++)
+    {
+        for (set = 0U; set < L1_DATA_CACHE_SETS; set++)
+        {
+            cp15_dcache_clean_setway(L1_DATA_CACHE_SETWAY(set, way));
+        }
+    }
+    __DSB();
+}
+
+void dcache_CleanInvalidateAll(void)
+{
+    uint32_t set, way;
+
+    for (way = 0U; way < L1_DATA_CACHE_WAYS; way++)
+    {
+        for (set = 0U; set < L1_DATA_CACHE_SETS; set++)
+        {
+            cp15_dcache_clean_invalidate_setway(L1_DATA_CACHE_SETWAY(set, way));
+        }
+    }
+    __DSB();
+}
+
+void dcache_InvalidateByAddr(volatile void *pAddr, int32_t size)
+{
+    volatile uint32_t uAddr = (volatile uint32_t)((volatile uint32_t*)pAddr);
+    uint32_t uSize = (uint32_t)size;
+    uint32_t mva = uAddr & ~(L1_DATA_CACHE_BYTES - 1U);
+
+    while(mva < (uAddr + uSize))
+    {
+        cp15_dcache_invalidate_mva(mva);
+        __DMB();
+        mva += L1_DATA_CACHE_BYTES;
+    }
+
+    __DSB();
+}
+
+void dcache_CleanByAddr (volatile void *pAddr, int32_t size)
+{
+    volatile uint32_t uAddr = (volatile uint32_t)((volatile uint32_t*)pAddr);
+    uint32_t uSize = (uint32_t)size;
+    uint32_t mva = uAddr & ~(L1_DATA_CACHE_BYTES - 1U);
+
+    while(mva < (uAddr + uSize))
+    {
+        cp15_dcache_clean_mva(mva);
+        __DMB();
+        mva += L1_DATA_CACHE_BYTES;
+    }
+
+    __DSB();
+}
+
+void dcache_CleanInvalidateByAddr (volatile void *pAddr, int32_t size)
+{
+    volatile uint32_t uAddr = (volatile uint32_t)((volatile uint32_t*)pAddr);
+    uint32_t uSize = (uint32_t)size;
+    uint32_t mva = uAddr & ~(L1_DATA_CACHE_BYTES - 1U);
+
+    while(mva < (uAddr + uSize))
+    {
+        cp15_dcache_clean_invalidate_mva((uint32_t)mva);
+        __DMB();
+        mva += L1_DATA_CACHE_BYTES;
+    }
+
+    __DSB();
+}
+
+void dcache_Enable(void)
+{
+    uint32_t sctlr = cp15_read_sctlr();
+    if ((sctlr & CP15_SCTLR_C) == 0U)
+    {
+        dcache_InvalidateAll();
+        cp15_write_sctlr(sctlr | CP15_SCTLR_C);
+    }
+}
+
+void dcache_Disable(void)
+{
+    uint32_t sctlr = cp15_read_sctlr();
+    if ((sctlr & CP15_SCTLR_C) != 0U)
+    {
+        dcache_CleanAll();
+        cp15_write_sctlr(sctlr & ~CP15_SCTLR_C);
+        dcache_InvalidateAll();
+    }
+}
 
 // *****************************************************************************
 /* Function:
@@ -140,6 +282,9 @@ static void mmu_enable(void)
 void MMU_Initialize(void)
 {
     uint32_t addr;
+
+        icache_Disable();
+    dcache_Disable();
 
     /* Reset table entries */
     for (addr = 0U; addr < 4096U; addr++) {

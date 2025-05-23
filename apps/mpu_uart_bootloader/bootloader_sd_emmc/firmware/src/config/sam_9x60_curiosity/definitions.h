@@ -14,7 +14,7 @@
 
 //DOM-IGNORE-BEGIN
 /*******************************************************************************
-* Copyright (C) 2018 Microchip Technology Inc. and its subsidiaries.
+* Copyright (C) 2025 Microchip Technology Inc. and its subsidiaries.
 *
 * Subject to your compliance with these terms, you may use Microchip software
 * and any derivatives exclusively with Microchip products. It is your
@@ -48,14 +48,14 @@
 #include <stdint.h>
 #include <stddef.h>
 #include <stdbool.h>
-#include "driver/sdmmc/drv_sdmmc.h"
-#include "bootloader/bootloader_uart.h"
 #include "system/fs/sys_fs.h"
 #include "system/fs/sys_fs_media_manager.h"
 #include "system/fs/sys_fs_fat_interface.h"
 #include "system/fs/fat_fs/file_system/ff.h"
 #include "system/fs/fat_fs/file_system/ffconf.h"
 #include "system/fs/fat_fs/hardware_access/diskio.h"
+#include "driver/sdmmc/drv_sdmmc.h"
+#include "bootloader/bootloader_uart.h"
 #include "peripheral/mmu/plib_mmu.h"
 #include "peripheral/clk/plib_clk.h"
 #include "peripheral/pio/plib_pio.h"
@@ -64,10 +64,10 @@
 #include "peripheral/dbgu/plib_dbgu.h"
 #include "peripheral/tc/plib_tc0.h"
 #include "bsp/bsp.h"
-#include "system/time/sys_time.h"
 #include "system/int/sys_int.h"
 #include "osal/osal.h"
 #include "system/debug/sys_debug.h"
+#include "system/time/sys_time.h"
 #include "app.h"
 
 
@@ -81,13 +81,13 @@ extern "C" {
 // DOM-IGNORE-END
 
 /* Device Information */
-#define DEVICE_NAME			 "SAM9X60D1G"
-#define DEVICE_ARCH			 "ARM926EJ-S"
-#define DEVICE_FAMILY		 "SAM9"
-#define DEVICE_SERIES		 "SAM9X"
+#define DEVICE_NAME          "SAM9X60D1G"
+#define DEVICE_ARCH          "ARM926EJ-S"
+#define DEVICE_FAMILY        "SAM9"
+#define DEVICE_SERIES        "SAM9X6"
 
 /* CPU clock frequency */
-#define CPU_CLOCK_FREQUENCY 600000000
+#define CPU_CLOCK_FREQUENCY 600000000U
 
 // *****************************************************************************
 // *****************************************************************************
