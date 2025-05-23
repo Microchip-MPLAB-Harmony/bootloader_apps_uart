@@ -51,7 +51,7 @@
       </entry>
    </usedClasses>
    <usedLibraries class="java.util.ArrayList">
-      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.5.3"/>
+      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.5.5"/>
    </usedLibraries>
    <tokenMap class="java.util.TreeMap">
       <entry>
@@ -8452,7 +8452,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_curiosity\definitions.h</file>
-         <hash>40a22b6a46ff75a973d1236f607aa03b78d229aa1406899103f2a94bd80bb6b2</hash>
+         <hash>4a1f3087073a06c4695221961ab1dea00a7e5c658f92e1398cd2c517ec884760</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_curiosity\device.h</file>
@@ -8616,7 +8616,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_curiosity\system\fs\fat_fs\file_system\ff.h</file>
-         <hash>6848cdc1e0e629ac4c44c28358ed40ac71651f502b941a1a9ef4468aad652091</hash>
+         <hash>2906f8255a58097a83011b023f09dfa602c04c2d154c39a9e35fcb48823940ac</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_curiosity\system\fs\fat_fs\file_system\ffconf.h</file>
@@ -8644,7 +8644,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_curiosity\system\fs\src\sys_fs_local.h</file>
-         <hash>ef6b5ddf2d37deece42f4f38d4c80cff0c5b4c67b150bfa11a78b78aec79baff</hash>
+         <hash>7e7721693694ecc133d6772321cad1337c0a2209b7457b9351dda3a01cb129b1</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_9x75_curiosity\system\fs\src\sys_fs_media_manager.c</file>
