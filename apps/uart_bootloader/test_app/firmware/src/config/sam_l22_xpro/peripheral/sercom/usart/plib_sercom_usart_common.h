@@ -127,15 +127,12 @@ typedef uint16_t USART_ERROR;
 
 typedef enum
 {
-    USART_DATA_5_BIT = SERCOM_USART_INT_CTRLB_CHSIZE_5_BIT,
-
+        USART_DATA_5_BIT = SERCOM_USART_INT_CTRLB_CHSIZE_5_BIT,
     USART_DATA_6_BIT = SERCOM_USART_INT_CTRLB_CHSIZE_6_BIT,
-
     USART_DATA_7_BIT = SERCOM_USART_INT_CTRLB_CHSIZE_7_BIT,
-
     USART_DATA_8_BIT = SERCOM_USART_INT_CTRLB_CHSIZE_8_BIT,
-
     USART_DATA_9_BIT = SERCOM_USART_INT_CTRLB_CHSIZE_9_BIT,
+
 
     /* Force the compiler to reserve 32-bit memory for each enum */
     USART_DATA_INVALID = 0xFFFFFFFFU
@@ -188,9 +185,9 @@ typedef enum
 
 typedef enum
 {
-    USART_STOP_1_BIT = SERCOM_USART_INT_CTRLB_SBMODE_1_BIT,
+        USART_STOP_0_BIT = SERCOM_USART_INT_CTRLB_SBMODE_1_BIT,
+    USART_STOP_1_BIT = SERCOM_USART_INT_CTRLB_SBMODE_2_BIT,
 
-    USART_STOP_2_BIT = SERCOM_USART_INT_CTRLB_SBMODE_2_BIT,
 
     /* Force the compiler to reserve 32-bit memory for each enum */
     USART_STOP_INVALID = 0xFFFFFFFFU
@@ -374,7 +371,7 @@ typedef struct
 
 } SERCOM_USART_RING_BUFFER_OBJECT;
 
-
+// *****************************************************************************
 // DOM-IGNORE-BEGIN
 #ifdef __cplusplus  // Provide C++ Compatibility
 
