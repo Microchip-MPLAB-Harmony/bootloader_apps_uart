@@ -1,4 +1,4 @@
-<config configName="sam_e54_xpro" projectName="uart_bootloader_test_app_sam_e54_xpro" configVersion="1.1" device="ATSAME54P20A" deviceLibraryClass="com.microchip.mcc.harmony.Harmony3Library" coreVersion="5.6.1">
+<config configName="sam_e54_xpro" projectName="uart_bootloader_test_app_sam_e54_xpro" configVersion="1.1" device="ATSAME54P20A" deviceLibraryClass="com.microchip.mcc.harmony.Harmony3Library" coreVersion="5.7.1">
    <usedPackages class="java.util.ArrayList">
       <package packageName="bsp" version="3.13.0" contentType="HARMONY">
          <modules class="java.util.ArrayList"/>
@@ -52,7 +52,7 @@
       </entry>
    </usedClasses>
    <usedLibraries class="java.util.ArrayList">
-      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.4.1"/>
+      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.5.5"/>
    </usedLibraries>
    <tokenMap class="java.util.TreeMap">
       <entry>
@@ -2333,7 +2333,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_e54_xpro\ATSAME54P20A.ld</file>
-         <hash>d16806801e07c979cea29ee524ed4c3d3e526c5cb77c7d8adf4128ba06157a04</hash>
+         <hash>ba1b5ba1b9c97c94416b0198dc30e928c5a66c926c3ad7695f9bbe3b798adaba</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_e54_xpro\bsp\bsp.c</file>
@@ -2349,11 +2349,11 @@
       </entry>
       <entry>
          <file>..\src\config\sam_e54_xpro\definitions.h</file>
-         <hash>d2b11c7f8fcad2548125e5f3017a7dc9429ba591c5a5cad741112f0efbdd6071</hash>
+         <hash>5f19f287dde428f1fffd6003e019e20a84836a16daf7594ca52811b5628baf57</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_e54_xpro\device.h</file>
-         <hash>68bb28accb617ce48b644e0b41a8f8a1aab2e1025456ba49a5a4bd72bf8e9fe8</hash>
+         <hash>b8fdcc4ed83daa65a6f38614a689c97d414774be19ae106e6da07556c50a2c82</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_e54_xpro\device_cache.h</file>
@@ -2365,19 +2365,19 @@
       </entry>
       <entry>
          <file>..\src\config\sam_e54_xpro\exceptions.c</file>
-         <hash>89852728a9a1cc4c9746839cc3caf5308b8698c0c30bf6bfbad0db9e552a387e</hash>
+         <hash>a565e8d25d218b3e1069267ae9cc317161d062683a27c64e3cb454757bb82fd9</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_e54_xpro\initialization.c</file>
-         <hash>46d450f96042704e8a6e5809be37dc1465de6771bf00a9a6bb27e989820ef61c</hash>
+         <hash>d2200abdf03f35681de9afd436e2bb7071ad921b0ca437f1020b8dd405c25393</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_e54_xpro\interrupts.c</file>
-         <hash>9e3d1ad08448d83c99fa8cb8a6a8c8e0d1a47f21aab2a4948bc156ff4ab04e10</hash>
+         <hash>4dc7b70b9594c47e150f9e5af7a626e9f8e8b2f95aa36f9415dbad28e82c0c0c</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_e54_xpro\interrupts.h</file>
-         <hash>51a66f1b8fa6ef9e021e84e64a8eeb9cf954ef63cfdd9cb28c6808abc26a4f95</hash>
+         <hash>65c5edcf97cdaf499497c7e18d8fa01383032be88e8aedfc883cbc35dc8bbfc8</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_e54_xpro\libc_syscalls.c</file>
@@ -2401,7 +2401,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_e54_xpro\peripheral\evsys\plib_evsys.c</file>
-         <hash>b2e1a8004049e687fc5544133f3346f743ced50cdaf860c8e3c7f58df3cc163f</hash>
+         <hash>171913270aa095f1e8ff9192995129ff7bab22e5c793c4223f9046802e69d1e6</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_e54_xpro\peripheral\evsys\plib_evsys.h</file>
@@ -2409,15 +2409,15 @@
       </entry>
       <entry>
          <file>..\src\config\sam_e54_xpro\peripheral\nvic\plib_nvic.c</file>
-         <hash>3d89f9371ce4e519ebca69b0bda48169332067a95f4dbfdb90c6131ced1470c4</hash>
+         <hash>dd717044dd36bdaf83a852c95160c3e8184a8cd8eb45179b6fa65d159c1e7306</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_e54_xpro\peripheral\nvic\plib_nvic.h</file>
-         <hash>81e813a093101d546799e00723cbf7245e2d18471fa51c8d130c5809cecca03e</hash>
+         <hash>9936ac782115af41003255283fa2f603f4ff2212d16275b7c80ea8d067a9e208</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_e54_xpro\peripheral\nvmctrl\plib_nvmctrl.c</file>
-         <hash>1a6bdac00590cbec796a13351597c695bc1d962a95641bdb573d1bf0dc38b2d8</hash>
+         <hash>fba7a5e2b2b74c95065983f4c1c67d9e755d1f46d773e271c6904b13b395643a</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_e54_xpro\peripheral\nvmctrl\plib_nvmctrl.h</file>
@@ -2425,7 +2425,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_e54_xpro\peripheral\port\plib_port.c</file>
-         <hash>abca7670ff27e65de52a4ec7d5646dc5c773a50a63c93df191adbf02968d8c53</hash>
+         <hash>8440a34bd950c4022ce87849f2711192a0cec60544c603ea7dc09f072a1cf950</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_e54_xpro\peripheral\port\plib_port.h</file>
@@ -2433,19 +2433,19 @@
       </entry>
       <entry>
          <file>..\src\config\sam_e54_xpro\peripheral\sercom\usart\plib_sercom2_usart.c</file>
-         <hash>98382dca32f1da893708723152016eb869ec092aa045e879dce9cd2110e069d3</hash>
+         <hash>d4280e552aa9359bfd9d8cbfc8ba42a0ce8e8b46e89df1f99a35e283806cf409</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_e54_xpro\peripheral\sercom\usart\plib_sercom2_usart.h</file>
-         <hash>4e0e1339420a75adc35ac4582feb99d1b8dd8e4cb8dadb6600199ad4df71049b</hash>
+         <hash>a0d35d03c527d1fb9c99d575f99b91a9d1d49d345b20cacee95c2aec45c0d7cb</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_e54_xpro\peripheral\sercom\usart\plib_sercom_usart_common.h</file>
-         <hash>f19dafabe0928d60dd83d7e19f35889f200e3fbadff09e2f42523d320acf780a</hash>
+         <hash>3653b66472c558c50f7037a1dd25d2678e9a13aa718f3c53a2195e6f3919ea48</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_e54_xpro\peripheral\systick\plib_systick.c</file>
-         <hash>429d4cad31226d81d1a0d2a2a1b85b8f93d781af3581fa93709d508d97ed4ce5</hash>
+         <hash>e3982d329a0e73f234397537cbf77bae1b5264dcff8406062addacc47bbca6f8</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_e54_xpro\peripheral\systick\plib_systick.h</file>
@@ -2485,411 +2485,411 @@
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\component\ac.h</file>
-         <hash>9e5aea0e3b2e23ff0835b19d2c749b9a00c95375a4488dc42c4d713eb17acf68</hash>
+         <hash>f157f4448aa3fa1bcd7e772c8d8ec7320ad5f17a8b9ac40b4eb881b2e207a932</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\component\adc.h</file>
-         <hash>6f54c703b348a1bbf701bc081cc14e6222de49beef4784cdbd6312af2b8c2737</hash>
+         <hash>75937f6a6e739b4dcaa5d5ff3dbf4a9f9384ad140abdc586386ebc8f206728c5</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\component\aes.h</file>
-         <hash>375d97ea3a789d5756c3b9b0d6a98a98ad9094503bbbf32feb934518c7971993</hash>
+         <hash>e5c7e19b515e33da34631a128419c2ff8eed97d0566cbff2ad64a0a897e18b1f</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\component\can.h</file>
-         <hash>bd9e3048d74fcdcd9a124244f35845daffb820666846cc74a5f1b02a9cd1a16b</hash>
+         <hash>97465cf476172c1adb14202c46284c58b21a258b47654eed3399d67b1eeb9ad6</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\component\ccl.h</file>
-         <hash>a104fa7e27e69ef01af2f984de4aa8c434e56204b44d42e195b32a602b8253cc</hash>
+         <hash>3a190ddb47f0dbd2ed65511e5bbd0daf55be2cf33ea06ef20f6e228ac047a964</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\component\cmcc.h</file>
-         <hash>2427366d03e77696d6990f9c017a0c4a9b70386d186fc3a2a570ba86b11dc5a9</hash>
+         <hash>993af3ec00a3f3120f42a7e80e099821b51006b5280df70c401897410669394b</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\component\dac.h</file>
-         <hash>c8b2c7b5505731f23250050887cd6a04a547606aa375b62732ad89d5b65f93ce</hash>
+         <hash>05897e5c5900d2be72b1d7d4992fee43e07c6857993922202be25d9d1bd0a4f5</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\component\dmac.h</file>
-         <hash>9c4bfa47388a52bff2b04e537c8d3f2a11cd4576947c27b4c7fdda11e77ef4a9</hash>
+         <hash>2c73794e0c2c6117390600f6e1575493acb475587705567571199f16eb3340aa</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\component\dsu.h</file>
-         <hash>df53a4c777aac557859b363ed8d11086d8e1e24edee30a9677038dde3bd31f82</hash>
+         <hash>85f441c1b0271d3a82680f6ece6c7f2587bf1e494ed758b742e89b6c2d971944</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\component\eic.h</file>
-         <hash>994bdae1d089d80c5ed3364a543af00c96bbd58fce4b1cc7001de977f76b8678</hash>
+         <hash>53f809fde4ae86b66dd5c39f25f030809af4cb508718bc172fbbecfc1f766884</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\component\evsys.h</file>
-         <hash>d159803d7aa52259b3353e963f90a8cf54e1fef57bc65acb48af188d1fbaaaa0</hash>
+         <hash>17acc9007c03c4283e78c38223672a2203ef3339a36dc147ee1668b9552d1461</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\component\freqm.h</file>
-         <hash>12796b66d85827bf38f665bda65378018e17f09579f4cd0bbc0bb0ad229a4f6b</hash>
+         <hash>1613063b0b12636634d8622fd1efd6d6befe795f811702858774b23fc4ab316c</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\component\fuses.h</file>
-         <hash>7b0223a5254e90320e7dd13def00f1a98047fa9ce1f3e127b6de47b8c9515ba0</hash>
+         <hash>f23a488539103e2e92e5783ab3128cb4225bee751fed9d2e0c3eb4a3756cbf18</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\component\gclk.h</file>
-         <hash>7e065fa4e226d84947473f6dc7e777fad062fa65bd35df86bcfb3f13654069c0</hash>
+         <hash>dcaf27200d829fb23d484811a2865ef1d4d2e773ecfa552a13251a6d49c2b8d7</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\component\gmac.h</file>
-         <hash>5d12b002d6d4b9bea16d7b4b4914fbc6926f607275540a9a2fd560d2d4b48fa6</hash>
+         <hash>86e0c71950c25818df186de5c65935ac0fa5ca8167f0f6067c9a84f19e2cd7e0</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\component\hmatrixb.h</file>
-         <hash>c0645f7dd8da46c6bd7043fa7013cf50cabdd0019417df9897f1f2156c840d35</hash>
+         <hash>fdfb91dca49562cdf42ff23db21d34ca5305c3edb97571327d7c2313598cd685</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\component\i2s.h</file>
-         <hash>f92e88867446453394bc2d5183cf33153567ad2a060138b84e21ca81a3c9565c</hash>
+         <hash>32ce4533e934a8582f5a2d1be79f0d65ef9bfec13a0073253dbd84d7363a45ff</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\component\icm.h</file>
-         <hash>f33aa0926b61d44400e61e5c7c90bd3dd6118ee2339ac1f7f62d8d5b336c7c75</hash>
+         <hash>475fb1d0a13036b6e376141ef088bd46ff1d2af6cfc3ed264404832dafc08209</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\component\mclk.h</file>
-         <hash>b97ce00702eb3d98218cb257b0432730ef213f0ebfce19e07b09151883e21bf9</hash>
+         <hash>9a9fb6c8aa81d08419a2a72e84a15e06d02ebec1d6296a1e3785a5e01b5b466d</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\component\nvmctrl.h</file>
-         <hash>fc24dae4f61bf8c140df2d906ac18c172b83a5a78527c53e91ed7990ea8162ed</hash>
+         <hash>2cea6b96bf6b56b9f9f05484dad620bbda4e021e05b42af1832d026e46758ef4</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\component\osc32kctrl.h</file>
-         <hash>33af6d9036ce1a7f73b36fb2ea2ce6ab04772c736eb11a983255b9a3f7e0a1e6</hash>
+         <hash>8faaa4e69f665e82ffe84560251c70e0c2229d18941755ec9533557fa39152f4</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\component\oscctrl.h</file>
-         <hash>97b84e4e3281fd623c5ddcfdb3d3b906f387dc1668488a2e9d3ac5d97a366285</hash>
+         <hash>f5aadde278c0c7a5d79a3e0343740975585b7d5dd4c0d7e14ede14d53e82257a</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\component\pac.h</file>
-         <hash>bdc347e8fd53726a85c3b9fcebb2de7ad6444bc3882627e9a8b51708bc1d29f9</hash>
+         <hash>9214be8d02f2713ea105dd6e5d3c53424825b827f921175d7ace2209ab6802dd</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\component\pcc.h</file>
-         <hash>275d9c781f584385e948deb563cbb9e368c3969f3ff40671d57308928addbd1a</hash>
+         <hash>2d7e867e85b1a18ae118b3074d2876989b717778fdcbd2c49428234fdfbbe7d6</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\component\pdec.h</file>
-         <hash>b3e347d069968af0a4610ec0dfc5145049de5cf089ceccde17d940c4db40f514</hash>
+         <hash>027108cc20bd19daf3d9fec92f0328f295c4f3876ba83dd100610a266999f4d6</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\component\pm.h</file>
-         <hash>33c94f2dac44d36c08ed4b14bf51ed7f5afb7cedc61ab602db794c43c60dfe51</hash>
+         <hash>b7ce41764e2fd977502e8e7f0d40736aad9157167081b1791ba8def31c77cc2a</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\component\port.h</file>
-         <hash>5c6a59ed8d86bfa473c5e3899aec3d4cf93257f29c8f4e5c104d735ce076c1b1</hash>
+         <hash>c467031782ceb12d63e02c2f5d424d7f9ff837a879dd4a4951194da48a2d2e2e</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\component\pukcc.h</file>
-         <hash>df43121a4bcf106bac3351eac480d07530d1ecfedc4efaae43479902b9386c90</hash>
+         <hash>20d257c89464d1e8e627af074c2a50fd6ae66aaf52ae89b5f32b4f38018e8368</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\component\qspi.h</file>
-         <hash>a90169dd81ac1fa626f803b62bcba582aaaec46734e8e643501b14f50d99108e</hash>
+         <hash>fcdca02735308c81ca9d7321645f8824db79fa286c3b90e86e8661bdc51fb20b</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\component\ramecc.h</file>
-         <hash>618b8d24318107373ef2e53e394fb73a175cd24e183918e34bd8b2136003558f</hash>
+         <hash>9752d11986692bf947a370296d331255ad74d9dca26f8305d6a9621a9aad3b14</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\component\rstc.h</file>
-         <hash>a46b6caf030ff5a3a9a55db2b6ce671d60e26a7149615d8260d8a361a56c46ee</hash>
+         <hash>e3e3b6931a83b50f523e9ee2dce845485f7aab02ee644939f7954c2a0ad54803</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\component\rtc.h</file>
-         <hash>e7dc15de2d24b4ce61f323a03de918f60ca489cf5916ecbc5712a2417e0a4a0b</hash>
+         <hash>349ec9795a09271d159689a358f8c93c56943990e2e30e18f0dda60de688fc85</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\component\sdhc.h</file>
-         <hash>fd25d7d2616dd93ff624b8b29bfff75454d60834b0ff6e802d0fa6e52f5786f3</hash>
+         <hash>511c1cdf5627c36dfa824402a940f1a04f699b16d188c4d797f1954f8ffdecc8</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\component\sercom.h</file>
-         <hash>a5648285ff6f8345876dbde62f9fae77bd237e2d5b5134d9597c15ef72a24a36</hash>
+         <hash>ccf7e911793d5e4af6bb65a23a3b41e9493453ca434a70aeeb411934c8912398</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\component\supc.h</file>
-         <hash>b3c7e1ab67bd90e0892a372cf32ec9ed4c6862d3fe125ef6e25b881c95500846</hash>
+         <hash>69276e9548b59fb981a09da723c36b4fc89f3573d109f71b73ec47717215784c</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\component\tc.h</file>
-         <hash>026a28df76d0dee8704e7ee2d401314275e9c92013c8d6f8f743b92b28ac7f23</hash>
+         <hash>2381776c13baf45a4f654d3464c289cb351f37e3aa8b5056d49f37688368f38d</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\component\tcc.h</file>
-         <hash>658f11db618e279d12881ca08d9b3848a3ea144062c8521d6f35256a66ca79c0</hash>
+         <hash>c6f56f189110ded92a860606b1e3dd880c67c8352e12a38a2a09b4b1303b4714</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\component\trng.h</file>
-         <hash>6da83baf77684a3f44ba9993b81c2ca3a61869d85807e9399c02568d0c7eb02d</hash>
+         <hash>a2b5b88b33ba1d79669987db0325182c4b20aba65fc68519539398d8c1fdf726</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\component\usb.h</file>
-         <hash>923cc6055ae5099b68c4f3dc8cfd2cfc9bd199b970a8fdab393e490c61ee5367</hash>
+         <hash>07f6cda2898ae2c8c0401ee713172b2dd925887bf983d0e60bc1f0590c5cf84f</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\component\wdt.h</file>
-         <hash>5f245039ebba766281919a305d1805265c1dc0cfc1a98d130ab281961c0a574b</hash>
+         <hash>1963483f6cfe54cb9d3cb05bd5324138b97c05b273a0ccb4c28aa2562098db1b</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\instance\ac.h</file>
-         <hash>d96711dc1ca8858e49f47f382dc9e0f3b85e493ebc860f632540f161f0675559</hash>
+         <hash>06255894f0118d671241e2ae86cb86bf01bc4d96666e093d0bb3599588f6ab07</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\instance\adc0.h</file>
-         <hash>be2251a425bad16bee6b4e9faa5cb6365dbb26e3363d00c03c9476ddb7e1f2ed</hash>
+         <hash>a41f3bf62da75437d04601bebc48615f998a6e9ef2aa8483a3ea5e91155fe1f7</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\instance\adc1.h</file>
-         <hash>5d77304ff8807b26e8881771e42c98d55eebed9329b655a176bb5726d5bca03b</hash>
+         <hash>56cd371b262e07d58b3fbbe06fd4d809936f524f29b97c05ed94ed5c9ac3ecae</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\instance\aes.h</file>
-         <hash>e00c458cd4f1224d6d2d602babfe2c9942fb1d4e24046bb4cef01b4a53c49645</hash>
+         <hash>d5cd40e04f72edb88dc33674616151e7846f8ead5e96c20248028c18f2c6203d</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\instance\can0.h</file>
-         <hash>f5aa2e35d802f24e0f5e16b5175ca88060c34b9313f9fdf0ddabc3c70aaa968a</hash>
+         <hash>99f948df8211424203f90658a32dbd13143963e9fad988974508ceb3526f23e2</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\instance\can1.h</file>
-         <hash>fcad53aa3be2bab946218aa90ccfce4a2378fd31c47d1f30cf1347e362ef919e</hash>
+         <hash>adf3a18935f47e2915d3f205fe64e2f8be5336ea0e7ef45948fb5ce1adc08ab8</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\instance\ccl.h</file>
-         <hash>3192e0db675e1602b9a620862df2b1a7412e152ace23039c528f40e514da1a58</hash>
+         <hash>cefecd3062eed31af4063e74ee6b2355f989556f740d1e045bde94a661acf027</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\instance\cmcc.h</file>
-         <hash>406bc870d6a529236ca7114f98bce000c6887a50fe16ebb1e10a44a318f53ea6</hash>
+         <hash>1371501f5ab581ccc83310ccffed1237b02a3f4462f10f306da232d96b551cf0</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\instance\dac.h</file>
-         <hash>ec987a1e9a8dd4ae95f69b14887002ef174583915e33d1eff050600fcc7e5c1c</hash>
+         <hash>8389787b42b85816188084337e146dcc3b7c2e3861a10ac1bbb0663a775979fe</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\instance\dmac.h</file>
-         <hash>cb3a2cb3bda796110c7e5dd2cb63c7cb5c504eb541ab43361a458ec8dfcc0539</hash>
+         <hash>423256a72237c1f6d47e380720ba1f9db9087fd5fc325312bff21916e6a333ee</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\instance\dsu.h</file>
-         <hash>4d467fa0a2ee972905f44d15ce7af0bedb6fb4a5b0715afde27b61c2532959cb</hash>
+         <hash>146ffad7736c3cd4d500f9b7232e3d2f70bfc7e52ed3a2b9b0f302ffcdc1cdf1</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\instance\eic.h</file>
-         <hash>cca60fbc2c6c540fced54f2af8ec5f453625eb6d332f2e37afc2322e8eda0b82</hash>
+         <hash>40e0d6d72a698524b38129209470965affb810185a2e75443e8dd2936475f4ae</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\instance\evsys.h</file>
-         <hash>b2c0042d0dc5be8e4202f620beffaab60501b6595b76702f6905eaddd09b2275</hash>
+         <hash>c4f19ff9991917a327f84a87c0d232b5e013c60805a33448f65b9c3505e7232e</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\instance\freqm.h</file>
-         <hash>c5ea1c07af5e9e5b7491c9b8b270f3a881c08d03e9586891118e32cd6f72f0be</hash>
+         <hash>0b6bc5ecd721f83f5ada9a161d17222c0087be7774214b7f454970d0de00683a</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\instance\fuses.h</file>
-         <hash>a302e4dd512c7456d1977d03f6fb7828902a9d77f35f74f116fa811dbe295823</hash>
+         <hash>93d010a9f01aeb316ad0bb1006007942cf789808ee2a2bca5ecf4952b4c57166</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\instance\gclk.h</file>
-         <hash>8b00c66c338634aebe6c31371ba8eb3488b624bbdb6b724b012279fc3e1ed256</hash>
+         <hash>77aa2b7860005d1ae975bf070aa2c3c553fc5310b21fa2cfd00f470ccfd7d28d</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\instance\gmac.h</file>
-         <hash>d739d16f7a414cf41a74d96baf93618e503b5b2d9b47d94564232a3ab8125451</hash>
+         <hash>265dd3e524b491bc344665c7b49e989ddf8e1d10dba6a0fa4dbb30b0b56dc7dc</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\instance\hmatrix.h</file>
-         <hash>7c1bbd8c9e60cae12250cfa7e436564167b0243e2136de96e545900830dbfc55</hash>
+         <hash>eddc3d3130158908c31a564c8c29c5f3ca41dad6468dd60228c8a967bb97253b</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\instance\i2s.h</file>
-         <hash>1b50ea7dd9c8fdd6fe2c903bcce274947619575d25422720610df1f4d9227719</hash>
+         <hash>6a5d2bb458e0541a39a8369daf88f1b3829fba2cdccada6b9cf124d668660633</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\instance\icm.h</file>
-         <hash>0162b8764b75e7421df67ece221203e1bf8108a86547e0aa839d1e99cf4a7c26</hash>
+         <hash>90e6cbb2c0ec64c9477fee7ec63930bdfa3f59dc328b9519b86c73c8b84353b1</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\instance\mclk.h</file>
-         <hash>27ac56d218a982848746411066a6f9d28bd214b8d59054b1d1614097d07aa5a0</hash>
+         <hash>1f1c5d794100fa999104da4d017a586da806ebeae31cfb7bb2f636a20ba6b281</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\instance\nvmctrl.h</file>
-         <hash>32ff04cfb16a0b161d4c2a433c8014af3daf86aebe2fbecea47c68e4410a572e</hash>
+         <hash>cc77efbc17ae84da27690caf405ef6450751d143aa670e297ea38a3076a90ed3</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\instance\osc32kctrl.h</file>
-         <hash>a27141d58908838156678ba3dc44bf2e31f6c126898db4c0aef4b35f46cfd0af</hash>
+         <hash>9bb87927073cbee20798666ef5efb2ff615b5e97e6090f294c49c402b3acc7a7</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\instance\oscctrl.h</file>
-         <hash>2732b3edc7b584761a0fbc992479a6ba1d58b570b7e920b3cc6fda5b6d54603e</hash>
+         <hash>3bde509a4bc87a28911cad605641bb1cf89ac41b3e948f76b67e6e8f9d40a063</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\instance\pac.h</file>
-         <hash>4d6e1b144b95ce93732effca425158f82dc53a5780f7d5a934dc63438a6c437d</hash>
+         <hash>defea4b4834b4fa3bf5646f0294862973772342d9de8ea6bd98ff06043372abe</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\instance\pcc.h</file>
-         <hash>e9c9940383547b8e2f7ff0278daccfe29d12ffb46ebe31dbe6e7f719ee7188a6</hash>
+         <hash>0ed9ad2b3f0a07065945be9b883baa07f015366c48ee262113afb276a75a6fb0</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\instance\pdec.h</file>
-         <hash>7ed9d8dc6742a05ebc85002485e833fcd10fc585842ac97e1ffaf8891558a79d</hash>
+         <hash>66f9eb4f612b3cbc209994419b800a4eb647992a2d8c21d00d457b159b388c34</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\instance\pm.h</file>
-         <hash>bd415c931f8cbae8536cdc591093007f9c08de6e13e8bdfbd18c2098a9e29ae5</hash>
+         <hash>252e7dd1c498c547fa2bf95a4017b1363a7371f66869d716b1e384edf96be224</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\instance\port.h</file>
-         <hash>25304e398b3ae71d4a7ebb4ed2ec9032ccfa7cc8d5b89e5ab0688b351262de93</hash>
+         <hash>2d0b0c934019717d6e5d81fd989c0a365e148ed6436064fa2639e59308fa7315</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\instance\qspi.h</file>
-         <hash>49791aac2c3d92d177244ebc020803085f4c3dd7d568af29bfbcf8fb868f584b</hash>
+         <hash>a5dfebbb8ec42fe551d2e2e6516ca3281fe7de41b6652343c4b426cf06ee3415</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\instance\ramecc.h</file>
-         <hash>ed5823e829ce914cad23313e46cc3172057ae598e139bd30e511426cf0ca6c93</hash>
+         <hash>6372ad45897efbc9bf3a33d96785e58c7738e3c690644f257da7fdd5c9aaeacb</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\instance\rstc.h</file>
-         <hash>4fd3866a085d4c8175ca2ac114541fef189773edcaedd66792f381b9a2309abc</hash>
+         <hash>1574d818d875847d49e0360d019414f57b477bd0df09becc3d25f4df5608f3b6</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\instance\rtc.h</file>
-         <hash>99762d9258fba211e2707f8204c298469ec6afe777136beede4333363cb1cfb8</hash>
+         <hash>0a818dfd29193f845d1eba63067f6c40d1bd6bfc2ba3f589681fd33436535674</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\instance\sdhc0.h</file>
-         <hash>c8bcfcc090bbd04358d9a6deb4718d8b687aad99fa8073e8e249a9b647d417c0</hash>
+         <hash>9e2769d8279679aea5468943b8531318ff5ef0984f41ebdc019fb171e3c50e4f</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\instance\sdhc1.h</file>
-         <hash>dab30df6250b2ccb6c07cd0723145de76a83b4327354512d37cb2bf7e9e2497d</hash>
+         <hash>6d283a864ebc348fdc5da59b02885ab3cc594a5605e66392b88a6d12e0bc7997</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\instance\sercom0.h</file>
-         <hash>7adee6d7c5fac823509df0a32f63becc6dcb1a53f50b8f0edbc3f97b8cc31097</hash>
+         <hash>f9751f688bf76d62d423dbf27db9d40e124a599584369b064ce4db561ec321ca</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\instance\sercom1.h</file>
-         <hash>6ee141ad7485164f47de8dd0e539c8e9ed09a6693e1105893acac792b0735016</hash>
+         <hash>6f8f1778cf5d23e8bd5f723632313de8b104fd1a0632d47178f0a5c60c518d75</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\instance\sercom2.h</file>
-         <hash>31d1a71d2a32d6a623dca497ac53c9b352d6c1c8398e7d6173a3cc7313dd0241</hash>
+         <hash>da2d3d623ef2993df08a4349e311dfb53d5bceeb2df598a1a6126026a05e490a</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\instance\sercom3.h</file>
-         <hash>dd340b9c1ec668df6917d2670f1a72d92cfb83402d78d7128e9cdc412d300f94</hash>
+         <hash>233fc8825a21df59e2edaa4f89bc2d4da3450afd74a956f6d8e4db5550b6ed8f</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\instance\sercom4.h</file>
-         <hash>81cabd9d9fe6366abfc759ce198d12e36c525dd3185cb5a180cc3d4fc3cc8801</hash>
+         <hash>272da94e603daee90e0911bcd2c94fbcaa069be44e8c939f0a490906baf74b0d</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\instance\sercom5.h</file>
-         <hash>b525d545961df41cb16fae3224c8aa6bb4abe160fc1815104560c96d5fd30ac8</hash>
+         <hash>71c878548933df4d3b4fa5631022112a9d913fe89ffab1dea1f1a9ccb3a4bbc9</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\instance\sercom6.h</file>
-         <hash>e15d2db5ec8c4364bf6bfe529e1ae9550c8d08438551a51ff443131f39f9a6b0</hash>
+         <hash>34799404ab3f84ffc747a724122c08ba7cccef1c56d80a6652e009cf4ab8c537</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\instance\sercom7.h</file>
-         <hash>df25ef4bc7a320c460584818c67c247c5cbd9579ff69e86f66d68eed937d7f41</hash>
+         <hash>5cbf335af1c3f3f3d38e30fc40b89b2f7bcaab2f11e835f500bd129934dc98b7</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\instance\supc.h</file>
-         <hash>6730e3f89988d74ace77c20b695069638d3e39fe996044191c914c3d45dde5e8</hash>
+         <hash>d8027d03ef982a20bd0acd7af1bec00742c14e5ce40a1ce85f2fe97a975ee744</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\instance\tc0.h</file>
-         <hash>bcb972750f202694f0c44979bf5e586805e1c5a30c1350bfe4c6152c1cb9a613</hash>
+         <hash>87b06ffcd440affa3c90b3a5f5d607ecdda617f88608a4242c525ffa99e9d656</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\instance\tc1.h</file>
-         <hash>4a03fe556f6628f9db6b84779cd40ca79f84e845f69b282eb7184a79229dda36</hash>
+         <hash>0efcddac0cc735ab4e407e908b0eb5f137df8aad93b522d856e9bcf3586cf019</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\instance\tc2.h</file>
-         <hash>6b42295db2b1a2bde1a462d402554dc056103d8bdc8e2140d3f2dc639ae7a30f</hash>
+         <hash>e16bb6542d9de2d7ef384a3416075e372b8a96906b43f8fbb79f817fed0bf249</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\instance\tc3.h</file>
-         <hash>b29b6aaf1adfcb0f6896946aee07179854117f4225315eae82e8e221d3b17efd</hash>
+         <hash>51e95824836ac9269c845caf71b2a37e811bf80073de3b284efb0f3447450b6c</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\instance\tc4.h</file>
-         <hash>74b7e9b8984523942548f73c7620f853418421e478a7bbbe2b5e633ef90639a2</hash>
+         <hash>0d77dfae8a4d87fe839bc5c8336b0d61a0952d727c8f1984a2a1a8bf9149fedd</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\instance\tc5.h</file>
-         <hash>62637ea95ac7aa6e8618b75ec6758d338fb69f49da153dcf3050e01cfe6fd795</hash>
+         <hash>46a0b9146c604ba3df9b05482aac4109b0e21a73d55b09ed5ba307a0274010a3</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\instance\tc6.h</file>
-         <hash>5137ab8599f1becf3094082d99942c572c1265ab86505ed59819d5e11e979d7b</hash>
+         <hash>7c4b92deff3843128325a526db87d6e2174e69680103614250f12cea5b61b02b</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\instance\tc7.h</file>
-         <hash>b212aa1eb1be0df28c273dad0e1373c745692be947a27dbfdaed874c3b2642c0</hash>
+         <hash>dca9a936f4fcf1037452af9868899211963b53fdf0f0c0767668ca07eda0c0c5</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\instance\tcc0.h</file>
-         <hash>3c4adac8995c63cc07c4c6e488f9a9ac876d0554c2c75700d684366c3c58a871</hash>
+         <hash>0ad588bdbda3df53f4f2168be5fa32d5ae28f16f57bf9c900abb0055adb25f24</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\instance\tcc1.h</file>
-         <hash>4534eab1291a0cf53306f9a5f9df21ed5a85b2944b452802510bb33f8ace4af7</hash>
+         <hash>abe208716323120d5c4d26ccbdae290158efa95a6721e7791bb6f7665581491e</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\instance\tcc2.h</file>
-         <hash>3c74abde6deed6e1265e505c18ca6c819887e49b54eb7bde5e16ad5432c731ff</hash>
+         <hash>14a55e95ca2146497ee391fcf955139eb3e48bee6527d33cbfaecc710417321e</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\instance\tcc3.h</file>
-         <hash>7dc6fd53595091e97f24ddd191e3a0119d12759ba2533043995b7dba9b2379b7</hash>
+         <hash>cf281fc9411eaef67e560408abc7f6c595e37b63f590e5003fda7927a6ab0fa6</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\instance\tcc4.h</file>
-         <hash>81ad524faca494b9b4df0e9e0f51d6e2c6acde34d92cc67aaebd287dec9d1928</hash>
+         <hash>51c27d49f4dd73738158e42df00aab3790520f63e9d1ac3b1850bcfd1d999365</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\instance\trng.h</file>
-         <hash>d933925b170daed80149b4c837d33c359d66029100ddf9cd58a06a508326d88e</hash>
+         <hash>ca8f9cc2b20d18dc66af24a52e2367f41e6885366125623fed0d9e51f392c3f5</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\instance\usb.h</file>
-         <hash>df936cde5d21ae8df84ce0364029aba9569e3f75c6fb1c0468a5e1106b44ec3f</hash>
+         <hash>4c3040136a61ff88c0ee2370815a067338a14302621d951e768564389ddae0c9</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\instance\wdt.h</file>
-         <hash>4d498f261b4ccfb1754453f578c62930b106bce7f3cdb05bf2d27110588d0b87</hash>
+         <hash>4c9c2b1c3ca855bc17ca4863df1b7da73af19ed5798317eba8457ab018efcf06</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\pio\same54p20a.h</file>
-         <hash>744ad0ee6b14a0b88a93ca1b7663c41bd150e48bc1a567a1046cf267f0d512aa</hash>
+         <hash>0a5e0e847bf5e3efac0f6a5d0c5e88d89289f6806176f150604262d784375ae3</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\same54p20a.h</file>
-         <hash>b10e6b12e0059c1bd293737ebbc088bddb92d7b6d957a1c7d9ad0ff2c6bc6be5</hash>
+         <hash>bc2c22a6acc9f4347473581e283c769c4c1ac03331eae6b2735d45d2ef08cf20</hash>
       </entry>
       <entry>
          <file>..\src\packs\CMSIS\CMSIS\Core\Include\cachel1_armv7.h</file>

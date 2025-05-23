@@ -51,7 +51,7 @@
 #include "plib_nvmctrl.h"
 #include "interrupts.h"
 
-volatile static uint16_t nvm_error;
+static volatile uint16_t nvm_error;
 
 // *****************************************************************************
 // *****************************************************************************
