@@ -82,6 +82,7 @@ void USART1_Initialize( void )
 
     /* Configure USART1 Baud Rate */
     USART1_REGS->US_BRGR = US_BRGR_CD(81U);
+
 }
 
 USART_ERROR USART1_ErrorGet( void )
@@ -108,6 +109,7 @@ bool USART1_SerialSetup( USART_SERIAL_SETUP *setup, uint32_t srcClkFreq )
     uint32_t overSampVal = 0;
     uint32_t usartMode;
     bool status = false;
+
 
     if (setup != NULL)
     {
@@ -146,6 +148,7 @@ bool USART1_SerialSetup( USART_SERIAL_SETUP *setup, uint32_t srcClkFreq )
 
         /* Configure USART1 Baud Rate */
         USART1_REGS->US_BRGR = US_BRGR_CD(brgVal);
+
         status = true;
     }
 
