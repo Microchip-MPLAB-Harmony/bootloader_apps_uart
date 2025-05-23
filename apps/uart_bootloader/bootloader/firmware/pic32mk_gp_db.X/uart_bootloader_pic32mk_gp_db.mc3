@@ -1,4 +1,4 @@
-<config configName="pic32mk_gp_db" projectName="uart_bootloader_pic32mk_gp_db" configVersion="1.1" device="PIC32MK1024GPE100" deviceLibraryClass="com.microchip.mcc.harmony.Harmony3Library" coreVersion="5.6.1">
+<config configName="pic32mk_gp_db" projectName="uart_bootloader_pic32mk_gp_db" configVersion="1.1" device="PIC32MK1024GPE100" deviceLibraryClass="com.microchip.mcc.harmony.Harmony3Library" coreVersion="5.7.1">
    <usedPackages class="java.util.ArrayList">
       <package packageName="bootloader" version="" contentType="HARMONY">
          <modules class="java.util.ArrayList"/>
@@ -37,7 +37,7 @@
       </entry>
    </usedClasses>
    <usedLibraries class="java.util.ArrayList">
-      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.4.1"/>
+      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.5.5"/>
    </usedLibraries>
    <tokenMap class="java.util.TreeMap">
       <entry>
@@ -1668,7 +1668,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mk_gp_db\bootloader\bootloader_common.h</file>
-         <hash>f7bbcae73bd009630b795294b42018299c2a88fca2906dc9339c1bfeef5adb97</hash>
+         <hash>dc0cf2e663139491b45bdc45c2e2b5375476c0ddab77a0087a20c9af2aa94fc8</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mk_gp_db\bootloader\bootloader_uart.c</file>
@@ -1684,11 +1684,11 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mk_gp_db\definitions.h</file>
-         <hash>b85aff7f1d04ca1a950a131cbd1c8e19017dbaa6d172c4cebbe8a58dba68ebaa</hash>
+         <hash>6175725a0308fe282e06644762d6c57291e890aec9ff8bdaefabf7440be8dbf1</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mk_gp_db\device.h</file>
-         <hash>10ec93c43a7b158a129ae05bd8f4a59ff5bcf3d0f3f062fdd64c374bc2d42099</hash>
+         <hash>4d4341a6f9628cea0bf73f980b639f7cb81089e55a60ad7e434be2a71e477442</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mk_gp_db\initialization.c</file>
@@ -1696,7 +1696,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mk_gp_db\peripheral\clk\plib_clk.c</file>
-         <hash>4169715aa29c7885894507e07e729c3f4610e8bcf9ca4dbeb1d3d5ae63d5df5b</hash>
+         <hash>19dfe7a645f356aa4752ff84922db8e6bdf2a42501f4683a77269d6200e5a07d</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mk_gp_db\peripheral\clk\plib_clk.h</file>
@@ -1712,11 +1712,11 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mk_gp_db\peripheral\evic\plib_evic.c</file>
-         <hash>6a4868a2d1fc1277d41a08d5d4cd4fb0a984fc9731fd22dfba194ea9070f9782</hash>
+         <hash>62232d2eba23028329679e339b515fd19d1e4dcb9fee96a9ed994bc055cc6a8c</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mk_gp_db\peripheral\evic\plib_evic.h</file>
-         <hash>5d2b2a2d0c07aaa79af7d507e11e666e511be2c8a65fd2179aab81c6547e985a</hash>
+         <hash>448da35a1944883bf7c38207d29b529b217079ed60240fbf90dd20a1010ee1f4</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mk_gp_db\peripheral\gpio\plib_gpio.c</file>
@@ -1724,7 +1724,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mk_gp_db\peripheral\gpio\plib_gpio.h</file>
-         <hash>5d9354e1f5faabb65f8afd23cf72ef4182343feb6271ae59b63c8fbc8ce09731</hash>
+         <hash>e5381e72b9aa47c29190ce40ce26e548b2f22f844a4b5079f0ac8bd282f3f7b2</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mk_gp_db\peripheral\nvm\plib_nvm.c</file>
@@ -1736,7 +1736,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mk_gp_db\peripheral\uart\plib_uart6.c</file>
-         <hash>2822a4c79446f9f44b07690e739a870979769a3668c914ff656816d488dc82f2</hash>
+         <hash>398804064c6c72c67dbab66353dc211a4c2a0a6c7eef38944f7355109c38e8ab</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mk_gp_db\peripheral\uart\plib_uart6.h</file>
