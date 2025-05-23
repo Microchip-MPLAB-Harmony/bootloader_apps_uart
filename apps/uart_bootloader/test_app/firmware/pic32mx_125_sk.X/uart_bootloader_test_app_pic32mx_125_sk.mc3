@@ -1,4 +1,4 @@
-<config configName="pic32mx_125_sk" projectName="uart_bootloader_test_app_pic32mx_125_sk" configVersion="1.1" device="PIC32MX570F512L" deviceLibraryClass="com.microchip.mcc.harmony.Harmony3Library" coreVersion="5.6.1">
+<config configName="pic32mx_125_sk" projectName="uart_bootloader_test_app_pic32mx_125_sk" configVersion="1.1" device="PIC32MX570F512L" deviceLibraryClass="com.microchip.mcc.harmony.Harmony3Library" coreVersion="5.7.1">
    <usedPackages class="java.util.ArrayList">
       <package packageName="bsp" version="3.13.0" contentType="HARMONY">
          <modules class="java.util.ArrayList"/>
@@ -44,7 +44,7 @@
       </entry>
    </usedClasses>
    <usedLibraries class="java.util.ArrayList">
-      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.4.1"/>
+      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.5.5"/>
    </usedLibraries>
    <tokenMap class="java.util.TreeMap">
       <entry>
@@ -1395,31 +1395,31 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mx_125_sk\definitions.h</file>
-         <hash>5f28ba51714bbce9e17b6338662d98321b92f04256ff2580a468b40513f1bac1</hash>
+         <hash>72b3392ab5db856422047dbd5d6c2a1b04190692a7cc08adf953dad98e0bd875</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx_125_sk\device.h</file>
-         <hash>10ec93c43a7b158a129ae05bd8f4a59ff5bcf3d0f3f062fdd64c374bc2d42099</hash>
+         <hash>4d4341a6f9628cea0bf73f980b639f7cb81089e55a60ad7e434be2a71e477442</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx_125_sk\exceptions.c</file>
-         <hash>7c1b9a2e42598d51c643984260a4b0d966a18f1ad97cc90d166aa9a4311ab6af</hash>
+         <hash>ed8f326d4f1abc2e74c1743119304a2f613522e3baacdd8df59fdda14c44619e</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx_125_sk\initialization.c</file>
-         <hash>140af21d9721f7837972ed299db51fcc5000b36dee5631d72429321f7c996bdb</hash>
+         <hash>c3a19592bc1c9270919b893ad5617d6152e91a514b937723d971e4eeadd7d27f</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx_125_sk\interrupts.c</file>
-         <hash>78dae1eb2814001083c177580ff5afdf938304ca9b465dd83c8a5cd806b3f5fa</hash>
+         <hash>17531324e15a4a2330a352ac375a66c2188da090d7bd5799ab15f95ade978e58</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx_125_sk\interrupts.h</file>
-         <hash>759cce8ff415eadadd85a74232a5023d73e8859a4556ef4beb93c2cfd4b8d8ef</hash>
+         <hash>2b6f3a9da8b2f61b5ea3f584838ad851b151646b5fda0fb709cc05e65576fd37</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx_125_sk\peripheral\clk\plib_clk.c</file>
-         <hash>edb61c4c1f6f7a46bed86c3a90789d684a2bff94f4388b0227f5d23ac18386f2</hash>
+         <hash>cb38000c8c50705fedc5529c435a595c68d78d9a2bb46b9b83ff5f68d5168aca</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx_125_sk\peripheral\clk\plib_clk.h</file>
@@ -1435,11 +1435,11 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mx_125_sk\peripheral\evic\plib_evic.c</file>
-         <hash>9f7449415a719bfe60947c2bdb3144245cfc400cf06861ccbfe6df6b81f4fb20</hash>
+         <hash>1bef337138d168802e01360953bf4ad7cc4c114e86adb0fa3196c9c82e67dea1</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx_125_sk\peripheral\evic\plib_evic.h</file>
-         <hash>82360f1bd4ab436161392cd7bf86db3a253c512474116a0103877926a9512b64</hash>
+         <hash>00192bd3be0120d35b9bd048719f808dd96c5523a5f6f5cf78a9c0fc0770ab1b</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx_125_sk\peripheral\gpio\plib_gpio.c</file>
@@ -1451,7 +1451,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mx_125_sk\peripheral\uart\plib_uart2.c</file>
-         <hash>ec33a91c222deee479762109055142d15c8b81600fbcef525440f287401254dc</hash>
+         <hash>f544e627da4f9e0530226de80b52b935685430f64c79cfc25dbd4a744b91a1e8</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx_125_sk\peripheral\uart\plib_uart2.h</file>
