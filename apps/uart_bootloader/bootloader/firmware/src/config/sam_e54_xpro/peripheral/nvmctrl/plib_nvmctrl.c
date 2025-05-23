@@ -50,7 +50,7 @@
 #include <string.h>
 #include "plib_nvmctrl.h"
 
-volatile static uint16_t nvm_error;
+static volatile uint16_t nvm_error;
 
 // *****************************************************************************
 // *****************************************************************************
