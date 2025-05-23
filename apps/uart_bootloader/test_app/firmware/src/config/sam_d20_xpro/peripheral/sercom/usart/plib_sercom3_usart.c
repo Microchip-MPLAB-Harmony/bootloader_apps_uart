@@ -47,19 +47,16 @@
 // Section: Included Files
 // *****************************************************************************
 // *****************************************************************************
-
 #include "interrupts.h"
 #include "plib_sercom3_usart.h"
-
 // *****************************************************************************
 // *****************************************************************************
 // Section: Global Data
 // *****************************************************************************
 // *****************************************************************************
-
-
 /* SERCOM3 USART baud value for 115200 Hz baud rate */
 #define SERCOM3_USART_INT_BAUD_VALUE            (63019UL)
+
 
 
 // *****************************************************************************
@@ -68,7 +65,7 @@
 // *****************************************************************************
 // *****************************************************************************
 
-void static SERCOM3_USART_ErrorClear( void )
+static void SERCOM3_USART_ErrorClear( void )
 {
     uint8_t  u8dummyData = 0U;
     USART_ERROR errorStatus = (USART_ERROR) (SERCOM3_REGS->USART_INT.SERCOM_STATUS & (uint16_t)(SERCOM_USART_INT_STATUS_PERR_Msk | SERCOM_USART_INT_STATUS_FERR_Msk | SERCOM_USART_INT_STATUS_BUFOVF_Msk ));
@@ -99,6 +96,7 @@ void SERCOM3_USART_Initialize( void )
      * Configures Sampling rate
      * Configures IBON
      */
+
     SERCOM3_REGS->USART_INT.SERCOM_CTRLA = SERCOM_USART_INT_CTRLA_MODE_USART_INT_CLK | SERCOM_USART_INT_CTRLA_RXPO(0x3UL) | SERCOM_USART_INT_CTRLA_TXPO(0x1UL) | SERCOM_USART_INT_CTRLA_DORD_Msk | SERCOM_USART_INT_CTRLA_IBON_Msk | SERCOM_USART_INT_CTRLA_FORM(0x0UL) ;
 
     /* Configure Baud Rate */
@@ -130,6 +128,10 @@ void SERCOM3_USART_Initialize( void )
     }
 }
 
+
+
+
+
 uint32_t SERCOM3_USART_FrequencyGet( void )
 {
     return 48000000UL;
@@ -151,7 +153,6 @@ bool SERCOM3_USART_SerialSetup( USART_SERIAL_SETUP * serialSetup, uint32_t clkFr
         {
             baudValue = 65536U - (uint32_t)(((uint64_t)65536U * 16U * serialSetup->baudRate) / clkFrequency);
         }
-
         /* Disable the USART before configurations */
         SERCOM3_REGS->USART_INT.SERCOM_CTRLA &= ~SERCOM_USART_INT_CTRLA_ENABLE_Msk;
 
@@ -430,4 +431,8 @@ int SERCOM3_USART_ReadByte( void )
 {
     return (int)SERCOM3_REGS->USART_INT.SERCOM_DATA;
 }
+
+
+
+
 

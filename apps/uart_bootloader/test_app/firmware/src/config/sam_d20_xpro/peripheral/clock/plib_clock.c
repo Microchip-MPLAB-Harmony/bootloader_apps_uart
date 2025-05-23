@@ -90,7 +90,7 @@ static void DFLL_Initialize(void)
     {
         /* Waiting for DFLL to fully lock to meet clock accuracy */
     }
-    
+
 }
 
 
