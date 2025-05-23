@@ -92,11 +92,11 @@
         <targetPluginBoard/>
         <platformTool>noID</platformTool>
         <languageToolchain>XC32</languageToolchain>
-        <languageToolchainVersion>4.35</languageToolchainVersion>
+        <languageToolchainVersion>4.60</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <packs>
-        <pack name="PIC32MK-GP_DFP" vendor="Microchip" version="1.6.144"/>
+        <pack name="PIC32MK-GP_DFP" vendor="Microchip" version="1.7.251"/>
       </packs>
       <ScriptingSettings>
       </ScriptingSettings>

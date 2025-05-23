@@ -99,6 +99,7 @@ static unsigned int exception_address;
 /* Code identifying the cause of the exception (CP0 Cause register). */
 static uint32_t  exception_code;
 
+
 // </editor-fold>
 
 /*******************************************************************************
@@ -127,7 +128,6 @@ void __attribute__((noreturn, weak)) _general_exception_handler ( void )
         #endif
     }
 }
-
 /*******************************************************************************
   Function:
     void _bootstrap_exception_handler ( void )
