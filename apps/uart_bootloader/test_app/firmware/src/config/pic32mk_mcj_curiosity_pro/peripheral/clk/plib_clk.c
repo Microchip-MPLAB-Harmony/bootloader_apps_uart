@@ -88,9 +88,7 @@ void CLK_Initialize( void )
     SYSKEY = 0x00000000U;
     SYSKEY = 0xAA996655U;
     SYSKEY = 0x556699AAU;
-
-  
-
+    
     /* Peripheral Module Disable Configuration */
 
     CFGCONbits.PMDLOCK = 0;
@@ -104,6 +102,8 @@ void CLK_Initialize( void )
     PMD7 = 0x0U;
 
     CFGCONbits.PMDLOCK = 1;
+
+  
 
     /* Lock system since done with clock configuration */
     SYSKEY = 0x33333333U;
