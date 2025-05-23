@@ -63,8 +63,8 @@ ENTRY(__XC32_RESET_HANDLER_NAME)
  */
 #define ROM_SIZE  8192
 
-#if (ROM_SIZE > 1048576)
-    #  error ROM_SIZE is greater than the max size of 1048576
+#if (ROM_SIZE > 0x100000)
+    #  error ROM_SIZE is greater than the max size 0x100000
 #endif
 
 /* Bootloader Trigger pattern of length 16 Bytes needs to be stored
@@ -153,6 +153,9 @@ SECTIONS
         *(.text.*)
         *(.rodata)
         *(.rodata.*)
+        *(.ramfunc.*)
+        *(.data)
+        *(.data.*)
         . = ALIGN(4);
         __data_end__ = .;
         _edata = .;
