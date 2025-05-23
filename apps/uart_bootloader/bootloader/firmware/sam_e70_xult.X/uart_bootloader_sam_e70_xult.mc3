@@ -1,4 +1,4 @@
-<config configName="sam_e70_xult" projectName="uart_bootloader_sam_e70_xult" configVersion="1.1" device="ATSAME70Q21B" deviceLibraryClass="com.microchip.mcc.harmony.Harmony3Library" coreVersion="5.6.1">
+<config configName="sam_e70_xult" projectName="uart_bootloader_sam_e70_xult" configVersion="1.1" device="ATSAME70Q21B" deviceLibraryClass="com.microchip.mcc.harmony.Harmony3Library" coreVersion="5.7.1">
    <usedPackages class="java.util.ArrayList">
       <package packageName="bootloader" version="" contentType="HARMONY">
          <modules class="java.util.ArrayList"/>
@@ -37,7 +37,7 @@
       </entry>
    </usedClasses>
    <usedLibraries class="java.util.ArrayList">
-      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.4.1"/>
+      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.5.5"/>
    </usedLibraries>
    <tokenMap class="java.util.TreeMap">
       <entry>
@@ -2140,7 +2140,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_e70_xult\bootloader\bootloader_common.h</file>
-         <hash>f698b16f89f0ad9fd281afe828b01c78ccf0568debedf99c2bcf8ff8b0d38db9</hash>
+         <hash>bfb190d448fb61d66868f7b17ada00b53482a295511ac6664d709923f9ec2eb0</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_e70_xult\bootloader\bootloader_interrupt.h</file>
@@ -2148,7 +2148,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_e70_xult\bootloader\bootloader_uart.c</file>
-         <hash>6570e27e71745e764a26be094b128028c5a0b34c95f4e59db137a2feb379efbf</hash>
+         <hash>cba011cf86db5472a1a3f010fc6dfa2df2eb111016ef4a7012a7e9f8e3e6eb36</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_e70_xult\bootloader\bootloader_uart.h</file>
@@ -2156,15 +2156,15 @@
       </entry>
       <entry>
          <file>..\src\config\sam_e70_xult\btl.ld</file>
-         <hash>d5524e283a22d4ea05db56e51ec45b3389a16a4868232bc2d2ebda5c15bf9b33</hash>
+         <hash>d558e09ce2aedb30454e9d79f263bd6c2252fbb7f0f22f9c4abd9651340e1296</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_e70_xult\definitions.h</file>
-         <hash>768bb4ff157ccbf960709b809b5eaebe653f0396afc5f83763f6703b53457579</hash>
+         <hash>aa90b55b035545229930144c1e85863b9ac24a2158415d6e131345a04839ac22</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_e70_xult\device.h</file>
-         <hash>d3fa0c4731e363e46dd050fe9faed0c1c67626d1b1501883c7fbfe67991291ea</hash>
+         <hash>20dfb84db53f624d3d222de5c7063708d1393bbfe5dfa2ead18ae753ceb5988f</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_e70_xult\device_cache.h</file>
@@ -2176,7 +2176,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_e70_xult\initialization.c</file>
-         <hash>18f67a0106747185eabfb8224f39089414d2d6439783fb5f689d0cb1a194ef19</hash>
+         <hash>8c01617b77f9fe4dbbca4904cacda85278e860ff641035741f43e04fab2bb744</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_e70_xult\libc_syscalls.c</file>
@@ -2192,7 +2192,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_e70_xult\peripheral\efc\plib_efc.c</file>
-         <hash>fc776f30ab4c1a99ac8085d0419b794f746448452bdab067ddb01007783d3d11</hash>
+         <hash>1dbc3d715c7352b3a7984f39435ed0e2fb37e206dee45454e936616d46b8e1f4</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_e70_xult\peripheral\efc\plib_efc.h</file>
@@ -2200,11 +2200,11 @@
       </entry>
       <entry>
          <file>..\src\config\sam_e70_xult\peripheral\nvic\plib_nvic.c</file>
-         <hash>3d89f9371ce4e519ebca69b0bda48169332067a95f4dbfdb90c6131ced1470c4</hash>
+         <hash>dd717044dd36bdaf83a852c95160c3e8184a8cd8eb45179b6fa65d159c1e7306</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_e70_xult\peripheral\nvic\plib_nvic.h</file>
-         <hash>81e813a093101d546799e00723cbf7245e2d18471fa51c8d130c5809cecca03e</hash>
+         <hash>9936ac782115af41003255283fa2f603f4ff2212d16275b7c80ea8d067a9e208</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_e70_xult\peripheral\pio\plib_pio.c</file>
@@ -2224,7 +2224,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_e70_xult\peripheral\usart\plib_usart1.c</file>
-         <hash>9c49f8a8c8a09000ddf74f22176cee5b446f6a926ab4a5ca18c7cb28c2539a84</hash>
+         <hash>e0d26de5a3883c5f731bcae1d22c693d2f2703d6d19135b61099e2d8994f8c00</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_e70_xult\peripheral\usart\plib_usart1.h</file>
@@ -2232,7 +2232,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_e70_xult\peripheral\usart\plib_usart_common.h</file>
-         <hash>515630c93a179f33d4067575f9619de7269c9f1ebaee4496dad91fd1b58879b8</hash>
+         <hash>b58eca63b7625d1bb13cb6399c2991a9fb24e7a5a32e104fb2efb19952bd1957</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_e70_xult\pin_configurations.csv</file>
@@ -2240,7 +2240,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_e70_xult\startup_xc32.c</file>
-         <hash>d61c5a7becdd58e76df4fa51b964845db4d699198c0b65c603e2f283d59d793f</hash>
+         <hash>f700e024c270d1eecb4afb966b37951c20d2218c68a41e416f87bd08d05976e7</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_e70_xult\toolchain_specifics.h</file>
@@ -2252,379 +2252,379 @@
       </entry>
       <entry>
          <file>..\src\packs\ATSAME70Q21B_DFP\component\acc.h</file>
-         <hash>e8221a03d3a5a268cf2cf5d8e131543c4c923bab4d926963e65e4622955ece70</hash>
+         <hash>3b521bdd309b53659e15a0a81cbf20bdc8b22c08e6c6ad30f2c934d6a3bd5539</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME70Q21B_DFP\component\aes.h</file>
-         <hash>c92e75eb1478a49214543a20e0f54baa6595ae91f65f4110b681240f1db1b0ba</hash>
+         <hash>6bd5328b715c1c98375b234e237919e9b8da45022d1867d3cd88fd3a99cd62f1</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME70Q21B_DFP\component\afec.h</file>
-         <hash>0d6ffc8c64e71db74c4abc4f61e371eecd169be8aa100ae63d2ca8a8ba08504e</hash>
+         <hash>f8ea2b3252edee8f266e338905e09819e934ff24b3bc060dc888a13b27be5317</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME70Q21B_DFP\component\chipid.h</file>
-         <hash>e217627841e681ee5168c8ba7cc347b48f4569662eed54556a89bd9bc1d3aa1e</hash>
+         <hash>89cfc02aa338067630a15df8a307dbd17562fe8d4b784245ac512d85342cefd0</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME70Q21B_DFP\component\dacc.h</file>
-         <hash>f94045ff46d385a547279d494971427621d7ec7834b72b95cd8846f6c11dfc1b</hash>
+         <hash>ef7760f310c79157fe4c6ad70974140eea5eb51ce11af79645188735785db4d5</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME70Q21B_DFP\component\efc.h</file>
-         <hash>ad96ab9befc5fd5ce5d7bdf55159f79f67d33870b8d687c9cb42a3e8629b083d</hash>
+         <hash>65d9f9251a53d7e39c0d8b3c2a591cdcfdc9e0089cb0fc29dba78b26b732629d</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME70Q21B_DFP\component\fuses.h</file>
-         <hash>a3adb3a2ff0c2853b494ed936c0e6529137ce13166c27ea2490eee5f2b3b4bbe</hash>
+         <hash>a8888c0be5bc3c38bc4daa7f10095546f9abd7dd125259f33beb80ce806f0652</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME70Q21B_DFP\component\gmac.h</file>
-         <hash>e836e8f92856ef3a80585dcfdc13e0a9a856547484809e9f513f6f25ede5c96d</hash>
+         <hash>d3a9e53b42b677f776976061e85a1d3e80f7eba6565968299764fe09f35d805f</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME70Q21B_DFP\component\gpbr.h</file>
-         <hash>9df095de730ec52cc511131c8b1fe364c7422669bfd513f85143c604e2672879</hash>
+         <hash>f779152c42777e92ddf13ef7c07f61d3dc0127ad85387716e9073a41b93551d7</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME70Q21B_DFP\component\hsmci.h</file>
-         <hash>2a98de80113db810ecafa8fd166ea66059df2101b88606fb79a01d53bd047ba9</hash>
+         <hash>7a8572dd55d58edbebbff72cab6a38207d9a7550632f41f0936f85c878113a88</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME70Q21B_DFP\component\i2sc.h</file>
-         <hash>9beb8686da7ce33b96157d4851e6f287c4484ce7bacfb0e0b39cb9d1f9a42141</hash>
+         <hash>759ea9f5d2708cb63acbd31da6f3f5f4cf0e8928e7164dfaa809473d33217ddd</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME70Q21B_DFP\component\icm.h</file>
-         <hash>66a95f5c3554035b9cf51dc7464de454f18f0ce2c2b09c2977e56721670d9165</hash>
+         <hash>71c7567052cc22276c490d1ede54f0865a1d095fdff1de05f8b99ebd4d8d54e6</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME70Q21B_DFP\component\isi.h</file>
-         <hash>f1ded52da1391a7a04670c694c65a651c9459867b354a59a1dac252f795d20a1</hash>
+         <hash>8ac26b9957d8dcc0c6e083e5b730ef283c18f7e7b54f64a9b128d243f7b57786</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME70Q21B_DFP\component\matrix.h</file>
-         <hash>ec7b2e1700ba7e3c465f3922e13dc4f3ee399a200539b48e1dbced0783ed2972</hash>
+         <hash>70615e7d3e850d24ac705c412939e9e2f278a13b294fa31a3437675b3828eed3</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME70Q21B_DFP\component\mcan.h</file>
-         <hash>ba76698479731dd67bded45c94d54434306521480533bb56fb65546d7853dcfb</hash>
+         <hash>9c01fdfbf66559511115a713dbc3ec5468136f49c670781f31b9305619a7805d</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME70Q21B_DFP\component\pio.h</file>
-         <hash>e2a34f908eeb97024ca708bf426bef73f2ff4e23ad462dc843b9a31dbbb2adf9</hash>
+         <hash>0bcd50258bb24a73a1ad8bc7c25d6eebd2d06674cc171a069e744c37f9a8e3c4</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME70Q21B_DFP\component\pmc.h</file>
-         <hash>0a9ea131b74e6876ac83bcea8ca2cf06883b8afc91fcc407bf74ab0fdfad7def</hash>
+         <hash>bbc551f1ddbdd34d75b6d5d53c64fc3c9444c8e472e3c37a4dd8062027293461</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME70Q21B_DFP\component\pwm.h</file>
-         <hash>70a7e5461060b3f3284bebc6523abc6b3360f16dcb9e0b2958c165efd14896cd</hash>
+         <hash>7b084ca3524f28df0855159095a6da8e13cac316d798ef8480e2b2d9bf1b5fe2</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME70Q21B_DFP\component\qspi.h</file>
-         <hash>2776cbc0b8b7322bc8fdd208b04cb5b47bbe1e5edac48f64978fdb7c10b2ba73</hash>
+         <hash>b23c84877a00e88eb7d2949f8bb78e3242679fe9c7037252953b4db2fde4ad75</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME70Q21B_DFP\component\rstc.h</file>
-         <hash>0379a7c8769354614de2b508d5ce9768336fafd39c212d90ffd756f9a83354d8</hash>
+         <hash>bce28e9cb3de1f331685d6ceb1272b56cde66fc17ee6b0ff4e293646e7528dfa</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME70Q21B_DFP\component\rswdt.h</file>
-         <hash>e415672b7fc1d1cd7c629b5af6c341c7dad98c749a27d4abf8422890e4f2c24d</hash>
+         <hash>b2f8157f634e79f48c645fcc2ba698040d4ae105badee75f4e78b25912bbe78a</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME70Q21B_DFP\component\rtc.h</file>
-         <hash>b264804ca3dea7f51fae6941b218ca2ca987db07ea654b702c8570794235f8e2</hash>
+         <hash>799aef97a2d783b98b19f7138e6011e24711e6cad4b31c0604fbb12798fdd975</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME70Q21B_DFP\component\rtt.h</file>
-         <hash>1e9fdd0b7b17eb7d3baa42124f48423333602546e1344dd0eb48e0bd560dc8ee</hash>
+         <hash>d1649ae90004e179b1875d83646d8cdb960e841d342da35758a65f3f3b32896b</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME70Q21B_DFP\component\smc.h</file>
-         <hash>00413aa1cd2146267bfd136c169a5447e314edb35388823f51670e27f2b55f25</hash>
+         <hash>958cc4c26bf1460997e5884121e13004c02204f416536c2ad5e9c624548ea47c</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME70Q21B_DFP\component\spi.h</file>
-         <hash>22a982b38066c68e48bbb89f9b4b4392f823e3e4a8e3d73ef2423fba2d531454</hash>
+         <hash>228a7f082b8d2e2ad82d5e6560e35a4c6886fc39cbba1d61983fd666b44ea200</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME70Q21B_DFP\component\ssc.h</file>
-         <hash>c20380d308db594908540e9316db7e1492e6142225a603e44e2090e1d5b55a99</hash>
+         <hash>c256ee68f1234c13973a385402fa5227cf2760ab849008365a7e0fea3e5b249a</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME70Q21B_DFP\component\supc.h</file>
-         <hash>b8947cbc553e6b3a0dd64199c2a5087fb3ac1869404973da978b83b6a1edce4a</hash>
+         <hash>16786b1ffc36f6b79e971c8749f7e480288a777d3fd92c2355a4eaea900b42d5</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME70Q21B_DFP\component\tc.h</file>
-         <hash>cd831ac0fd9237f34821b995bc3e065f3ff360573b6321ccb7a618313bf81d2b</hash>
+         <hash>800c0a63da2436a67096e01c40b27b469075f3d949f035bbbdfce2c804b3d572</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME70Q21B_DFP\component\trng.h</file>
-         <hash>596e902c4669af0971ac41f4125c820b9dcabfb69b3cfdf378cbfdd36f5ef97d</hash>
+         <hash>4dffc2abb2e8bc96209676f0fcd898068ffca4d3b51807d2b41d3cb02911210a</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME70Q21B_DFP\component\twihs.h</file>
-         <hash>38ee6f111198718409cc30199359753045854bcd9c053f3810fb36f69b9046ca</hash>
+         <hash>26d22e101d56f87a3ed2b4695c158bdab55111443c0f809517e0e3d5e3de5fdb</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME70Q21B_DFP\component\uart.h</file>
-         <hash>30118be931f001c8d4826a656af1484c8cd0e00610165302bd78df5ce12f16b2</hash>
+         <hash>bb0fe9f30eb90bf7a7c00fd14db0e2562ed2438e5505d6ead492dcdaa1e33d1b</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME70Q21B_DFP\component\usart.h</file>
-         <hash>43eeecd30e9ad953bba61d6c0413b6e488d2b0bdbe066622ce33e38ff602b684</hash>
+         <hash>6f2ad4c7e20a8639a2aa888bee214c990b2815bdd345df84ec24f6fb969afd11</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME70Q21B_DFP\component\usbhs.h</file>
-         <hash>260d9ea39d641b8b16812e7f8b477747ea906576a399f837da8dcd9a3235a89c</hash>
+         <hash>7c192895176800181294162d66a10b99bb6efc90e34fddbd024fae022efa0507</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME70Q21B_DFP\component\utmi.h</file>
-         <hash>6855f1df9f18e437d6f9fd1faf5a757fbba701dfae33afa247c326dfcefbe9d0</hash>
+         <hash>85482e8b41ac1a5319a056b77a4db341ea16f8797592c97504a77f01ced209a9</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME70Q21B_DFP\component\wdt.h</file>
-         <hash>5795d855dce095da1aed2ef62e1cf6c1ee5d565d916e0d6c9cb867f59d9bf091</hash>
+         <hash>b0c98e7cbc3b2b9b067c199beb6d8b1364f94f1927477ef8d5dc4e122f3590ab</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME70Q21B_DFP\component\xdmac.h</file>
-         <hash>93142f2181a594df4aee0cb8d5f196199d957956efedf42aebdb1780a0b54ef3</hash>
+         <hash>ef59f067b8f26b8a7c989c136dacc122f1afd9766e9db76f9653d962ca07e63e</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME70Q21B_DFP\instance\acc.h</file>
-         <hash>cf38c3be058a06e5744a70934df0e17beaec2ef8448572355a68946283fc0095</hash>
+         <hash>6909ac8d4de785019d3bf71f95c6241c93527c435615cb82d0f5d7b63a1b0e91</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME70Q21B_DFP\instance\aes.h</file>
-         <hash>062cad188de81ba6c6326432ed0196215f5bca45ed716a97446028b201437d54</hash>
+         <hash>9dbf47ebb8ad2a70a2381e9eb43023ce2147c42dc64cd8ac4d58cf2952ab69cc</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME70Q21B_DFP\instance\afec0.h</file>
-         <hash>8b122354f42ab98cfe5284c9fe8c4158666cd4e12d6469cd6f80c37bf27dab41</hash>
+         <hash>f26b0dfd930cd2ba2ed0af9dfefdfa5eea98a1ada04c818612bef4fba0439265</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME70Q21B_DFP\instance\afec1.h</file>
-         <hash>1bce34e357aac4b775b4358000cac0a93358e4c79e1b7e4fcac42a884756d9b9</hash>
+         <hash>5ae116dc9e616d97a4ba94ccda46394f5d261e986f804f287a07d0b131fd5d32</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME70Q21B_DFP\instance\chipid.h</file>
-         <hash>cf69e428dee5c01d86f2919ef196fe97c7a9b44cc64c0a9c53221cdf132a0023</hash>
+         <hash>0b4d46547ddbcb9b06c11909f1ab720923c39e0771d2832297a6a0e0eb8f7434</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME70Q21B_DFP\instance\dacc.h</file>
-         <hash>eb7bf705011433e9d1371d0f0308269d46f5df67664b6ad4a283808e4be3b713</hash>
+         <hash>658242b138ca6331925c8f651394ddc13bd90d6933980ce680915ebcf6839d20</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME70Q21B_DFP\instance\efc.h</file>
-         <hash>8566f3b32d38cc7629f8fdf18f362e6e1cf0052bd53b2f109eaa29444a575293</hash>
+         <hash>22717c8f41e722f82d7503910e45177f1a485a2b55d6caf14d7ccd775945472c</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME70Q21B_DFP\instance\fuses.h</file>
-         <hash>c12fabd4eb80b2566458b5ca8125c04e639583da9fd38018aa845a483a228783</hash>
+         <hash>6bec567e7180755abcbb0764c3a96406d447e59ec22b014f8de6491616e16627</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME70Q21B_DFP\instance\gmac.h</file>
-         <hash>1ac45ebacf9854b2a68bf5e2f05ee76a4b204c8a07dc9527192b620a5faa71b8</hash>
+         <hash>7ff515bd7d7c7d9794ebfb051a2a9214839444def5b443943b6d19ea964ebb41</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME70Q21B_DFP\instance\gpbr.h</file>
-         <hash>8cdfcf81342f36abd32d859df5ad8299b877074c3a6481be0503c80d7f51ea0e</hash>
+         <hash>86b750c114d58526d58d79c54a1315c4ab943e1db2e4930ca6542b490c677b18</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME70Q21B_DFP\instance\hsmci.h</file>
-         <hash>a2c30964277e758f9d83f1d9cba891844610526f198341cef24a1c2b951c082f</hash>
+         <hash>28c05d142cb927f6f7430803131664023c1fbf16c8ad8bf4f30885895101d80e</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME70Q21B_DFP\instance\i2sc0.h</file>
-         <hash>e8fc42fe25c72e42ebc5e7315399d9df4249386740be7eafa62f34d68a3524b4</hash>
+         <hash>bfa3ca6ccbf7a6ab19b7937511b41927d925fc20bf496d85d7cfbaa9f0316795</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME70Q21B_DFP\instance\i2sc1.h</file>
-         <hash>43a7bedafe8c112f74bf29109bd996db93c250913bbf4599c1c65ae333d47688</hash>
+         <hash>032ae219be2648e37a83fcc1bf7d2ad18767773d912fc354d262946b3fd25429</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME70Q21B_DFP\instance\icm.h</file>
-         <hash>b9b57857d178e16f9aa128a10ef8b0898e133cf42876e1b94463776cac3bd148</hash>
+         <hash>5234dbe558ee03065ea6889fc04283d798ef60b60efd9ab9ecbff4926e1c24fd</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME70Q21B_DFP\instance\isi.h</file>
-         <hash>05992dc084ab9cd5fa356a484909086f7ac6022b628854f7d5d33580f89be169</hash>
+         <hash>21c231a4821d6f36d9a08a82797bb15f219ab75addd8ede0852f85788764c600</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME70Q21B_DFP\instance\matrix.h</file>
-         <hash>6a63e48e81a8e6703512c66d6087fbeceee574decc32b0c5ec72e07096158ecc</hash>
+         <hash>0a6ea06a5f923cd94836aa98b21c914e9ee32dd68e3d937adc674411f8ecc580</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME70Q21B_DFP\instance\mcan0.h</file>
-         <hash>fb6e423182fe0a212f119b1ea019d1b3d792b059526c30d930999a4b0f4c97c1</hash>
+         <hash>804de94a798a256a7ba5ed0e1cb13b7c15f33c5ca93ce7880123c74bf68977ac</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME70Q21B_DFP\instance\mcan1.h</file>
-         <hash>9925ba5309f41a628782406b9f3455a1c21376cb57b042c3d23a3f332e921c7b</hash>
+         <hash>0f28b3fe72bb51a312ec20e9f79b9c1c6cac97f7c748499dcc0b461a12b4a78d</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME70Q21B_DFP\instance\pioa.h</file>
-         <hash>c775fefbd337023d5226bad371efbe6a223e827895c9276f273a54987c688b04</hash>
+         <hash>3049501354fc634d914d68f0c9b4868c9793ae3a32857ae49af0d494ca474f2d</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME70Q21B_DFP\instance\piob.h</file>
-         <hash>49e23a567218766cb8dbe6f97cb37890359ea8d9ac24a1a877054bc053f7d189</hash>
+         <hash>a0aad1c5df36819b0c925a1f7daa9b4484fc56d741ec2f5f25030967517ac95c</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME70Q21B_DFP\instance\pioc.h</file>
-         <hash>8b3a0056ba9ca181ef3639a3ba96c46edc778cd5c22cd099d6fee6b30653385a</hash>
+         <hash>a78058667212376882e3919978500db4fc8ce5bd3f8cf1730448edc8f7c887a7</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME70Q21B_DFP\instance\piod.h</file>
-         <hash>2d5155fd77157ce6dd41eafd0834103d492e526a7b3ac1762e24b92466133903</hash>
+         <hash>91888f6855905e204140944dbe239658d5c7f8a094b29e24fc6b68dc66de306d</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME70Q21B_DFP\instance\pioe.h</file>
-         <hash>18aca977be9e3028b0088287566b7705d28cd29cc8e6696f6e045915ba03f4a8</hash>
+         <hash>d8c8ab098b2cc430980c386ea7a201b653d4da1de582cfc8bb1badf5c312d5f4</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME70Q21B_DFP\instance\pmc.h</file>
-         <hash>413671fb70676eb743c897ce0dfdd0ae63cba36be420a9e6b010c08d46d6e43c</hash>
+         <hash>7498bca71e50fc447eeb80ecc4757b323c89223eba3bc30706d756b4cfbefe52</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME70Q21B_DFP\instance\pwm0.h</file>
-         <hash>459306fc1d9409c699927e54905570f54f67f49f89dd7152d120090a6d6970ce</hash>
+         <hash>a2512df4dabe673ee877c6315667dae8f299c212cf70a33270b8b870dd0eace9</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME70Q21B_DFP\instance\pwm1.h</file>
-         <hash>8352386ffb2927bfd703d7ac5429950b9e88f1adc2b7c126680881cd7834e91a</hash>
+         <hash>27c07e36b6ede45e0c8c8d17f89c6d43145376e69546bb991d68a494aa21e807</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME70Q21B_DFP\instance\qspi.h</file>
-         <hash>64694f05140390311c485df6a956c6505420d7ff105e39271cca6ee85ed7e0e1</hash>
+         <hash>92b747f86f05fb32b60f632043777b38499ad5644a5efcd485bdc4c34538a7e6</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME70Q21B_DFP\instance\rstc.h</file>
-         <hash>dd97bc5f55d34bb059e4fdd6925b587e9f98c5c45faa3b98466a9542d26499a1</hash>
+         <hash>01ceffc0538aaa9d7e848db807ef543defbd7fbc2714c1f332ceefdeed4c26e3</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME70Q21B_DFP\instance\rswdt.h</file>
-         <hash>0d5ca866dca31f5a84b584d95daa84238dfe27366edd7c2eb73e93f1888f3739</hash>
+         <hash>c3fe5e40aad587da066ad3a9cb281fdde99c34567c2922d152006cbd7d3f51ae</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME70Q21B_DFP\instance\rtc.h</file>
-         <hash>f485984e812eb2f88448484128343a00562ccc3c4a33d2b1aaf8e24edd0282bc</hash>
+         <hash>5c58543eec1657b68c7d24654157905bad70d05b0fbb90c0c8a3cc900976a889</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME70Q21B_DFP\instance\rtt.h</file>
-         <hash>bc3446644f1cb7d7efcf4cb3f2d05c42e159a95600529d4e8b334b8d60d27be1</hash>
+         <hash>0c3701e5717e8152b1a582dedc79d4856d3f0846b29c9da1e286152af4f3532c</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME70Q21B_DFP\instance\smc.h</file>
-         <hash>cbce266d6c85851508ccc9ee831ef48c55a688d8e28f7e45bbd6a7ecafcb9542</hash>
+         <hash>0bcc1ab249b7ed4eb2fcd6731678eab3b5f3f0a98e024db3a7f43d52b1c8667d</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME70Q21B_DFP\instance\spi0.h</file>
-         <hash>a436829048f84682c4067dc2ba7fa6d84cfcf20618c2e629652bb817c1eb9508</hash>
+         <hash>d329010d2a43751f77e7b779b238ad8d9a0b28f02009680a7865aa21dfbf86d0</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME70Q21B_DFP\instance\spi1.h</file>
-         <hash>a1c71c6ae25c17a8759e9d909720b0a6b3e9de589451b79c35701265b65a48fb</hash>
+         <hash>845e5f735f43475e245f22a3c5c1655ce5c62125ce2a8c912df87ab8fffbc2a7</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME70Q21B_DFP\instance\ssc.h</file>
-         <hash>4031861fa380f898242f6175decb7465b130632cfa8eb3e85be9e076717282d1</hash>
+         <hash>8bd835d567b2bacbb260e183b14e5b1b3490bd3c46c7437a46c3f7e1ff933951</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME70Q21B_DFP\instance\supc.h</file>
-         <hash>ea1a9865e9039c22733bae13d4cb3cc71353f6e9da1f533a98a67359a6e69538</hash>
+         <hash>324f197b359d05ef633cdb067d1725d73ee07f2c3b4d98e398af55f1d1d4a0bb</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME70Q21B_DFP\instance\tc0.h</file>
-         <hash>e3bc4a489d22ecd2be2d5ab5145a8c92857d9ae1a3ee4c7ad69d66b9c3bcb6bc</hash>
+         <hash>94215c21cbb01a582b0425fe6d8c753b4b13c0504413aeb0936b16b0855edc80</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME70Q21B_DFP\instance\tc1.h</file>
-         <hash>6c7a8418ad2e995173f74c49c2b99b01e6d890b7e39906e53802bd8c881c49d9</hash>
+         <hash>f46644c82be14bbc931fa5986aa08a376da4d9f099293a699273b0fb4a213aaa</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME70Q21B_DFP\instance\tc2.h</file>
-         <hash>c529bc92bbd2dd4a8095a46e1cfe5481d2145bb875b2e1510de3e3123f6faebc</hash>
+         <hash>72ec2348621c344611e8c8015f75d6ee8de0c8c42e867a227916031ce919f556</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME70Q21B_DFP\instance\tc3.h</file>
-         <hash>7cd3daaa6025ba4709f710e76800a8301beb1d9911040785695bb400d000fcd0</hash>
+         <hash>d8d63a066455d9c94404fc58efd97067abcb53bed94e249654dbf05746bcfa67</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME70Q21B_DFP\instance\trng.h</file>
-         <hash>dd3083b7c3c5605fc8a51cab3e86374f743ba14668998d6c2c294371fee66c07</hash>
+         <hash>e32a506fb60fea3f4905bab57badd0fe5dfde5bc15a7d0800eab9a4fa9ea7e3d</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME70Q21B_DFP\instance\twihs0.h</file>
-         <hash>7ff4ac091107e6681a111ce7e4c9801ab0abdebbf0be102f93b6a4aae7b32248</hash>
+         <hash>867e5380ecda853d3b997f9f4a8753f9854dfcfb23eb9524e5a3a91c89c142e2</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME70Q21B_DFP\instance\twihs1.h</file>
-         <hash>aca918d0be70a0f356d74404fff2a19ff2ab0834c77fbdb6072f1985ffda929e</hash>
+         <hash>b8f0c83e0b0e78a28136f7b98c5a434ce8eb558d79d9c53a035befdea2ce3a73</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME70Q21B_DFP\instance\twihs2.h</file>
-         <hash>31a160006a06425ecbac0785335fc588ee1d46e27a15d347d837f35ecabf8687</hash>
+         <hash>11150001332a7dad4dc88dce6a6f6ab2f0d86637bf8d10c2a41467adfa99ebf6</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME70Q21B_DFP\instance\uart0.h</file>
-         <hash>342420c5047b20e2e4bd030c5c5aaeebd9b714fdda47c8452b29ca764e36fdc7</hash>
+         <hash>ccfd67480dd2d78e79242304e7c3d285f198301ab862785f23fd9ac41f22b60b</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME70Q21B_DFP\instance\uart1.h</file>
-         <hash>771c27f43b9e7af032e0eb2f4b9bd82fa5c1ba2d92d17e976140e0dd3666603b</hash>
+         <hash>af5648b6885f2137eef1fed2b8139f5cf79eb670fb9920f19fbbc879c2957727</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME70Q21B_DFP\instance\uart2.h</file>
-         <hash>d2036d4ba315a3e3bde118b3e602c3335adfea6a10f517125aec20d3f9173b64</hash>
+         <hash>c217a6e7dc06cf5b901a038ba1da45b476ee20e19b0c8eb7bc20cb64d47c0395</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME70Q21B_DFP\instance\uart3.h</file>
-         <hash>5376822f4e0041b25f97bb7c2d1d27bbd618356ef918b01dbacef73099073dda</hash>
+         <hash>ef631ce1a86e47f1a1e86f54d20578b3ac1bdb9bfb22226a051af68c4b3bbdf1</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME70Q21B_DFP\instance\uart4.h</file>
-         <hash>b31bab9c825f737c852fe21c29275e49532abe929b4e390645fa63fed40dc257</hash>
+         <hash>46ef1fecc0642bd7824e5862917562ab5a4bb5ffeb30c83f78fc5f2cc5e3c98a</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME70Q21B_DFP\instance\usart0.h</file>
-         <hash>2ceaccc49f914abcb4f64fbcc4dfbb4dfe0c2c26bfa55b2d3919c85dc708066f</hash>
+         <hash>8f854bac4d9edea3d88e5d44ae71c7335007c6372b1dafde891abb8a1eeed585</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME70Q21B_DFP\instance\usart1.h</file>
-         <hash>005f7cd7d504b70eebcf02599d0987b6525301dc563745605adb45e8ef6e5a10</hash>
+         <hash>ad9eaa48a8a52dcadad1615ae2b0cc3bc307ed11a5f89a2e8b3bf5605d982945</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME70Q21B_DFP\instance\usart2.h</file>
-         <hash>689e569630957717faa97f3f5871b54ed4c5d9541c76168cd21717ea887990fc</hash>
+         <hash>5ec508c00eda2e0e63c4bea283610cc4ec8a6564e81c42e6b0c17106f01382f3</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME70Q21B_DFP\instance\usbhs.h</file>
-         <hash>1a4117d52643846a7e21d2243ce211706754b96f0b4c3bd05f08ecd5f88371a6</hash>
+         <hash>6024919895cce30709fc5f201bdb363dde7504279b9989afdcbb87b27ba289c7</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME70Q21B_DFP\instance\utmi.h</file>
-         <hash>3987007cb0df8590260d714010b489512185fe74bb79011c9df3c8c5de836ed7</hash>
+         <hash>daf2b49e498b9c3acc04d7c7c9b36a0a38b8ddc90685bb5316fc3dd6f2564304</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME70Q21B_DFP\instance\wdt.h</file>
-         <hash>5f4d8383f522bd69fc21557fed273525498e54e0d0da7996d41120dfeb45e062</hash>
+         <hash>dc358ab5655dfa661ccd3fe6fe96ee7d943e7a10ae6b610d1d9fb6d209f4f257</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME70Q21B_DFP\instance\xdmac.h</file>
-         <hash>25f3cf7664be2fb9589bebb45b0719fc24051591c4ac05b062807a7bb6950d02</hash>
+         <hash>e88ab2c13e107a103e5d5cd5399251bccfe45b96aafa476c0387d698286eb29d</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME70Q21B_DFP\pio\same70q21b.h</file>
-         <hash>3228b179bdea17afa86a7b2c33228051824331884d10e0582f68ff86145850ef</hash>
+         <hash>a05dc4e832b9e6dc5708ed9163bbc8cea8814a9c64e294fc254b836bbd1f187c</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME70Q21B_DFP\same70q21b.h</file>
-         <hash>fa889bf8206b73742d06718fc7f0266cccf7c33b7020c41f48838b99f930fed8</hash>
+         <hash>d108357c383bf47bbe640dad433b333f993ba13d054c17a0ee8963e3b0e34206</hash>
       </entry>
       <entry>
          <file>..\src\packs\CMSIS\CMSIS\Core\Include\cachel1_armv7.h</file>
