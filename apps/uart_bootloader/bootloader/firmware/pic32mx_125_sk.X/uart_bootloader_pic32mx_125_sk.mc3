@@ -1,4 +1,4 @@
-<config configName="pic32mx_125_sk" projectName="uart_bootloader_pic32mx_125_sk" configVersion="1.1" device="PIC32MX570F512L" deviceLibraryClass="com.microchip.mcc.harmony.Harmony3Library" coreVersion="5.6.1">
+<config configName="pic32mx_125_sk" projectName="uart_bootloader_pic32mx_125_sk" configVersion="1.1" device="PIC32MX570F512L" deviceLibraryClass="com.microchip.mcc.harmony.Harmony3Library" coreVersion="5.7.1">
    <usedPackages class="java.util.ArrayList">
       <package packageName="bootloader" version="" contentType="HARMONY">
          <modules class="java.util.ArrayList"/>
@@ -37,7 +37,7 @@
       </entry>
    </usedClasses>
    <usedLibraries class="java.util.ArrayList">
-      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.4.1"/>
+      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.5.5"/>
    </usedLibraries>
    <tokenMap class="java.util.TreeMap">
       <entry>
@@ -1394,7 +1394,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mx_125_sk\bootloader\bootloader_common.h</file>
-         <hash>e1da8c2659a696997f06b5bf7a1adc5e6ec47cbfc9ffa1a807599d100055b58b</hash>
+         <hash>112c92e7cd1264d2059a139f89dbd3c741790f1250459c4e24f54a05721e058e</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx_125_sk\bootloader\bootloader_uart.c</file>
@@ -1410,11 +1410,11 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mx_125_sk\definitions.h</file>
-         <hash>5ace15804b64cd0a7aa50b690798c54402f849e465d7c5722a5045b562f669de</hash>
+         <hash>80f58f7f9db38dcbde10690a958452da5ca15a49ac16fe77e63d9316894f443c</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx_125_sk\device.h</file>
-         <hash>10ec93c43a7b158a129ae05bd8f4a59ff5bcf3d0f3f062fdd64c374bc2d42099</hash>
+         <hash>4d4341a6f9628cea0bf73f980b639f7cb81089e55a60ad7e434be2a71e477442</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx_125_sk\initialization.c</file>
@@ -1422,7 +1422,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mx_125_sk\peripheral\clk\plib_clk.c</file>
-         <hash>edb61c4c1f6f7a46bed86c3a90789d684a2bff94f4388b0227f5d23ac18386f2</hash>
+         <hash>cb38000c8c50705fedc5529c435a595c68d78d9a2bb46b9b83ff5f68d5168aca</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx_125_sk\peripheral\clk\plib_clk.h</file>
@@ -1438,11 +1438,11 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mx_125_sk\peripheral\evic\plib_evic.c</file>
-         <hash>8f193bb5de4393b725ddc50c8a13786af730f4a4b5e0e808fb89bdb3fba1a044</hash>
+         <hash>227d6cba94cc339042a7667ec201e36b3ef7d176d59ae3f3dc02f6b2aceb37f4</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx_125_sk\peripheral\evic\plib_evic.h</file>
-         <hash>82360f1bd4ab436161392cd7bf86db3a253c512474116a0103877926a9512b64</hash>
+         <hash>00192bd3be0120d35b9bd048719f808dd96c5523a5f6f5cf78a9c0fc0770ab1b</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx_125_sk\peripheral\gpio\plib_gpio.c</file>
@@ -1450,7 +1450,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mx_125_sk\peripheral\gpio\plib_gpio.h</file>
-         <hash>282a66011b7e5901f1feaf03ef384462cd7f8bae8e531c26c1642199149c087a</hash>
+         <hash>17c1a63fb96978f9941e7ff16d539fd7c8031d219cc6396e3ef49d324144cadf</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx_125_sk\peripheral\nvm\plib_nvm.c</file>
@@ -1462,7 +1462,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mx_125_sk\peripheral\uart\plib_uart2.c</file>
-         <hash>f1d4ffdc331d090dd7f96062edf20ab3005a325a5b5093fe0b899bccf115ff22</hash>
+         <hash>f1b5c75be72735f5737a4f8a05fa2d004b5ceb2f8fc1dc5837e8208ef6518c8b</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx_125_sk\peripheral\uart\plib_uart2.h</file>
