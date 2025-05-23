@@ -28,6 +28,28 @@
 
 
 
+/*********************************************************************************
+UTMI PLL Enable/Disable
+*********************************************************************************/
+void CLK_UTMIPLLEnable(void)
+{
+    /* Enable the UTMI PLL */
+    PMC_REGS->CKGR_UCKR |= CKGR_UCKR_UPLLEN_Msk;
+
+    /* Wait until PLL Lock occurs */
+    while ((PMC_REGS->PMC_SR & PMC_SR_LOCKU_Msk) != PMC_SR_LOCKU_Msk)
+    {
+        /* Wait for PLL lock to rise */
+    }
+}
+
+void CLK_UTMIPLLDisable(void)
+{
+    /* Disable the UTMI PLL */
+    PMC_REGS->CKGR_UCKR &= ~CKGR_UCKR_UPLLEN_Msk;
+}
+
+
 
 /*********************************************************************************
 Initialize Generic clock
@@ -49,6 +71,7 @@ static void CLK_PeripheralClockInitialize(void)
     PMC_REGS->PMC_PCER1=0x0U;
     PMC_REGS->PMC_PCDR1=~0x0U;
 }
+
 
 
 

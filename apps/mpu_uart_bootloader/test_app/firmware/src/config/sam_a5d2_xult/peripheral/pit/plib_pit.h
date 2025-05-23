@@ -59,6 +59,12 @@
 
 #endif
 
+typedef struct
+{ 
+    uint32_t start; 
+    uint32_t count; 
+}PIT_TIMEOUT;
+
 // *****************************************************************************
 // *****************************************************************************
 // Section: Data Types
@@ -342,6 +348,11 @@ void PIT_DelayUs(uint32_t delay_us);
     None.
 */
 void PIT_TimerCallbackSet(PIT_CALLBACK callback, uintptr_t context);
+
+uint32_t PIT_GetTickCounter(void);
+void PIT_StartTimeOut (PIT_TIMEOUT* timeout, uint32_t delay_ms);
+void PIT_ResetTimeOut (PIT_TIMEOUT* timeout);
+bool PIT_IsTimeoutReached (PIT_TIMEOUT* timeout);
 
 
 // *****************************************************************************

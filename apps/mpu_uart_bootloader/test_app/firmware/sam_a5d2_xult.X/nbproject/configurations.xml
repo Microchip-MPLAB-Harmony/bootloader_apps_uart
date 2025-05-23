@@ -165,6 +165,13 @@
             <itemPath>../src/packs/ATSAMA5D27_DFP/instance/twihs1.h</itemPath>
             <itemPath>../src/packs/ATSAMA5D27_DFP/instance/pmc.h</itemPath>
             <itemPath>../src/packs/ATSAMA5D27_DFP/instance/tdes.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/piob.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/s_pio.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/piod.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/pioa.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/pioc.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/s_pio_ctrl.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27_DFP/instance/pio_ctrl.h</itemPath>
           </logicalFolder>
           <logicalFolder name="pio" displayName="pio" projectFiles="true">
             <itemPath>../src/packs/ATSAMA5D27_DFP/pio/sama5d27.h</itemPath>
@@ -257,12 +264,12 @@
         <targetPluginBoard/>
         <platformTool>noID</platformTool>
         <languageToolchain>XC32</languageToolchain>
-        <languageToolchainVersion>4.35</languageToolchainVersion>
+        <languageToolchainVersion>4.60</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <packs>
         <pack name="CMSIS" vendor="ARM" version="5.4.0"/>
-        <pack name="SAMA5D2_DFP" vendor="Microchip" version="1.9.106"/>
+        <pack name="SAMA5D2_DFP" vendor="Microchip" version="1.11.228"/>
       </packs>
       <ScriptingSettings>
       </ScriptingSettings>
