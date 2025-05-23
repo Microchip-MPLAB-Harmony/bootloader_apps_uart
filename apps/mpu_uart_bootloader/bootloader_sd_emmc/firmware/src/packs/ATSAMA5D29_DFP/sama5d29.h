@@ -1,35 +1,32 @@
 /*
  * Header file for ATSAMA5D29
  *
- * Copyright (c) 2022 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2024 Microchip Technology Inc. and its subsidiaries.
  *
- * Subject to your compliance with these terms, you may use Microchip software and any derivatives
- * exclusively with Microchip products. It is your responsibility to comply with third party license
- * terms applicable to your use of third party software (including open source software) that may
- * accompany Microchip software.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
  *
- * THIS SOFTWARE IS SUPPLIED BY MICROCHIP "AS IS". NO WARRANTIES, WHETHER EXPRESS, IMPLIED OR STATUTORY,
- * APPLY TO THIS SOFTWARE, INCLUDING ANY IMPLIED WARRANTIES OF NON-INFRINGEMENT, MERCHANTABILITY, AND
- * FITNESS FOR A PARTICULAR PURPOSE.
+ *   http://www.apache.org/licenses/LICENSE-2.0
  *
- * IN NO EVENT WILL MICROCHIP BE LIABLE FOR ANY INDIRECT, SPECIAL, PUNITIVE, INCIDENTAL OR CONSEQUENTIAL
- * LOSS, DAMAGE, COST OR EXPENSE OF ANY KIND WHATSOEVER RELATED TO THE SOFTWARE, HOWEVER CAUSED, EVEN IF
- * MICROCHIP HAS BEEN ADVISED OF THE POSSIBILITY OR THE DAMAGES ARE FORESEEABLE. TO THE FULLEST EXTENT
- * ALLOWED BY LAW, MICROCHIP'S TOTAL LIABILITY ON ALL CLAIMS IN ANY WAY RELATED TO THIS SOFTWARE WILL NOT
- * EXCEED THE AMOUNT OF FEES, IF ANY, THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
  *
  */
 
-/* File generated from device description version 2022-10-04T10:37:14Z */
+/* File generated from device description file (ATDF) version 2024-06-24T14:43:53Z */
 #ifndef _SAMA5D29_H_
 #define _SAMA5D29_H_
 
 /* Header version uses Semantic Versioning 2.0.0 (https://semver.org/) */
-#define HEADER_FORMAT_VERSION "2.1.0"
+#define HEADER_FORMAT_VERSION "2.1.1"
 
 #define HEADER_FORMAT_VERSION_MAJOR (2)
 #define HEADER_FORMAT_VERSION_MINOR (1)
-#define HEADER_FORMAT_VERSION_PATCH (0)
+#define HEADER_FORMAT_VERSION_PATCH (1)
 
 /* SAMA5D29 definitions
   This file defines all structures and symbols for SAMA5D29:
@@ -141,9 +138,9 @@ typedef enum IRQn
   PIOD_IRQn                 =  70, /* 70  Parallel Input/Output Controller (PIOD) */
   SDMMC0_TIMER_IRQn         =  71, /* 71  Secure Digital MultiMedia Card Controller (SDMMC0) */
   SDMMC1_TIMER_IRQn         =  72, /* 72  Secure Digital MultiMedia Card Controller (SDMMC1) */
+  PMC_IRQn                  =  74, /* 74  Shared between PMC RSTC RTC (PMC)   */
   RSTC_IRQn                 =  74, /* 74  Shared between PMC RSTC RTC (RSTC)  */
   RTC_IRQn                  =  74, /* 74  Shared between PMC RSTC RTC (RTC)   */
-  PMC_IRQn                  =  74, /* 74  Shared between PMC RSTC RTC (PMC)   */
   ACC_IRQn                  =  75, /* 75  Analog Comparator Controller (ACC)  */
   RXLP_IRQn                 =  76, /* 76  Low Power Asynchronous Receiver (RXLP) */
 
@@ -162,7 +159,7 @@ typedef enum IRQn
 /* CMSIS includes */
 #include "core_ca.h"
 #if defined USE_CMSIS_INIT
-#include "system_sama5d.h"
+#include "system_sama5d2.h"
 #endif /* USE_CMSIS_INIT */
 
 /* ************************************************************************** */
