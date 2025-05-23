@@ -14,7 +14,7 @@
 
 //DOM-IGNORE-BEGIN
 /*******************************************************************************
-* Copyright (C) 2018 Microchip Technology Inc. and its subsidiaries.
+* Copyright (C) 2025 Microchip Technology Inc. and its subsidiaries.
 *
 * Subject to your compliance with these terms, you may use Microchip software
 * and any derivatives exclusively with Microchip products. It is your
@@ -49,8 +49,8 @@
 #include <stddef.h>
 #include <stdbool.h>
 #include <stdio.h>
-#include "peripheral/uart/plib_uart3.h"
 #include "peripheral/coretimer/plib_coretimer.h"
+#include "peripheral/uart/plib_uart3.h"
 #include "peripheral/clk/plib_clk.h"
 #include "peripheral/gpio/plib_gpio.h"
 #include "peripheral/evic/plib_evic.h"
@@ -68,13 +68,13 @@ extern "C" {
 // DOM-IGNORE-END
 
 /* Device Information */
-#define DEVICE_NAME			 "PIC32MM0256GPM064"
-#define DEVICE_ARCH			 "MIPS"
-#define DEVICE_FAMILY		 "PIC32MM1387"
-#define DEVICE_SERIES		 "PIC32MM"
+#define DEVICE_NAME          "PIC32MM0256GPM064"
+#define DEVICE_ARCH          "MIPS"
+#define DEVICE_FAMILY        "PIC32MM1387"
+#define DEVICE_SERIES        "PIC32MM"
 
 /* CPU clock frequency */
-#define CPU_CLOCK_FREQUENCY 24000000
+#define CPU_CLOCK_FREQUENCY 24000000U
 
 // *****************************************************************************
 // *****************************************************************************

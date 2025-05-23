@@ -43,7 +43,7 @@
 #include "interrupts.h"
 
 
-volatile static CORETIMER_OBJECT coreTmr;
+static volatile CORETIMER_OBJECT coreTmr;
 void CORETIMER_Initialize( void )
 {
     // Disable Timer by setting Disable Count (DC) bit
