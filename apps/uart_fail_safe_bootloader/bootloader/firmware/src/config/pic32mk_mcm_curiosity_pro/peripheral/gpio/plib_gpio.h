@@ -69,6 +69,7 @@
 #define SWITCH_OutputEnable()      (TRISGCLR = (1U<<11))
 #define SWITCH_InputEnable()       (TRISGSET = (1U<<11))
 #define SWITCH_Get()               ((PORTG >> 11) & 0x1U)
+#define SWITCH_GetLatch()          ((LATG >> 11) & 0x1U)
 #define SWITCH_PIN                  GPIO_PIN_RG11
 
 
@@ -243,7 +244,7 @@ void GPIO_PortOutputEnable(GPIO_PORT port, uint32_t mask);
 
 static inline void GPIO_PinWrite(GPIO_PIN pin, bool value)
 {
-	 uint32_t xvalue = (uint32_t)value;
+     uint32_t xvalue = (uint32_t)value;
     GPIO_PortWrite((pin>>4U), (uint32_t)(0x1U) << (pin & 0xFU), (xvalue) << (pin & 0xFU));
 }
 
