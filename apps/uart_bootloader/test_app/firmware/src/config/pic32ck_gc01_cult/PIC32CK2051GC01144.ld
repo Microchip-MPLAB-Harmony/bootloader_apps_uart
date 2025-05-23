@@ -1,7 +1,7 @@
 /*--------------------------------------------------------------------------
  * MPLAB XC32 Compiler -  PIC32CK2051GC01144 linker script
  * 
- * Copyright (c) 2023, Microchip Technology Inc. and its subsidiaries ("Microchip")
+ * Copyright (c) 2024, Microchip Technology Inc. and its subsidiaries ("Microchip")
  * All rights reserved.
  * 
  * This software is developed by Microchip Technology Inc. and its

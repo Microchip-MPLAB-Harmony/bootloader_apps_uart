@@ -1,66 +1,63 @@
 /*
  * Component description for FUSES
  *
- * Copyright (c) 2023 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2024 Microchip Technology Inc. and its subsidiaries.
  *
- * Subject to your compliance with these terms, you may use Microchip software and any derivatives
- * exclusively with Microchip products. It is your responsibility to comply with third party license
- * terms applicable to your use of third party software (including open source software) that may
- * accompany Microchip software.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
  *
- * THIS SOFTWARE IS SUPPLIED BY MICROCHIP "AS IS". NO WARRANTIES, WHETHER EXPRESS, IMPLIED OR STATUTORY,
- * APPLY TO THIS SOFTWARE, INCLUDING ANY IMPLIED WARRANTIES OF NON-INFRINGEMENT, MERCHANTABILITY, AND
- * FITNESS FOR A PARTICULAR PURPOSE.
+ *   http://www.apache.org/licenses/LICENSE-2.0
  *
- * IN NO EVENT WILL MICROCHIP BE LIABLE FOR ANY INDIRECT, SPECIAL, PUNITIVE, INCIDENTAL OR CONSEQUENTIAL
- * LOSS, DAMAGE, COST OR EXPENSE OF ANY KIND WHATSOEVER RELATED TO THE SOFTWARE, HOWEVER CAUSED, EVEN IF
- * MICROCHIP HAS BEEN ADVISED OF THE POSSIBILITY OR THE DAMAGES ARE FORESEEABLE. TO THE FULLEST EXTENT
- * ALLOWED BY LAW, MICROCHIP'S TOTAL LIABILITY ON ALL CLAIMS IN ANY WAY RELATED TO THIS SOFTWARE WILL NOT
- * EXCEED THE AMOUNT OF FEES, IF ANY, THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
  *
  */
 
-/* file generated from device description version 2023-04-05T13:26:38Z */
+/*  file generated from device description file (ATDF) version 2024-04-02T09:16:01Z  */
 #ifndef _PIC32CKGC01_FUSES_COMPONENT_H_
 #define _PIC32CKGC01_FUSES_COMPONENT_H_
 
 /* ************************************************************************** */
-/*   SOFTWARE API DEFINITION FOR FUSES                                        */
+/*                     SOFTWARE API DEFINITION FOR FUSES                      */
 /* ************************************************************************** */
 
 /* -------- FUSES_BLDRCFG : (FUSES Offset: 0x00) (R/W 32) Bootloader Configuration -------- */
 #define FUSES_BLDRCFG_PFM_BCRP_Pos            _UINT32_(0)                                          /* (FUSES_BLDRCFG) Boot Configration Page Read Protect Position */
 #define FUSES_BLDRCFG_PFM_BCRP_Msk            (_UINT32_(0x1) << FUSES_BLDRCFG_PFM_BCRP_Pos)        /* (FUSES_BLDRCFG) Boot Configration Page Read Protect Mask */
-#define FUSES_BLDRCFG_PFM_BCRP(value)         (FUSES_BLDRCFG_PFM_BCRP_Msk & (_UINT32_(value) << FUSES_BLDRCFG_PFM_BCRP_Pos)) /* Assigment of value for PFM_BCRP in the FUSES_BLDRCFG register */
+#define FUSES_BLDRCFG_PFM_BCRP(value)         (FUSES_BLDRCFG_PFM_BCRP_Msk & (_UINT32_(value) << FUSES_BLDRCFG_PFM_BCRP_Pos)) /* Assignment of value for PFM_BCRP in the FUSES_BLDRCFG register */
 #define FUSES_BLDRCFG_PFM_BCWP_Pos            _UINT32_(1)                                          /* (FUSES_BLDRCFG) Boot Configration Page Write Protect Position */
 #define FUSES_BLDRCFG_PFM_BCWP_Msk            (_UINT32_(0x1) << FUSES_BLDRCFG_PFM_BCWP_Pos)        /* (FUSES_BLDRCFG) Boot Configration Page Write Protect Mask */
-#define FUSES_BLDRCFG_PFM_BCWP(value)         (FUSES_BLDRCFG_PFM_BCWP_Msk & (_UINT32_(value) << FUSES_BLDRCFG_PFM_BCWP_Pos)) /* Assigment of value for PFM_BCWP in the FUSES_BLDRCFG register */
+#define FUSES_BLDRCFG_PFM_BCWP(value)         (FUSES_BLDRCFG_PFM_BCWP_Msk & (_UINT32_(value) << FUSES_BLDRCFG_PFM_BCWP_Pos)) /* Assignment of value for PFM_BCWP in the FUSES_BLDRCFG register */
 #define FUSES_BLDRCFG_BROM_EN_BFMCHK_Pos      _UINT32_(28)                                         /* (FUSES_BLDRCFG) Enable BFM CRC Check Position */
 #define FUSES_BLDRCFG_BROM_EN_BFMCHK_Msk      (_UINT32_(0x1) << FUSES_BLDRCFG_BROM_EN_BFMCHK_Pos)  /* (FUSES_BLDRCFG) Enable BFM CRC Check Mask */
-#define FUSES_BLDRCFG_BROM_EN_BFMCHK(value)   (FUSES_BLDRCFG_BROM_EN_BFMCHK_Msk & (_UINT32_(value) << FUSES_BLDRCFG_BROM_EN_BFMCHK_Pos)) /* Assigment of value for BROM_EN_BFMCHK in the FUSES_BLDRCFG register */
+#define FUSES_BLDRCFG_BROM_EN_BFMCHK(value)   (FUSES_BLDRCFG_BROM_EN_BFMCHK_Msk & (_UINT32_(value) << FUSES_BLDRCFG_BROM_EN_BFMCHK_Pos)) /* Assignment of value for BROM_EN_BFMCHK in the FUSES_BLDRCFG register */
 #define   FUSES_BLDRCFG_BROM_EN_BFMCHK_NONE_Val _UINT32_(0x0)                                        /* (FUSES_BLDRCFG) No verification  */
 #define   FUSES_BLDRCFG_BROM_EN_BFMCHK_CRC32_Val _UINT32_(0x1)                                        /* (FUSES_BLDRCFG) Verify using crc32  */
-#define FUSES_BLDRCFG_BROM_EN_BFMCHK_NONE     (FUSES_BLDRCFG_BROM_EN_BFMCHK_NONE_Val << FUSES_BLDRCFG_BROM_EN_BFMCHK_Pos) /* (FUSES_BLDRCFG) No verification Position  */
-#define FUSES_BLDRCFG_BROM_EN_BFMCHK_CRC32    (FUSES_BLDRCFG_BROM_EN_BFMCHK_CRC32_Val << FUSES_BLDRCFG_BROM_EN_BFMCHK_Pos) /* (FUSES_BLDRCFG) Verify using crc32 Position  */
+#define FUSES_BLDRCFG_BROM_EN_BFMCHK_NONE     (FUSES_BLDRCFG_BROM_EN_BFMCHK_NONE_Val << FUSES_BLDRCFG_BROM_EN_BFMCHK_Pos) /* (FUSES_BLDRCFG) No verification Position */
+#define FUSES_BLDRCFG_BROM_EN_BFMCHK_CRC32    (FUSES_BLDRCFG_BROM_EN_BFMCHK_CRC32_Val << FUSES_BLDRCFG_BROM_EN_BFMCHK_Pos) /* (FUSES_BLDRCFG) Verify using crc32 Position */
 #define FUSES_BLDRCFG_BROM_EN_PLL_Pos         _UINT32_(29)                                         /* (FUSES_BLDRCFG) Enable PLL (Settings in PLL0_<REGS> are used) Position */
 #define FUSES_BLDRCFG_BROM_EN_PLL_Msk         (_UINT32_(0x1) << FUSES_BLDRCFG_BROM_EN_PLL_Pos)     /* (FUSES_BLDRCFG) Enable PLL (Settings in PLL0_<REGS> are used) Mask */
-#define FUSES_BLDRCFG_BROM_EN_PLL(value)      (FUSES_BLDRCFG_BROM_EN_PLL_Msk & (_UINT32_(value) << FUSES_BLDRCFG_BROM_EN_PLL_Pos)) /* Assigment of value for BROM_EN_PLL in the FUSES_BLDRCFG register */
+#define FUSES_BLDRCFG_BROM_EN_PLL(value)      (FUSES_BLDRCFG_BROM_EN_PLL_Msk & (_UINT32_(value) << FUSES_BLDRCFG_BROM_EN_PLL_Pos)) /* Assignment of value for BROM_EN_PLL in the FUSES_BLDRCFG register */
 #define FUSES_BLDRCFG_BROM_EN_DALUN_Pos       _UINT32_(30)                                         /* (FUSES_BLDRCFG) Enable DAL Unlock Position */
 #define FUSES_BLDRCFG_BROM_EN_DALUN_Msk       (_UINT32_(0x1) << FUSES_BLDRCFG_BROM_EN_DALUN_Pos)   /* (FUSES_BLDRCFG) Enable DAL Unlock Mask */
-#define FUSES_BLDRCFG_BROM_EN_DALUN(value)    (FUSES_BLDRCFG_BROM_EN_DALUN_Msk & (_UINT32_(value) << FUSES_BLDRCFG_BROM_EN_DALUN_Pos)) /* Assigment of value for BROM_EN_DALUN in the FUSES_BLDRCFG register */
+#define FUSES_BLDRCFG_BROM_EN_DALUN(value)    (FUSES_BLDRCFG_BROM_EN_DALUN_Msk & (_UINT32_(value) << FUSES_BLDRCFG_BROM_EN_DALUN_Pos)) /* Assignment of value for BROM_EN_DALUN in the FUSES_BLDRCFG register */
 #define FUSES_BLDRCFG_BROM_EN_RWLOCKS_Pos     _UINT32_(31)                                         /* (FUSES_BLDRCFG) Enable Read/Write Locks Position */
 #define FUSES_BLDRCFG_BROM_EN_RWLOCKS_Msk     (_UINT32_(0x1) << FUSES_BLDRCFG_BROM_EN_RWLOCKS_Pos) /* (FUSES_BLDRCFG) Enable Read/Write Locks Mask */
-#define FUSES_BLDRCFG_BROM_EN_RWLOCKS(value)  (FUSES_BLDRCFG_BROM_EN_RWLOCKS_Msk & (_UINT32_(value) << FUSES_BLDRCFG_BROM_EN_RWLOCKS_Pos)) /* Assigment of value for BROM_EN_RWLOCKS in the FUSES_BLDRCFG register */
+#define FUSES_BLDRCFG_BROM_EN_RWLOCKS(value)  (FUSES_BLDRCFG_BROM_EN_RWLOCKS_Msk & (_UINT32_(value) << FUSES_BLDRCFG_BROM_EN_RWLOCKS_Pos)) /* Assignment of value for BROM_EN_RWLOCKS in the FUSES_BLDRCFG register */
 #define FUSES_BLDRCFG_Msk                     _UINT32_(0xF0000003)                                 /* (FUSES_BLDRCFG) Register Mask  */
 
 
 /* -------- FUSES_BROM_BSEQ : (FUSES Offset: 0x04) (R/W 32) Boot Configuraiton Page Sequence Number -------- */
 #define FUSES_BROM_BSEQ_SEQNUM_Pos            _UINT32_(0)                                          /* (FUSES_BROM_BSEQ) Sequence Number Position */
 #define FUSES_BROM_BSEQ_SEQNUM_Msk            (_UINT32_(0xFFFF) << FUSES_BROM_BSEQ_SEQNUM_Pos)     /* (FUSES_BROM_BSEQ) Sequence Number Mask */
-#define FUSES_BROM_BSEQ_SEQNUM(value)         (FUSES_BROM_BSEQ_SEQNUM_Msk & (_UINT32_(value) << FUSES_BROM_BSEQ_SEQNUM_Pos)) /* Assigment of value for SEQNUM in the FUSES_BROM_BSEQ register */
+#define FUSES_BROM_BSEQ_SEQNUM(value)         (FUSES_BROM_BSEQ_SEQNUM_Msk & (_UINT32_(value) << FUSES_BROM_BSEQ_SEQNUM_Pos)) /* Assignment of value for SEQNUM in the FUSES_BROM_BSEQ register */
 #define FUSES_BROM_BSEQ_SEQBAR_Pos            _UINT32_(16)                                         /* (FUSES_BROM_BSEQ) Sequence Number Bar (Negeated) Position */
 #define FUSES_BROM_BSEQ_SEQBAR_Msk            (_UINT32_(0xFFFF) << FUSES_BROM_BSEQ_SEQBAR_Pos)     /* (FUSES_BROM_BSEQ) Sequence Number Bar (Negeated) Mask */
-#define FUSES_BROM_BSEQ_SEQBAR(value)         (FUSES_BROM_BSEQ_SEQBAR_Msk & (_UINT32_(value) << FUSES_BROM_BSEQ_SEQBAR_Pos)) /* Assigment of value for SEQBAR in the FUSES_BROM_BSEQ register */
+#define FUSES_BROM_BSEQ_SEQBAR(value)         (FUSES_BROM_BSEQ_SEQBAR_Msk & (_UINT32_(value) << FUSES_BROM_BSEQ_SEQBAR_Pos)) /* Assignment of value for SEQBAR in the FUSES_BROM_BSEQ register */
 #define FUSES_BROM_BSEQ_Msk                   _UINT32_(0xFFFFFFFF)                                 /* (FUSES_BROM_BSEQ) Register Mask  */
 
 
@@ -165,58 +162,58 @@
 
 #define FUSES_DAL_CPU0_Pos                    _UINT32_(0)                                          /* (FUSES_DAL) Host DAL Elevation Value Position */
 #define FUSES_DAL_CPU0_Msk                    (_UINT32_(0xFF) << FUSES_DAL_CPU0_Pos)               /* (FUSES_DAL) Host DAL Elevation Value Mask */
-#define FUSES_DAL_CPU0(value)                 (FUSES_DAL_CPU0_Msk & (_UINT32_(value) << FUSES_DAL_CPU0_Pos)) /* Assigment of value for CPU0 in the FUSES_DAL register */
+#define FUSES_DAL_CPU0(value)                 (FUSES_DAL_CPU0_Msk & (_UINT32_(value) << FUSES_DAL_CPU0_Pos)) /* Assignment of value for CPU0 in the FUSES_DAL register */
 #define   FUSES_DAL_CPU0_DAL0_Val             _UINT32_(0x81)                                       /* (FUSES_DAL) FCW_DAL0_VALUE  */
 #define   FUSES_DAL_CPU0_DAL1_Val             _UINT32_(0x99)                                       /* (FUSES_DAL) FCW_DAL1_VALUE  */
 #define   FUSES_DAL_CPU0_DAL2_Val             _UINT32_(0xDB)                                       /* (FUSES_DAL) FCW_DAL2_VALUE  */
-#define FUSES_DAL_CPU0_DAL0                   (FUSES_DAL_CPU0_DAL0_Val << FUSES_DAL_CPU0_Pos)      /* (FUSES_DAL) FCW_DAL0_VALUE Position  */
-#define FUSES_DAL_CPU0_DAL1                   (FUSES_DAL_CPU0_DAL1_Val << FUSES_DAL_CPU0_Pos)      /* (FUSES_DAL) FCW_DAL1_VALUE Position  */
-#define FUSES_DAL_CPU0_DAL2                   (FUSES_DAL_CPU0_DAL2_Val << FUSES_DAL_CPU0_Pos)      /* (FUSES_DAL) FCW_DAL2_VALUE Position  */
+#define FUSES_DAL_CPU0_DAL0                   (FUSES_DAL_CPU0_DAL0_Val << FUSES_DAL_CPU0_Pos)      /* (FUSES_DAL) FCW_DAL0_VALUE Position */
+#define FUSES_DAL_CPU0_DAL1                   (FUSES_DAL_CPU0_DAL1_Val << FUSES_DAL_CPU0_Pos)      /* (FUSES_DAL) FCW_DAL1_VALUE Position */
+#define FUSES_DAL_CPU0_DAL2                   (FUSES_DAL_CPU0_DAL2_Val << FUSES_DAL_CPU0_Pos)      /* (FUSES_DAL) FCW_DAL2_VALUE Position */
 #define FUSES_DAL_Msk                         _UINT32_(0x000000FF)                                 /* (FUSES_DAL) Register Mask  */
 
 
 /* -------- FUSES_FSEQ : (FUSES Offset: 0x00) (R/W 32) Flash Sequence Number -------- */
 #define FUSES_FSEQ_SEQNUM_Pos                 _UINT32_(0)                                          /* (FUSES_FSEQ) Sequence Number Position */
 #define FUSES_FSEQ_SEQNUM_Msk                 (_UINT32_(0xFFFF) << FUSES_FSEQ_SEQNUM_Pos)          /* (FUSES_FSEQ) Sequence Number Mask */
-#define FUSES_FSEQ_SEQNUM(value)              (FUSES_FSEQ_SEQNUM_Msk & (_UINT32_(value) << FUSES_FSEQ_SEQNUM_Pos)) /* Assigment of value for SEQNUM in the FUSES_FSEQ register */
+#define FUSES_FSEQ_SEQNUM(value)              (FUSES_FSEQ_SEQNUM_Msk & (_UINT32_(value) << FUSES_FSEQ_SEQNUM_Pos)) /* Assignment of value for SEQNUM in the FUSES_FSEQ register */
 #define FUSES_FSEQ_SEQBAR_Pos                 _UINT32_(16)                                         /* (FUSES_FSEQ) Sequence Number Bar (Negeated) Position */
 #define FUSES_FSEQ_SEQBAR_Msk                 (_UINT32_(0xFFFF) << FUSES_FSEQ_SEQBAR_Pos)          /* (FUSES_FSEQ) Sequence Number Bar (Negeated) Mask */
-#define FUSES_FSEQ_SEQBAR(value)              (FUSES_FSEQ_SEQBAR_Msk & (_UINT32_(value) << FUSES_FSEQ_SEQBAR_Pos)) /* Assigment of value for SEQBAR in the FUSES_FSEQ register */
+#define FUSES_FSEQ_SEQBAR(value)              (FUSES_FSEQ_SEQBAR_Msk & (_UINT32_(value) << FUSES_FSEQ_SEQBAR_Pos)) /* Assignment of value for SEQBAR in the FUSES_FSEQ register */
 #define FUSES_FSEQ_Msk                        _UINT32_(0xFFFFFFFF)                                 /* (FUSES_FSEQ) Register Mask  */
 
 
 /* -------- FUSES_AFSEQ : (FUSES Offset: 0x20) (R/W 32) Alternate Flash Sequence Number -------- */
 #define FUSES_AFSEQ_ASEQNUM_Pos               _UINT32_(0)                                          /* (FUSES_AFSEQ) Alternate Sequence Number Position */
 #define FUSES_AFSEQ_ASEQNUM_Msk               (_UINT32_(0xFFFF) << FUSES_AFSEQ_ASEQNUM_Pos)        /* (FUSES_AFSEQ) Alternate Sequence Number Mask */
-#define FUSES_AFSEQ_ASEQNUM(value)            (FUSES_AFSEQ_ASEQNUM_Msk & (_UINT32_(value) << FUSES_AFSEQ_ASEQNUM_Pos)) /* Assigment of value for ASEQNUM in the FUSES_AFSEQ register */
+#define FUSES_AFSEQ_ASEQNUM(value)            (FUSES_AFSEQ_ASEQNUM_Msk & (_UINT32_(value) << FUSES_AFSEQ_ASEQNUM_Pos)) /* Assignment of value for ASEQNUM in the FUSES_AFSEQ register */
 #define FUSES_AFSEQ_ASEQBAR_Pos               _UINT32_(16)                                         /* (FUSES_AFSEQ) Alternate Sequence Number Bar (Negeated) Position */
 #define FUSES_AFSEQ_ASEQBAR_Msk               (_UINT32_(0xFFFF) << FUSES_AFSEQ_ASEQBAR_Pos)        /* (FUSES_AFSEQ) Alternate Sequence Number Bar (Negeated) Mask */
-#define FUSES_AFSEQ_ASEQBAR(value)            (FUSES_AFSEQ_ASEQBAR_Msk & (_UINT32_(value) << FUSES_AFSEQ_ASEQBAR_Pos)) /* Assigment of value for ASEQBAR in the FUSES_AFSEQ register */
+#define FUSES_AFSEQ_ASEQBAR(value)            (FUSES_AFSEQ_ASEQBAR_Msk & (_UINT32_(value) << FUSES_AFSEQ_ASEQBAR_Pos)) /* Assignment of value for ASEQBAR in the FUSES_AFSEQ register */
 #define FUSES_AFSEQ_Msk                       _UINT32_(0xFFFFFFFF)                                 /* (FUSES_AFSEQ) Register Mask  */
 
 
 /* -------- FUSES_FUCFG0 : (FUSES Offset: 0x40) (R/W 32) WDT Configuration -------- */
 #define FUSES_FUCFG0_WDT_ENABLE_Pos           _UINT32_(1)                                          /* (FUSES_FUCFG0) Enable Position */
 #define FUSES_FUCFG0_WDT_ENABLE_Msk           (_UINT32_(0x1) << FUSES_FUCFG0_WDT_ENABLE_Pos)       /* (FUSES_FUCFG0) Enable Mask */
-#define FUSES_FUCFG0_WDT_ENABLE(value)        (FUSES_FUCFG0_WDT_ENABLE_Msk & (_UINT32_(value) << FUSES_FUCFG0_WDT_ENABLE_Pos)) /* Assigment of value for WDT_ENABLE in the FUSES_FUCFG0 register */
+#define FUSES_FUCFG0_WDT_ENABLE(value)        (FUSES_FUCFG0_WDT_ENABLE_Msk & (_UINT32_(value) << FUSES_FUCFG0_WDT_ENABLE_Pos)) /* Assignment of value for WDT_ENABLE in the FUSES_FUCFG0 register */
 #define FUSES_FUCFG0_WDT_WEN_Pos              _UINT32_(2)                                          /* (FUSES_FUCFG0) Window Mode Enable Position */
 #define FUSES_FUCFG0_WDT_WEN_Msk              (_UINT32_(0x1) << FUSES_FUCFG0_WDT_WEN_Pos)          /* (FUSES_FUCFG0) Window Mode Enable Mask */
-#define FUSES_FUCFG0_WDT_WEN(value)           (FUSES_FUCFG0_WDT_WEN_Msk & (_UINT32_(value) << FUSES_FUCFG0_WDT_WEN_Pos)) /* Assigment of value for WDT_WEN in the FUSES_FUCFG0 register */
+#define FUSES_FUCFG0_WDT_WEN(value)           (FUSES_FUCFG0_WDT_WEN_Msk & (_UINT32_(value) << FUSES_FUCFG0_WDT_WEN_Pos)) /* Assignment of value for WDT_WEN in the FUSES_FUCFG0 register */
 #define FUSES_FUCFG0_WDT_RUNSTDBY_Pos         _UINT32_(6)                                          /* (FUSES_FUCFG0) Run in Standby Position */
 #define FUSES_FUCFG0_WDT_RUNSTDBY_Msk         (_UINT32_(0x1) << FUSES_FUCFG0_WDT_RUNSTDBY_Pos)     /* (FUSES_FUCFG0) Run in Standby Mask */
-#define FUSES_FUCFG0_WDT_RUNSTDBY(value)      (FUSES_FUCFG0_WDT_RUNSTDBY_Msk & (_UINT32_(value) << FUSES_FUCFG0_WDT_RUNSTDBY_Pos)) /* Assigment of value for WDT_RUNSTDBY in the FUSES_FUCFG0 register */
+#define FUSES_FUCFG0_WDT_RUNSTDBY(value)      (FUSES_FUCFG0_WDT_RUNSTDBY_Msk & (_UINT32_(value) << FUSES_FUCFG0_WDT_RUNSTDBY_Pos)) /* Assignment of value for WDT_RUNSTDBY in the FUSES_FUCFG0 register */
 #define FUSES_FUCFG0_WDT_ALWAYSON_Pos         _UINT32_(7)                                          /* (FUSES_FUCFG0) Always On Position */
 #define FUSES_FUCFG0_WDT_ALWAYSON_Msk         (_UINT32_(0x1) << FUSES_FUCFG0_WDT_ALWAYSON_Pos)     /* (FUSES_FUCFG0) Always On Mask */
-#define FUSES_FUCFG0_WDT_ALWAYSON(value)      (FUSES_FUCFG0_WDT_ALWAYSON_Msk & (_UINT32_(value) << FUSES_FUCFG0_WDT_ALWAYSON_Pos)) /* Assigment of value for WDT_ALWAYSON in the FUSES_FUCFG0 register */
+#define FUSES_FUCFG0_WDT_ALWAYSON(value)      (FUSES_FUCFG0_WDT_ALWAYSON_Msk & (_UINT32_(value) << FUSES_FUCFG0_WDT_ALWAYSON_Pos)) /* Assignment of value for WDT_ALWAYSON in the FUSES_FUCFG0 register */
 #define FUSES_FUCFG0_WDT_PER_Pos              _UINT32_(8)                                          /* (FUSES_FUCFG0) Time-out Period Position */
 #define FUSES_FUCFG0_WDT_PER_Msk              (_UINT32_(0xF) << FUSES_FUCFG0_WDT_PER_Pos)          /* (FUSES_FUCFG0) Time-out Period Mask */
-#define FUSES_FUCFG0_WDT_PER(value)           (FUSES_FUCFG0_WDT_PER_Msk & (_UINT32_(value) << FUSES_FUCFG0_WDT_PER_Pos)) /* Assigment of value for WDT_PER in the FUSES_FUCFG0 register */
+#define FUSES_FUCFG0_WDT_PER(value)           (FUSES_FUCFG0_WDT_PER_Msk & (_UINT32_(value) << FUSES_FUCFG0_WDT_PER_Pos)) /* Assignment of value for WDT_PER in the FUSES_FUCFG0 register */
 #define FUSES_FUCFG0_WDT_WINDOW_Pos           _UINT32_(12)                                         /* (FUSES_FUCFG0) Window Mode Time-out Period Position */
 #define FUSES_FUCFG0_WDT_WINDOW_Msk           (_UINT32_(0xF) << FUSES_FUCFG0_WDT_WINDOW_Pos)       /* (FUSES_FUCFG0) Window Mode Time-out Period Mask */
-#define FUSES_FUCFG0_WDT_WINDOW(value)        (FUSES_FUCFG0_WDT_WINDOW_Msk & (_UINT32_(value) << FUSES_FUCFG0_WDT_WINDOW_Pos)) /* Assigment of value for WDT_WINDOW in the FUSES_FUCFG0 register */
+#define FUSES_FUCFG0_WDT_WINDOW(value)        (FUSES_FUCFG0_WDT_WINDOW_Msk & (_UINT32_(value) << FUSES_FUCFG0_WDT_WINDOW_Pos)) /* Assignment of value for WDT_WINDOW in the FUSES_FUCFG0 register */
 #define FUSES_FUCFG0_WDT_EWOFFSET_Pos         _UINT32_(16)                                         /* (FUSES_FUCFG0) Early Warning Interrupt Time Offset Position */
 #define FUSES_FUCFG0_WDT_EWOFFSET_Msk         (_UINT32_(0xF) << FUSES_FUCFG0_WDT_EWOFFSET_Pos)     /* (FUSES_FUCFG0) Early Warning Interrupt Time Offset Mask */
-#define FUSES_FUCFG0_WDT_EWOFFSET(value)      (FUSES_FUCFG0_WDT_EWOFFSET_Msk & (_UINT32_(value) << FUSES_FUCFG0_WDT_EWOFFSET_Pos)) /* Assigment of value for WDT_EWOFFSET in the FUSES_FUCFG0 register */
+#define FUSES_FUCFG0_WDT_EWOFFSET(value)      (FUSES_FUCFG0_WDT_EWOFFSET_Msk & (_UINT32_(value) << FUSES_FUCFG0_WDT_EWOFFSET_Pos)) /* Assignment of value for WDT_EWOFFSET in the FUSES_FUCFG0 register */
 #define FUSES_FUCFG0_Msk                      _UINT32_(0x000FFFC6)                                 /* (FUSES_FUCFG0) Register Mask  */
 
 
@@ -227,35 +224,35 @@
 /* -------- FUSES_FUCFG2 : (FUSES Offset: 0x48) (R/W 32) User Configuration 2 (Deep Sleep SMOR Configuration) -------- */
 #define FUSES_FUCFG2_BRCFGUDSSMOR_BOR_HYST_Pos _UINT32_(0)                                          /* (FUSES_FUCFG2) BOT Trip Hystersis Position */
 #define FUSES_FUCFG2_BRCFGUDSSMOR_BOR_HYST_Msk (_UINT32_(0x1) << FUSES_FUCFG2_BRCFGUDSSMOR_BOR_HYST_Pos) /* (FUSES_FUCFG2) BOT Trip Hystersis Mask */
-#define FUSES_FUCFG2_BRCFGUDSSMOR_BOR_HYST(value) (FUSES_FUCFG2_BRCFGUDSSMOR_BOR_HYST_Msk & (_UINT32_(value) << FUSES_FUCFG2_BRCFGUDSSMOR_BOR_HYST_Pos)) /* Assigment of value for BRCFGUDSSMOR_BOR_HYST in the FUSES_FUCFG2 register */
+#define FUSES_FUCFG2_BRCFGUDSSMOR_BOR_HYST(value) (FUSES_FUCFG2_BRCFGUDSSMOR_BOR_HYST_Msk & (_UINT32_(value) << FUSES_FUCFG2_BRCFGUDSSMOR_BOR_HYST_Pos)) /* Assignment of value for BRCFGUDSSMOR_BOR_HYST in the FUSES_FUCFG2 register */
 #define FUSES_FUCFG2_BRCFGUDSSMOR_BOR_TRIP_Pos _UINT32_(1)                                          /* (FUSES_FUCFG2) BOT Trip Points Position */
 #define FUSES_FUCFG2_BRCFGUDSSMOR_BOR_TRIP_Msk (_UINT32_(0x3) << FUSES_FUCFG2_BRCFGUDSSMOR_BOR_TRIP_Pos) /* (FUSES_FUCFG2) BOT Trip Points Mask */
-#define FUSES_FUCFG2_BRCFGUDSSMOR_BOR_TRIP(value) (FUSES_FUCFG2_BRCFGUDSSMOR_BOR_TRIP_Msk & (_UINT32_(value) << FUSES_FUCFG2_BRCFGUDSSMOR_BOR_TRIP_Pos)) /* Assigment of value for BRCFGUDSSMOR_BOR_TRIP in the FUSES_FUCFG2 register */
+#define FUSES_FUCFG2_BRCFGUDSSMOR_BOR_TRIP(value) (FUSES_FUCFG2_BRCFGUDSSMOR_BOR_TRIP_Msk & (_UINT32_(value) << FUSES_FUCFG2_BRCFGUDSSMOR_BOR_TRIP_Pos)) /* Assignment of value for BRCFGUDSSMOR_BOR_TRIP in the FUSES_FUCFG2 register */
 #define FUSES_FUCFG2_Msk                      _UINT32_(0x00000007)                                 /* (FUSES_FUCFG2) Register Mask  */
 
 
 /* -------- FUSES_FUCFG3 : (FUSES Offset: 0x4C) (R/W 32) User Configuration 2 (SMOR Configuration) -------- */
 #define FUSES_FUCFG3_HYST_BOR_VDDIO_Pos       _UINT32_(0)                                          /* (FUSES_FUCFG3) BOR Trip Point Hystersis for VDDIO Position */
 #define FUSES_FUCFG3_HYST_BOR_VDDIO_Msk       (_UINT32_(0x1) << FUSES_FUCFG3_HYST_BOR_VDDIO_Pos)   /* (FUSES_FUCFG3) BOR Trip Point Hystersis for VDDIO Mask */
-#define FUSES_FUCFG3_HYST_BOR_VDDIO(value)    (FUSES_FUCFG3_HYST_BOR_VDDIO_Msk & (_UINT32_(value) << FUSES_FUCFG3_HYST_BOR_VDDIO_Pos)) /* Assigment of value for HYST_BOR_VDDIO in the FUSES_FUCFG3 register */
+#define FUSES_FUCFG3_HYST_BOR_VDDIO(value)    (FUSES_FUCFG3_HYST_BOR_VDDIO_Msk & (_UINT32_(value) << FUSES_FUCFG3_HYST_BOR_VDDIO_Pos)) /* Assignment of value for HYST_BOR_VDDIO in the FUSES_FUCFG3 register */
 #define FUSES_FUCFG3_BOR_TRIP_VDDIO_Pos       _UINT32_(1)                                          /* (FUSES_FUCFG3) BOR Trip Points for VDDIO Position */
 #define FUSES_FUCFG3_BOR_TRIP_VDDIO_Msk       (_UINT32_(0x3) << FUSES_FUCFG3_BOR_TRIP_VDDIO_Pos)   /* (FUSES_FUCFG3) BOR Trip Points for VDDIO Mask */
-#define FUSES_FUCFG3_BOR_TRIP_VDDIO(value)    (FUSES_FUCFG3_BOR_TRIP_VDDIO_Msk & (_UINT32_(value) << FUSES_FUCFG3_BOR_TRIP_VDDIO_Pos)) /* Assigment of value for BOR_TRIP_VDDIO in the FUSES_FUCFG3 register */
+#define FUSES_FUCFG3_BOR_TRIP_VDDIO(value)    (FUSES_FUCFG3_BOR_TRIP_VDDIO_Msk & (_UINT32_(value) << FUSES_FUCFG3_BOR_TRIP_VDDIO_Pos)) /* Assignment of value for BOR_TRIP_VDDIO in the FUSES_FUCFG3 register */
 #define FUSES_FUCFG3_HYST_BOR_VDDIOB_Pos      _UINT32_(3)                                          /* (FUSES_FUCFG3) BOR Trip Point Hystersis for VDDIOB Position */
 #define FUSES_FUCFG3_HYST_BOR_VDDIOB_Msk      (_UINT32_(0x1) << FUSES_FUCFG3_HYST_BOR_VDDIOB_Pos)  /* (FUSES_FUCFG3) BOR Trip Point Hystersis for VDDIOB Mask */
-#define FUSES_FUCFG3_HYST_BOR_VDDIOB(value)   (FUSES_FUCFG3_HYST_BOR_VDDIOB_Msk & (_UINT32_(value) << FUSES_FUCFG3_HYST_BOR_VDDIOB_Pos)) /* Assigment of value for HYST_BOR_VDDIOB in the FUSES_FUCFG3 register */
+#define FUSES_FUCFG3_HYST_BOR_VDDIOB(value)   (FUSES_FUCFG3_HYST_BOR_VDDIOB_Msk & (_UINT32_(value) << FUSES_FUCFG3_HYST_BOR_VDDIOB_Pos)) /* Assignment of value for HYST_BOR_VDDIOB in the FUSES_FUCFG3 register */
 #define FUSES_FUCFG3_BOR_TRIP_VDDIOB_Pos      _UINT32_(4)                                          /* (FUSES_FUCFG3) BOR Trip Points for VDDIOB Position */
 #define FUSES_FUCFG3_BOR_TRIP_VDDIOB_Msk      (_UINT32_(0x3) << FUSES_FUCFG3_BOR_TRIP_VDDIOB_Pos)  /* (FUSES_FUCFG3) BOR Trip Points for VDDIOB Mask */
-#define FUSES_FUCFG3_BOR_TRIP_VDDIOB(value)   (FUSES_FUCFG3_BOR_TRIP_VDDIOB_Msk & (_UINT32_(value) << FUSES_FUCFG3_BOR_TRIP_VDDIOB_Pos)) /* Assigment of value for BOR_TRIP_VDDIOB in the FUSES_FUCFG3 register */
+#define FUSES_FUCFG3_BOR_TRIP_VDDIOB(value)   (FUSES_FUCFG3_BOR_TRIP_VDDIOB_Msk & (_UINT32_(value) << FUSES_FUCFG3_BOR_TRIP_VDDIOB_Pos)) /* Assignment of value for BOR_TRIP_VDDIOB in the FUSES_FUCFG3 register */
 #define FUSES_FUCFG3_HYST_BOR_VDDA_Pos        _UINT32_(6)                                          /* (FUSES_FUCFG3) BOR Trip Point Hystersis for VDDANA Position */
 #define FUSES_FUCFG3_HYST_BOR_VDDA_Msk        (_UINT32_(0x1) << FUSES_FUCFG3_HYST_BOR_VDDA_Pos)    /* (FUSES_FUCFG3) BOR Trip Point Hystersis for VDDANA Mask */
-#define FUSES_FUCFG3_HYST_BOR_VDDA(value)     (FUSES_FUCFG3_HYST_BOR_VDDA_Msk & (_UINT32_(value) << FUSES_FUCFG3_HYST_BOR_VDDA_Pos)) /* Assigment of value for HYST_BOR_VDDA in the FUSES_FUCFG3 register */
+#define FUSES_FUCFG3_HYST_BOR_VDDA(value)     (FUSES_FUCFG3_HYST_BOR_VDDA_Msk & (_UINT32_(value) << FUSES_FUCFG3_HYST_BOR_VDDA_Pos)) /* Assignment of value for HYST_BOR_VDDA in the FUSES_FUCFG3 register */
 #define FUSES_FUCFG3_BOR_TRIP_VDDA_Pos        _UINT32_(7)                                          /* (FUSES_FUCFG3) BOR Trip Points for VDDANA Position */
 #define FUSES_FUCFG3_BOR_TRIP_VDDA_Msk        (_UINT32_(0x3) << FUSES_FUCFG3_BOR_TRIP_VDDA_Pos)    /* (FUSES_FUCFG3) BOR Trip Points for VDDANA Mask */
-#define FUSES_FUCFG3_BOR_TRIP_VDDA(value)     (FUSES_FUCFG3_BOR_TRIP_VDDA_Msk & (_UINT32_(value) << FUSES_FUCFG3_BOR_TRIP_VDDA_Pos)) /* Assigment of value for BOR_TRIP_VDDA in the FUSES_FUCFG3 register */
+#define FUSES_FUCFG3_BOR_TRIP_VDDA(value)     (FUSES_FUCFG3_BOR_TRIP_VDDA_Msk & (_UINT32_(value) << FUSES_FUCFG3_BOR_TRIP_VDDA_Pos)) /* Assignment of value for BOR_TRIP_VDDA in the FUSES_FUCFG3 register */
 #define FUSES_FUCFG3_HYST_BOR_VDDREG_Pos      _UINT32_(10)                                         /* (FUSES_FUCFG3) BOR Trip Point Hystersis for VDDREG Position */
 #define FUSES_FUCFG3_HYST_BOR_VDDREG_Msk      (_UINT32_(0x1) << FUSES_FUCFG3_HYST_BOR_VDDREG_Pos)  /* (FUSES_FUCFG3) BOR Trip Point Hystersis for VDDREG Mask */
-#define FUSES_FUCFG3_HYST_BOR_VDDREG(value)   (FUSES_FUCFG3_HYST_BOR_VDDREG_Msk & (_UINT32_(value) << FUSES_FUCFG3_HYST_BOR_VDDREG_Pos)) /* Assigment of value for HYST_BOR_VDDREG in the FUSES_FUCFG3 register */
+#define FUSES_FUCFG3_HYST_BOR_VDDREG(value)   (FUSES_FUCFG3_HYST_BOR_VDDREG_Msk & (_UINT32_(value) << FUSES_FUCFG3_HYST_BOR_VDDREG_Pos)) /* Assignment of value for HYST_BOR_VDDREG in the FUSES_FUCFG3 register */
 #define FUSES_FUCFG3_Msk                      _UINT32_(0x000005FF)                                 /* (FUSES_FUCFG3) Register Mask  */
 
 
@@ -264,46 +261,46 @@
 
 #define FUSES_FUCFG5_UCP0_Pos                 _UINT32_(0)                                          /* (FUSES_FUCFG5) User charge pump setting Position */
 #define FUSES_FUCFG5_UCP0_Msk                 (_UINT32_(0xF) << FUSES_FUCFG5_UCP0_Pos)             /* (FUSES_FUCFG5) User charge pump setting Mask */
-#define FUSES_FUCFG5_UCP0(value)              (FUSES_FUCFG5_UCP0_Msk & (_UINT32_(value) << FUSES_FUCFG5_UCP0_Pos)) /* Assigment of value for UCP0 in the FUSES_FUCFG5 register */
+#define FUSES_FUCFG5_UCP0(value)              (FUSES_FUCFG5_UCP0_Msk & (_UINT32_(value) << FUSES_FUCFG5_UCP0_Pos)) /* Assignment of value for UCP0 in the FUSES_FUCFG5 register */
 #define FUSES_FUCFG5_UCP1_Pos                 _UINT32_(8)                                          /* (FUSES_FUCFG5) User charge pump setting Position */
 #define FUSES_FUCFG5_UCP1_Msk                 (_UINT32_(0xF) << FUSES_FUCFG5_UCP1_Pos)             /* (FUSES_FUCFG5) User charge pump setting Mask */
-#define FUSES_FUCFG5_UCP1(value)              (FUSES_FUCFG5_UCP1_Msk & (_UINT32_(value) << FUSES_FUCFG5_UCP1_Pos)) /* Assigment of value for UCP1 in the FUSES_FUCFG5 register */
+#define FUSES_FUCFG5_UCP1(value)              (FUSES_FUCFG5_UCP1_Msk & (_UINT32_(value) << FUSES_FUCFG5_UCP1_Pos)) /* Assignment of value for UCP1 in the FUSES_FUCFG5 register */
 #define FUSES_FUCFG5_Msk                      _UINT32_(0x00000F0F)                                 /* (FUSES_FUCFG5) Register Mask  */
 
 
 /* -------- FUSES_FUCFG6 : (FUSES Offset: 0x58) (R/W 32) User Configuration 6 (FCR ECCCTRL Configuration) -------- */
 #define FUSES_FUCFG6_PFM_ECCCTL_Pos           _UINT32_(4)                                          /* (FUSES_FUCFG6) ECC Mode Control Position */
 #define FUSES_FUCFG6_PFM_ECCCTL_Msk           (_UINT32_(0x3) << FUSES_FUCFG6_PFM_ECCCTL_Pos)       /* (FUSES_FUCFG6) ECC Mode Control Mask */
-#define FUSES_FUCFG6_PFM_ECCCTL(value)        (FUSES_FUCFG6_PFM_ECCCTL_Msk & (_UINT32_(value) << FUSES_FUCFG6_PFM_ECCCTL_Pos)) /* Assigment of value for PFM_ECCCTL in the FUSES_FUCFG6 register */
+#define FUSES_FUCFG6_PFM_ECCCTL(value)        (FUSES_FUCFG6_PFM_ECCCTL_Msk & (_UINT32_(value) << FUSES_FUCFG6_PFM_ECCCTL_Pos)) /* Assignment of value for PFM_ECCCTL in the FUSES_FUCFG6 register */
 #define FUSES_FUCFG6_PFM_ECCUNLCK_Pos         _UINT32_(6)                                          /* (FUSES_FUCFG6) ECC Mode Control Unlock Position */
 #define FUSES_FUCFG6_PFM_ECCUNLCK_Msk         (_UINT32_(0x1) << FUSES_FUCFG6_PFM_ECCUNLCK_Pos)     /* (FUSES_FUCFG6) ECC Mode Control Unlock Mask */
-#define FUSES_FUCFG6_PFM_ECCUNLCK(value)      (FUSES_FUCFG6_PFM_ECCUNLCK_Msk & (_UINT32_(value) << FUSES_FUCFG6_PFM_ECCUNLCK_Pos)) /* Assigment of value for PFM_ECCUNLCK in the FUSES_FUCFG6 register */
+#define FUSES_FUCFG6_PFM_ECCUNLCK(value)      (FUSES_FUCFG6_PFM_ECCUNLCK_Msk & (_UINT32_(value) << FUSES_FUCFG6_PFM_ECCUNLCK_Pos)) /* Assignment of value for PFM_ECCUNLCK in the FUSES_FUCFG6 register */
 #define FUSES_FUCFG6_PFM_SECCNT_Pos           _UINT32_(8)                                          /* (FUSES_FUCFG6) Flash SEC Count Position */
 #define FUSES_FUCFG6_PFM_SECCNT_Msk           (_UINT32_(0xFF) << FUSES_FUCFG6_PFM_SECCNT_Pos)      /* (FUSES_FUCFG6) Flash SEC Count Mask */
-#define FUSES_FUCFG6_PFM_SECCNT(value)        (FUSES_FUCFG6_PFM_SECCNT_Msk & (_UINT32_(value) << FUSES_FUCFG6_PFM_SECCNT_Pos)) /* Assigment of value for PFM_SECCNT in the FUSES_FUCFG6 register */
+#define FUSES_FUCFG6_PFM_SECCNT(value)        (FUSES_FUCFG6_PFM_SECCNT_Msk & (_UINT32_(value) << FUSES_FUCFG6_PFM_SECCNT_Pos)) /* Assignment of value for PFM_SECCNT in the FUSES_FUCFG6 register */
 #define FUSES_FUCFG6_Msk                      _UINT32_(0x0000FF70)                                 /* (FUSES_FUCFG6) Register Mask  */
 
 
 /* -------- FUSES_FUCFG7 : (FUSES Offset: 0x5C) (R/W 32) User Configuration 7 (FCR CTRLB Configuration) -------- */
 #define FUSES_FUCFG7_PFM_TEMP_Pos             _UINT32_(1)                                          /* (FUSES_FUCFG7) NVM Operating Temperature Read Mode Position */
 #define FUSES_FUCFG7_PFM_TEMP_Msk             (_UINT32_(0x1) << FUSES_FUCFG7_PFM_TEMP_Pos)         /* (FUSES_FUCFG7) NVM Operating Temperature Read Mode Mask */
-#define FUSES_FUCFG7_PFM_TEMP(value)          (FUSES_FUCFG7_PFM_TEMP_Msk & (_UINT32_(value) << FUSES_FUCFG7_PFM_TEMP_Pos)) /* Assigment of value for PFM_TEMP in the FUSES_FUCFG7 register */
+#define FUSES_FUCFG7_PFM_TEMP(value)          (FUSES_FUCFG7_PFM_TEMP_Msk & (_UINT32_(value) << FUSES_FUCFG7_PFM_TEMP_Pos)) /* Assignment of value for PFM_TEMP in the FUSES_FUCFG7 register */
 #define FUSES_FUCFG7_Msk                      _UINT32_(0x00000002)                                 /* (FUSES_FUCFG7) Register Mask  */
 
 
 /* -------- FUSES_FUCFG8 : (FUSES Offset: 0x60) (R/W 32) User Configuration 8 (FCW CWP Configuration) -------- */
 #define FUSES_FUCFG8_PFM_UC1WP_Pos            _UINT32_(0)                                          /* (FUSES_FUCFG8) User Configuration Page 1 Write Protect Position */
 #define FUSES_FUCFG8_PFM_UC1WP_Msk            (_UINT32_(0x1) << FUSES_FUCFG8_PFM_UC1WP_Pos)        /* (FUSES_FUCFG8) User Configuration Page 1 Write Protect Mask */
-#define FUSES_FUCFG8_PFM_UC1WP(value)         (FUSES_FUCFG8_PFM_UC1WP_Msk & (_UINT32_(value) << FUSES_FUCFG8_PFM_UC1WP_Pos)) /* Assigment of value for PFM_UC1WP in the FUSES_FUCFG8 register */
+#define FUSES_FUCFG8_PFM_UC1WP(value)         (FUSES_FUCFG8_PFM_UC1WP_Msk & (_UINT32_(value) << FUSES_FUCFG8_PFM_UC1WP_Pos)) /* Assignment of value for PFM_UC1WP in the FUSES_FUCFG8 register */
 #define FUSES_FUCFG8_PFM_UC2WP_Pos            _UINT32_(8)                                          /* (FUSES_FUCFG8) User Configuration Page 2 Write Protect Position */
 #define FUSES_FUCFG8_PFM_UC2WP_Msk            (_UINT32_(0x1) << FUSES_FUCFG8_PFM_UC2WP_Pos)        /* (FUSES_FUCFG8) User Configuration Page 2 Write Protect Mask */
-#define FUSES_FUCFG8_PFM_UC2WP(value)         (FUSES_FUCFG8_PFM_UC2WP_Msk & (_UINT32_(value) << FUSES_FUCFG8_PFM_UC2WP_Pos)) /* Assigment of value for PFM_UC2WP in the FUSES_FUCFG8 register */
+#define FUSES_FUCFG8_PFM_UC2WP(value)         (FUSES_FUCFG8_PFM_UC2WP_Msk & (_UINT32_(value) << FUSES_FUCFG8_PFM_UC2WP_Pos)) /* Assignment of value for PFM_UC2WP in the FUSES_FUCFG8 register */
 #define FUSES_FUCFG8_PFM_UC1WPLOCK_Pos        _UINT32_(16)                                         /* (FUSES_FUCFG8) User Configuration Page 1 Write Protection Lock Position */
 #define FUSES_FUCFG8_PFM_UC1WPLOCK_Msk        (_UINT32_(0x1) << FUSES_FUCFG8_PFM_UC1WPLOCK_Pos)    /* (FUSES_FUCFG8) User Configuration Page 1 Write Protection Lock Mask */
-#define FUSES_FUCFG8_PFM_UC1WPLOCK(value)     (FUSES_FUCFG8_PFM_UC1WPLOCK_Msk & (_UINT32_(value) << FUSES_FUCFG8_PFM_UC1WPLOCK_Pos)) /* Assigment of value for PFM_UC1WPLOCK in the FUSES_FUCFG8 register */
+#define FUSES_FUCFG8_PFM_UC1WPLOCK(value)     (FUSES_FUCFG8_PFM_UC1WPLOCK_Msk & (_UINT32_(value) << FUSES_FUCFG8_PFM_UC1WPLOCK_Pos)) /* Assignment of value for PFM_UC1WPLOCK in the FUSES_FUCFG8 register */
 #define FUSES_FUCFG8_PFM_UC2WPLOCK_Pos        _UINT32_(24)                                         /* (FUSES_FUCFG8) User Configuration Page 2 Write Protection Lock Position */
 #define FUSES_FUCFG8_PFM_UC2WPLOCK_Msk        (_UINT32_(0x1) << FUSES_FUCFG8_PFM_UC2WPLOCK_Pos)    /* (FUSES_FUCFG8) User Configuration Page 2 Write Protection Lock Mask */
-#define FUSES_FUCFG8_PFM_UC2WPLOCK(value)     (FUSES_FUCFG8_PFM_UC2WPLOCK_Msk & (_UINT32_(value) << FUSES_FUCFG8_PFM_UC2WPLOCK_Pos)) /* Assigment of value for PFM_UC2WPLOCK in the FUSES_FUCFG8 register */
+#define FUSES_FUCFG8_PFM_UC2WPLOCK(value)     (FUSES_FUCFG8_PFM_UC2WPLOCK_Msk & (_UINT32_(value) << FUSES_FUCFG8_PFM_UC2WPLOCK_Pos)) /* Assignment of value for PFM_UC2WPLOCK in the FUSES_FUCFG8 register */
 #define FUSES_FUCFG8_Msk                      _UINT32_(0x01010101)                                 /* (FUSES_FUCFG8) Register Mask  */
 
 
@@ -314,81 +311,81 @@
 /* -------- FUSES_FCCFG64 : (FUSES Offset: 0x180) ( R/ 32) PTC Calibration -------- */
 #define FUSES_FCCFG64_PTCFG0_Pos              _UINT32_(0)                                          /* (FUSES_FCCFG64)  Position */
 #define FUSES_FCCFG64_PTCFG0_Msk              (_UINT32_(0xFFFF) << FUSES_FCCFG64_PTCFG0_Pos)       /* (FUSES_FCCFG64)  Mask */
-#define FUSES_FCCFG64_PTCFG0(value)           (FUSES_FCCFG64_PTCFG0_Msk & (_UINT32_(value) << FUSES_FCCFG64_PTCFG0_Pos)) /* Assigment of value for PTCFG0 in the FUSES_FCCFG64 register */
+#define FUSES_FCCFG64_PTCFG0(value)           (FUSES_FCCFG64_PTCFG0_Msk & (_UINT32_(value) << FUSES_FCCFG64_PTCFG0_Pos)) /* Assignment of value for PTCFG0 in the FUSES_FCCFG64 register */
 #define FUSES_FCCFG64_Msk                     _UINT32_(0x0000FFFF)                                 /* (FUSES_FCCFG64) Register Mask  */
 
 
 /* -------- FUSES_FCCFG65 : (FUSES Offset: 0x184) ( R/ 32) ADC Calibration -------- */
 #define FUSES_FCCFG65_ADCFG0_Pos              _UINT32_(0)                                          /* (FUSES_FCCFG65)  Position */
 #define FUSES_FCCFG65_ADCFG0_Msk              (_UINT32_(0xFFFFFFFF) << FUSES_FCCFG65_ADCFG0_Pos)   /* (FUSES_FCCFG65)  Mask */
-#define FUSES_FCCFG65_ADCFG0(value)           (FUSES_FCCFG65_ADCFG0_Msk & (_UINT32_(value) << FUSES_FCCFG65_ADCFG0_Pos)) /* Assigment of value for ADCFG0 in the FUSES_FCCFG65 register */
+#define FUSES_FCCFG65_ADCFG0(value)           (FUSES_FCCFG65_ADCFG0_Msk & (_UINT32_(value) << FUSES_FCCFG65_ADCFG0_Pos)) /* Assignment of value for ADCFG0 in the FUSES_FCCFG65 register */
 #define FUSES_FCCFG65_Msk                     _UINT32_(0xFFFFFFFF)                                 /* (FUSES_FCCFG65) Register Mask  */
 
 
 /* -------- FUSES_FCCFG66 : (FUSES Offset: 0x188) ( R/ 32) Comparator Calibration -------- */
 #define FUSES_FCCFG66_ACPAIR_SEL_Pos          _UINT32_(0)                                          /* (FUSES_FCCFG66)  Position */
 #define FUSES_FCCFG66_ACPAIR_SEL_Msk          (_UINT32_(0xFF) << FUSES_FCCFG66_ACPAIR_SEL_Pos)     /* (FUSES_FCCFG66)  Mask */
-#define FUSES_FCCFG66_ACPAIR_SEL(value)       (FUSES_FCCFG66_ACPAIR_SEL_Msk & (_UINT32_(value) << FUSES_FCCFG66_ACPAIR_SEL_Pos)) /* Assigment of value for ACPAIR_SEL in the FUSES_FCCFG66 register */
+#define FUSES_FCCFG66_ACPAIR_SEL(value)       (FUSES_FCCFG66_ACPAIR_SEL_Msk & (_UINT32_(value) << FUSES_FCCFG66_ACPAIR_SEL_Pos)) /* Assignment of value for ACPAIR_SEL in the FUSES_FCCFG66 register */
 #define FUSES_FCCFG66_Msk                     _UINT32_(0x000000FF)                                 /* (FUSES_FCCFG66) Register Mask  */
 
 
 /* -------- FUSES_FCCFG69 : (FUSES Offset: 0x194) ( R/ 32) Temperature  calibration values 0 -------- */
 #define FUSES_FCCFG69_ROOM_ADC_VAL_PTAT_Pos   _UINT32_(0)                                          /* (FUSES_FCCFG69)  Position */
 #define FUSES_FCCFG69_ROOM_ADC_VAL_PTAT_Msk   (_UINT32_(0xFFF) << FUSES_FCCFG69_ROOM_ADC_VAL_PTAT_Pos) /* (FUSES_FCCFG69)  Mask */
-#define FUSES_FCCFG69_ROOM_ADC_VAL_PTAT(value) (FUSES_FCCFG69_ROOM_ADC_VAL_PTAT_Msk & (_UINT32_(value) << FUSES_FCCFG69_ROOM_ADC_VAL_PTAT_Pos)) /* Assigment of value for ROOM_ADC_VAL_PTAT in the FUSES_FCCFG69 register */
+#define FUSES_FCCFG69_ROOM_ADC_VAL_PTAT(value) (FUSES_FCCFG69_ROOM_ADC_VAL_PTAT_Msk & (_UINT32_(value) << FUSES_FCCFG69_ROOM_ADC_VAL_PTAT_Pos)) /* Assignment of value for ROOM_ADC_VAL_PTAT in the FUSES_FCCFG69 register */
 #define FUSES_FCCFG69_ROOM_ADC_VAL_BUFF1V2_Pos _UINT32_(12)                                         /* (FUSES_FCCFG69)  Position */
 #define FUSES_FCCFG69_ROOM_ADC_VAL_BUFF1V2_Msk (_UINT32_(0xFFF) << FUSES_FCCFG69_ROOM_ADC_VAL_BUFF1V2_Pos) /* (FUSES_FCCFG69)  Mask */
-#define FUSES_FCCFG69_ROOM_ADC_VAL_BUFF1V2(value) (FUSES_FCCFG69_ROOM_ADC_VAL_BUFF1V2_Msk & (_UINT32_(value) << FUSES_FCCFG69_ROOM_ADC_VAL_BUFF1V2_Pos)) /* Assigment of value for ROOM_ADC_VAL_BUFF1V2 in the FUSES_FCCFG69 register */
+#define FUSES_FCCFG69_ROOM_ADC_VAL_BUFF1V2(value) (FUSES_FCCFG69_ROOM_ADC_VAL_BUFF1V2_Msk & (_UINT32_(value) << FUSES_FCCFG69_ROOM_ADC_VAL_BUFF1V2_Pos)) /* Assignment of value for ROOM_ADC_VAL_BUFF1V2 in the FUSES_FCCFG69 register */
 #define FUSES_FCCFG69_ROOM_TEMP_VAL_INT_Pos   _UINT32_(24)                                         /* (FUSES_FCCFG69)  Position */
 #define FUSES_FCCFG69_ROOM_TEMP_VAL_INT_Msk   (_UINT32_(0xFF) << FUSES_FCCFG69_ROOM_TEMP_VAL_INT_Pos) /* (FUSES_FCCFG69)  Mask */
-#define FUSES_FCCFG69_ROOM_TEMP_VAL_INT(value) (FUSES_FCCFG69_ROOM_TEMP_VAL_INT_Msk & (_UINT32_(value) << FUSES_FCCFG69_ROOM_TEMP_VAL_INT_Pos)) /* Assigment of value for ROOM_TEMP_VAL_INT in the FUSES_FCCFG69 register */
+#define FUSES_FCCFG69_ROOM_TEMP_VAL_INT(value) (FUSES_FCCFG69_ROOM_TEMP_VAL_INT_Msk & (_UINT32_(value) << FUSES_FCCFG69_ROOM_TEMP_VAL_INT_Pos)) /* Assignment of value for ROOM_TEMP_VAL_INT in the FUSES_FCCFG69 register */
 #define FUSES_FCCFG69_Msk                     _UINT32_(0xFFFFFFFF)                                 /* (FUSES_FCCFG69) Register Mask  */
 
 
 /* -------- FUSES_FCCFG70 : (FUSES Offset: 0x198) ( R/ 32) Temperature  calibration values 1 -------- */
 #define FUSES_FCCFG70_ROOM_TEMP_VAL_DEC_Pos   _UINT32_(0)                                          /* (FUSES_FCCFG70)  Position */
 #define FUSES_FCCFG70_ROOM_TEMP_VAL_DEC_Msk   (_UINT32_(0xF) << FUSES_FCCFG70_ROOM_TEMP_VAL_DEC_Pos) /* (FUSES_FCCFG70)  Mask */
-#define FUSES_FCCFG70_ROOM_TEMP_VAL_DEC(value) (FUSES_FCCFG70_ROOM_TEMP_VAL_DEC_Msk & (_UINT32_(value) << FUSES_FCCFG70_ROOM_TEMP_VAL_DEC_Pos)) /* Assigment of value for ROOM_TEMP_VAL_DEC in the FUSES_FCCFG70 register */
+#define FUSES_FCCFG70_ROOM_TEMP_VAL_DEC(value) (FUSES_FCCFG70_ROOM_TEMP_VAL_DEC_Msk & (_UINT32_(value) << FUSES_FCCFG70_ROOM_TEMP_VAL_DEC_Pos)) /* Assignment of value for ROOM_TEMP_VAL_DEC in the FUSES_FCCFG70 register */
 #define FUSES_FCCFG70_ROOM_VREF_VAL_Pos       _UINT32_(4)                                          /* (FUSES_FCCFG70)  Position */
 #define FUSES_FCCFG70_ROOM_VREF_VAL_Msk       (_UINT32_(0xFFF) << FUSES_FCCFG70_ROOM_VREF_VAL_Pos) /* (FUSES_FCCFG70)  Mask */
-#define FUSES_FCCFG70_ROOM_VREF_VAL(value)    (FUSES_FCCFG70_ROOM_VREF_VAL_Msk & (_UINT32_(value) << FUSES_FCCFG70_ROOM_VREF_VAL_Pos)) /* Assigment of value for ROOM_VREF_VAL in the FUSES_FCCFG70 register */
+#define FUSES_FCCFG70_ROOM_VREF_VAL(value)    (FUSES_FCCFG70_ROOM_VREF_VAL_Msk & (_UINT32_(value) << FUSES_FCCFG70_ROOM_VREF_VAL_Pos)) /* Assignment of value for ROOM_VREF_VAL in the FUSES_FCCFG70 register */
 #define FUSES_FCCFG70_HOT_TEMP_VAL_DEC_Pos    _UINT32_(16)                                         /* (FUSES_FCCFG70)  Position */
 #define FUSES_FCCFG70_HOT_TEMP_VAL_DEC_Msk    (_UINT32_(0xF) << FUSES_FCCFG70_HOT_TEMP_VAL_DEC_Pos) /* (FUSES_FCCFG70)  Mask */
-#define FUSES_FCCFG70_HOT_TEMP_VAL_DEC(value) (FUSES_FCCFG70_HOT_TEMP_VAL_DEC_Msk & (_UINT32_(value) << FUSES_FCCFG70_HOT_TEMP_VAL_DEC_Pos)) /* Assigment of value for HOT_TEMP_VAL_DEC in the FUSES_FCCFG70 register */
+#define FUSES_FCCFG70_HOT_TEMP_VAL_DEC(value) (FUSES_FCCFG70_HOT_TEMP_VAL_DEC_Msk & (_UINT32_(value) << FUSES_FCCFG70_HOT_TEMP_VAL_DEC_Pos)) /* Assignment of value for HOT_TEMP_VAL_DEC in the FUSES_FCCFG70 register */
 #define FUSES_FCCFG70_Reserved_Pos            _UINT32_(20)                                         /* (FUSES_FCCFG70)  Position */
 #define FUSES_FCCFG70_Reserved_Msk            (_UINT32_(0xFFF) << FUSES_FCCFG70_Reserved_Pos)      /* (FUSES_FCCFG70)  Mask */
-#define FUSES_FCCFG70_Reserved(value)         (FUSES_FCCFG70_Reserved_Msk & (_UINT32_(value) << FUSES_FCCFG70_Reserved_Pos)) /* Assigment of value for Reserved in the FUSES_FCCFG70 register */
+#define FUSES_FCCFG70_Reserved(value)         (FUSES_FCCFG70_Reserved_Msk & (_UINT32_(value) << FUSES_FCCFG70_Reserved_Pos)) /* Assignment of value for Reserved in the FUSES_FCCFG70 register */
 #define FUSES_FCCFG70_Msk                     _UINT32_(0xFFFFFFFF)                                 /* (FUSES_FCCFG70) Register Mask  */
 
 
 /* -------- FUSES_FCCFG71 : (FUSES Offset: 0x19C) ( R/ 32) Temperature  calibration values 2 -------- */
 #define FUSES_FCCFG71_HOT_ADC_VAL_PTAT_Pos    _UINT32_(0)                                          /* (FUSES_FCCFG71)  Position */
 #define FUSES_FCCFG71_HOT_ADC_VAL_PTAT_Msk    (_UINT32_(0xFFF) << FUSES_FCCFG71_HOT_ADC_VAL_PTAT_Pos) /* (FUSES_FCCFG71)  Mask */
-#define FUSES_FCCFG71_HOT_ADC_VAL_PTAT(value) (FUSES_FCCFG71_HOT_ADC_VAL_PTAT_Msk & (_UINT32_(value) << FUSES_FCCFG71_HOT_ADC_VAL_PTAT_Pos)) /* Assigment of value for HOT_ADC_VAL_PTAT in the FUSES_FCCFG71 register */
+#define FUSES_FCCFG71_HOT_ADC_VAL_PTAT(value) (FUSES_FCCFG71_HOT_ADC_VAL_PTAT_Msk & (_UINT32_(value) << FUSES_FCCFG71_HOT_ADC_VAL_PTAT_Pos)) /* Assignment of value for HOT_ADC_VAL_PTAT in the FUSES_FCCFG71 register */
 #define FUSES_FCCFG71_HOT_ADC_VAL_BUFF1V2_Pos _UINT32_(12)                                         /* (FUSES_FCCFG71)  Position */
 #define FUSES_FCCFG71_HOT_ADC_VAL_BUFF1V2_Msk (_UINT32_(0xFFF) << FUSES_FCCFG71_HOT_ADC_VAL_BUFF1V2_Pos) /* (FUSES_FCCFG71)  Mask */
-#define FUSES_FCCFG71_HOT_ADC_VAL_BUFF1V2(value) (FUSES_FCCFG71_HOT_ADC_VAL_BUFF1V2_Msk & (_UINT32_(value) << FUSES_FCCFG71_HOT_ADC_VAL_BUFF1V2_Pos)) /* Assigment of value for HOT_ADC_VAL_BUFF1V2 in the FUSES_FCCFG71 register */
+#define FUSES_FCCFG71_HOT_ADC_VAL_BUFF1V2(value) (FUSES_FCCFG71_HOT_ADC_VAL_BUFF1V2_Msk & (_UINT32_(value) << FUSES_FCCFG71_HOT_ADC_VAL_BUFF1V2_Pos)) /* Assignment of value for HOT_ADC_VAL_BUFF1V2 in the FUSES_FCCFG71 register */
 #define FUSES_FCCFG71_HOT_TEMP_VAL_INT_Pos    _UINT32_(24)                                         /* (FUSES_FCCFG71)  Position */
 #define FUSES_FCCFG71_HOT_TEMP_VAL_INT_Msk    (_UINT32_(0xFF) << FUSES_FCCFG71_HOT_TEMP_VAL_INT_Pos) /* (FUSES_FCCFG71)  Mask */
-#define FUSES_FCCFG71_HOT_TEMP_VAL_INT(value) (FUSES_FCCFG71_HOT_TEMP_VAL_INT_Msk & (_UINT32_(value) << FUSES_FCCFG71_HOT_TEMP_VAL_INT_Pos)) /* Assigment of value for HOT_TEMP_VAL_INT in the FUSES_FCCFG71 register */
+#define FUSES_FCCFG71_HOT_TEMP_VAL_INT(value) (FUSES_FCCFG71_HOT_TEMP_VAL_INT_Msk & (_UINT32_(value) << FUSES_FCCFG71_HOT_TEMP_VAL_INT_Pos)) /* Assignment of value for HOT_TEMP_VAL_INT in the FUSES_FCCFG71 register */
 #define FUSES_FCCFG71_Msk                     _UINT32_(0xFFFFFFFF)                                 /* (FUSES_FCCFG71) Register Mask  */
 
 
 /* -------- FUSES_FCCFG72 : (FUSES Offset: 0x1A0) ( R/ 32) MAC ID (31 through 0) -------- */
 #define FUSES_FCCFG72_FMAC_31_0_Pos           _UINT32_(0)                                          /* (FUSES_FCCFG72)  Position */
 #define FUSES_FCCFG72_FMAC_31_0_Msk           (_UINT32_(0xFFFFFFFF) << FUSES_FCCFG72_FMAC_31_0_Pos) /* (FUSES_FCCFG72)  Mask */
-#define FUSES_FCCFG72_FMAC_31_0(value)        (FUSES_FCCFG72_FMAC_31_0_Msk & (_UINT32_(value) << FUSES_FCCFG72_FMAC_31_0_Pos)) /* Assigment of value for FMAC_31_0 in the FUSES_FCCFG72 register */
+#define FUSES_FCCFG72_FMAC_31_0(value)        (FUSES_FCCFG72_FMAC_31_0_Msk & (_UINT32_(value) << FUSES_FCCFG72_FMAC_31_0_Pos)) /* Assignment of value for FMAC_31_0 in the FUSES_FCCFG72 register */
 #define FUSES_FCCFG72_Msk                     _UINT32_(0xFFFFFFFF)                                 /* (FUSES_FCCFG72) Register Mask  */
 
 
 /* -------- FUSES_FCCFG73 : (FUSES Offset: 0x1A4) ( R/ 32) MAC ID (47 through 32) -------- */
 #define FUSES_FCCFG73_FMAC_47_32_Pos          _UINT32_(0)                                          /* (FUSES_FCCFG73)  Position */
 #define FUSES_FCCFG73_FMAC_47_32_Msk          (_UINT32_(0xFFFF) << FUSES_FCCFG73_FMAC_47_32_Pos)   /* (FUSES_FCCFG73)  Mask */
-#define FUSES_FCCFG73_FMAC_47_32(value)       (FUSES_FCCFG73_FMAC_47_32_Msk & (_UINT32_(value) << FUSES_FCCFG73_FMAC_47_32_Pos)) /* Assigment of value for FMAC_47_32 in the FUSES_FCCFG73 register */
+#define FUSES_FCCFG73_FMAC_47_32(value)       (FUSES_FCCFG73_FMAC_47_32_Msk & (_UINT32_(value) << FUSES_FCCFG73_FMAC_47_32_Pos)) /* Assignment of value for FMAC_47_32 in the FUSES_FCCFG73 register */
 #define FUSES_FCCFG73_Msk                     _UINT32_(0x0000FFFF)                                 /* (FUSES_FCCFG73) Register Mask  */
 
 
-/** \brief FUSES register offsets definitions */
+/* FUSES register offsets definitions */
 #define FUSES_BLDRCFG_REG_OFST         _UINT32_(0x00)      /* (FUSES_BLDRCFG) Bootloader Configuration Offset */
 #define FUSES_BROM_BSEQ_REG_OFST       _UINT32_(0x04)      /* (FUSES_BROM_BSEQ) Boot Configuraiton Page Sequence Number Offset */
 #define FUSES_BFM_CHK_TABLEPTR_REG_OFST _UINT32_(0x08)      /* (FUSES_BFM_CHK_TABLEPTR) BFM CRC Table Pointer Offset */
@@ -505,75 +502,75 @@
 #define FUSES_FCCFG73_REG_OFST         _UINT32_(0x1A4)     /* (FUSES_FCCFG73) MAC ID (47 through 32) Offset */
 
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
-/** \brief FUSES_BOOTCFG1 register API structure */
+/* FUSES_BOOTCFG1 register API structure */
 typedef struct
 {  /* Defines FUSE parameters */
-  __IO  uint32_t                       FUSES_BLDRCFG;      /**< Offset: 0x00 (R/W  32) Bootloader Configuration */
-  __IO  uint32_t                       FUSES_BROM_BSEQ;    /**< Offset: 0x04 (R/W  32) Boot Configuraiton Page Sequence Number */
-  __IO  uint32_t                       FUSES_BFM_CHK_TABLEPTR; /**< Offset: 0x08 (R/W  32) BFM CRC Table Pointer */
+  __IO  uint32_t                       FUSES_BLDRCFG;      /* Offset: 0x00 (R/W  32) Bootloader Configuration */
+  __IO  uint32_t                       FUSES_BROM_BSEQ;    /* Offset: 0x04 (R/W  32) Boot Configuraiton Page Sequence Number */
+  __IO  uint32_t                       FUSES_BFM_CHK_TABLEPTR; /* Offset: 0x08 (R/W  32) BFM CRC Table Pointer */
   __I   uint8_t                        Reserved1[0x14];
-  __IO  uint32_t                       FUSES_KEYVAL_TZ1_CE_NS[4]; /**< Offset: 0x20 (R/W  32) Chip Erase Key for TZ1_NS */
-  __IO  uint32_t                       FUSES_CELOCK_TZ1_CE_NS[4]; /**< Offset: 0x30 (R/W  32) Chip Erase Lock for TZ1_NS */
-  __IO  uint32_t                       FUSES_KEYVAL_TZ1_CE_S[4]; /**< Offset: 0x40 (R/W  32) Chip Erase Key for TZ1_S */
-  __IO  uint32_t                       FUSES_CELOCK_TZ1_CE_S[4]; /**< Offset: 0x50 (R/W  32) Chip Erase Lock for TZ1_S */
-  __IO  uint32_t                       FUSES_KEYVAL_TZ1_CE_ALL[4]; /**< Offset: 0x60 (R/W  32) Chip Erase Key for TZ1_ALL */
-  __IO  uint32_t                       FUSES_CELOCK_TZ1_CE_ALL[4]; /**< Offset: 0x70 (R/W  32) Chip Erase Lock for TZ1_ALL */
-  __IO  uint32_t                       FUSES_KEYVAL_TZ0_CE_ALL[4]; /**< Offset: 0x80 (R/W  32) Chip Erase Key for TZ0_ALL */
-  __IO  uint32_t                       FUSES_CELOCK_TZ0_CE_ALL[4]; /**< Offset: 0x90 (R/W  32) Chip Erase Lock for TZ0_ALL */
-  __IO  uint32_t                       FUSES_KEYVAL_CRCCMD[4]; /**< Offset: 0xA0 (R/W  32) CRC Access Key */
-  __IO  uint32_t                       FUSES_KEYCONFIG_CRCCMD[4]; /**< Offset: 0xB0 (R/W  32) CRC Access Key Configuration */
-  __IO  uint32_t                       FUSES_KEYVAL_HOSTDALELEV[4]; /**< Offset: 0xC0 (R/W  32) Host Authenticated DAL Elevation Key */
-  __IO  uint32_t                       FUSES_KEYCONFIG_HOSTDALELEV[4]; /**< Offset: 0xD0 (R/W  32) Host Authenticated DAL Elevation Key Configuration */
-  __IO  uint32_t                       FUSES_ROM_CTRLA;    /**< Offset: 0xE0 (R/W  32) ROM CTRLA Settings  (BROM_PLLEN must be set) */
-  __IO  uint32_t                       FUSES_FCR_CTRLA;    /**< Offset: 0xE4 (R/W  32) FCR CTRLA Settings (BROM_PLLEN must be set) */
-  __IO  uint32_t                       FUSES_RPMU_VREGCTRL; /**< Offset: 0xE8 (R/W  32) RPMU VREGCTRL Settings (BROM_PLLEN must be set) */
-  __IO  uint32_t                       FUSES_PLL0_CTRL;    /**< Offset: 0xEC (R/W  32) PLL0 CTRL Settings (BROM_PLLEN must be set) */
-  __IO  uint32_t                       FUSES_PLL0_FBDIV;   /**< Offset: 0xF0 (R/W  32) PLL0 FBDIV Settings (BROM_PLLEN must be set) */
-  __IO  uint32_t                       FUSES_PLL0_REFDIV;  /**< Offset: 0xF4 (R/W  32) PLL0 REFDIV Settings (BROM_PLLEN must be set) */
-  __IO  uint32_t                       FUSES_PLL0_POSTDIVA; /**< Offset: 0xF8 (R/W  32) PLL0 POSTDIVA Settings (BROM_PLLEN must be set) */
-  __IO  uint32_t                       FUSES_MCLK_CLKDIV1; /**< Offset: 0xFC (R/W  32) MCLK CLKDIV1 Settings (BROM_PLLEN must be set) */
-  __IO  uint32_t                       FUSES_GCLK_GENCTRL0; /**< Offset: 0x100 (R/W  32) GCLK GENCTRL0 Settings (BROM_PLLEN must be set) */
+  __IO  uint32_t                       FUSES_KEYVAL_TZ1_CE_NS[4]; /* Offset: 0x20 (R/W  32) Chip Erase Key for TZ1_NS */
+  __IO  uint32_t                       FUSES_CELOCK_TZ1_CE_NS[4]; /* Offset: 0x30 (R/W  32) Chip Erase Lock for TZ1_NS */
+  __IO  uint32_t                       FUSES_KEYVAL_TZ1_CE_S[4]; /* Offset: 0x40 (R/W  32) Chip Erase Key for TZ1_S */
+  __IO  uint32_t                       FUSES_CELOCK_TZ1_CE_S[4]; /* Offset: 0x50 (R/W  32) Chip Erase Lock for TZ1_S */
+  __IO  uint32_t                       FUSES_KEYVAL_TZ1_CE_ALL[4]; /* Offset: 0x60 (R/W  32) Chip Erase Key for TZ1_ALL */
+  __IO  uint32_t                       FUSES_CELOCK_TZ1_CE_ALL[4]; /* Offset: 0x70 (R/W  32) Chip Erase Lock for TZ1_ALL */
+  __IO  uint32_t                       FUSES_KEYVAL_TZ0_CE_ALL[4]; /* Offset: 0x80 (R/W  32) Chip Erase Key for TZ0_ALL */
+  __IO  uint32_t                       FUSES_CELOCK_TZ0_CE_ALL[4]; /* Offset: 0x90 (R/W  32) Chip Erase Lock for TZ0_ALL */
+  __IO  uint32_t                       FUSES_KEYVAL_CRCCMD[4]; /* Offset: 0xA0 (R/W  32) CRC Access Key */
+  __IO  uint32_t                       FUSES_KEYCONFIG_CRCCMD[4]; /* Offset: 0xB0 (R/W  32) CRC Access Key Configuration */
+  __IO  uint32_t                       FUSES_KEYVAL_HOSTDALELEV[4]; /* Offset: 0xC0 (R/W  32) Host Authenticated DAL Elevation Key */
+  __IO  uint32_t                       FUSES_KEYCONFIG_HOSTDALELEV[4]; /* Offset: 0xD0 (R/W  32) Host Authenticated DAL Elevation Key Configuration */
+  __IO  uint32_t                       FUSES_ROM_CTRLA;    /* Offset: 0xE0 (R/W  32) ROM CTRLA Settings  (BROM_PLLEN must be set) */
+  __IO  uint32_t                       FUSES_FCR_CTRLA;    /* Offset: 0xE4 (R/W  32) FCR CTRLA Settings (BROM_PLLEN must be set) */
+  __IO  uint32_t                       FUSES_RPMU_VREGCTRL; /* Offset: 0xE8 (R/W  32) RPMU VREGCTRL Settings (BROM_PLLEN must be set) */
+  __IO  uint32_t                       FUSES_PLL0_CTRL;    /* Offset: 0xEC (R/W  32) PLL0 CTRL Settings (BROM_PLLEN must be set) */
+  __IO  uint32_t                       FUSES_PLL0_FBDIV;   /* Offset: 0xF0 (R/W  32) PLL0 FBDIV Settings (BROM_PLLEN must be set) */
+  __IO  uint32_t                       FUSES_PLL0_REFDIV;  /* Offset: 0xF4 (R/W  32) PLL0 REFDIV Settings (BROM_PLLEN must be set) */
+  __IO  uint32_t                       FUSES_PLL0_POSTDIVA; /* Offset: 0xF8 (R/W  32) PLL0 POSTDIVA Settings (BROM_PLLEN must be set) */
+  __IO  uint32_t                       FUSES_MCLK_CLKDIV1; /* Offset: 0xFC (R/W  32) MCLK CLKDIV1 Settings (BROM_PLLEN must be set) */
+  __IO  uint32_t                       FUSES_GCLK_GENCTRL0; /* Offset: 0x100 (R/W  32) GCLK GENCTRL0 Settings (BROM_PLLEN must be set) */
   __I   uint8_t                        Reserved2[0x0C];
-  __IO  uint32_t                       FUSES_BROM_BOOTCFGCRC[4]; /**< Offset: 0x110 (R/W  32) Boot Configuraiton Page CRC */
-  __IO  uint32_t                       FUSES_BROM_PAGEEND; /**< Offset: 0x120 (R/W  32) Page End Marker for Verified Data */
+  __IO  uint32_t                       FUSES_BROM_BOOTCFGCRC[4]; /* Offset: 0x110 (R/W  32) Boot Configuraiton Page CRC */
+  __IO  uint32_t                       FUSES_BROM_PAGEEND; /* Offset: 0x120 (R/W  32) Page End Marker for Verified Data */
 } fuses_bootcfg1_registers_t;
 
-/** \brief FUSES_DALCFG register API structure */
+/* FUSES_DALCFG register API structure */
 typedef struct
 {  /* Defines FUSE parameters */
-  __IO  uint32_t                       FUSES_DAL;          /**< Offset: 0x00 (R/W  32) Debug Access Level */
+  __IO  uint32_t                       FUSES_DAL;          /* Offset: 0x00 (R/W  32) Debug Access Level */
 } fuses_dalcfg_registers_t;
 
-/** \brief FUSES_USERCFG1 register API structure */
+/* FUSES_USERCFG1 register API structure */
 typedef struct
 {  /* Defines FUSE parameters */
-  __IO  uint32_t                       FUSES_FSEQ[8];      /**< Offset: 0x00 (R/W  32) Flash Sequence Number */
-  __IO  uint32_t                       FUSES_AFSEQ[8];     /**< Offset: 0x20 (R/W  32) Alternate Flash Sequence Number */
-  __IO  uint32_t                       FUSES_FUCFG0;       /**< Offset: 0x40 (R/W  32) WDT Configuration */
-  __IO  uint32_t                       FUSES_FUCFG1;       /**< Offset: 0x44 (R/W  32) User Configuration 1 (System Bus Configuration) */
-  __IO  uint32_t                       FUSES_FUCFG2;       /**< Offset: 0x48 (R/W  32) User Configuration 2 (Deep Sleep SMOR Configuration) */
-  __IO  uint32_t                       FUSES_FUCFG3;       /**< Offset: 0x4C (R/W  32) User Configuration 2 (SMOR Configuration) */
+  __IO  uint32_t                       FUSES_FSEQ[8];      /* Offset: 0x00 (R/W  32) Flash Sequence Number */
+  __IO  uint32_t                       FUSES_AFSEQ[8];     /* Offset: 0x20 (R/W  32) Alternate Flash Sequence Number */
+  __IO  uint32_t                       FUSES_FUCFG0;       /* Offset: 0x40 (R/W  32) WDT Configuration */
+  __IO  uint32_t                       FUSES_FUCFG1;       /* Offset: 0x44 (R/W  32) User Configuration 1 (System Bus Configuration) */
+  __IO  uint32_t                       FUSES_FUCFG2;       /* Offset: 0x48 (R/W  32) User Configuration 2 (Deep Sleep SMOR Configuration) */
+  __IO  uint32_t                       FUSES_FUCFG3;       /* Offset: 0x4C (R/W  32) User Configuration 2 (SMOR Configuration) */
   __I   uint8_t                        Reserved1[0x04];
-  __IO  uint32_t                       FUSES_FUCFG5;       /**< Offset: 0x54 (R/W  32) User Configuration 5 (VREG Charge Pump Configuration) */
-  __IO  uint32_t                       FUSES_FUCFG6;       /**< Offset: 0x58 (R/W  32) User Configuration 6 (FCR ECCCTRL Configuration) */
-  __IO  uint32_t                       FUSES_FUCFG7;       /**< Offset: 0x5C (R/W  32) User Configuration 7 (FCR CTRLB Configuration) */
-  __IO  uint32_t                       FUSES_FUCFG8;       /**< Offset: 0x60 (R/W  32) User Configuration 8 (FCW CWP Configuration) */
-  __IO  uint32_t                       FUSES_FUCFG9;       /**< Offset: 0x64 (R/W  32) User Configuration 9 (RAM BISR and ECC Configuraiton) */
+  __IO  uint32_t                       FUSES_FUCFG5;       /* Offset: 0x54 (R/W  32) User Configuration 5 (VREG Charge Pump Configuration) */
+  __IO  uint32_t                       FUSES_FUCFG6;       /* Offset: 0x58 (R/W  32) User Configuration 6 (FCR ECCCTRL Configuration) */
+  __IO  uint32_t                       FUSES_FUCFG7;       /* Offset: 0x5C (R/W  32) User Configuration 7 (FCR CTRLB Configuration) */
+  __IO  uint32_t                       FUSES_FUCFG8;       /* Offset: 0x60 (R/W  32) User Configuration 8 (FCW CWP Configuration) */
+  __IO  uint32_t                       FUSES_FUCFG9;       /* Offset: 0x64 (R/W  32) User Configuration 9 (RAM BISR and ECC Configuraiton) */
 } fuses_usercfg1_registers_t;
 
-/** \brief FUSES_CALOTP register API structure */
+/* FUSES_CALOTP register API structure */
 typedef struct
 {  /* Defines FUSE parameters */
   __I   uint8_t                        Reserved1[0x180];
-  __I   uint32_t                       FUSES_FCCFG64;      /**< Offset: 0x180 (R/   32) PTC Calibration */
-  __I   uint32_t                       FUSES_FCCFG65;      /**< Offset: 0x184 (R/   32) ADC Calibration */
-  __I   uint32_t                       FUSES_FCCFG66;      /**< Offset: 0x188 (R/   32) Comparator Calibration */
+  __I   uint32_t                       FUSES_FCCFG64;      /* Offset: 0x180 (R/   32) PTC Calibration */
+  __I   uint32_t                       FUSES_FCCFG65;      /* Offset: 0x184 (R/   32) ADC Calibration */
+  __I   uint32_t                       FUSES_FCCFG66;      /* Offset: 0x188 (R/   32) Comparator Calibration */
   __I   uint8_t                        Reserved2[0x08];
-  __I   uint32_t                       FUSES_FCCFG69;      /**< Offset: 0x194 (R/   32) Temperature  calibration values 0 */
-  __I   uint32_t                       FUSES_FCCFG70;      /**< Offset: 0x198 (R/   32) Temperature  calibration values 1 */
-  __I   uint32_t                       FUSES_FCCFG71;      /**< Offset: 0x19C (R/   32) Temperature  calibration values 2 */
-  __I   uint32_t                       FUSES_FCCFG72;      /**< Offset: 0x1A0 (R/   32) MAC ID (31 through 0) */
-  __I   uint32_t                       FUSES_FCCFG73;      /**< Offset: 0x1A4 (R/   32) MAC ID (47 through 32) */
+  __I   uint32_t                       FUSES_FCCFG69;      /* Offset: 0x194 (R/   32) Temperature  calibration values 0 */
+  __I   uint32_t                       FUSES_FCCFG70;      /* Offset: 0x198 (R/   32) Temperature  calibration values 1 */
+  __I   uint32_t                       FUSES_FCCFG71;      /* Offset: 0x19C (R/   32) Temperature  calibration values 2 */
+  __I   uint32_t                       FUSES_FCCFG72;      /* Offset: 0x1A0 (R/   32) MAC ID (31 through 0) */
+  __I   uint32_t                       FUSES_FCCFG73;      /* Offset: 0x1A4 (R/   32) MAC ID (47 through 32) */
 } fuses_calotp_registers_t;
 
 

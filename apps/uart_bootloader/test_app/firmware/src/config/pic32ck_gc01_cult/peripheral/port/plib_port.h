@@ -176,6 +176,9 @@ typedef enum
     /* PA09 pin */
     PORT_PIN_PA09 = 9U,
 
+    /* PA10 pin */
+    PORT_PIN_PA10 = 10U,
+
     /* PA11 pin */
     PORT_PIN_PA11 = 11U,
 
@@ -229,6 +232,9 @@ typedef enum
 
     /* PB00 pin */
     PORT_PIN_PB00 = 32U,
+
+    /* PB01 pin */
+    PORT_PIN_PB01 = 33U,
 
     /* PB02 pin */
     PORT_PIN_PB02 = 34U,
@@ -400,12 +406,6 @@ typedef enum
 
     /* PD02 pin */
     PORT_PIN_PD02 = 98U,
-
-    /* PD03 pin */
-    PORT_PIN_PD03 = 99U,
-
-    /* PD04 pin */
-    PORT_PIN_PD04 = 100U,
 
     /* PD05 pin */
     PORT_PIN_PD05 = 101U,

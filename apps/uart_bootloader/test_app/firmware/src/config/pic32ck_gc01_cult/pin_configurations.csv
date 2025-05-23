@@ -24,9 +24,11 @@ Pin Number,Pin ID,Custom Name,Function,Mode, Direction,Latch,Pull Up,Pull Down,O
 28,PA18,,Available,,,,,,No,FAST
 29,PA28,,Available,,,,,,No,FAST
 33,PA09,,Available,,,,,,No,FAST
+34,PA10,,Available,,,,,,No,FAST
 35,PA11,,Available,,,,,,No,FAST
 36,PA12,,Available,,,,,,No,FAST
 37,PB00,,Available,,,,,,No,FAST
+38,PB01,,Available,,,,,,No,FAST
 39,PB11,,Available,,,,,,No,FAST
 40,PB12,,Available,,,,,,No,FAST
 41,PB18,,Available,,,,,,No,FAST
@@ -84,8 +86,6 @@ Pin Number,Pin ID,Custom Name,Function,Mode, Direction,Latch,Pull Up,Pull Down,O
 119,PD00,,Available,,,,,,No,FAST
 120,PD01,,Available,,,,,,No,FAST
 121,PD02,SW1,SWITCH_AL,Digital,In,n/a,Yes,No,No,FAST
-122,PD03,,Available,,,,,,No,FAST
-123,PD04,,Available,,,,,,No,FAST
 124,PD13,,Available,,,,,,No,FAST
 125,PD14,,Available,,,,,,No,FAST
 126,PD15,,Available,,,,,,No,FAST

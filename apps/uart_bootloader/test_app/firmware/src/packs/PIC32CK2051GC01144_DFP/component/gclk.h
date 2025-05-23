@@ -1,31 +1,28 @@
 /*
  * Component description for GCLK
  *
- * Copyright (c) 2023 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2024 Microchip Technology Inc. and its subsidiaries.
  *
- * Subject to your compliance with these terms, you may use Microchip software and any derivatives
- * exclusively with Microchip products. It is your responsibility to comply with third party license
- * terms applicable to your use of third party software (including open source software) that may
- * accompany Microchip software.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
  *
- * THIS SOFTWARE IS SUPPLIED BY MICROCHIP "AS IS". NO WARRANTIES, WHETHER EXPRESS, IMPLIED OR STATUTORY,
- * APPLY TO THIS SOFTWARE, INCLUDING ANY IMPLIED WARRANTIES OF NON-INFRINGEMENT, MERCHANTABILITY, AND
- * FITNESS FOR A PARTICULAR PURPOSE.
+ *   http://www.apache.org/licenses/LICENSE-2.0
  *
- * IN NO EVENT WILL MICROCHIP BE LIABLE FOR ANY INDIRECT, SPECIAL, PUNITIVE, INCIDENTAL OR CONSEQUENTIAL
- * LOSS, DAMAGE, COST OR EXPENSE OF ANY KIND WHATSOEVER RELATED TO THE SOFTWARE, HOWEVER CAUSED, EVEN IF
- * MICROCHIP HAS BEEN ADVISED OF THE POSSIBILITY OR THE DAMAGES ARE FORESEEABLE. TO THE FULLEST EXTENT
- * ALLOWED BY LAW, MICROCHIP'S TOTAL LIABILITY ON ALL CLAIMS IN ANY WAY RELATED TO THIS SOFTWARE WILL NOT
- * EXCEED THE AMOUNT OF FEES, IF ANY, THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
  *
  */
 
-/* file generated from device description version 2023-04-05T13:26:38Z */
+/*  file generated from device description file (ATDF) version 2024-04-02T09:16:01Z  */
 #ifndef _PIC32CKGC01_GCLK_COMPONENT_H_
 #define _PIC32CKGC01_GCLK_COMPONENT_H_
 
 /* ************************************************************************** */
-/*   SOFTWARE API DEFINITION FOR GCLK                                         */
+/*                      SOFTWARE API DEFINITION FOR GCLK                      */
 /* ************************************************************************** */
 
 /* -------- GCLK_CTRLA : (GCLK Offset: 0x00) (R/W 8) Control -------- */
@@ -33,7 +30,7 @@
 
 #define GCLK_CTRLA_SWRST_Pos                  _UINT8_(0)                                           /* (GCLK_CTRLA) Software Reset Position */
 #define GCLK_CTRLA_SWRST_Msk                  (_UINT8_(0x1) << GCLK_CTRLA_SWRST_Pos)               /* (GCLK_CTRLA) Software Reset Mask */
-#define GCLK_CTRLA_SWRST(value)               (GCLK_CTRLA_SWRST_Msk & (_UINT8_(value) << GCLK_CTRLA_SWRST_Pos)) /* Assigment of value for SWRST in the GCLK_CTRLA register */
+#define GCLK_CTRLA_SWRST(value)               (GCLK_CTRLA_SWRST_Msk & (_UINT8_(value) << GCLK_CTRLA_SWRST_Pos)) /* Assignment of value for SWRST in the GCLK_CTRLA register */
 #define GCLK_CTRLA_Msk                        _UINT8_(0x01)                                        /* (GCLK_CTRLA) Register Mask  */
 
 
@@ -42,43 +39,43 @@
 
 #define GCLK_SYNCBUSY_SWRST_Pos               _UINT32_(0)                                          /* (GCLK_SYNCBUSY) Software Reset Synchronization Busy bit Position */
 #define GCLK_SYNCBUSY_SWRST_Msk               (_UINT32_(0x1) << GCLK_SYNCBUSY_SWRST_Pos)           /* (GCLK_SYNCBUSY) Software Reset Synchronization Busy bit Mask */
-#define GCLK_SYNCBUSY_SWRST(value)            (GCLK_SYNCBUSY_SWRST_Msk & (_UINT32_(value) << GCLK_SYNCBUSY_SWRST_Pos)) /* Assigment of value for SWRST in the GCLK_SYNCBUSY register */
+#define GCLK_SYNCBUSY_SWRST(value)            (GCLK_SYNCBUSY_SWRST_Msk & (_UINT32_(value) << GCLK_SYNCBUSY_SWRST_Pos)) /* Assignment of value for SWRST in the GCLK_SYNCBUSY register */
 #define GCLK_SYNCBUSY_GENCTRL0_Pos            _UINT32_(2)                                          /* (GCLK_SYNCBUSY) Generic Clock Generator Control 0 Synchronization Busy bit Position */
 #define GCLK_SYNCBUSY_GENCTRL0_Msk            (_UINT32_(0x1) << GCLK_SYNCBUSY_GENCTRL0_Pos)        /* (GCLK_SYNCBUSY) Generic Clock Generator Control 0 Synchronization Busy bit Mask */
-#define GCLK_SYNCBUSY_GENCTRL0(value)         (GCLK_SYNCBUSY_GENCTRL0_Msk & (_UINT32_(value) << GCLK_SYNCBUSY_GENCTRL0_Pos)) /* Assigment of value for GENCTRL0 in the GCLK_SYNCBUSY register */
+#define GCLK_SYNCBUSY_GENCTRL0(value)         (GCLK_SYNCBUSY_GENCTRL0_Msk & (_UINT32_(value) << GCLK_SYNCBUSY_GENCTRL0_Pos)) /* Assignment of value for GENCTRL0 in the GCLK_SYNCBUSY register */
 #define GCLK_SYNCBUSY_GENCTRL1_Pos            _UINT32_(3)                                          /* (GCLK_SYNCBUSY) Generic Clock Generator Control 1 Synchronization Busy bit Position */
 #define GCLK_SYNCBUSY_GENCTRL1_Msk            (_UINT32_(0x1) << GCLK_SYNCBUSY_GENCTRL1_Pos)        /* (GCLK_SYNCBUSY) Generic Clock Generator Control 1 Synchronization Busy bit Mask */
-#define GCLK_SYNCBUSY_GENCTRL1(value)         (GCLK_SYNCBUSY_GENCTRL1_Msk & (_UINT32_(value) << GCLK_SYNCBUSY_GENCTRL1_Pos)) /* Assigment of value for GENCTRL1 in the GCLK_SYNCBUSY register */
+#define GCLK_SYNCBUSY_GENCTRL1(value)         (GCLK_SYNCBUSY_GENCTRL1_Msk & (_UINT32_(value) << GCLK_SYNCBUSY_GENCTRL1_Pos)) /* Assignment of value for GENCTRL1 in the GCLK_SYNCBUSY register */
 #define GCLK_SYNCBUSY_GENCTRL2_Pos            _UINT32_(4)                                          /* (GCLK_SYNCBUSY) Generic Clock Generator Control 2 Synchronization Busy bit Position */
 #define GCLK_SYNCBUSY_GENCTRL2_Msk            (_UINT32_(0x1) << GCLK_SYNCBUSY_GENCTRL2_Pos)        /* (GCLK_SYNCBUSY) Generic Clock Generator Control 2 Synchronization Busy bit Mask */
-#define GCLK_SYNCBUSY_GENCTRL2(value)         (GCLK_SYNCBUSY_GENCTRL2_Msk & (_UINT32_(value) << GCLK_SYNCBUSY_GENCTRL2_Pos)) /* Assigment of value for GENCTRL2 in the GCLK_SYNCBUSY register */
+#define GCLK_SYNCBUSY_GENCTRL2(value)         (GCLK_SYNCBUSY_GENCTRL2_Msk & (_UINT32_(value) << GCLK_SYNCBUSY_GENCTRL2_Pos)) /* Assignment of value for GENCTRL2 in the GCLK_SYNCBUSY register */
 #define GCLK_SYNCBUSY_GENCTRL3_Pos            _UINT32_(5)                                          /* (GCLK_SYNCBUSY) Generic Clock Generator Control 3 Synchronization Busy bit Position */
 #define GCLK_SYNCBUSY_GENCTRL3_Msk            (_UINT32_(0x1) << GCLK_SYNCBUSY_GENCTRL3_Pos)        /* (GCLK_SYNCBUSY) Generic Clock Generator Control 3 Synchronization Busy bit Mask */
-#define GCLK_SYNCBUSY_GENCTRL3(value)         (GCLK_SYNCBUSY_GENCTRL3_Msk & (_UINT32_(value) << GCLK_SYNCBUSY_GENCTRL3_Pos)) /* Assigment of value for GENCTRL3 in the GCLK_SYNCBUSY register */
+#define GCLK_SYNCBUSY_GENCTRL3(value)         (GCLK_SYNCBUSY_GENCTRL3_Msk & (_UINT32_(value) << GCLK_SYNCBUSY_GENCTRL3_Pos)) /* Assignment of value for GENCTRL3 in the GCLK_SYNCBUSY register */
 #define GCLK_SYNCBUSY_GENCTRL4_Pos            _UINT32_(6)                                          /* (GCLK_SYNCBUSY) Generic Clock Generator Control 4 Synchronization Busy bit Position */
 #define GCLK_SYNCBUSY_GENCTRL4_Msk            (_UINT32_(0x1) << GCLK_SYNCBUSY_GENCTRL4_Pos)        /* (GCLK_SYNCBUSY) Generic Clock Generator Control 4 Synchronization Busy bit Mask */
-#define GCLK_SYNCBUSY_GENCTRL4(value)         (GCLK_SYNCBUSY_GENCTRL4_Msk & (_UINT32_(value) << GCLK_SYNCBUSY_GENCTRL4_Pos)) /* Assigment of value for GENCTRL4 in the GCLK_SYNCBUSY register */
+#define GCLK_SYNCBUSY_GENCTRL4(value)         (GCLK_SYNCBUSY_GENCTRL4_Msk & (_UINT32_(value) << GCLK_SYNCBUSY_GENCTRL4_Pos)) /* Assignment of value for GENCTRL4 in the GCLK_SYNCBUSY register */
 #define GCLK_SYNCBUSY_GENCTRL5_Pos            _UINT32_(7)                                          /* (GCLK_SYNCBUSY) Generic Clock Generator Control 5 Synchronization Busy bit Position */
 #define GCLK_SYNCBUSY_GENCTRL5_Msk            (_UINT32_(0x1) << GCLK_SYNCBUSY_GENCTRL5_Pos)        /* (GCLK_SYNCBUSY) Generic Clock Generator Control 5 Synchronization Busy bit Mask */
-#define GCLK_SYNCBUSY_GENCTRL5(value)         (GCLK_SYNCBUSY_GENCTRL5_Msk & (_UINT32_(value) << GCLK_SYNCBUSY_GENCTRL5_Pos)) /* Assigment of value for GENCTRL5 in the GCLK_SYNCBUSY register */
+#define GCLK_SYNCBUSY_GENCTRL5(value)         (GCLK_SYNCBUSY_GENCTRL5_Msk & (_UINT32_(value) << GCLK_SYNCBUSY_GENCTRL5_Pos)) /* Assignment of value for GENCTRL5 in the GCLK_SYNCBUSY register */
 #define GCLK_SYNCBUSY_GENCTRL6_Pos            _UINT32_(8)                                          /* (GCLK_SYNCBUSY) Generic Clock Generator Control 6 Synchronization Busy bit Position */
 #define GCLK_SYNCBUSY_GENCTRL6_Msk            (_UINT32_(0x1) << GCLK_SYNCBUSY_GENCTRL6_Pos)        /* (GCLK_SYNCBUSY) Generic Clock Generator Control 6 Synchronization Busy bit Mask */
-#define GCLK_SYNCBUSY_GENCTRL6(value)         (GCLK_SYNCBUSY_GENCTRL6_Msk & (_UINT32_(value) << GCLK_SYNCBUSY_GENCTRL6_Pos)) /* Assigment of value for GENCTRL6 in the GCLK_SYNCBUSY register */
+#define GCLK_SYNCBUSY_GENCTRL6(value)         (GCLK_SYNCBUSY_GENCTRL6_Msk & (_UINT32_(value) << GCLK_SYNCBUSY_GENCTRL6_Pos)) /* Assignment of value for GENCTRL6 in the GCLK_SYNCBUSY register */
 #define GCLK_SYNCBUSY_GENCTRL7_Pos            _UINT32_(9)                                          /* (GCLK_SYNCBUSY) Generic Clock Generator Control 7 Synchronization Busy bit Position */
 #define GCLK_SYNCBUSY_GENCTRL7_Msk            (_UINT32_(0x1) << GCLK_SYNCBUSY_GENCTRL7_Pos)        /* (GCLK_SYNCBUSY) Generic Clock Generator Control 7 Synchronization Busy bit Mask */
-#define GCLK_SYNCBUSY_GENCTRL7(value)         (GCLK_SYNCBUSY_GENCTRL7_Msk & (_UINT32_(value) << GCLK_SYNCBUSY_GENCTRL7_Pos)) /* Assigment of value for GENCTRL7 in the GCLK_SYNCBUSY register */
+#define GCLK_SYNCBUSY_GENCTRL7(value)         (GCLK_SYNCBUSY_GENCTRL7_Msk & (_UINT32_(value) << GCLK_SYNCBUSY_GENCTRL7_Pos)) /* Assignment of value for GENCTRL7 in the GCLK_SYNCBUSY register */
 #define GCLK_SYNCBUSY_GENCTRL8_Pos            _UINT32_(10)                                         /* (GCLK_SYNCBUSY) Generic Clock Generator Control 8 Synchronization Busy bit Position */
 #define GCLK_SYNCBUSY_GENCTRL8_Msk            (_UINT32_(0x1) << GCLK_SYNCBUSY_GENCTRL8_Pos)        /* (GCLK_SYNCBUSY) Generic Clock Generator Control 8 Synchronization Busy bit Mask */
-#define GCLK_SYNCBUSY_GENCTRL8(value)         (GCLK_SYNCBUSY_GENCTRL8_Msk & (_UINT32_(value) << GCLK_SYNCBUSY_GENCTRL8_Pos)) /* Assigment of value for GENCTRL8 in the GCLK_SYNCBUSY register */
+#define GCLK_SYNCBUSY_GENCTRL8(value)         (GCLK_SYNCBUSY_GENCTRL8_Msk & (_UINT32_(value) << GCLK_SYNCBUSY_GENCTRL8_Pos)) /* Assignment of value for GENCTRL8 in the GCLK_SYNCBUSY register */
 #define GCLK_SYNCBUSY_GENCTRL9_Pos            _UINT32_(11)                                         /* (GCLK_SYNCBUSY) Generic Clock Generator Control 9 Synchronization Busy bit Position */
 #define GCLK_SYNCBUSY_GENCTRL9_Msk            (_UINT32_(0x1) << GCLK_SYNCBUSY_GENCTRL9_Pos)        /* (GCLK_SYNCBUSY) Generic Clock Generator Control 9 Synchronization Busy bit Mask */
-#define GCLK_SYNCBUSY_GENCTRL9(value)         (GCLK_SYNCBUSY_GENCTRL9_Msk & (_UINT32_(value) << GCLK_SYNCBUSY_GENCTRL9_Pos)) /* Assigment of value for GENCTRL9 in the GCLK_SYNCBUSY register */
+#define GCLK_SYNCBUSY_GENCTRL9(value)         (GCLK_SYNCBUSY_GENCTRL9_Msk & (_UINT32_(value) << GCLK_SYNCBUSY_GENCTRL9_Pos)) /* Assignment of value for GENCTRL9 in the GCLK_SYNCBUSY register */
 #define GCLK_SYNCBUSY_GENCTRL10_Pos           _UINT32_(12)                                         /* (GCLK_SYNCBUSY) Generic Clock Generator Control 10 Synchronization Busy bit Position */
 #define GCLK_SYNCBUSY_GENCTRL10_Msk           (_UINT32_(0x1) << GCLK_SYNCBUSY_GENCTRL10_Pos)       /* (GCLK_SYNCBUSY) Generic Clock Generator Control 10 Synchronization Busy bit Mask */
-#define GCLK_SYNCBUSY_GENCTRL10(value)        (GCLK_SYNCBUSY_GENCTRL10_Msk & (_UINT32_(value) << GCLK_SYNCBUSY_GENCTRL10_Pos)) /* Assigment of value for GENCTRL10 in the GCLK_SYNCBUSY register */
+#define GCLK_SYNCBUSY_GENCTRL10(value)        (GCLK_SYNCBUSY_GENCTRL10_Msk & (_UINT32_(value) << GCLK_SYNCBUSY_GENCTRL10_Pos)) /* Assignment of value for GENCTRL10 in the GCLK_SYNCBUSY register */
 #define GCLK_SYNCBUSY_GENCTRL11_Pos           _UINT32_(13)                                         /* (GCLK_SYNCBUSY) Generic Clock Generator Control 11 Synchronization Busy bit Position */
 #define GCLK_SYNCBUSY_GENCTRL11_Msk           (_UINT32_(0x1) << GCLK_SYNCBUSY_GENCTRL11_Pos)       /* (GCLK_SYNCBUSY) Generic Clock Generator Control 11 Synchronization Busy bit Mask */
-#define GCLK_SYNCBUSY_GENCTRL11(value)        (GCLK_SYNCBUSY_GENCTRL11_Msk & (_UINT32_(value) << GCLK_SYNCBUSY_GENCTRL11_Pos)) /* Assigment of value for GENCTRL11 in the GCLK_SYNCBUSY register */
+#define GCLK_SYNCBUSY_GENCTRL11(value)        (GCLK_SYNCBUSY_GENCTRL11_Msk & (_UINT32_(value) << GCLK_SYNCBUSY_GENCTRL11_Pos)) /* Assignment of value for GENCTRL11 in the GCLK_SYNCBUSY register */
 #define GCLK_SYNCBUSY_Msk                     _UINT32_(0x00003FFD)                                 /* (GCLK_SYNCBUSY) Register Mask  */
 
 #define GCLK_SYNCBUSY_GENCTRL_Pos             _UINT32_(2)                                          /* (GCLK_SYNCBUSY Position) Generic Clock Generator Control xx Synchronization Busy bit */
@@ -90,7 +87,7 @@
 
 #define GCLK_GENCTRL_SRC_Pos                  _UINT32_(0)                                          /* (GCLK_GENCTRL) Source Select Position */
 #define GCLK_GENCTRL_SRC_Msk                  (_UINT32_(0xF) << GCLK_GENCTRL_SRC_Pos)              /* (GCLK_GENCTRL) Source Select Mask */
-#define GCLK_GENCTRL_SRC(value)               (GCLK_GENCTRL_SRC_Msk & (_UINT32_(value) << GCLK_GENCTRL_SRC_Pos)) /* Assigment of value for SRC in the GCLK_GENCTRL register */
+#define GCLK_GENCTRL_SRC(value)               (GCLK_GENCTRL_SRC_Msk & (_UINT32_(value) << GCLK_GENCTRL_SRC_Pos)) /* Assignment of value for SRC in the GCLK_GENCTRL register */
 #define   GCLK_GENCTRL_SRC_XOSC_Val           _UINT32_(0x0)                                        /* (GCLK_GENCTRL) XOSC0 oscillator output  */
 #define   GCLK_GENCTRL_SRC_GCLKIN_Val         _UINT32_(0x1)                                        /* (GCLK_GENCTRL) Generator input pad  */
 #define   GCLK_GENCTRL_SRC_GCLKGEN1_Val       _UINT32_(0x2)                                        /* (GCLK_GENCTRL) Generic clock generator 1 output  */
@@ -103,43 +100,43 @@
 #define   GCLK_GENCTRL_SRC_PLL0_3_Val         _UINT32_(0x9)                                        /* (GCLK_GENCTRL) PLL0 output 3  */
 #define   GCLK_GENCTRL_SRC_PLL0_4_Val         _UINT32_(0xA)                                        /* (GCLK_GENCTRL) PLL0 output 4  */
 #define   GCLK_GENCTRL_SRC_PLL0_5_Val         _UINT32_(0xB)                                        /* (GCLK_GENCTRL) PLL0 output 5  */
-#define GCLK_GENCTRL_SRC_XOSC                 (GCLK_GENCTRL_SRC_XOSC_Val << GCLK_GENCTRL_SRC_Pos)  /* (GCLK_GENCTRL) XOSC0 oscillator output Position  */
-#define GCLK_GENCTRL_SRC_GCLKIN               (GCLK_GENCTRL_SRC_GCLKIN_Val << GCLK_GENCTRL_SRC_Pos) /* (GCLK_GENCTRL) Generator input pad Position  */
-#define GCLK_GENCTRL_SRC_GCLKGEN1             (GCLK_GENCTRL_SRC_GCLKGEN1_Val << GCLK_GENCTRL_SRC_Pos) /* (GCLK_GENCTRL) Generic clock generator 1 output Position  */
-#define GCLK_GENCTRL_SRC_OSCULP32K            (GCLK_GENCTRL_SRC_OSCULP32K_Val << GCLK_GENCTRL_SRC_Pos) /* (GCLK_GENCTRL) OSCULP32K oscillator output Position  */
-#define GCLK_GENCTRL_SRC_XOSC32K              (GCLK_GENCTRL_SRC_XOSC32K_Val << GCLK_GENCTRL_SRC_Pos) /* (GCLK_GENCTRL) XOSC32K oscillator output Position  */
-#define GCLK_GENCTRL_SRC_DFLL                 (GCLK_GENCTRL_SRC_DFLL_Val << GCLK_GENCTRL_SRC_Pos)  /* (GCLK_GENCTRL) DFLL output Position  */
-#define GCLK_GENCTRL_SRC_PLL0_0               (GCLK_GENCTRL_SRC_PLL0_0_Val << GCLK_GENCTRL_SRC_Pos) /* (GCLK_GENCTRL) Frac Divider PLL0 output 0 Position  */
-#define GCLK_GENCTRL_SRC_PLL0_1               (GCLK_GENCTRL_SRC_PLL0_1_Val << GCLK_GENCTRL_SRC_Pos) /* (GCLK_GENCTRL) PLL0 output 1 Position  */
-#define GCLK_GENCTRL_SRC_PLL0_2               (GCLK_GENCTRL_SRC_PLL0_2_Val << GCLK_GENCTRL_SRC_Pos) /* (GCLK_GENCTRL) PLL0 output 2 Position  */
-#define GCLK_GENCTRL_SRC_PLL0_3               (GCLK_GENCTRL_SRC_PLL0_3_Val << GCLK_GENCTRL_SRC_Pos) /* (GCLK_GENCTRL) PLL0 output 3 Position  */
-#define GCLK_GENCTRL_SRC_PLL0_4               (GCLK_GENCTRL_SRC_PLL0_4_Val << GCLK_GENCTRL_SRC_Pos) /* (GCLK_GENCTRL) PLL0 output 4 Position  */
-#define GCLK_GENCTRL_SRC_PLL0_5               (GCLK_GENCTRL_SRC_PLL0_5_Val << GCLK_GENCTRL_SRC_Pos) /* (GCLK_GENCTRL) PLL0 output 5 Position  */
+#define GCLK_GENCTRL_SRC_XOSC                 (GCLK_GENCTRL_SRC_XOSC_Val << GCLK_GENCTRL_SRC_Pos)  /* (GCLK_GENCTRL) XOSC0 oscillator output Position */
+#define GCLK_GENCTRL_SRC_GCLKIN               (GCLK_GENCTRL_SRC_GCLKIN_Val << GCLK_GENCTRL_SRC_Pos) /* (GCLK_GENCTRL) Generator input pad Position */
+#define GCLK_GENCTRL_SRC_GCLKGEN1             (GCLK_GENCTRL_SRC_GCLKGEN1_Val << GCLK_GENCTRL_SRC_Pos) /* (GCLK_GENCTRL) Generic clock generator 1 output Position */
+#define GCLK_GENCTRL_SRC_OSCULP32K            (GCLK_GENCTRL_SRC_OSCULP32K_Val << GCLK_GENCTRL_SRC_Pos) /* (GCLK_GENCTRL) OSCULP32K oscillator output Position */
+#define GCLK_GENCTRL_SRC_XOSC32K              (GCLK_GENCTRL_SRC_XOSC32K_Val << GCLK_GENCTRL_SRC_Pos) /* (GCLK_GENCTRL) XOSC32K oscillator output Position */
+#define GCLK_GENCTRL_SRC_DFLL                 (GCLK_GENCTRL_SRC_DFLL_Val << GCLK_GENCTRL_SRC_Pos)  /* (GCLK_GENCTRL) DFLL output Position */
+#define GCLK_GENCTRL_SRC_PLL0_0               (GCLK_GENCTRL_SRC_PLL0_0_Val << GCLK_GENCTRL_SRC_Pos) /* (GCLK_GENCTRL) Frac Divider PLL0 output 0 Position */
+#define GCLK_GENCTRL_SRC_PLL0_1               (GCLK_GENCTRL_SRC_PLL0_1_Val << GCLK_GENCTRL_SRC_Pos) /* (GCLK_GENCTRL) PLL0 output 1 Position */
+#define GCLK_GENCTRL_SRC_PLL0_2               (GCLK_GENCTRL_SRC_PLL0_2_Val << GCLK_GENCTRL_SRC_Pos) /* (GCLK_GENCTRL) PLL0 output 2 Position */
+#define GCLK_GENCTRL_SRC_PLL0_3               (GCLK_GENCTRL_SRC_PLL0_3_Val << GCLK_GENCTRL_SRC_Pos) /* (GCLK_GENCTRL) PLL0 output 3 Position */
+#define GCLK_GENCTRL_SRC_PLL0_4               (GCLK_GENCTRL_SRC_PLL0_4_Val << GCLK_GENCTRL_SRC_Pos) /* (GCLK_GENCTRL) PLL0 output 4 Position */
+#define GCLK_GENCTRL_SRC_PLL0_5               (GCLK_GENCTRL_SRC_PLL0_5_Val << GCLK_GENCTRL_SRC_Pos) /* (GCLK_GENCTRL) PLL0 output 5 Position */
 #define GCLK_GENCTRL_GENEN_Pos                _UINT32_(8)                                          /* (GCLK_GENCTRL) Generic Clock Generator Enable Position */
 #define GCLK_GENCTRL_GENEN_Msk                (_UINT32_(0x1) << GCLK_GENCTRL_GENEN_Pos)            /* (GCLK_GENCTRL) Generic Clock Generator Enable Mask */
-#define GCLK_GENCTRL_GENEN(value)             (GCLK_GENCTRL_GENEN_Msk & (_UINT32_(value) << GCLK_GENCTRL_GENEN_Pos)) /* Assigment of value for GENEN in the GCLK_GENCTRL register */
+#define GCLK_GENCTRL_GENEN(value)             (GCLK_GENCTRL_GENEN_Msk & (_UINT32_(value) << GCLK_GENCTRL_GENEN_Pos)) /* Assignment of value for GENEN in the GCLK_GENCTRL register */
 #define GCLK_GENCTRL_IDC_Pos                  _UINT32_(9)                                          /* (GCLK_GENCTRL) Improve Duty Cycle Position */
 #define GCLK_GENCTRL_IDC_Msk                  (_UINT32_(0x1) << GCLK_GENCTRL_IDC_Pos)              /* (GCLK_GENCTRL) Improve Duty Cycle Mask */
-#define GCLK_GENCTRL_IDC(value)               (GCLK_GENCTRL_IDC_Msk & (_UINT32_(value) << GCLK_GENCTRL_IDC_Pos)) /* Assigment of value for IDC in the GCLK_GENCTRL register */
+#define GCLK_GENCTRL_IDC(value)               (GCLK_GENCTRL_IDC_Msk & (_UINT32_(value) << GCLK_GENCTRL_IDC_Pos)) /* Assignment of value for IDC in the GCLK_GENCTRL register */
 #define GCLK_GENCTRL_OOV_Pos                  _UINT32_(10)                                         /* (GCLK_GENCTRL) Output Off Value Position */
 #define GCLK_GENCTRL_OOV_Msk                  (_UINT32_(0x1) << GCLK_GENCTRL_OOV_Pos)              /* (GCLK_GENCTRL) Output Off Value Mask */
-#define GCLK_GENCTRL_OOV(value)               (GCLK_GENCTRL_OOV_Msk & (_UINT32_(value) << GCLK_GENCTRL_OOV_Pos)) /* Assigment of value for OOV in the GCLK_GENCTRL register */
+#define GCLK_GENCTRL_OOV(value)               (GCLK_GENCTRL_OOV_Msk & (_UINT32_(value) << GCLK_GENCTRL_OOV_Pos)) /* Assignment of value for OOV in the GCLK_GENCTRL register */
 #define GCLK_GENCTRL_OE_Pos                   _UINT32_(11)                                         /* (GCLK_GENCTRL) Output Enable Position */
 #define GCLK_GENCTRL_OE_Msk                   (_UINT32_(0x1) << GCLK_GENCTRL_OE_Pos)               /* (GCLK_GENCTRL) Output Enable Mask */
-#define GCLK_GENCTRL_OE(value)                (GCLK_GENCTRL_OE_Msk & (_UINT32_(value) << GCLK_GENCTRL_OE_Pos)) /* Assigment of value for OE in the GCLK_GENCTRL register */
+#define GCLK_GENCTRL_OE(value)                (GCLK_GENCTRL_OE_Msk & (_UINT32_(value) << GCLK_GENCTRL_OE_Pos)) /* Assignment of value for OE in the GCLK_GENCTRL register */
 #define GCLK_GENCTRL_DIVSEL_Pos               _UINT32_(12)                                         /* (GCLK_GENCTRL) Divide Selection Position */
 #define GCLK_GENCTRL_DIVSEL_Msk               (_UINT32_(0x1) << GCLK_GENCTRL_DIVSEL_Pos)           /* (GCLK_GENCTRL) Divide Selection Mask */
-#define GCLK_GENCTRL_DIVSEL(value)            (GCLK_GENCTRL_DIVSEL_Msk & (_UINT32_(value) << GCLK_GENCTRL_DIVSEL_Pos)) /* Assigment of value for DIVSEL in the GCLK_GENCTRL register */
+#define GCLK_GENCTRL_DIVSEL(value)            (GCLK_GENCTRL_DIVSEL_Msk & (_UINT32_(value) << GCLK_GENCTRL_DIVSEL_Pos)) /* Assignment of value for DIVSEL in the GCLK_GENCTRL register */
 #define   GCLK_GENCTRL_DIVSEL_DIV1_Val        _UINT32_(0x0)                                        /* (GCLK_GENCTRL) Divide input directly by divider factor  */
 #define   GCLK_GENCTRL_DIVSEL_DIV2_Val        _UINT32_(0x1)                                        /* (GCLK_GENCTRL) Divide input by 2^(divider factor+ 1)  */
-#define GCLK_GENCTRL_DIVSEL_DIV1              (GCLK_GENCTRL_DIVSEL_DIV1_Val << GCLK_GENCTRL_DIVSEL_Pos) /* (GCLK_GENCTRL) Divide input directly by divider factor Position  */
-#define GCLK_GENCTRL_DIVSEL_DIV2              (GCLK_GENCTRL_DIVSEL_DIV2_Val << GCLK_GENCTRL_DIVSEL_Pos) /* (GCLK_GENCTRL) Divide input by 2^(divider factor+ 1) Position  */
+#define GCLK_GENCTRL_DIVSEL_DIV1              (GCLK_GENCTRL_DIVSEL_DIV1_Val << GCLK_GENCTRL_DIVSEL_Pos) /* (GCLK_GENCTRL) Divide input directly by divider factor Position */
+#define GCLK_GENCTRL_DIVSEL_DIV2              (GCLK_GENCTRL_DIVSEL_DIV2_Val << GCLK_GENCTRL_DIVSEL_Pos) /* (GCLK_GENCTRL) Divide input by 2^(divider factor+ 1) Position */
 #define GCLK_GENCTRL_RUNSTDBY_Pos             _UINT32_(13)                                         /* (GCLK_GENCTRL) Run in Standby Position */
 #define GCLK_GENCTRL_RUNSTDBY_Msk             (_UINT32_(0x1) << GCLK_GENCTRL_RUNSTDBY_Pos)         /* (GCLK_GENCTRL) Run in Standby Mask */
-#define GCLK_GENCTRL_RUNSTDBY(value)          (GCLK_GENCTRL_RUNSTDBY_Msk & (_UINT32_(value) << GCLK_GENCTRL_RUNSTDBY_Pos)) /* Assigment of value for RUNSTDBY in the GCLK_GENCTRL register */
+#define GCLK_GENCTRL_RUNSTDBY(value)          (GCLK_GENCTRL_RUNSTDBY_Msk & (_UINT32_(value) << GCLK_GENCTRL_RUNSTDBY_Pos)) /* Assignment of value for RUNSTDBY in the GCLK_GENCTRL register */
 #define GCLK_GENCTRL_DIV_Pos                  _UINT32_(16)                                         /* (GCLK_GENCTRL) Division Factor Position */
 #define GCLK_GENCTRL_DIV_Msk                  (_UINT32_(0xFFFF) << GCLK_GENCTRL_DIV_Pos)           /* (GCLK_GENCTRL) Division Factor Mask */
-#define GCLK_GENCTRL_DIV(value)               (GCLK_GENCTRL_DIV_Msk & (_UINT32_(value) << GCLK_GENCTRL_DIV_Pos)) /* Assigment of value for DIV in the GCLK_GENCTRL register */
+#define GCLK_GENCTRL_DIV(value)               (GCLK_GENCTRL_DIV_Msk & (_UINT32_(value) << GCLK_GENCTRL_DIV_Pos)) /* Assignment of value for DIV in the GCLK_GENCTRL register */
 #define GCLK_GENCTRL_Msk                      _UINT32_(0xFFFF3F0F)                                 /* (GCLK_GENCTRL) Register Mask  */
 
 
@@ -148,7 +145,7 @@
 
 #define GCLK_PCHCTRL_GEN_Pos                  _UINT32_(0)                                          /* (GCLK_PCHCTRL) Generic Clock Generator Position */
 #define GCLK_PCHCTRL_GEN_Msk                  (_UINT32_(0xF) << GCLK_PCHCTRL_GEN_Pos)              /* (GCLK_PCHCTRL) Generic Clock Generator Mask */
-#define GCLK_PCHCTRL_GEN(value)               (GCLK_PCHCTRL_GEN_Msk & (_UINT32_(value) << GCLK_PCHCTRL_GEN_Pos)) /* Assigment of value for GEN in the GCLK_PCHCTRL register */
+#define GCLK_PCHCTRL_GEN(value)               (GCLK_PCHCTRL_GEN_Msk & (_UINT32_(value) << GCLK_PCHCTRL_GEN_Pos)) /* Assignment of value for GEN in the GCLK_PCHCTRL register */
 #define   GCLK_PCHCTRL_GEN_GCLK0_Val          _UINT32_(0x0)                                        /* (GCLK_PCHCTRL) Generic clock generator 0  */
 #define   GCLK_PCHCTRL_GEN_GCLK1_Val          _UINT32_(0x1)                                        /* (GCLK_PCHCTRL) Generic clock generator 1  */
 #define   GCLK_PCHCTRL_GEN_GCLK2_Val          _UINT32_(0x2)                                        /* (GCLK_PCHCTRL) Generic clock generator 2  */
@@ -161,28 +158,28 @@
 #define   GCLK_PCHCTRL_GEN_GCLK9_Val          _UINT32_(0x9)                                        /* (GCLK_PCHCTRL) Generic clock generator 9  */
 #define   GCLK_PCHCTRL_GEN_GCLK10_Val         _UINT32_(0xA)                                        /* (GCLK_PCHCTRL) Generic clock generator 10  */
 #define   GCLK_PCHCTRL_GEN_GCLK11_Val         _UINT32_(0xB)                                        /* (GCLK_PCHCTRL) Generic clock generator 11  */
-#define GCLK_PCHCTRL_GEN_GCLK0                (GCLK_PCHCTRL_GEN_GCLK0_Val << GCLK_PCHCTRL_GEN_Pos) /* (GCLK_PCHCTRL) Generic clock generator 0 Position  */
-#define GCLK_PCHCTRL_GEN_GCLK1                (GCLK_PCHCTRL_GEN_GCLK1_Val << GCLK_PCHCTRL_GEN_Pos) /* (GCLK_PCHCTRL) Generic clock generator 1 Position  */
-#define GCLK_PCHCTRL_GEN_GCLK2                (GCLK_PCHCTRL_GEN_GCLK2_Val << GCLK_PCHCTRL_GEN_Pos) /* (GCLK_PCHCTRL) Generic clock generator 2 Position  */
-#define GCLK_PCHCTRL_GEN_GCLK3                (GCLK_PCHCTRL_GEN_GCLK3_Val << GCLK_PCHCTRL_GEN_Pos) /* (GCLK_PCHCTRL) Generic clock generator 3 Position  */
-#define GCLK_PCHCTRL_GEN_GCLK4                (GCLK_PCHCTRL_GEN_GCLK4_Val << GCLK_PCHCTRL_GEN_Pos) /* (GCLK_PCHCTRL) Generic clock generator 4 Position  */
-#define GCLK_PCHCTRL_GEN_GCLK5                (GCLK_PCHCTRL_GEN_GCLK5_Val << GCLK_PCHCTRL_GEN_Pos) /* (GCLK_PCHCTRL) Generic clock generator 5 Position  */
-#define GCLK_PCHCTRL_GEN_GCLK6                (GCLK_PCHCTRL_GEN_GCLK6_Val << GCLK_PCHCTRL_GEN_Pos) /* (GCLK_PCHCTRL) Generic clock generator 6 Position  */
-#define GCLK_PCHCTRL_GEN_GCLK7                (GCLK_PCHCTRL_GEN_GCLK7_Val << GCLK_PCHCTRL_GEN_Pos) /* (GCLK_PCHCTRL) Generic clock generator 7 Position  */
-#define GCLK_PCHCTRL_GEN_GCLK8                (GCLK_PCHCTRL_GEN_GCLK8_Val << GCLK_PCHCTRL_GEN_Pos) /* (GCLK_PCHCTRL) Generic clock generator 8 Position  */
-#define GCLK_PCHCTRL_GEN_GCLK9                (GCLK_PCHCTRL_GEN_GCLK9_Val << GCLK_PCHCTRL_GEN_Pos) /* (GCLK_PCHCTRL) Generic clock generator 9 Position  */
-#define GCLK_PCHCTRL_GEN_GCLK10               (GCLK_PCHCTRL_GEN_GCLK10_Val << GCLK_PCHCTRL_GEN_Pos) /* (GCLK_PCHCTRL) Generic clock generator 10 Position  */
-#define GCLK_PCHCTRL_GEN_GCLK11               (GCLK_PCHCTRL_GEN_GCLK11_Val << GCLK_PCHCTRL_GEN_Pos) /* (GCLK_PCHCTRL) Generic clock generator 11 Position  */
+#define GCLK_PCHCTRL_GEN_GCLK0                (GCLK_PCHCTRL_GEN_GCLK0_Val << GCLK_PCHCTRL_GEN_Pos) /* (GCLK_PCHCTRL) Generic clock generator 0 Position */
+#define GCLK_PCHCTRL_GEN_GCLK1                (GCLK_PCHCTRL_GEN_GCLK1_Val << GCLK_PCHCTRL_GEN_Pos) /* (GCLK_PCHCTRL) Generic clock generator 1 Position */
+#define GCLK_PCHCTRL_GEN_GCLK2                (GCLK_PCHCTRL_GEN_GCLK2_Val << GCLK_PCHCTRL_GEN_Pos) /* (GCLK_PCHCTRL) Generic clock generator 2 Position */
+#define GCLK_PCHCTRL_GEN_GCLK3                (GCLK_PCHCTRL_GEN_GCLK3_Val << GCLK_PCHCTRL_GEN_Pos) /* (GCLK_PCHCTRL) Generic clock generator 3 Position */
+#define GCLK_PCHCTRL_GEN_GCLK4                (GCLK_PCHCTRL_GEN_GCLK4_Val << GCLK_PCHCTRL_GEN_Pos) /* (GCLK_PCHCTRL) Generic clock generator 4 Position */
+#define GCLK_PCHCTRL_GEN_GCLK5                (GCLK_PCHCTRL_GEN_GCLK5_Val << GCLK_PCHCTRL_GEN_Pos) /* (GCLK_PCHCTRL) Generic clock generator 5 Position */
+#define GCLK_PCHCTRL_GEN_GCLK6                (GCLK_PCHCTRL_GEN_GCLK6_Val << GCLK_PCHCTRL_GEN_Pos) /* (GCLK_PCHCTRL) Generic clock generator 6 Position */
+#define GCLK_PCHCTRL_GEN_GCLK7                (GCLK_PCHCTRL_GEN_GCLK7_Val << GCLK_PCHCTRL_GEN_Pos) /* (GCLK_PCHCTRL) Generic clock generator 7 Position */
+#define GCLK_PCHCTRL_GEN_GCLK8                (GCLK_PCHCTRL_GEN_GCLK8_Val << GCLK_PCHCTRL_GEN_Pos) /* (GCLK_PCHCTRL) Generic clock generator 8 Position */
+#define GCLK_PCHCTRL_GEN_GCLK9                (GCLK_PCHCTRL_GEN_GCLK9_Val << GCLK_PCHCTRL_GEN_Pos) /* (GCLK_PCHCTRL) Generic clock generator 9 Position */
+#define GCLK_PCHCTRL_GEN_GCLK10               (GCLK_PCHCTRL_GEN_GCLK10_Val << GCLK_PCHCTRL_GEN_Pos) /* (GCLK_PCHCTRL) Generic clock generator 10 Position */
+#define GCLK_PCHCTRL_GEN_GCLK11               (GCLK_PCHCTRL_GEN_GCLK11_Val << GCLK_PCHCTRL_GEN_Pos) /* (GCLK_PCHCTRL) Generic clock generator 11 Position */
 #define GCLK_PCHCTRL_CHEN_Pos                 _UINT32_(6)                                          /* (GCLK_PCHCTRL) Channel Enable Position */
 #define GCLK_PCHCTRL_CHEN_Msk                 (_UINT32_(0x1) << GCLK_PCHCTRL_CHEN_Pos)             /* (GCLK_PCHCTRL) Channel Enable Mask */
-#define GCLK_PCHCTRL_CHEN(value)              (GCLK_PCHCTRL_CHEN_Msk & (_UINT32_(value) << GCLK_PCHCTRL_CHEN_Pos)) /* Assigment of value for CHEN in the GCLK_PCHCTRL register */
+#define GCLK_PCHCTRL_CHEN(value)              (GCLK_PCHCTRL_CHEN_Msk & (_UINT32_(value) << GCLK_PCHCTRL_CHEN_Pos)) /* Assignment of value for CHEN in the GCLK_PCHCTRL register */
 #define GCLK_PCHCTRL_WRTLOCK_Pos              _UINT32_(7)                                          /* (GCLK_PCHCTRL) Write Lock Position */
 #define GCLK_PCHCTRL_WRTLOCK_Msk              (_UINT32_(0x1) << GCLK_PCHCTRL_WRTLOCK_Pos)          /* (GCLK_PCHCTRL) Write Lock Mask */
-#define GCLK_PCHCTRL_WRTLOCK(value)           (GCLK_PCHCTRL_WRTLOCK_Msk & (_UINT32_(value) << GCLK_PCHCTRL_WRTLOCK_Pos)) /* Assigment of value for WRTLOCK in the GCLK_PCHCTRL register */
+#define GCLK_PCHCTRL_WRTLOCK(value)           (GCLK_PCHCTRL_WRTLOCK_Msk & (_UINT32_(value) << GCLK_PCHCTRL_WRTLOCK_Pos)) /* Assignment of value for WRTLOCK in the GCLK_PCHCTRL register */
 #define GCLK_PCHCTRL_Msk                      _UINT32_(0x000000CF)                                 /* (GCLK_PCHCTRL) Register Mask  */
 
 
-/** \brief GCLK register offsets definitions */
+/* GCLK register offsets definitions */
 #define GCLK_CTRLA_REG_OFST            _UINT32_(0x00)      /* (GCLK_CTRLA) Control Offset */
 #define GCLK_SYNCBUSY_REG_OFST         _UINT32_(0x04)      /* (GCLK_SYNCBUSY) Synchronization Busy Offset */
 #define GCLK_GENCTRL_REG_OFST          _UINT32_(0x20)      /* (GCLK_GENCTRL) Generic Clock Generator Control Offset */
@@ -249,16 +246,16 @@
 #define GCLK_PCHCTRL47_REG_OFST        _UINT32_(0x13C)     /* (GCLK_PCHCTRL47) Peripheral Clock Control Offset */
 
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
-/** \brief GCLK register API structure */
+/* GCLK register API structure */
 typedef struct
 {  /* Generic Clock Generator */
-  __IO  uint8_t                        GCLK_CTRLA;         /**< Offset: 0x00 (R/W  8) Control */
+  __IO  uint8_t                        GCLK_CTRLA;         /* Offset: 0x00 (R/W  8) Control */
   __I   uint8_t                        Reserved1[0x03];
-  __I   uint32_t                       GCLK_SYNCBUSY;      /**< Offset: 0x04 (R/   32) Synchronization Busy */
+  __I   uint32_t                       GCLK_SYNCBUSY;      /* Offset: 0x04 (R/   32) Synchronization Busy */
   __I   uint8_t                        Reserved2[0x18];
-  __IO  uint32_t                       GCLK_GENCTRL[12];   /**< Offset: 0x20 (R/W  32) Generic Clock Generator Control */
+  __IO  uint32_t                       GCLK_GENCTRL[12];   /* Offset: 0x20 (R/W  32) Generic Clock Generator Control */
   __I   uint8_t                        Reserved3[0x30];
-  __IO  uint32_t                       GCLK_PCHCTRL[48];   /**< Offset: 0x80 (R/W  32) Peripheral Clock Control */
+  __IO  uint32_t                       GCLK_PCHCTRL[48];   /* Offset: 0x80 (R/W  32) Peripheral Clock Control */
 } gclk_registers_t;
 
 
