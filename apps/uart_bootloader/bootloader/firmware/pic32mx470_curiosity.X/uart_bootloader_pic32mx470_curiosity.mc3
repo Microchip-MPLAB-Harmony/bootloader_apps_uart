@@ -1,4 +1,4 @@
-<config configName="pic32mx470_curiosity" projectName="uart_bootloader_pic32mx470_curiosity" configVersion="1.1" device="PIC32MX470F512H" deviceLibraryClass="com.microchip.mcc.harmony.Harmony3Library" coreVersion="5.6.1">
+<config configName="pic32mx470_curiosity" projectName="uart_bootloader_pic32mx470_curiosity" configVersion="1.1" device="PIC32MX470F512H" deviceLibraryClass="com.microchip.mcc.harmony.Harmony3Library" coreVersion="5.7.1">
    <usedPackages class="java.util.ArrayList">
       <package packageName="bootloader" version="" contentType="HARMONY">
          <modules class="java.util.ArrayList"/>
@@ -37,7 +37,7 @@
       </entry>
    </usedClasses>
    <usedLibraries class="java.util.ArrayList">
-      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.4.1"/>
+      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.5.5"/>
    </usedLibraries>
    <tokenMap class="java.util.TreeMap">
       <entry>
@@ -1237,7 +1237,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity\bootloader\bootloader_common.h</file>
-         <hash>93f28d65093828499b860811b538b77bde6958d368d5a2f4c204f50cbe35cb94</hash>
+         <hash>7a5f70d15137167451da9a381754dd154db8a410516ebdcdf19be161f9bd569b</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity\bootloader\bootloader_uart.c</file>
@@ -1253,11 +1253,11 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity\definitions.h</file>
-         <hash>96569be550048886d591ddf7670c2490369c6e67cf5970599b4fbb2e739af225</hash>
+         <hash>4c9d93499f37f9d05a18b6889cb27d76ca75607e5efb004072e45681da928b76</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity\device.h</file>
-         <hash>10ec93c43a7b158a129ae05bd8f4a59ff5bcf3d0f3f062fdd64c374bc2d42099</hash>
+         <hash>4d4341a6f9628cea0bf73f980b639f7cb81089e55a60ad7e434be2a71e477442</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity\initialization.c</file>
@@ -1265,7 +1265,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity\peripheral\clk\plib_clk.c</file>
-         <hash>66ac5ffaa44d3fe99023616ab23f71b2575c76578c0585c303b6a44d95470eb5</hash>
+         <hash>64dc425269163398f5047f2685634dedd388fbdd29b2904976c6e72d81a0b64d</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity\peripheral\clk\plib_clk.h</file>
@@ -1281,11 +1281,11 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity\peripheral\evic\plib_evic.c</file>
-         <hash>8f193bb5de4393b725ddc50c8a13786af730f4a4b5e0e808fb89bdb3fba1a044</hash>
+         <hash>227d6cba94cc339042a7667ec201e36b3ef7d176d59ae3f3dc02f6b2aceb37f4</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity\peripheral\evic\plib_evic.h</file>
-         <hash>e583d61209911805b20188f532f6c5075500408e9f75de59324804b7203f1997</hash>
+         <hash>ca9eb25560dda9352bae8b747c34ddbd1e16faaf25067d2edc7556bda1673bb5</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity\peripheral\gpio\plib_gpio.c</file>
@@ -1293,7 +1293,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity\peripheral\gpio\plib_gpio.h</file>
-         <hash>69cccbb311870bb04d2d853bad43e1bbafd107256900ee707b6f1da64bb0712f</hash>
+         <hash>926617a2dda3c5ff768319168fc66309f822eec73ad0229c457da0a56ac7bde0</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity\peripheral\nvm\plib_nvm.c</file>
@@ -1305,7 +1305,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity\peripheral\uart\plib_uart1.c</file>
-         <hash>e4a0b3e8f44a1f5c21013c03ce3ccdee152792fc8fa11efd72d12dd13833c316</hash>
+         <hash>ac653c25de3453e39f6f35fdbad3e38d5fe56d3ab53cdc9463b77ffa35dcfebf</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mx470_curiosity\peripheral\uart\plib_uart1.h</file>
