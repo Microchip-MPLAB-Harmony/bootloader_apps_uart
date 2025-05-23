@@ -1,4 +1,4 @@
-<config configName="sam_l21_xpro" projectName="uart_bootloader_sam_l21_xpro" configVersion="1.1" device="ATSAML21J18B" deviceLibraryClass="com.microchip.mcc.harmony.Harmony3Library" coreVersion="5.6.1">
+<config configName="sam_l21_xpro" projectName="uart_bootloader_sam_l21_xpro" configVersion="1.1" device="ATSAML21J18B" deviceLibraryClass="com.microchip.mcc.harmony.Harmony3Library" coreVersion="5.7.1">
    <usedPackages class="java.util.ArrayList">
       <package packageName="bootloader" version="" contentType="HARMONY">
          <modules class="java.util.ArrayList"/>
@@ -49,7 +49,7 @@
       </entry>
    </usedClasses>
    <usedLibraries class="java.util.ArrayList">
-      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.4.1"/>
+      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.5.5"/>
    </usedLibraries>
    <tokenMap class="java.util.TreeMap">
       <entry>
@@ -2010,7 +2010,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_l21_xpro\bootloader\bootloader_common.h</file>
-         <hash>5f3be244a7c6fe9551102aea794f6504ed3f5cbcfa7f7da904bf865bc88f39fc</hash>
+         <hash>7756df98780d519a2bf0fe4d54cb57d082bea64372e6769c8e44970fdd55cedf</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_l21_xpro\bootloader\bootloader_interrupt.h</file>
@@ -2018,7 +2018,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_l21_xpro\bootloader\bootloader_uart.c</file>
-         <hash>686a8db56497478e2eea9bf02cd7d2bae0816a042c31203d87fdf9f6a09c9abb</hash>
+         <hash>2af4c3eb3b1a8ed9f4368a13eda3ac4afde9ab96098db4543a78199344e0f8af</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_l21_xpro\bootloader\bootloader_uart.h</file>
@@ -2026,15 +2026,15 @@
       </entry>
       <entry>
          <file>..\src\config\sam_l21_xpro\btl.ld</file>
-         <hash>8c0a8764cedaca2bc9e72440203c6460a87278f52625850651e6f893b52184ea</hash>
+         <hash>080e5a00cd6b558691684beac10418a2d4933446d6eb1d02707bbd5d529ee64e</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_l21_xpro\definitions.h</file>
-         <hash>6cd51b49056db9fa866a8082848dcf87278e81e442a97baf60cbe555cd52c2d2</hash>
+         <hash>a40b7212cfc1892c326023e8499ba143ac16ca954eb47950b2c703a58696524a</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_l21_xpro\device.h</file>
-         <hash>4743496197b221e13c4d5745b6e16d16ce85c123b320178946f5a20b81743ac2</hash>
+         <hash>d91a174755c3e4150d6658753b2298b731c72e9e4dfd38533c73004b5c0abcf4</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_l21_xpro\device_cache.h</file>
@@ -2046,7 +2046,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_l21_xpro\initialization.c</file>
-         <hash>81f24a0481a2213f26c1d5167441ca6706d2b93fe903f0d0ff82f195b98de5e8</hash>
+         <hash>c1fe4b94a34954b7c9ce963e06b62f20c4fa17c4849d83b25de815c699255546</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_l21_xpro\libc_syscalls.c</file>
@@ -2078,11 +2078,11 @@
       </entry>
       <entry>
          <file>..\src\config\sam_l21_xpro\peripheral\nvic\plib_nvic.c</file>
-         <hash>056a589ef1f8f3bbb9c37fd4685b97207b957116104636b2ead4e442cc135a46</hash>
+         <hash>d17bdfa86168bdfc1dd73f6785fdae850b5e041462997d96caf174cad18431f6</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_l21_xpro\peripheral\nvic\plib_nvic.h</file>
-         <hash>81e813a093101d546799e00723cbf7245e2d18471fa51c8d130c5809cecca03e</hash>
+         <hash>9936ac782115af41003255283fa2f603f4ff2212d16275b7c80ea8d067a9e208</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_l21_xpro\peripheral\nvmctrl\plib_nvmctrl.c</file>
@@ -2090,7 +2090,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_l21_xpro\peripheral\nvmctrl\plib_nvmctrl.h</file>
-         <hash>3706575d02d502967b3a77c5d6c33f26721148603934715fcbd98c62d20a2663</hash>
+         <hash>a6831c99dc99724368240543df6fb08a2cd45aad2c5a83e9b0a71f585af2c8f2</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_l21_xpro\peripheral\pac\plib_pac.c</file>
@@ -2110,7 +2110,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_l21_xpro\peripheral\port\plib_port.c</file>
-         <hash>f9cc882c5dbd6dc6050ef0dbbbc5603687cdf96160b04e9b04f2e5a34775da75</hash>
+         <hash>33e7acb2c62e53a6fe3ae34d8ec310007b41c99b9ceffb8033b3274564eaf075</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_l21_xpro\peripheral\port\plib_port.h</file>
@@ -2118,15 +2118,15 @@
       </entry>
       <entry>
          <file>..\src\config\sam_l21_xpro\peripheral\sercom\usart\plib_sercom3_usart.c</file>
-         <hash>bf807a81f0dfac348520b69e72f219d110c9454786a3ff7da83d2b0f937fb0b0</hash>
+         <hash>92a226a0d8444b68411a88e0e56f671c83136078d10afeb96001d1226e00614f</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_l21_xpro\peripheral\sercom\usart\plib_sercom3_usart.h</file>
-         <hash>38bd5f257a7dfce1144c3375178920ba13770e7ec6283d7e5014f8af56aeb1bc</hash>
+         <hash>e6b3c5a74a4cc6d70a66fbe08e802db7436d4ec81921d06c37d35e2ca30fe870</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_l21_xpro\peripheral\sercom\usart\plib_sercom_usart_common.h</file>
-         <hash>63c6e89936ba47e8989478a8be0fa40b406361f2f0dcc1b6cfcd801b50a4bf92</hash>
+         <hash>9f02e811b95f0470ca23f3546f3ddf4ccccb385b4d8b8c091899d0d20b0c56e1</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_l21_xpro\peripheral\systick\plib_systick.c</file>
@@ -2142,7 +2142,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_l21_xpro\startup_xc32.c</file>
-         <hash>d61c5a7becdd58e76df4fa51b964845db4d699198c0b65c603e2f283d59d793f</hash>
+         <hash>f700e024c270d1eecb4afb966b37951c20d2218c68a41e416f87bd08d05976e7</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_l21_xpro\toolchain_specifics.h</file>
