@@ -1,4 +1,4 @@
-<config configName="sam_l22_xpro" projectName="uart_bootloader_sam_l22_xpro" configVersion="1.1" device="ATSAML22N18A" deviceLibraryClass="com.microchip.mcc.harmony.Harmony3Library" coreVersion="5.6.1">
+<config configName="sam_l22_xpro" projectName="uart_bootloader_sam_l22_xpro" configVersion="1.1" device="ATSAML22N18A" deviceLibraryClass="com.microchip.mcc.harmony.Harmony3Library" coreVersion="5.7.1">
    <usedPackages class="java.util.ArrayList">
       <package packageName="bootloader" version="" contentType="HARMONY">
          <modules class="java.util.ArrayList"/>
@@ -49,7 +49,7 @@
       </entry>
    </usedClasses>
    <usedLibraries class="java.util.ArrayList">
-      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.4.1"/>
+      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.5.5"/>
    </usedLibraries>
    <tokenMap class="java.util.TreeMap">
       <entry>
@@ -2066,7 +2066,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_l22_xpro\bootloader\bootloader_common.h</file>
-         <hash>5f3be244a7c6fe9551102aea794f6504ed3f5cbcfa7f7da904bf865bc88f39fc</hash>
+         <hash>7756df98780d519a2bf0fe4d54cb57d082bea64372e6769c8e44970fdd55cedf</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_l22_xpro\bootloader\bootloader_interrupt.h</file>
@@ -2074,7 +2074,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_l22_xpro\bootloader\bootloader_uart.c</file>
-         <hash>16f3df6320168dca6b1384020d848f1b0c23c8fbb93971af395e091d02776580</hash>
+         <hash>bb1c2002d28e0bf34f01d40b2ab0e64931531cccb3bc4f57ff2089146da33b47</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_l22_xpro\bootloader\bootloader_uart.h</file>
@@ -2082,15 +2082,15 @@
       </entry>
       <entry>
          <file>..\src\config\sam_l22_xpro\btl.ld</file>
-         <hash>8c0a8764cedaca2bc9e72440203c6460a87278f52625850651e6f893b52184ea</hash>
+         <hash>080e5a00cd6b558691684beac10418a2d4933446d6eb1d02707bbd5d529ee64e</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_l22_xpro\definitions.h</file>
-         <hash>1bbd16d736d745aac23723b13635cc67c0ae93ebabfca43f9dc8e4f8c65c1589</hash>
+         <hash>b93b25173470d8fc7475c388ed063ff87b5609c8ec95b2e00cc122d8c8e26d4d</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_l22_xpro\device.h</file>
-         <hash>954537dc742209317d5ae28737888af9ab6b16ba72f11fa5a1c2e3050ed132cf</hash>
+         <hash>0de67b551f51caff91a4a56e6c390824b6698ffbe714cbcf7df0675af1d0de2b</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_l22_xpro\device_cache.h</file>
@@ -2102,7 +2102,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_l22_xpro\initialization.c</file>
-         <hash>c81773ac839bd77d089c1959598318c0983f98f87a22f671b133258749fbe448</hash>
+         <hash>3b16f4ea4e52fdf91930054d8bb0d7b42b5fd05febf19a2f9a4b6fd9f80a6f99</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_l22_xpro\libc_syscalls.c</file>
@@ -2134,11 +2134,11 @@
       </entry>
       <entry>
          <file>..\src\config\sam_l22_xpro\peripheral\nvic\plib_nvic.c</file>
-         <hash>056a589ef1f8f3bbb9c37fd4685b97207b957116104636b2ead4e442cc135a46</hash>
+         <hash>d17bdfa86168bdfc1dd73f6785fdae850b5e041462997d96caf174cad18431f6</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_l22_xpro\peripheral\nvic\plib_nvic.h</file>
-         <hash>81e813a093101d546799e00723cbf7245e2d18471fa51c8d130c5809cecca03e</hash>
+         <hash>9936ac782115af41003255283fa2f603f4ff2212d16275b7c80ea8d067a9e208</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_l22_xpro\peripheral\nvmctrl\plib_nvmctrl.c</file>
@@ -2146,7 +2146,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_l22_xpro\peripheral\nvmctrl\plib_nvmctrl.h</file>
-         <hash>3706575d02d502967b3a77c5d6c33f26721148603934715fcbd98c62d20a2663</hash>
+         <hash>a6831c99dc99724368240543df6fb08a2cd45aad2c5a83e9b0a71f585af2c8f2</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_l22_xpro\peripheral\pac\plib_pac.c</file>
@@ -2166,7 +2166,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_l22_xpro\peripheral\port\plib_port.c</file>
-         <hash>3013013ba968bbe2ef245b58112b6cf63565a0a29a84205ad70fe70d028885d5</hash>
+         <hash>a3e0b66775d90edd9659c240b2046259f1267ee0dbee41ce213562029c57a383</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_l22_xpro\peripheral\port\plib_port.h</file>
@@ -2174,15 +2174,15 @@
       </entry>
       <entry>
          <file>..\src\config\sam_l22_xpro\peripheral\sercom\usart\plib_sercom4_usart.c</file>
-         <hash>3b08160d64a926f1a1dd23f44f9646bfe7abed96edd35c0fdf6c38c0bee17a73</hash>
+         <hash>85c3e2b61bdc2b06bac17db897c10e02af44052765d1f32e462800b625f9ea4c</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_l22_xpro\peripheral\sercom\usart\plib_sercom4_usart.h</file>
-         <hash>be8cd2940feb28f5a61b48e614f3d8f9367eb48da752d972639c3f1dba93be1c</hash>
+         <hash>535ef288711860aebfe81da1cf22d8f977f3637fd77c260d588b7302251453f8</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_l22_xpro\peripheral\sercom\usart\plib_sercom_usart_common.h</file>
-         <hash>63c6e89936ba47e8989478a8be0fa40b406361f2f0dcc1b6cfcd801b50a4bf92</hash>
+         <hash>9f02e811b95f0470ca23f3546f3ddf4ccccb385b4d8b8c091899d0d20b0c56e1</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_l22_xpro\peripheral\systick\plib_systick.c</file>
@@ -2198,7 +2198,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_l22_xpro\startup_xc32.c</file>
-         <hash>d61c5a7becdd58e76df4fa51b964845db4d699198c0b65c603e2f283d59d793f</hash>
+         <hash>f700e024c270d1eecb4afb966b37951c20d2218c68a41e416f87bd08d05976e7</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_l22_xpro\toolchain_specifics.h</file>
