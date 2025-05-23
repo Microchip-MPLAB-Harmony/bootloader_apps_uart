@@ -230,12 +230,12 @@
         <targetPluginBoard/>
         <platformTool>EdbgTool</platformTool>
         <languageToolchain>XC32</languageToolchain>
-        <languageToolchainVersion>4.35</languageToolchainVersion>
+        <languageToolchainVersion>4.60</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <packs>
         <pack name="CMSIS" vendor="ARM" version="5.4.0"/>
-        <pack name="SAMG_DFP" vendor="Microchip" version="3.8.197"/>
+        <pack name="SAMG_DFP" vendor="Microchip" version="3.9.204"/>
       </packs>
       <ScriptingSettings>
       </ScriptingSettings>

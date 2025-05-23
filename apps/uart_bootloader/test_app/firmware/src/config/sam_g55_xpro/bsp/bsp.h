@@ -68,7 +68,7 @@
 #define LED_On() (PIOA_REGS->PIO_CODR = (1UL<<6))
 #define LED_Off() (PIOA_REGS->PIO_SODR = (1UL<<6))
 /*** SWITCH Macros for SWITCH ***/
-#define SWITCH_Get() ((PIOA_REGS->PIO_PDSR >> 2) & 0x1)
+#define SWITCH_Get() ((PIOA_REGS->PIO_PDSR >> 2) & 0x1U)
 #define SWITCH_STATE_PRESSED 0
 #define SWITCH_STATE_RELEASED 1
 

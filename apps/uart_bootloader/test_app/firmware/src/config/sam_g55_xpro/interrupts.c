@@ -20,7 +20,7 @@
 
 // DOM-IGNORE-BEGIN
 /*******************************************************************************
-* Copyright (C) 2018 Microchip Technology Inc. and its subsidiaries.
+* Copyright (C) 2025 Microchip Technology Inc. and its subsidiaries.
 *
 * Subject to your compliance with these terms, you may use Microchip software
 * and any derivatives exclusively with Microchip products. It is your
@@ -81,40 +81,40 @@ void __attribute__((optimize("-O1"), long_call, noreturn, used))Dummy_Handler(vo
 /* MISRAC 2012 deviation block start */
 /* MISRA C-2012 Rule 8.6 deviated 34 times.  Deviation record ID -  H3_MISRAC_2012_R_8_6_DR_1 */
 /* Device vectors list dummy definition*/
-extern void SVCall_Handler             ( void ) __attribute__((weak, alias("Dummy_Handler")));
-extern void PendSV_Handler             ( void ) __attribute__((weak, alias("Dummy_Handler")));
-extern void SUPC_Handler               ( void ) __attribute__((weak, alias("Dummy_Handler")));
-extern void RSTC_Handler               ( void ) __attribute__((weak, alias("Dummy_Handler")));
-extern void RTC_Handler                ( void ) __attribute__((weak, alias("Dummy_Handler")));
-extern void RTT_Handler                ( void ) __attribute__((weak, alias("Dummy_Handler")));
-extern void WDT_Handler                ( void ) __attribute__((weak, alias("Dummy_Handler")));
-extern void PMC_Handler                ( void ) __attribute__((weak, alias("Dummy_Handler")));
-extern void EFC_Handler                ( void ) __attribute__((weak, alias("Dummy_Handler")));
-extern void FLEXCOM7_InterruptHandler  ( void ) __attribute__((weak, alias("Dummy_Handler")));
-extern void FLEXCOM0_Handler           ( void ) __attribute__((weak, alias("Dummy_Handler")));
-extern void FLEXCOM1_Handler           ( void ) __attribute__((weak, alias("Dummy_Handler")));
-extern void PIOA_Handler               ( void ) __attribute__((weak, alias("Dummy_Handler")));
-extern void PIOB_Handler               ( void ) __attribute__((weak, alias("Dummy_Handler")));
-extern void PDMIC0_Handler             ( void ) __attribute__((weak, alias("Dummy_Handler")));
-extern void FLEXCOM2_Handler           ( void ) __attribute__((weak, alias("Dummy_Handler")));
-extern void MEM2MEM_Handler            ( void ) __attribute__((weak, alias("Dummy_Handler")));
-extern void I2SC0_Handler              ( void ) __attribute__((weak, alias("Dummy_Handler")));
-extern void I2SC1_Handler              ( void ) __attribute__((weak, alias("Dummy_Handler")));
-extern void PDMIC1_Handler             ( void ) __attribute__((weak, alias("Dummy_Handler")));
-extern void FLEXCOM3_Handler           ( void ) __attribute__((weak, alias("Dummy_Handler")));
-extern void FLEXCOM4_Handler           ( void ) __attribute__((weak, alias("Dummy_Handler")));
-extern void FLEXCOM5_Handler           ( void ) __attribute__((weak, alias("Dummy_Handler")));
-extern void FLEXCOM6_Handler           ( void ) __attribute__((weak, alias("Dummy_Handler")));
-extern void TC0_CH0_Handler            ( void ) __attribute__((weak, alias("Dummy_Handler")));
-extern void TC0_CH1_Handler            ( void ) __attribute__((weak, alias("Dummy_Handler")));
-extern void TC0_CH2_Handler            ( void ) __attribute__((weak, alias("Dummy_Handler")));
-extern void TC1_CH0_Handler            ( void ) __attribute__((weak, alias("Dummy_Handler")));
-extern void TC1_CH1_Handler            ( void ) __attribute__((weak, alias("Dummy_Handler")));
-extern void TC1_CH2_Handler            ( void ) __attribute__((weak, alias("Dummy_Handler")));
-extern void ADC_Handler                ( void ) __attribute__((weak, alias("Dummy_Handler")));
-extern void UHP_Handler                ( void ) __attribute__((weak, alias("Dummy_Handler")));
-extern void UDP_Handler                ( void ) __attribute__((weak, alias("Dummy_Handler")));
-extern void CRCCU_Handler              ( void ) __attribute__((weak, alias("Dummy_Handler")));
+extern void SVCall_Handler             ( void ) __attribute__((weak, alias("Dummy_Handler"),noreturn));
+extern void PendSV_Handler             ( void ) __attribute__((weak, alias("Dummy_Handler"),noreturn));
+extern void SUPC_Handler               ( void ) __attribute__((weak, alias("Dummy_Handler"),noreturn));
+extern void RSTC_Handler               ( void ) __attribute__((weak, alias("Dummy_Handler"),noreturn));
+extern void RTC_Handler                ( void ) __attribute__((weak, alias("Dummy_Handler"),noreturn));
+extern void RTT_Handler                ( void ) __attribute__((weak, alias("Dummy_Handler"),noreturn));
+extern void WDT_Handler                ( void ) __attribute__((weak, alias("Dummy_Handler"),noreturn));
+extern void PMC_Handler                ( void ) __attribute__((weak, alias("Dummy_Handler"),noreturn));
+extern void EFC_Handler                ( void ) __attribute__((weak, alias("Dummy_Handler"),noreturn));
+extern void FLEXCOM7_InterruptHandler  ( void ) __attribute__((weak, alias("Dummy_Handler"),noreturn));
+extern void FLEXCOM0_Handler           ( void ) __attribute__((weak, alias("Dummy_Handler"),noreturn));
+extern void FLEXCOM1_Handler           ( void ) __attribute__((weak, alias("Dummy_Handler"),noreturn));
+extern void PIOA_Handler               ( void ) __attribute__((weak, alias("Dummy_Handler"),noreturn));
+extern void PIOB_Handler               ( void ) __attribute__((weak, alias("Dummy_Handler"),noreturn));
+extern void PDMIC0_Handler             ( void ) __attribute__((weak, alias("Dummy_Handler"),noreturn));
+extern void FLEXCOM2_Handler           ( void ) __attribute__((weak, alias("Dummy_Handler"),noreturn));
+extern void MEM2MEM_Handler            ( void ) __attribute__((weak, alias("Dummy_Handler"),noreturn));
+extern void I2SC0_Handler              ( void ) __attribute__((weak, alias("Dummy_Handler"),noreturn));
+extern void I2SC1_Handler              ( void ) __attribute__((weak, alias("Dummy_Handler"),noreturn));
+extern void PDMIC1_Handler             ( void ) __attribute__((weak, alias("Dummy_Handler"),noreturn));
+extern void FLEXCOM3_Handler           ( void ) __attribute__((weak, alias("Dummy_Handler"),noreturn));
+extern void FLEXCOM4_Handler           ( void ) __attribute__((weak, alias("Dummy_Handler"),noreturn));
+extern void FLEXCOM5_Handler           ( void ) __attribute__((weak, alias("Dummy_Handler"),noreturn));
+extern void FLEXCOM6_Handler           ( void ) __attribute__((weak, alias("Dummy_Handler"),noreturn));
+extern void TC0_CH0_Handler            ( void ) __attribute__((weak, alias("Dummy_Handler"),noreturn));
+extern void TC0_CH1_Handler            ( void ) __attribute__((weak, alias("Dummy_Handler"),noreturn));
+extern void TC0_CH2_Handler            ( void ) __attribute__((weak, alias("Dummy_Handler"),noreturn));
+extern void TC1_CH0_Handler            ( void ) __attribute__((weak, alias("Dummy_Handler"),noreturn));
+extern void TC1_CH1_Handler            ( void ) __attribute__((weak, alias("Dummy_Handler"),noreturn));
+extern void TC1_CH2_Handler            ( void ) __attribute__((weak, alias("Dummy_Handler"),noreturn));
+extern void ADC_Handler                ( void ) __attribute__((weak, alias("Dummy_Handler"),noreturn));
+extern void UHP_Handler                ( void ) __attribute__((weak, alias("Dummy_Handler"),noreturn));
+extern void UDP_Handler                ( void ) __attribute__((weak, alias("Dummy_Handler"),noreturn));
+extern void CRCCU_Handler              ( void ) __attribute__((weak, alias("Dummy_Handler"),noreturn));
 
 
 /* MISRAC 2012 deviation block end */
