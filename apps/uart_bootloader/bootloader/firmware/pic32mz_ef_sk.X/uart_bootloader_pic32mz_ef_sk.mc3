@@ -1,4 +1,4 @@
-<config configName="pic32mz_ef_sk" projectName="uart_bootloader_pic32mz_ef_sk" configVersion="1.1" device="PIC32MZ2048EFH144" deviceLibraryClass="com.microchip.mcc.harmony.Harmony3Library" coreVersion="5.6.1">
+<config configName="pic32mz_ef_sk" projectName="uart_bootloader_pic32mz_ef_sk" configVersion="1.1" device="PIC32MZ2048EFH144" deviceLibraryClass="com.microchip.mcc.harmony.Harmony3Library" coreVersion="5.7.1">
    <usedPackages class="java.util.ArrayList">
       <package packageName="bootloader" version="" contentType="HARMONY">
          <modules class="java.util.ArrayList"/>
@@ -37,7 +37,7 @@
       </entry>
    </usedClasses>
    <usedLibraries class="java.util.ArrayList">
-      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.4.1"/>
+      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.5.5"/>
    </usedLibraries>
    <tokenMap class="java.util.TreeMap">
       <entry>
@@ -2944,7 +2944,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mz_ef_sk\bootloader\bootloader_common.h</file>
-         <hash>e85c662fa6d3d7e9611ffe7a33b550645cc0c2463cca07c0b7540cf1e794192d</hash>
+         <hash>ec1e55e7f48735b0487696bb6264b20e736937cfe7d867e36841f04f5290e4c1</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mz_ef_sk\bootloader\bootloader_uart.c</file>
@@ -2956,15 +2956,15 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mz_ef_sk\btl.ld</file>
-         <hash>878e216676ad9359ae08b75b42fa5444588c28b63110a3673933aa15520f1e9e</hash>
+         <hash>448f9db5708ec1ab70d394bd7550d5712c335e5a6785b4a869a3fd0d1700af0e</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mz_ef_sk\definitions.h</file>
-         <hash>d214bf5121b26277f63e70a7738183a3e912c5550b32aa1c042a270a548abecb</hash>
+         <hash>896c935e84b9d4ee83c5920653af8d0bcc52596da5cc1dd029ec3442f36fcd62</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mz_ef_sk\device.h</file>
-         <hash>10ec93c43a7b158a129ae05bd8f4a59ff5bcf3d0f3f062fdd64c374bc2d42099</hash>
+         <hash>4d4341a6f9628cea0bf73f980b639f7cb81089e55a60ad7e434be2a71e477442</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mz_ef_sk\initialization.c</file>
@@ -2972,7 +2972,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mz_ef_sk\peripheral\clk\plib_clk.c</file>
-         <hash>f24f80118de5a77ad82e5734b55a15e6365326eb3b1ef7ed0bfc53ccc2128989</hash>
+         <hash>abf157de2b1eeef644158924fd65df90204a55132563c938f4f1654dd7a64144</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mz_ef_sk\peripheral\clk\plib_clk.h</file>
@@ -2988,11 +2988,11 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mz_ef_sk\peripheral\evic\plib_evic.c</file>
-         <hash>353a4e860c4dedcc45269eff9d046ab4ca6932601ea964278e65bc7d52630677</hash>
+         <hash>88add2ab44053a8a245e063c0abb23d0078a622af076cb284e33890562aee52d</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mz_ef_sk\peripheral\evic\plib_evic.h</file>
-         <hash>99ea8255ad17a7d7368d57f2df1280fffac1961e1b89a2cb62bc35be8072e5bd</hash>
+         <hash>486ea1d5c05801c1d1d96f3d3d5c5af20a9794640d4ca54f98c28add9188665f</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mz_ef_sk\peripheral\gpio\plib_gpio.c</file>
@@ -3000,7 +3000,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mz_ef_sk\peripheral\gpio\plib_gpio.h</file>
-         <hash>2147c007daa01dddf81b0cca3899e450364fedf8bffee9a671fa0f9e1454c6c3</hash>
+         <hash>cfecd14b6572eadc1410d3d8fd6b2bc09fc4897344ef15a6a1699fe1b94944a4</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mz_ef_sk\peripheral\nvm\plib_nvm.c</file>
@@ -3012,7 +3012,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mz_ef_sk\peripheral\uart\plib_uart2.c</file>
-         <hash>09a56c84d17e0583dfc0fd35471343f2c02ddf114cd0ac8ecba9b59607610f66</hash>
+         <hash>02859fd87ed864ad50bb2efff7ca69b9b52481bd533db32478f208ae933b1181</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mz_ef_sk\peripheral\uart\plib_uart2.h</file>

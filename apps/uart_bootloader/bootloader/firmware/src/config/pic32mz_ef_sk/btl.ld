@@ -1,45 +1,45 @@
 /*--------------------------------------------------------------------------
  * MPLAB XC Compiler -  PIC32MZ EF Bootloader linker script
  * Build date : Aug 03 2020
- * 
+ *
  * Copyright (c) 2020, Microchip Technology Inc. and its subsidiaries ("Microchip")
  * All rights reserved.
- * 
+ *
  * This software is developed by Microchip Technology Inc. and its
  * subsidiaries ("Microchip").
- * 
+ *
  * Redistribution and use in source and binary forms, with or without
- * modification, are permitted provided that the following conditions are 
+ * modification, are permitted provided that the following conditions are
  * met:
- * 
+ *
  * 1.      Redistributions of source code must retain the above copyright
  *         notice, this list of conditions and the following disclaimer.
- * 2.      Redistributions in binary form must reproduce the above 
- *         copyright notice, this list of conditions and the following 
- *         disclaimer in the documentation and/or other materials provided 
- *         with the distribution. Publication is not required when this file 
+ * 2.      Redistributions in binary form must reproduce the above
+ *         copyright notice, this list of conditions and the following
+ *         disclaimer in the documentation and/or other materials provided
+ *         with the distribution. Publication is not required when this file
  *         is used in an embedded application.
  * 3.      Microchip's name may not be used to endorse or promote products
- *         derived from this software without specific prior written 
+ *         derived from this software without specific prior written
  *         permission.
- * 
+ *
  * THIS SOFTWARE IS PROVIDED BY MICROCHIP "AS IS" AND ANY EXPRESS OR IMPLIED
  * WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
- * MERCHANTABILITY AND FITNESS FOR PURPOSE ARE DISCLAIMED. IN NO EVENT 
+ * MERCHANTABILITY AND FITNESS FOR PURPOSE ARE DISCLAIMED. IN NO EVENT
  * SHALL MICROCHIP BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
  * EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING BUT NOT LIMITED TO
  * PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA OR PROFITS;
  * OR BUSINESS INTERRUPTION) HOWSOEVER CAUSED AND ON ANY THEORY OF LIABILITY,
- * WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR 
+ * WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR
  * OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF
  * ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
- * 
+ *
  */
 
 /* Custom linker script, for bootloaders residing completely in boot flash */
 
 /*  NOTE: This single-file linker script replaces the two-file system used
- *  for older PIC32 devices. 
+ *  for older PIC32 devices.
  */
 
 OUTPUT_FORMAT("elf32-tradlittlemips")
@@ -725,7 +725,7 @@ SECTIONS
   /* Interrupt vector table with vector offsets */
   .vectors _ebase_address + 0x200 :
   {
-    /*  Symbol __vector_offset_n points to .vector_n if it exists, 
+    /*  Symbol __vector_offset_n points to .vector_n if it exists,
      *  otherwise points to the default handler. The
      *  vector_offset_init.o module then provides a .data section
      *  containing values used to initialize the vector-offset SFRs
@@ -1773,7 +1773,7 @@ SECTIONS
   .stab.index    0 : { *(.stab.index) }
   .stab.indexstr 0 : { *(.stab.indexstr) }
   .comment       0 : { *(.comment) }
-  /* DWARF debug sections used by MPLAB X for source-level debugging. 
+  /* DWARF debug sections used by MPLAB X for source-level debugging.
      Symbols in the DWARF debugging sections are relative to the beginning
      of the section so we begin them at 0.  */
   /* DWARF 1 */
@@ -1838,9 +1838,9 @@ PROVIDE (__pic32_init_sqi_kseg2_entrylo0_bitset = 0x1F) ;
 __pic32_tlb_0_entryhi  = __pic32_init_sqi_kseg2_virtual_base_addr ;
 
 
-/*  Create one page table entry consisting of two 16MB physical pages. 
- *  ENTRYLO0 = RI<31> XI<30> 0<29:26> PFN<25:6> C<5:3> D<2> V<1> G<0> 
- *  Shift __pic32_init_sqi_kseg3_physical_base_addr to PFN. 
+/*  Create one page table entry consisting of two 16MB physical pages.
+ *  ENTRYLO0 = RI<31> XI<30> 0<29:26> PFN<25:6> C<5:3> D<2> V<1> G<0>
+ *  Shift __pic32_init_sqi_kseg3_physical_base_addr to PFN.
  *  Bitwise-OR the other bits of ENTRYLO0.
  */
 __pic32_tlb_0_entrylo0 = (__pic32_init_sqi_kseg2_physical_base_addr >> 6) | __pic32_init_sqi_kseg2_entrylo0_bitset ;
@@ -1854,9 +1854,9 @@ __pic32_tlb_0_entrylo1 = __pic32_tlb_0_entrylo0 | ((__pic32_init_sqi_kseg2_physi
 __pic32_tlb_1_entryhi  = __pic32_init_sqi_kseg2_virtual_base_addr + 0x2000000;
 
 
-/*  Create one page table entry consisting of two 16MB physical pages. 
- *  ENTRYLO0 = RI<31> XI<30> 0<29:26> PFN<25:6> C<5:3> D<2> V<1> G<0> 
- *  Shift __pic32_init_sqi_kseg3_physical_base_addr to PFN. 
+/*  Create one page table entry consisting of two 16MB physical pages.
+ *  ENTRYLO0 = RI<31> XI<30> 0<29:26> PFN<25:6> C<5:3> D<2> V<1> G<0>
+ *  Shift __pic32_init_sqi_kseg3_physical_base_addr to PFN.
  *  Bitwise-OR the other bits of ENTRYLO0.
  */
 __pic32_tlb_1_entrylo0 = ((__pic32_init_sqi_kseg2_physical_base_addr + 0x2000000) >> 6) | __pic32_init_sqi_kseg2_entrylo0_bitset;
@@ -1876,10 +1876,10 @@ PROVIDE (__pic32_init_sqi_kseg3_entrylo0_bitset = 0x17) ;
 __pic32_tlb_2_entryhi  = __pic32_init_sqi_kseg3_virtual_base_addr ;
 
 
-/*  Create one page table entry consisting of two 16MB physical pages. 
- *  ENTRYLO0 = RI<31> XI<30> 0<29:26> PFN<25:6> C<5:3> D<2> V<1> G<0> 
- *  Shift __pic32_init_sqi_kseg3_physical_base_addr to PFN. 
- *  Bitwise-OR the other bits of ENTRYLO0. 
+/*  Create one page table entry consisting of two 16MB physical pages.
+ *  ENTRYLO0 = RI<31> XI<30> 0<29:26> PFN<25:6> C<5:3> D<2> V<1> G<0>
+ *  Shift __pic32_init_sqi_kseg3_physical_base_addr to PFN.
+ *  Bitwise-OR the other bits of ENTRYLO0.
  */
 __pic32_tlb_2_entrylo0 = (__pic32_init_sqi_kseg3_physical_base_addr >> 6) | __pic32_init_sqi_kseg3_entrylo0_bitset ;
 
@@ -1892,9 +1892,9 @@ __pic32_tlb_2_entrylo1 = __pic32_tlb_2_entrylo0 | ((__pic32_init_sqi_kseg3_physi
 __pic32_tlb_3_entryhi  = __pic32_init_sqi_kseg3_virtual_base_addr + 0x2000000;
 
 
-/*  Create one page table entry consisting of two 16MB physical pages. 
- *  ENTRYLO0 = RI<31> XI<30> 0<29:26> PFN<25:6> C<5:3> D<2> V<1> G<0> 
- *  Shift __pic32_init_sqi_kseg3_physical_base_addr to PFN. 
+/*  Create one page table entry consisting of two 16MB physical pages.
+ *  ENTRYLO0 = RI<31> XI<30> 0<29:26> PFN<25:6> C<5:3> D<2> V<1> G<0>
+ *  Shift __pic32_init_sqi_kseg3_physical_base_addr to PFN.
  *  Bitwise-OR the other bits of ENTRYLO0.
  */
 __pic32_tlb_3_entrylo0 = ((__pic32_init_sqi_kseg3_physical_base_addr + 0x2000000) >> 6) | __pic32_init_sqi_kseg3_entrylo0_bitset;
@@ -1919,9 +1919,9 @@ PROVIDE (__pic32_init_ebi_kseg2_entrylo0_bitset = 0x1F) ;
 __pic32_tlb_4_entryhi  = __pic32_init_ebi_kseg2_virtual_base_addr ;
 
 
-/*  Create one page table entry consisting of two 16MB physical pages. 
- *  ENTRYLO0 = RI<31> XI<30> 0<29:26> PFN<25:6> C<5:3> D<2> V<1> G<0> 
- *  Shift __pic32_init_sqi_kseg3_physical_base_addr to PFN. 
+/*  Create one page table entry consisting of two 16MB physical pages.
+ *  ENTRYLO0 = RI<31> XI<30> 0<29:26> PFN<25:6> C<5:3> D<2> V<1> G<0>
+ *  Shift __pic32_init_sqi_kseg3_physical_base_addr to PFN.
  *  Bitwise-OR the other bits of ENTRYLO0.
  */
 __pic32_tlb_4_entrylo0 = (__pic32_init_ebi_kseg2_physical_base_addr >> 6) | __pic32_init_ebi_kseg2_entrylo0_bitset ;
@@ -1935,9 +1935,9 @@ __pic32_tlb_4_entrylo1 = __pic32_tlb_4_entrylo0 | ((__pic32_init_ebi_kseg2_physi
 __pic32_tlb_5_entryhi  = __pic32_init_ebi_kseg2_virtual_base_addr + 0x2000000;
 
 
-/*  Create one page table entry consisting of two 16MB physical pages. 
- *  ENTRYLO0 = RI<31> XI<30> 0<29:26> PFN<25:6> C<5:3> D<2> V<1> G<0> 
- *  Shift __pic32_init_sqi_kseg3_physical_base_addr to PFN. 
+/*  Create one page table entry consisting of two 16MB physical pages.
+ *  ENTRYLO0 = RI<31> XI<30> 0<29:26> PFN<25:6> C<5:3> D<2> V<1> G<0>
+ *  Shift __pic32_init_sqi_kseg3_physical_base_addr to PFN.
  *  Bitwise-OR the other bits of ENTRYLO0.
  */
 __pic32_tlb_5_entrylo0 = ((__pic32_init_ebi_kseg2_physical_base_addr + 0x2000000) >> 6) | __pic32_init_ebi_kseg2_entrylo0_bitset;
@@ -1957,9 +1957,9 @@ PROVIDE (__pic32_init_ebi_kseg3_entrylo0_bitset = 0x17) ;
 __pic32_tlb_6_entryhi  = __pic32_init_ebi_kseg3_virtual_base_addr ;
 
 
-/*  Create one page table entry consisting of two 16MB physical pages. 
- *  ENTRYLO0 = RI<31> XI<30> 0<29:26> PFN<25:6> C<5:3> D<2> V<1> G<0> 
- *  Shift __pic32_init_sqi_kseg3_physical_base_addr to PFN. 
+/*  Create one page table entry consisting of two 16MB physical pages.
+ *  ENTRYLO0 = RI<31> XI<30> 0<29:26> PFN<25:6> C<5:3> D<2> V<1> G<0>
+ *  Shift __pic32_init_sqi_kseg3_physical_base_addr to PFN.
  *  Bitwise-OR the other bits of ENTRYLO0.
  */
 __pic32_tlb_6_entrylo0 = (__pic32_init_ebi_kseg3_physical_base_addr >> 6) | __pic32_init_ebi_kseg3_entrylo0_bitset ;
@@ -1973,9 +1973,9 @@ __pic32_tlb_6_entrylo1 = __pic32_tlb_6_entrylo0 | ((__pic32_init_ebi_kseg3_physi
 __pic32_tlb_7_entryhi  = __pic32_init_ebi_kseg3_virtual_base_addr + 0x2000000;
 
 
-/*  Create one page table entry consisting of two 16MB physical pages. 
- *  ENTRYLO0 = RI<31> XI<30> 0<29:26> PFN<25:6> C<5:3> D<2> V<1> G<0> 
- *  Shift __pic32_init_sqi_kseg3_physical_base_addr to PFN. 
+/*  Create one page table entry consisting of two 16MB physical pages.
+ *  ENTRYLO0 = RI<31> XI<30> 0<29:26> PFN<25:6> C<5:3> D<2> V<1> G<0>
+ *  Shift __pic32_init_sqi_kseg3_physical_base_addr to PFN.
  *  Bitwise-OR the other bits of ENTRYLO0.
  */
 __pic32_tlb_7_entrylo0 = ((__pic32_init_ebi_kseg3_physical_base_addr + 0x2000000) >> 6) | __pic32_init_ebi_kseg3_entrylo0_bitset;
