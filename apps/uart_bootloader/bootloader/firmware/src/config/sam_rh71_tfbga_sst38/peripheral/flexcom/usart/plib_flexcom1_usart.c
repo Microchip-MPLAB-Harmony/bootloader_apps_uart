@@ -64,7 +64,7 @@
 // *****************************************************************************
 // *****************************************************************************
 
-void static FLEXCOM1_USART_ErrorClear( void )
+static void FLEXCOM1_USART_ErrorClear( void )
 {
     if ((FLEXCOM1_REGS->FLEX_US_CSR & (FLEX_US_CSR_OVRE_Msk | FLEX_US_CSR_FRAME_Msk | FLEX_US_CSR_PARE_Msk)) != 0U)
     {
@@ -324,4 +324,6 @@ bool FLEXCOM1_USART_TransmitComplete( void )
 {
     return ((FLEXCOM1_REGS->FLEX_US_CSR & FLEX_US_CSR_TXEMPTY_Msk) != 0U);
 }
+
+
 
