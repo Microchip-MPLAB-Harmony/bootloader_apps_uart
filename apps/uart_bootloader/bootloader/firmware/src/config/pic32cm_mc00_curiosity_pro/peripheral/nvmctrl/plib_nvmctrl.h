@@ -117,6 +117,8 @@ void NVMCTRL_RegionUnlock (uint32_t address);
 
 void NVMCTRL_SecurityBitSet(void);
 
+void NVMCTRL_ChipEraseHardLockSet(void);
+
 
 bool NVMCTRL_PageBufferWrite( uint32_t *data, const uint32_t address);
 
