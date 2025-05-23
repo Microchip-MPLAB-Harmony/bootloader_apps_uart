@@ -1,9 +1,13 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <configurationDescriptor version="65">
   <logicalFolder name="root" displayName="root" projectFiles="true">
-    <logicalFolder name="HeaderFiles" displayName="Header Files" projectFiles="true">
+    <logicalFolder name="HeaderFiles"
+                   displayName="Header Files"
+                   projectFiles="true">
       <logicalFolder name="config" displayName="config" projectFiles="true">
-        <logicalFolder name="sam_a5d29_curiosity" displayName="sam_a5d29_curiosity" projectFiles="true">
+        <logicalFolder name="sam_a5d29_curiosity"
+                       displayName="sam_a5d29_curiosity"
+                       projectFiles="true">
           <logicalFolder name="peripheral" displayName="peripheral" projectFiles="true">
             <logicalFolder name="aic" displayName="aic" projectFiles="true">
               <itemPath>../src/config/sam_a5d29_curiosity/peripheral/aic/plib_aic.h</itemPath>
@@ -44,7 +48,9 @@
         </logicalFolder>
       </logicalFolder>
       <logicalFolder name="packs" displayName="packs" projectFiles="true">
-        <logicalFolder name="ATSAMA5D29_DFP" displayName="ATSAMA5D29_DFP" projectFiles="true">
+        <logicalFolder name="ATSAMA5D29_DFP"
+                       displayName="ATSAMA5D29_DFP"
+                       projectFiles="true">
           <logicalFolder name="component" displayName="component" projectFiles="true">
             <itemPath>../src/packs/ATSAMA5D29_DFP/component/wdt.h</itemPath>
             <itemPath>../src/packs/ATSAMA5D29_DFP/component/uart.h</itemPath>
@@ -162,6 +168,13 @@
             <itemPath>../src/packs/ATSAMA5D29_DFP/instance/rstc.h</itemPath>
             <itemPath>../src/packs/ATSAMA5D29_DFP/instance/flexcom3.h</itemPath>
             <itemPath>../src/packs/ATSAMA5D29_DFP/instance/gmac.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D29_DFP/instance/pioc.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D29_DFP/instance/pio_ctrl.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D29_DFP/instance/s_pio.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D29_DFP/instance/piod.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D29_DFP/instance/s_pio_ctrl.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D29_DFP/instance/pioa.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D29_DFP/instance/piob.h</itemPath>
           </logicalFolder>
           <logicalFolder name="pio" displayName="pio" projectFiles="true">
             <itemPath>../src/packs/ATSAMA5D29_DFP/pio/sama5d29.h</itemPath>
@@ -184,16 +197,30 @@
       </logicalFolder>
       <itemPath>../src/app_sama_arm9.h</itemPath>
     </logicalFolder>
-    <logicalFolder name="LinkerScript" displayName="Linker Files" projectFiles="true">
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="true">
+      <itemPath>Makefile</itemPath>
+      <itemPath>uart_bootloader_test_app_sam_a5d29_curiosity.mc3</itemPath>
+    </logicalFolder>
+    <logicalFolder name="LinkerScript"
+                   displayName="Linker Files"
+                   projectFiles="true">
       <logicalFolder name="config" displayName="config" projectFiles="true">
-        <logicalFolder name="sam_a5d29_curiosity" displayName="sam_a5d29_curiosity" projectFiles="true">
+        <logicalFolder name="sam_a5d29_curiosity"
+                       displayName="sam_a5d29_curiosity"
+                       projectFiles="true">
           <itemPath>../src/config/sam_a5d29_curiosity/ddr.ld</itemPath>
         </logicalFolder>
       </logicalFolder>
     </logicalFolder>
-    <logicalFolder name="SourceFiles" displayName="Source Files" projectFiles="true">
+    <logicalFolder name="SourceFiles"
+                   displayName="Source Files"
+                   projectFiles="true">
       <logicalFolder name="config" displayName="config" projectFiles="true">
-        <logicalFolder name="sam_a5d29_curiosity" displayName="sam_a5d29_curiosity" projectFiles="true">
+        <logicalFolder name="sam_a5d29_curiosity"
+                       displayName="sam_a5d29_curiosity"
+                       projectFiles="true">
           <logicalFolder name="peripheral" displayName="peripheral" projectFiles="true">
             <logicalFolder name="aic" displayName="aic" projectFiles="true">
               <itemPath>../src/config/sam_a5d29_curiosity/peripheral/aic/plib_aic.c</itemPath>
@@ -236,10 +263,6 @@
       <itemPath>../src/app_sama_arm9.c</itemPath>
       <itemPath>../src/config/sam_a5d29_curiosity/pin_configurations.csv</itemPath>
     </logicalFolder>
-    <logicalFolder name="ExternalFiles" displayName="Important Files" projectFiles="false">
-      <itemPath>Makefile</itemPath>
-      <itemPath>uart_bootloader_test_app_sam_a5d29_curiosity.mc3</itemPath>
-    </logicalFolder>
   </logicalFolder>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
@@ -247,11 +270,11 @@
       <toolsSet>
         <developmentServer>localhost</developmentServer>
         <targetDevice>ATSAMA5D29</targetDevice>
-        <targetHeader/>
-        <targetPluginBoard/>
+        <targetHeader></targetHeader>
+        <targetPluginBoard></targetPluginBoard>
         <platformTool>noID</platformTool>
         <languageToolchain>XC32</languageToolchain>
-        <languageToolchainVersion>4.35</languageToolchainVersion>
+        <languageToolchainVersion>4.60</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <packs>
@@ -270,7 +293,7 @@
         <loading>
           <useAlternateLoadableFile>false</useAlternateLoadableFile>
           <parseOnProdLoad>false</parseOnProdLoad>
-          <alternateLoadableFile/>
+          <alternateLoadableFile></alternateLoadableFile>
         </loading>
         <subordinates>
         </subordinates>
@@ -278,7 +301,7 @@
       <makeCustomizationType>
         <makeCustomizationPreStepEnabled>false</makeCustomizationPreStepEnabled>
         <makeUseCleanTarget>false</makeUseCleanTarget>
-        <makeCustomizationPreStep/>
+        <makeCustomizationPreStep></makeCustomizationPreStep>
         <makeCustomizationPostStepEnabled>true</makeCustomizationPostStepEnabled>
         <makeCustomizationPostStep>${MP_CC_DIR}/xc32-objcopy -Obinary ${ImageDir}/${ConfName}.X.${IMAGE_TYPE}.elf ${ImageDir}/harmony.bin</makeCustomizationPostStep>
         <makeCustomizationPutChecksumInUserID>false</makeCustomizationPutChecksumInUserID>
@@ -294,7 +317,8 @@
         <property key="enable-symbols" value="true"/>
         <property key="enable-unroll-loops" value="false"/>
         <property key="exclude-floating-point" value="false"/>
-        <property key="extra-include-directories" value="../src;../src/config/sam_a5d29_curiosity;../src/packs/ATSAMA5D29_DFP;../src/packs/CMSIS/;../src/packs/CMSIS/CMSIS/Core_A/Include"/>
+        <property key="extra-include-directories"
+                  value="../src;../src/config/sam_a5d29_curiosity;../src/packs/ATSAMA5D29_DFP;../src/packs/CMSIS/;../src/packs/CMSIS/CMSIS/Core_A/Include"/>
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="true"/>
@@ -312,6 +336,7 @@
         <property key="use-cci" value="false"/>
         <property key="use-iar" value="false"/>
         <property key="use-indirect-calls" value="false"/>
+        <appendMe value="-marm"/>
       </C32>
       <C32-AR>
         <property key="additional-options-chop-files" value="false"/>
@@ -393,7 +418,8 @@
         <property key="enable-unroll-loops" value="false"/>
         <property key="exceptions" value="true"/>
         <property key="exclude-floating-point" value="false"/>
-        <property key="extra-include-directories" value="../src;../src/config/sam_a5d29_curiosity;../src/packs/ATSAMA5D29_DFP;../src/packs/CMSIS/;../src/packs/CMSIS/CMSIS/Core_A/Include"/>
+        <property key="extra-include-directories"
+                  value="../src;../src/config/sam_a5d29_curiosity;../src/packs/ATSAMA5D29_DFP;../src/packs/CMSIS/;../src/packs/CMSIS/CMSIS/Core_A/Include"/>
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="true"/>
