@@ -50,6 +50,7 @@
 #include "interrupts.h"
 
 #define PIT_COUNTER_FREQUENCY       (200000000U / 16U)
+#define PIT_INTERRUPT_PERIOD_IN_US  (1000U)
 
 // *****************************************************************************
 // *****************************************************************************
@@ -68,7 +69,7 @@ typedef struct
 // Section: File Scope or Global Constants
 // *****************************************************************************
 // *****************************************************************************
-volatile static PIT_OBJECT pit;
+static volatile PIT_OBJECT pit;
 
 
 void PIT_TimerInitialize(void)
@@ -165,6 +166,35 @@ void PIT_DelayUs(uint32_t delay_us)
             oldCount = newCount;
         }
     }
+}
+
+
+uint32_t PIT_GetTickCounter(void)
+{
+    return pit.tickCounter;
+}
+
+void PIT_StartTimeOut (PIT_TIMEOUT* timeout, uint32_t delay_ms)
+{
+    timeout->start = PIT_GetTickCounter();
+    timeout->count = (delay_ms*1000U)/PIT_INTERRUPT_PERIOD_IN_US;
+}
+
+void PIT_ResetTimeOut (PIT_TIMEOUT* timeout)
+{
+    timeout->start = PIT_GetTickCounter();
+}
+
+bool PIT_IsTimeoutReached (PIT_TIMEOUT* timeout)
+{
+    bool valTimeout  = true;
+    if ((PIT_GetTickCounter() - timeout->start) < timeout->count)
+    {
+        valTimeout = false;
+    }
+
+    return valTimeout;
+
 }
 
 void PIT_TimerCallbackSet(PIT_CALLBACK callback, uintptr_t context)

@@ -72,11 +72,13 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 
 /* TTB Section Descriptor: Section Base Address */
 #define TTB_SECT_ADDR(x)           ((x) & 0xFFF00000U)
+
 /* L1 data cache line size, Number of ways and Number of sets */
 #define L1_DATA_CACHE_BYTES        32U
 #define L1_DATA_CACHE_WAYS         4U
 #define L1_DATA_CACHE_SETS         256U
 #define L1_DATA_CACHE_SETWAY(set, way) (((set) << 5) | ((way) << 30))
+
 
 __ALIGNED(16384) static uint32_t trns_tbl[4096];
 
@@ -257,7 +259,6 @@ void dcache_Disable(void)
     }
 }
 
-
 // *****************************************************************************
 /* Function:
     void MMU_Initialize(void);
@@ -282,6 +283,7 @@ void MMU_Initialize(void)
 {
     uint32_t addr;
 
+    
     /* Reset table entries */
     for (addr = 0U; addr < 4096U; addr++) {
         trns_tbl[addr] = 0;
