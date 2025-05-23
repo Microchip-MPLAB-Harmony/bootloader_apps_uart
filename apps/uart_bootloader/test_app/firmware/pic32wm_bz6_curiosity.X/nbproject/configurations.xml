@@ -194,7 +194,7 @@
                    displayName="Important Files"
                    projectFiles="true">
       <itemPath>Makefile</itemPath>
-      <itemPath>pic32wm_bz6_cuiosity.mc3</itemPath>
+      <itemPath>pic32wm_bz6_curiosity.mc3</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -265,14 +265,14 @@
         <targetDevice>PIC32WM_BZ6204</targetDevice>
         <targetHeader></targetHeader>
         <targetPluginBoard></targetPluginBoard>
-        <platformTool>pkob4hybrid</platformTool>
+        <platformTool>noID</platformTool>
         <languageToolchain>XC32</languageToolchain>
         <languageToolchainVersion>4.60</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <packs>
-        <pack name="PIC32CX-BZ6_DFP" vendor="Microchip" version="1.2.17"/>
         <pack name="CMSIS" vendor="ARM" version="6.1.0"/>
+        <pack name="PIC32CX-BZ6_DFP" vendor="Microchip" version="1.2.17"/>
       </packs>
       <ScriptingSettings>
       </ScriptingSettings>
@@ -295,7 +295,7 @@
         <makeCustomizationPreStepEnabled>false</makeCustomizationPreStepEnabled>
         <makeUseCleanTarget>false</makeUseCleanTarget>
         <makeCustomizationPreStep></makeCustomizationPreStep>
-        <makeCustomizationPostStepEnabled>false</makeCustomizationPostStepEnabled>
+        <makeCustomizationPostStepEnabled>true</makeCustomizationPostStepEnabled>
         <makeCustomizationPostStep>${MP_CC_DIR}/xc32-objcopy -I ihex -O binary ${DISTDIR}/${PROJECTNAME}.${IMAGE_TYPE}.hex ${DISTDIR}/${PROJECTNAME}.${IMAGE_TYPE}.bin</makeCustomizationPostStep>
         <makeCustomizationPutChecksumInUserID>false</makeCustomizationPutChecksumInUserID>
         <makeCustomizationEnableLongLines>false</makeCustomizationEnableLongLines>
@@ -514,7 +514,7 @@
         <property key="memories.programmemory" value="true"/>
         <property key="memories.programmemory.ranges" value="1000000-2007ffff"/>
         <property key="programmerToGoFilePath"
-                  value="C:/Users/I76597/h3/bootloader_apps_uart/apps/uart_bootloader/test_app/firmware/pic32wm_bz6_cuiosity.X/debug/default/pic32wm_bz6_cuiosity_ptg"/>
+                  value="C:/Users/I76597/h3/bootloader_apps_uart/apps/uart_bootloader/test_app/firmware/pic32wm_bz6_curiosity.X/debug/default/pic32wm_bz6_curiosity_ptg"/>
         <property key="programoptions.donoteraseauxmem" value="false"/>
         <property key="programoptions.eraseb4program" value="true"/>
         <property key="programoptions.pgmentry.voltage" value="low"/>
@@ -571,8 +571,6 @@
                   value="${memories.instruction.ram.ranges}"/>
         <property key="memories.programmemory" value="true"/>
         <property key="memories.programmemory.ranges" value="1000000-2007ffff"/>
-        <property key="programmerToGoFilePath"
-                  value="C:/Users/I76597/h3/bootloader_apps_uart/apps/uart_bootloader/test_app/firmware/pic32wm_bz6_cuiosity.X/debug/default/pic32wm_bz6_cuiosity_ptg"/>
         <property key="programoptions.donoteraseauxmem" value="false"/>
         <property key="programoptions.eraseb4program" value="true"/>
         <property key="programoptions.pgmentry.voltage" value="low"/>

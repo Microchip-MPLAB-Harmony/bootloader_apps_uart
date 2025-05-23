@@ -4,7 +4,7 @@
 
 
 project: test_app
-creation_date: 2025-04-24T15:08:22.383+05:30[Asia/Calcutta]    # ISO 8601 format: https://www.w3.org/TR/NOTE-datetime
+creation_date: 2025-05-26T18:29:51.219+05:30[Asia/Calcutta]    # ISO 8601 format: https://www.w3.org/TR/NOTE-datetime
 operating_system: Windows 11
 mcc_mode: IDE            # [IDE|Standalone|Headless]
 mcc_version: v5.5.2
@@ -14,9 +14,9 @@ harmony_version: v1.5.5
 compiler: XC32 4.60
 
 modules:
-    - {name: "csp", version: "v3.22.2"}
-    - {name: "core", version: "v3.15.1"}
-    - {name: "CMSIS_5", version: "5.9.0"}
+    - {name: "csp", version: "v3.22.2-42-g413852b"}
+    - {name: "core", version: "v3.15.2"}
+    - {name: "CMSIS_5", version: "5.8.0"}
     - {name: "bsp", version: "v3.22.0"}
 
 packs:
