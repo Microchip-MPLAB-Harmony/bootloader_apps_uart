@@ -64,7 +64,7 @@ static void OSCCTRL_Initialize(void)
         /* Waiting for the OSC48M Ready state */
     }
     OSCCTRL_REGS->OSCCTRL_OSC48MCTRL |= OSCCTRL_OSC48MCTRL_ONDEMAND_Msk;
-     
+
 }
 
 static void OSC32KCTRL_Initialize(void)
