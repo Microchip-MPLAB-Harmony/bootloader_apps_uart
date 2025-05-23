@@ -1,26 +1,23 @@
 /*
  * Component description for FUSES
  *
- * Copyright (c) 2023 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2024 Microchip Technology Inc. and its subsidiaries.
  *
- * Subject to your compliance with these terms, you may use Microchip software and any derivatives
- * exclusively with Microchip products. It is your responsibility to comply with third party license
- * terms applicable to your use of third party software (including open source software) that may
- * accompany Microchip software.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
  *
- * THIS SOFTWARE IS SUPPLIED BY MICROCHIP "AS IS". NO WARRANTIES, WHETHER EXPRESS, IMPLIED OR STATUTORY,
- * APPLY TO THIS SOFTWARE, INCLUDING ANY IMPLIED WARRANTIES OF NON-INFRINGEMENT, MERCHANTABILITY, AND
- * FITNESS FOR A PARTICULAR PURPOSE.
+ *   http://www.apache.org/licenses/LICENSE-2.0
  *
- * IN NO EVENT WILL MICROCHIP BE LIABLE FOR ANY INDIRECT, SPECIAL, PUNITIVE, INCIDENTAL OR CONSEQUENTIAL
- * LOSS, DAMAGE, COST OR EXPENSE OF ANY KIND WHATSOEVER RELATED TO THE SOFTWARE, HOWEVER CAUSED, EVEN IF
- * MICROCHIP HAS BEEN ADVISED OF THE POSSIBILITY OR THE DAMAGES ARE FORESEEABLE. TO THE FULLEST EXTENT
- * ALLOWED BY LAW, MICROCHIP'S TOTAL LIABILITY ON ALL CLAIMS IN ANY WAY RELATED TO THIS SOFTWARE WILL NOT
- * EXCEED THE AMOUNT OF FEES, IF ANY, THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
  *
  */
 
-/* file generated from device description version 2023-04-11T16:47:17Z */
+/* file generated from device description file (ATDF) version 2024-02-12T06:36:14Z */
 #ifndef _WBZ35_FUSES_COMPONENT_H_
 #define _WBZ35_FUSES_COMPONENT_H_
 
@@ -132,7 +129,7 @@
 #define FUSES_DEVCFG4_RTCEVENT_SEL(value)     (FUSES_DEVCFG4_RTCEVENT_SEL_Msk & (_UINT32_(value) << FUSES_DEVCFG4_RTCEVENT_SEL_Pos)) /* Assigment of value for RTCEVENT_SEL in the FUSES_DEVCFG4 register */
 #define   FUSES_DEVCFG4_RTCEVENT_SEL_ONE_SEC_Val _UINT32_(0x0)                                        /* (FUSES_DEVCFG4) 1-Second Clock  */
 #define   FUSES_DEVCFG4_RTCEVENT_SEL_ALARM_PULSE_Val _UINT32_(0x1)                                        /* (FUSES_DEVCFG4) Alarm Pulse  */
-#define   FUSES_DEVCFG4_RTCEVENT_SEL_32_KHZ_Val _UINT32_(0x1)                                        /* (FUSES_DEVCFG4) 32 kHz Clock  */
+#define   FUSES_DEVCFG4_RTCEVENT_SEL_32_KHZ_Val _UINT32_(0x2)                                        /* (FUSES_DEVCFG4) 32 kHz Clock  */
 #define FUSES_DEVCFG4_RTCEVENT_SEL_ONE_SEC    (FUSES_DEVCFG4_RTCEVENT_SEL_ONE_SEC_Val << FUSES_DEVCFG4_RTCEVENT_SEL_Pos) /* (FUSES_DEVCFG4) 1-Second Clock Position  */
 #define FUSES_DEVCFG4_RTCEVENT_SEL_ALARM_PULSE (FUSES_DEVCFG4_RTCEVENT_SEL_ALARM_PULSE_Val << FUSES_DEVCFG4_RTCEVENT_SEL_Pos) /* (FUSES_DEVCFG4) Alarm Pulse Position  */
 #define FUSES_DEVCFG4_RTCEVENT_SEL_32_KHZ     (FUSES_DEVCFG4_RTCEVENT_SEL_32_KHZ_Val << FUSES_DEVCFG4_RTCEVENT_SEL_Pos) /* (FUSES_DEVCFG4) 32 kHz Clock Position  */
@@ -879,7 +876,7 @@
 #define FUSES_DEVCFG0_SLRTEN(value)           (FUSES_DEVCFG0_SLRTEN_Msk & (_UINT32_(value) << FUSES_DEVCFG0_SLRTEN_Pos)) 
 
 /* -------- FUSES_FBCFG0 : (FUSES Offset: 0x11C) (R/W 32) NVR BCFG User Configuration Area -------- */
-#define FUSES_FBCFG0_RESETVALUE               _UINT32_(0x02)                                       /*  (FUSES_FBCFG0) NVR BCFG User Configuration Area  Reset Value */
+#define FUSES_FBCFG0_RESETVALUE               _UINT32_(0x00)                                       /*  (FUSES_FBCFG0) NVR BCFG User Configuration Area  Reset Value */
 
 #define FUSES_FBCFG0_PCSCMODE_Pos             _UINT32_(1)                                          /* (FUSES_FBCFG0) PCache Single cache Mode Position */
 #define FUSES_FBCFG0_PCSCMODE_Msk             (_UINT32_(0x1) << FUSES_FBCFG0_PCSCMODE_Pos)         /* (FUSES_FBCFG0) PCache Single cache Mode Mask */

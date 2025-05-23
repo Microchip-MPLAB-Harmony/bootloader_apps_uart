@@ -1,13 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <configurationDescriptor version="65">
   <logicalFolder name="root" displayName="root" projectFiles="true">
-    <logicalFolder name="HeaderFiles"
-                   displayName="Header Files"
-                   projectFiles="true">
+    <logicalFolder name="HeaderFiles" displayName="Header Files" projectFiles="true">
       <logicalFolder name="config" displayName="config" projectFiles="true">
-        <logicalFolder name="wbz351_curiosity"
-                       displayName="wbz351_curiosity"
-                       projectFiles="true">
+        <logicalFolder name="wbz351_curiosity" displayName="wbz351_curiosity" projectFiles="true">
           <logicalFolder name="bootloader" displayName="bootloader" projectFiles="true">
             <itemPath>../src/config/wbz351_curiosity/bootloader/bootloader_common.h</itemPath>
             <itemPath>../src/config/wbz351_curiosity/bootloader/bootloader_interrupt.h</itemPath>
@@ -176,18 +172,12 @@
         </logicalFolder>
       </logicalFolder>
     </logicalFolder>
-    <logicalFolder name="LinkerScript"
-                   displayName="Linker Files"
-                   projectFiles="true">
+    <logicalFolder name="LinkerScript" displayName="Linker Files" projectFiles="true">
       <itemPath>../src/config/wbz351_curiosity/btl.ld</itemPath>
     </logicalFolder>
-    <logicalFolder name="SourceFiles"
-                   displayName="Source Files"
-                   projectFiles="true">
+    <logicalFolder name="SourceFiles" displayName="Source Files" projectFiles="true">
       <logicalFolder name="config" displayName="config" projectFiles="true">
-        <logicalFolder name="wbz351_curiosity"
-                       displayName="wbz351_curiosity"
-                       projectFiles="true">
+        <logicalFolder name="wbz351_curiosity" displayName="wbz351_curiosity" projectFiles="true">
           <logicalFolder name="bootloader" displayName="bootloader" projectFiles="true">
             <itemPath>../src/config/wbz351_curiosity/bootloader/bootloader_common.c</itemPath>
             <itemPath>../src/config/wbz351_curiosity/bootloader/bootloader_uart.c</itemPath>
@@ -232,9 +222,7 @@
       </logicalFolder>
       <itemPath>../src/main.c</itemPath>
     </logicalFolder>
-    <logicalFolder name="ExternalFiles"
-                   displayName="Important Files"
-                   projectFiles="false">
+    <logicalFolder name="ExternalFiles" displayName="Important Files" projectFiles="false">
       <itemPath>Makefile</itemPath>
       <itemPath>uart_bootloader_wbz351_curiosity.mc3</itemPath>
     </logicalFolder>
@@ -245,44 +233,33 @@
       <toolsSet>
         <developmentServer>localhost</developmentServer>
         <targetDevice>WBZ351</targetDevice>
-        <targetHeader></targetHeader>
-        <targetPluginBoard></targetPluginBoard>
+        <targetHeader/>
+        <targetPluginBoard/>
         <platformTool>pkob4hybrid</platformTool>
         <languageToolchain>XC32</languageToolchain>
-        <languageToolchainVersion>4.30</languageToolchainVersion>
+        <languageToolchainVersion>4.60</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <packs>
-        <pack name="PIC32CX-BZ3_DFP" vendor="Microchip" version="1.0.157"/>
+        <pack name="PIC32CX-BZ3_DFP" vendor="Microchip" version="1.2.183"/>
         <pack name="CMSIS" vendor="ARM" version="5.8.0"/>
       </packs>
       <ScriptingSettings>
-        <ScriptingSetting key="configuration.header.zota_manufacture_code"
-                          value="0xFFFF"/>
+        <ScriptingSetting key="configuration.header.zota_manufacture_code" value="0xFFFF"/>
         <ScriptingSetting key="configuration.header.zota_image_type" value="0xFFFF"/>
-        <ScriptingSetting key="configuration.header.zota_security_credential_version_check"
-                          value="False"/>
-        <ScriptingSetting key="configuration.header.bota_flash_img_id"
-                          value="0x9E000000"/>
-        <ScriptingSetting key="configuration.header.iv"
-                          value="0x00000000000000000000000000000000"/>
+        <ScriptingSetting key="configuration.header.zota_security_credential_version_check" value="False"/>
+        <ScriptingSetting key="configuration.header.bota_flash_img_id" value="0x9E000000"/>
+        <ScriptingSetting key="configuration.header.iv" value="0x00000000000000000000000000000000"/>
         <ScriptingSetting key="configuration.header.outputEncryption" value="Encrypted"/>
-        <ScriptingSetting key="configuration.header.zota_file_version"
-                          value="0x00000000"/>
-        <ScriptingSetting key="configuration.header.zota_zigbee_stack_version"
-                          value="0x0002"/>
-        <ScriptingSetting key="configuration.header.outputfiletypes"
-                          value="BLE OTA File"/>
-        <ScriptingSetting key="configuration.header.outputfilename"
-                          value="OTAPackage.bin"/>
-        <ScriptingSetting key="configuration.header.zota_upgrade_file_destination_check"
-                          value="False"/>
-        <ScriptingSetting key="configuration.header.aes_key"
-                          value="0xAABBCCDDEEFF00112233445566778899"/>
+        <ScriptingSetting key="configuration.header.zota_file_version" value="0x00000000"/>
+        <ScriptingSetting key="configuration.header.zota_zigbee_stack_version" value="0x0002"/>
+        <ScriptingSetting key="configuration.header.outputfiletypes" value="BLE OTA File"/>
+        <ScriptingSetting key="configuration.header.outputfilename" value="OTAPackage.bin"/>
+        <ScriptingSetting key="configuration.header.zota_upgrade_file_destination_check" value="False"/>
+        <ScriptingSetting key="configuration.header.aes_key" value="0xAABBCCDDEEFF00112233445566778899"/>
         <ScriptingSetting key="configuration.header.zota_header_string" value="MCHP"/>
         <ScriptingSetting key="configuration.header.OTAPath" value="Internal Flash DFU"/>
-        <ScriptingSetting key="configuration.header.zota_hardware_version_check"
-                          value="False"/>
+        <ScriptingSetting key="configuration.header.zota_hardware_version_check" value="False"/>
       </ScriptingSettings>
       <compileType>
         <linkerTool>
@@ -294,7 +271,7 @@
         <loading>
           <useAlternateLoadableFile>false</useAlternateLoadableFile>
           <parseOnProdLoad>false</parseOnProdLoad>
-          <alternateLoadableFile></alternateLoadableFile>
+          <alternateLoadableFile/>
         </loading>
         <subordinates>
         </subordinates>
@@ -302,9 +279,9 @@
       <makeCustomizationType>
         <makeCustomizationPreStepEnabled>false</makeCustomizationPreStepEnabled>
         <makeUseCleanTarget>false</makeUseCleanTarget>
-        <makeCustomizationPreStep></makeCustomizationPreStep>
+        <makeCustomizationPreStep/>
         <makeCustomizationPostStepEnabled>false</makeCustomizationPostStepEnabled>
-        <makeCustomizationPostStep></makeCustomizationPostStep>
+        <makeCustomizationPostStep/>
         <makeCustomizationPutChecksumInUserID>false</makeCustomizationPutChecksumInUserID>
         <makeCustomizationEnableLongLines>false</makeCustomizationEnableLongLines>
         <makeCustomizationNormalizeHexFile>false</makeCustomizationNormalizeHexFile>
@@ -318,8 +295,7 @@
         <property key="enable-symbols" value="true"/>
         <property key="enable-unroll-loops" value="false"/>
         <property key="exclude-floating-point" value="false"/>
-        <property key="extra-include-directories"
-                  value="../src;../src/config/wbz351_curiosity;../src/packs/CMSIS/;../src/packs/CMSIS/CMSIS/Core/Include;../src/packs/WBZ351_DFP"/>
+        <property key="extra-include-directories" value="../src;../src/config/wbz351_curiosity;../src/packs/CMSIS/;../src/packs/CMSIS/CMSIS/Core/Include;../src/packs/WBZ351_DFP"/>
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="true"/>
@@ -418,8 +394,7 @@
         <property key="enable-unroll-loops" value="false"/>
         <property key="exceptions" value="true"/>
         <property key="exclude-floating-point" value="false"/>
-        <property key="extra-include-directories"
-                  value="../src;../src/config/wbz351_curiosity;../src/packs/CMSIS/;../src/packs/CMSIS/CMSIS/Core/Include;../src/packs/WBZ351_DFP"/>
+        <property key="extra-include-directories" value="../src;../src/config/wbz351_curiosity;../src/packs/CMSIS/;../src/packs/CMSIS/CMSIS/Core/Include;../src/packs/WBZ351_DFP"/>
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="true"/>
@@ -453,12 +428,9 @@
       </C32Global>
       <Tool>
         <property key="AutoSelectMemRanges" value="auto"/>
-        <property key="ToolFirmwareFilePath"
-                  value="Press to browse for a specific firmware version"/>
-        <property key="ToolFirmwareOption.UpdateOptions"
-                  value="ToolFirmwareOption.UseLatest"/>
-        <property key="ToolFirmwareToolPack"
-                  value="Press to select which tool pack to use"/>
+        <property key="ToolFirmwareFilePath" value="Press to browse for a specific firmware version"/>
+        <property key="ToolFirmwareOption.UpdateOptions" value="ToolFirmwareOption.UseLatest"/>
+        <property key="ToolFirmwareToolPack" value="Press to select which tool pack to use"/>
         <property key="communication.interface" value="swd"/>
         <property key="communication.interface.jtag" value="2wire"/>
         <property key="communication.speed" value="2.000"/>
@@ -476,19 +448,16 @@
         <property key="memories.exclude.configurationmemory" value="true"/>
         <property key="memories.flashdata" value="true"/>
         <property key="memories.id" value="true"/>
-        <property key="memories.instruction.ram.ranges"
-                  value="${memories.instruction.ram.ranges}"/>
+        <property key="memories.instruction.ram.ranges" value="${memories.instruction.ram.ranges}"/>
         <property key="memories.programmemory" value="true"/>
         <property key="memories.programmemory.ranges" value="1000000-20017fff"/>
-        <property key="programmerToGoFilePath"
-                  value="C:/h3_mware_apps/bootloader_apps_uart/apps/uart_bootloader/bootloader/firmware/wbz351_curiosity.X/debug/wbz351_curiosity/wbz351_curiosity_ptg"/>
+        <property key="programmerToGoFilePath" value="C:/h3_mware_apps/bootloader_apps_uart/apps/uart_bootloader/bootloader/firmware/wbz351_curiosity.X/debug/wbz351_curiosity/wbz351_curiosity_ptg"/>
         <property key="programoptions.donoteraseauxmem" value="false"/>
         <property key="programoptions.eraseb4program" value="true"/>
         <property key="programoptions.pgmentry.voltage" value="low"/>
         <property key="programoptions.pgmspeed" value="Med"/>
         <property key="programoptions.preservedataflash" value="false"/>
-        <property key="programoptions.preservedataflash.ranges"
-                  value="${memories.dataflash.default}"/>
+        <property key="programoptions.preservedataflash.ranges" value="${memories.dataflash.default}"/>
         <property key="programoptions.preserveeeprom" value="false"/>
         <property key="programoptions.preserveeeprom.ranges" value=""/>
         <property key="programoptions.preserveprogram.ranges" value=""/>
@@ -498,19 +467,14 @@
         <property key="programoptions.programcalmem" value="false"/>
         <property key="programoptions.programuserotp" value="false"/>
         <property key="programoptions.testmodeentrymethod" value="VDDFirst"/>
-        <property key="toolpack.updateoptions"
-                  value="toolpack.updateoptions.uselatestoolpack"/>
-        <property key="toolpack.updateoptions.packversion"
-                  value="Press to select which tool pack to use"/>
+        <property key="toolpack.updateoptions" value="toolpack.updateoptions.uselatestoolpack"/>
+        <property key="toolpack.updateoptions.packversion" value="Press to select which tool pack to use"/>
       </Tool>
       <pkob4hybrid>
         <property key="AutoSelectMemRanges" value="auto"/>
-        <property key="ToolFirmwareFilePath"
-                  value="Press to browse for a specific firmware version"/>
-        <property key="ToolFirmwareOption.UpdateOptions"
-                  value="ToolFirmwareOption.UseLatest"/>
-        <property key="ToolFirmwareToolPack"
-                  value="Press to select which tool pack to use"/>
+        <property key="ToolFirmwareFilePath" value="Press to browse for a specific firmware version"/>
+        <property key="ToolFirmwareOption.UpdateOptions" value="ToolFirmwareOption.UseLatest"/>
+        <property key="ToolFirmwareToolPack" value="Press to select which tool pack to use"/>
         <property key="communication.interface" value="swd"/>
         <property key="communication.interface.jtag" value="2wire"/>
         <property key="communication.speed" value="2.000"/>
@@ -528,19 +492,16 @@
         <property key="memories.exclude.configurationmemory" value="true"/>
         <property key="memories.flashdata" value="true"/>
         <property key="memories.id" value="true"/>
-        <property key="memories.instruction.ram.ranges"
-                  value="${memories.instruction.ram.ranges}"/>
+        <property key="memories.instruction.ram.ranges" value="${memories.instruction.ram.ranges}"/>
         <property key="memories.programmemory" value="true"/>
         <property key="memories.programmemory.ranges" value="1000000-20017fff"/>
-        <property key="programmerToGoFilePath"
-                  value="C:/h3_mware_apps/bootloader_apps_uart/apps/uart_bootloader/bootloader/firmware/wbz351_curiosity.X/debug/wbz351_curiosity/wbz351_curiosity_ptg"/>
+        <property key="programmerToGoFilePath" value="C:/h3_mware_apps/bootloader_apps_uart/apps/uart_bootloader/bootloader/firmware/wbz351_curiosity.X/debug/wbz351_curiosity/wbz351_curiosity_ptg"/>
         <property key="programoptions.donoteraseauxmem" value="false"/>
         <property key="programoptions.eraseb4program" value="true"/>
         <property key="programoptions.pgmentry.voltage" value="low"/>
         <property key="programoptions.pgmspeed" value="Med"/>
         <property key="programoptions.preservedataflash" value="false"/>
-        <property key="programoptions.preservedataflash.ranges"
-                  value="${memories.dataflash.default}"/>
+        <property key="programoptions.preservedataflash.ranges" value="${memories.dataflash.default}"/>
         <property key="programoptions.preserveeeprom" value="false"/>
         <property key="programoptions.preserveeeprom.ranges" value=""/>
         <property key="programoptions.preserveprogram.ranges" value=""/>
@@ -550,10 +511,8 @@
         <property key="programoptions.programcalmem" value="false"/>
         <property key="programoptions.programuserotp" value="false"/>
         <property key="programoptions.testmodeentrymethod" value="VDDFirst"/>
-        <property key="toolpack.updateoptions"
-                  value="toolpack.updateoptions.uselatestoolpack"/>
-        <property key="toolpack.updateoptions.packversion"
-                  value="Press to select which tool pack to use"/>
+        <property key="toolpack.updateoptions" value="toolpack.updateoptions.uselatestoolpack"/>
+        <property key="toolpack.updateoptions.packversion" value="Press to select which tool pack to use"/>
       </pkob4hybrid>
     </conf>
   </confs>

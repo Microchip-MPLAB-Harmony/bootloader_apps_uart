@@ -1,26 +1,23 @@
 /*
  * Component description for DAC_CTRL
  *
- * Copyright (c) 2023 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2024 Microchip Technology Inc. and its subsidiaries.
  *
- * Subject to your compliance with these terms, you may use Microchip software and any derivatives
- * exclusively with Microchip products. It is your responsibility to comply with third party license
- * terms applicable to your use of third party software (including open source software) that may
- * accompany Microchip software.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
  *
- * THIS SOFTWARE IS SUPPLIED BY MICROCHIP "AS IS". NO WARRANTIES, WHETHER EXPRESS, IMPLIED OR STATUTORY,
- * APPLY TO THIS SOFTWARE, INCLUDING ANY IMPLIED WARRANTIES OF NON-INFRINGEMENT, MERCHANTABILITY, AND
- * FITNESS FOR A PARTICULAR PURPOSE.
+ *   http://www.apache.org/licenses/LICENSE-2.0
  *
- * IN NO EVENT WILL MICROCHIP BE LIABLE FOR ANY INDIRECT, SPECIAL, PUNITIVE, INCIDENTAL OR CONSEQUENTIAL
- * LOSS, DAMAGE, COST OR EXPENSE OF ANY KIND WHATSOEVER RELATED TO THE SOFTWARE, HOWEVER CAUSED, EVEN IF
- * MICROCHIP HAS BEEN ADVISED OF THE POSSIBILITY OR THE DAMAGES ARE FORESEEABLE. TO THE FULLEST EXTENT
- * ALLOWED BY LAW, MICROCHIP'S TOTAL LIABILITY ON ALL CLAIMS IN ANY WAY RELATED TO THIS SOFTWARE WILL NOT
- * EXCEED THE AMOUNT OF FEES, IF ANY, THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
  *
  */
 
-/* file generated from device description version 2023-04-11T16:47:17Z */
+/* file generated from device description file (ATDF) version 2024-02-12T06:36:14Z */
 #ifndef _WBZ35_DAC_CTRL_COMPONENT_H_
 #define _WBZ35_DAC_CTRL_COMPONENT_H_
 
@@ -34,31 +31,31 @@
 #define DAC_CTRL_DACCON_LPRCEN1_Pos           _UINT32_(5)                                          /* (DAC_CTRL_DACCON) LPRC clock enabled for SnH mode Position */
 #define DAC_CTRL_DACCON_LPRCEN1_Msk           (_UINT32_(0x1) << DAC_CTRL_DACCON_LPRCEN1_Pos)       /* (DAC_CTRL_DACCON) LPRC clock enabled for SnH mode Mask */
 #define DAC_CTRL_DACCON_LPRCEN1(value)        (DAC_CTRL_DACCON_LPRCEN1_Msk & (_UINT32_(value) << DAC_CTRL_DACCON_LPRCEN1_Pos)) /* Assigment of value for LPRCEN1 in the DAC_CTRL_DACCON register */
-#define   DAC_CTRL_DACCON_LPRCEN1_0_Val       _UINT32_(0x0)                                        /* (DAC_CTRL_DACCON) LPRC clock not enabled  */
-#define   DAC_CTRL_DACCON_LPRCEN1_1_Val       _UINT32_(0x1)                                        /* (DAC_CTRL_DACCON) LPRC clock enabled  */
-#define DAC_CTRL_DACCON_LPRCEN1_0             (DAC_CTRL_DACCON_LPRCEN1_0_Val << DAC_CTRL_DACCON_LPRCEN1_Pos) /* (DAC_CTRL_DACCON) LPRC clock not enabled Position  */
-#define DAC_CTRL_DACCON_LPRCEN1_1             (DAC_CTRL_DACCON_LPRCEN1_1_Val << DAC_CTRL_DACCON_LPRCEN1_Pos) /* (DAC_CTRL_DACCON) LPRC clock enabled Position  */
+#define   DAC_CTRL_DACCON_LPRCEN1_LPRC_ENABLE_Val _UINT32_(0x0)                                        /* (DAC_CTRL_DACCON) LPRC clock not enabled  */
+#define   DAC_CTRL_DACCON_LPRCEN1_LPRC_DISABLE_Val _UINT32_(0x1)                                        /* (DAC_CTRL_DACCON) LPRC clock enabled  */
+#define DAC_CTRL_DACCON_LPRCEN1_LPRC_ENABLE   (DAC_CTRL_DACCON_LPRCEN1_LPRC_ENABLE_Val << DAC_CTRL_DACCON_LPRCEN1_Pos) /* (DAC_CTRL_DACCON) LPRC clock not enabled Position  */
+#define DAC_CTRL_DACCON_LPRCEN1_LPRC_DISABLE  (DAC_CTRL_DACCON_LPRCEN1_LPRC_DISABLE_Val << DAC_CTRL_DACCON_LPRCEN1_Pos) /* (DAC_CTRL_DACCON) LPRC clock enabled Position  */
 #define DAC_CTRL_DACCON_OUTEN_Pos             _UINT32_(6)                                          /* (DAC_CTRL_DACCON) Will enable the output buffer Position */
 #define DAC_CTRL_DACCON_OUTEN_Msk             (_UINT32_(0x1) << DAC_CTRL_DACCON_OUTEN_Pos)         /* (DAC_CTRL_DACCON) Will enable the output buffer Mask */
 #define DAC_CTRL_DACCON_OUTEN(value)          (DAC_CTRL_DACCON_OUTEN_Msk & (_UINT32_(value) << DAC_CTRL_DACCON_OUTEN_Pos)) /* Assigment of value for OUTEN in the DAC_CTRL_DACCON register */
-#define   DAC_CTRL_DACCON_OUTEN_0_Val         _UINT32_(0x0)                                        /* (DAC_CTRL_DACCON) Output buffer disabled  */
-#define   DAC_CTRL_DACCON_OUTEN_1_Val         _UINT32_(0x1)                                        /* (DAC_CTRL_DACCON) Output buffer enabled  */
-#define DAC_CTRL_DACCON_OUTEN_0               (DAC_CTRL_DACCON_OUTEN_0_Val << DAC_CTRL_DACCON_OUTEN_Pos) /* (DAC_CTRL_DACCON) Output buffer disabled Position  */
-#define DAC_CTRL_DACCON_OUTEN_1               (DAC_CTRL_DACCON_OUTEN_1_Val << DAC_CTRL_DACCON_OUTEN_Pos) /* (DAC_CTRL_DACCON) Output buffer enabled Position  */
+#define   DAC_CTRL_DACCON_OUTEN_OUTEN_DISABLE_Val _UINT32_(0x0)                                        /* (DAC_CTRL_DACCON) Output buffer disabled  */
+#define   DAC_CTRL_DACCON_OUTEN_OUTEN_ENABLE_Val _UINT32_(0x1)                                        /* (DAC_CTRL_DACCON) Output buffer enabled  */
+#define DAC_CTRL_DACCON_OUTEN_OUTEN_DISABLE   (DAC_CTRL_DACCON_OUTEN_OUTEN_DISABLE_Val << DAC_CTRL_DACCON_OUTEN_Pos) /* (DAC_CTRL_DACCON) Output buffer disabled Position  */
+#define DAC_CTRL_DACCON_OUTEN_OUTEN_ENABLE    (DAC_CTRL_DACCON_OUTEN_OUTEN_ENABLE_Val << DAC_CTRL_DACCON_OUTEN_Pos) /* (DAC_CTRL_DACCON) Output buffer enabled Position  */
 #define DAC_CTRL_DACCON_SNH_Pos               _UINT32_(7)                                          /* (DAC_CTRL_DACCON) Sample and hold circuitry Position */
 #define DAC_CTRL_DACCON_SNH_Msk               (_UINT32_(0x1) << DAC_CTRL_DACCON_SNH_Pos)           /* (DAC_CTRL_DACCON) Sample and hold circuitry Mask */
 #define DAC_CTRL_DACCON_SNH(value)            (DAC_CTRL_DACCON_SNH_Msk & (_UINT32_(value) << DAC_CTRL_DACCON_SNH_Pos)) /* Assigment of value for SNH in the DAC_CTRL_DACCON register */
-#define   DAC_CTRL_DACCON_SNH_0_Val           _UINT32_(0x0)                                        /* (DAC_CTRL_DACCON) DAC operation in normal mode  */
-#define   DAC_CTRL_DACCON_SNH_1_Val           _UINT32_(0x1)                                        /* (DAC_CTRL_DACCON) DAC operation in low power mode  */
-#define DAC_CTRL_DACCON_SNH_0                 (DAC_CTRL_DACCON_SNH_0_Val << DAC_CTRL_DACCON_SNH_Pos) /* (DAC_CTRL_DACCON) DAC operation in normal mode Position  */
-#define DAC_CTRL_DACCON_SNH_1                 (DAC_CTRL_DACCON_SNH_1_Val << DAC_CTRL_DACCON_SNH_Pos) /* (DAC_CTRL_DACCON) DAC operation in low power mode Position  */
+#define   DAC_CTRL_DACCON_SNH_SNH_NORMAL_Val  _UINT32_(0x0)                                        /* (DAC_CTRL_DACCON) DAC operation in normal mode  */
+#define   DAC_CTRL_DACCON_SNH_SNH_LOWPOWER_Val _UINT32_(0x1)                                        /* (DAC_CTRL_DACCON) DAC operation in low power mode  */
+#define DAC_CTRL_DACCON_SNH_SNH_NORMAL        (DAC_CTRL_DACCON_SNH_SNH_NORMAL_Val << DAC_CTRL_DACCON_SNH_Pos) /* (DAC_CTRL_DACCON) DAC operation in normal mode Position  */
+#define DAC_CTRL_DACCON_SNH_SNH_LOWPOWER      (DAC_CTRL_DACCON_SNH_SNH_LOWPOWER_Val << DAC_CTRL_DACCON_SNH_Pos) /* (DAC_CTRL_DACCON) DAC operation in low power mode Position  */
 #define DAC_CTRL_DACCON_EN_Pos                _UINT32_(15)                                         /* (DAC_CTRL_DACCON) Enable Position */
 #define DAC_CTRL_DACCON_EN_Msk                (_UINT32_(0x1) << DAC_CTRL_DACCON_EN_Pos)            /* (DAC_CTRL_DACCON) Enable Mask */
 #define DAC_CTRL_DACCON_EN(value)             (DAC_CTRL_DACCON_EN_Msk & (_UINT32_(value) << DAC_CTRL_DACCON_EN_Pos)) /* Assigment of value for EN in the DAC_CTRL_DACCON register */
-#define   DAC_CTRL_DACCON_EN_0_Val            _UINT32_(0x0)                                        /* (DAC_CTRL_DACCON) The peripheral is disabled.  */
-#define   DAC_CTRL_DACCON_EN_1_Val            _UINT32_(0x1)                                        /* (DAC_CTRL_DACCON) The peripheral is enabled.  */
-#define DAC_CTRL_DACCON_EN_0                  (DAC_CTRL_DACCON_EN_0_Val << DAC_CTRL_DACCON_EN_Pos) /* (DAC_CTRL_DACCON) The peripheral is disabled. Position  */
-#define DAC_CTRL_DACCON_EN_1                  (DAC_CTRL_DACCON_EN_1_Val << DAC_CTRL_DACCON_EN_Pos) /* (DAC_CTRL_DACCON) The peripheral is enabled. Position  */
+#define   DAC_CTRL_DACCON_EN_DAC_DISABLE_Val  _UINT32_(0x0)                                        /* (DAC_CTRL_DACCON) The peripheral is disabled.  */
+#define   DAC_CTRL_DACCON_EN_DAC_ENABLE_Val   _UINT32_(0x1)                                        /* (DAC_CTRL_DACCON) The peripheral is enabled.  */
+#define DAC_CTRL_DACCON_EN_DAC_DISABLE        (DAC_CTRL_DACCON_EN_DAC_DISABLE_Val << DAC_CTRL_DACCON_EN_Pos) /* (DAC_CTRL_DACCON) The peripheral is disabled. Position  */
+#define DAC_CTRL_DACCON_EN_DAC_ENABLE         (DAC_CTRL_DACCON_EN_DAC_ENABLE_Val << DAC_CTRL_DACCON_EN_Pos) /* (DAC_CTRL_DACCON) The peripheral is enabled. Position  */
 #define DAC_CTRL_DACCON_Msk                   _UINT32_(0x000080E0)                                 /* (DAC_CTRL_DACCON) Register Mask  */
 
 #define DAC_CTRL_DACCON_LPRCEN_Pos            _UINT32_(5)                                          /* (DAC_CTRL_DACCON Position) LPRC clock enabled for SnH mode */

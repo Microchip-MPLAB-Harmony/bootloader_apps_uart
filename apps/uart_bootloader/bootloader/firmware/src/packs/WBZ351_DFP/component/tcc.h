@@ -1,26 +1,23 @@
 /*
  * Component description for TCC
  *
- * Copyright (c) 2023 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2024 Microchip Technology Inc. and its subsidiaries.
  *
- * Subject to your compliance with these terms, you may use Microchip software and any derivatives
- * exclusively with Microchip products. It is your responsibility to comply with third party license
- * terms applicable to your use of third party software (including open source software) that may
- * accompany Microchip software.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
  *
- * THIS SOFTWARE IS SUPPLIED BY MICROCHIP "AS IS". NO WARRANTIES, WHETHER EXPRESS, IMPLIED OR STATUTORY,
- * APPLY TO THIS SOFTWARE, INCLUDING ANY IMPLIED WARRANTIES OF NON-INFRINGEMENT, MERCHANTABILITY, AND
- * FITNESS FOR A PARTICULAR PURPOSE.
+ *   http://www.apache.org/licenses/LICENSE-2.0
  *
- * IN NO EVENT WILL MICROCHIP BE LIABLE FOR ANY INDIRECT, SPECIAL, PUNITIVE, INCIDENTAL OR CONSEQUENTIAL
- * LOSS, DAMAGE, COST OR EXPENSE OF ANY KIND WHATSOEVER RELATED TO THE SOFTWARE, HOWEVER CAUSED, EVEN IF
- * MICROCHIP HAS BEEN ADVISED OF THE POSSIBILITY OR THE DAMAGES ARE FORESEEABLE. TO THE FULLEST EXTENT
- * ALLOWED BY LAW, MICROCHIP'S TOTAL LIABILITY ON ALL CLAIMS IN ANY WAY RELATED TO THIS SOFTWARE WILL NOT
- * EXCEED THE AMOUNT OF FEES, IF ANY, THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
  *
  */
 
-/* file generated from device description version 2023-04-11T16:47:17Z */
+/* file generated from device description file (ATDF) version 2024-02-12T06:36:14Z */
 #ifndef _WBZ35_TCC_COMPONENT_H_
 #define _WBZ35_TCC_COMPONENT_H_
 
@@ -434,19 +431,16 @@
 #define TCC_WEXCTRL_DTIEN2_Pos                _UINT32_(10)                                         /* (TCC_WEXCTRL) Dead-time Insertion Generator 2 Enable Position */
 #define TCC_WEXCTRL_DTIEN2_Msk                (_UINT32_(0x1) << TCC_WEXCTRL_DTIEN2_Pos)            /* (TCC_WEXCTRL) Dead-time Insertion Generator 2 Enable Mask */
 #define TCC_WEXCTRL_DTIEN2(value)             (TCC_WEXCTRL_DTIEN2_Msk & (_UINT32_(value) << TCC_WEXCTRL_DTIEN2_Pos)) /* Assigment of value for DTIEN2 in the TCC_WEXCTRL register */
-#define TCC_WEXCTRL_DTIEN3_Pos                _UINT32_(11)                                         /* (TCC_WEXCTRL) Dead-time Insertion Generator 3 Enable Position */
-#define TCC_WEXCTRL_DTIEN3_Msk                (_UINT32_(0x1) << TCC_WEXCTRL_DTIEN3_Pos)            /* (TCC_WEXCTRL) Dead-time Insertion Generator 3 Enable Mask */
-#define TCC_WEXCTRL_DTIEN3(value)             (TCC_WEXCTRL_DTIEN3_Msk & (_UINT32_(value) << TCC_WEXCTRL_DTIEN3_Pos)) /* Assigment of value for DTIEN3 in the TCC_WEXCTRL register */
 #define TCC_WEXCTRL_DTLS_Pos                  _UINT32_(16)                                         /* (TCC_WEXCTRL) Dead-time Low Side Outputs Value Position */
 #define TCC_WEXCTRL_DTLS_Msk                  (_UINT32_(0xFF) << TCC_WEXCTRL_DTLS_Pos)             /* (TCC_WEXCTRL) Dead-time Low Side Outputs Value Mask */
 #define TCC_WEXCTRL_DTLS(value)               (TCC_WEXCTRL_DTLS_Msk & (_UINT32_(value) << TCC_WEXCTRL_DTLS_Pos)) /* Assigment of value for DTLS in the TCC_WEXCTRL register */
 #define TCC_WEXCTRL_DTHS_Pos                  _UINT32_(24)                                         /* (TCC_WEXCTRL) Dead-time High Side Outputs Value Position */
 #define TCC_WEXCTRL_DTHS_Msk                  (_UINT32_(0xFF) << TCC_WEXCTRL_DTHS_Pos)             /* (TCC_WEXCTRL) Dead-time High Side Outputs Value Mask */
 #define TCC_WEXCTRL_DTHS(value)               (TCC_WEXCTRL_DTHS_Msk & (_UINT32_(value) << TCC_WEXCTRL_DTHS_Pos)) /* Assigment of value for DTHS in the TCC_WEXCTRL register */
-#define TCC_WEXCTRL_Msk                       _UINT32_(0xFFFF0F03)                                 /* (TCC_WEXCTRL) Register Mask  */
+#define TCC_WEXCTRL_Msk                       _UINT32_(0xFFFF0703)                                 /* (TCC_WEXCTRL) Register Mask  */
 
 #define TCC_WEXCTRL_DTIEN_Pos                 _UINT32_(8)                                          /* (TCC_WEXCTRL Position) Dead-time Insertion Generator x Enable */
-#define TCC_WEXCTRL_DTIEN_Msk                 (_UINT32_(0xF) << TCC_WEXCTRL_DTIEN_Pos)             /* (TCC_WEXCTRL Mask) DTIEN */
+#define TCC_WEXCTRL_DTIEN_Msk                 (_UINT32_(0x7) << TCC_WEXCTRL_DTIEN_Pos)             /* (TCC_WEXCTRL Mask) DTIEN */
 #define TCC_WEXCTRL_DTIEN(value)              (TCC_WEXCTRL_DTIEN_Msk & (_UINT32_(value) << TCC_WEXCTRL_DTIEN_Pos)) 
 
 /* -------- TCC_DRVCTRL : (TCC Offset: 0x18) (R/W 32) Driver Control -------- */
@@ -1084,10 +1078,7 @@
 #define TCC_WAVE_SWAP2_Pos                    _UINT32_(26)                                         /* (TCC_WAVE) Swap DTI Output Pair 2 Position */
 #define TCC_WAVE_SWAP2_Msk                    (_UINT32_(0x1) << TCC_WAVE_SWAP2_Pos)                /* (TCC_WAVE) Swap DTI Output Pair 2 Mask */
 #define TCC_WAVE_SWAP2(value)                 (TCC_WAVE_SWAP2_Msk & (_UINT32_(value) << TCC_WAVE_SWAP2_Pos)) /* Assigment of value for SWAP2 in the TCC_WAVE register */
-#define TCC_WAVE_SWAP3_Pos                    _UINT32_(27)                                         /* (TCC_WAVE) Swap DTI Output Pair 3 Position */
-#define TCC_WAVE_SWAP3_Msk                    (_UINT32_(0x1) << TCC_WAVE_SWAP3_Pos)                /* (TCC_WAVE) Swap DTI Output Pair 3 Mask */
-#define TCC_WAVE_SWAP3(value)                 (TCC_WAVE_SWAP3_Msk & (_UINT32_(value) << TCC_WAVE_SWAP3_Pos)) /* Assigment of value for SWAP3 in the TCC_WAVE register */
-#define TCC_WAVE_Msk                          _UINT32_(0x0F3F0FB7)                                 /* (TCC_WAVE) Register Mask  */
+#define TCC_WAVE_Msk                          _UINT32_(0x073F0FB7)                                 /* (TCC_WAVE) Register Mask  */
 
 #define TCC_WAVE_CICCEN_Pos                   _UINT32_(8)                                          /* (TCC_WAVE Position) Circular Channel x Enable */
 #define TCC_WAVE_CICCEN_Msk                   (_UINT32_(0xF) << TCC_WAVE_CICCEN_Pos)               /* (TCC_WAVE Mask) CICCEN */
@@ -1095,8 +1086,8 @@
 #define TCC_WAVE_POL_Pos                      _UINT32_(16)                                         /* (TCC_WAVE Position) Channel x Polarity */
 #define TCC_WAVE_POL_Msk                      (_UINT32_(0x3F) << TCC_WAVE_POL_Pos)                 /* (TCC_WAVE Mask) POL */
 #define TCC_WAVE_POL(value)                   (TCC_WAVE_POL_Msk & (_UINT32_(value) << TCC_WAVE_POL_Pos)) 
-#define TCC_WAVE_SWAP_Pos                     _UINT32_(24)                                         /* (TCC_WAVE Position) Swap DTI Output Pair 3 */
-#define TCC_WAVE_SWAP_Msk                     (_UINT32_(0xF) << TCC_WAVE_SWAP_Pos)                 /* (TCC_WAVE Mask) SWAP */
+#define TCC_WAVE_SWAP_Pos                     _UINT32_(24)                                         /* (TCC_WAVE Position) Swap DTI Output Pair 2 */
+#define TCC_WAVE_SWAP_Msk                     (_UINT32_(0x7) << TCC_WAVE_SWAP_Pos)                 /* (TCC_WAVE Mask) SWAP */
 #define TCC_WAVE_SWAP(value)                  (TCC_WAVE_SWAP_Msk & (_UINT32_(value) << TCC_WAVE_SWAP_Pos)) 
 
 /* -------- TCC_PER : (TCC Offset: 0x40) (R/W 32) Period -------- */

@@ -1,26 +1,23 @@
 /*
  * Component description for CRU
  *
- * Copyright (c) 2023 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2024 Microchip Technology Inc. and its subsidiaries.
  *
- * Subject to your compliance with these terms, you may use Microchip software and any derivatives
- * exclusively with Microchip products. It is your responsibility to comply with third party license
- * terms applicable to your use of third party software (including open source software) that may
- * accompany Microchip software.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
  *
- * THIS SOFTWARE IS SUPPLIED BY MICROCHIP "AS IS". NO WARRANTIES, WHETHER EXPRESS, IMPLIED OR STATUTORY,
- * APPLY TO THIS SOFTWARE, INCLUDING ANY IMPLIED WARRANTIES OF NON-INFRINGEMENT, MERCHANTABILITY, AND
- * FITNESS FOR A PARTICULAR PURPOSE.
+ *   http://www.apache.org/licenses/LICENSE-2.0
  *
- * IN NO EVENT WILL MICROCHIP BE LIABLE FOR ANY INDIRECT, SPECIAL, PUNITIVE, INCIDENTAL OR CONSEQUENTIAL
- * LOSS, DAMAGE, COST OR EXPENSE OF ANY KIND WHATSOEVER RELATED TO THE SOFTWARE, HOWEVER CAUSED, EVEN IF
- * MICROCHIP HAS BEEN ADVISED OF THE POSSIBILITY OR THE DAMAGES ARE FORESEEABLE. TO THE FULLEST EXTENT
- * ALLOWED BY LAW, MICROCHIP'S TOTAL LIABILITY ON ALL CLAIMS IN ANY WAY RELATED TO THIS SOFTWARE WILL NOT
- * EXCEED THE AMOUNT OF FEES, IF ANY, THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
  *
  */
 
-/* file generated from device description version 2023-04-11T16:47:17Z */
+/* file generated from device description file (ATDF) version 2024-02-12T06:36:14Z */
 #ifndef _WBZ35_CRU_COMPONENT_H_
 #define _WBZ35_CRU_COMPONENT_H_
 
@@ -383,15 +380,15 @@
 #define CRU_REFO1TRIM_ROTRIM_Msk              (_UINT32_(0x1FF) << CRU_REFO1TRIM_ROTRIM_Pos)        /* (CRU_REFO1TRIM) Trim bits - Provides fractional additive to RODIV value for 1/2 period of REFO1 clock Mask */
 #define CRU_REFO1TRIM_ROTRIM(value)           (CRU_REFO1TRIM_ROTRIM_Msk & (_UINT32_(value) << CRU_REFO1TRIM_ROTRIM_Pos)) /* Assigment of value for ROTRIM in the CRU_REFO1TRIM register */
 #define   CRU_REFO1TRIM_ROTRIM_ZERO_Val       _UINT32_(0x0)                                        /* (CRU_REFO1TRIM) 0/512 (0.0) divisor added to RODIV value  */
-#define   CRU_REFO1TRIM_ROTRIM_1_Val          _UINT32_(0x1)                                        /* (CRU_REFO1TRIM) 1/512 (0.001953125) divisor added to RODIV value  */
-#define   CRU_REFO1TRIM_ROTRIM_2_Val          _UINT32_(0x2)                                        /* (CRU_REFO1TRIM) 2/512 (0.00390625) divisor added to RODIV value  */
-#define   CRU_REFO1TRIM_ROTRIM_256_Val        _UINT32_(0x100)                                      /* (CRU_REFO1TRIM) 256/512 (0.5000) divisor added to RODIV value  */
-#define   CRU_REFO1TRIM_ROTRIM_511_Val        _UINT32_(0x1FF)                                      /* (CRU_REFO1TRIM) 511/512 (0.998046875) divisor added to RODIV value  */
+#define   CRU_REFO1TRIM_ROTRIM_ONE_Val        _UINT32_(0x1)                                        /* (CRU_REFO1TRIM) 1/512 (0.001953125) divisor added to RODIV value  */
+#define   CRU_REFO1TRIM_ROTRIM_TWO_Val        _UINT32_(0x2)                                        /* (CRU_REFO1TRIM) 2/512 (0.00390625) divisor added to RODIV value  */
+#define   CRU_REFO1TRIM_ROTRIM_TRIM_256_Val   _UINT32_(0x100)                                      /* (CRU_REFO1TRIM) 256/512 (0.5000) divisor added to RODIV value  */
+#define   CRU_REFO1TRIM_ROTRIM_TRIM_512_Val   _UINT32_(0x1FF)                                      /* (CRU_REFO1TRIM) 511/512 (0.998046875) divisor added to RODIV value  */
 #define CRU_REFO1TRIM_ROTRIM_ZERO             (CRU_REFO1TRIM_ROTRIM_ZERO_Val << CRU_REFO1TRIM_ROTRIM_Pos) /* (CRU_REFO1TRIM) 0/512 (0.0) divisor added to RODIV value Position  */
-#define CRU_REFO1TRIM_ROTRIM_1                (CRU_REFO1TRIM_ROTRIM_1_Val << CRU_REFO1TRIM_ROTRIM_Pos) /* (CRU_REFO1TRIM) 1/512 (0.001953125) divisor added to RODIV value Position  */
-#define CRU_REFO1TRIM_ROTRIM_2                (CRU_REFO1TRIM_ROTRIM_2_Val << CRU_REFO1TRIM_ROTRIM_Pos) /* (CRU_REFO1TRIM) 2/512 (0.00390625) divisor added to RODIV value Position  */
-#define CRU_REFO1TRIM_ROTRIM_256              (CRU_REFO1TRIM_ROTRIM_256_Val << CRU_REFO1TRIM_ROTRIM_Pos) /* (CRU_REFO1TRIM) 256/512 (0.5000) divisor added to RODIV value Position  */
-#define CRU_REFO1TRIM_ROTRIM_511              (CRU_REFO1TRIM_ROTRIM_511_Val << CRU_REFO1TRIM_ROTRIM_Pos) /* (CRU_REFO1TRIM) 511/512 (0.998046875) divisor added to RODIV value Position  */
+#define CRU_REFO1TRIM_ROTRIM_ONE              (CRU_REFO1TRIM_ROTRIM_ONE_Val << CRU_REFO1TRIM_ROTRIM_Pos) /* (CRU_REFO1TRIM) 1/512 (0.001953125) divisor added to RODIV value Position  */
+#define CRU_REFO1TRIM_ROTRIM_TWO              (CRU_REFO1TRIM_ROTRIM_TWO_Val << CRU_REFO1TRIM_ROTRIM_Pos) /* (CRU_REFO1TRIM) 2/512 (0.00390625) divisor added to RODIV value Position  */
+#define CRU_REFO1TRIM_ROTRIM_TRIM_256         (CRU_REFO1TRIM_ROTRIM_TRIM_256_Val << CRU_REFO1TRIM_ROTRIM_Pos) /* (CRU_REFO1TRIM) 256/512 (0.5000) divisor added to RODIV value Position  */
+#define CRU_REFO1TRIM_ROTRIM_TRIM_512         (CRU_REFO1TRIM_ROTRIM_TRIM_512_Val << CRU_REFO1TRIM_ROTRIM_Pos) /* (CRU_REFO1TRIM) 511/512 (0.998046875) divisor added to RODIV value Position  */
 #define CRU_REFO1TRIM_Msk                     _UINT32_(0xFF800000)                                 /* (CRU_REFO1TRIM) Register Mask  */
 
 
@@ -525,15 +522,15 @@
 #define CRU_REFO2TRIM_ROTRIM_Msk              (_UINT32_(0x1FF) << CRU_REFO2TRIM_ROTRIM_Pos)        /* (CRU_REFO2TRIM) Trim bits - Provides fractional additive to RODIV value for 1/2 period of REFO1 clock Mask */
 #define CRU_REFO2TRIM_ROTRIM(value)           (CRU_REFO2TRIM_ROTRIM_Msk & (_UINT32_(value) << CRU_REFO2TRIM_ROTRIM_Pos)) /* Assigment of value for ROTRIM in the CRU_REFO2TRIM register */
 #define   CRU_REFO2TRIM_ROTRIM_ZERO_Val       _UINT32_(0x0)                                        /* (CRU_REFO2TRIM) 0/512 (0.0) divisor added to RODIV value  */
-#define   CRU_REFO2TRIM_ROTRIM_1_Val          _UINT32_(0x1)                                        /* (CRU_REFO2TRIM) 1/512 (0.001953125) divisor added to RODIV value  */
-#define   CRU_REFO2TRIM_ROTRIM_2_Val          _UINT32_(0x2)                                        /* (CRU_REFO2TRIM) 2/512 (0.00390625) divisor added to RODIV value  */
-#define   CRU_REFO2TRIM_ROTRIM_256_Val        _UINT32_(0x100)                                      /* (CRU_REFO2TRIM) 256/512 (0.5000) divisor added to RODIV value  */
-#define   CRU_REFO2TRIM_ROTRIM_511_Val        _UINT32_(0x1FF)                                      /* (CRU_REFO2TRIM) 511/512 (0.998046875) divisor added to RODIV value  */
+#define   CRU_REFO2TRIM_ROTRIM_ONE_Val        _UINT32_(0x1)                                        /* (CRU_REFO2TRIM) 1/512 (0.001953125) divisor added to RODIV value  */
+#define   CRU_REFO2TRIM_ROTRIM_TWO_Val        _UINT32_(0x2)                                        /* (CRU_REFO2TRIM) 2/512 (0.00390625) divisor added to RODIV value  */
+#define   CRU_REFO2TRIM_ROTRIM_TRIM_256_Val   _UINT32_(0x100)                                      /* (CRU_REFO2TRIM) 256/512 (0.5000) divisor added to RODIV value  */
+#define   CRU_REFO2TRIM_ROTRIM_TRIM_512_Val   _UINT32_(0x1FF)                                      /* (CRU_REFO2TRIM) 511/512 (0.998046875) divisor added to RODIV value  */
 #define CRU_REFO2TRIM_ROTRIM_ZERO             (CRU_REFO2TRIM_ROTRIM_ZERO_Val << CRU_REFO2TRIM_ROTRIM_Pos) /* (CRU_REFO2TRIM) 0/512 (0.0) divisor added to RODIV value Position  */
-#define CRU_REFO2TRIM_ROTRIM_1                (CRU_REFO2TRIM_ROTRIM_1_Val << CRU_REFO2TRIM_ROTRIM_Pos) /* (CRU_REFO2TRIM) 1/512 (0.001953125) divisor added to RODIV value Position  */
-#define CRU_REFO2TRIM_ROTRIM_2                (CRU_REFO2TRIM_ROTRIM_2_Val << CRU_REFO2TRIM_ROTRIM_Pos) /* (CRU_REFO2TRIM) 2/512 (0.00390625) divisor added to RODIV value Position  */
-#define CRU_REFO2TRIM_ROTRIM_256              (CRU_REFO2TRIM_ROTRIM_256_Val << CRU_REFO2TRIM_ROTRIM_Pos) /* (CRU_REFO2TRIM) 256/512 (0.5000) divisor added to RODIV value Position  */
-#define CRU_REFO2TRIM_ROTRIM_511              (CRU_REFO2TRIM_ROTRIM_511_Val << CRU_REFO2TRIM_ROTRIM_Pos) /* (CRU_REFO2TRIM) 511/512 (0.998046875) divisor added to RODIV value Position  */
+#define CRU_REFO2TRIM_ROTRIM_ONE              (CRU_REFO2TRIM_ROTRIM_ONE_Val << CRU_REFO2TRIM_ROTRIM_Pos) /* (CRU_REFO2TRIM) 1/512 (0.001953125) divisor added to RODIV value Position  */
+#define CRU_REFO2TRIM_ROTRIM_TWO              (CRU_REFO2TRIM_ROTRIM_TWO_Val << CRU_REFO2TRIM_ROTRIM_Pos) /* (CRU_REFO2TRIM) 2/512 (0.00390625) divisor added to RODIV value Position  */
+#define CRU_REFO2TRIM_ROTRIM_TRIM_256         (CRU_REFO2TRIM_ROTRIM_TRIM_256_Val << CRU_REFO2TRIM_ROTRIM_Pos) /* (CRU_REFO2TRIM) 256/512 (0.5000) divisor added to RODIV value Position  */
+#define CRU_REFO2TRIM_ROTRIM_TRIM_512         (CRU_REFO2TRIM_ROTRIM_TRIM_512_Val << CRU_REFO2TRIM_ROTRIM_Pos) /* (CRU_REFO2TRIM) 511/512 (0.998046875) divisor added to RODIV value Position  */
 #define CRU_REFO2TRIM_Msk                     _UINT32_(0xFF800000)                                 /* (CRU_REFO2TRIM) Register Mask  */
 
 
@@ -667,15 +664,15 @@
 #define CRU_REFO3TRIM_ROTRIM_Msk              (_UINT32_(0x1FF) << CRU_REFO3TRIM_ROTRIM_Pos)        /* (CRU_REFO3TRIM) Trim bits - Provides fractional additive to RODIV value for 1/2 period of REFO1 clock Mask */
 #define CRU_REFO3TRIM_ROTRIM(value)           (CRU_REFO3TRIM_ROTRIM_Msk & (_UINT32_(value) << CRU_REFO3TRIM_ROTRIM_Pos)) /* Assigment of value for ROTRIM in the CRU_REFO3TRIM register */
 #define   CRU_REFO3TRIM_ROTRIM_ZERO_Val       _UINT32_(0x0)                                        /* (CRU_REFO3TRIM) 0/512 (0.0) divisor added to RODIV value  */
-#define   CRU_REFO3TRIM_ROTRIM_1_Val          _UINT32_(0x1)                                        /* (CRU_REFO3TRIM) 1/512 (0.001953125) divisor added to RODIV value  */
-#define   CRU_REFO3TRIM_ROTRIM_2_Val          _UINT32_(0x2)                                        /* (CRU_REFO3TRIM) 2/512 (0.00390625) divisor added to RODIV value  */
-#define   CRU_REFO3TRIM_ROTRIM_256_Val        _UINT32_(0x100)                                      /* (CRU_REFO3TRIM) 256/512 (0.5000) divisor added to RODIV value  */
-#define   CRU_REFO3TRIM_ROTRIM_511_Val        _UINT32_(0x1FF)                                      /* (CRU_REFO3TRIM) 511/512 (0.998046875) divisor added to RODIV value  */
+#define   CRU_REFO3TRIM_ROTRIM_ONE_Val        _UINT32_(0x1)                                        /* (CRU_REFO3TRIM) 1/512 (0.001953125) divisor added to RODIV value  */
+#define   CRU_REFO3TRIM_ROTRIM_TWO_Val        _UINT32_(0x2)                                        /* (CRU_REFO3TRIM) 2/512 (0.00390625) divisor added to RODIV value  */
+#define   CRU_REFO3TRIM_ROTRIM_TRIM_256_Val   _UINT32_(0x100)                                      /* (CRU_REFO3TRIM) 256/512 (0.5000) divisor added to RODIV value  */
+#define   CRU_REFO3TRIM_ROTRIM_TRIM_512_Val   _UINT32_(0x1FF)                                      /* (CRU_REFO3TRIM) 511/512 (0.998046875) divisor added to RODIV value  */
 #define CRU_REFO3TRIM_ROTRIM_ZERO             (CRU_REFO3TRIM_ROTRIM_ZERO_Val << CRU_REFO3TRIM_ROTRIM_Pos) /* (CRU_REFO3TRIM) 0/512 (0.0) divisor added to RODIV value Position  */
-#define CRU_REFO3TRIM_ROTRIM_1                (CRU_REFO3TRIM_ROTRIM_1_Val << CRU_REFO3TRIM_ROTRIM_Pos) /* (CRU_REFO3TRIM) 1/512 (0.001953125) divisor added to RODIV value Position  */
-#define CRU_REFO3TRIM_ROTRIM_2                (CRU_REFO3TRIM_ROTRIM_2_Val << CRU_REFO3TRIM_ROTRIM_Pos) /* (CRU_REFO3TRIM) 2/512 (0.00390625) divisor added to RODIV value Position  */
-#define CRU_REFO3TRIM_ROTRIM_256              (CRU_REFO3TRIM_ROTRIM_256_Val << CRU_REFO3TRIM_ROTRIM_Pos) /* (CRU_REFO3TRIM) 256/512 (0.5000) divisor added to RODIV value Position  */
-#define CRU_REFO3TRIM_ROTRIM_511              (CRU_REFO3TRIM_ROTRIM_511_Val << CRU_REFO3TRIM_ROTRIM_Pos) /* (CRU_REFO3TRIM) 511/512 (0.998046875) divisor added to RODIV value Position  */
+#define CRU_REFO3TRIM_ROTRIM_ONE              (CRU_REFO3TRIM_ROTRIM_ONE_Val << CRU_REFO3TRIM_ROTRIM_Pos) /* (CRU_REFO3TRIM) 1/512 (0.001953125) divisor added to RODIV value Position  */
+#define CRU_REFO3TRIM_ROTRIM_TWO              (CRU_REFO3TRIM_ROTRIM_TWO_Val << CRU_REFO3TRIM_ROTRIM_Pos) /* (CRU_REFO3TRIM) 2/512 (0.00390625) divisor added to RODIV value Position  */
+#define CRU_REFO3TRIM_ROTRIM_TRIM_256         (CRU_REFO3TRIM_ROTRIM_TRIM_256_Val << CRU_REFO3TRIM_ROTRIM_Pos) /* (CRU_REFO3TRIM) 256/512 (0.5000) divisor added to RODIV value Position  */
+#define CRU_REFO3TRIM_ROTRIM_TRIM_512         (CRU_REFO3TRIM_ROTRIM_TRIM_512_Val << CRU_REFO3TRIM_ROTRIM_Pos) /* (CRU_REFO3TRIM) 511/512 (0.998046875) divisor added to RODIV value Position  */
 #define CRU_REFO3TRIM_Msk                     _UINT32_(0xFF800000)                                 /* (CRU_REFO3TRIM) Register Mask  */
 
 
@@ -809,15 +806,15 @@
 #define CRU_REFO4TRIM_ROTRIM_Msk              (_UINT32_(0x1FF) << CRU_REFO4TRIM_ROTRIM_Pos)        /* (CRU_REFO4TRIM) Trim bits - Provides fractional additive to RODIV value for 1/2 period of REFO1 clock Mask */
 #define CRU_REFO4TRIM_ROTRIM(value)           (CRU_REFO4TRIM_ROTRIM_Msk & (_UINT32_(value) << CRU_REFO4TRIM_ROTRIM_Pos)) /* Assigment of value for ROTRIM in the CRU_REFO4TRIM register */
 #define   CRU_REFO4TRIM_ROTRIM_ZERO_Val       _UINT32_(0x0)                                        /* (CRU_REFO4TRIM) 0/512 (0.0) divisor added to RODIV value  */
-#define   CRU_REFO4TRIM_ROTRIM_1_Val          _UINT32_(0x1)                                        /* (CRU_REFO4TRIM) 1/512 (0.001953125) divisor added to RODIV value  */
-#define   CRU_REFO4TRIM_ROTRIM_2_Val          _UINT32_(0x2)                                        /* (CRU_REFO4TRIM) 2/512 (0.00390625) divisor added to RODIV value  */
-#define   CRU_REFO4TRIM_ROTRIM_256_Val        _UINT32_(0x100)                                      /* (CRU_REFO4TRIM) 256/512 (0.5000) divisor added to RODIV value  */
-#define   CRU_REFO4TRIM_ROTRIM_511_Val        _UINT32_(0x1FF)                                      /* (CRU_REFO4TRIM) 511/512 (0.998046875) divisor added to RODIV value  */
+#define   CRU_REFO4TRIM_ROTRIM_ONE_Val        _UINT32_(0x1)                                        /* (CRU_REFO4TRIM) 1/512 (0.001953125) divisor added to RODIV value  */
+#define   CRU_REFO4TRIM_ROTRIM_TWO_Val        _UINT32_(0x2)                                        /* (CRU_REFO4TRIM) 2/512 (0.00390625) divisor added to RODIV value  */
+#define   CRU_REFO4TRIM_ROTRIM_TRIM_256_Val   _UINT32_(0x100)                                      /* (CRU_REFO4TRIM) 256/512 (0.5000) divisor added to RODIV value  */
+#define   CRU_REFO4TRIM_ROTRIM_TRIM_512_Val   _UINT32_(0x1FF)                                      /* (CRU_REFO4TRIM) 511/512 (0.998046875) divisor added to RODIV value  */
 #define CRU_REFO4TRIM_ROTRIM_ZERO             (CRU_REFO4TRIM_ROTRIM_ZERO_Val << CRU_REFO4TRIM_ROTRIM_Pos) /* (CRU_REFO4TRIM) 0/512 (0.0) divisor added to RODIV value Position  */
-#define CRU_REFO4TRIM_ROTRIM_1                (CRU_REFO4TRIM_ROTRIM_1_Val << CRU_REFO4TRIM_ROTRIM_Pos) /* (CRU_REFO4TRIM) 1/512 (0.001953125) divisor added to RODIV value Position  */
-#define CRU_REFO4TRIM_ROTRIM_2                (CRU_REFO4TRIM_ROTRIM_2_Val << CRU_REFO4TRIM_ROTRIM_Pos) /* (CRU_REFO4TRIM) 2/512 (0.00390625) divisor added to RODIV value Position  */
-#define CRU_REFO4TRIM_ROTRIM_256              (CRU_REFO4TRIM_ROTRIM_256_Val << CRU_REFO4TRIM_ROTRIM_Pos) /* (CRU_REFO4TRIM) 256/512 (0.5000) divisor added to RODIV value Position  */
-#define CRU_REFO4TRIM_ROTRIM_511              (CRU_REFO4TRIM_ROTRIM_511_Val << CRU_REFO4TRIM_ROTRIM_Pos) /* (CRU_REFO4TRIM) 511/512 (0.998046875) divisor added to RODIV value Position  */
+#define CRU_REFO4TRIM_ROTRIM_ONE              (CRU_REFO4TRIM_ROTRIM_ONE_Val << CRU_REFO4TRIM_ROTRIM_Pos) /* (CRU_REFO4TRIM) 1/512 (0.001953125) divisor added to RODIV value Position  */
+#define CRU_REFO4TRIM_ROTRIM_TWO              (CRU_REFO4TRIM_ROTRIM_TWO_Val << CRU_REFO4TRIM_ROTRIM_Pos) /* (CRU_REFO4TRIM) 2/512 (0.00390625) divisor added to RODIV value Position  */
+#define CRU_REFO4TRIM_ROTRIM_TRIM_256         (CRU_REFO4TRIM_ROTRIM_TRIM_256_Val << CRU_REFO4TRIM_ROTRIM_Pos) /* (CRU_REFO4TRIM) 256/512 (0.5000) divisor added to RODIV value Position  */
+#define CRU_REFO4TRIM_ROTRIM_TRIM_512         (CRU_REFO4TRIM_ROTRIM_TRIM_512_Val << CRU_REFO4TRIM_ROTRIM_Pos) /* (CRU_REFO4TRIM) 511/512 (0.998046875) divisor added to RODIV value Position  */
 #define CRU_REFO4TRIM_Msk                     _UINT32_(0xFF800000)                                 /* (CRU_REFO4TRIM) Register Mask  */
 
 
@@ -951,15 +948,15 @@
 #define CRU_REFO5TRIM_ROTRIM_Msk              (_UINT32_(0x1FF) << CRU_REFO5TRIM_ROTRIM_Pos)        /* (CRU_REFO5TRIM) Trim bits - Provides fractional additive to RODIV value for 1/2 period of REFO1 clock Mask */
 #define CRU_REFO5TRIM_ROTRIM(value)           (CRU_REFO5TRIM_ROTRIM_Msk & (_UINT32_(value) << CRU_REFO5TRIM_ROTRIM_Pos)) /* Assigment of value for ROTRIM in the CRU_REFO5TRIM register */
 #define   CRU_REFO5TRIM_ROTRIM_ZERO_Val       _UINT32_(0x0)                                        /* (CRU_REFO5TRIM) 0/512 (0.0) divisor added to RODIV value  */
-#define   CRU_REFO5TRIM_ROTRIM_1_Val          _UINT32_(0x1)                                        /* (CRU_REFO5TRIM) 1/512 (0.001953125) divisor added to RODIV value  */
-#define   CRU_REFO5TRIM_ROTRIM_2_Val          _UINT32_(0x2)                                        /* (CRU_REFO5TRIM) 2/512 (0.00390625) divisor added to RODIV value  */
-#define   CRU_REFO5TRIM_ROTRIM_256_Val        _UINT32_(0x100)                                      /* (CRU_REFO5TRIM) 256/512 (0.5000) divisor added to RODIV value  */
-#define   CRU_REFO5TRIM_ROTRIM_511_Val        _UINT32_(0x1FF)                                      /* (CRU_REFO5TRIM) 511/512 (0.998046875) divisor added to RODIV value  */
+#define   CRU_REFO5TRIM_ROTRIM_ONE_Val        _UINT32_(0x1)                                        /* (CRU_REFO5TRIM) 1/512 (0.001953125) divisor added to RODIV value  */
+#define   CRU_REFO5TRIM_ROTRIM_TWO_Val        _UINT32_(0x2)                                        /* (CRU_REFO5TRIM) 2/512 (0.00390625) divisor added to RODIV value  */
+#define   CRU_REFO5TRIM_ROTRIM_TRIM_256_Val   _UINT32_(0x100)                                      /* (CRU_REFO5TRIM) 256/512 (0.5000) divisor added to RODIV value  */
+#define   CRU_REFO5TRIM_ROTRIM_TRIM_512_Val   _UINT32_(0x1FF)                                      /* (CRU_REFO5TRIM) 511/512 (0.998046875) divisor added to RODIV value  */
 #define CRU_REFO5TRIM_ROTRIM_ZERO             (CRU_REFO5TRIM_ROTRIM_ZERO_Val << CRU_REFO5TRIM_ROTRIM_Pos) /* (CRU_REFO5TRIM) 0/512 (0.0) divisor added to RODIV value Position  */
-#define CRU_REFO5TRIM_ROTRIM_1                (CRU_REFO5TRIM_ROTRIM_1_Val << CRU_REFO5TRIM_ROTRIM_Pos) /* (CRU_REFO5TRIM) 1/512 (0.001953125) divisor added to RODIV value Position  */
-#define CRU_REFO5TRIM_ROTRIM_2                (CRU_REFO5TRIM_ROTRIM_2_Val << CRU_REFO5TRIM_ROTRIM_Pos) /* (CRU_REFO5TRIM) 2/512 (0.00390625) divisor added to RODIV value Position  */
-#define CRU_REFO5TRIM_ROTRIM_256              (CRU_REFO5TRIM_ROTRIM_256_Val << CRU_REFO5TRIM_ROTRIM_Pos) /* (CRU_REFO5TRIM) 256/512 (0.5000) divisor added to RODIV value Position  */
-#define CRU_REFO5TRIM_ROTRIM_511              (CRU_REFO5TRIM_ROTRIM_511_Val << CRU_REFO5TRIM_ROTRIM_Pos) /* (CRU_REFO5TRIM) 511/512 (0.998046875) divisor added to RODIV value Position  */
+#define CRU_REFO5TRIM_ROTRIM_ONE              (CRU_REFO5TRIM_ROTRIM_ONE_Val << CRU_REFO5TRIM_ROTRIM_Pos) /* (CRU_REFO5TRIM) 1/512 (0.001953125) divisor added to RODIV value Position  */
+#define CRU_REFO5TRIM_ROTRIM_TWO              (CRU_REFO5TRIM_ROTRIM_TWO_Val << CRU_REFO5TRIM_ROTRIM_Pos) /* (CRU_REFO5TRIM) 2/512 (0.00390625) divisor added to RODIV value Position  */
+#define CRU_REFO5TRIM_ROTRIM_TRIM_256         (CRU_REFO5TRIM_ROTRIM_TRIM_256_Val << CRU_REFO5TRIM_ROTRIM_Pos) /* (CRU_REFO5TRIM) 256/512 (0.5000) divisor added to RODIV value Position  */
+#define CRU_REFO5TRIM_ROTRIM_TRIM_512         (CRU_REFO5TRIM_ROTRIM_TRIM_512_Val << CRU_REFO5TRIM_ROTRIM_Pos) /* (CRU_REFO5TRIM) 511/512 (0.998046875) divisor added to RODIV value Position  */
 #define CRU_REFO5TRIM_Msk                     _UINT32_(0xFF800000)                                 /* (CRU_REFO5TRIM) Register Mask  */
 
 
@@ -1093,15 +1090,15 @@
 #define CRU_REFO6TRIM_ROTRIM_Msk              (_UINT32_(0x1FF) << CRU_REFO6TRIM_ROTRIM_Pos)        /* (CRU_REFO6TRIM) Trim bits - Provides fractional additive to RODIV value for 1/2 period of REFO1 clock Mask */
 #define CRU_REFO6TRIM_ROTRIM(value)           (CRU_REFO6TRIM_ROTRIM_Msk & (_UINT32_(value) << CRU_REFO6TRIM_ROTRIM_Pos)) /* Assigment of value for ROTRIM in the CRU_REFO6TRIM register */
 #define   CRU_REFO6TRIM_ROTRIM_ZERO_Val       _UINT32_(0x0)                                        /* (CRU_REFO6TRIM) 0/512 (0.0) divisor added to RODIV value  */
-#define   CRU_REFO6TRIM_ROTRIM_1_Val          _UINT32_(0x1)                                        /* (CRU_REFO6TRIM) 1/512 (0.001953125) divisor added to RODIV value  */
-#define   CRU_REFO6TRIM_ROTRIM_2_Val          _UINT32_(0x2)                                        /* (CRU_REFO6TRIM) 2/512 (0.00390625) divisor added to RODIV value  */
-#define   CRU_REFO6TRIM_ROTRIM_256_Val        _UINT32_(0x100)                                      /* (CRU_REFO6TRIM) 256/512 (0.5000) divisor added to RODIV value  */
-#define   CRU_REFO6TRIM_ROTRIM_511_Val        _UINT32_(0x1FF)                                      /* (CRU_REFO6TRIM) 511/512 (0.998046875) divisor added to RODIV value  */
+#define   CRU_REFO6TRIM_ROTRIM_ONE_Val        _UINT32_(0x1)                                        /* (CRU_REFO6TRIM) 1/512 (0.001953125) divisor added to RODIV value  */
+#define   CRU_REFO6TRIM_ROTRIM_TWO_Val        _UINT32_(0x2)                                        /* (CRU_REFO6TRIM) 2/512 (0.00390625) divisor added to RODIV value  */
+#define   CRU_REFO6TRIM_ROTRIM_TRIM_256_Val   _UINT32_(0x100)                                      /* (CRU_REFO6TRIM) 256/512 (0.5000) divisor added to RODIV value  */
+#define   CRU_REFO6TRIM_ROTRIM_TRIM_512_Val   _UINT32_(0x1FF)                                      /* (CRU_REFO6TRIM) 511/512 (0.998046875) divisor added to RODIV value  */
 #define CRU_REFO6TRIM_ROTRIM_ZERO             (CRU_REFO6TRIM_ROTRIM_ZERO_Val << CRU_REFO6TRIM_ROTRIM_Pos) /* (CRU_REFO6TRIM) 0/512 (0.0) divisor added to RODIV value Position  */
-#define CRU_REFO6TRIM_ROTRIM_1                (CRU_REFO6TRIM_ROTRIM_1_Val << CRU_REFO6TRIM_ROTRIM_Pos) /* (CRU_REFO6TRIM) 1/512 (0.001953125) divisor added to RODIV value Position  */
-#define CRU_REFO6TRIM_ROTRIM_2                (CRU_REFO6TRIM_ROTRIM_2_Val << CRU_REFO6TRIM_ROTRIM_Pos) /* (CRU_REFO6TRIM) 2/512 (0.00390625) divisor added to RODIV value Position  */
-#define CRU_REFO6TRIM_ROTRIM_256              (CRU_REFO6TRIM_ROTRIM_256_Val << CRU_REFO6TRIM_ROTRIM_Pos) /* (CRU_REFO6TRIM) 256/512 (0.5000) divisor added to RODIV value Position  */
-#define CRU_REFO6TRIM_ROTRIM_511              (CRU_REFO6TRIM_ROTRIM_511_Val << CRU_REFO6TRIM_ROTRIM_Pos) /* (CRU_REFO6TRIM) 511/512 (0.998046875) divisor added to RODIV value Position  */
+#define CRU_REFO6TRIM_ROTRIM_ONE              (CRU_REFO6TRIM_ROTRIM_ONE_Val << CRU_REFO6TRIM_ROTRIM_Pos) /* (CRU_REFO6TRIM) 1/512 (0.001953125) divisor added to RODIV value Position  */
+#define CRU_REFO6TRIM_ROTRIM_TWO              (CRU_REFO6TRIM_ROTRIM_TWO_Val << CRU_REFO6TRIM_ROTRIM_Pos) /* (CRU_REFO6TRIM) 2/512 (0.00390625) divisor added to RODIV value Position  */
+#define CRU_REFO6TRIM_ROTRIM_TRIM_256         (CRU_REFO6TRIM_ROTRIM_TRIM_256_Val << CRU_REFO6TRIM_ROTRIM_Pos) /* (CRU_REFO6TRIM) 256/512 (0.5000) divisor added to RODIV value Position  */
+#define CRU_REFO6TRIM_ROTRIM_TRIM_512         (CRU_REFO6TRIM_ROTRIM_TRIM_512_Val << CRU_REFO6TRIM_ROTRIM_Pos) /* (CRU_REFO6TRIM) 511/512 (0.998046875) divisor added to RODIV value Position  */
 #define CRU_REFO6TRIM_Msk                     _UINT32_(0xFF800000)                                 /* (CRU_REFO6TRIM) Register Mask  */
 
 
