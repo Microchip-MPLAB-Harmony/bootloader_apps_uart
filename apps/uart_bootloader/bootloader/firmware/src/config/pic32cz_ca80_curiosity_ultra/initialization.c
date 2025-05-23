@@ -68,11 +68,11 @@
 #pragma config FUSES_USERCFG1_FUCFG1_SSXEXSQI0 = 0xffU
 #pragma config FUSES_USERCFG1_FUCFG1_SSXEXSQI1 = 0xffU
 #pragma config FUSES_USERCFG1_FUCFG2_BOR_HYST = SET
-#pragma config FUSES_USERCFG1_FUCFG2_BOR_TRIP = 0x3U
+#pragma config FUSES_USERCFG1_FUCFG2_BOR_TRIP = 0x0U
 #pragma config FUSES_USERCFG1_FUCFG3_HYST_BOR_VDDIO = SET
-#pragma config FUSES_USERCFG1_FUCFG3_BOR_TRIP_VDDIO = 0x3U
+#pragma config FUSES_USERCFG1_FUCFG3_BOR_TRIP_VDDIO = 0x0U
 #pragma config FUSES_USERCFG1_FUCFG3_HYST_BOR_VDDA = SET
-#pragma config FUSES_USERCFG1_FUCFG3_BOR_TRIP_VDDA = 0x3U
+#pragma config FUSES_USERCFG1_FUCFG3_BOR_TRIP_VDDA = 0x0U
 #pragma config FUSES_USERCFG1_FUCFG3_HYST_BOR_VDDREG = SET
 #pragma config FUSES_USERCFG1_FUCFG5_UCP0 = 0xfU
 #pragma config FUSES_USERCFG1_FUCFG5_UCP1 = 0xfU
@@ -172,11 +172,11 @@
 #pragma config FUSES_USERCFG2_FUCFG1_SSXEXSQI0 = 0xffU
 #pragma config FUSES_USERCFG2_FUCFG1_SSXEXSQI1 = 0xffU
 #pragma config FUSES_USERCFG2_FUCFG2_BOR_HYST = SET
-#pragma config FUSES_USERCFG2_FUCFG2_BOR_TRIP = 0x3U
+#pragma config FUSES_USERCFG2_FUCFG2_BOR_TRIP = 0x0U
 #pragma config FUSES_USERCFG2_FUCFG3_HYST_BOR_VDDIO = SET
-#pragma config FUSES_USERCFG2_FUCFG3_BOR_TRIP_VDDIO = 0x3U
+#pragma config FUSES_USERCFG2_FUCFG3_BOR_TRIP_VDDIO = 0x0U
 #pragma config FUSES_USERCFG2_FUCFG3_HYST_BOR_VDDA = SET
-#pragma config FUSES_USERCFG2_FUCFG3_BOR_TRIP_VDDA = 0x3U
+#pragma config FUSES_USERCFG2_FUCFG3_BOR_TRIP_VDDA = 0x0U
 #pragma config FUSES_USERCFG2_FUCFG3_HYST_BOR_VDDREG = SET
 #pragma config FUSES_USERCFG2_FUCFG5_UCP0 = 0xfU
 #pragma config FUSES_USERCFG2_FUCFG5_UCP1 = 0xfU
@@ -319,8 +319,9 @@ void SYS_Initialize ( void* data )
 {
     /* MISRAC 2012 deviation block start */
     /* MISRA C-2012 Rule 2.2 deviated in this file.  Deviation record ID -  H3_MISRAC_2012_R_2_2_DR_1 */
-    FCW_Initialize();
+        FCW_Initialize();
 
+    CLOCK_Initialize();
 
     PORT_Initialize();
 
@@ -330,11 +331,10 @@ void SYS_Initialize ( void* data )
     }
 
 
-    CLOCK_Initialize();
-
-    SERCOM1_USART_Initialize();
 
     FCW_Initialize();
+
+    SERCOM1_USART_Initialize();
 
     EVSYS_Initialize();
 

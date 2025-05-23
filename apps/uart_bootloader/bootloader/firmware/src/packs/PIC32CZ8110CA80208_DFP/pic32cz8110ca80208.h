@@ -1,35 +1,32 @@
 /*
  * Header file for PIC32CZ8110CA80208
  *
- * Copyright (c) 2023 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2024 Microchip Technology Inc. and its subsidiaries.
  *
- * Subject to your compliance with these terms, you may use Microchip software and any derivatives
- * exclusively with Microchip products. It is your responsibility to comply with third party license
- * terms applicable to your use of third party software (including open source software) that may
- * accompany Microchip software.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
  *
- * THIS SOFTWARE IS SUPPLIED BY MICROCHIP "AS IS". NO WARRANTIES, WHETHER EXPRESS, IMPLIED OR STATUTORY,
- * APPLY TO THIS SOFTWARE, INCLUDING ANY IMPLIED WARRANTIES OF NON-INFRINGEMENT, MERCHANTABILITY, AND
- * FITNESS FOR A PARTICULAR PURPOSE.
+ *   http://www.apache.org/licenses/LICENSE-2.0
  *
- * IN NO EVENT WILL MICROCHIP BE LIABLE FOR ANY INDIRECT, SPECIAL, PUNITIVE, INCIDENTAL OR CONSEQUENTIAL
- * LOSS, DAMAGE, COST OR EXPENSE OF ANY KIND WHATSOEVER RELATED TO THE SOFTWARE, HOWEVER CAUSED, EVEN IF
- * MICROCHIP HAS BEEN ADVISED OF THE POSSIBILITY OR THE DAMAGES ARE FORESEEABLE. TO THE FULLEST EXTENT
- * ALLOWED BY LAW, MICROCHIP'S TOTAL LIABILITY ON ALL CLAIMS IN ANY WAY RELATED TO THIS SOFTWARE WILL NOT
- * EXCEED THE AMOUNT OF FEES, IF ANY, THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
  *
  */
 
-/* File generated from device description version 2023-05-18T19:14:05Z */
+/* File generated from device description file (ATDF) version 2024-07-31T17:50:17Z */
 #ifndef _PIC32CZ8110CA80208_H_
 #define _PIC32CZ8110CA80208_H_
 
 /* Header version uses Semantic Versioning 2.0.0 (https://semver.org/) */
-#define HEADER_FORMAT_VERSION "2.1.0"
+#define HEADER_FORMAT_VERSION "2.1.1"
 
 #define HEADER_FORMAT_VERSION_MAJOR (2)
 #define HEADER_FORMAT_VERSION_MINOR (1)
-#define HEADER_FORMAT_VERSION_PATCH (0)
+#define HEADER_FORMAT_VERSION_PATCH (1)
 
 /* PIC32CZ8110CA80208 definitions
   This file defines all structures and symbols for PIC32CZ8110CA80208:
@@ -1400,123 +1397,123 @@ void MLB_BUSREQ_Handler            ( void );
 /* ************************************************************************** */
 /*  Event User IDs for C32CZ8110CA80208 */
 /* ************************************************************************** */
-#define EVENT_ID_USER_FREQM_START                         0 /* ID for FREQM event user START */
-#define EVENT_ID_USER_RTC_TAMPER                          1 /* ID for RTC event user TAMPER */
-#define EVENT_ID_USER_PORT_EV_0                           2 /* ID for PORT event user EV_0 */
-#define EVENT_ID_USER_PORT_EV_1                           3 /* ID for PORT event user EV_1 */
-#define EVENT_ID_USER_PORT_EV_2                           4 /* ID for PORT event user EV_2 */
-#define EVENT_ID_USER_PORT_EV_3                           5 /* ID for PORT event user EV_3 */
-#define EVENT_ID_USER_DMA_CHSTRT_0                        6 /* ID for DMA event user CHSTRT_0 */
-#define EVENT_ID_USER_DMA_CHSTRT_1                        7 /* ID for DMA event user CHSTRT_1 */
-#define EVENT_ID_USER_DMA_CHSTRT_2                        8 /* ID for DMA event user CHSTRT_2 */
-#define EVENT_ID_USER_DMA_CHSTRT_3                        9 /* ID for DMA event user CHSTRT_3 */
-#define EVENT_ID_USER_DMA_CHSTRT_4                       10 /* ID for DMA event user CHSTRT_4 */
-#define EVENT_ID_USER_DMA_CHSTRT_5                       11 /* ID for DMA event user CHSTRT_5 */
-#define EVENT_ID_USER_DMA_CHSTRT_6                       12 /* ID for DMA event user CHSTRT_6 */
-#define EVENT_ID_USER_DMA_CHSTRT_7                       13 /* ID for DMA event user CHSTRT_7 */
-#define EVENT_ID_USER_DMA_CHSTRT_8                       14 /* ID for DMA event user CHSTRT_8 */
-#define EVENT_ID_USER_DMA_CHSTRT_9                       15 /* ID for DMA event user CHSTRT_9 */
-#define EVENT_ID_USER_DMA_CHSTRT_10                      16 /* ID for DMA event user CHSTRT_10 */
-#define EVENT_ID_USER_DMA_CHSTRT_11                      17 /* ID for DMA event user CHSTRT_11 */
-#define EVENT_ID_USER_DMA_CHSTRT_12                      18 /* ID for DMA event user CHSTRT_12 */
-#define EVENT_ID_USER_DMA_CHSTRT_13                      19 /* ID for DMA event user CHSTRT_13 */
-#define EVENT_ID_USER_DMA_CHSTRT_14                      20 /* ID for DMA event user CHSTRT_14 */
-#define EVENT_ID_USER_DMA_CHSTRT_15                      21 /* ID for DMA event user CHSTRT_15 */
-#define EVENT_ID_USER_DMA_CHAUX_0                        22 /* ID for DMA event user CHAUX_0 */
-#define EVENT_ID_USER_DMA_CHAUX_1                        23 /* ID for DMA event user CHAUX_1 */
-#define EVENT_ID_USER_DMA_CHAUX_2                        24 /* ID for DMA event user CHAUX_2 */
-#define EVENT_ID_USER_DMA_CHAUX_3                        25 /* ID for DMA event user CHAUX_3 */
-#define EVENT_ID_USER_DMA_CHAUX_4                        26 /* ID for DMA event user CHAUX_4 */
-#define EVENT_ID_USER_DMA_CHAUX_5                        27 /* ID for DMA event user CHAUX_5 */
-#define EVENT_ID_USER_DMA_CHAUX_6                        28 /* ID for DMA event user CHAUX_6 */
-#define EVENT_ID_USER_DMA_CHAUX_7                        29 /* ID for DMA event user CHAUX_7 */
-#define EVENT_ID_USER_DMA_CHAUX_8                        30 /* ID for DMA event user CHAUX_8 */
-#define EVENT_ID_USER_DMA_CHAUX_9                        31 /* ID for DMA event user CHAUX_9 */
-#define EVENT_ID_USER_DMA_CHAUX_10                       32 /* ID for DMA event user CHAUX_10 */
-#define EVENT_ID_USER_DMA_CHAUX_11                       33 /* ID for DMA event user CHAUX_11 */
-#define EVENT_ID_USER_DMA_CHAUX_12                       34 /* ID for DMA event user CHAUX_12 */
-#define EVENT_ID_USER_DMA_CHAUX_13                       35 /* ID for DMA event user CHAUX_13 */
-#define EVENT_ID_USER_DMA_CHAUX_14                       36 /* ID for DMA event user CHAUX_14 */
-#define EVENT_ID_USER_DMA_CHAUX_15                       37 /* ID for DMA event user CHAUX_15 */
-#define EVENT_ID_USER_TCC0_EV_0                          38 /* ID for TCC0 event user EV_0 */
-#define EVENT_ID_USER_TCC0_EV_1                          39 /* ID for TCC0 event user EV_1 */
-#define EVENT_ID_USER_TCC0_MC_0                          40 /* ID for TCC0 event user MC_0 */
-#define EVENT_ID_USER_TCC0_MC_1                          41 /* ID for TCC0 event user MC_1 */
-#define EVENT_ID_USER_TCC0_MC_2                          42 /* ID for TCC0 event user MC_2 */
-#define EVENT_ID_USER_TCC0_MC_3                          43 /* ID for TCC0 event user MC_3 */
-#define EVENT_ID_USER_TCC0_MC_4                          44 /* ID for TCC0 event user MC_4 */
-#define EVENT_ID_USER_TCC0_MC_5                          45 /* ID for TCC0 event user MC_5 */
-#define EVENT_ID_USER_TCC0_MC_6                          46 /* ID for TCC0 event user MC_6 */
-#define EVENT_ID_USER_TCC0_MC_7                          47 /* ID for TCC0 event user MC_7 */
-#define EVENT_ID_USER_TCC1_EV_0                          48 /* ID for TCC1 event user EV_0 */
-#define EVENT_ID_USER_TCC1_EV_1                          49 /* ID for TCC1 event user EV_1 */
-#define EVENT_ID_USER_TCC1_MC_0                          50 /* ID for TCC1 event user MC_0 */
-#define EVENT_ID_USER_TCC1_MC_1                          51 /* ID for TCC1 event user MC_1 */
-#define EVENT_ID_USER_TCC1_MC_2                          52 /* ID for TCC1 event user MC_2 */
-#define EVENT_ID_USER_TCC1_MC_3                          53 /* ID for TCC1 event user MC_3 */
-#define EVENT_ID_USER_TCC1_MC_4                          54 /* ID for TCC1 event user MC_4 */
-#define EVENT_ID_USER_TCC1_MC_5                          55 /* ID for TCC1 event user MC_5 */
-#define EVENT_ID_USER_TCC1_MC_6                          56 /* ID for TCC1 event user MC_6 */
-#define EVENT_ID_USER_TCC1_MC_7                          57 /* ID for TCC1 event user MC_7 */
-#define EVENT_ID_USER_TCC2_EV_0                          58 /* ID for TCC2 event user EV_0 */
-#define EVENT_ID_USER_TCC2_EV_1                          59 /* ID for TCC2 event user EV_1 */
-#define EVENT_ID_USER_TCC2_MC_0                          60 /* ID for TCC2 event user MC_0 */
-#define EVENT_ID_USER_TCC2_MC_1                          61 /* ID for TCC2 event user MC_1 */
-#define EVENT_ID_USER_TCC2_MC_2                          62 /* ID for TCC2 event user MC_2 */
-#define EVENT_ID_USER_TCC2_MC_3                          63 /* ID for TCC2 event user MC_3 */
-#define EVENT_ID_USER_TCC2_MC_4                          64 /* ID for TCC2 event user MC_4 */
-#define EVENT_ID_USER_TCC2_MC_5                          65 /* ID for TCC2 event user MC_5 */
-#define EVENT_ID_USER_TCC3_EV_0                          66 /* ID for TCC3 event user EV_0 */
-#define EVENT_ID_USER_TCC3_EV_1                          67 /* ID for TCC3 event user EV_1 */
-#define EVENT_ID_USER_TCC3_MC_0                          68 /* ID for TCC3 event user MC_0 */
-#define EVENT_ID_USER_TCC3_MC_1                          69 /* ID for TCC3 event user MC_1 */
-#define EVENT_ID_USER_TCC4_EV_0                          70 /* ID for TCC4 event user EV_0 */
-#define EVENT_ID_USER_TCC4_EV_1                          71 /* ID for TCC4 event user EV_1 */
-#define EVENT_ID_USER_TCC4_MC_0                          72 /* ID for TCC4 event user MC_0 */
-#define EVENT_ID_USER_TCC4_MC_1                          73 /* ID for TCC4 event user MC_1 */
-#define EVENT_ID_USER_TCC5_EV_0                          74 /* ID for TCC5 event user EV_0 */
-#define EVENT_ID_USER_TCC5_EV_1                          75 /* ID for TCC5 event user EV_1 */
-#define EVENT_ID_USER_TCC5_MC_0                          76 /* ID for TCC5 event user MC_0 */
-#define EVENT_ID_USER_TCC5_MC_1                          77 /* ID for TCC5 event user MC_1 */
-#define EVENT_ID_USER_TCC6_EV_0                          78 /* ID for TCC6 event user EV_0 */
-#define EVENT_ID_USER_TCC6_EV_1                          79 /* ID for TCC6 event user EV_1 */
-#define EVENT_ID_USER_TCC6_MC_0                          80 /* ID for TCC6 event user MC_0 */
-#define EVENT_ID_USER_TCC6_MC_1                          81 /* ID for TCC6 event user MC_1 */
-#define EVENT_ID_USER_TCC7_EV_0                          82 /* ID for TCC7 event user EV_0 */
-#define EVENT_ID_USER_TCC7_EV_1                          83 /* ID for TCC7 event user EV_1 */
-#define EVENT_ID_USER_TCC7_MC_0                          84 /* ID for TCC7 event user MC_0 */
-#define EVENT_ID_USER_TCC7_MC_1                          85 /* ID for TCC7 event user MC_1 */
-#define EVENT_ID_USER_TCC8_EV_0                          86 /* ID for TCC8 event user EV_0 */
-#define EVENT_ID_USER_TCC8_EV_1                          87 /* ID for TCC8 event user EV_1 */
-#define EVENT_ID_USER_TCC8_MC_0                          88 /* ID for TCC8 event user MC_0 */
-#define EVENT_ID_USER_TCC8_MC_1                          89 /* ID for TCC8 event user MC_1 */
-#define EVENT_ID_USER_TCC9_EV_0                          90 /* ID for TCC9 event user EV_0 */
-#define EVENT_ID_USER_TCC9_EV_1                          91 /* ID for TCC9 event user EV_1 */
-#define EVENT_ID_USER_TCC9_MC_0                          92 /* ID for TCC9 event user MC_0 */
-#define EVENT_ID_USER_TCC9_MC_1                          93 /* ID for TCC9 event user MC_1 */
-#define EVENT_ID_USER_TCC9_MC_2                          94 /* ID for TCC9 event user MC_2 */
-#define EVENT_ID_USER_TCC9_MC_3                          95 /* ID for TCC9 event user MC_3 */
-#define EVENT_ID_USER_TCC9_MC_4                          96 /* ID for TCC9 event user MC_4 */
-#define EVENT_ID_USER_TCC9_MC_5                          97 /* ID for TCC9 event user MC_5 */
-#define EVENT_ID_USER_ADC_TRIGGERS_0                     98 /* ID for ADC event user TRIGGERS_0 */
-#define EVENT_ID_USER_ADC_TRIGGERS_1                     99 /* ID for ADC event user TRIGGERS_1 */
-#define EVENT_ID_USER_ADC_TRIGGERS_2                    100 /* ID for ADC event user TRIGGERS_2 */
-#define EVENT_ID_USER_ADC_TRIGGERS_3                    101 /* ID for ADC event user TRIGGERS_3 */
-#define EVENT_ID_USER_ADC_TRIGGERS_4                    102 /* ID for ADC event user TRIGGERS_4 */
-#define EVENT_ID_USER_ADC_TRIGGERS_5                    103 /* ID for ADC event user TRIGGERS_5 */
-#define EVENT_ID_USER_ADC_TRIGGERS_6                    104 /* ID for ADC event user TRIGGERS_6 */
-#define EVENT_ID_USER_ADC_TRIGGERS_7                    105 /* ID for ADC event user TRIGGERS_7 */
-#define EVENT_ID_USER_ADC_TRIGGERS_8                    106 /* ID for ADC event user TRIGGERS_8 */
-#define EVENT_ID_USER_ADC_TRIGGERS_9                    107 /* ID for ADC event user TRIGGERS_9 */
-#define EVENT_ID_USER_ADC_TRIGGERS_10                   108 /* ID for ADC event user TRIGGERS_10 */
-#define EVENT_ID_USER_AC_SOC_0                          109 /* ID for AC event user SOC_0 */
-#define EVENT_ID_USER_AC_SOC_1                          110 /* ID for AC event user SOC_1 */
-#define EVENT_ID_USER_PTC_DSEQR                         111 /* ID for PTC event user DSEQR */
-#define EVENT_ID_USER_PTC_STCONV                        112 /* ID for PTC event user STCONV */
-#define EVENT_ID_USER_HSM_TAMPER_0                      113 /* ID for HSM event user TAMPER_0 */
-#define EVENT_ID_USER_HSM_TAMPER_1                      114 /* ID for HSM event user TAMPER_1 */
-#define EVENT_ID_USER_HSM_TAMPER_2                      115 /* ID for HSM event user TAMPER_2 */
-#define EVENT_ID_USER_HSM_TAMPER_3                      116 /* ID for HSM event user TAMPER_3 */
+#define EVENT_ID_USER_FREQM_START                         0 /*  */
+#define EVENT_ID_USER_RTC_TAMPER                          1 /*  */
+#define EVENT_ID_USER_PORT_EV_0                           2 /*  */
+#define EVENT_ID_USER_PORT_EV_1                           3 /*  */
+#define EVENT_ID_USER_PORT_EV_2                           4 /*  */
+#define EVENT_ID_USER_PORT_EV_3                           5 /*  */
+#define EVENT_ID_USER_DMA_CHSTRT_0                        6 /*  */
+#define EVENT_ID_USER_DMA_CHSTRT_1                        7 /*  */
+#define EVENT_ID_USER_DMA_CHSTRT_2                        8 /*  */
+#define EVENT_ID_USER_DMA_CHSTRT_3                        9 /*  */
+#define EVENT_ID_USER_DMA_CHSTRT_4                       10 /*  */
+#define EVENT_ID_USER_DMA_CHSTRT_5                       11 /*  */
+#define EVENT_ID_USER_DMA_CHSTRT_6                       12 /*  */
+#define EVENT_ID_USER_DMA_CHSTRT_7                       13 /*  */
+#define EVENT_ID_USER_DMA_CHSTRT_8                       14 /*  */
+#define EVENT_ID_USER_DMA_CHSTRT_9                       15 /*  */
+#define EVENT_ID_USER_DMA_CHSTRT_10                      16 /*  */
+#define EVENT_ID_USER_DMA_CHSTRT_11                      17 /*  */
+#define EVENT_ID_USER_DMA_CHSTRT_12                      18 /*  */
+#define EVENT_ID_USER_DMA_CHSTRT_13                      19 /*  */
+#define EVENT_ID_USER_DMA_CHSTRT_14                      20 /*  */
+#define EVENT_ID_USER_DMA_CHSTRT_15                      21 /*  */
+#define EVENT_ID_USER_DMA_CHAUX_0                        22 /*  */
+#define EVENT_ID_USER_DMA_CHAUX_1                        23 /*  */
+#define EVENT_ID_USER_DMA_CHAUX_2                        24 /*  */
+#define EVENT_ID_USER_DMA_CHAUX_3                        25 /*  */
+#define EVENT_ID_USER_DMA_CHAUX_4                        26 /*  */
+#define EVENT_ID_USER_DMA_CHAUX_5                        27 /*  */
+#define EVENT_ID_USER_DMA_CHAUX_6                        28 /*  */
+#define EVENT_ID_USER_DMA_CHAUX_7                        29 /*  */
+#define EVENT_ID_USER_DMA_CHAUX_8                        30 /*  */
+#define EVENT_ID_USER_DMA_CHAUX_9                        31 /*  */
+#define EVENT_ID_USER_DMA_CHAUX_10                       32 /*  */
+#define EVENT_ID_USER_DMA_CHAUX_11                       33 /*  */
+#define EVENT_ID_USER_DMA_CHAUX_12                       34 /*  */
+#define EVENT_ID_USER_DMA_CHAUX_13                       35 /*  */
+#define EVENT_ID_USER_DMA_CHAUX_14                       36 /*  */
+#define EVENT_ID_USER_DMA_CHAUX_15                       37 /*  */
+#define EVENT_ID_USER_TCC0_EV_0                          38 /*  */
+#define EVENT_ID_USER_TCC0_EV_1                          39 /*  */
+#define EVENT_ID_USER_TCC0_MC_0                          40 /*  */
+#define EVENT_ID_USER_TCC0_MC_1                          41 /*  */
+#define EVENT_ID_USER_TCC0_MC_2                          42 /*  */
+#define EVENT_ID_USER_TCC0_MC_3                          43 /*  */
+#define EVENT_ID_USER_TCC0_MC_4                          44 /*  */
+#define EVENT_ID_USER_TCC0_MC_5                          45 /*  */
+#define EVENT_ID_USER_TCC0_MC_6                          46 /*  */
+#define EVENT_ID_USER_TCC0_MC_7                          47 /*  */
+#define EVENT_ID_USER_TCC1_EV_0                          48 /*  */
+#define EVENT_ID_USER_TCC1_EV_1                          49 /*  */
+#define EVENT_ID_USER_TCC1_MC_0                          50 /*  */
+#define EVENT_ID_USER_TCC1_MC_1                          51 /*  */
+#define EVENT_ID_USER_TCC1_MC_2                          52 /*  */
+#define EVENT_ID_USER_TCC1_MC_3                          53 /*  */
+#define EVENT_ID_USER_TCC1_MC_4                          54 /*  */
+#define EVENT_ID_USER_TCC1_MC_5                          55 /*  */
+#define EVENT_ID_USER_TCC1_MC_6                          56 /*  */
+#define EVENT_ID_USER_TCC1_MC_7                          57 /*  */
+#define EVENT_ID_USER_TCC2_EV_0                          58 /*  */
+#define EVENT_ID_USER_TCC2_EV_1                          59 /*  */
+#define EVENT_ID_USER_TCC2_MC_0                          60 /*  */
+#define EVENT_ID_USER_TCC2_MC_1                          61 /*  */
+#define EVENT_ID_USER_TCC2_MC_2                          62 /*  */
+#define EVENT_ID_USER_TCC2_MC_3                          63 /*  */
+#define EVENT_ID_USER_TCC2_MC_4                          64 /*  */
+#define EVENT_ID_USER_TCC2_MC_5                          65 /*  */
+#define EVENT_ID_USER_TCC3_EV_0                          66 /*  */
+#define EVENT_ID_USER_TCC3_EV_1                          67 /*  */
+#define EVENT_ID_USER_TCC3_MC_0                          68 /*  */
+#define EVENT_ID_USER_TCC3_MC_1                          69 /*  */
+#define EVENT_ID_USER_TCC4_EV_0                          70 /*  */
+#define EVENT_ID_USER_TCC4_EV_1                          71 /*  */
+#define EVENT_ID_USER_TCC4_MC_0                          72 /*  */
+#define EVENT_ID_USER_TCC4_MC_1                          73 /*  */
+#define EVENT_ID_USER_TCC5_EV_0                          74 /*  */
+#define EVENT_ID_USER_TCC5_EV_1                          75 /*  */
+#define EVENT_ID_USER_TCC5_MC_0                          76 /*  */
+#define EVENT_ID_USER_TCC5_MC_1                          77 /*  */
+#define EVENT_ID_USER_TCC6_EV_0                          78 /*  */
+#define EVENT_ID_USER_TCC6_EV_1                          79 /*  */
+#define EVENT_ID_USER_TCC6_MC_0                          80 /*  */
+#define EVENT_ID_USER_TCC6_MC_1                          81 /*  */
+#define EVENT_ID_USER_TCC7_EV_0                          82 /*  */
+#define EVENT_ID_USER_TCC7_EV_1                          83 /*  */
+#define EVENT_ID_USER_TCC7_MC_0                          84 /*  */
+#define EVENT_ID_USER_TCC7_MC_1                          85 /*  */
+#define EVENT_ID_USER_TCC8_EV_0                          86 /*  */
+#define EVENT_ID_USER_TCC8_EV_1                          87 /*  */
+#define EVENT_ID_USER_TCC8_MC_0                          88 /*  */
+#define EVENT_ID_USER_TCC8_MC_1                          89 /*  */
+#define EVENT_ID_USER_TCC9_EV_0                          90 /*  */
+#define EVENT_ID_USER_TCC9_EV_1                          91 /*  */
+#define EVENT_ID_USER_TCC9_MC_0                          92 /*  */
+#define EVENT_ID_USER_TCC9_MC_1                          93 /*  */
+#define EVENT_ID_USER_TCC9_MC_2                          94 /*  */
+#define EVENT_ID_USER_TCC9_MC_3                          95 /*  */
+#define EVENT_ID_USER_TCC9_MC_4                          96 /*  */
+#define EVENT_ID_USER_TCC9_MC_5                          97 /*  */
+#define EVENT_ID_USER_ADC_TRIGGERS_0                     98 /*  */
+#define EVENT_ID_USER_ADC_TRIGGERS_1                     99 /*  */
+#define EVENT_ID_USER_ADC_TRIGGERS_2                    100 /*  */
+#define EVENT_ID_USER_ADC_TRIGGERS_3                    101 /*  */
+#define EVENT_ID_USER_ADC_TRIGGERS_4                    102 /*  */
+#define EVENT_ID_USER_ADC_TRIGGERS_5                    103 /*  */
+#define EVENT_ID_USER_ADC_TRIGGERS_6                    104 /*  */
+#define EVENT_ID_USER_ADC_TRIGGERS_7                    105 /*  */
+#define EVENT_ID_USER_ADC_TRIGGERS_8                    106 /*  */
+#define EVENT_ID_USER_ADC_TRIGGERS_9                    107 /*  */
+#define EVENT_ID_USER_ADC_TRIGGERS_10                   108 /*  */
+#define EVENT_ID_USER_AC_SOC_0                          109 /*  */
+#define EVENT_ID_USER_AC_SOC_1                          110 /*  */
+#define EVENT_ID_USER_PTC_DSEQR                         111 /*  */
+#define EVENT_ID_USER_PTC_STCONV                        112 /*  */
+#define EVENT_ID_USER_HSM_TAMPER_0                      113 /*  */
+#define EVENT_ID_USER_HSM_TAMPER_1                      114 /*  */
+#define EVENT_ID_USER_HSM_TAMPER_2                      115 /*  */
+#define EVENT_ID_USER_HSM_TAMPER_3                      116 /*  */
 
 #ifdef __cplusplus
 }

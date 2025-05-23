@@ -30,10 +30,10 @@
 
 /* MISRAC 2012 deviation block start */
 /* MISRA C-2012 Rule 21.2 deviated 1 times. Deviation record ID -  H3_MISRAC_2012_R_21_2_DR_1 */
-/* MISRA C-2012 Rule 8.6 deviated 7 times.  Deviation record ID -  H3_MISRAC_2012_R_8_6_DR_1 */
+/* MISRA C-2012 Rule 8.6 deviated 8 times.  Deviation record ID -  H3_MISRAC_2012_R_8_6_DR_1 */
 /* Initialize segments */
 extern uint32_t _sfixed;
-extern void _ram_end_(void);
+extern void _stack(void);
 
 extern int main(void);
 
@@ -45,7 +45,7 @@ extern void (* const vectors[])(void);
 __attribute__ ((used, section(".vectors")))
 void (* const vectors[])(void) =
 {
-    &_ram_end_,
+    &_stack,
     Reset_Handler,
 };
 
@@ -59,26 +59,14 @@ extern uint32_t _sdata, _edata, _etext;
 extern uint32_t _sbss, _ebss;
 /* MISRAC 2012 deviation block end */
 
+
 void __attribute__((noinline, section(".romfunc.Reset_Handler"))) Reset_Handler(void)
 {
     register uint32_t count;
-/* MISRAC 2012 deviation block start */
-/* MISRA C-2012 Rule 18.1 deviated 1 times. Deviation record ID -  H3_MISRAC_2012_R_18_1_DR_1 */
-    register uint64_t *pFlexRam = (uint64_t*)(uintptr_t)&_sdata;
-
-    // FlexRAM initialization loop (to handle ECC properly)
-    // we need to initialize all of RAM with 64 bit aligned writes
-    for (count = 0U; count < (((uint32_t)&_ram_end_ - (uint32_t)&_sdata) / 8U); count++)
-    {
-        pFlexRam[count] = 0U;
-    }
-
-    __DSB();
-    __ISB();
-/* MISRAC 2012 deviation block end */
 
     uint32_t *pSrc, *pDst;
     uintptr_t src, dst;
+
 
 
     src = (uintptr_t)&_etext;
