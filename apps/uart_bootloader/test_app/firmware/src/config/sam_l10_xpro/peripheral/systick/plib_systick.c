@@ -42,7 +42,7 @@
 #include "interrupts.h"
 #include "plib_systick.h"
 
-volatile static SYSTICK_OBJECT systick;
+static volatile SYSTICK_OBJECT systick;
 
 void SYSTICK_TimerInitialize ( void )
 {

@@ -1,4 +1,4 @@
-<config configName="sam_l10_xpro" projectName="uart_bootloader_test_app_sam_l10_xpro" configVersion="1.1" device="ATSAML10E16A" deviceLibraryClass="com.microchip.mcc.harmony.Harmony3Library" coreVersion="5.6.1">
+<config configName="sam_l10_xpro" projectName="uart_bootloader_test_app_sam_l10_xpro" configVersion="1.1" device="ATSAML10E16A" deviceLibraryClass="com.microchip.mcc.harmony.Harmony3Library" coreVersion="5.7.1">
    <usedPackages class="java.util.ArrayList">
       <package packageName="bsp" version="3.13.0" contentType="HARMONY">
          <modules class="java.util.ArrayList"/>
@@ -56,7 +56,7 @@
       </entry>
    </usedClasses>
    <usedLibraries class="java.util.ArrayList">
-      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.4.1"/>
+      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.5.5"/>
    </usedLibraries>
    <tokenMap class="java.util.TreeMap">
       <entry>
@@ -1898,11 +1898,11 @@
       </entry>
       <entry>
          <file>..\src\config\sam_l10_xpro\definitions.h</file>
-         <hash>48d489a21a31922c4ca528fb23012756fbaa3afb90d0c70c0ebcb1332e510c1d</hash>
+         <hash>877a8e0914f8dd28a730168651240d3c46edb61f5ec44ce439511ad41caf88fb</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_l10_xpro\device.h</file>
-         <hash>ac8d4a93da8bd58aaec71bfeb218f0c1b754f77bd4c52cb655c7b72f8a0b1205</hash>
+         <hash>70c74c0cb8da2c87fa878a18cf5aa2f7bc8c21e7e4c6ab8a3fa6ef364f2db23a</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_l10_xpro\device_cache.h</file>
@@ -1914,19 +1914,19 @@
       </entry>
       <entry>
          <file>..\src\config\sam_l10_xpro\exceptions.c</file>
-         <hash>3d788ce1bd25caaaf6b533ec5b06e4b1e753044c1a217dd5cdf8629628ae85a9</hash>
+         <hash>b0b65c30aa1f7a01ef7be6c1628c331a5ca3eae7dc3bd76ebe647703b76f432d</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_l10_xpro\initialization.c</file>
-         <hash>1fdec1877735ff7f1cdf56afc5309a618f6c17c386616228f33a8b4f89dda3e1</hash>
+         <hash>0fab5e882d3ce37329d93c836d867885c4486bc5593c243ab73ffa1ab472c7b0</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_l10_xpro\interrupts.c</file>
-         <hash>5981c680d6faa01dbff6cc71eb6b317120c42d5e9c425c7d19c7c7215bb0ce90</hash>
+         <hash>670248c35926779f95e54a729215603e920573fbbc97f46b7c20227de15d152e</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_l10_xpro\interrupts.h</file>
-         <hash>4077b6d65b6f1734f0c235a2a1a7ca812a2d0c015309e2d0b28cb9d154650c62</hash>
+         <hash>357a65d22e4943c710d61b3659af8a67e9d0d21fdf417f4e3180ccf121db1fca</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_l10_xpro\libc_syscalls.c</file>
@@ -1942,7 +1942,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_l10_xpro\peripheral\evsys\plib_evsys.c</file>
-         <hash>b2e1a8004049e687fc5544133f3346f743ced50cdaf860c8e3c7f58df3cc163f</hash>
+         <hash>171913270aa095f1e8ff9192995129ff7bab22e5c793c4223f9046802e69d1e6</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_l10_xpro\peripheral\evsys\plib_evsys.h</file>
@@ -1950,11 +1950,11 @@
       </entry>
       <entry>
          <file>..\src\config\sam_l10_xpro\peripheral\nvic\plib_nvic.c</file>
-         <hash>056a589ef1f8f3bbb9c37fd4685b97207b957116104636b2ead4e442cc135a46</hash>
+         <hash>d17bdfa86168bdfc1dd73f6785fdae850b5e041462997d96caf174cad18431f6</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_l10_xpro\peripheral\nvic\plib_nvic.h</file>
-         <hash>81e813a093101d546799e00723cbf7245e2d18471fa51c8d130c5809cecca03e</hash>
+         <hash>9936ac782115af41003255283fa2f603f4ff2212d16275b7c80ea8d067a9e208</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_l10_xpro\peripheral\nvmctrl\plib_nvmctrl.c</file>
@@ -1974,7 +1974,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_l10_xpro\peripheral\port\plib_port.c</file>
-         <hash>49fc719c3e76c6e981d806dbb35208e0b5e7af0f7f8cb68cdd92c92f8c133ccc</hash>
+         <hash>3c7037b600573818eab99bf1560e34c1b3c82363f54237a8562644327ee4e694</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_l10_xpro\peripheral\port\plib_port.h</file>
@@ -1982,19 +1982,19 @@
       </entry>
       <entry>
          <file>..\src\config\sam_l10_xpro\peripheral\sercom\usart\plib_sercom0_usart.c</file>
-         <hash>76d40aaddb42ddaa3184f9f630138d5375ff387bdbcf6ee14d142cb7ba9007cb</hash>
+         <hash>94d7a5c8acc28d85fa36243509bbffdbf69f3d16d0a8cebd7e6b526e3cbb8f44</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_l10_xpro\peripheral\sercom\usart\plib_sercom0_usart.h</file>
-         <hash>da34e98c6c7b5164a88fa693139665742c8dc1bc56fcb0d76d7ef36b71eb4bac</hash>
+         <hash>ada260bab121780e4ff3b1d8514c96508f13c20f21c860135a5e986f23fb2c9e</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_l10_xpro\peripheral\sercom\usart\plib_sercom_usart_common.h</file>
-         <hash>63c6e89936ba47e8989478a8be0fa40b406361f2f0dcc1b6cfcd801b50a4bf92</hash>
+         <hash>9f02e811b95f0470ca23f3546f3ddf4ccccb385b4d8b8c091899d0d20b0c56e1</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_l10_xpro\peripheral\systick\plib_systick.c</file>
-         <hash>2cd2bb6d81eecf8824b30b40a8318642b49b6ae63f5507af264dce1b29087b4e</hash>
+         <hash>f767e1dab1678afb4c4167148e8387cf9e02435f1e158c904c905dc14b325543</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_l10_xpro\peripheral\systick\plib_systick.h</file>
