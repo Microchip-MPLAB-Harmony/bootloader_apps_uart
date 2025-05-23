@@ -1,7 +1,7 @@
 /*
  * Instance header file for ATSAMRH71F20C
  *
- * Copyright (c) 2022 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2023 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,19 +20,19 @@
  *
  */
 
-/* file generated from device description version 2022-01-06T10:24:17Z */
+/* file generated from device description version 2022-06-28T12:38:50Z */
 #ifndef _SAMRH71_PWM1_INSTANCE_
 #define _SAMRH71_PWM1_INSTANCE_
 
 
 /* ========== Instance Parameter definitions for PWM1 peripheral ========== */
-#define PWM1_DMAC_ID_TX                          (23)       
-#define PWM1_INSTANCE_ID                         (32)       
 #define PWM1_CLOCK_ID                            (32)       
+#define PWM1_DMAC_ID_TX                          (23)       
 #define PWM1_FAULT_PWM_ID0                       (0x0)      /* Fault 0 - PWM1_PWMFI0 Input pin */
 #define PWM1_FAULT_PWM_ID1                       (0x1)      /* Fault 1 - PWM1_PWMFI1 Input pin */
 #define PWM1_FAULT_PWM_ID2                       (0x2)      /* Fault 2 - PWM1_PWMFI2 Input pin */
 #define PWM1_FAULT_PWM_ID3                       (0x3)      /* Fault 3 - MAIN_OSC_PMC */
 #define PWM1_FAULT_PWM_ID6                       (0x6)      /* Fault 6 - TC0 */
+#define PWM1_INSTANCE_ID                         (32)       
 
 #endif /* _SAMRH71_PWM1_INSTANCE_ */

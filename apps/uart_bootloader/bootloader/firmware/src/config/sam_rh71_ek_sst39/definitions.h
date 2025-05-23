@@ -14,7 +14,7 @@
 
 //DOM-IGNORE-BEGIN
 /*******************************************************************************
-* Copyright (C) 2018 Microchip Technology Inc. and its subsidiaries.
+* Copyright (C) 2025 Microchip Technology Inc. and its subsidiaries.
 *
 * Subject to your compliance with these terms, you may use Microchip software
 * and any derivatives exclusively with Microchip products. It is your
@@ -70,13 +70,13 @@ extern "C" {
 // DOM-IGNORE-END
 
 /* Device Information */
-#define DEVICE_NAME			 "ATSAMRH71F20C"
-#define DEVICE_ARCH			 "CORTEX-M7"
-#define DEVICE_FAMILY		 "SAMRH"
-#define DEVICE_SERIES		 "SAMRH71"
+#define DEVICE_NAME          "ATSAMRH71F20C"
+#define DEVICE_ARCH          "CORTEX-M7"
+#define DEVICE_FAMILY        "SAMRH"
+#define DEVICE_SERIES        "SAMRH71"
 
 /* CPU clock frequency */
-#define CPU_CLOCK_FREQUENCY 100000000
+#define CPU_CLOCK_FREQUENCY 100000000U
 
 // *****************************************************************************
 // *****************************************************************************

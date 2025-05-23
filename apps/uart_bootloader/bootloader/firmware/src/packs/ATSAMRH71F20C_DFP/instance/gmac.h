@@ -1,7 +1,7 @@
 /*
  * Instance header file for ATSAMRH71F20C
  *
- * Copyright (c) 2022 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2023 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,13 +20,13 @@
  *
  */
 
-/* file generated from device description version 2022-01-06T10:24:17Z */
+/* file generated from device description version 2022-06-28T12:38:50Z */
 #ifndef _SAMRH71_GMAC_INSTANCE_
 #define _SAMRH71_GMAC_INSTANCE_
 
 
 /* ========== Instance Parameter definitions for GMAC peripheral ========== */
-#define GMAC_INSTANCE_ID                         (69)       
 #define GMAC_CLOCK_ID                            (69)       
+#define GMAC_INSTANCE_ID                         (69)       
 
 #endif /* _SAMRH71_GMAC_INSTANCE_ */

@@ -1,7 +1,7 @@
 /*
  * Peripheral I/O description for SAMRH71F20C
  *
- * Copyright (c) 2022 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2023 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,7 +20,7 @@
  *
  */
 
-/* file generated from device description version 2022-01-06T10:24:17Z */
+/* file generated from device description version 2022-06-28T12:38:50Z */
 #ifndef _SAMRH71F20C_GPIO_H_
 #define _SAMRH71F20C_GPIO_H_
 
@@ -1202,6 +1202,47 @@
 #define PIN_PC27D_TC3_TIOB11                       _UINT32_(91) /**< TC3 signal: TC3_TIOB11 on PC27 mux D */
 #define MUX_PC27D_TC3_TIOB11                       _UINT32_(3)  /**< TC3 signal line function value: TC3_TIOB11 */
 #define PIO_PC27D_TC3_TIOB11                       (_UINT32_(1) << 27) /**< TC3 signal: TC3_TIOB11 */
+/* ========== PIO definition for ICE peripheral ========== */
+#define PIN_PA16C_ICE_SWDCLK                       _UINT32_(16) /**< ICE signal: ICE_SWDCLK on PA16 mux C */
+#define MUX_PA16C_ICE_SWDCLK                       _UINT32_(2)  /**< ICE signal line function value: ICE_SWDCLK */
+#define PIO_PA16C_ICE_SWDCLK                       (_UINT32_(1) << 16) /**< ICE signal: ICE_SWDCLK */
+#define PIN_PA17C_ICE_SWDIO                        _UINT32_(17) /**< ICE signal: ICE_SWDIO on PA17 mux C */
+#define MUX_PA17C_ICE_SWDIO                        _UINT32_(2)  /**< ICE signal line function value: ICE_SWDIO */
+#define PIO_PA17C_ICE_SWDIO                        (_UINT32_(1) << 17) /**< ICE signal: ICE_SWDIO */
+#define PIN_PA16C_ICE_TCK                          _UINT32_(16) /**< ICE signal: ICE_TCK on PA16 mux C */
+#define MUX_PA16C_ICE_TCK                          _UINT32_(2)  /**< ICE signal line function value: ICE_TCK */
+#define PIO_PA16C_ICE_TCK                          (_UINT32_(1) << 16) /**< ICE signal: ICE_TCK */
+#define PIN_PB1C_ICE_TDI                           _UINT32_(33) /**< ICE signal: ICE_TDI on PB1 mux C */
+#define MUX_PB1C_ICE_TDI                           _UINT32_(2)  /**< ICE signal line function value: ICE_TDI */
+#define PIO_PB1C_ICE_TDI                           (_UINT32_(1) << 1) /**< ICE signal: ICE_TDI */
+#define PIN_PB3C_ICE_TDO                           _UINT32_(35) /**< ICE signal: ICE_TDO on PB3 mux C */
+#define MUX_PB3C_ICE_TDO                           _UINT32_(2)  /**< ICE signal line function value: ICE_TDO */
+#define PIO_PB3C_ICE_TDO                           (_UINT32_(1) << 3) /**< ICE signal: ICE_TDO */
+#define PIN_PA17C_ICE_TMS                          _UINT32_(17) /**< ICE signal: ICE_TMS on PA17 mux C */
+#define MUX_PA17C_ICE_TMS                          _UINT32_(2)  /**< ICE signal line function value: ICE_TMS */
+#define PIO_PA17C_ICE_TMS                          (_UINT32_(1) << 17) /**< ICE signal: ICE_TMS */
+#define PIN_PB3C_ICE_TRACESWO                      _UINT32_(35) /**< ICE signal: ICE_TRACESWO on PB3 mux C */
+#define MUX_PB3C_ICE_TRACESWO                      _UINT32_(2)  /**< ICE signal line function value: ICE_TRACESWO */
+#define PIO_PB3C_ICE_TRACESWO                      (_UINT32_(1) << 3) /**< ICE signal: ICE_TRACESWO */
+/* ========== PIO definition for TPIU peripheral ========== */
+#define PIN_PB2C_TPIU_TRACECLK                     _UINT32_(34) /**< TPIU signal: TPIU_TRACECLK on PB2 mux C */
+#define MUX_PB2C_TPIU_TRACECLK                     _UINT32_(2)  /**< TPIU signal line function value: TPIU_TRACECLK */
+#define PIO_PB2C_TPIU_TRACECLK                     (_UINT32_(1) << 2) /**< TPIU signal: TPIU_TRACECLK */
+#define PIN_PB0C_TPIU_TRACECTL                     _UINT32_(32) /**< TPIU signal: TPIU_TRACECTL on PB0 mux C */
+#define MUX_PB0C_TPIU_TRACECTL                     _UINT32_(2)  /**< TPIU signal line function value: TPIU_TRACECTL */
+#define PIO_PB0C_TPIU_TRACECTL                     (_UINT32_(1) << 0) /**< TPIU signal: TPIU_TRACECTL */
+#define PIN_PA25C_TPIU_TRACED0                     _UINT32_(25) /**< TPIU signal: TPIU_TRACED0 on PA25 mux C */
+#define MUX_PA25C_TPIU_TRACED0                     _UINT32_(2)  /**< TPIU signal line function value: TPIU_TRACED0 */
+#define PIO_PA25C_TPIU_TRACED0                     (_UINT32_(1) << 25) /**< TPIU signal: TPIU_TRACED0 */
+#define PIN_PA26C_TPIU_TRACED1                     _UINT32_(26) /**< TPIU signal: TPIU_TRACED1 on PA26 mux C */
+#define MUX_PA26C_TPIU_TRACED1                     _UINT32_(2)  /**< TPIU signal line function value: TPIU_TRACED1 */
+#define PIO_PA26C_TPIU_TRACED1                     (_UINT32_(1) << 26) /**< TPIU signal: TPIU_TRACED1 */
+#define PIN_PA27C_TPIU_TRACED2                     _UINT32_(27) /**< TPIU signal: TPIU_TRACED2 on PA27 mux C */
+#define MUX_PA27C_TPIU_TRACED2                     _UINT32_(2)  /**< TPIU signal line function value: TPIU_TRACED2 */
+#define PIO_PA27C_TPIU_TRACED2                     (_UINT32_(1) << 27) /**< TPIU signal: TPIU_TRACED2 */
+#define PIN_PA28C_TPIU_TRACED3                     _UINT32_(28) /**< TPIU signal: TPIU_TRACED3 on PA28 mux C */
+#define MUX_PA28C_TPIU_TRACED3                     _UINT32_(2)  /**< TPIU signal line function value: TPIU_TRACED3 */
+#define PIO_PA28C_TPIU_TRACED3                     (_UINT32_(1) << 28) /**< TPIU signal: TPIU_TRACED3 */
 
 #endif /* _SAMRH71F20C_GPIO_H_ */
 

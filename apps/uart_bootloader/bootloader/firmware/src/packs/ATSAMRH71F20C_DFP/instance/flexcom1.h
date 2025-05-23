@@ -1,7 +1,7 @@
 /*
  * Instance header file for ATSAMRH71F20C
  *
- * Copyright (c) 2022 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2023 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,18 +20,18 @@
  *
  */
 
-/* file generated from device description version 2022-01-06T10:24:17Z */
+/* file generated from device description version 2022-06-28T12:38:50Z */
 #ifndef _SAMRH71_FLEXCOM1_INSTANCE_
 #define _SAMRH71_FLEXCOM1_INSTANCE_
 
 
 /* ========== Instance Parameter definitions for FLEXCOM1 peripheral ========== */
-#define FLEXCOM1_DMAC_ID_TX                      (2)        
-#define FLEXCOM1_DMAC_ID_RX                      (3)        
-#define FLEXCOM1_INSTANCE_ID                     (8)        
 #define FLEXCOM1_CLOCK_ID                        (8)        
-#define FLEXCOM1_USART_FIFO_SIZE                 (16)       
+#define FLEXCOM1_DMAC_ID_RX                      (3)        
+#define FLEXCOM1_DMAC_ID_TX                      (2)        
+#define FLEXCOM1_INSTANCE_ID                     (8)        
 #define FLEXCOM1_SPI_FIFO_SIZE                   (8)        
 #define FLEXCOM1_TWI_FIFO_SIZE                   (8)        
+#define FLEXCOM1_USART_FIFO_SIZE                 (16)       
 
 #endif /* _SAMRH71_FLEXCOM1_INSTANCE_ */
