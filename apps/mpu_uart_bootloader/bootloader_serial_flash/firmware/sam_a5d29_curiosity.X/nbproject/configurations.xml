@@ -189,6 +189,13 @@
             <itemPath>../src/packs/ATSAMA5D29_DFP/instance/secumod.h</itemPath>
             <itemPath>../src/packs/ATSAMA5D29_DFP/instance/twihs1.h</itemPath>
             <itemPath>../src/packs/ATSAMA5D29_DFP/instance/pio.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D29_DFP/instance/piob.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D29_DFP/instance/pioc.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D29_DFP/instance/piod.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D29_DFP/instance/pio_ctrl.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D29_DFP/instance/s_pio.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D29_DFP/instance/s_pio_ctrl.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D29_DFP/instance/pioa.h</itemPath>
           </logicalFolder>
           <logicalFolder name="pio" displayName="pio" projectFiles="true">
             <itemPath>../src/packs/ATSAMA5D29_DFP/pio/sama5d29.h</itemPath>
@@ -288,11 +295,11 @@
         <targetPluginBoard/>
         <platformTool>j32</platformTool>
         <languageToolchain>XC32</languageToolchain>
-        <languageToolchainVersion>4.35</languageToolchainVersion>
+        <languageToolchainVersion>4.60</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <packs>
-        <pack name="SAMA5D2_DFP" vendor="Microchip" version="1.9.106"/>
+        <pack name="SAMA5D2_DFP" vendor="Microchip" version="1.11.228"/>
         <pack name="CMSIS" vendor="ARM" version="5.4.0"/>
       </packs>
       <ScriptingSettings>
