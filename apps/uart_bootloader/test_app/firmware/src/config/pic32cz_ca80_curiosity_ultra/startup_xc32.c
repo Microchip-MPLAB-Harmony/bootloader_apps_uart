@@ -86,48 +86,6 @@ __STATIC_INLINE void __attribute__((optimize("-O1"))) TCM_Enable(void)
     __DSB();
     __ISB();
 }
-#if defined ECC_INIT_START
-#define START_ADDR  ECC_INIT_START
-#else
-#define START_ADDR  FLEXRAM_ADDR
-#endif
-
-#if defined ECC_INIT_LEN
-#define INIT_LEN  ECC_INIT_LEN
-#else
-#define INIT_LEN  FLEXRAM_SIZE
-#endif
-
-__STATIC_INLINE void  __attribute__((optimize("-O1")))  RAM_Initialize(void)
-{
-    register uint64_t *pFlexRam;
-
-    __DSB();
-    __ISB();
-
-    // FlexRAM initialization loop (to handle ECC properly)
-    // we need to initialize all of RAM with 64 bit aligned writes
-    for (pFlexRam = (uint64_t*)START_ADDR ; pFlexRam < ((uint64_t*)(START_ADDR + INIT_LEN)) ; pFlexRam++)
-    {
-        *pFlexRam = 0;
-    }
-
-    // ITCM initialization loop (to handle ECC properly)
-    // we need to initialize all of RAM with 64 bit aligned writes
-    for (pFlexRam = (uint64_t*) ITCM_ADDR ; pFlexRam < (uint64_t*)(ITCM_ADDR + ITCM_SIZE) ; pFlexRam++)
-    {
-        *pFlexRam = 0;
-    }
-    // DTCM initialization loop (to handle ECC properly)
-    // we need to initialize all of RAM with 64 bit aligned writes
-    for (pFlexRam = (uint64_t*) DTCM_ADDR ; pFlexRam < (uint64_t*)(DTCM_ADDR + DTCM_SIZE) ; pFlexRam++)
-    {
-        *pFlexRam = 0;
-    }
-
-    __DSB();
-    __ISB();
-}
 
 
 #if (__ARM_FP==14) || (__ARM_FP==4)
@@ -163,8 +121,6 @@ void __attribute__((optimize("-O1"),long_call))Dummy_App_Func(void)
  */
 void __attribute__((optimize("-O1"), section(".text.Reset_Handler"), long_call, noreturn)) Reset_Handler(void)
 {
-    RAM_Initialize();
-
 #ifdef SCB_VTOR_TBLOFF_Msk
     uint32_t *pSrc;
 #endif
