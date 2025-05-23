@@ -17,7 +17,6 @@
             </logicalFolder>
             <logicalFolder name="f6" displayName="uart" projectFiles="true">
             </logicalFolder>
-            <itemPath>../src/config/pic32mk_mcm_curiosity_pro/bootloader/bootloader.h</itemPath>
           </logicalFolder>
           <logicalFolder name="f1" displayName="peripheral" projectFiles="true">
             <logicalFolder name="f2" displayName="clk" projectFiles="true">
@@ -119,7 +118,7 @@
         <targetPluginBoard/>
         <platformTool>pkob4hybrid</platformTool>
         <languageToolchain>XC32</languageToolchain>
-        <languageToolchainVersion>4.35</languageToolchainVersion>
+        <languageToolchainVersion>4.60</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <packs>
