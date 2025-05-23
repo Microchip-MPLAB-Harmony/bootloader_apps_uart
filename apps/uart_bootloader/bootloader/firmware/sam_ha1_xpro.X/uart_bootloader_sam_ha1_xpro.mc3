@@ -1,4 +1,4 @@
-<config configName="sam_ha1_xpro" projectName="uart_bootloader_sam_ha1_xpro" configVersion="1.1" device="ATSAMHA1G16AB" deviceLibraryClass="com.microchip.mcc.harmony.Harmony3Library" coreVersion="5.6.1">
+<config configName="sam_ha1_xpro" projectName="uart_bootloader_sam_ha1_xpro" configVersion="1.1" device="ATSAMHA1G16AB" deviceLibraryClass="com.microchip.mcc.harmony.Harmony3Library" coreVersion="5.7.1">
    <usedPackages class="java.util.ArrayList">
       <package packageName="bootloader" version="" contentType="HARMONY">
          <modules class="java.util.ArrayList"/>
@@ -45,7 +45,7 @@
       </entry>
    </usedClasses>
    <usedLibraries class="java.util.ArrayList">
-      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.4.1"/>
+      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.5.5"/>
    </usedLibraries>
    <tokenMap class="java.util.TreeMap">
       <entry>
@@ -2058,7 +2058,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_ha1_xpro\bootloader\bootloader_common.h</file>
-         <hash>f4dc4086c692849020e10fb92bfd260c55f08276d04cb2d154fe9a87accdf603</hash>
+         <hash>ca1373e6c9ff1cd97887ed3acc093ffdafd113eed8d0097514cafc0c20265ce1</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_ha1_xpro\bootloader\bootloader_interrupt.h</file>
@@ -2066,7 +2066,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_ha1_xpro\bootloader\bootloader_uart.c</file>
-         <hash>8b05efe5a82b8d23ef2854efded7f59bae8db6ceb1edd8069af8d98a18a26b38</hash>
+         <hash>f45d584e62d6e9976d6f4b2d3fcd2fc38ad9c1245a9f76ff9cdfcdc3f390409b</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_ha1_xpro\bootloader\bootloader_uart.h</file>
@@ -2074,15 +2074,15 @@
       </entry>
       <entry>
          <file>..\src\config\sam_ha1_xpro\btl.ld</file>
-         <hash>dbe72f613e8b1d2674c7fed7b90361210d4aca90381c52d6f742fddc910dc32d</hash>
+         <hash>38748cd41de6fe0bef6e696785d3fc5d79da7d07d7655fdbe5f3e0036e0300e9</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_ha1_xpro\definitions.h</file>
-         <hash>d320531561a0292fb5fe93a9634961c60942a948289907021bb37d41c6eed247</hash>
+         <hash>ace7c8e7291dd9c7f80db26f15ab5dbeb0650d8fe757560e2d6d9d65dd85c5ee</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_ha1_xpro\device.h</file>
-         <hash>92e2fce3ab98a939ee53827af02f92b8ae48f46f53e439b23d5fa8f8fa5f3038</hash>
+         <hash>b5fbf9cc084c35f83b0cf5d4745cadc82739242403b8391120f2991555413239</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_ha1_xpro\device_cache.h</file>
@@ -2094,7 +2094,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_ha1_xpro\initialization.c</file>
-         <hash>fbe9dae6baa7112c0ac83f6f99792d6ab4aa5e27622ba6b04718c6743fc02a9a</hash>
+         <hash>109cfdfd9f5655771e9442e5df042b74a4d078e3fccd2e44d266183445f1c9f4</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_ha1_xpro\libc_syscalls.c</file>
@@ -2126,11 +2126,11 @@
       </entry>
       <entry>
          <file>..\src\config\sam_ha1_xpro\peripheral\nvic\plib_nvic.c</file>
-         <hash>056a589ef1f8f3bbb9c37fd4685b97207b957116104636b2ead4e442cc135a46</hash>
+         <hash>d17bdfa86168bdfc1dd73f6785fdae850b5e041462997d96caf174cad18431f6</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_ha1_xpro\peripheral\nvic\plib_nvic.h</file>
-         <hash>81e813a093101d546799e00723cbf7245e2d18471fa51c8d130c5809cecca03e</hash>
+         <hash>9936ac782115af41003255283fa2f603f4ff2212d16275b7c80ea8d067a9e208</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_ha1_xpro\peripheral\nvmctrl\plib_nvmctrl.c</file>
@@ -2138,7 +2138,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_ha1_xpro\peripheral\nvmctrl\plib_nvmctrl.h</file>
-         <hash>3dbe7691ca7c7220aa1c9f1126b3297e1c39c6b88467c9ff2f42329a915be9b0</hash>
+         <hash>91c6f0eaac353e48969e49aefc8bbecefde45e514d44b6f98a8b1021383ec74f</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_ha1_xpro\peripheral\pac\plib_pac.c</file>
@@ -2150,7 +2150,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_ha1_xpro\peripheral\port\plib_port.c</file>
-         <hash>a44392f8af59761a4314a49a21dc4298e209e6041595f4e04029826e11f19733</hash>
+         <hash>99f6643e0187e9712f4b3c9199f028fc0bd8ef6aa700e47d078990b5efc48e12</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_ha1_xpro\peripheral\port\plib_port.h</file>
@@ -2158,15 +2158,15 @@
       </entry>
       <entry>
          <file>..\src\config\sam_ha1_xpro\peripheral\sercom\usart\plib_sercom1_usart.c</file>
-         <hash>ac69e838d30532970287c1a9700260437e3c3086656941d31c2aa8ffb4fdaa5a</hash>
+         <hash>dd61a8b7d2c847b7d910e2d2dbb5dac9697f48c6cbc249fcda03ca5e8d045fc6</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_ha1_xpro\peripheral\sercom\usart\plib_sercom1_usart.h</file>
-         <hash>20275d0f8ab3241a780bc4787dee53a30c43c9f33c6f3a6eb7ce23e186337b6c</hash>
+         <hash>131d024524629e67c95f5c2257aef054efb11266db35c6f1b5c020e0cb75d56a</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_ha1_xpro\peripheral\sercom\usart\plib_sercom_usart_common.h</file>
-         <hash>63c6e89936ba47e8989478a8be0fa40b406361f2f0dcc1b6cfcd801b50a4bf92</hash>
+         <hash>9f02e811b95f0470ca23f3546f3ddf4ccccb385b4d8b8c091899d0d20b0c56e1</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_ha1_xpro\peripheral\systick\plib_systick.c</file>
@@ -2182,7 +2182,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_ha1_xpro\startup_xc32.c</file>
-         <hash>d61c5a7becdd58e76df4fa51b964845db4d699198c0b65c603e2f283d59d793f</hash>
+         <hash>f700e024c270d1eecb4afb966b37951c20d2218c68a41e416f87bd08d05976e7</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_ha1_xpro\toolchain_specifics.h</file>
