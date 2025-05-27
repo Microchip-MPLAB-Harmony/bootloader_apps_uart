@@ -1,5 +1,5 @@
 Pin Number,Pin ID,Custom Name,Function,Mode, Direction,Latch,Pull Up,Pull Down,Open Drain,Slew Rate Control
-1,PA00,,Available,,,,,,No,FAST
+1,PA00,BOOT_PIN,GPIO,Digital,In,n/a,Yes,No,No,FAST
 2,PA14,,Available,,,,,,No,FAST
 3,PA01,,Available,,,,,,No,FAST
 4,PA15,,Available,,,,,,No,FAST
@@ -21,7 +21,7 @@ Pin Number,Pin ID,Custom Name,Function,Mode, Direction,Latch,Pull Up,Pull Down,O
 24,PA20,LED,GPIO,Digital,Out,Low,,,No,FAST
 25,PA19,,Available,,,,,,No,FAST
 26,PB00,,Available,,,,,,No,FAST
-27,PB07,SWITCH,GPIO,Digital,In,n/a,No,No,No,FAST
+27,PB07,SWITCH,GPIO,Digital,In,n/a,Yes,No,No,FAST
 30,PB01,,Available,,,,,,No,FAST
 31,PB02,,Available,,,,,,No,FAST
 35,PB11,,Available,,,,,,No,FAST

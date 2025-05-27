@@ -61,7 +61,7 @@ ENTRY(__XC32_RESET_HANDLER_NAME)
                      (Rounded of to nearest erase boundary) whichever is
                      greater.
  */
-#define ROM_SIZE  4096
+#define ROM_SIZE  8192
 
 #if (ROM_SIZE > 0x4000)
     #  error ROM_SIZE is greater than the max size of 0x4000
@@ -73,8 +73,8 @@ ENTRY(__XC32_RESET_HANDLER_NAME)
 #endif
 
 #if defined(SECURE)
-#  if (RS_SIZE < (4096 + 0x3000))
-#    error "Secure SRAM length (RS_SIZE) should be greater than or equal to (4096 + 12KB). Update the RS_SIZE accordingly in MCC"
+#  if (RS_SIZE < (8192 + 0x3000))
+#    error "Secure SRAM length (RS_SIZE) should be greater than or equal to (8192 + 12KB). Update the RS_SIZE accordingly in MCC"
 #  endif
 #endif
 

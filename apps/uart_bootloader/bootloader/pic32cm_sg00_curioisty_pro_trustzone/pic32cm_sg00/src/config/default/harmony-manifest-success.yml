@@ -4,19 +4,19 @@
 
 
 project: pic32cm_sg00
-creation_date: 2025-05-12T12:02:06.449+05:30[Asia/Calcutta]    # ISO 8601 format: https://www.w3.org/TR/NOTE-datetime
+creation_date: 2025-05-27T15:13:36.507+05:30[Asia/Calcutta]    # ISO 8601 format: https://www.w3.org/TR/NOTE-datetime
 operating_system: Windows 11
 mcc_mode: IDE            # [IDE|Standalone|Headless]
 mcc_version: v5.5.2
 mcc_core_version: v5.7.1
 mplabx_version: v6.25        # if MPLAB X plugin only
-harmony_version: v1.5.5
-compiler: XC32 4.50
+harmony_version: v1.5.3
+compiler: XC32 4.60
 
 modules:
-    - {name: "csp", version: "misrac_fix"}
-    - {name: "CMSIS_5", version: "5.9.0"}
-    - {name: "bootloader", version: "fix_btl_build_issue"}
+    - {name: "csp", version: "v3.22.2-42-g413852b"}
+    - {name: "CMSIS_5", version: "5.8.0"}
+    - {name: "bootloader", version: "v3.8.0-rc.1-41-gf1befa3"}
 
 packs:
     - {name: "PIC32CM-SG00_DFP", version: "1.0.31"}

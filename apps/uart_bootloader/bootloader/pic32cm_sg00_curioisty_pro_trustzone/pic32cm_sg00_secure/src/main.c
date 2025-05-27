@@ -53,7 +53,50 @@
 #include <stdlib.h>                     // Defines EXIT_FAILURE
 #include "definitions.h"                // SYS function prototypes
 
+#define BTL_TRIGGER_PATTERN (0x5048434DUL)
 
+static uint32_t *ramStart = (uint32_t *)BTL_TRIGGER_RAM_START;
+
+bool bootloader_Trigger(void)
+{                       
+    /* Check for Bootloader Trigger Pattern specified RAM location to enter
+     * Bootloader.
+     */
+    uint16_t rcause = RSTC_ResetCauseGet();
+    
+    if (rcause & (RSTC_RESET_CAUSE_EXT_RESET | RSTC_RESET_CAUSE_WDT_RESET | RSTC_RESET_CAUSE_SYST_RESET))
+    {
+        if (ramStart[0] == BTL_TRIGGER_PATTERN && ramStart[1] == BTL_TRIGGER_PATTERN && 
+            ramStart[2] == BTL_TRIGGER_PATTERN && ramStart[3] == BTL_TRIGGER_PATTERN)
+        {
+            ramStart[0] = 0;
+            return true;
+        }    
+    }
+     
+    if (BOOT_PIN_Get() == 0)
+    {
+        return true;
+    }    
+    
+    return false;
+}
+
+void SYS_DeInitialize( void *data )
+{
+    // De-Initialize Assigned UART, I2C and Boot Pins.
+   PORT_REGS->GROUP[0].PORT_OUT = 0x0U;
+   PORT_REGS->GROUP[0].PORT_PINCFG[0] = 0x0U;
+   PORT_REGS->GROUP[0].PORT_PMUX[0] = 0x0U;
+   
+   PORT_REGS->GROUP[2].PORT_PINCFG[0] = 0x0U;
+   PORT_REGS->GROUP[2].PORT_PINCFG[1] = 0x0U;
+   PORT_REGS->GROUP[2].PORT_PMUX[0] = 0x0U;   
+   
+   PORT_REGS->GROUP[3].PORT_PINCFG[0] = 0x0U;
+   PORT_REGS->GROUP[3].PORT_PINCFG[1] = 0x0U;
+   PORT_REGS->GROUP[3].PORT_PMUX[0] = 0x0U;
+}
 // *****************************************************************************
 // *****************************************************************************
 // Section: Main Entry Point

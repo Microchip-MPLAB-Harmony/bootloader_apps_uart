@@ -3,14 +3,14 @@
     <type>com.microchip.mplab.nbide.embedded.makeproject</type>
     <configuration>
         <data xmlns="http://www.netbeans.org/ns/make-project/1">
-            <name>pic32cm_sg00_curiosity_pro_secure</name>
-            <creation-uuid>72fcc25d-0064-414d-9706-346ec00318b8</creation-uuid>
+            <name>pic32cm_sg00</name>
+            <creation-uuid>40539044-5c76-4229-b2b0-0525487aeae8</creation-uuid>
             <make-project-type>0</make-project-type>
             <sourceEncoding>ISO-8859-1</sourceEncoding>
-            <make-dep-projects/>
-            <sourceRootList>
-                <sourceRootElem>../src/config/default/bootloader</sourceRootElem>
-            </sourceRootList>
+            <make-dep-projects>
+                <make-dep-project>..\..\pic32cm_sg00_secure\pic32cm_sg00_secure.X</make-dep-project>
+            </make-dep-projects>
+            <sourceRootList/>
             <confList>
                 <confElem>
                     <name>default</name>

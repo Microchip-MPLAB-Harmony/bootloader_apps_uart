@@ -57,6 +57,7 @@
 #include "peripheral/systick/plib_systick.h"
 #include "peripheral/pm/plib_pm.h"
 #include "peripheral/sercom/usart/plib_sercom4_usart.h"
+#include "peripheral/rstc/plib_rstc.h"
 #include "peripheral/fcr/plib_fcr.h"
 // DOM-IGNORE-BEGIN
 #ifdef __cplusplus  // Provide C++ Compatibility
