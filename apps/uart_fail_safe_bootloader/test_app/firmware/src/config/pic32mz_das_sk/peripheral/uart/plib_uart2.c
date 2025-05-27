@@ -49,7 +49,7 @@
 // *****************************************************************************
 
 
-void static UART2_ErrorClear( void )
+static void UART2_ErrorClear( void )
 {
     UART_ERROR errors = UART_ERROR_NONE;
     uint8_t dummyData = 0u;
