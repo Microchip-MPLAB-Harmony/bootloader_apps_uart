@@ -1,7 +1,7 @@
 /*
  * Header file for PIC32CM5112SG00100
  *
- * Copyright (c) 2024 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2025 Microchip Technology Inc. and its subsidiaries.
  *
  * SPDX-License-Identifier: Apache-2.0
  *
@@ -19,7 +19,7 @@
  *
  */
 
-/* File generated from device description file (ATDF) version 2024-07-26T17:56:43Z */
+/* File generated from device description file (ATDF) version 2024-11-05T16:47:53Z */
 #ifndef _PIC32CM5112SG00100_H_
 #define _PIC32CM5112SG00100_H_
 
@@ -220,7 +220,7 @@ typedef enum IRQn
   USB_TRCPT00_IRQn          = 136, /* 136 Full-Speed Universal Serial Bus (USB) */
   USB_TRCPT10_IRQn          = 137, /* 137 Full-Speed Universal Serial Bus (USB) */
   AT_IRQn                   = 138, /* 138 Anti-Tamper Controller (AT) (AT)    */
-  CAM_IRQn                  = 139, /* 139 Cryptographic Acceleration Module Lite (CAM) */
+  HSM_IRQn                  = 139, /* 139 Cryptographic Acceleration Module Lite (HSM) */
   PUF_IRQn                  = 140, /* 140 Physically Unclonable Function (PUF) */
 
   PERIPH_MAX_IRQn           = 140  /* Max peripheral ID */
@@ -389,7 +389,7 @@ typedef struct _DeviceVectors
   void* pfnUSB_TRCPT00_Handler;                  /* 136 Full-Speed Universal Serial Bus (USB) */
   void* pfnUSB_TRCPT10_Handler;                  /* 137 Full-Speed Universal Serial Bus (USB) */
   void* pfnAT_Handler;                           /* 138 Anti-Tamper Controller (AT) (AT) */
-  void* pfnCAM_Handler;                          /* 139 Cryptographic Acceleration Module Lite (CAM) */
+  void* pfnHSM_Handler;                          /* 139 Cryptographic Acceleration Module Lite (HSM) */
   void* pfnPUF_Handler;                          /* 140 Physically Unclonable Function (PUF) */
 } DeviceVectors;
 
@@ -547,7 +547,7 @@ void USB_SOFHSOF_Handler           ( void );
 void USB_TRCPT00_Handler           ( void );
 void USB_TRCPT10_Handler           ( void );
 void AT_Handler                    ( void );
-void CAM_Handler                   ( void );
+void HSM_Handler                   ( void );
 void PUF_Handler                   ( void );
 #endif /* DONT_USE_PREDEFINED_PERIPHERALS_HANDLERS */
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
@@ -576,7 +576,6 @@ void PUF_Handler                   ( void );
 #include "component/adc.h"
 #include "component/at.h"
 #include "component/bromc.h"
-#include "component/cam.h"
 #include "component/can.h"
 #include "component/ccl.h"
 #include "component/dmac.h"
@@ -590,6 +589,7 @@ void PUF_Handler                   ( void );
 #include "component/gclk.h"
 #include "component/h2pb.h"
 #include "component/hmatrix2.h"
+#include "component/hsm.h"
 #include "component/idau.h"
 #include "component/mclk.h"
 #include "component/mcramc.h"
@@ -616,7 +616,6 @@ void PUF_Handler                   ( void );
 #include "instance/adc.h"
 #include "instance/at.h"
 #include "instance/bromc.h"
-#include "instance/cam.h"
 #include "instance/can0.h"
 #include "instance/can1.h"
 #include "instance/ccl0.h"
@@ -634,6 +633,7 @@ void PUF_Handler                   ( void );
 #include "instance/h2pb1.h"
 #include "instance/h2pb2.h"
 #include "instance/hmatrix2.h"
+#include "instance/hsm.h"
 #include "instance/idau.h"
 #include "instance/mclk.h"
 #include "instance/mcramc.h"
@@ -715,7 +715,7 @@ void PUF_Handler                   ( void );
 #define ID_AT            ( 45) /* Instance index for AT (AT) */
 #define ID_H2PB1         ( 46) /* Instance index for H2PB1 (H2PB1) */
 #define ID_H2PB2         ( 47) /* Instance index for H2PB2 (H2PB2) */
-#define ID_CAM           ( 48) /* Instance index for CAM (CAM) */
+#define ID_HSM           ( 48) /* Instance index for HSM (HSM) */
 #define ID_PUF           ( 49) /* Instance index for PUF (PUF) */
 
 #define ID_PERIPH_MAX    ( 49) /* Number of peripheral IDs */
@@ -728,7 +728,6 @@ void PUF_Handler                   ( void );
 #define ADC_REGS                         ((adc_registers_t*)0x44818000)                /* ADC Registers Address        */
 #define AT_REGS                          ((at_registers_t*)0x4500c000)                 /* AT Registers Address         */
 #define BROMC_REGS                       ((bromc_registers_t*)0x44804000)              /* BROMC Registers Address      */
-#define CAM_REGS                         ((cam_registers_t*)0x4f000000)                /* CAM Registers Address        */
 #define CAN0_REGS                        ((can_registers_t*)0x4402e000)                /* CAN0 Registers Address       */
 #define CAN1_REGS                        ((can_registers_t*)0x44030000)                /* CAN1 Registers Address       */
 #define CCL0_REGS                        ((ccl_registers_t*)0x4482e000)                /* CCL0 Registers Address       */
@@ -749,6 +748,7 @@ void PUF_Handler                   ( void );
 #define H2PB1_REGS                       ((h2pb_registers_t*)0x44838000)               /* H2PB1 Registers Address      */
 #define H2PB2_REGS                       ((h2pb_registers_t*)0x4500e000)               /* H2PB2 Registers Address      */
 #define HMATRIX2_REGS                    ((hmatrix2_registers_t*)0x44010000)           /* HMATRIX2 Registers Address   */
+#define HSM_REGS                         ((hsm_registers_t*)0x4f000000)                /* HSM Registers Address        */
 #define IDAU_REGS                        ((idau_registers_t*)0x44012000)               /* IDAU Registers Address       */
 #define MCLK_REGS                        ((mclk_registers_t*)0x4400a000)               /* MCLK Registers Address       */
 #define MCRAMC_REGS                      ((mcramc_registers_t*)0x4402c000)             /* MCRAMC Registers Address     */
@@ -787,7 +787,6 @@ void PUF_Handler                   ( void );
 #define ADC_BASE_ADDRESS                 _UINT32_(0x44818000)                          /* ADC Base Address */
 #define AT_BASE_ADDRESS                  _UINT32_(0x4500c000)                          /* AT Base Address */
 #define BROMC_BASE_ADDRESS               _UINT32_(0x44804000)                          /* BROMC Base Address */
-#define CAM_BASE_ADDRESS                 _UINT32_(0x4f000000)                          /* CAM Base Address */
 #define CAN0_BASE_ADDRESS                _UINT32_(0x4402e000)                          /* CAN0 Base Address */
 #define CAN1_BASE_ADDRESS                _UINT32_(0x44030000)                          /* CAN1 Base Address */
 #define CCL0_BASE_ADDRESS                _UINT32_(0x4482e000)                          /* CCL0 Base Address */
@@ -808,6 +807,7 @@ void PUF_Handler                   ( void );
 #define H2PB1_BASE_ADDRESS               _UINT32_(0x44838000)                          /* H2PB1 Base Address */
 #define H2PB2_BASE_ADDRESS               _UINT32_(0x4500e000)                          /* H2PB2 Base Address */
 #define HMATRIX2_BASE_ADDRESS            _UINT32_(0x44010000)                          /* HMATRIX2 Base Address */
+#define HSM_BASE_ADDRESS                 _UINT32_(0x4f000000)                          /* HSM Base Address */
 #define IDAU_BASE_ADDRESS                _UINT32_(0x44012000)                          /* IDAU Base Address */
 #define MCLK_BASE_ADDRESS                _UINT32_(0x4400a000)                          /* MCLK Base Address */
 #define MCRAMC_BASE_ADDRESS              _UINT32_(0x4402c000)                          /* MCRAMC Base Address */
@@ -861,7 +861,7 @@ void PUF_Handler                   ( void );
 #define APB0_BRIDGE_SIZE               _UINT32_(0x00034000)    /*  208kB Memory segment type: io */
 #define APB1_BRIDGE_SIZE               _UINT32_(0x0003a000)    /*  232kB Memory segment type: io */
 #define APB2_BRIDGE_SIZE               _UINT32_(0x00010000)    /*   64kB Memory segment type: io */
-#define CAM_SFR_SIZE                   _UINT32_(0x00018000)    /*   96kB Memory segment type: io */
+#define HSM_SFR_SIZE                   _UINT32_(0x00018000)    /*   96kB Memory segment type: io */
 #define PPB_SIZE                       _UINT32_(0x00100000)    /* 1024kB Memory segment type: io */
 
 #define BROMC_ROM_ADDR                 _UINT32_(0x04000000)    /* BROMC_ROM base address (type: rom)*/
@@ -879,7 +879,7 @@ void PUF_Handler                   ( void );
 #define APB0_BRIDGE_ADDR               _UINT32_(0x44000000)    /* APB0_BRIDGE base address (type: io)*/
 #define APB1_BRIDGE_ADDR               _UINT32_(0x44800000)    /* APB1_BRIDGE base address (type: io)*/
 #define APB2_BRIDGE_ADDR               _UINT32_(0x45000000)    /* APB2_BRIDGE base address (type: io)*/
-#define CAM_SFR_ADDR                   _UINT32_(0x4f000000)    /* CAM_SFR base address (type: io)*/
+#define HSM_SFR_ADDR                   _UINT32_(0x4f000000)    /* HSM_SFR base address (type: io)*/
 #define PPB_ADDR                       _UINT32_(0xe0000000)    /* PPB base address (type: io)*/
 
 /* ************************************************************************** */
@@ -1066,7 +1066,7 @@ void PUF_Handler                   ( void );
 #define IDAU_REGION_APB0_BRIDGE                  _UINT32_(10) /* IDAU region number for APB0_BRIDGE */
 #define IDAU_REGION_APB1_BRIDGE                  _UINT32_(11) /* IDAU region number for APB1_BRIDGE */
 #define IDAU_REGION_APB2_BRIDGE                  _UINT32_(12) /* IDAU region number for APB2_BRIDGE */
-#define IDAU_REGION_CAM_SFR_SEC                  _UINT32_(13) /* IDAU region number for CAM_SFR_SEC */
+#define IDAU_REGION_HSM_SFR_SEC                  _UINT32_(13) /* IDAU region number for HSM_SFR_SEC */
 
 #ifdef __cplusplus
 }

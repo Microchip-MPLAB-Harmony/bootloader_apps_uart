@@ -39,9 +39,11 @@
 * THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
  *******************************************************************************/
 // DOM-IGNORE-END
+#include <stdio.h>
+#include "device.h"
 
 /* Non-secure callable (entry) function */
-int __attribute__((cmse_nonsecure_entry)) secure_add(int x, int y)
-{
-    return (x + y);
+void __attribute__((cmse_nonsecure_entry)) secure_system_reset(void)
+{    
+    NVIC_SystemReset();
 }

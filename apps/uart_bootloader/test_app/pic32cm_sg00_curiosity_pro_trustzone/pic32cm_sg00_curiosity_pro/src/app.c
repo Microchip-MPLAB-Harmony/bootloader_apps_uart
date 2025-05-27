@@ -178,7 +178,7 @@ void APP_Tasks ( void )
             ramStart[2] = BTL_TRIGGER_PATTERN;
             ramStart[3] = BTL_TRIGGER_PATTERN;
 
-            NVIC_SystemReset();
+            secure_system_reset();
         }
 
         default:

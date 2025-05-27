@@ -77,10 +77,10 @@ extern int main(void);
 
 #if defined(SECURE)
 #define RAM_START  0x20000000
-#define RAM_END    (RAM_START + 0xd000)
+#define RAM_END    (RAM_START + 0x10000)
 #elif defined(NONSECURE)
-#define RAM_START  (0x20000000 + 0xd000)
-#define RAM_END    (RAM_START + 0x13000)
+#define RAM_START  (0x20000000 + 0x10000)
+#define RAM_END    (RAM_START + 0x10000)
 #endif
 
 

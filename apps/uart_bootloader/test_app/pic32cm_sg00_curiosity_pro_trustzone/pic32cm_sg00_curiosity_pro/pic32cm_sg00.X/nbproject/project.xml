@@ -3,12 +3,12 @@
     <type>com.microchip.mplab.nbide.embedded.makeproject</type>
     <configuration>
         <data xmlns="http://www.netbeans.org/ns/make-project/1">
-            <name>pic32cm_sg00_curiosity_pro</name>
-            <creation-uuid>6d5ca99e-78e2-4414-8f89-091b999fd12a</creation-uuid>
+            <name>pic32cm_sg00</name>
+            <creation-uuid>8d893a8e-343c-4e98-b1fb-c4164394960b</creation-uuid>
             <make-project-type>0</make-project-type>
             <sourceEncoding>ISO-8859-1</sourceEncoding>
             <make-dep-projects>
-                <make-dep-project>..\..\pic32cm_sg00_curiosity_pro_secure\pic32cm_sg00_curiosity_pro_secure.X</make-dep-project>
+                <make-dep-project>..\..\pic32cm_sg00_curiosity_pro_secure\pic32cm_sg00_secure.X</make-dep-project>
             </make-dep-projects>
             <sourceRootList/>
             <confList>
