@@ -1,4 +1,4 @@
-<config configName="pic32mz_das_sk" projectName="uart_bootloader_test_app_pic32mz_das_sk" configVersion="1.1" device="PIC32MZ2064DAS169" deviceLibraryClass="com.microchip.mcc.harmony.Harmony3Library" coreVersion="5.6.1">
+<config configName="pic32mz_das_sk" projectName="uart_bootloader_test_app_pic32mz_das_sk" configVersion="1.1" device="PIC32MZ2064DAS169" deviceLibraryClass="com.microchip.mcc.harmony.Harmony3Library" coreVersion="5.7.1">
    <usedPackages class="java.util.ArrayList">
       <package packageName="bsp" version="3.13.0" contentType="HARMONY">
          <modules class="java.util.ArrayList"/>
@@ -44,7 +44,7 @@
       </entry>
    </usedClasses>
    <usedLibraries class="java.util.ArrayList">
-      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.4.1"/>
+      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.5.5"/>
    </usedLibraries>
    <tokenMap class="java.util.TreeMap">
       <entry>
@@ -2984,31 +2984,31 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mz_das_sk\definitions.h</file>
-         <hash>32bfee42cdc682a49fb3eecc36ba63b9e506e4c9f4855832c173de45ec09ab92</hash>
+         <hash>77f88da228a3505b24fc0aac554d7c9ec1aa327220c6c1dd4bbb9edf2c36a030</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mz_das_sk\device.h</file>
-         <hash>10ec93c43a7b158a129ae05bd8f4a59ff5bcf3d0f3f062fdd64c374bc2d42099</hash>
+         <hash>4d4341a6f9628cea0bf73f980b639f7cb81089e55a60ad7e434be2a71e477442</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mz_das_sk\exceptions.c</file>
-         <hash>30b880390be9495d817d130a99612cbe4a21ce5f953a22bf77fc97872b770538</hash>
+         <hash>8c1843dacd6aec28ef12be3d763763a268e0facd02d4f1e7d67e21a8d73061d1</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mz_das_sk\initialization.c</file>
-         <hash>a2b13e0458f51f603f208224978b54466eccd1696a979d6bf63e88f7b39aa20f</hash>
+         <hash>7bb8a6841de38cb50afcd0d27dd57bbea08bbdc6a98e4d07015641d387c1a309</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mz_das_sk\interrupts.c</file>
-         <hash>78dae1eb2814001083c177580ff5afdf938304ca9b465dd83c8a5cd806b3f5fa</hash>
+         <hash>17531324e15a4a2330a352ac375a66c2188da090d7bd5799ab15f95ade978e58</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mz_das_sk\interrupts.h</file>
-         <hash>759cce8ff415eadadd85a74232a5023d73e8859a4556ef4beb93c2cfd4b8d8ef</hash>
+         <hash>2b6f3a9da8b2f61b5ea3f584838ad851b151646b5fda0fb709cc05e65576fd37</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mz_das_sk\peripheral\clk\plib_clk.c</file>
-         <hash>0f99b761c3383dfc881237e48f7f0cdcf7e59b31e7ccc3fc0a8c67e600c43c37</hash>
+         <hash>5e32afc95749ed37a70187ad41ed3a7f0562c8405ed9bb94f7176182d5ee83fd</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mz_das_sk\peripheral\clk\plib_clk.h</file>
@@ -3024,11 +3024,11 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mz_das_sk\peripheral\evic\plib_evic.c</file>
-         <hash>c0fb57b116260e4be1477d8af40b368e18309e37291757721d8774bfa9058e0a</hash>
+         <hash>60b925c74bd2c846e289fd57ad959806593544003ab2cab1e13ea9982985d1e7</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mz_das_sk\peripheral\evic\plib_evic.h</file>
-         <hash>d66a7a9d178e558f3f01fd25408d8471a59db19601934cb10d0668a2db876079</hash>
+         <hash>d1fec6ef0926472bfe0bfa15972adff5caf1a29f8741ce146f90f5efa45db06b</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mz_das_sk\peripheral\gpio\plib_gpio.c</file>
@@ -3036,11 +3036,11 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mz_das_sk\peripheral\gpio\plib_gpio.h</file>
-         <hash>df6d121e8464522528a5a7b03eae4bc3436ee5ed9c9af4ad80563bdecd26dc8e</hash>
+         <hash>108fc503975f63e53fb4ce73a77f7bd0ff77c1bca060b91a7ad75b74c1861488</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mz_das_sk\peripheral\uart\plib_uart2.c</file>
-         <hash>35d75a1a5693f8d8bc9184de84d56b5d98c477fc9cc3cd3a7d4e2df0ff928137</hash>
+         <hash>9976eb2ffbdf031439519c15ca8d4bfab7889cc07953fad1165d24f09127d85f</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mz_das_sk\peripheral\uart\plib_uart2.h</file>
