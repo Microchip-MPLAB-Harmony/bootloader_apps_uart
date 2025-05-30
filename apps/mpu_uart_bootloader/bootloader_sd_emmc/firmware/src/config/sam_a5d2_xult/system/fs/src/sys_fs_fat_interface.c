@@ -276,14 +276,14 @@ int FATFS_close (
 
 int FATFS_lseek (
     uintptr_t handle,   /* Pointer to the file object */
-    uint32_t ofs        /* File pointer from top of file */
+    FSIZE_t ofs         /* File pointer from top of file */
 )
 {
     FRESULT res;
     FATFS_FILE_OBJECT *ptr = (FATFS_FILE_OBJECT *)handle;
     FIL *fp = &ptr->fileObj;
 
-    res = f_lseek(fp, (FSIZE_t)ofs);
+    res = f_lseek(fp, ofs);
 
     return ((int)res);
 }
@@ -478,7 +478,7 @@ int FATFS_write (
 }
 
 /* MISRAC 2012 deviation block end */
-uint32_t FATFS_tell(uintptr_t handle)
+FSIZE_t FATFS_tell(uintptr_t handle)
 {
     FATFS_FILE_OBJECT *ptr = (FATFS_FILE_OBJECT *)handle;
     FIL *fp = &ptr->fileObj;
@@ -494,7 +494,7 @@ bool FATFS_eof(uintptr_t handle)
     return ((bool)f_eof(fp));
 }
 
-uint32_t FATFS_size(uintptr_t handle)
+FSIZE_t FATFS_size(uintptr_t handle)
 {
     FATFS_FILE_OBJECT *ptr = (FATFS_FILE_OBJECT *)handle;
     FIL *fp = &ptr->fileObj;

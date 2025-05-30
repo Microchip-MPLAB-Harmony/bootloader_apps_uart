@@ -62,7 +62,7 @@
 
 
 /* Callback object for channel 0 */
-volatile static TC_TIMER_CALLBACK_OBJECT TC0_CH0_CallbackObj;
+static volatile TC_TIMER_CALLBACK_OBJECT TC0_CH0_CallbackObj;
 
 /* Initialize channel in timer mode */
 void TC0_CH0_TimerInitialize (void)
