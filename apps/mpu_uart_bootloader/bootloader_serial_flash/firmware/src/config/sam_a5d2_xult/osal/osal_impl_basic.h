@@ -65,13 +65,17 @@ extern "C" {
 #include "device.h"
 
 
-typedef uint8_t                     OSAL_SEM_HANDLE_TYPE;
-typedef uint8_t                     OSAL_MUTEX_HANDLE_TYPE;
-typedef uint32_t                    OSAL_CRITSECT_DATA_TYPE;
-#define OSAL_WAIT_FOREVER           (uint16_t) 0xFFFF
+typedef uint8_t                         OSAL_SEM_HANDLE_TYPE;
+typedef uint8_t                         OSAL_MUTEX_HANDLE_TYPE;
+typedef uint32_t                        OSAL_CRITSECT_DATA_TYPE;
+typedef uint32_t                        OSAL_TICK_TYPE;
+typedef uint32_t                        OSAL_SEM_COUNT_TYPE;
 
-#define OSAL_SEM_DECLARE(semID)         uint8_t    semID
-#define OSAL_MUTEX_DECLARE(mutexID)     uint8_t    mutexID
+#define OSAL_WAIT_FOREVER               (OSAL_TICK_TYPE)~0UL
+#define OSAL_NO_WAIT                    (OSAL_TICK_TYPE)0
+
+#define OSAL_SEM_DECLARE(semID)         OSAL_SEM_HANDLE_TYPE        semID
+#define OSAL_MUTEX_DECLARE(mutexID)     OSAL_MUTEX_HANDLE_TYPE      mutexID
 
 // *****************************************************************************
 /* Macro: OSAL_ASSERT
@@ -120,19 +124,19 @@ typedef enum OSAL_RESULT
 // Section: Section: Interface Routines Group Declarations
 // *****************************************************************************
 // *****************************************************************************
-__STATIC_INLINE OSAL_RESULT OSAL_SEM_Create(OSAL_SEM_HANDLE_TYPE* semID, OSAL_SEM_TYPE type, uint8_t maxCount, uint8_t initialCount);
+__STATIC_INLINE OSAL_RESULT OSAL_SEM_Create(OSAL_SEM_HANDLE_TYPE* semID, OSAL_SEM_TYPE type, OSAL_SEM_COUNT_TYPE maxCount, OSAL_SEM_COUNT_TYPE initialCount);
 __STATIC_INLINE OSAL_RESULT OSAL_SEM_Delete(OSAL_SEM_HANDLE_TYPE* semID);
-__STATIC_INLINE OSAL_RESULT OSAL_SEM_Pend(OSAL_SEM_HANDLE_TYPE* semID, uint16_t waitMS);
+__STATIC_INLINE OSAL_RESULT OSAL_SEM_Pend(OSAL_SEM_HANDLE_TYPE* semID, OSAL_TICK_TYPE waitMS);
 __STATIC_INLINE OSAL_RESULT OSAL_SEM_Post(OSAL_SEM_HANDLE_TYPE* semID);
 __STATIC_INLINE OSAL_RESULT OSAL_SEM_PostISR(OSAL_SEM_HANDLE_TYPE* semID);
-__STATIC_INLINE uint8_t OSAL_SEM_GetCount(OSAL_SEM_HANDLE_TYPE* semID);
+__STATIC_INLINE OSAL_SEM_COUNT_TYPE OSAL_SEM_GetCount(OSAL_SEM_HANDLE_TYPE* semID);
 
 __STATIC_INLINE OSAL_CRITSECT_DATA_TYPE OSAL_CRIT_Enter(OSAL_CRIT_TYPE severity);
 __STATIC_INLINE void OSAL_CRIT_Leave(OSAL_CRIT_TYPE severity, OSAL_CRITSECT_DATA_TYPE status);
 
 __STATIC_INLINE OSAL_RESULT OSAL_MUTEX_Create(OSAL_MUTEX_HANDLE_TYPE* mutexID);
 __STATIC_INLINE OSAL_RESULT OSAL_MUTEX_Delete(OSAL_MUTEX_HANDLE_TYPE* mutexID);
-__STATIC_INLINE OSAL_RESULT OSAL_MUTEX_Lock(OSAL_MUTEX_HANDLE_TYPE* mutexID, uint16_t waitMS);
+__STATIC_INLINE OSAL_RESULT OSAL_MUTEX_Lock(OSAL_MUTEX_HANDLE_TYPE* mutexID, OSAL_TICK_TYPE waitMS);
 __STATIC_INLINE OSAL_RESULT OSAL_MUTEX_Unlock(OSAL_MUTEX_HANDLE_TYPE* mutexID);
 
 __STATIC_INLINE void* OSAL_Malloc(size_t size);
@@ -181,27 +185,32 @@ static void OSAL_CRIT_Leave(OSAL_CRIT_TYPE severity, OSAL_CRITSECT_DATA_TYPE sta
 // *****************************************************************************
 /* MISRA C-2012 Rule 10.3 False positive:11 Deviation record ID -  H3_MISRAC_2012_R_10_3_DR_1 */
 /* Function: OSAL_RESULT OSAL_SEM_Create(OSAL_SEM_HANDLE_TYPE semID, OSAL_SEM_TYPE type,
-                                uint8_t maxCount, uint8_t initialCount)
+                                OSAL_SEM_COUNT_TYPE maxCount, OSAL_SEM_COUNT_TYPE initialCount)
  */
 static OSAL_RESULT __attribute__((always_inline)) OSAL_SEM_Create(OSAL_SEM_HANDLE_TYPE* semID, OSAL_SEM_TYPE type,
-                                uint8_t maxCount, uint8_t initialCount)
+                                OSAL_SEM_COUNT_TYPE maxCount, OSAL_SEM_COUNT_TYPE initialCount)
 {
-  OSAL_CRITSECT_DATA_TYPE IntState;
+    OSAL_CRITSECT_DATA_TYPE IntState;
 
-  IntState = OSAL_CRIT_Enter(OSAL_CRIT_TYPE_HIGH);
+    if (semID == NULL)
+    {
+        return OSAL_RESULT_FAIL;
+    }
 
-  if (type == OSAL_SEM_TYPE_COUNTING)
-  {
-    *semID = initialCount;
-  }
-  else
-  {
-    *semID = 1;
-  }
+    IntState = OSAL_CRIT_Enter(OSAL_CRIT_TYPE_HIGH);
 
-  OSAL_CRIT_Leave(OSAL_CRIT_TYPE_HIGH,IntState);
+    if (type == OSAL_SEM_TYPE_COUNTING)
+    {
+        *semID = initialCount;
+    }
+    else
+    {
+        *semID = (initialCount == 0U)? 0U : 1U;
+    }
 
-  return OSAL_RESULT_SUCCESS;
+    OSAL_CRIT_Leave(OSAL_CRIT_TYPE_HIGH,IntState);
+
+    return OSAL_RESULT_SUCCESS;
 }
 
 // *****************************************************************************
@@ -213,25 +222,33 @@ static OSAL_RESULT __attribute__((always_inline)) OSAL_SEM_Delete(OSAL_SEM_HANDL
 }
 
 // *****************************************************************************
-/* Function: OSAL_RESULT OSAL_SEM_Pend(OSAL_SEM_HANDLE_TYPE semID, uint16_t waitMS)
+/* Function: OSAL_RESULT OSAL_SEM_Pend(OSAL_SEM_HANDLE_TYPE semID, OSAL_TICK_TYPE waitMS)
  */
-static  OSAL_RESULT __attribute__((always_inline)) OSAL_SEM_Pend(OSAL_SEM_HANDLE_TYPE* semID, uint16_t waitMS)
+static  OSAL_RESULT __attribute__((always_inline)) OSAL_SEM_Pend(OSAL_SEM_HANDLE_TYPE* semID, OSAL_TICK_TYPE waitMS)
 {
-  OSAL_CRITSECT_DATA_TYPE IntState;
+    volatile OSAL_SEM_HANDLE_TYPE* sem = semID;
+    OSAL_CRITSECT_DATA_TYPE IntState;
 
-  IntState = OSAL_CRIT_Enter(OSAL_CRIT_TYPE_HIGH);
+    if (sem == NULL)
+    {
+        return OSAL_RESULT_FAIL;
+    }
 
-  if (*semID > 0U)
-  {
-    (*semID)--;
-    OSAL_CRIT_Leave(OSAL_CRIT_TYPE_HIGH,IntState);
-
-    return OSAL_RESULT_SUCCESS;
-  }
-
-  OSAL_CRIT_Leave(OSAL_CRIT_TYPE_HIGH,IntState);
-
-  return OSAL_RESULT_FAIL;
+    if (waitMS == OSAL_WAIT_FOREVER)
+    {
+        while (*sem == 0U){}
+    }
+    if (*sem > 0U)
+    {
+        IntState = OSAL_CRIT_Enter(OSAL_CRIT_TYPE_HIGH);
+        (*sem)--;
+        OSAL_CRIT_Leave(OSAL_CRIT_TYPE_HIGH,IntState);
+        return OSAL_RESULT_SUCCESS;
+    }
+    else
+    {
+        return OSAL_RESULT_FAIL;
+    }
 }
 
 // *****************************************************************************
@@ -241,11 +258,16 @@ static OSAL_RESULT __attribute__((always_inline)) OSAL_SEM_Post(OSAL_SEM_HANDLE_
 {
   OSAL_CRITSECT_DATA_TYPE IntState;
 
-  IntState = OSAL_CRIT_Enter(OSAL_CRIT_TYPE_HIGH);
-  (*semID)++;
-  OSAL_CRIT_Leave(OSAL_CRIT_TYPE_HIGH,IntState);
+    if (semID == NULL)
+    {
+        return OSAL_RESULT_FAIL;
+    }
 
-  return OSAL_RESULT_SUCCESS;
+    IntState = OSAL_CRIT_Enter(OSAL_CRIT_TYPE_HIGH);
+    (*semID)++;
+    OSAL_CRIT_Leave(OSAL_CRIT_TYPE_HIGH,IntState);
+
+    return OSAL_RESULT_SUCCESS;
 }
 
 // *****************************************************************************
@@ -253,16 +275,20 @@ static OSAL_RESULT __attribute__((always_inline)) OSAL_SEM_Post(OSAL_SEM_HANDLE_
  */
 static OSAL_RESULT __attribute__((always_inline)) OSAL_SEM_PostISR(OSAL_SEM_HANDLE_TYPE* semID)
 {
-  (*semID)++;
-  return OSAL_RESULT_SUCCESS;
+    if (semID == NULL)
+    {
+        return OSAL_RESULT_FAIL;
+    }
+    (*semID)++;
+    return OSAL_RESULT_SUCCESS;
 }
 
 // *****************************************************************************
-/* Function: uint8_t OSAL_SEM_GetCount(OSAL_SEM_HANDLE_TYPE semID)
+/* Function: OSAL_SEM_COUNT_TYPE OSAL_SEM_GetCount(OSAL_SEM_HANDLE_TYPE semID)
  */
-static uint8_t __attribute__((always_inline)) OSAL_SEM_GetCount(OSAL_SEM_HANDLE_TYPE* semID)
+static OSAL_SEM_COUNT_TYPE __attribute__((always_inline)) OSAL_SEM_GetCount(OSAL_SEM_HANDLE_TYPE* semID)
 {
-  return *semID;
+    return *semID;
 }
 
 // *****************************************************************************
@@ -270,8 +296,12 @@ static uint8_t __attribute__((always_inline)) OSAL_SEM_GetCount(OSAL_SEM_HANDLE_
  */
 static OSAL_RESULT __attribute__((always_inline)) OSAL_MUTEX_Create(OSAL_MUTEX_HANDLE_TYPE* mutexID)
 {
-  *mutexID = 1;
-  return OSAL_RESULT_SUCCESS;
+    if (mutexID == NULL)
+    {
+        return OSAL_RESULT_FAIL;
+    }
+    *mutexID = 1;
+    return OSAL_RESULT_SUCCESS;
 }
 
 // *****************************************************************************
@@ -282,16 +312,21 @@ static OSAL_RESULT __attribute__((always_inline)) OSAL_MUTEX_Delete(OSAL_MUTEX_H
   return (OSAL_RESULT_SUCCESS);
 }
 // *****************************************************************************
-/* Function: OSAL_RESULT OSAL_MUTEX_Lock(OSAL_MUTEX_HANDLE_TYPE mutexID, uint16_t waitMS)
+/* Function: OSAL_RESULT OSAL_MUTEX_Lock(OSAL_MUTEX_HANDLE_TYPE mutexID, OSAL_TICK_TYPE waitMS)
  */
-static OSAL_RESULT __attribute__((always_inline)) OSAL_MUTEX_Lock(OSAL_MUTEX_HANDLE_TYPE* mutexID, uint16_t waitMS)
+static OSAL_RESULT __attribute__((always_inline)) OSAL_MUTEX_Lock(OSAL_MUTEX_HANDLE_TYPE* mutexID, OSAL_TICK_TYPE waitMS)
 {
-  if (*mutexID == 1U)
-  {
-    *mutexID = 0;
-    return OSAL_RESULT_SUCCESS;
-  }
-  return OSAL_RESULT_FAIL;
+    (void) waitMS;
+
+    if (*mutexID == 1U)
+    {
+        *mutexID = 0;
+        return OSAL_RESULT_SUCCESS;
+    }
+    else
+    {
+        return OSAL_RESULT_FAIL;
+    }
 }
 
 // *****************************************************************************
@@ -299,8 +334,12 @@ static OSAL_RESULT __attribute__((always_inline)) OSAL_MUTEX_Lock(OSAL_MUTEX_HAN
  */
 static OSAL_RESULT __attribute__((always_inline)) OSAL_MUTEX_Unlock(OSAL_MUTEX_HANDLE_TYPE* mutexID)
 {
-  *mutexID = 1;
-  return OSAL_RESULT_SUCCESS;
+    if (mutexID == NULL)
+    {
+        return OSAL_RESULT_FAIL;
+    }
+    *mutexID = 1;
+    return OSAL_RESULT_SUCCESS;
 }
 
 /* MISRAC 2012 deviation block end */
