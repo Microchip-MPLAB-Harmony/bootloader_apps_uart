@@ -96,7 +96,7 @@ extern "C" {
 #define DRV_NAND_FLASH_ENABLE_PMECC                   (1)
 #define DRV_NAND_FLASH_PMECC_ECC_SPARE_SIZE           (56U)
 #define DRV_NAND_FLASH_PMECC_ECC_START_ADDR           (2U)
-#define DRV_NAND_FLASH_PMECC_ECC_END_ADDR             57U
+#define DRV_NAND_FLASH_PMECC_ECC_END_ADDR             (57U)
 #define DRV_NAND_FLASH_PMECC_NUMBER_OF_SECTORS        (8U)
 #define DRV_NAND_FLASH_PMECC_SECTOR_SIZE              (512U)
 #define DRV_NAND_FLASH_PMECC_ECC_ERR_CAPABILITY       4U

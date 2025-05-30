@@ -14,7 +14,7 @@
 
 //DOM-IGNORE-BEGIN
 /*******************************************************************************
-* Copyright (C) 2018 Microchip Technology Inc. and its subsidiaries.
+* Copyright (C) 2025 Microchip Technology Inc. and its subsidiaries.
 *
 * Subject to your compliance with these terms, you may use Microchip software
 * and any derivatives exclusively with Microchip products. It is your
@@ -56,11 +56,11 @@
 #include "peripheral/aic/plib_aic.h"
 #include "peripheral/dbgu/plib_dbgu.h"
 #include "bsp/bsp.h"
-#include "driver/smc_flash/nand_flash/drv_nand_flash.h"
 #include "system/int/sys_int.h"
 #include "system/dma/sys_dma.h"
 #include "osal/osal.h"
 #include "system/debug/sys_debug.h"
+#include "driver/smc_flash/nand_flash/drv_nand_flash.h"
 #include "app.h"
 
 
@@ -74,13 +74,13 @@ extern "C" {
 // DOM-IGNORE-END
 
 /* Device Information */
-#define DEVICE_NAME			 "SAM9X60D1G"
-#define DEVICE_ARCH			 "ARM926EJ-S"
-#define DEVICE_FAMILY		 "SAM9"
-#define DEVICE_SERIES		 "SAM9X"
+#define DEVICE_NAME          "SAM9X60D1G"
+#define DEVICE_ARCH          "ARM926EJ-S"
+#define DEVICE_FAMILY        "SAM9"
+#define DEVICE_SERIES        "SAM9X6"
 
 /* CPU clock frequency */
-#define CPU_CLOCK_FREQUENCY 600000000
+#define CPU_CLOCK_FREQUENCY 600000000U
 
 // *****************************************************************************
 // *****************************************************************************

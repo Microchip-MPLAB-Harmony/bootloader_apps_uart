@@ -41,6 +41,7 @@
 *******************************************************************************/
 #include "plib_smc.h"
 #include "device.h"
+#include "interrupts.h"
 #include <stddef.h>         // NULL
 
 

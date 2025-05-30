@@ -73,6 +73,17 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 */
 void MMU_Initialize(void);
 
+void icache_InvalidateAll(void);
+void icache_Enable(void);
+void icache_Disable(void);
+void dcache_InvalidateAll(void);
+void dcache_CleanAll(void);
+void dcache_CleanInvalidateAll(void);
+void dcache_InvalidateByAddr(volatile void *pAddr, int32_t size);
+void dcache_CleanByAddr(volatile void *pAddr, int32_t size);
+void dcache_CleanInvalidateByAddr(volatile void *pAddr, int32_t size);
+void dcache_Enable(void);
+void dcache_Disable(void);
 
 #ifdef __cplusplus  // Provide C++ Compatibility
 
