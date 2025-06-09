@@ -4,23 +4,23 @@
 
 
 project: bootloader_sd_emmc
-creation_date: 2025-05-12T10:35:51.703+05:30[Asia/Calcutta]    # ISO 8601 format: https://www.w3.org/TR/NOTE-datetime
-operating_system: Windows 11
-mcc_mode: IDE            # [IDE|Standalone|Headless]
-mcc_version: v5.5.2
+creation_date: 2025-06-09T12:15:47.382+05:30[Asia/Calcutta]    # ISO 8601 format: https://www.w3.org/TR/NOTE-datetime
+operating_system: Windows 10
+mcc_mode: Headless            # [IDE|Standalone|Headless]
+mcc_version: v5.5.1
 mcc_core_version: v5.7.1
-mplabx_version: v6.25        # if MPLAB X plugin only
-harmony_version: v1.5.3
-compiler: XC32 4.35
+mplabx_version: NA        # if MPLAB X plugin only
+harmony_version: v1.5.5
+compiler: NA
 
 modules:
-    - {name: "core", version: "dev"}
-    - {name: "csp", version: "misrac_fix"}
+    - {name: "core", version: "v3.15.2"}
+    - {name: "csp", version: "v3.22.4-42-g1c56294"}
     - {name: "filex", version: "v6.4.0_rel"}
-    - {name: "CMSIS_5", version: "5.9.0"}
-    - {name: "bootloader", version: "fix_btl_build_issue"}
-    - {name: "littlefs", version: "v2.10.1"}
-    - {name: "bsp", version: "dev"}
+    - {name: "CMSIS_5", version: "5.8.0"}
+    - {name: "bootloader", version: "v3.8.0-rc.1-41-gf1befa3"}
+    - {name: "littlefs", version: "v2.9.3"}
+    - {name: "bsp", version: "v3.22.0"}
 
 packs:
     - {name: "SAMA7G5_DFP", version: "1.8.235"}

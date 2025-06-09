@@ -55,7 +55,7 @@
       </entry>
    </usedClasses>
    <usedLibraries class="java.util.ArrayList">
-      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.5.3"/>
+      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.5.5"/>
    </usedLibraries>
    <tokenMap class="java.util.TreeMap">
       <entry>
@@ -9672,7 +9672,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a7g5_ek\peripheral\tc\plib_tc0.c</file>
-         <hash>395de1d566ff5f88be8e0007ea2ed3a545cbe046d50afb334b2607263ca9f64e</hash>
+         <hash>8b25af78b875d69ac7f6398996c08ccda3e3001d8d28ef749bdf1c3b0345ec53</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a7g5_ek\peripheral\tc\plib_tc0.h</file>
@@ -9704,7 +9704,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a7g5_ek\system\fs\fat_fs\file_system\ff.h</file>
-         <hash>6848cdc1e0e629ac4c44c28358ed40ac71651f502b941a1a9ef4468aad652091</hash>
+         <hash>2906f8255a58097a83011b023f09dfa602c04c2d154c39a9e35fcb48823940ac</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a7g5_ek\system\fs\fat_fs\file_system\ffconf.h</file>
@@ -9732,7 +9732,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a7g5_ek\system\fs\src\sys_fs_local.h</file>
-         <hash>ef6b5ddf2d37deece42f4f38d4c80cff0c5b4c67b150bfa11a78b78aec79baff</hash>
+         <hash>7e7721693694ecc133d6772321cad1337c0a2209b7457b9351dda3a01cb129b1</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a7g5_ek\system\fs\src\sys_fs_media_manager.c</file>
@@ -9824,7 +9824,7 @@
       </entry>
       <entry>
          <file>..\src\packs\CMSIS\CMSIS\Core_A\Include\cmsis_gcc.h</file>
-         <hash>2a47e8836d3e5dc5a02866021af0271a3cb7ae53ca9cd847ac90d3a5e4a3dc20</hash>
+         <hash>a720d18d2dd2921d8fe308d21c1f2e9c8174549ec1a34447927db3dcc9505aa9</hash>
       </entry>
       <entry>
          <file>..\src\packs\CMSIS\CMSIS\Core_A\Include\cmsis_iccarm.h</file>

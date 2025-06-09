@@ -68,9 +68,10 @@ static volatile TC_TIMER_CALLBACK_OBJECT TC0_CH0_CallbackObj;
 /* Initialize channel in timer mode */
 void TC0_CH0_TimerInitialize(void)
 {
+    /* Use peripheral clock */
+    TC0_REGS->TC_CHANNEL[0].TC_EMR = TC_EMR_NODIVCLK_Msk;
     /* clock selection and waveform selection */
-    TC0_REGS->TC_CHANNEL[0].TC_CMR = TC_CMR_TCCLKS_TIMER_CLOCK1 | TC_CMR_WAVEFORM_WAVSEL_UP_RC | \
-                                                        TC_CMR_WAVEFORM_WAVE_Msk ;
+    TC0_REGS->TC_CHANNEL[0].TC_CMR =  TC_CMR_WAVEFORM_WAVSEL_UP_RC | TC_CMR_WAVEFORM_WAVE_Msk ;
 
     /* write period */
     TC0_REGS->TC_CHANNEL[0].TC_RC = 0U;
@@ -95,7 +96,7 @@ void TC0_CH0_TimerStop (void)
 
 uint32_t TC0_CH0_TimerFrequencyGet( void )
 {
-    return (uint32_t)(0UL);
+    return (uint32_t)(200000000UL);
 }
 
 /* Configure timer period */
