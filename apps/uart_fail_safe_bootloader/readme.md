@@ -44,15 +44,19 @@ This example application shows how to use the Bootloader Library to bootload an 
 
 The following table provides links to documentation on how to build and run UART Fail Safe bootloader on different development kits
 
--   **[PIC32MK GP Development Kit: Building and Running the UART Fail Safe Bootloader applications](../../docs/GUID-7F3D5F78-5918-4104-902C-5D508BBED0FD.md)**  
+-   **[PIC32CXMTSH-DB Evaluation Kit: Building and Running the UART Fail Safe Bootloader applications](https://onlinedocs.microchip.com/v2/keyword-lookup?keyword=BOOTLOADER_APPS_UART_FS_PIC32CX_MTSH_DB&redirect=true)**  
 
--   **[PIC32MK MCM Curiosity Pro Development Board: Building and Running the UART Fail Safe Bootloader applications](../../docs/GUID-377F58DE-943A-4B7D-9368-77A27B53CB6C.md)**  
+-   **[PIC32CX SG41 Curiosity Ultra Evaluation Board: Building and Running the UART Fail Safe Bootloader applications](https://onlinedocs.microchip.com/v2/keyword-lookup?keyword=BOOTLOADER_APPS_UART_FS_PIC32CX_SG41&redirect=true)**  
 
--   **[PIC32MZ Embedded Graphics with Stacked DRAM \(DA\) Starter Kit \(Crypto\): Building and Running the UART Fail Safe Bootloader applications](../../docs/GUID-6E6C43D2-CD52-4D84-A525-24DE252958A2.md)**  
+-   **[PIC32MK GP Development Kit: Building and Running the UART Fail Safe Bootloader applications](https://onlinedocs.microchip.com/v2/keyword-lookup?keyword=BOOTLOADER_APPS_UART_FS_PIC32MK_GP_DB&redirect=true)**  
 
--   **[PIC32MZ Embedded Connectivity with FPU \(EF\) Starter Kit: Building and Running the UART Fail Safe Bootloader applications](../../docs/GUID-01B2189B-368F-49D6-8400-6A994E6B96DA.md)**  
+-   **[PIC32MK MCM Curiosity Pro Development Board: Building and Running the UART Fail Safe Bootloader applications](https://onlinedocs.microchip.com/v2/keyword-lookup?keyword=BOOTLOADER_APPS_UART_FS_PIC32MK_MCM_CURIOSITY_PRO&redirect=true)**  
 
--   **[SAM E54 Xplained Pro Evaluation Kit: Building and Running the UART Fail Safe Bootloader applications](../../docs/GUID-C56D70BA-4824-4E3E-A6FC-BB2DE123D81A.md)**  
+-   **[PIC32MZ Embedded Graphics with Stacked DRAM \(DA\) Starter Kit \(Crypto\): Building and Running the UART Fail Safe Bootloader applications](https://onlinedocs.microchip.com/v2/keyword-lookup?keyword=BOOTLOADER_APPS_UART_FS_PIC32MZ_DAS_SK&redirect=true)**  
+
+-   **[PIC32MZ Embedded Connectivity with FPU \(EF\) Starter Kit: Building and Running the UART Fail Safe Bootloader applications](https://onlinedocs.microchip.com/v2/keyword-lookup?keyword=BOOTLOADER_APPS_UART_FS_PIC32MZ_EF_SK&redirect=true)**  
+
+-   **[SAM E54 Xplained Pro Evaluation Kit: Building and Running the UART Fail Safe Bootloader applications](https://onlinedocs.microchip.com/v2/keyword-lookup?keyword=BOOTLOADER_APPS_UART_FS_SAM_E54_XPRO&redirect=true)**  
 
 
 **Parent topic:**[MPLAB® Harmony Bootloader Application Examples for UART](../../docs/GUID-B72472E8-6E25-4036-8A27-70D70540E725.md)
