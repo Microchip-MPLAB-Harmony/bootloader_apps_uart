@@ -15,7 +15,7 @@ and microprocessor devices. Refer to the following links for more information.
 This repository contains the MPLAB® Harmony 3 UART Bootloader application examples
 
 - [Release Notes](release_notes.md)
-- [MPLAB® Harmony License](mplab_harmony_license.md)
+- [Microchip SLA](Microchip_SLA001.md)
 
 To clone or download these application from Github,go to the [main page of this repository](https://github.com/Microchip-MPLAB-Harmony/bootloader_apps_uart) and then click Clone button to clone this repo or download as zip file. This content can also be download using content manager by following [these instructions](https://github.com/Microchip-MPLAB-Harmony/contentmanager/wiki)
 
