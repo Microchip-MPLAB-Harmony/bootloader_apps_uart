@@ -2,12 +2,12 @@
 
 manifest_file_version: 1.0.0
 project: uart_bootloader_sam_a5d2_xult
-creation_date: 2025-05-30T12:35:17.400+05:30[Asia/Calcutta]
-operating_system: Windows 11
+creation_date: 2025-06-27T14:02:31.257+05:30[Asia/Calcutta]
+operating_system: Windows 10
 mcc_mode: IDE
 mcc_mode_version: v6.25
 device_name: ATSAMA5D27
-compiler: XC32 4.35
+compiler: XC32 4.60
 mcc_version: 5.5.2
 mcc_core_version: 5.7.1
 content_manager_version: 5.0.1
@@ -16,10 +16,10 @@ is_using_prerelease_versions: false
 mcc_content_registries: https://registry.npmjs.org/
 device_library: {library_class: com.microchip.mcc.harmony.Harmony3Library, name: Harmony
     V3, version: 1.5.5}
-packs: {name: SAMA5D2_DFP, version: 1.13.239}
+packs: {name: SAMA5D2_DFP, version: 1.11.228}
 modules:
-- {name: csp, type: HARMONY, version: v3.22.4}
-- {name: core, type: HARMONY, version: v3.15.2}
-- {name: CMSIS_5, type: HARMONY, version: 5.8.0}
-- {name: bootloader, type: HARMONY, version: v3.8.0-rc.1-41-gf1befa3}
+- {name: CMSIS_5, type: HARMONY, version: 5.9.0}
+- {name: bootloader, type: HARMONY, version: v3.8.0}
 - {name: bsp, type: HARMONY, version: v3.22.0}
+- {name: core, type: HARMONY, version: v3.15.2}
+- {name: csp, type: HARMONY, version: v3.22.5}

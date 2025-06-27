@@ -4,19 +4,19 @@
 
 
 project: bootloader
-creation_date: 2025-05-23T13:36:41.334+05:30[Asia/Calcutta]    # ISO 8601 format: https://www.w3.org/TR/NOTE-datetime
+creation_date: 2025-06-27T14:02:31.257+05:30[Asia/Calcutta]    # ISO 8601 format: https://www.w3.org/TR/NOTE-datetime
 operating_system: Windows 10
-mcc_mode: Headless            # [IDE|Standalone|Headless]
-mcc_version: v5.5.1
+mcc_mode: IDE            # [IDE|Standalone|Headless]
+mcc_version: v5.5.2
 mcc_core_version: v5.7.1
-mplabx_version: NA        # if MPLAB X plugin only
+mplabx_version: v6.25        # if MPLAB X plugin only
 harmony_version: v1.5.5
-compiler: NA
+compiler: XC32 4.60
 
 modules:
-    - {name: "csp", version: "v3.22.2-42-g413852b"}
-    - {name: "CMSIS_5", version: "5.8.0"}
-    - {name: "bootloader", version: "v3.8.0-rc.1-41-gf1befa3"}
+    - {name: "CMSIS_5", version: "5.9.0"}
+    - {name: "bootloader", version: "v3.8.0"}
+    - {name: "csp", version: "v3.22.5"}
 
 packs:
     - {name: "SAME54_DFP", version: "3.9.244"}

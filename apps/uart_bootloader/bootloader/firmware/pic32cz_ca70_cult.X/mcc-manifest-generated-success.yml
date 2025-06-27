@@ -2,8 +2,8 @@
 
 manifest_file_version: 1.0.0
 project: uart_bootloader_pic32cz_ca70_cult
-creation_date: 2025-06-10T12:32:01.961+05:30[Asia/Calcutta]
-operating_system: Windows 11
+creation_date: 2025-06-27T14:02:31.257+05:30[Asia/Calcutta]
+operating_system: Windows 10
 mcc_mode: IDE
 mcc_mode_version: v6.25
 device_name: PIC32CZ2051CA70144
@@ -15,9 +15,9 @@ is_mcc_offline: false
 is_using_prerelease_versions: false
 mcc_content_registries: https://registry.npmjs.org/
 device_library: {library_class: com.microchip.mcc.harmony.Harmony3Library, name: Harmony
-    V3, version: 1.5.3}
+    V3, version: 1.5.5}
 packs: {name: PIC32CZ-CA70_DFP, version: 1.2.32}
 modules:
-- {name: csp, type: HARMONY, version: v3.22.4-41-gae7d08d}
-- {name: CMSIS_5, type: HARMONY, version: 5.8.0}
-- {name: bootloader, type: HARMONY, version: v3.8.0-rc.1-41-gf1befa3}
+- {name: CMSIS_5, type: HARMONY, version: 5.9.0}
+- {name: bootloader, type: HARMONY, version: v3.8.0}
+- {name: csp, type: HARMONY, version: v3.22.5}

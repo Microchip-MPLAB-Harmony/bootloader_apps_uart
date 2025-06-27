@@ -2,8 +2,8 @@
 
 manifest_file_version: 1.0.0
 project: uart_bootloader_test_app_pic32mk_mcm_curiosity_pro
-creation_date: 2025-05-27T18:02:06.715+05:30[Asia/Calcutta]
-operating_system: Windows 11
+creation_date: 2025-06-27T14:02:31.257+05:30[Asia/Calcutta]
+operating_system: Windows 10
 mcc_mode: IDE
 mcc_mode_version: v6.25
 device_name: PIC32MK1024MCM100
@@ -18,6 +18,6 @@ device_library: {library_class: com.microchip.mcc.harmony.Harmony3Library, name:
     V3, version: 1.5.5}
 packs: {name: PIC32MK-MC_DFP, version: 1.11.151}
 modules:
-- {name: csp, type: HARMONY, version: v3.22.2-42-g413852b}
-- {name: core, type: HARMONY, version: v3.15.2}
 - {name: bsp, type: HARMONY, version: v3.22.0}
+- {name: core, type: HARMONY, version: v3.15.2}
+- {name: csp, type: HARMONY, version: v3.22.5}

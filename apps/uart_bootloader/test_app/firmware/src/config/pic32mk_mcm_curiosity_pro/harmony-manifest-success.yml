@@ -4,8 +4,8 @@
 
 
 project: test_app
-creation_date: 2025-05-27T18:02:06.247+05:30[Asia/Calcutta]    # ISO 8601 format: https://www.w3.org/TR/NOTE-datetime
-operating_system: Windows 11
+creation_date: 2025-06-27T14:02:31.257+05:30[Asia/Calcutta]    # ISO 8601 format: https://www.w3.org/TR/NOTE-datetime
+operating_system: Windows 10
 mcc_mode: IDE            # [IDE|Standalone|Headless]
 mcc_version: v5.5.2
 mcc_core_version: v5.7.1
@@ -14,9 +14,9 @@ harmony_version: v1.5.5
 compiler: XC32 4.60
 
 modules:
-    - {name: "csp", version: "v3.22.2-42-g413852b"}
-    - {name: "core", version: "v3.15.2"}
     - {name: "bsp", version: "v3.22.0"}
+    - {name: "core", version: "v3.15.2"}
+    - {name: "csp", version: "v3.22.5"}
 
 packs:
     - {name: "PIC32MK-MC_DFP", version: "1.11.151"}

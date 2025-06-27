@@ -4,20 +4,20 @@
 
 
 project: bootloader_nand_flash
-creation_date: 2025-05-30T11:24:58.250+05:30[Asia/Calcutta]    # ISO 8601 format: https://www.w3.org/TR/NOTE-datetime
-operating_system: Windows 11
+creation_date: 2025-06-27T14:02:31.257+05:30[Asia/Calcutta]    # ISO 8601 format: https://www.w3.org/TR/NOTE-datetime
+operating_system: Windows 10
 mcc_mode: IDE            # [IDE|Standalone|Headless]
 mcc_version: v5.5.2
 mcc_core_version: v5.7.1
 mplabx_version: v6.25        # if MPLAB X plugin only
-harmony_version: v1.5.3
-compiler: XC32 4.35
+harmony_version: v1.5.5
+compiler: XC32 4.60
 
 modules:
-    - {name: "csp", version: "v3.22.4"}
-    - {name: "core", version: "v3.15.2"}
-    - {name: "bootloader", version: "v3.8.0-rc.1-41-gf1befa3"}
+    - {name: "bootloader", version: "v3.8.0"}
     - {name: "bsp", version: "v3.22.0"}
+    - {name: "core", version: "v3.15.2"}
+    - {name: "csp", version: "v3.22.5"}
 
 packs:
     - {name: "SAM9X6_DFP", version: "1.9.218"}

@@ -148,20 +148,6 @@
       <itemPath>../src/app.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles" displayName="Important Files" projectFiles="true">
-      <logicalFolder name="f1" displayName="pic32cm_mc00_curiosity_pro.mhc" projectFiles="true">
-        <itemPath>../src/config/pic32cm_mc00_curiosity_pro/pic32cm_mc00_curiosity_pro.mhc/BSP_PIC32CM_MC_Curiosity_Pro.yml</itemPath>
-        <itemPath>../src/config/pic32cm_mc00_curiosity_pro/pic32cm_mc00_curiosity_pro.mhc/cmsis.yml</itemPath>
-        <itemPath>../src/config/pic32cm_mc00_curiosity_pro/pic32cm_mc00_curiosity_pro.mhc/core.yml</itemPath>
-        <itemPath>../src/config/pic32cm_mc00_curiosity_pro/pic32cm_mc00_curiosity_pro.mhc/dfp.yml</itemPath>
-        <itemPath>../src/config/pic32cm_mc00_curiosity_pro/pic32cm_mc00_curiosity_pro.mhc/evsys.yml</itemPath>
-        <itemPath>../src/config/pic32cm_mc00_curiosity_pro/pic32cm_mc00_curiosity_pro.mhc/GraphSettings.yml</itemPath>
-        <itemPath>../src/config/pic32cm_mc00_curiosity_pro/pic32cm_mc00_curiosity_pro.mhc/HarmonyCore.yml</itemPath>
-        <itemPath>../src/config/pic32cm_mc00_curiosity_pro/pic32cm_mc00_curiosity_pro.mhc/nvmctrl.yml</itemPath>
-        <itemPath>../src/config/pic32cm_mc00_curiosity_pro/pic32cm_mc00_curiosity_pro.mhc/project.yml</itemPath>
-        <itemPath>../src/config/pic32cm_mc00_curiosity_pro/pic32cm_mc00_curiosity_pro.mhc/sercom0.yml</itemPath>
-        <itemPath>../src/config/pic32cm_mc00_curiosity_pro/pic32cm_mc00_curiosity_pro.mhc/settings.yml</itemPath>
-        <itemPath>../src/config/pic32cm_mc00_curiosity_pro/pic32cm_mc00_curiosity_pro.mhc/stdio.yml</itemPath>
-      </logicalFolder>
       <itemPath>Makefile</itemPath>
       <itemPath>../src/config/pic32cm_mc00_curiosity_pro/harmony-manifest-success.yml</itemPath>
       <itemPath>../src/config/pic32cm_mc00_curiosity_pro/pin_configurations.csv</itemPath>

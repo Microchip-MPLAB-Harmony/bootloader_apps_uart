@@ -75,18 +75,6 @@
       <itemPath>../src/app.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles" displayName="Important Files" projectFiles="false">
-      <logicalFolder name="f1" displayName="pic32mz_w1_curiosity.mhc" projectFiles="true">
-        <itemPath>../src/config/pic32mz_w1_curiosity/pic32mz_w1_curiosity.mhc/BSP_PIC32MZ_W1_Curiosity.yml</itemPath>
-        <itemPath>../src/config/pic32mz_w1_curiosity/pic32mz_w1_curiosity.mhc/core.yml</itemPath>
-        <itemPath>../src/config/pic32mz_w1_curiosity/pic32mz_w1_curiosity.mhc/core_timer.yml</itemPath>
-        <itemPath>../src/config/pic32mz_w1_curiosity/pic32mz_w1_curiosity.mhc/dfp.yml</itemPath>
-        <itemPath>../src/config/pic32mz_w1_curiosity/pic32mz_w1_curiosity.mhc/GraphSettings.yml</itemPath>
-        <itemPath>../src/config/pic32mz_w1_curiosity/pic32mz_w1_curiosity.mhc/HarmonyCore.yml</itemPath>
-        <itemPath>../src/config/pic32mz_w1_curiosity/pic32mz_w1_curiosity.mhc/project.yml</itemPath>
-        <itemPath>../src/config/pic32mz_w1_curiosity/pic32mz_w1_curiosity.mhc/settings.yml</itemPath>
-        <itemPath>../src/config/pic32mz_w1_curiosity/pic32mz_w1_curiosity.mhc/stdio.yml</itemPath>
-        <itemPath>../src/config/pic32mz_w1_curiosity/pic32mz_w1_curiosity.mhc/uart1.yml</itemPath>
-      </logicalFolder>
       <itemPath>Makefile</itemPath>
       <itemPath>../src/config/pic32mz_w1_curiosity/harmony-manifest-success.yml</itemPath>
       <itemPath>uart_bootloader_test_app_pic32mz_w1_curiosity.mc3</itemPath>

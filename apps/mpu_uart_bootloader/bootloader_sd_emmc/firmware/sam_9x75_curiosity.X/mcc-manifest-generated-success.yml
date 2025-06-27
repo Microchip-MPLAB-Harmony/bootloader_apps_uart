@@ -2,8 +2,8 @@
 
 manifest_file_version: 1.0.0
 project: uart_bootloader_bootloader_sam_9x75_curiosity
-creation_date: 2025-05-23T14:49:12.416+05:30[Asia/Calcutta]
-operating_system: Windows 11
+creation_date: 2025-06-27T14:02:31.257+05:30[Asia/Calcutta]
+operating_system: Windows 10
 mcc_mode: IDE
 mcc_mode_version: v6.25
 device_name: SAM9X75D2G
@@ -18,9 +18,7 @@ device_library: {library_class: com.microchip.mcc.harmony.Harmony3Library, name:
     V3, version: 1.5.5}
 packs: {name: SAM9X7_DFP, version: 1.9.170}
 modules:
-- {name: core, type: HARMONY, version: v3.15.2}
-- {name: csp, type: HARMONY, version: v3.22.2-42-g413852b}
-- {name: filex, type: HARMONY, version: v6.4.0_rel}
-- {name: bootloader, type: HARMONY, version: v3.8.0-rc.1-41-gf1befa3}
-- {name: littlefs, type: HARMONY, version: v2.10.1}
+- {name: bootloader, type: HARMONY, version: v3.8.0}
 - {name: bsp, type: HARMONY, version: v3.22.0}
+- {name: core, type: HARMONY, version: v3.15.2}
+- {name: csp, type: HARMONY, version: v3.22.5}
