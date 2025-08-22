@@ -78,7 +78,7 @@ void PIO_Initialize ( void )
     /* PORTA Slew rate control */
     ((pio_registers_t*)PIO_PORT_A)->PIO_SLEWR = 0x0U;
     /* PORTA drive control */
-    ((pio_registers_t*)PIO_PORT_A)->PIO_DRIVER = 0x0U;
+    ((pio_registers_t*)PIO_PORT_A)->PIO_DRIVER = 0x3fU;
 
     /************************ PIO B Initialization ************************/
     ((pio_registers_t*)PIO_PORT_B)->PIO_PER = 0xFFFFFFFFU;
