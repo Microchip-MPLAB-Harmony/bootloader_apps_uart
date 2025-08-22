@@ -251,6 +251,7 @@
       </logicalFolder>
       <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/pin_configurations.csv</itemPath>
       <itemPath>../src/main.c</itemPath>
+      <itemPath>../src/deinitialization_ca80.c</itemPath>
     </logicalFolder>
   </logicalFolder>
   <sourceRootList>

@@ -129,14 +129,14 @@ U4,PB03,,Available,,,,,,No,FAST
 U5,PB19,,Available,,,,,,No,FAST
 U6,PB04,,Available,,,,,,No,FAST
 U7,PF00,,Available,,,,,,No,FAST
-U8,PB23,,Available,,,,Yes,,No,FAST
+U8,PB23,,Available,,,,,,No,FAST
 U9,PB08,,Available,,,,,,No,FAST
 U10,PF04,,Available,,,,,,No,FAST
 U11,PB28,,Available,,,,,,No,FAST
 U12,PB09,,Available,,,,,,No,FAST
 U13,PB29,,Available,,,,,,No,FAST
 U14,PB30,,Available,,,,,,No,FAST
-U15,PB24,SWITCH,GPIO,Digital,In,n/a,No,No,No,FAST
+U15,PB24,SWITCH,GPIO,Digital,In,n/a,Yes,No,No,FAST
 U16,PB13,,Available,,,,,,No,FAST
 U17,PB15,,Available,,,,,,No,FAST
 U18,PB16,,Available,,,,,,No,FAST
