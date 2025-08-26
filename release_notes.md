@@ -3,6 +3,20 @@
 
 # Microchip MPLAB® Harmony 3 Release Notes
 
+## UART Bootloader Applications Release v3.4.1
+
+### New Features
+
+- None
+
+### Bug fixes and Improvements
+
+- Regenerated and tested PIC32CZ CA80 Curiosity Ultra UART bootloader applications 
+- Bug Fixed in SAM9X75 Curiosity MPU UART bootloader
+
+### Development Tools
+- Same as v3.4.0
+
 ## UART Bootloader Applications Release v3.4.0
 
 ### New Features
