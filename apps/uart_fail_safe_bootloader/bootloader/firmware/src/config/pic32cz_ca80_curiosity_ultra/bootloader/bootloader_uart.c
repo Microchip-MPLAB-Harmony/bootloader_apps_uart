@@ -309,6 +309,8 @@ static void command_task(void)
     }
     else if (BL_CMD_BKSWAP_RESET == input_command)
     {
+        bootloader_UpdateUpperFlashSerial();
+        
         SERCOM1_USART_WriteByte(BL_RESP_OK);
 
         while(SERCOM1_USART_TransmitComplete() == false)
@@ -316,8 +318,7 @@ static void command_task(void)
             /* Nothing to do */
         }
 
-        FCW_BankSwap();
-       // bootloader_TriggerReset();		
+		bootloader_TriggerReset();
     }
     else
     {

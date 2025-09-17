@@ -57,7 +57,7 @@
         &lt;ElementPosition dnOrder=&quot;2&quot; id=&quot;dfp&quot; x=&quot;180&quot; y=&quot;20&quot;/&gt;
         &lt;ElementPosition dnOrder=&quot;3&quot; id=&quot;evsys&quot; x=&quot;20&quot; y=&quot;20&quot;/&gt;
         &lt;ElementPosition dnOrder=&quot;4&quot; id=&quot;fcr&quot; x=&quot;640&quot; y=&quot;20&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;5&quot; id=&quot;fcw&quot; x=&quot;170&quot; y=&quot;60&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;5&quot; id=&quot;fcw&quot; x=&quot;157&quot; y=&quot;104&quot;/&gt;
         &lt;ElementPosition dnOrder=&quot;6&quot; id=&quot;sercom1&quot; x=&quot;117&quot; y=&quot;197&quot;/&gt;
         &lt;ElementPosition dnOrder=&quot;7&quot; id=&quot;uart_bootloader&quot; x=&quot;381&quot; y=&quot;161&quot;/&gt;
       &lt;/ElementPositions&gt;
@@ -3366,11 +3366,11 @@
    <generatedFileHashHistoryMap class="java.util.TreeMap">
       <entry>
          <file>..\src\config\pic32cz_ca80_curiosity_ultra\bootloader\bootloader_common.c</file>
-         <hash>78dc4d2eaa843d823a2a6df7f6e7e859bf7122c5212f9d044a39485c077a5782</hash>
+         <hash>cfda0f8917393e1218bc7ea4b4d9d32f34f760f05f17be912e95d0589ff46ad3</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32cz_ca80_curiosity_ultra\bootloader\bootloader_common.h</file>
-         <hash>9967f753c7e7225624c1003c055d8118c5283b27ccd2c05936f7afe7e9b206e9</hash>
+         <hash>1d2bcdf6caac0155761a5f296cde3529f7c4047f72a7e852c74b29db3d2e6c1b</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32cz_ca80_curiosity_ultra\bootloader\bootloader_interrupt.h</file>
@@ -3378,7 +3378,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32cz_ca80_curiosity_ultra\bootloader\bootloader_uart.c</file>
-         <hash>ab27f66ea54702e2cb7db62f4ee060fa195fde577c61822f10c84442c1602c6c</hash>
+         <hash>715559522bb4d481dcaa8ce7be726e154da3e361e29704ce366d0a43b31df551</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32cz_ca80_curiosity_ultra\bootloader\bootloader_uart.h</file>
@@ -3390,7 +3390,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32cz_ca80_curiosity_ultra\definitions.h</file>
-         <hash>646003ff157215bbaa1f23a56af76f9449ab2846ed9fecd5b8262809f29a6aa6</hash>
+         <hash>5bb1ff52a0d7e89079f4069d30a52e58efe4b6db3edd31bf9fcce96f6b98c674</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32cz_ca80_curiosity_ultra\device.h</file>
@@ -3406,7 +3406,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32cz_ca80_curiosity_ultra\initialization.c</file>
-         <hash>49a0bcf039a5700bc15d07f166ab887a9aebe381a0022c7d4824d0a7cd13f0fe</hash>
+         <hash>1b981c6b2aa10f44c7ddcaa7a0f9dbc3a3eb8f0e0caed0bf3a76701a059855ba</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32cz_ca80_curiosity_ultra\peripheral\clock\plib_clock.c</file>

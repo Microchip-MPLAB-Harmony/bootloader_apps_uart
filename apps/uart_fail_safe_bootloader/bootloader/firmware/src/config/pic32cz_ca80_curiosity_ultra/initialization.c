@@ -324,6 +324,8 @@ void SYS_Initialize ( void* data )
     CLOCK_Initialize();
 
     PORT_Initialize();
+    
+    bootloader_ProgramFlashBankSelect();
 
     if (bootloader_Trigger() == false)
     {
@@ -332,9 +334,9 @@ void SYS_Initialize ( void* data )
 
 
 
-    FCW_Initialize();
-
     SERCOM1_USART_Initialize();
+
+    FCW_Initialize();
 
     EVSYS_Initialize();
 

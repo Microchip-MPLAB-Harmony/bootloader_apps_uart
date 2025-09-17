@@ -4,7 +4,7 @@
 
 
 project: bootloader
-creation_date: 2025-09-01T12:04:18.177+05:30[Asia/Calcutta]    # ISO 8601 format: https://www.w3.org/TR/NOTE-datetime
+creation_date: 2025-09-18T10:53:40.107+05:30[Asia/Calcutta]    # ISO 8601 format: https://www.w3.org/TR/NOTE-datetime
 operating_system: Windows 10
 mcc_mode: IDE            # [IDE|Standalone|Headless]
 mcc_version: v5.5.1
@@ -14,9 +14,9 @@ harmony_version: v1.5.5
 compiler: XC32 4.60
 
 modules:
-    - {name: "csp", version: "v3.22.5"}
+    - {name: "csp", version: "dev"}
     - {name: "CMSIS_5", version: "5.9.0"}
-    - {name: "bootloader", version: "ca80_live_update_supp"}
+    - {name: "bootloader", version: "dual_bank_supp_ca80"}
 
 packs:
     - {name: "PIC32CZ-CA80_DFP", version: "1.4.158"}

@@ -75,6 +75,32 @@
 #define APP_START_ADDRESS                       (0xc000000U)
 
 
+#define LOWER_FLASH_START                       (FLASH_START)
+#define LOWER_FLASH_SERIAL_START                (LOWER_FLASH_START + (FLASH_LENGTH / 2U) - PAGE_SIZE)
+#define LOWER_FLASH_SERIAL_SECTOR               (LOWER_FLASH_START + (FLASH_LENGTH / 2U) - ERASE_BLOCK_SIZE)
+
+#define UPPER_FLASH_START                       INACTIVE_BANK_START
+#define UPPER_FLASH_SERIAL_START                (FLASH_END_ADDRESS - PAGE_SIZE)
+#define UPPER_FLASH_SERIAL_SECTOR               (FLASH_END_ADDRESS - ERASE_BLOCK_SIZE)
+
+#define FLASH_SERIAL_PROLOGUE                   0xDEADBEEFU
+#define FLASH_SERIAL_EPILOGUE                   0xBEEFDEADU
+#define FLASH_SERIAL_CLEAR                      0xFFFFFFFFU
+
+#define LOWER_FLASH_SERIAL_READ                 ((T_FLASH_SERIAL *)LOWER_FLASH_SERIAL_START)
+#define UPPER_FLASH_SERIAL_READ                 ((T_FLASH_SERIAL *)UPPER_FLASH_SERIAL_START)
+	
+/* Structure to validate the Flash serial and its checksum
+ * Note: The order of the members should not be changed
+ */
+typedef struct
+{
+    uint32_t prologue;
+    uint32_t serial;
+    uint32_t epilogue;
+    uint32_t dummy;
+} T_FLASH_SERIAL;
+
 #define BTL_TRIGGER_RAM_START                   0x20020000
 
 #define BTL_TRIGGER_LEN                         16
@@ -308,7 +334,18 @@ Example:
 */
 void bootloader_TriggerReset(void);
 
+/* Function to read the Serial number from Flash bank mapped to lower region */
+uint32_t bootloader_GetLowerFlashSerial(void);
 
-void FCW_BankSwap(void);
+/* Function to update the serial number based on address */
+void bootloader_UpdateFlashSerial(uint32_t serial, uint32_t addr);
+
+/* Function to update the serial number in upper flash panel (Inactive Panel) */
+void bootloader_UpdateUpperFlashSerial(void);
+
+/* Function to mark the Upper flash erase status */
+void bootloader_SetUpperFlashSerialErased(bool erased);
+
+void bootloader_ProgramFlashBankSelect( void );
 
 #endif      //BOOTLOADER_COMMON_H
