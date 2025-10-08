@@ -390,7 +390,7 @@
         <makeCustomizationNormalizeHexFile>false</makeCustomizationNormalizeHexFile>
       </makeCustomizationType>
       <C32>
-        <property key="additional-warnings" value="true"/>
+        <property key="additional-warnings" value="false"/>
         <property key="addresss-attribute-use" value="false"/>
         <property key="appendMe" value="-marm"/>
         <property key="enable-app-io" value="false"/>
@@ -403,7 +403,7 @@
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="true"/>
-        <property key="make-warnings-into-errors" value="true"/>
+        <property key="make-warnings-into-errors" value="false"/>
         <property key="optimization-level" value="-O2"/>
         <property key="place-data-into-section" value="true"/>
         <property key="post-instruction-scheduling" value="default"/>
@@ -569,7 +569,7 @@
         <property key="memories.programmemory.ranges" value="300000-eff00fff"/>
         <property key="poweroptions.powerenable" value="false"/>
         <property key="programmerToGoFilePath"
-                  value="C:/Users/I76597/h3/bootloader_apps_uart/apps/mpu_uart_bootloader/bootloader_sd_emmc/firmware/sam_9x75_curiosity.X/debug/sam_9x75_curiosity/sam_9x75_curiosity_ptg"/>
+                  value="C:/apps/bootloader_apps_uart/apps/mpu_uart_bootloader/bootloader_sd_emmc/firmware/sam_9x75_curiosity.X/debug/sam_9x75_curiosity/sam_9x75_curiosity_ptg"/>
         <property key="programmerToGoImageName" value="sam_9x75_curiosity_ptg"/>
         <property key="programoptions.donoteraseauxmem" value="false"/>
         <property key="programoptions.eraseb4program" value="true"/>
