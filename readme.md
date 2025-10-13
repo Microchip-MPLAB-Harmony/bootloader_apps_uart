@@ -1,4 +1,4 @@
-﻿![Microchip logo](https://raw.githubusercontent.com/wiki/Microchip-MPLAB-Harmony/Microchip-MPLAB-Harmony.github.io/images/microchip_logo.png)
+![Microchip logo](https://raw.githubusercontent.com/wiki/Microchip-MPLAB-Harmony/Microchip-MPLAB-Harmony.github.io/images/microchip_logo.png)
 
 # MPLAB® Harmony 3 UART Bootloader Application Examples
 
@@ -15,7 +15,7 @@ and microprocessor devices. Refer to the following links for more information.
 This repository contains the MPLAB® Harmony 3 UART Bootloader application examples
 
 - [Release Notes](release_notes.md)
-- [Microchip SLA](Microchip_SLA001.md)
+- [Microchip SLA](License.md)
 
 To clone or download these application from Github,go to the [main page of this repository](https://github.com/Microchip-MPLAB-Harmony/bootloader_apps_uart) and then click Clone button to clone this repo or download as zip file. This content can also be download using content manager by following [these instructions](https://github.com/Microchip-MPLAB-Harmony/contentmanager/wiki)
 
@@ -36,7 +36,7 @@ To view the documentation offline, follow these steps:
 
 ____
 
-[![License](https://img.shields.io/badge/license-Harmony%20license-orange.svg)](https://github.com/Microchip-MPLAB-Harmony/bootloader_apps_uart/blob/master/Microchip_SLA001.md)
+[![License](https://img.shields.io/badge/license-Harmony%20license-orange.svg)](https://github.com/Microchip-MPLAB-Harmony/bootloader_apps_uart/blob/master/License.md)
 [![Latest release](https://img.shields.io/github/release/Microchip-MPLAB-Harmony/bootloader_apps_uart.svg)](https://github.com/Microchip-MPLAB-Harmony/bootloader_apps_uart/releases/latest)
 [![Latest release date](https://img.shields.io/github/release-date/Microchip-MPLAB-Harmony/bootloader_apps_uart.svg)](https://github.com/Microchip-MPLAB-Harmony/bootloader_apps_uart/releases/latest)
 [![Commit activity](https://img.shields.io/github/commit-activity/y/Microchip-MPLAB-Harmony/bootloader_apps_uart.svg)](https://github.com/Microchip-MPLAB-Harmony/bootloader_apps_uart/graphs/commit-activity)

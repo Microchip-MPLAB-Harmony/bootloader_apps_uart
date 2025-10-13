@@ -1,7 +1,20 @@
-![Microchip logo](https://raw.githubusercontent.com/wiki/Microchip-MPLAB-Harmony/Microchip-MPLAB-Harmony.github.io/images/microchip_logo.png)
-![Harmony logo small](https://raw.githubusercontent.com/wiki/Microchip-MPLAB-Harmony/Microchip-MPLAB-Harmony.github.io/images/microchip_mplab_harmony_logo_small.png)
+[![Microchip logo](https://raw.githubusercontent.com/wiki/Microchip-MPLAB-Harmony/Microchip-MPLAB-Harmony.github.io/images/microchip_logo.png)](https://www.microchip.com)
+[![Harmony logo small](https://raw.githubusercontent.com/wiki/Microchip-MPLAB-Harmony/Microchip-MPLAB-Harmony.github.io/images/microchip_mplab_harmony_logo_small.png)](https://www.microchip.com/en-us/tools-resources/configure/mplab-harmony)
 
 # Microchip MPLAB® Harmony 3 Release Notes
+
+## UART Bootloader Applications Release v3.4.3
+
+### New Features
+
+- None
+
+### Bug fixes and Improvements
+
+- Removed -Wall and -Werror switches from all applications
+
+### Development Tools
+- Same as v3.4.1
 
 ## UART Bootloader Applications Release v3.4.1
 
