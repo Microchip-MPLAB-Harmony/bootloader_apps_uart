@@ -55,9 +55,9 @@
 // Section: Exception Handling Routine
 // *****************************************************************************
 // *****************************************************************************
-/* MISRAC 2012 deviation block start */
-/* MISRA C-2012 Rule 8.6 might be violated here if the users provide a strong
-   implementations to these weak handler functions. Deviation record ID -  H3_MISRAC_2012_R_8_6_DR_1
+/* MISRAC 2023 deviation block start */
+/* MISRA C-2023 Rule 8.6 might be violated here if the users provide a strong
+   implementations to these weak handler functions. Deviation record ID -  H3_MISRAC_2023_R_8_6_DR_1
 */
 
 
@@ -122,7 +122,7 @@ void __attribute__((noreturn, weak)) UsageFault_Handler(void)
    }
 }
  
-/* MISRAC 2012 deviation block end for rule 8.6 */
+/* MISRAC 2023 deviation block end for rule 8.6 */
 
 /*******************************************************************************
  End of File

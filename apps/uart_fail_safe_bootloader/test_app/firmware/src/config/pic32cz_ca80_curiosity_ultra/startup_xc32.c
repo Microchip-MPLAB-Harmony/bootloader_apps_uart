@@ -33,12 +33,12 @@
  *  The MPLAB X Simulator does not yet support simulation of programming the
  *  GPNVM bits yet. We can remove this once it supports the FRDY bit.
  */
- /* MISRAC 2012 deviation block start */
-/* MISRA C-2012 Rule 21.1 deviated 1 time. Deviation record ID -  H3_MISRAC_2012_R_21_1_DR_1 */
+ /* MISRAC 2023 deviation block start */
+/* MISRA C-2023 Rule 21.1 deviated 1 time. Deviation record ID -  H3_MISRAC_2023_R_21_1_DR_1 */
 #ifdef __MPLAB_DEBUGGER_SIMULATOR
 #define __XC32_SKIP_STARTUP_GPNVM_WAIT
 #endif
-/* MISRAC 2012 deviation block end */
+/* MISRAC 2023 deviation block end */
 
 /*
  *  This startup code relies on features that are specific to the MPLAB XC32
@@ -48,9 +48,9 @@
 #warning This startup code is intended for use with the MPLAB XC32 Compiler only.
 #endif
 
-/* MISRAC 2012 deviation block start */
-/* MISRA C-2012 Rule 21.2 deviated 5 times. Deviation record ID -  H3_MISRAC_2012_R_21_2_DR_1 */
-/* MISRA C-2012 Rule 8.6 deviated 6 times.  Deviation record ID -  H3_MISRAC_2012_R_8_6_DR_1 */
+/* MISRAC 2023 deviation block start */
+/* MISRA C-2023 Rule 21.2 deviated 5 times. Deviation record ID -  H3_MISRAC_2023_R_21_2_DR_1 */
+/* MISRA C-2023 Rule 8.6 deviated 6 times.  Deviation record ID -  H3_MISRAC_2023_R_8_6_DR_1 */
 
 /* array initialization  function */
 extern void __attribute__((long_call)) __libc_init_array(void);
@@ -69,7 +69,7 @@ extern uint32_t __svectors;
 extern uint32_t _stack;
 #endif
 
-/* MISRAC 2012 deviation block end */
+/* MISRAC 2023 deviation block end */
 
 
 extern int main(void);
