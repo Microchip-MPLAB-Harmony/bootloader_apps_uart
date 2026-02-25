@@ -44,8 +44,8 @@ data:
     - children:
       - attributes:
           id: fcw
-          x: '142'
-          y: '312'
+          x: '157'
+          y: '104'
         type: ElementPosition
       type: ElementPositions
     type: ComponentGraph

@@ -11,7 +11,7 @@ dependency:
 - dependencyPackage: ''
   name: bootloader
   type: package
-  version: v3.9.0
+  version: v3.8.0
 customDataClassName: com.microchip.utils_mh3.utils.persistence.CustomModuleData
 data:
   attachments:
@@ -62,12 +62,22 @@ data:
     - children:
       - attributes:
           id: uart_bootloader
-          x: '370'
-          y: '145'
+          x: '381'
+          y: '161'
         type: ElementPosition
       type: ElementPositions
     type: ComponentGraph
   symbols:
+    BTL_DUAL_BANK:
+      attributes:
+        id: BTL_DUAL_BANK
+      children:
+      - children:
+        - attributes:
+            value: 'true'
+          type: User
+        type: Values
+      type: Boolean
     BTL_MEM_START_ADDR:
       attributes:
         id: BTL_MEM_START_ADDR
@@ -89,7 +99,7 @@ data:
             value: '4096'
           type: Dynamic
         - attributes:
-            value: '8192'
+            value: '4096'
           type: User
         type: Values
       type: String
@@ -103,6 +113,24 @@ data:
           type: User
         type: Values
       type: Boolean
+    BTL_TRIGGER_LEN:
+      attributes:
+        id: BTL_TRIGGER_LEN
+      children:
+      - children:
+        - attributes:
+            id: visible
+          children:
+          - type: Value
+            value: 'true'
+          type: Boolean
+        type: Attributes
+      - children:
+        - attributes:
+            value: '16'
+          type: User
+        type: Values
+      type: String
     MEM_USED:
       attributes:
         id: MEM_USED

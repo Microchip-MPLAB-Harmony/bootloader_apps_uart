@@ -68,8 +68,8 @@ data:
     - children:
       - attributes:
           id: sercom1
-          x: '174'
-          y: '156'
+          x: '117'
+          y: '197'
         type: ElementPosition
       type: ElementPositions
     type: ComponentGraph
@@ -85,19 +85,6 @@ data:
           type: Dynamic
         type: Values
       type: Hex
-    I2CS_SDASETUP_TIME_NS:
-      attributes:
-        id: I2CS_SDASETUP_TIME_NS
-      children:
-      - children:
-        - attributes:
-            id: max
-          children:
-          - type: Value
-            value: '820'
-          type: Integer
-        type: Attributes
-      type: Integer
     I2CS_SDASETUP_TIME_REG_VALUE:
       attributes:
         id: I2CS_SDASETUP_TIME_REG_VALUE
@@ -150,45 +137,6 @@ data:
           type: Dynamic
         type: Values
       type: KeyValueSet
-    SERCOM_USART_COMMON_HEADER:
-      attributes:
-        id: SERCOM_USART_COMMON_HEADER
-      children:
-      - children:
-        - attributes:
-            id: enabled
-          children:
-          - type: Value
-            value: 'true'
-          type: Boolean
-        type: Attributes
-      type: File
-    SERCOM_USART_HEADER:
-      attributes:
-        id: SERCOM_USART_HEADER
-      children:
-      - children:
-        - attributes:
-            id: enabled
-          children:
-          - type: Value
-            value: 'true'
-          type: Boolean
-        type: Attributes
-      type: File
-    SERCOM_USART_SOURCE:
-      attributes:
-        id: SERCOM_USART_SOURCE
-      children:
-      - children:
-        - attributes:
-            id: enabled
-          children:
-          - type: Value
-            value: 'true'
-          type: Boolean
-        type: Attributes
-      type: File
     SPI_BAUD_REG_VALUE:
       attributes:
         id: SPI_BAUD_REG_VALUE

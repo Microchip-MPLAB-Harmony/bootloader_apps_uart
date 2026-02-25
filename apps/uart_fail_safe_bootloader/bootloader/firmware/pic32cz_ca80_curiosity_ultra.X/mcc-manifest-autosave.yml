@@ -2,12 +2,12 @@
 
 manifest_file_version: 1.0.0
 project: uart_fail_safe_bootloader_pic32cz_ca80_curiosity_ultra
-creation_date: 2026-02-25T12:38:59.874+05:30[Asia/Calcutta]
+creation_date: 2026-02-25T19:56:48.939+05:30[Asia/Calcutta]
 operating_system: Windows 11
 mcc_mode: IDE
 mcc_mode_version: v6.30
 device_name: PIC32CZ8110CA80208
-compiler: XC32 5.00
+compiler: XC32 4.60
 mcc_version: 5.6.4
 mcc_core_version: 5.8.4
 content_manager_version: 6.0.4
@@ -20,4 +20,4 @@ packs: {name: PIC32CZ-CA80_DFP, version: 1.4.158}
 modules:
 - {name: csp, type: HARMONY, version: v3.25.1}
 - {name: CMSIS_5, type: HARMONY, version: 5.9.0}
-- {name: bootloader, type: HARMONY, version: v3.9.0}
+- {name: bootloader, type: HARMONY, version: v3.8.0}

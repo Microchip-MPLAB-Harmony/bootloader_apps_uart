@@ -1,11 +1,11 @@
 configVersion: 1.0.0
-componentName: HarmonyCore
+componentName: dfp
 coreVersion: 5.8.4
 device: PIC32CZ8110CA80208
 library: []
 dependency:
 - dependencyPackage: class com.microchip.mcc.harmony.HarmonyModule
-  name: HarmonyCore
+  name: dfp
   type: module
   version: ''
 - dependencyPackage: ''
@@ -15,15 +15,15 @@ dependency:
 - dependencyPackage: ''
   name: bsp
   type: package
-  version: v3.24.0
+  version: v3.22.0
 - dependencyPackage: ''
   name: core
   type: package
-  version: v3.16.0
+  version: v3.15.2
 - dependencyPackage: ''
   name: csp
   type: package
-  version: v3.25.1
+  version: v3.22.5
 customDataClassName: com.microchip.utils_mh3.utils.persistence.CustomModuleData
 data:
   attachments: {}
@@ -33,31 +33,11 @@ data:
     children:
     - children:
       - attributes:
-          id: HarmonyCore
-          x: '33'
-          y: '94'
+          id: dfp
+          x: '180'
+          y: '20'
         type: ElementPosition
       type: ElementPositions
     type: ComponentGraph
-  symbols:
-    ENABLE_APP_FILE:
-      attributes:
-        id: ENABLE_APP_FILE
-      children:
-      - children:
-        - attributes:
-            value: 'true'
-          type: User
-        type: Values
-      type: Boolean
-    GEN_APP_TASK_NAME_0:
-      attributes:
-        id: GEN_APP_TASK_NAME_0
-      children:
-      - children:
-        - attributes:
-            value: app_pic32cz_ca
-          type: User
-        type: Values
-      type: String
+  symbols: {}
   userData: {}

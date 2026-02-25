@@ -15,6 +15,17 @@ dependency:
 customDataClassName: com.microchip.utils_mh3.utils.persistence.CustomModuleData
 data:
   attachments: {}
-  elementPosition: {}
+  elementPosition:
+    attributes:
+      id: __ROOTVIEW
+    children:
+    - children:
+      - attributes:
+          id: dfp
+          x: '180'
+          y: '20'
+        type: ElementPosition
+      type: ElementPositions
+    type: ComponentGraph
   symbols: {}
   userData: {}

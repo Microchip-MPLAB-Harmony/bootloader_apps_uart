@@ -9,18 +9,6 @@ dependency:
   type: module
   version: ''
 - dependencyPackage: ''
-  name: CMSIS_5
-  type: package
-  version: 5.9.0
-- dependencyPackage: ''
-  name: bsp
-  type: package
-  version: v3.24.0
-- dependencyPackage: ''
-  name: core
-  type: package
-  version: v3.16.0
-- dependencyPackage: ''
   name: csp
   type: package
   version: v3.25.1
@@ -40,6 +28,116 @@ data:
       type: ElementPositions
     type: ComponentGraph
   symbols:
+    ADD_LINKER_FILE:
+      attributes:
+        id: ADD_LINKER_FILE
+      children:
+      - children:
+        - attributes:
+            id: uart_bootloader
+            value: 'false'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    APP_START_ADDRESS:
+      attributes:
+        id: APP_START_ADDRESS
+      children:
+      - children:
+        - attributes:
+            id: uart_bootloader
+            value: c000000
+          type: Dynamic
+        type: Values
+      type: String
+    CoreMainFile:
+      attributes:
+        id: CoreMainFile
+      children:
+      - children:
+        - attributes:
+            id: uart_bootloader
+            value: 'false'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    CoreSysCallsFile:
+      attributes:
+        id: CoreSysCallsFile
+      children:
+      - children:
+        - attributes:
+            id: uart_bootloader
+            value: 'false'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    CoreSysExceptionFile:
+      attributes:
+        id: CoreSysExceptionFile
+      children:
+      - children:
+        - attributes:
+            id: uart_bootloader
+            value: 'false'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    CoreSysInitFile:
+      attributes:
+        id: CoreSysInitFile
+      children:
+      - children:
+        - attributes:
+            id: uart_bootloader
+            value: 'false'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    CoreSysIntFile:
+      attributes:
+        id: CoreSysIntFile
+      children:
+      - children:
+        - attributes:
+            id: uart_bootloader
+            value: 'false'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    CoreSysStartupFile:
+      attributes:
+        id: CoreSysStartupFile
+      children:
+      - children:
+        - attributes:
+            id: uart_bootloader
+            value: 'false'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    CoreSysStdioSyscallsFile:
+      attributes:
+        id: CoreSysStdioSyscallsFile
+      children:
+      - children:
+        - attributes:
+            id: uart_bootloader
+            value: 'false'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    DATA_CACHE_ENABLE:
+      attributes:
+        id: DATA_CACHE_ENABLE
+      children:
+      - children:
+        - attributes:
+            id: uart_bootloader
+            value: 'false'
+          type: Dynamic
+        type: Values
+      type: Boolean
     FCW_INTERRUPT_ENABLE:
       attributes:
         id: FCW_INTERRUPT_ENABLE
@@ -84,16 +182,6 @@ data:
           type: Dynamic
         type: Values
       type: Boolean
-    FUSE_CONFIG_ENABLE:
-      attributes:
-        id: FUSE_CONFIG_ENABLE
-      children:
-      - children:
-        - attributes:
-            value: 'false'
-          type: User
-        type: Values
-      type: Boolean
     GCLK_ID_22_CHEN:
       attributes:
         id: GCLK_ID_22_CHEN
@@ -116,25 +204,14 @@ data:
           type: Dynamic
         type: Values
       type: Integer
-    NVIC_-1_0_ENABLE:
+    INSTRUCTION_CACHE_ENABLE:
       attributes:
-        id: NVIC_-1_0_ENABLE
+        id: INSTRUCTION_CACHE_ENABLE
       children:
       - children:
         - attributes:
-            id: core
-            value: 'true'
-          type: Dynamic
-        type: Values
-      type: Boolean
-    NVIC_-1_0_HANDLER_LOCK:
-      attributes:
-        id: NVIC_-1_0_HANDLER_LOCK
-      children:
-      - children:
-        - attributes:
-            id: core
-            value: 'true'
+            id: uart_bootloader
+            value: 'false'
           type: Dynamic
         type: Values
       type: Boolean
@@ -402,36 +479,6 @@ data:
           type: Dynamic
         type: Values
       type: Boolean
-    PIN_140_DIR:
-      attributes:
-        id: PIN_140_DIR
-      children:
-      - children:
-        - attributes:
-            value: ''
-          type: User
-        type: Values
-      type: String
-    PIN_140_INEN:
-      attributes:
-        id: PIN_140_INEN
-      children:
-      - children:
-        - attributes:
-            value: 'True'
-          type: User
-        type: Values
-      type: String
-    PIN_140_PERIPHERAL_FUNCTION:
-      attributes:
-        id: PIN_140_PERIPHERAL_FUNCTION
-      children:
-      - children:
-        - attributes:
-            value: SWITCH_AL
-          type: User
-        type: Values
-      type: String
     PIN_150_FUNCTION_TYPE:
       attributes:
         id: PIN_150_FUNCTION_TYPE
@@ -502,6 +549,26 @@ data:
           type: User
         type: Values
       type: String
+    PIN_189_FUNCTION_NAME:
+      attributes:
+        id: PIN_189_FUNCTION_NAME
+      children:
+      - children:
+        - attributes:
+            value: SWITCH
+          type: User
+        type: Values
+      type: String
+    PIN_189_FUNCTION_TYPE:
+      attributes:
+        id: PIN_189_FUNCTION_TYPE
+      children:
+      - children:
+        - attributes:
+            value: GPIO
+          type: User
+        type: Values
+      type: String
     PIN_189_INEN:
       attributes:
         id: PIN_189_INEN
@@ -512,13 +579,73 @@ data:
           type: User
         type: Values
       type: String
+    PIN_189_LAT:
+      attributes:
+        id: PIN_189_LAT
+      children:
+      - children:
+        - attributes:
+            value: High
+          type: User
+        type: Values
+      type: String
+    PIN_189_MODE:
+      attributes:
+        id: PIN_189_MODE
+      children:
+      - children:
+        - attributes:
+            value: ''
+          type: User
+        type: Values
+      type: String
     PIN_189_PERIPHERAL_FUNCTION:
       attributes:
         id: PIN_189_PERIPHERAL_FUNCTION
       children:
       - children:
         - attributes:
-            value: SWITCH_AL
+            value: GPIO
+          type: User
+        type: Values
+      type: String
+    PIN_189_PULLEN:
+      attributes:
+        id: PIN_189_PULLEN
+      children:
+      - children:
+        - attributes:
+            value: 'True'
+          type: User
+        type: Values
+      type: String
+    PIN_197_DIR:
+      attributes:
+        id: PIN_197_DIR
+      children:
+      - children:
+        - attributes:
+            value: Out
+          type: User
+        type: Values
+      type: String
+    PIN_197_FUNCTION_NAME:
+      attributes:
+        id: PIN_197_FUNCTION_NAME
+      children:
+      - children:
+        - attributes:
+            value: LED
+          type: User
+        type: Values
+      type: String
+    PIN_197_FUNCTION_TYPE:
+      attributes:
+        id: PIN_197_FUNCTION_TYPE
+      children:
+      - children:
+        - attributes:
+            value: GPIO
           type: User
         type: Values
       type: String
@@ -532,53 +659,23 @@ data:
           type: User
         type: Values
       type: String
+    PIN_197_MODE:
+      attributes:
+        id: PIN_197_MODE
+      children:
+      - children:
+        - attributes:
+            value: ''
+          type: User
+        type: Values
+      type: String
     PIN_197_PERIPHERAL_FUNCTION:
       attributes:
         id: PIN_197_PERIPHERAL_FUNCTION
       children:
       - children:
         - attributes:
-            value: LED_AL
-          type: User
-        type: Values
-      type: String
-    PIN_197_PULLEN:
-      attributes:
-        id: PIN_197_PULLEN
-      children:
-      - children:
-        - attributes:
-            value: ''
-          type: User
-        type: Values
-      type: String
-    PIN_199_INEN:
-      attributes:
-        id: PIN_199_INEN
-      children:
-      - children:
-        - attributes:
-            value: ''
-          type: User
-        type: Values
-      type: String
-    PIN_199_PERIPHERAL_FUNCTION:
-      attributes:
-        id: PIN_199_PERIPHERAL_FUNCTION
-      children:
-      - children:
-        - attributes:
-            value: LED_AL
-          type: User
-        type: Values
-      type: String
-    PIN_199_PULLEN:
-      attributes:
-        id: PIN_199_PULLEN
-      children:
-      - children:
-        - attributes:
-            value: ''
+            value: GPIO
           type: User
         type: Values
       type: String
@@ -589,7 +686,7 @@ data:
       - children:
         - attributes:
             id: core
-            value: '0x600000'
+            value: '0x200000'
           type: Dynamic
         type: Values
       type: String
@@ -600,7 +697,7 @@ data:
       - children:
         - attributes:
             id: core
-            value: '0x1600000'
+            value: '0x1000000'
           type: Dynamic
         type: Values
       type: String
@@ -612,17 +709,6 @@ data:
         - attributes:
             id: core
             value: PB21
-          type: Dynamic
-        type: Values
-      type: String
-    PORT_GROUP_1_PAD_22:
-      attributes:
-        id: PORT_GROUP_1_PAD_22
-      children:
-      - children:
-        - attributes:
-            id: core
-            value: PB22
           type: Dynamic
         type: Values
       type: String
@@ -640,17 +726,6 @@ data:
     PORT_GROUP_1_PINCFG21:
       attributes:
         id: PORT_GROUP_1_PINCFG21
-      children:
-      - children:
-        - attributes:
-            id: core
-            value: '0x0'
-          type: Dynamic
-        type: Values
-      type: String
-    PORT_GROUP_1_PINCFG22:
-      attributes:
-        id: PORT_GROUP_1_PINCFG22
       children:
       - children:
         - attributes:
@@ -681,17 +756,6 @@ data:
           type: Dynamic
         type: Values
       type: Boolean
-    PORT_GROUP_1_PIN_22_USED:
-      attributes:
-        id: PORT_GROUP_1_PIN_22_USED
-      children:
-      - children:
-        - attributes:
-            id: core
-            value: 'true'
-          type: Dynamic
-        type: Values
-      type: Boolean
     PORT_GROUP_1_PIN_24_USED:
       attributes:
         id: PORT_GROUP_1_PIN_24_USED
@@ -714,17 +778,6 @@ data:
           type: Dynamic
         type: Values
       type: String
-    PORT_GROUP_1_PMUX11:
-      attributes:
-        id: PORT_GROUP_1_PMUX11
-      children:
-      - children:
-        - attributes:
-            id: core
-            value: '0x0'
-          type: Dynamic
-        type: Values
-      type: String
     PORT_GROUP_1_PMUX12:
       attributes:
         id: PORT_GROUP_1_PMUX12
@@ -733,39 +786,6 @@ data:
         - attributes:
             id: core
             value: '0x0'
-          type: Dynamic
-        type: Values
-      type: String
-    PORT_GROUP_2_DIR:
-      attributes:
-        id: PORT_GROUP_2_DIR
-      children:
-      - children:
-        - attributes:
-            id: core
-            value: '0x0'
-          type: Dynamic
-        type: Values
-      type: String
-    PORT_GROUP_2_OUT:
-      attributes:
-        id: PORT_GROUP_2_OUT
-      children:
-      - children:
-        - attributes:
-            id: core
-            value: '0x800000'
-          type: Dynamic
-        type: Values
-      type: String
-    PORT_GROUP_2_PAD_23:
-      attributes:
-        id: PORT_GROUP_2_PAD_23
-      children:
-      - children:
-        - attributes:
-            id: core
-            value: PC23
           type: Dynamic
         type: Values
       type: String
@@ -791,17 +811,6 @@ data:
           type: Dynamic
         type: Values
       type: String
-    PORT_GROUP_2_PINCFG23:
-      attributes:
-        id: PORT_GROUP_2_PINCFG23
-      children:
-      - children:
-        - attributes:
-            id: core
-            value: '0x6'
-          type: Dynamic
-        type: Values
-      type: String
     PORT_GROUP_2_PINCFG4:
       attributes:
         id: PORT_GROUP_2_PINCFG4
@@ -824,17 +833,6 @@ data:
           type: Dynamic
         type: Values
       type: String
-    PORT_GROUP_2_PIN_23_USED:
-      attributes:
-        id: PORT_GROUP_2_PIN_23_USED
-      children:
-      - children:
-        - attributes:
-            id: core
-            value: 'true'
-          type: Dynamic
-        type: Values
-      type: Boolean
     PORT_GROUP_2_PIN_4_USED:
       attributes:
         id: PORT_GROUP_2_PIN_4_USED
@@ -857,17 +855,6 @@ data:
           type: Dynamic
         type: Values
       type: Boolean
-    PORT_GROUP_2_PMUX11:
-      attributes:
-        id: PORT_GROUP_2_PMUX11
-      children:
-      - children:
-        - attributes:
-            id: core
-            value: '0x0'
-          type: Dynamic
-        type: Values
-      type: String
     PORT_GROUP_2_PMUX2:
       attributes:
         id: PORT_GROUP_2_PMUX2
@@ -1220,74 +1207,55 @@ data:
           type: Dynamic
         type: Values
       type: Integer
-    SysTick_INTERRUPT_ENABLE:
+    SYSTICK_PERIOD:
       attributes:
-        id: SysTick_INTERRUPT_ENABLE
+        id: SYSTICK_PERIOD
       children:
       - children:
         - attributes:
             id: core
-            value: 'true'
+            value: '0xFFFFFF'
           type: Dynamic
         type: Values
-      type: Boolean
-    SysTick_INTERRUPT_ENABLE_UPDATE:
+      type: String
+    SYSTICK_PERIOD_MS:
       attributes:
-        id: SysTick_INTERRUPT_ENABLE_UPDATE
+        id: SYSTICK_PERIOD_MS
+      children:
+      - children:
+        - attributes:
+            id: uart_bootloader
+            value: '100.0'
+          type: Dynamic
+        type: Values
+      type: Float
+    SYSTICK_PERIOD_US:
+      attributes:
+        id: SYSTICK_PERIOD_US
       children:
       - children:
         - attributes:
             id: core
-            value: 'false'
+            value: '55924'
           type: Dynamic
         type: Values
-      type: Boolean
-    SysTick_INTERRUPT_HANDLER_LOCK:
-      attributes:
-        id: SysTick_INTERRUPT_HANDLER_LOCK
-      children:
-      - children:
-        - attributes:
-            id: core
-            value: 'true'
-          type: Dynamic
-        type: Values
-      type: Boolean
-    USE_SYSTICK_INTERRUPT:
-      attributes:
-        id: USE_SYSTICK_INTERRUPT
-      children:
-      - children:
-        - attributes:
-            value: 'true'
-          type: User
-        type: Values
-      type: Boolean
-    VTABLE_MEM_REGION:
-      attributes:
-        id: VTABLE_MEM_REGION
-      children:
-      - children:
-        - attributes:
-            value: FCR_PFM
-          type: User
-        type: Values
-      type: Combo
+      type: Integer
     systickEnable:
       attributes:
         id: systickEnable
       children:
       - children:
         - attributes:
+            id: uart_bootloader
             value: 'true'
-          type: User
+          type: Dynamic
         type: Values
       type: Boolean
   userData:
     children:
     - attributes:
-        canvasHeight: '228'
-        canvasWidth: '893'
+        canvasHeight: '297'
+        canvasWidth: '777'
       type: GraphSettings
     - children:
       - attributes:

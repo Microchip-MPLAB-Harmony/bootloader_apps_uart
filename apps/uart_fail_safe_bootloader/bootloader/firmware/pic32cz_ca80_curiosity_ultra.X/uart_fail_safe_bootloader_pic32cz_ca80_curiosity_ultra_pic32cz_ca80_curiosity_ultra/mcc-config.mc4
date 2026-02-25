@@ -1,60 +1,56 @@
 configVersion: 1.0.0
 coreVersion: 5.8.4
+spaHostVersion: 1.2.1
 device: PIC32CZ8110CA80208
 deviceLibrary:
   className: com.microchip.mcc.harmony.Harmony3Library
 groupModules: []
 modules:
-- BSP_PIC32CZ_CA80_Curiosity_Ultra
-- HarmonyCore
 - cmsis
 - core
 - dfp
 - evsys
+- fcr
 - fcw
 - sercom1
-- stdio
+- uart_bootloader
 generatedFileHashHistoryMap:
-- file: ..\src\app_pic32cz_ca.c
-  hash: 116eb5d0c84d3f1f64b98ca8acb6611ca83225db2916475ef6ad7a277f976906
-- file: ..\src\app_pic32cz_ca.h
-  hash: 7989d90df06a73e9d6851dd9e12345066c7d4980adbcb69ed68477a82dbdb7e9
-- file: ..\src\config\pic32cz_ca80_curiosity_ultra\PIC32CZ8110CA80208.ld
-  hash: 9e260be1f9e6565d4c240b4af647651542411c263e9d7e95444be25b105c9bcf
-- file: ..\src\config\pic32cz_ca80_curiosity_ultra\bsp\bsp.c
-  hash: 1b6e7810afeecea4931e8d544d1e9db856cf402b47dd0d8b38d37843c02a5e28
-- file: ..\src\config\pic32cz_ca80_curiosity_ultra\bsp\bsp.h
-  hash: e82015f8088ce8f1783fe98505f191d7134690bbbe86c4272dce96b6b647af85
-- file: ..\src\config\pic32cz_ca80_curiosity_ultra\configuration.h
-  hash: 321175fed312776d5e0da9d63da1fca0673933ab0298c1d9a4aeb32cf5873639
+- file: ..\src\config\pic32cz_ca80_curiosity_ultra\bootloader\bootloader_common.c
+  hash: 029d4a4f8a9fa219923629740df20868ef76299f769ed925ea85a6d8eeeb787c
+- file: ..\src\config\pic32cz_ca80_curiosity_ultra\bootloader\bootloader_common.h
+  hash: 49dbbcc3854e66281a02e74b19dba171f0f3b7a7121ce9624c296729e9a1d230
+- file: ..\src\config\pic32cz_ca80_curiosity_ultra\bootloader\bootloader_interrupt.h
+  hash: 837763bc7dc36bd7376c590dfc8da33dd26a2d61be65aefa8f8efeed8ef1f3d1
+- file: ..\src\config\pic32cz_ca80_curiosity_ultra\bootloader\bootloader_uart.c
+  hash: be8cecf0c0f009d2ce45595ee722ace00baa4863f66df9cce7de45aeb4e6c5f9
+- file: ..\src\config\pic32cz_ca80_curiosity_ultra\bootloader\bootloader_uart.h
+  hash: be04b89cce61ec9f05d343b6b6807fee2ed9576b2351f3da114194023903d606
+- file: ..\src\config\pic32cz_ca80_curiosity_ultra\btl.ld
+  hash: ddcd3348afe32a2b65b483f3b00cff6d33c420fb0c23165b6c593a87db06df9d
 - file: ..\src\config\pic32cz_ca80_curiosity_ultra\definitions.h
-  hash: d85585a626ca8b91a073ac9c785a368545f0eaeb2b47bba1574d1b7af7df17c5
+  hash: 5bb1ff52a0d7e89079f4069d30a52e58efe4b6db3edd31bf9fcce96f6b98c674
 - file: ..\src\config\pic32cz_ca80_curiosity_ultra\device.h
   hash: abc1ac62d770e02b299311ed15447f2aaae514988e12120df9cf1b13a93e9263
 - file: ..\src\config\pic32cz_ca80_curiosity_ultra\device_cache.h
-  hash: 90ab2a7320a2a8c1123fb5d297dfaa0f56e3cb28c3ad1ea2ab5633988c1ef252
+  hash: 5117c844c51e88132b384c381a94d9cc9e68777352e4ab4dc39c261d210b3ebd
 - file: ..\src\config\pic32cz_ca80_curiosity_ultra\device_vectors.h
   hash: 2a3366b0039bb81422897c93926c8ac3eea1d391d54d65f0c2462a5b7ae9ebec
-- file: ..\src\config\pic32cz_ca80_curiosity_ultra\exceptions.c
-  hash: 251729130964d6a74b7a9ee99700b57a16c0e1b5d31029678e06ecd3d8dedc9e
 - file: ..\src\config\pic32cz_ca80_curiosity_ultra\initialization.c
-  hash: d1b265932ac7cc7a67e6344feabfabeecfbc89f9675007ac16d691a35bafeae7
-- file: ..\src\config\pic32cz_ca80_curiosity_ultra\interrupts.c
-  hash: e630845973a994bdaf16237123a264fd1f943cbe65fb984b193b0167028c70eb
-- file: ..\src\config\pic32cz_ca80_curiosity_ultra\interrupts.h
-  hash: 65c5edcf97cdaf499497c7e18d8fa01383032be88e8aedfc883cbc35dc8bbfc8
-- file: ..\src\config\pic32cz_ca80_curiosity_ultra\libc_syscalls.c
-  hash: c9afc1b1257829415a1a6746ce3744f0a768b339d59fff2ab3ca1fab58b2a916
+  hash: b40bbd03363d712165a1bea9470fcf2121d6f1ac59573fddb784fe4838f71b9d
 - file: ..\src\config\pic32cz_ca80_curiosity_ultra\peripheral\clock\plib_clock.c
   hash: 366edf760ff42c189ed4fdc790c7dd0ee0f8adcd30a472ab95ed9927cb95cd94
 - file: ..\src\config\pic32cz_ca80_curiosity_ultra\peripheral\clock\plib_clock.h
   hash: ef92e6c864f589939b7fe47a0b7f63ba43196ec34753fe221f85cd633fa19786
 - file: ..\src\config\pic32cz_ca80_curiosity_ultra\peripheral\evsys\plib_evsys.c
-  hash: 171913270aa095f1e8ff9192995129ff7bab22e5c793c4223f9046802e69d1e6
+  hash: e263b84cfe1aa5d810e88b708fb9df2ffbb548e9bebbc358ee047c57acadac04
 - file: ..\src\config\pic32cz_ca80_curiosity_ultra\peripheral\evsys\plib_evsys.h
   hash: f7d08eb8162f271ce1db384c082586a6624e506aa7f502c64c4ab5a1aadac47d
+- file: ..\src\config\pic32cz_ca80_curiosity_ultra\peripheral\fcr\plib_fcr.c
+  hash: 28d7757196b19fad0d3ee0475aeb7f57f89a047f97b3820dfb7a57e4b8c329f1
+- file: ..\src\config\pic32cz_ca80_curiosity_ultra\peripheral\fcr\plib_fcr.h
+  hash: efb5dffeb7e6086bb5da0a9629594ed3fccea00f7122b07740af0a9cba2cd022
 - file: ..\src\config\pic32cz_ca80_curiosity_ultra\peripheral\fcw\plib_fcw.c
-  hash: 3e695b022213bad746f39691bd91fa7019cfb3d278d487e0bbab064fb08b281c
+  hash: a91546b75d2ee17a9886e94b6c3c982b2c4c2c4725f14b9844df443861449e40
 - file: ..\src\config\pic32cz_ca80_curiosity_ultra\peripheral\fcw\plib_fcw.h
   hash: bc110b2d796fef8b717d814addf1ba333cc5bd42da7c0bd3933bf51b4abdcd79
 - file: ..\src\config\pic32cz_ca80_curiosity_ultra\peripheral\nvic\plib_nvic.c
@@ -62,37 +58,25 @@ generatedFileHashHistoryMap:
 - file: ..\src\config\pic32cz_ca80_curiosity_ultra\peripheral\nvic\plib_nvic.h
   hash: 9936ac782115af41003255283fa2f603f4ff2212d16275b7c80ea8d067a9e208
 - file: ..\src\config\pic32cz_ca80_curiosity_ultra\peripheral\port\plib_port.c
-  hash: ec8397cfdb7712596476db3cd245e1ac70c1b7c146e9885428a3396a79741b97
+  hash: c769093019cab44f973176e3e968e974092f26bea44b89fa2a2bec20bb10081b
 - file: ..\src\config\pic32cz_ca80_curiosity_ultra\peripheral\port\plib_port.h
-  hash: 54eac218e3ecef8314c11a94e1bc3ff9ae3528b85712ef4eba1a77ee55850b65
+  hash: 6b4dccc871bb38e3fbd6a86cec0bb47934b3b8d3949ab1961987b9caf59ac21b
 - file: ..\src\config\pic32cz_ca80_curiosity_ultra\peripheral\sercom\usart\plib_sercom1_usart.c
-  hash: c81f1dd390c2ced596230c6f00e0c11112b3035a98e8e19b244f619b52b6e925
+  hash: 6e4c905dcfd7494720dcbc179f19b2b95e7e8bb3376f6ee7adfb4ab2c3922fdd
 - file: ..\src\config\pic32cz_ca80_curiosity_ultra\peripheral\sercom\usart\plib_sercom1_usart.h
   hash: 131d024524629e67c95f5c2257aef054efb11266db35c6f1b5c020e0cb75d56a
 - file: ..\src\config\pic32cz_ca80_curiosity_ultra\peripheral\sercom\usart\plib_sercom_usart_common.h
   hash: 3653b66472c558c50f7037a1dd25d2678e9a13aa718f3c53a2195e6f3919ea48
 - file: ..\src\config\pic32cz_ca80_curiosity_ultra\peripheral\systick\plib_systick.c
-  hash: adc780f2fa55234e79ea6b98d1ab1cfa607d44da61351b51e9722c948a6c349a
+  hash: a1d1e6c21219be410953d80daa18f6bc233677f3baa4f3452efade59d1f0d2dd
 - file: ..\src\config\pic32cz_ca80_curiosity_ultra\peripheral\systick\plib_systick.h
-  hash: b8df9ce5c0c872432525bbeb3050a0c9c11cecbd9f9525487a7949ab5465a604
+  hash: 4988047126d529d80e7847debd7044384fe6fd4a0d1854866d74c4cfc4cdd15d
 - file: ..\src\config\pic32cz_ca80_curiosity_ultra\pin_configurations.csv
-  hash: 4061582cc0f511ea2df74ab7512fc37b47ed1a373487a7322389a97695524107
+  hash: 66fe77f56d5dea8e010342272572e3ddf699af3b19571c3c2b0fe0346dd43f35
 - file: ..\src\config\pic32cz_ca80_curiosity_ultra\startup_xc32.c
-  hash: c53a1eb23a271545c1df27ef37a9536ade2e9738d3da76008ecf1bc8dd41a244
-- file: ..\src\config\pic32cz_ca80_curiosity_ultra\stdio\xc32_monitor.c
-  hash: 5b21c08cf1b699e41f3d722865c473d6e32c68356c05b13ce457a7faed279e97
-- file: ..\src\config\pic32cz_ca80_curiosity_ultra\sys_tasks.h
-  hash: 21f254f497a18a024cd00128d06c4776c2643f867a460c1ba9880a7dd41a8d56
-- file: ..\src\config\pic32cz_ca80_curiosity_ultra\system\cache\sys_cache.c
-  hash: 5f8c30e8077b915a4c4ff0515354b2877dc74c3236f307bdc1132307269fbf86
-- file: ..\src\config\pic32cz_ca80_curiosity_ultra\system\cache\sys_cache.h
-  hash: b4b3a4e7434759c9bbcd3c6a0ab97558eb2a007f083a4eb76dbedcb2e2c3d86b
-- file: ..\src\config\pic32cz_ca80_curiosity_ultra\tasks.c
-  hash: 0e96a1d11d4abf0b3fb7a3c81cb821ddc37ca2e365098c4d1ce4b184c91d6246
+  hash: 687ce2c0b42d4d51a91529ef3f1baf9d094db7504ab40a76083f89cdb9ad7ab3
 - file: ..\src\config\pic32cz_ca80_curiosity_ultra\toolchain_specifics.h
   hash: 406ef48ae415706beb0796977cab09342077f7b1efc3f24767bd97bbd5e5a433
-- file: ..\src\config\pic32cz_ca80_curiosity_ultra\user.h
-  hash: 451e0878e9fcf6cf9fab046c1452ea662757988346c7f39e6bc98478ca25f995
 - file: ..\src\main.c
 - file: ..\src\packs\CMSIS\CMSIS\Core\Include\cachel1_armv7.h
   hash: 6cdb5b324f2fd1bb5b2f47298ba6e6777e735d7cad3bb8d942cd36e2c6e65328

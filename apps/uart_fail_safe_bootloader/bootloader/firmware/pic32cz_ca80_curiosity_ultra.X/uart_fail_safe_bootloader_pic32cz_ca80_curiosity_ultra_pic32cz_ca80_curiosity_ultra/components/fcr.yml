@@ -1,11 +1,11 @@
 configVersion: 1.0.0
-componentName: evsys
+componentName: fcr
 coreVersion: 5.8.4
 device: PIC32CZ8110CA80208
 library: []
 dependency:
 - dependencyPackage: class com.microchip.mcc.harmony.HarmonyModule
-  name: evsys
+  name: fcr
   type: module
   version: ''
 - dependencyPackage: ''
@@ -15,6 +15,17 @@ dependency:
 customDataClassName: com.microchip.utils_mh3.utils.persistence.CustomModuleData
 data:
   attachments: {}
-  elementPosition: {}
+  elementPosition:
+    attributes:
+      id: __ROOTVIEW
+    children:
+    - children:
+      - attributes:
+          id: fcr
+          x: '640'
+          y: '20'
+        type: ElementPosition
+      type: ElementPositions
+    type: ComponentGraph
   symbols: {}
   userData: {}

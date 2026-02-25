@@ -1,25 +1,17 @@
 configVersion: 1.0.0
-componentName: dfp
+componentName: cmsis
 coreVersion: 5.8.4
 device: PIC32CZ8110CA80208
 library: []
 dependency:
 - dependencyPackage: class com.microchip.mcc.harmony.HarmonyModule
-  name: dfp
+  name: cmsis
   type: module
   version: ''
 - dependencyPackage: ''
   name: CMSIS_5
   type: package
   version: 5.9.0
-- dependencyPackage: ''
-  name: bsp
-  type: package
-  version: v3.24.0
-- dependencyPackage: ''
-  name: core
-  type: package
-  version: v3.16.0
 - dependencyPackage: ''
   name: csp
   type: package
@@ -33,8 +25,8 @@ data:
     children:
     - children:
       - attributes:
-          id: dfp
-          x: '180'
+          id: cmsis
+          x: '500'
           y: '20'
         type: ElementPosition
       type: ElementPositions

@@ -10,6 +10,8 @@
             <make-dep-projects/>
             <sourceRootList>
                 <sourceRootElem>../src</sourceRootElem>
+                <sourceRootElem>pic32cz_ca80_curiosity_ultra_default</sourceRootElem>
+                <sourceRootElem>uart_fail_safe_bootloader_pic32cz_ca80_curiosity_ultra_pic32cz_ca80_curiosity_ultra</sourceRootElem>
             </sourceRootList>
             <confList>
                 <confElem>
