@@ -1,0 +1,608 @@
+generatedFiles:
+- excludeFromProject: false
+  path: C:\apps\bootloader_apps_uart\apps\uart_fail_safe_bootloader\bootloader\firmware\src\config\pic32cz_ca80_curiosity_ultra\peripheral\fcw\plib_fcw.h
+  projectFolder: config\pic32cz_ca80_curiosity_ultra\peripheral\fcw
+  type: Header Files
+- excludeFromProject: false
+  path: C:\apps\bootloader_apps_uart\apps\uart_fail_safe_bootloader\bootloader\firmware\src\config\pic32cz_ca80_curiosity_ultra\peripheral\fcw\plib_fcw.c
+  projectFolder: config\pic32cz_ca80_curiosity_ultra\peripheral\fcw
+  type: Source Files
+- excludeFromProject: false
+  path: C:\apps\bootloader_apps_uart\apps\uart_fail_safe_bootloader\bootloader\firmware\src\config\pic32cz_ca80_curiosity_ultra\peripheral\sercom\usart\plib_sercom1_usart.h
+  projectFolder: config\pic32cz_ca80_curiosity_ultra\peripheral\sercom\usart
+  type: Header Files
+- excludeFromProject: false
+  path: C:\apps\bootloader_apps_uart\apps\uart_fail_safe_bootloader\bootloader\firmware\src\config\pic32cz_ca80_curiosity_ultra\peripheral\sercom\usart\plib_sercom_usart_common.h
+  projectFolder: config\pic32cz_ca80_curiosity_ultra\peripheral\sercom\usart
+  type: Header Files
+- excludeFromProject: false
+  path: C:\apps\bootloader_apps_uart\apps\uart_fail_safe_bootloader\bootloader\firmware\src\config\pic32cz_ca80_curiosity_ultra\peripheral\sercom\usart\plib_sercom1_usart.c
+  projectFolder: config\pic32cz_ca80_curiosity_ultra\peripheral\sercom\usart
+  type: Source Files
+- excludeFromProject: false
+  path: C:\apps\bootloader_apps_uart\apps\uart_fail_safe_bootloader\bootloader\firmware\src\config\pic32cz_ca80_curiosity_ultra\peripheral\evsys\plib_evsys.h
+  projectFolder: config\pic32cz_ca80_curiosity_ultra\peripheral\evsys
+  type: Header Files
+- excludeFromProject: false
+  path: C:\apps\bootloader_apps_uart\apps\uart_fail_safe_bootloader\bootloader\firmware\src\config\pic32cz_ca80_curiosity_ultra\peripheral\evsys\plib_evsys.c
+  projectFolder: config\pic32cz_ca80_curiosity_ultra\peripheral\evsys
+  type: Source Files
+- excludeFromProject: false
+  path: C:\apps\bootloader_apps_uart\apps\uart_fail_safe_bootloader\bootloader\firmware\src\config\pic32cz_ca80_curiosity_ultra\bootloader\bootloader_uart.c
+  projectFolder: config\pic32cz_ca80_curiosity_ultra\bootloader
+  type: Source Files
+- excludeFromProject: false
+  path: C:\apps\bootloader_apps_uart\apps\uart_fail_safe_bootloader\bootloader\firmware\src\config\pic32cz_ca80_curiosity_ultra\bootloader\bootloader_uart.h
+  projectFolder: config\pic32cz_ca80_curiosity_ultra\bootloader
+  type: Header Files
+- excludeFromProject: false
+  path: C:\apps\bootloader_apps_uart\apps\uart_fail_safe_bootloader\bootloader\firmware\src\main.c
+  projectFolder: ''
+  type: Source Files
+- excludeFromProject: false
+  path: C:\apps\bootloader_apps_uart\apps\uart_fail_safe_bootloader\bootloader\firmware\src\config\pic32cz_ca80_curiosity_ultra\initialization.c
+  projectFolder: config\pic32cz_ca80_curiosity_ultra
+  type: Source Files
+- excludeFromProject: false
+  path: C:\apps\bootloader_apps_uart\apps\uart_fail_safe_bootloader\bootloader\firmware\src\config\pic32cz_ca80_curiosity_ultra\btl.ld
+  projectFolder: ''
+  type: Linker Files
+- excludeFromProject: false
+  path: C:\apps\bootloader_apps_uart\apps\uart_fail_safe_bootloader\bootloader\firmware\src\config\pic32cz_ca80_curiosity_ultra\startup_xc32.c
+  projectFolder: config\pic32cz_ca80_curiosity_ultra
+  type: Source Files
+- excludeFromProject: false
+  path: C:\apps\bootloader_apps_uart\apps\uart_fail_safe_bootloader\bootloader\firmware\src\config\pic32cz_ca80_curiosity_ultra\bootloader\bootloader_common.c
+  projectFolder: config\pic32cz_ca80_curiosity_ultra\bootloader
+  type: Source Files
+- excludeFromProject: false
+  path: C:\apps\bootloader_apps_uart\apps\uart_fail_safe_bootloader\bootloader\firmware\src\config\pic32cz_ca80_curiosity_ultra\bootloader\bootloader_common.h
+  projectFolder: config\pic32cz_ca80_curiosity_ultra\bootloader
+  type: Header Files
+- excludeFromProject: false
+  path: C:\apps\bootloader_apps_uart\apps\uart_fail_safe_bootloader\bootloader\firmware\src\config\pic32cz_ca80_curiosity_ultra\bootloader\bootloader_interrupt.h
+  projectFolder: config\pic32cz_ca80_curiosity_ultra\bootloader
+  type: Header Files
+- excludeFromProject: false
+  path: C:\apps\bootloader_apps_uart\apps\uart_fail_safe_bootloader\bootloader\firmware\src\config\pic32cz_ca80_curiosity_ultra\device_cache.h
+  projectFolder: config\pic32cz_ca80_curiosity_ultra
+  type: Header Files
+- excludeFromProject: false
+  path: C:\apps\bootloader_apps_uart\apps\uart_fail_safe_bootloader\bootloader\firmware\src\config\pic32cz_ca80_curiosity_ultra\toolchain_specifics.h
+  projectFolder: config\pic32cz_ca80_curiosity_ultra
+  type: Header Files
+- excludeFromProject: false
+  path: C:\apps\bootloader_apps_uart\apps\uart_fail_safe_bootloader\bootloader\firmware\src\config\pic32cz_ca80_curiosity_ultra\definitions.h
+  projectFolder: config\pic32cz_ca80_curiosity_ultra
+  type: Header Files
+- excludeFromProject: false
+  path: C:\apps\bootloader_apps_uart\apps\uart_fail_safe_bootloader\bootloader\firmware\src\config\pic32cz_ca80_curiosity_ultra\device_vectors.h
+  projectFolder: config\pic32cz_ca80_curiosity_ultra
+  type: Header Files
+- excludeFromProject: false
+  path: C:\apps\bootloader_apps_uart\apps\uart_fail_safe_bootloader\bootloader\firmware\src\config\pic32cz_ca80_curiosity_ultra\peripheral\port\plib_port.h
+  projectFolder: config\pic32cz_ca80_curiosity_ultra\peripheral\port
+  type: Header Files
+- excludeFromProject: false
+  path: C:\apps\bootloader_apps_uart\apps\uart_fail_safe_bootloader\bootloader\firmware\src\config\pic32cz_ca80_curiosity_ultra\peripheral\port\plib_port.c
+  projectFolder: config\pic32cz_ca80_curiosity_ultra\peripheral\port
+  type: Source Files
+- excludeFromProject: false
+  path: C:\apps\bootloader_apps_uart\apps\uart_fail_safe_bootloader\bootloader\firmware\src\config\pic32cz_ca80_curiosity_ultra\pin_configurations.csv
+  projectFolder: ''
+  type: Important Files
+- excludeFromProject: false
+  path: C:\apps\bootloader_apps_uart\apps\uart_fail_safe_bootloader\bootloader\firmware\src\config\pic32cz_ca80_curiosity_ultra\peripheral\clock\plib_clock.h
+  projectFolder: config\pic32cz_ca80_curiosity_ultra\peripheral\clock
+  type: Header Files
+- excludeFromProject: false
+  path: C:\apps\bootloader_apps_uart\apps\uart_fail_safe_bootloader\bootloader\firmware\src\config\pic32cz_ca80_curiosity_ultra\peripheral\clock\plib_clock.c
+  projectFolder: config\pic32cz_ca80_curiosity_ultra\peripheral\clock
+  type: Source Files
+- excludeFromProject: false
+  path: C:\apps\bootloader_apps_uart\apps\uart_fail_safe_bootloader\bootloader\firmware\src\config\pic32cz_ca80_curiosity_ultra\peripheral\nvic\plib_nvic.h
+  projectFolder: config\pic32cz_ca80_curiosity_ultra\peripheral\nvic
+  type: Header Files
+- excludeFromProject: false
+  path: C:\apps\bootloader_apps_uart\apps\uart_fail_safe_bootloader\bootloader\firmware\src\config\pic32cz_ca80_curiosity_ultra\peripheral\nvic\plib_nvic.c
+  projectFolder: config\pic32cz_ca80_curiosity_ultra\peripheral\nvic
+  type: Source Files
+- excludeFromProject: false
+  path: C:\apps\bootloader_apps_uart\apps\uart_fail_safe_bootloader\bootloader\firmware\src\config\pic32cz_ca80_curiosity_ultra\peripheral\systick\plib_systick.h
+  projectFolder: config\pic32cz_ca80_curiosity_ultra\peripheral\systick
+  type: Header Files
+- excludeFromProject: false
+  path: C:\apps\bootloader_apps_uart\apps\uart_fail_safe_bootloader\bootloader\firmware\src\config\pic32cz_ca80_curiosity_ultra\peripheral\systick\plib_systick.c
+  projectFolder: config\pic32cz_ca80_curiosity_ultra\peripheral\systick
+  type: Source Files
+- excludeFromProject: false
+  path: C:\apps\bootloader_apps_uart\apps\uart_fail_safe_bootloader\bootloader\firmware\src\config\pic32cz_ca80_curiosity_ultra\device.h
+  projectFolder: config\pic32cz_ca80_curiosity_ultra
+  type: Header Files
+- excludeFromProject: false
+  path: C:\apps\bootloader_apps_uart\apps\uart_fail_safe_bootloader\bootloader\firmware\src\packs\PIC32CZ8110CA80208_DFP\component\ac.h
+  projectFolder: packs\PIC32CZ8110CA80208_DFP\component
+  type: Header Files
+- excludeFromProject: false
+  path: C:\apps\bootloader_apps_uart\apps\uart_fail_safe_bootloader\bootloader\firmware\src\packs\PIC32CZ8110CA80208_DFP\component\adc.h
+  projectFolder: packs\PIC32CZ8110CA80208_DFP\component
+  type: Header Files
+- excludeFromProject: false
+  path: C:\apps\bootloader_apps_uart\apps\uart_fail_safe_bootloader\bootloader\firmware\src\packs\PIC32CZ8110CA80208_DFP\component\can.h
+  projectFolder: packs\PIC32CZ8110CA80208_DFP\component
+  type: Header Files
+- excludeFromProject: false
+  path: C:\apps\bootloader_apps_uart\apps\uart_fail_safe_bootloader\bootloader\firmware\src\packs\PIC32CZ8110CA80208_DFP\component\dma.h
+  projectFolder: packs\PIC32CZ8110CA80208_DFP\component
+  type: Header Files
+- excludeFromProject: false
+  path: C:\apps\bootloader_apps_uart\apps\uart_fail_safe_bootloader\bootloader\firmware\src\packs\PIC32CZ8110CA80208_DFP\component\drmtcm.h
+  projectFolder: packs\PIC32CZ8110CA80208_DFP\component
+  type: Header Files
+- excludeFromProject: false
+  path: C:\apps\bootloader_apps_uart\apps\uart_fail_safe_bootloader\bootloader\firmware\src\packs\PIC32CZ8110CA80208_DFP\component\dsu.h
+  projectFolder: packs\PIC32CZ8110CA80208_DFP\component
+  type: Header Files
+- excludeFromProject: false
+  path: C:\apps\bootloader_apps_uart\apps\uart_fail_safe_bootloader\bootloader\firmware\src\packs\PIC32CZ8110CA80208_DFP\component\ebi.h
+  projectFolder: packs\PIC32CZ8110CA80208_DFP\component
+  type: Header Files
+- excludeFromProject: false
+  path: C:\apps\bootloader_apps_uart\apps\uart_fail_safe_bootloader\bootloader\firmware\src\packs\PIC32CZ8110CA80208_DFP\component\eic.h
+  projectFolder: packs\PIC32CZ8110CA80208_DFP\component
+  type: Header Files
+- excludeFromProject: false
+  path: C:\apps\bootloader_apps_uart\apps\uart_fail_safe_bootloader\bootloader\firmware\src\packs\PIC32CZ8110CA80208_DFP\component\eth.h
+  projectFolder: packs\PIC32CZ8110CA80208_DFP\component
+  type: Header Files
+- excludeFromProject: false
+  path: C:\apps\bootloader_apps_uart\apps\uart_fail_safe_bootloader\bootloader\firmware\src\packs\PIC32CZ8110CA80208_DFP\component\evsys.h
+  projectFolder: packs\PIC32CZ8110CA80208_DFP\component
+  type: Header Files
+- excludeFromProject: false
+  path: C:\apps\bootloader_apps_uart\apps\uart_fail_safe_bootloader\bootloader\firmware\src\packs\PIC32CZ8110CA80208_DFP\component\fcr.h
+  projectFolder: packs\PIC32CZ8110CA80208_DFP\component
+  type: Header Files
+- excludeFromProject: false
+  path: C:\apps\bootloader_apps_uart\apps\uart_fail_safe_bootloader\bootloader\firmware\src\packs\PIC32CZ8110CA80208_DFP\component\fcw.h
+  projectFolder: packs\PIC32CZ8110CA80208_DFP\component
+  type: Header Files
+- excludeFromProject: false
+  path: C:\apps\bootloader_apps_uart\apps\uart_fail_safe_bootloader\bootloader\firmware\src\packs\PIC32CZ8110CA80208_DFP\component\freqm.h
+  projectFolder: packs\PIC32CZ8110CA80208_DFP\component
+  type: Header Files
+- excludeFromProject: false
+  path: C:\apps\bootloader_apps_uart\apps\uart_fail_safe_bootloader\bootloader\firmware\src\packs\PIC32CZ8110CA80208_DFP\component\fuses.h
+  projectFolder: packs\PIC32CZ8110CA80208_DFP\component
+  type: Header Files
+- excludeFromProject: false
+  path: C:\apps\bootloader_apps_uart\apps\uart_fail_safe_bootloader\bootloader\firmware\src\packs\PIC32CZ8110CA80208_DFP\component\gclk.h
+  projectFolder: packs\PIC32CZ8110CA80208_DFP\component
+  type: Header Files
+- excludeFromProject: false
+  path: C:\apps\bootloader_apps_uart\apps\uart_fail_safe_bootloader\bootloader\firmware\src\packs\PIC32CZ8110CA80208_DFP\component\mclk.h
+  projectFolder: packs\PIC32CZ8110CA80208_DFP\component
+  type: Header Files
+- excludeFromProject: false
+  path: C:\apps\bootloader_apps_uart\apps\uart_fail_safe_bootloader\bootloader\firmware\src\packs\PIC32CZ8110CA80208_DFP\component\mcramc.h
+  projectFolder: packs\PIC32CZ8110CA80208_DFP\component
+  type: Header Files
+- excludeFromProject: false
+  path: C:\apps\bootloader_apps_uart\apps\uart_fail_safe_bootloader\bootloader\firmware\src\packs\PIC32CZ8110CA80208_DFP\component\mlb.h
+  projectFolder: packs\PIC32CZ8110CA80208_DFP\component
+  type: Header Files
+- excludeFromProject: false
+  path: C:\apps\bootloader_apps_uart\apps\uart_fail_safe_bootloader\bootloader\firmware\src\packs\PIC32CZ8110CA80208_DFP\component\osc32kctrl.h
+  projectFolder: packs\PIC32CZ8110CA80208_DFP\component
+  type: Header Files
+- excludeFromProject: false
+  path: C:\apps\bootloader_apps_uart\apps\uart_fail_safe_bootloader\bootloader\firmware\src\packs\PIC32CZ8110CA80208_DFP\component\oscctrl.h
+  projectFolder: packs\PIC32CZ8110CA80208_DFP\component
+  type: Header Files
+- excludeFromProject: false
+  path: C:\apps\bootloader_apps_uart\apps\uart_fail_safe_bootloader\bootloader\firmware\src\packs\PIC32CZ8110CA80208_DFP\component\pac.h
+  projectFolder: packs\PIC32CZ8110CA80208_DFP\component
+  type: Header Files
+- excludeFromProject: false
+  path: C:\apps\bootloader_apps_uart\apps\uart_fail_safe_bootloader\bootloader\firmware\src\packs\PIC32CZ8110CA80208_DFP\component\pm.h
+  projectFolder: packs\PIC32CZ8110CA80208_DFP\component
+  type: Header Files
+- excludeFromProject: false
+  path: C:\apps\bootloader_apps_uart\apps\uart_fail_safe_bootloader\bootloader\firmware\src\packs\PIC32CZ8110CA80208_DFP\component\port.h
+  projectFolder: packs\PIC32CZ8110CA80208_DFP\component
+  type: Header Files
+- excludeFromProject: false
+  path: C:\apps\bootloader_apps_uart\apps\uart_fail_safe_bootloader\bootloader\firmware\src\packs\PIC32CZ8110CA80208_DFP\component\prm.h
+  projectFolder: packs\PIC32CZ8110CA80208_DFP\component
+  type: Header Files
+- excludeFromProject: false
+  path: C:\apps\bootloader_apps_uart\apps\uart_fail_safe_bootloader\bootloader\firmware\src\packs\PIC32CZ8110CA80208_DFP\component\ptc.h
+  projectFolder: packs\PIC32CZ8110CA80208_DFP\component
+  type: Header Files
+- excludeFromProject: false
+  path: C:\apps\bootloader_apps_uart\apps\uart_fail_safe_bootloader\bootloader\firmware\src\packs\PIC32CZ8110CA80208_DFP\component\rstc.h
+  projectFolder: packs\PIC32CZ8110CA80208_DFP\component
+  type: Header Files
+- excludeFromProject: false
+  path: C:\apps\bootloader_apps_uart\apps\uart_fail_safe_bootloader\bootloader\firmware\src\packs\PIC32CZ8110CA80208_DFP\component\rtc.h
+  projectFolder: packs\PIC32CZ8110CA80208_DFP\component
+  type: Header Files
+- excludeFromProject: false
+  path: C:\apps\bootloader_apps_uart\apps\uart_fail_safe_bootloader\bootloader\firmware\src\packs\PIC32CZ8110CA80208_DFP\component\sdmmc.h
+  projectFolder: packs\PIC32CZ8110CA80208_DFP\component
+  type: Header Files
+- excludeFromProject: false
+  path: C:\apps\bootloader_apps_uart\apps\uart_fail_safe_bootloader\bootloader\firmware\src\packs\PIC32CZ8110CA80208_DFP\component\sercom.h
+  projectFolder: packs\PIC32CZ8110CA80208_DFP\component
+  type: Header Files
+- excludeFromProject: false
+  path: C:\apps\bootloader_apps_uart\apps\uart_fail_safe_bootloader\bootloader\firmware\src\packs\PIC32CZ8110CA80208_DFP\component\spi_ixs.h
+  projectFolder: packs\PIC32CZ8110CA80208_DFP\component
+  type: Header Files
+- excludeFromProject: false
+  path: C:\apps\bootloader_apps_uart\apps\uart_fail_safe_bootloader\bootloader\firmware\src\packs\PIC32CZ8110CA80208_DFP\component\sqi.h
+  projectFolder: packs\PIC32CZ8110CA80208_DFP\component
+  type: Header Files
+- excludeFromProject: false
+  path: C:\apps\bootloader_apps_uart\apps\uart_fail_safe_bootloader\bootloader\firmware\src\packs\PIC32CZ8110CA80208_DFP\component\supc.h
+  projectFolder: packs\PIC32CZ8110CA80208_DFP\component
+  type: Header Files
+- excludeFromProject: false
+  path: C:\apps\bootloader_apps_uart\apps\uart_fail_safe_bootloader\bootloader\firmware\src\packs\PIC32CZ8110CA80208_DFP\component\tcc.h
+  projectFolder: packs\PIC32CZ8110CA80208_DFP\component
+  type: Header Files
+- excludeFromProject: false
+  path: C:\apps\bootloader_apps_uart\apps\uart_fail_safe_bootloader\bootloader\firmware\src\packs\PIC32CZ8110CA80208_DFP\component\tram.h
+  projectFolder: packs\PIC32CZ8110CA80208_DFP\component
+  type: Header Files
+- excludeFromProject: false
+  path: C:\apps\bootloader_apps_uart\apps\uart_fail_safe_bootloader\bootloader\firmware\src\packs\PIC32CZ8110CA80208_DFP\component\trng.h
+  projectFolder: packs\PIC32CZ8110CA80208_DFP\component
+  type: Header Files
+- excludeFromProject: false
+  path: C:\apps\bootloader_apps_uart\apps\uart_fail_safe_bootloader\bootloader\firmware\src\packs\PIC32CZ8110CA80208_DFP\component\usbhs.h
+  projectFolder: packs\PIC32CZ8110CA80208_DFP\component
+  type: Header Files
+- excludeFromProject: false
+  path: C:\apps\bootloader_apps_uart\apps\uart_fail_safe_bootloader\bootloader\firmware\src\packs\PIC32CZ8110CA80208_DFP\component\wdt.h
+  projectFolder: packs\PIC32CZ8110CA80208_DFP\component
+  type: Header Files
+- excludeFromProject: false
+  path: C:\apps\bootloader_apps_uart\apps\uart_fail_safe_bootloader\bootloader\firmware\src\packs\PIC32CZ8110CA80208_DFP\instance\ac.h
+  projectFolder: packs\PIC32CZ8110CA80208_DFP\instance
+  type: Header Files
+- excludeFromProject: false
+  path: C:\apps\bootloader_apps_uart\apps\uart_fail_safe_bootloader\bootloader\firmware\src\packs\PIC32CZ8110CA80208_DFP\instance\adc.h
+  projectFolder: packs\PIC32CZ8110CA80208_DFP\instance
+  type: Header Files
+- excludeFromProject: false
+  path: C:\apps\bootloader_apps_uart\apps\uart_fail_safe_bootloader\bootloader\firmware\src\packs\PIC32CZ8110CA80208_DFP\instance\can0.h
+  projectFolder: packs\PIC32CZ8110CA80208_DFP\instance
+  type: Header Files
+- excludeFromProject: false
+  path: C:\apps\bootloader_apps_uart\apps\uart_fail_safe_bootloader\bootloader\firmware\src\packs\PIC32CZ8110CA80208_DFP\instance\can1.h
+  projectFolder: packs\PIC32CZ8110CA80208_DFP\instance
+  type: Header Files
+- excludeFromProject: false
+  path: C:\apps\bootloader_apps_uart\apps\uart_fail_safe_bootloader\bootloader\firmware\src\packs\PIC32CZ8110CA80208_DFP\instance\can2.h
+  projectFolder: packs\PIC32CZ8110CA80208_DFP\instance
+  type: Header Files
+- excludeFromProject: false
+  path: C:\apps\bootloader_apps_uart\apps\uart_fail_safe_bootloader\bootloader\firmware\src\packs\PIC32CZ8110CA80208_DFP\instance\can3.h
+  projectFolder: packs\PIC32CZ8110CA80208_DFP\instance
+  type: Header Files
+- excludeFromProject: false
+  path: C:\apps\bootloader_apps_uart\apps\uart_fail_safe_bootloader\bootloader\firmware\src\packs\PIC32CZ8110CA80208_DFP\instance\can4.h
+  projectFolder: packs\PIC32CZ8110CA80208_DFP\instance
+  type: Header Files
+- excludeFromProject: false
+  path: C:\apps\bootloader_apps_uart\apps\uart_fail_safe_bootloader\bootloader\firmware\src\packs\PIC32CZ8110CA80208_DFP\instance\can5.h
+  projectFolder: packs\PIC32CZ8110CA80208_DFP\instance
+  type: Header Files
+- excludeFromProject: false
+  path: C:\apps\bootloader_apps_uart\apps\uart_fail_safe_bootloader\bootloader\firmware\src\packs\PIC32CZ8110CA80208_DFP\instance\dma.h
+  projectFolder: packs\PIC32CZ8110CA80208_DFP\instance
+  type: Header Files
+- excludeFromProject: false
+  path: C:\apps\bootloader_apps_uart\apps\uart_fail_safe_bootloader\bootloader\firmware\src\packs\PIC32CZ8110CA80208_DFP\instance\drmtcm.h
+  projectFolder: packs\PIC32CZ8110CA80208_DFP\instance
+  type: Header Files
+- excludeFromProject: false
+  path: C:\apps\bootloader_apps_uart\apps\uart_fail_safe_bootloader\bootloader\firmware\src\packs\PIC32CZ8110CA80208_DFP\instance\dsu.h
+  projectFolder: packs\PIC32CZ8110CA80208_DFP\instance
+  type: Header Files
+- excludeFromProject: false
+  path: C:\apps\bootloader_apps_uart\apps\uart_fail_safe_bootloader\bootloader\firmware\src\packs\PIC32CZ8110CA80208_DFP\instance\ebi.h
+  projectFolder: packs\PIC32CZ8110CA80208_DFP\instance
+  type: Header Files
+- excludeFromProject: false
+  path: C:\apps\bootloader_apps_uart\apps\uart_fail_safe_bootloader\bootloader\firmware\src\packs\PIC32CZ8110CA80208_DFP\instance\eic.h
+  projectFolder: packs\PIC32CZ8110CA80208_DFP\instance
+  type: Header Files
+- excludeFromProject: false
+  path: C:\apps\bootloader_apps_uart\apps\uart_fail_safe_bootloader\bootloader\firmware\src\packs\PIC32CZ8110CA80208_DFP\instance\eth.h
+  projectFolder: packs\PIC32CZ8110CA80208_DFP\instance
+  type: Header Files
+- excludeFromProject: false
+  path: C:\apps\bootloader_apps_uart\apps\uart_fail_safe_bootloader\bootloader\firmware\src\packs\PIC32CZ8110CA80208_DFP\instance\evsys.h
+  projectFolder: packs\PIC32CZ8110CA80208_DFP\instance
+  type: Header Files
+- excludeFromProject: false
+  path: C:\apps\bootloader_apps_uart\apps\uart_fail_safe_bootloader\bootloader\firmware\src\packs\PIC32CZ8110CA80208_DFP\instance\fcr.h
+  projectFolder: packs\PIC32CZ8110CA80208_DFP\instance
+  type: Header Files
+- excludeFromProject: false
+  path: C:\apps\bootloader_apps_uart\apps\uart_fail_safe_bootloader\bootloader\firmware\src\packs\PIC32CZ8110CA80208_DFP\instance\fcw.h
+  projectFolder: packs\PIC32CZ8110CA80208_DFP\instance
+  type: Header Files
+- excludeFromProject: false
+  path: C:\apps\bootloader_apps_uart\apps\uart_fail_safe_bootloader\bootloader\firmware\src\packs\PIC32CZ8110CA80208_DFP\instance\freqm.h
+  projectFolder: packs\PIC32CZ8110CA80208_DFP\instance
+  type: Header Files
+- excludeFromProject: false
+  path: C:\apps\bootloader_apps_uart\apps\uart_fail_safe_bootloader\bootloader\firmware\src\packs\PIC32CZ8110CA80208_DFP\instance\fuses.h
+  projectFolder: packs\PIC32CZ8110CA80208_DFP\instance
+  type: Header Files
+- excludeFromProject: false
+  path: C:\apps\bootloader_apps_uart\apps\uart_fail_safe_bootloader\bootloader\firmware\src\packs\PIC32CZ8110CA80208_DFP\instance\gclk.h
+  projectFolder: packs\PIC32CZ8110CA80208_DFP\instance
+  type: Header Files
+- excludeFromProject: false
+  path: C:\apps\bootloader_apps_uart\apps\uart_fail_safe_bootloader\bootloader\firmware\src\packs\PIC32CZ8110CA80208_DFP\instance\mclk.h
+  projectFolder: packs\PIC32CZ8110CA80208_DFP\instance
+  type: Header Files
+- excludeFromProject: false
+  path: C:\apps\bootloader_apps_uart\apps\uart_fail_safe_bootloader\bootloader\firmware\src\packs\PIC32CZ8110CA80208_DFP\instance\mcramc.h
+  projectFolder: packs\PIC32CZ8110CA80208_DFP\instance
+  type: Header Files
+- excludeFromProject: false
+  path: C:\apps\bootloader_apps_uart\apps\uart_fail_safe_bootloader\bootloader\firmware\src\packs\PIC32CZ8110CA80208_DFP\instance\mlb.h
+  projectFolder: packs\PIC32CZ8110CA80208_DFP\instance
+  type: Header Files
+- excludeFromProject: false
+  path: C:\apps\bootloader_apps_uart\apps\uart_fail_safe_bootloader\bootloader\firmware\src\packs\PIC32CZ8110CA80208_DFP\instance\osc32kctrl.h
+  projectFolder: packs\PIC32CZ8110CA80208_DFP\instance
+  type: Header Files
+- excludeFromProject: false
+  path: C:\apps\bootloader_apps_uart\apps\uart_fail_safe_bootloader\bootloader\firmware\src\packs\PIC32CZ8110CA80208_DFP\instance\oscctrl.h
+  projectFolder: packs\PIC32CZ8110CA80208_DFP\instance
+  type: Header Files
+- excludeFromProject: false
+  path: C:\apps\bootloader_apps_uart\apps\uart_fail_safe_bootloader\bootloader\firmware\src\packs\PIC32CZ8110CA80208_DFP\instance\pac.h
+  projectFolder: packs\PIC32CZ8110CA80208_DFP\instance
+  type: Header Files
+- excludeFromProject: false
+  path: C:\apps\bootloader_apps_uart\apps\uart_fail_safe_bootloader\bootloader\firmware\src\packs\PIC32CZ8110CA80208_DFP\instance\pm.h
+  projectFolder: packs\PIC32CZ8110CA80208_DFP\instance
+  type: Header Files
+- excludeFromProject: false
+  path: C:\apps\bootloader_apps_uart\apps\uart_fail_safe_bootloader\bootloader\firmware\src\packs\PIC32CZ8110CA80208_DFP\instance\port.h
+  projectFolder: packs\PIC32CZ8110CA80208_DFP\instance
+  type: Header Files
+- excludeFromProject: false
+  path: C:\apps\bootloader_apps_uart\apps\uart_fail_safe_bootloader\bootloader\firmware\src\packs\PIC32CZ8110CA80208_DFP\instance\prm.h
+  projectFolder: packs\PIC32CZ8110CA80208_DFP\instance
+  type: Header Files
+- excludeFromProject: false
+  path: C:\apps\bootloader_apps_uart\apps\uart_fail_safe_bootloader\bootloader\firmware\src\packs\PIC32CZ8110CA80208_DFP\instance\ptc.h
+  projectFolder: packs\PIC32CZ8110CA80208_DFP\instance
+  type: Header Files
+- excludeFromProject: false
+  path: C:\apps\bootloader_apps_uart\apps\uart_fail_safe_bootloader\bootloader\firmware\src\packs\PIC32CZ8110CA80208_DFP\instance\rstc.h
+  projectFolder: packs\PIC32CZ8110CA80208_DFP\instance
+  type: Header Files
+- excludeFromProject: false
+  path: C:\apps\bootloader_apps_uart\apps\uart_fail_safe_bootloader\bootloader\firmware\src\packs\PIC32CZ8110CA80208_DFP\instance\rtc.h
+  projectFolder: packs\PIC32CZ8110CA80208_DFP\instance
+  type: Header Files
+- excludeFromProject: false
+  path: C:\apps\bootloader_apps_uart\apps\uart_fail_safe_bootloader\bootloader\firmware\src\packs\PIC32CZ8110CA80208_DFP\instance\sdmmc0.h
+  projectFolder: packs\PIC32CZ8110CA80208_DFP\instance
+  type: Header Files
+- excludeFromProject: false
+  path: C:\apps\bootloader_apps_uart\apps\uart_fail_safe_bootloader\bootloader\firmware\src\packs\PIC32CZ8110CA80208_DFP\instance\sdmmc1.h
+  projectFolder: packs\PIC32CZ8110CA80208_DFP\instance
+  type: Header Files
+- excludeFromProject: false
+  path: C:\apps\bootloader_apps_uart\apps\uart_fail_safe_bootloader\bootloader\firmware\src\packs\PIC32CZ8110CA80208_DFP\instance\sercom0.h
+  projectFolder: packs\PIC32CZ8110CA80208_DFP\instance
+  type: Header Files
+- excludeFromProject: false
+  path: C:\apps\bootloader_apps_uart\apps\uart_fail_safe_bootloader\bootloader\firmware\src\packs\PIC32CZ8110CA80208_DFP\instance\sercom1.h
+  projectFolder: packs\PIC32CZ8110CA80208_DFP\instance
+  type: Header Files
+- excludeFromProject: false
+  path: C:\apps\bootloader_apps_uart\apps\uart_fail_safe_bootloader\bootloader\firmware\src\packs\PIC32CZ8110CA80208_DFP\instance\sercom2.h
+  projectFolder: packs\PIC32CZ8110CA80208_DFP\instance
+  type: Header Files
+- excludeFromProject: false
+  path: C:\apps\bootloader_apps_uart\apps\uart_fail_safe_bootloader\bootloader\firmware\src\packs\PIC32CZ8110CA80208_DFP\instance\sercom3.h
+  projectFolder: packs\PIC32CZ8110CA80208_DFP\instance
+  type: Header Files
+- excludeFromProject: false
+  path: C:\apps\bootloader_apps_uart\apps\uart_fail_safe_bootloader\bootloader\firmware\src\packs\PIC32CZ8110CA80208_DFP\instance\sercom4.h
+  projectFolder: packs\PIC32CZ8110CA80208_DFP\instance
+  type: Header Files
+- excludeFromProject: false
+  path: C:\apps\bootloader_apps_uart\apps\uart_fail_safe_bootloader\bootloader\firmware\src\packs\PIC32CZ8110CA80208_DFP\instance\sercom5.h
+  projectFolder: packs\PIC32CZ8110CA80208_DFP\instance
+  type: Header Files
+- excludeFromProject: false
+  path: C:\apps\bootloader_apps_uart\apps\uart_fail_safe_bootloader\bootloader\firmware\src\packs\PIC32CZ8110CA80208_DFP\instance\sercom6.h
+  projectFolder: packs\PIC32CZ8110CA80208_DFP\instance
+  type: Header Files
+- excludeFromProject: false
+  path: C:\apps\bootloader_apps_uart\apps\uart_fail_safe_bootloader\bootloader\firmware\src\packs\PIC32CZ8110CA80208_DFP\instance\sercom7.h
+  projectFolder: packs\PIC32CZ8110CA80208_DFP\instance
+  type: Header Files
+- excludeFromProject: false
+  path: C:\apps\bootloader_apps_uart\apps\uart_fail_safe_bootloader\bootloader\firmware\src\packs\PIC32CZ8110CA80208_DFP\instance\sercom8.h
+  projectFolder: packs\PIC32CZ8110CA80208_DFP\instance
+  type: Header Files
+- excludeFromProject: false
+  path: C:\apps\bootloader_apps_uart\apps\uart_fail_safe_bootloader\bootloader\firmware\src\packs\PIC32CZ8110CA80208_DFP\instance\sercom9.h
+  projectFolder: packs\PIC32CZ8110CA80208_DFP\instance
+  type: Header Files
+- excludeFromProject: false
+  path: C:\apps\bootloader_apps_uart\apps\uart_fail_safe_bootloader\bootloader\firmware\src\packs\PIC32CZ8110CA80208_DFP\instance\spi_ixs0.h
+  projectFolder: packs\PIC32CZ8110CA80208_DFP\instance
+  type: Header Files
+- excludeFromProject: false
+  path: C:\apps\bootloader_apps_uart\apps\uart_fail_safe_bootloader\bootloader\firmware\src\packs\PIC32CZ8110CA80208_DFP\instance\spi_ixs1.h
+  projectFolder: packs\PIC32CZ8110CA80208_DFP\instance
+  type: Header Files
+- excludeFromProject: false
+  path: C:\apps\bootloader_apps_uart\apps\uart_fail_safe_bootloader\bootloader\firmware\src\packs\PIC32CZ8110CA80208_DFP\instance\sqi0.h
+  projectFolder: packs\PIC32CZ8110CA80208_DFP\instance
+  type: Header Files
+- excludeFromProject: false
+  path: C:\apps\bootloader_apps_uart\apps\uart_fail_safe_bootloader\bootloader\firmware\src\packs\PIC32CZ8110CA80208_DFP\instance\sqi1.h
+  projectFolder: packs\PIC32CZ8110CA80208_DFP\instance
+  type: Header Files
+- excludeFromProject: false
+  path: C:\apps\bootloader_apps_uart\apps\uart_fail_safe_bootloader\bootloader\firmware\src\packs\PIC32CZ8110CA80208_DFP\instance\supc.h
+  projectFolder: packs\PIC32CZ8110CA80208_DFP\instance
+  type: Header Files
+- excludeFromProject: false
+  path: C:\apps\bootloader_apps_uart\apps\uart_fail_safe_bootloader\bootloader\firmware\src\packs\PIC32CZ8110CA80208_DFP\instance\tcc0.h
+  projectFolder: packs\PIC32CZ8110CA80208_DFP\instance
+  type: Header Files
+- excludeFromProject: false
+  path: C:\apps\bootloader_apps_uart\apps\uart_fail_safe_bootloader\bootloader\firmware\src\packs\PIC32CZ8110CA80208_DFP\instance\tcc1.h
+  projectFolder: packs\PIC32CZ8110CA80208_DFP\instance
+  type: Header Files
+- excludeFromProject: false
+  path: C:\apps\bootloader_apps_uart\apps\uart_fail_safe_bootloader\bootloader\firmware\src\packs\PIC32CZ8110CA80208_DFP\instance\tcc2.h
+  projectFolder: packs\PIC32CZ8110CA80208_DFP\instance
+  type: Header Files
+- excludeFromProject: false
+  path: C:\apps\bootloader_apps_uart\apps\uart_fail_safe_bootloader\bootloader\firmware\src\packs\PIC32CZ8110CA80208_DFP\instance\tcc3.h
+  projectFolder: packs\PIC32CZ8110CA80208_DFP\instance
+  type: Header Files
+- excludeFromProject: false
+  path: C:\apps\bootloader_apps_uart\apps\uart_fail_safe_bootloader\bootloader\firmware\src\packs\PIC32CZ8110CA80208_DFP\instance\tcc4.h
+  projectFolder: packs\PIC32CZ8110CA80208_DFP\instance
+  type: Header Files
+- excludeFromProject: false
+  path: C:\apps\bootloader_apps_uart\apps\uart_fail_safe_bootloader\bootloader\firmware\src\packs\PIC32CZ8110CA80208_DFP\instance\tcc5.h
+  projectFolder: packs\PIC32CZ8110CA80208_DFP\instance
+  type: Header Files
+- excludeFromProject: false
+  path: C:\apps\bootloader_apps_uart\apps\uart_fail_safe_bootloader\bootloader\firmware\src\packs\PIC32CZ8110CA80208_DFP\instance\tcc6.h
+  projectFolder: packs\PIC32CZ8110CA80208_DFP\instance
+  type: Header Files
+- excludeFromProject: false
+  path: C:\apps\bootloader_apps_uart\apps\uart_fail_safe_bootloader\bootloader\firmware\src\packs\PIC32CZ8110CA80208_DFP\instance\tcc7.h
+  projectFolder: packs\PIC32CZ8110CA80208_DFP\instance
+  type: Header Files
+- excludeFromProject: false
+  path: C:\apps\bootloader_apps_uart\apps\uart_fail_safe_bootloader\bootloader\firmware\src\packs\PIC32CZ8110CA80208_DFP\instance\tcc8.h
+  projectFolder: packs\PIC32CZ8110CA80208_DFP\instance
+  type: Header Files
+- excludeFromProject: false
+  path: C:\apps\bootloader_apps_uart\apps\uart_fail_safe_bootloader\bootloader\firmware\src\packs\PIC32CZ8110CA80208_DFP\instance\tcc9.h
+  projectFolder: packs\PIC32CZ8110CA80208_DFP\instance
+  type: Header Files
+- excludeFromProject: false
+  path: C:\apps\bootloader_apps_uart\apps\uart_fail_safe_bootloader\bootloader\firmware\src\packs\PIC32CZ8110CA80208_DFP\instance\tram.h
+  projectFolder: packs\PIC32CZ8110CA80208_DFP\instance
+  type: Header Files
+- excludeFromProject: false
+  path: C:\apps\bootloader_apps_uart\apps\uart_fail_safe_bootloader\bootloader\firmware\src\packs\PIC32CZ8110CA80208_DFP\instance\trng.h
+  projectFolder: packs\PIC32CZ8110CA80208_DFP\instance
+  type: Header Files
+- excludeFromProject: false
+  path: C:\apps\bootloader_apps_uart\apps\uart_fail_safe_bootloader\bootloader\firmware\src\packs\PIC32CZ8110CA80208_DFP\instance\usbhs0.h
+  projectFolder: packs\PIC32CZ8110CA80208_DFP\instance
+  type: Header Files
+- excludeFromProject: false
+  path: C:\apps\bootloader_apps_uart\apps\uart_fail_safe_bootloader\bootloader\firmware\src\packs\PIC32CZ8110CA80208_DFP\instance\usbhs1.h
+  projectFolder: packs\PIC32CZ8110CA80208_DFP\instance
+  type: Header Files
+- excludeFromProject: false
+  path: C:\apps\bootloader_apps_uart\apps\uart_fail_safe_bootloader\bootloader\firmware\src\packs\PIC32CZ8110CA80208_DFP\instance\wdt.h
+  projectFolder: packs\PIC32CZ8110CA80208_DFP\instance
+  type: Header Files
+- excludeFromProject: false
+  path: C:\apps\bootloader_apps_uart\apps\uart_fail_safe_bootloader\bootloader\firmware\src\packs\PIC32CZ8110CA80208_DFP\pic32cz8110ca80208.h
+  projectFolder: packs\PIC32CZ8110CA80208_DFP
+  type: Header Files
+- excludeFromProject: false
+  path: C:\apps\bootloader_apps_uart\apps\uart_fail_safe_bootloader\bootloader\firmware\src\packs\PIC32CZ8110CA80208_DFP\pio\pic32cz8110ca80208.h
+  projectFolder: packs\PIC32CZ8110CA80208_DFP\pio
+  type: Header Files
+- excludeFromProject: false
+  path: C:\apps\bootloader_apps_uart\apps\uart_fail_safe_bootloader\bootloader\firmware\src\packs\CMSIS\CMSIS\Core\Include\cmsis_version.h
+  projectFolder: packs\CMSIS\CMSIS\Core\Include
+  type: Header Files
+- excludeFromProject: false
+  path: C:\apps\bootloader_apps_uart\apps\uart_fail_safe_bootloader\bootloader\firmware\src\packs\CMSIS\CMSIS\Core\Include\cmsis_compiler.h
+  projectFolder: packs\CMSIS\CMSIS\Core\Include
+  type: Header Files
+- excludeFromProject: false
+  path: C:\apps\bootloader_apps_uart\apps\uart_fail_safe_bootloader\bootloader\firmware\src\packs\CMSIS\CMSIS\Core\Include\cmsis_iccarm.h
+  projectFolder: packs\CMSIS\CMSIS\Core\Include
+  type: Header Files
+- excludeFromProject: false
+  path: C:\apps\bootloader_apps_uart\apps\uart_fail_safe_bootloader\bootloader\firmware\src\packs\CMSIS\CMSIS\Core\Include\cmsis_gcc.h
+  projectFolder: packs\CMSIS\CMSIS\Core\Include
+  type: Header Files
+- excludeFromProject: false
+  path: C:\apps\bootloader_apps_uart\apps\uart_fail_safe_bootloader\bootloader\firmware\src\packs\CMSIS\CMSIS\Core\Include\cmsis_armcc.h
+  projectFolder: packs\CMSIS\CMSIS\Core\Include
+  type: Header Files
+- excludeFromProject: false
+  path: C:\apps\bootloader_apps_uart\apps\uart_fail_safe_bootloader\bootloader\firmware\src\packs\CMSIS\CMSIS\Core\Include\cmsis_armclang.h
+  projectFolder: packs\CMSIS\CMSIS\Core\Include
+  type: Header Files
+- excludeFromProject: false
+  path: C:\apps\bootloader_apps_uart\apps\uart_fail_safe_bootloader\bootloader\firmware\src\packs\CMSIS\CMSIS\Core\Include\cmsis_armclang_ltm.h
+  projectFolder: packs\CMSIS\CMSIS\Core\Include
+  type: Header Files
+- excludeFromProject: false
+  path: C:\apps\bootloader_apps_uart\apps\uart_fail_safe_bootloader\bootloader\firmware\src\packs\CMSIS\CMSIS\Core\Include\core_cm7.h
+  projectFolder: packs\CMSIS\CMSIS\Core\Include
+  type: Header Files
+- excludeFromProject: false
+  path: C:\apps\bootloader_apps_uart\apps\uart_fail_safe_bootloader\bootloader\firmware\src\packs\CMSIS\CMSIS\Core\Include\mpu_armv7.h
+  projectFolder: packs\CMSIS\CMSIS\Core\Include
+  type: Header Files
+- excludeFromProject: false
+  path: C:\apps\bootloader_apps_uart\apps\uart_fail_safe_bootloader\bootloader\firmware\src\packs\CMSIS\CMSIS\Core\Include\cachel1_armv7.h
+  projectFolder: packs\CMSIS\CMSIS\Core\Include
+  type: Header Files
+- excludeFromProject: false
+  path: C:\apps\bootloader_apps_uart\apps\uart_fail_safe_bootloader\bootloader\firmware\src\config\pic32cz_ca80_curiosity_ultra\peripheral\fcr\plib_fcr.h
+  projectFolder: config\pic32cz_ca80_curiosity_ultra\peripheral\fcr
+  type: Header Files
+- excludeFromProject: false
+  path: C:\apps\bootloader_apps_uart\apps\uart_fail_safe_bootloader\bootloader\firmware\src\config\pic32cz_ca80_curiosity_ultra\peripheral\fcr\plib_fcr.c
+  projectFolder: config\pic32cz_ca80_curiosity_ultra\peripheral\fcr
+  type: Source Files
+generatedSettings:
+- category: C32-LD
+  key: no-startup-files
+  value: 'true'
+- category: C32
+  key: place-data-into-section
+  value: 'false'
+- category: C32
+  key: optimization-level
+  value: -O2
+- category: C32-LD
+  key: heap-size
+  value: '512'
+- category: C32
+  key: extra-include-directories
+  value: ../src;../src/config/pic32cz_ca80_curiosity_ultra;../src/packs/PIC32CZ8110CA80208_DFP;../src/packs/CMSIS/CMSIS/Core/Include;../src/packs/CMSIS/
+- category: C32CPP
+  key: extra-include-directories
+  value: ../src;../src/config/pic32cz_ca80_curiosity_ultra;../src/packs/PIC32CZ8110CA80208_DFP;../src/packs/CMSIS/CMSIS/Core/Include;../src/packs/CMSIS/
+- category: C32-LD
+  key: no-device-startup-code
+  value: 'true'
+- category: C32Global
+  key: mstacktcm
+  value: 'false'
+removedFiles: [
+  ]

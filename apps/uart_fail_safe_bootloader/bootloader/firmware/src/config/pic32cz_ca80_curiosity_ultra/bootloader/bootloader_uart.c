@@ -81,7 +81,6 @@
 #define    BL_CMD_DATA         0xa1U
 #define    BL_CMD_VERIFY       0xa2U
 #define    BL_CMD_RESET        0xa3U
-#define    BL_CMD_BKSWAP_RESET 0xa4U
 #define    BL_CMD_READ_VERSION 0xa6U
 
 
@@ -121,9 +120,9 @@ static bool     uartBLActive        = false;
 
 
 /* Following MISRA-C rules are deviated in the below code block */
-/* MISRA C-2012 Rule 8.2 */
-/* MISRA C-2012 Rule 11.1 */
-/* MISRA C-2012 Rule 17.7 */
+/* MISRA C-2023 Rule 8.2 */
+/* MISRA C-2023 Rule 11.1 */
+/* MISRA C-2023 Rule 17.7 */
 
 typedef bool (*FLASH_ERASE_FPTR)(uint32_t address);
 
@@ -307,19 +306,6 @@ static void command_task(void)
 
         bootloader_TriggerReset();
     }
-    else if (BL_CMD_BKSWAP_RESET == input_command)
-    {
-        bootloader_UpdateUpperFlashSerial();
-        
-        SERCOM1_USART_WriteByte(BL_RESP_OK);
-
-        while(SERCOM1_USART_TransmitComplete() == false)
-        {
-            /* Nothing to do */
-        }
-
-		bootloader_TriggerReset();
-    }
     else
     {
         SERCOM1_USART_WriteByte(BL_RESP_INVALID);
@@ -407,4 +393,4 @@ void bootloader_UART_Tasks(void)
         }
     } while (uartBLActive);
 }
-/* MISRAC 2012 deviation block end */
+/* MISRAC 2023 deviation block end */

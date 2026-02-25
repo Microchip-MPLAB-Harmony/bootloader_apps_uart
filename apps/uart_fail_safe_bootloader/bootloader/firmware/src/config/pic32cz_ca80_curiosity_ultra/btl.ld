@@ -61,24 +61,15 @@ ENTRY(__XC32_RESET_HANDLER_NAME)
                      (Rounded of to nearest erase boundary) whichever is
                      greater.
  */
-#define ROM_SIZE  4096
+#define ROM_SIZE  8192
 
 #if (ROM_SIZE > 0x20000)
     #  error ROM_SIZE is greater than the max size 0x20000
 #endif
 
-/* Bootloader Trigger pattern of length 16 Bytes needs to be stored
- * from starting of Ram by the application if it wants to
- * run bootloader at startup without any external trigger.
- * Example:
- *     ram[0] = 0x5048434D;
- *     ram[1] = 0x5048434D;
- *     ....
- *     ram[n] = 0x5048434D;
- */
-#define RAM_START (0x20020000 + 16)
+#define RAM_START 0x20020000
 
-#define RAM_SIZE  (0x100000 - 16)
+#define RAM_SIZE  0x100000
 
 #if (RAM_SIZE > 0x100000)
     #  error RAM_SIZE is greater than the max size of 0x100000
