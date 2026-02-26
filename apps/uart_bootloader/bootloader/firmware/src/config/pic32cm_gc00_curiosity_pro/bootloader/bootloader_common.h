@@ -82,8 +82,8 @@
 #define BTL_TRIGGER_LEN                         16
 
 // *****************************************************************************
-/* MISRA C-2012 Rule 5.8 deviated below. Deviation record ID -
-   H3_MISRAC_2012_R_5_8_DR_1 */
+/* MISRA C-2023 Rule 5.8 deviated below. Deviation record ID -
+   H3_MISRAC_2023_R_5_8_DR_1 */
 
 void SYS_DeInitialize( void *data );
 

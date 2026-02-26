@@ -59,25 +59,6 @@
         </logicalFolder>
       </logicalFolder>
       <logicalFolder name="packs" displayName="packs" projectFiles="true">
-        <logicalFolder name="CMSIS" displayName="CMSIS" projectFiles="true">
-          <logicalFolder name="CMSIS" displayName="CMSIS" projectFiles="true">
-            <logicalFolder name="Core" displayName="Core" projectFiles="true">
-              <logicalFolder name="Include" displayName="Include" projectFiles="true">
-                <itemPath>../src/packs/CMSIS/CMSIS/Core/Include/cmsis_compiler.h</itemPath>
-                <itemPath>../src/packs/CMSIS/CMSIS/Core/Include/cmsis_gcc.h</itemPath>
-                <itemPath>../src/packs/CMSIS/CMSIS/Core/Include/cmsis_armclang.h</itemPath>
-                <itemPath>../src/packs/CMSIS/CMSIS/Core/Include/cmsis_iccarm.h</itemPath>
-                <itemPath>../src/packs/CMSIS/CMSIS/Core/Include/cachel1_armv7.h</itemPath>
-                <itemPath>../src/packs/CMSIS/CMSIS/Core/Include/core_cm23.h</itemPath>
-                <itemPath>../src/packs/CMSIS/CMSIS/Core/Include/mpu_armv8.h</itemPath>
-                <itemPath>../src/packs/CMSIS/CMSIS/Core/Include/cmsis_armclang_ltm.h</itemPath>
-                <itemPath>../src/packs/CMSIS/CMSIS/Core/Include/cmsis_version.h</itemPath>
-                <itemPath>../src/packs/CMSIS/CMSIS/Core/Include/tz_context.h</itemPath>
-                <itemPath>../src/packs/CMSIS/CMSIS/Core/Include/cmsis_armcc.h</itemPath>
-              </logicalFolder>
-            </logicalFolder>
-          </logicalFolder>
-        </logicalFolder>
         <logicalFolder name="PIC32CM5112GC00100_DFP"
                        displayName="PIC32CM5112GC00100_DFP"
                        projectFiles="true">
@@ -174,8 +155,28 @@
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
                    projectFiles="true">
+      <logicalFolder name="uart_bootloader_pic32cm_gc00_curiosity_pro_pic32cm_gc00_curiosity_pro"
+                     displayName="uart_bootloader_pic32cm_gc00_curiosity_pro_pic32cm_gc00_curiosity_pro"
+                     projectFiles="true">
+        <logicalFolder name="components" displayName="components" projectFiles="true">
+          <itemPath>uart_bootloader_pic32cm_gc00_curiosity_pro_pic32cm_gc00_curiosity_pro/components/uart_bootloader.yml</itemPath>
+          <itemPath>uart_bootloader_pic32cm_gc00_curiosity_pro_pic32cm_gc00_curiosity_pro/components/rstc.yml</itemPath>
+          <itemPath>uart_bootloader_pic32cm_gc00_curiosity_pro_pic32cm_gc00_curiosity_pro/components/core.yml</itemPath>
+          <itemPath>uart_bootloader_pic32cm_gc00_curiosity_pro_pic32cm_gc00_curiosity_pro/components/fcr.yml</itemPath>
+          <itemPath>uart_bootloader_pic32cm_gc00_curiosity_pro_pic32cm_gc00_curiosity_pro/components/dfp.yml</itemPath>
+          <itemPath>uart_bootloader_pic32cm_gc00_curiosity_pro_pic32cm_gc00_curiosity_pro/components/fcw.yml</itemPath>
+          <itemPath>uart_bootloader_pic32cm_gc00_curiosity_pro_pic32cm_gc00_curiosity_pro/components/pm.yml</itemPath>
+          <itemPath>uart_bootloader_pic32cm_gc00_curiosity_pro_pic32cm_gc00_curiosity_pro/components/evsys.yml</itemPath>
+          <itemPath>uart_bootloader_pic32cm_gc00_curiosity_pro_pic32cm_gc00_curiosity_pro/components/sercom4.yml</itemPath>
+          <itemPath>uart_bootloader_pic32cm_gc00_curiosity_pro_pic32cm_gc00_curiosity_pro/components/cmsis.yml</itemPath>
+        </logicalFolder>
+        <itemPath>uart_bootloader_pic32cm_gc00_curiosity_pro_pic32cm_gc00_curiosity_pro/mcc-config.mc4</itemPath>
+      </logicalFolder>
       <itemPath>Makefile</itemPath>
-      <itemPath>pic32cm_gc00.mc3</itemPath>
+    </logicalFolder>
+    <logicalFolder name="LibraryFiles"
+                   displayName="LibraryFiles"
+                   projectFiles="true">
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
