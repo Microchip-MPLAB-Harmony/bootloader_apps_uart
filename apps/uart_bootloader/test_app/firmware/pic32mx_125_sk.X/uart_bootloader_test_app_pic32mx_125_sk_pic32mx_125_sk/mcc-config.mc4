@@ -1,0 +1,67 @@
+configVersion: 1.0.0
+coreVersion: 5.8.4
+spaHostVersion: 1.2.1
+device: PIC32MX570F512L
+deviceLibrary:
+  className: com.microchip.mcc.harmony.Harmony3Library
+groupModules: []
+modules:
+- HarmonyCore
+- core
+- core_timer
+- dfp
+- stdio
+- uart2
+generatedFileHashHistoryMap:
+- file: ..\src\app.c
+  hash: 632c78c323cb9f8c6359f20337440c08f8461eb4b0304552b6a3cfd5c4052620
+- file: ..\src\app.h
+  hash: 8e35d8509552a4d1d6e6f123ad75694cf784a707f7dac592ed33b55121aa8e28
+- file: ..\src\config\pic32mx_125_sk\configuration.h
+  hash: 321175fed312776d5e0da9d63da1fca0673933ab0298c1d9a4aeb32cf5873639
+- file: ..\src\config\pic32mx_125_sk\definitions.h
+  hash: 8845fb0a91f12bcc4ffd12d64f3fade00ee6cc160eb95635271131c54af89aca
+- file: ..\src\config\pic32mx_125_sk\device.h
+  hash: 4d4341a6f9628cea0bf73f980b639f7cb81089e55a60ad7e434be2a71e477442
+- file: ..\src\config\pic32mx_125_sk\exceptions.c
+  hash: ed8f326d4f1abc2e74c1743119304a2f613522e3baacdd8df59fdda14c44619e
+- file: ..\src\config\pic32mx_125_sk\initialization.c
+  hash: 2132ffa684725e0e072e41dd1dfd2b9724c09a94e476bf5995d3a8d992522159
+- file: ..\src\config\pic32mx_125_sk\interrupts.c
+  hash: 17531324e15a4a2330a352ac375a66c2188da090d7bd5799ab15f95ade978e58
+- file: ..\src\config\pic32mx_125_sk\interrupts.h
+  hash: 2b6f3a9da8b2f61b5ea3f584838ad851b151646b5fda0fb709cc05e65576fd37
+- file: ..\src\config\pic32mx_125_sk\peripheral\clk\plib_clk.c
+  hash: cb38000c8c50705fedc5529c435a595c68d78d9a2bb46b9b83ff5f68d5168aca
+- file: ..\src\config\pic32mx_125_sk\peripheral\clk\plib_clk.h
+  hash: 35384f2e13e59b7190bf77f6996baf3ea2377ec42df94979a6f793326def5255
+- file: ..\src\config\pic32mx_125_sk\peripheral\coretimer\plib_coretimer.c
+  hash: fffd0d46d7d9a9ed96d7946c68d1f0084d5c1d0248ccbabc72b28b1767f902a1
+- file: ..\src\config\pic32mx_125_sk\peripheral\coretimer\plib_coretimer.h
+  hash: 033ad1bc584c137c6fc67ad542e999090d31ebbc6a74e04b8dd2d8257a57e21f
+- file: ..\src\config\pic32mx_125_sk\peripheral\evic\plib_evic.c
+  hash: 1bef337138d168802e01360953bf4ad7cc4c114e86adb0fa3196c9c82e67dea1
+- file: ..\src\config\pic32mx_125_sk\peripheral\evic\plib_evic.h
+  hash: 00192bd3be0120d35b9bd048719f808dd96c5523a5f6f5cf78a9c0fc0770ab1b
+- file: ..\src\config\pic32mx_125_sk\peripheral\gpio\plib_gpio.c
+  hash: ed7545698f59d6ea58ce02053e035529d12b63a39d619a3889fc57655aa13c0c
+- file: ..\src\config\pic32mx_125_sk\peripheral\gpio\plib_gpio.h
+  hash: 06786e4c0fff735f8bcb03179e9f9c650b463768913dc058aacb829048646705
+- file: ..\src\config\pic32mx_125_sk\peripheral\uart\plib_uart2.c
+  hash: f544e627da4f9e0530226de80b52b935685430f64c79cfc25dbd4a744b91a1e8
+- file: ..\src\config\pic32mx_125_sk\peripheral\uart\plib_uart2.h
+  hash: 008848679149ab33bbebef71c152887e48b76641e3031d4f65075cf504eb4ca5
+- file: ..\src\config\pic32mx_125_sk\peripheral\uart\plib_uart_common.h
+  hash: b87295faadae4157d5880e22970f89094f2b51e1866930040a90ba49c6b29797
+- file: ..\src\config\pic32mx_125_sk\stdio\xc32_monitor.c
+  hash: ebf5bb594a90f0fa360e2a086014a3d15ce37ed290e46e94aa1e4bf9b5610146
+- file: ..\src\config\pic32mx_125_sk\sys_tasks.h
+  hash: 21f254f497a18a024cd00128d06c4776c2643f867a460c1ba9880a7dd41a8d56
+- file: ..\src\config\pic32mx_125_sk\tasks.c
+  hash: 36364a39e784157f4aac281dfecc1f19be971c9935e6299a6f37a78cd98d1d46
+- file: ..\src\config\pic32mx_125_sk\toolchain_specifics.h
+  hash: b4de6e02e3e48c62f7ba233405ffdf6ef31bb971d1a7b49efa1676f45cabc1ac
+- file: ..\src\config\pic32mx_125_sk\user.h
+  hash: 451e0878e9fcf6cf9fab046c1452ea662757988346c7f39e6bc98478ca25f995
+- file: ..\src\main.c
+  hash: d3c233d419e6304bfacbafc18cc68c0f5c26e365f23b20ea40ccfac458f664c5

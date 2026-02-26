@@ -196,7 +196,6 @@ void SYS_Initialize ( void* data )
     CORETIMER_Initialize();
 	UART2_Initialize();
 
-	BSP_Initialize();
 
     APP_Initialize();
 

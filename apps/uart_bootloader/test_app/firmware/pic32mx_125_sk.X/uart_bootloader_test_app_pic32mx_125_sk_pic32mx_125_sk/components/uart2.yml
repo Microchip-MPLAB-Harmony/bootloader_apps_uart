@@ -1,0 +1,157 @@
+configVersion: 1.0.0
+componentName: uart2
+coreVersion: 5.8.4
+device: PIC32MX570F512L
+library: []
+dependency:
+- dependencyPackage: class com.microchip.mcc.harmony.HarmonyModule
+  name: uart2
+  type: module
+  version: ''
+- dependencyPackage: ''
+  name: csp
+  type: package
+  version: v3.25.1
+customDataClassName: com.microchip.utils_mh3.utils.persistence.CustomModuleData
+data:
+  attachments:
+    children:
+    - children:
+      - attributes:
+          id: UART2_UART
+        children:
+        - children:
+          - attributes:
+              id: targetComponentID
+            children:
+            - type: Value
+              value: stdio
+            type: String
+          - attributes:
+              id: targetAttachmentID
+            children:
+            - type: Value
+              value: UART
+            type: String
+          type: Attributes
+        type: DirectCapability
+      type: Attachments
+    type: uart2
+  elementPosition:
+    attributes:
+      id: __ROOTVIEW
+    children:
+    - children:
+      - attributes:
+          id: uart2
+          x: '119'
+          y: '204'
+        type: ElementPosition
+      type: ElementPositions
+    type: ComponentGraph
+  symbols:
+    BRG_VALUE:
+      attributes:
+        id: BRG_VALUE
+      children:
+      - children:
+        - attributes:
+            id: uart2
+            value: '25'
+          type: Dynamic
+        type: Values
+      type: Integer
+    UART_BRGH:
+      attributes:
+        id: UART_BRGH
+      children:
+      - children:
+        - attributes:
+            id: uart2
+            value: '1'
+          type: Dynamic
+        type: Values
+      type: KeyValueSet
+    UART_CLOCK_FREQ:
+      attributes:
+        id: UART_CLOCK_FREQ
+      children:
+      - children:
+        - attributes:
+            id: uart2
+            value: '48000000'
+          type: Dynamic
+        type: Values
+      type: Integer
+    UART_INTERRUPT_MODE_ENABLE:
+      attributes:
+        id: UART_INTERRUPT_MODE_ENABLE
+      children:
+      - children:
+        - attributes:
+            id: uart2
+            value: 'false'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    UART_OPERATING_MODE:
+      attributes:
+        id: UART_OPERATING_MODE
+      children:
+      - children:
+        - attributes:
+            id: readOnly
+          children:
+          - type: Value
+            value: 'true'
+          type: Boolean
+        type: Attributes
+      - children:
+        - attributes:
+            id: uart2
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: KeyValueSet
+    UART_RING_BUFFER_MODE_ENABLE:
+      attributes:
+        id: UART_RING_BUFFER_MODE_ENABLE
+      children:
+      - children:
+        - attributes:
+            id: uart2
+            value: 'false'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    UMODE_VALUE:
+      attributes:
+        id: UMODE_VALUE
+      children:
+      - children:
+        - attributes:
+            id: uart2
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: Hex
+    USART_INTERRUPT_MODE:
+      attributes:
+        id: USART_INTERRUPT_MODE
+      children:
+      - children:
+        - attributes:
+            id: label
+          children:
+          - type: Value
+            value: '---'
+          type: String
+        type: Attributes
+      - children:
+        - attributes:
+            id: stdio
+            value: 'false'
+          type: Dynamic
+        type: Values
+      type: Boolean
+  userData: {}

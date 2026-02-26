@@ -11,7 +11,7 @@ dependency:
 - dependencyPackage: ''
   name: bootloader
   type: package
-  version: v3.8.0
+  version: v3.9.0
 customDataClassName: com.microchip.utils_mh3.utils.persistence.CustomModuleData
 data:
   attachments:

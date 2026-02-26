@@ -1,0 +1,84 @@
+configVersion: 1.0.0
+componentName: efc
+coreVersion: 5.8.4
+device: ATSAME70Q21B
+library: []
+dependency:
+- dependencyPackage: class com.microchip.mcc.harmony.HarmonyModule
+  name: efc
+  type: module
+  version: ''
+- dependencyPackage: ''
+  devMode: true
+  name: CMSIS_5
+  type: package
+  version: 5.9.0
+- dependencyPackage: ''
+  name: bootloader
+  type: package
+  version: v3.8.0
+- dependencyPackage: ''
+  name: csp
+  type: package
+  version: v3.22.5
+customDataClassName: com.microchip.utils_mh3.utils.persistence.CustomModuleData
+data:
+  attachments:
+    children:
+    - children:
+      - attributes:
+          id: EFC_MEMORY
+        children:
+        - children:
+          - attributes:
+              id: targetComponentID
+            children:
+            - type: Value
+              value: uart_bootloader
+            type: String
+          - attributes:
+              id: targetAttachmentID
+            children:
+            - type: Value
+              value: btl_MEMORY_dependency
+            type: String
+          type: Attributes
+        type: DirectCapability
+      type: Attachments
+    type: efc
+  elementPosition:
+    attributes:
+      id: __ROOTVIEW
+    children:
+    - children:
+      - attributes:
+          id: efc
+          x: '53'
+          y: '91'
+        type: ElementPosition
+      type: ElementPositions
+    type: ComponentGraph
+  symbols:
+    INTERRUPT_ENABLE:
+      attributes:
+        id: INTERRUPT_ENABLE
+      children:
+      - children:
+        - attributes:
+            id: uart_bootloader
+            value: 'false'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    NVM_RWS:
+      attributes:
+        id: NVM_RWS
+      children:
+      - children:
+        - attributes:
+            id: efc
+            value: '6'
+          type: Dynamic
+        type: Values
+      type: Integer
+  userData: {}

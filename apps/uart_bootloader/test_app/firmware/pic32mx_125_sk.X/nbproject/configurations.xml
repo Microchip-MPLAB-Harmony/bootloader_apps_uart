@@ -6,9 +6,6 @@
                    projectFiles="true">
       <logicalFolder name="f1" displayName="config" projectFiles="true">
         <logicalFolder name="f1" displayName="pic32mx_125_sk" projectFiles="true">
-          <logicalFolder name="f1" displayName="bsp" projectFiles="true">
-            <itemPath>../src/config/pic32mx_125_sk/bsp/bsp.h</itemPath>
-          </logicalFolder>
           <logicalFolder name="f2" displayName="peripheral" projectFiles="true">
             <logicalFolder name="f1" displayName="clk" projectFiles="true">
               <itemPath>../src/config/pic32mx_125_sk/peripheral/clk/plib_clk.h</itemPath>
@@ -33,6 +30,7 @@
           <itemPath>../src/config/pic32mx_125_sk/configuration.h</itemPath>
           <itemPath>../src/config/pic32mx_125_sk/device.h</itemPath>
           <itemPath>../src/config/pic32mx_125_sk/interrupts.h</itemPath>
+          <itemPath>../src/config/pic32mx_125_sk/sys_tasks.h</itemPath>
         </logicalFolder>
       </logicalFolder>
       <itemPath>../src/app.h</itemPath>
@@ -40,9 +38,25 @@
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
                    projectFiles="true">
+      <logicalFolder name="uart_bootloader_test_app_pic32mx_125_sk_pic32mx_125_sk"
+                     displayName="uart_bootloader_test_app_pic32mx_125_sk_pic32mx_125_sk"
+                     projectFiles="true">
+        <logicalFolder name="components" displayName="components" projectFiles="true">
+          <itemPath>uart_bootloader_test_app_pic32mx_125_sk_pic32mx_125_sk/components/core.yml</itemPath>
+          <itemPath>uart_bootloader_test_app_pic32mx_125_sk_pic32mx_125_sk/components/dfp.yml</itemPath>
+          <itemPath>uart_bootloader_test_app_pic32mx_125_sk_pic32mx_125_sk/components/HarmonyCore.yml</itemPath>
+          <itemPath>uart_bootloader_test_app_pic32mx_125_sk_pic32mx_125_sk/components/core_timer.yml</itemPath>
+          <itemPath>uart_bootloader_test_app_pic32mx_125_sk_pic32mx_125_sk/components/stdio.yml</itemPath>
+          <itemPath>uart_bootloader_test_app_pic32mx_125_sk_pic32mx_125_sk/components/uart2.yml</itemPath>
+        </logicalFolder>
+        <itemPath>uart_bootloader_test_app_pic32mx_125_sk_pic32mx_125_sk/mcc-config.mc4</itemPath>
+      </logicalFolder>
       <itemPath>Makefile</itemPath>
       <itemPath>../src/config/pic32mx_125_sk/harmony-manifest-success.yml</itemPath>
-      <itemPath>uart_bootloader_test_app_pic32mx_125_sk.mc3</itemPath>
+    </logicalFolder>
+    <logicalFolder name="LibraryFiles"
+                   displayName="LibraryFiles"
+                   projectFiles="true">
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -54,9 +68,6 @@
                    projectFiles="true">
       <logicalFolder name="f1" displayName="config" projectFiles="true">
         <logicalFolder name="f1" displayName="pic32mx_125_sk" projectFiles="true">
-          <logicalFolder name="f1" displayName="bsp" projectFiles="true">
-            <itemPath>../src/config/pic32mx_125_sk/bsp/bsp.c</itemPath>
-          </logicalFolder>
           <logicalFolder name="f2" displayName="peripheral" projectFiles="true">
             <logicalFolder name="f1" displayName="clk" projectFiles="true">
               <itemPath>../src/config/pic32mx_125_sk/peripheral/clk/plib_clk.c</itemPath>

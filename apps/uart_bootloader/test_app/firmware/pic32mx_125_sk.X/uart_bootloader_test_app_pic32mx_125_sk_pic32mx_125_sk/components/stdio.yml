@@ -1,0 +1,64 @@
+configVersion: 1.0.0
+componentName: stdio
+coreVersion: 5.8.4
+device: PIC32MX570F512L
+library: []
+dependency:
+- dependencyPackage: class com.microchip.mcc.harmony.HarmonyModule
+  name: stdio
+  type: module
+  version: ''
+- dependencyPackage: ''
+  name: csp
+  type: package
+  version: v3.25.1
+customDataClassName: com.microchip.utils_mh3.utils.persistence.CustomModuleData
+data:
+  attachments:
+    children:
+    - children:
+      - attributes:
+          id: UART
+        children:
+        - children:
+          - attributes:
+              id: targetComponentID
+            children:
+            - type: Value
+              value: uart2
+            type: String
+          - attributes:
+              id: targetAttachmentID
+            children:
+            - type: Value
+              value: UART2_UART
+            type: String
+          type: Attributes
+        type: DirectDependency
+      type: Attachments
+    type: stdio
+  elementPosition:
+    attributes:
+      id: __ROOTVIEW
+    children:
+    - children:
+      - attributes:
+          id: stdio
+          x: '282'
+          y: '208'
+        type: ElementPosition
+      type: ElementPositions
+    type: ComponentGraph
+  symbols:
+    DEBUG_PERIPHERAL:
+      attributes:
+        id: DEBUG_PERIPHERAL
+      children:
+      - children:
+        - attributes:
+            id: stdio
+            value: uart2
+          type: Dynamic
+        type: Values
+      type: String
+  userData: {}

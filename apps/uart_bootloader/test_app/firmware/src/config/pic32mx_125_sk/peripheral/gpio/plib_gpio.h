@@ -62,6 +62,26 @@
 // *****************************************************************************
 
 
+/*** Macros for LED3 pin ***/
+#define LED3_Set()               (LATDSET = (1<<2))
+#define LED3_Clear()             (LATDCLR = (1<<2))
+#define LED3_Toggle()            (LATDINV= (1<<2))
+#define LED3_OutputEnable()      (TRISDCLR = (1<<2))
+#define LED3_InputEnable()       (TRISDSET = (1<<2))
+#define LED3_Get()               ((PORTD >> 2) & 0x1)
+#define LED3_GetLatch()          ((LATD >> 2) & 0x1)
+#define LED3_PIN                  GPIO_PIN_RD2
+
+/*** Macros for SWITCH1 pin ***/
+#define SWITCH1_Set()               (LATDSET = (1<<6))
+#define SWITCH1_Clear()             (LATDCLR = (1<<6))
+#define SWITCH1_Toggle()            (LATDINV= (1<<6))
+#define SWITCH1_OutputEnable()      (TRISDCLR = (1<<6))
+#define SWITCH1_InputEnable()       (TRISDSET = (1<<6))
+#define SWITCH1_Get()               ((PORTD >> 6) & 0x1)
+#define SWITCH1_GetLatch()          ((LATD >> 6) & 0x1)
+#define SWITCH1_PIN                  GPIO_PIN_RD6
+
 
 // *****************************************************************************
 /* GPIO Port

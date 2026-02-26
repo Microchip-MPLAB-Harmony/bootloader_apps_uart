@@ -1,0 +1,1245 @@
+configVersion: 1.0.0
+componentName: core
+coreVersion: 5.8.4
+device: PIC32MX570F512L
+library: []
+dependency:
+- dependencyPackage: class com.microchip.mcc.harmony.HarmonyModule
+  name: core
+  type: module
+  version: ''
+- dependencyPackage: ''
+  name: csp
+  type: package
+  version: v3.25.1
+customDataClassName: com.microchip.utils_mh3.utils.persistence.CustomModuleData
+data:
+  attachments: {}
+  elementPosition:
+    attributes:
+      id: __ROOTVIEW
+    children:
+    - children:
+      - attributes:
+          id: core
+          x: '240'
+          y: '20'
+        type: ElementPosition
+      type: ElementPositions
+    type: ComponentGraph
+  symbols:
+    ADD_LINKER_FILE:
+      attributes:
+        id: ADD_LINKER_FILE
+      children:
+      - children:
+        - attributes:
+            value: 'false'
+          type: User
+        type: Values
+      type: Boolean
+    BSP_PIN_13_MODE:
+      attributes:
+        id: BSP_PIN_13_MODE
+      children:
+      - children:
+        - attributes:
+            value: DIGITAL
+          type: User
+        type: Values
+      type: String
+    BSP_PIN_17_MODE:
+      attributes:
+        id: BSP_PIN_17_MODE
+      children:
+      - children:
+        - attributes:
+            value: DIGITAL
+          type: User
+        type: Values
+      type: String
+    BSP_PIN_38_MODE:
+      attributes:
+        id: BSP_PIN_38_MODE
+      children:
+      - children:
+        - attributes:
+            value: DIGITAL
+          type: User
+        type: Values
+      type: String
+    BSP_PIN_49_FUNCTION_TYPE:
+      attributes:
+        id: BSP_PIN_49_FUNCTION_TYPE
+      children:
+      - children:
+        - attributes:
+            value: U2RX
+          type: User
+        type: Values
+      type: String
+    BSP_PIN_49_MODE:
+      attributes:
+        id: BSP_PIN_49_MODE
+      children:
+      - children:
+        - attributes:
+            value: DIGITAL
+          type: User
+        type: Values
+      type: String
+    BSP_PIN_50_FUNCTION_TYPE:
+      attributes:
+        id: BSP_PIN_50_FUNCTION_TYPE
+      children:
+      - children:
+        - attributes:
+            value: U2TX
+          type: User
+        type: Values
+      type: String
+    BSP_PIN_50_MODE:
+      attributes:
+        id: BSP_PIN_50_MODE
+      children:
+      - children:
+        - attributes:
+            value: DIGITAL
+          type: User
+        type: Values
+      type: String
+    BSP_PIN_51_MODE:
+      attributes:
+        id: BSP_PIN_51_MODE
+      children:
+      - children:
+        - attributes:
+            value: DIGITAL
+          type: User
+        type: Values
+      type: String
+    BSP_PIN_54_MODE:
+      attributes:
+        id: BSP_PIN_54_MODE
+      children:
+      - children:
+        - attributes:
+            value: DIGITAL
+          type: User
+        type: Values
+      type: String
+    BSP_PIN_58_MODE:
+      attributes:
+        id: BSP_PIN_58_MODE
+      children:
+      - children:
+        - attributes:
+            value: DIGITAL
+          type: User
+        type: Values
+      type: String
+    BSP_PIN_59_MODE:
+      attributes:
+        id: BSP_PIN_59_MODE
+      children:
+      - children:
+        - attributes:
+            value: DIGITAL
+          type: User
+        type: Values
+      type: String
+    BSP_PIN_60_MODE:
+      attributes:
+        id: BSP_PIN_60_MODE
+      children:
+      - children:
+        - attributes:
+            value: DIGITAL
+          type: User
+        type: Values
+      type: String
+    BSP_PIN_61_MODE:
+      attributes:
+        id: BSP_PIN_61_MODE
+      children:
+      - children:
+        - attributes:
+            value: DIGITAL
+          type: User
+        type: Values
+      type: String
+    BSP_PIN_66_MODE:
+      attributes:
+        id: BSP_PIN_66_MODE
+      children:
+      - children:
+        - attributes:
+            value: DIGITAL
+          type: User
+        type: Values
+      type: String
+    BSP_PIN_67_MODE:
+      attributes:
+        id: BSP_PIN_67_MODE
+      children:
+      - children:
+        - attributes:
+            value: DIGITAL
+          type: User
+        type: Values
+      type: String
+    BSP_PIN_68_MODE:
+      attributes:
+        id: BSP_PIN_68_MODE
+      children:
+      - children:
+        - attributes:
+            value: DIGITAL
+          type: User
+        type: Values
+      type: String
+    BSP_PIN_69_MODE:
+      attributes:
+        id: BSP_PIN_69_MODE
+      children:
+      - children:
+        - attributes:
+            value: DIGITAL
+          type: User
+        type: Values
+      type: String
+    BSP_PIN_70_MODE:
+      attributes:
+        id: BSP_PIN_70_MODE
+      children:
+      - children:
+        - attributes:
+            value: DIGITAL
+          type: User
+        type: Values
+      type: String
+    BSP_PIN_71_MODE:
+      attributes:
+        id: BSP_PIN_71_MODE
+      children:
+      - children:
+        - attributes:
+            value: DIGITAL
+          type: User
+        type: Values
+      type: String
+    BSP_PIN_81_MODE:
+      attributes:
+        id: BSP_PIN_81_MODE
+      children:
+      - children:
+        - attributes:
+            value: DIGITAL
+          type: User
+        type: Values
+      type: String
+    BSP_PIN_82_MODE:
+      attributes:
+        id: BSP_PIN_82_MODE
+      children:
+      - children:
+        - attributes:
+            value: DIGITAL
+          type: User
+        type: Values
+      type: String
+    BSP_PIN_89_MODE:
+      attributes:
+        id: BSP_PIN_89_MODE
+      children:
+      - children:
+        - attributes:
+            value: DIGITAL
+          type: User
+        type: Values
+      type: String
+    BSP_PIN_90_MODE:
+      attributes:
+        id: BSP_PIN_90_MODE
+      children:
+      - children:
+        - attributes:
+            value: DIGITAL
+          type: User
+        type: Values
+      type: String
+    BSP_PIN_91_MODE:
+      attributes:
+        id: BSP_PIN_91_MODE
+      children:
+      - children:
+        - attributes:
+            value: DIGITAL
+          type: User
+        type: Values
+      type: String
+    BSP_PIN_92_MODE:
+      attributes:
+        id: BSP_PIN_92_MODE
+      children:
+      - children:
+        - attributes:
+            value: DIGITAL
+          type: User
+        type: Values
+      type: String
+    BSP_PIN_95_MODE:
+      attributes:
+        id: BSP_PIN_95_MODE
+      children:
+      - children:
+        - attributes:
+            value: DIGITAL
+          type: User
+        type: Values
+      type: String
+    BSP_PIN_96_MODE:
+      attributes:
+        id: BSP_PIN_96_MODE
+      children:
+      - children:
+        - attributes:
+            value: DIGITAL
+          type: User
+        type: Values
+      type: String
+    BSP_PIN_97_MODE:
+      attributes:
+        id: BSP_PIN_97_MODE
+      children:
+      - children:
+        - attributes:
+            value: DIGITAL
+          type: User
+        type: Values
+      type: String
+    BSP_PIN_99_MODE:
+      attributes:
+        id: BSP_PIN_99_MODE
+      children:
+      - children:
+        - attributes:
+            value: DIGITAL
+          type: User
+        type: Values
+      type: String
+    BSP_PIN_9_MODE:
+      attributes:
+        id: BSP_PIN_9_MODE
+      children:
+      - children:
+        - attributes:
+            value: DIGITAL
+          type: User
+        type: Values
+      type: String
+    COMPILER_CHOICE:
+      attributes:
+        id: COMPILER_CHOICE
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: KeyValueSet
+    CORE_TIMER_INTERRUPT_ENABLE:
+      attributes:
+        id: CORE_TIMER_INTERRUPT_ENABLE
+      children:
+      - children:
+        - attributes:
+            id: core_timer
+            value: 'false'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    CORE_TIMER_INTERRUPT_ENABLE_UPDATE:
+      attributes:
+        id: CORE_TIMER_INTERRUPT_ENABLE_UPDATE
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: 'true'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    CORE_TIMER_INTERRUPT_HANDLER:
+      attributes:
+        id: CORE_TIMER_INTERRUPT_HANDLER
+      children:
+      - children:
+        - attributes:
+            id: core_timer
+            value: CORE_TIMER_Handler
+          type: Dynamic
+        type: Values
+      type: String
+    CORE_TIMER_INTERRUPT_HANDLER_LOCK:
+      attributes:
+        id: CORE_TIMER_INTERRUPT_HANDLER_LOCK
+      children:
+      - children:
+        - attributes:
+            id: core_timer
+            value: 'false'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    EVIC_0_ENABLE:
+      attributes:
+        id: EVIC_0_ENABLE
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: 'false'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    EVIC_0_HANDLER_LOCK:
+      attributes:
+        id: EVIC_0_HANDLER_LOCK
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: 'false'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    EVIC_0_INTERRUPT_HANDLER:
+      attributes:
+        id: EVIC_0_INTERRUPT_HANDLER
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: CORE_TIMER_Handler
+          type: Dynamic
+        type: Values
+      type: String
+    EVIC_1_ENABLE_GENERATE:
+      attributes:
+        id: EVIC_1_ENABLE_GENERATE
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: 'true'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    EVIC_1_ENABLE_LOCK:
+      attributes:
+        id: EVIC_1_ENABLE_LOCK
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: 'false'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    EVIC_1_HANDLER_LOCK:
+      attributes:
+        id: EVIC_1_HANDLER_LOCK
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: 'false'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    EVIC_1_PRIORITY_GENERATE:
+      attributes:
+        id: EVIC_1_PRIORITY_GENERATE
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: 'true'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    EVIC_1_PRIORITY_LOCK:
+      attributes:
+        id: EVIC_1_PRIORITY_LOCK
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: 'false'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    EVIC_1_SUBPRIORITY_GENERATE:
+      attributes:
+        id: EVIC_1_SUBPRIORITY_GENERATE
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: 'true'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    EVIC_1_SUBPRIORITY_LOCK:
+      attributes:
+        id: EVIC_1_SUBPRIORITY_LOCK
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: 'false'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    EVIC_31_ENABLE:
+      attributes:
+        id: EVIC_31_ENABLE
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: 'false'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    EVIC_31_HANDLER_LOCK:
+      attributes:
+        id: EVIC_31_HANDLER_LOCK
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: 'false'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    EVIC_31_INTERRUPT_HANDLER:
+      attributes:
+        id: EVIC_31_INTERRUPT_HANDLER
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: UART_1_Handler
+          type: Dynamic
+        type: Values
+      type: String
+    EVIC_36_ENABLE:
+      attributes:
+        id: EVIC_36_ENABLE
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: 'false'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    EVIC_36_HANDLER_LOCK:
+      attributes:
+        id: EVIC_36_HANDLER_LOCK
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: 'false'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    EVIC_36_INTERRUPT_HANDLER:
+      attributes:
+        id: EVIC_36_INTERRUPT_HANDLER
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: UART_2_Handler
+          type: Dynamic
+        type: Values
+      type: String
+    EVIC_4_ENABLE_GENERATE:
+      attributes:
+        id: EVIC_4_ENABLE_GENERATE
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: 'true'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    EVIC_4_ENABLE_LOCK:
+      attributes:
+        id: EVIC_4_ENABLE_LOCK
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: 'false'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    EVIC_4_HANDLER_LOCK:
+      attributes:
+        id: EVIC_4_HANDLER_LOCK
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: 'false'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    EVIC_4_PRIORITY_GENERATE:
+      attributes:
+        id: EVIC_4_PRIORITY_GENERATE
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: 'true'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    EVIC_4_PRIORITY_LOCK:
+      attributes:
+        id: EVIC_4_PRIORITY_LOCK
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: 'false'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    EVIC_4_SUBPRIORITY_GENERATE:
+      attributes:
+        id: EVIC_4_SUBPRIORITY_GENERATE
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: 'true'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    EVIC_4_SUBPRIORITY_LOCK:
+      attributes:
+        id: EVIC_4_SUBPRIORITY_LOCK
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: 'false'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    KEIL_STACK_HEAP_SIZE:
+      attributes:
+        id: KEIL_STACK_HEAP_SIZE
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0x1200'
+          type: Dynamic
+        type: Values
+      type: String
+    PMD5_REG_VALUE:
+      attributes:
+        id: PMD5_REG_VALUE
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '285413149'
+          type: Dynamic
+        type: Values
+      type: Hex
+    PMD6_REG_VALUE:
+      attributes:
+        id: PMD6_REG_VALUE
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '65537'
+          type: Dynamic
+        type: Values
+      type: Hex
+    SYS_PORT_D_ANSEL:
+      attributes:
+        id: SYS_PORT_D_ANSEL
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: Hex
+    SYS_PORT_D_CNPU:
+      attributes:
+        id: SYS_PORT_D_CNPU
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: Hex
+    SYS_PORT_D_LAT:
+      attributes:
+        id: SYS_PORT_D_LAT
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: Hex
+    SYS_PORT_D_TRIS:
+      attributes:
+        id: SYS_PORT_D_TRIS
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: Hex
+    SYS_PORT_F_ANSEL:
+      attributes:
+        id: SYS_PORT_F_ANSEL
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: Hex
+    SYS_PORT_PPS_INPUT_FUNCTION_0:
+      attributes:
+        id: SYS_PORT_PPS_INPUT_FUNCTION_0
+      children:
+      - children:
+        - attributes:
+            id: visible
+          children:
+          - type: Value
+            value: 'true'
+          type: Boolean
+        type: Attributes
+      - children:
+        - attributes:
+            value: U2RX
+          type: User
+        type: Values
+      type: Combo
+    SYS_PORT_PPS_INPUT_PIN_0:
+      attributes:
+        id: SYS_PORT_PPS_INPUT_PIN_0
+      children:
+      - children:
+        - attributes:
+            id: pairs
+          children:
+          - children:
+            - attributes:
+                description: RPC14
+                key: RPC14
+                value: '7'
+              type: Pair
+            - attributes:
+                description: RPD4
+                key: RPD4
+                value: '4'
+              type: Pair
+            - attributes:
+                description: RPD5
+                key: RPD5
+                value: '6'
+              type: Pair
+            - attributes:
+                description: RPD2
+                key: RPD2
+                value: '0'
+              type: Pair
+            - attributes:
+                description: RPD3
+                key: RPD3
+                value: '0'
+              type: Pair
+            - attributes:
+                description: RPD0
+                key: RPD0
+                value: '3'
+              type: Pair
+            - attributes:
+                description: RPD1
+                key: RPD1
+                value: '0'
+              type: Pair
+            - attributes:
+                description: RPA14
+                key: RPA14
+                value: '13'
+              type: Pair
+            - attributes:
+                description: RPA15
+                key: RPA15
+                value: '13'
+              type: Pair
+            - attributes:
+                description: RPC13
+                key: RPC13
+                value: '7'
+              type: Pair
+            - attributes:
+                description: RPD8
+                key: RPD8
+                value: '4'
+              type: Pair
+            - attributes:
+                description: RPD9
+                key: RPD9
+                value: '0'
+              type: Pair
+            - attributes:
+                description: RPG0
+                key: RPG0
+                value: '12'
+              type: Pair
+            - attributes:
+                description: RPG7
+                key: RPG7
+                value: '1'
+              type: Pair
+            - attributes:
+                description: RPC3
+                key: RPC3
+                value: '12'
+              type: Pair
+            - attributes:
+                description: RPG8
+                key: RPG8
+                value: '1'
+              type: Pair
+            - attributes:
+                description: RPC4
+                key: RPC4
+                value: '10'
+              type: Pair
+            - attributes:
+                description: RPC1
+                key: RPC1
+                value: '10'
+              type: Pair
+            - attributes:
+                description: RPG6
+                key: RPG6
+                value: '1'
+              type: Pair
+            - attributes:
+                description: RPC2
+                key: RPC2
+                value: '12'
+              type: Pair
+            - attributes:
+                description: RPG1
+                key: RPG1
+                value: '12'
+              type: Pair
+            - attributes:
+                description: RPG9
+                key: RPG9
+                value: '1'
+              type: Pair
+            - attributes:
+                description: RPB15
+                key: RPB15
+                value: '3'
+              type: Pair
+            - attributes:
+                description: RPD14
+                key: RPD14
+                value: '14'
+              type: Pair
+            - attributes:
+                description: RPF12
+                key: RPF12
+                value: '9'
+              type: Pair
+            - attributes:
+                description: RPD15
+                key: RPD15
+                value: '11'
+              type: Pair
+            - attributes:
+                description: RPF13
+                key: RPF13
+                value: '9'
+              type: Pair
+            - attributes:
+                description: RPB2
+                key: RPB2
+                value: '7'
+              type: Pair
+            - attributes:
+                description: RPB3
+                key: RPB3
+                value: '8'
+              type: Pair
+            - attributes:
+                description: RPF4
+                key: RPF4
+                value: '2'
+              type: Pair
+            - attributes:
+                description: RPB0
+                key: RPB0
+                value: '5'
+              type: Pair
+            - attributes:
+                description: RPB10
+                key: RPB10
+                value: '6'
+              type: Pair
+            - attributes:
+                description: RPF5
+                key: RPF5
+                value: '2'
+              type: Pair
+            - attributes:
+                description: RPB1
+                key: RPB1
+                value: '5'
+              type: Pair
+            - attributes:
+                description: RPF2
+                key: RPF2
+                value: '15'
+              type: Pair
+            - attributes:
+                description: RPD10
+                key: RPD10
+                value: '3'
+              type: Pair
+            - attributes:
+                description: RPF3
+                key: RPF3
+                value: '8'
+              type: Pair
+            - attributes:
+                description: RPD11
+                key: RPD11
+                value: '3'
+              type: Pair
+            - attributes:
+                description: RPF0
+                key: RPF0
+                value: '4'
+              type: Pair
+            - attributes:
+                description: RPF1
+                key: RPF1
+                value: '4'
+              type: Pair
+            - attributes:
+                description: RPD12
+                key: RPD12
+                value: '10'
+              type: Pair
+            - attributes:
+                description: RPB14
+                key: RPB14
+                value: '2'
+              type: Pair
+            - attributes:
+                description: RPB8
+                key: RPB8
+                value: '2'
+              type: Pair
+            - attributes:
+                description: RPB9
+                key: RPB9
+                value: '5'
+              type: Pair
+            - attributes:
+                description: RPB6
+                key: RPB6
+                value: '5'
+              type: Pair
+            - attributes:
+                description: RPB7
+                key: RPB7
+                value: '7'
+              type: Pair
+            - attributes:
+                description: RPF8
+                key: RPF8
+                value: '11'
+              type: Pair
+            - attributes:
+                description: RPB5
+                key: RPB5
+                value: '8'
+              type: Pair
+            - attributes:
+                description: RPE5
+                key: RPE5
+                value: '6'
+              type: Pair
+            - attributes:
+                description: RPE3
+                key: RPE3
+                value: '6'
+              type: Pair
+            - attributes:
+                description: RPE9
+                key: RPE9
+                value: '13'
+              type: Pair
+            - attributes:
+                description: RPE8
+                key: RPE8
+                value: '13'
+              type: Pair
+            type: Pairs
+          type: KeyValuePairList
+        - attributes:
+            id: visible
+          children:
+          - type: Value
+            value: 'true'
+          type: Boolean
+        type: Attributes
+      - children:
+        - attributes:
+            value: '29'
+          type: User
+        type: Values
+      type: KeyValueSet
+    SYS_PORT_PPS_OUTPUT_FUNCTION_0:
+      attributes:
+        id: SYS_PORT_PPS_OUTPUT_FUNCTION_0
+      children:
+      - children:
+        - attributes:
+            id: visible
+          children:
+          - type: Value
+            value: 'true'
+          type: Boolean
+        type: Attributes
+      - children:
+        - attributes:
+            value: '16'
+          type: User
+        type: Values
+      type: KeyValueSet
+    SYS_PORT_PPS_OUTPUT_PIN_0:
+      attributes:
+        id: SYS_PORT_PPS_OUTPUT_PIN_0
+      children:
+      - children:
+        - attributes:
+            id: visible
+          children:
+          - type: Value
+            value: 'true'
+          type: Boolean
+        type: Attributes
+      - children:
+        - attributes:
+            value: RPF5
+          type: User
+        type: Values
+      type: Combo
+    UART1_CLOCK_FREQUENCY:
+      attributes:
+        id: UART1_CLOCK_FREQUENCY
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: Integer
+    UART2_CLOCK_ENABLE:
+      attributes:
+        id: UART2_CLOCK_ENABLE
+      children:
+      - children:
+        - attributes:
+            id: uart2
+            value: 'true'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    UART2_CLOCK_FREQUENCY:
+      attributes:
+        id: UART2_CLOCK_FREQUENCY
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '48000000'
+          type: Dynamic
+        type: Values
+      type: Integer
+    UART_1_INTERRUPT_ENABLE_UPDATE:
+      attributes:
+        id: UART_1_INTERRUPT_ENABLE_UPDATE
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: 'true'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    UART_2_INTERRUPT_ENABLE:
+      attributes:
+        id: UART_2_INTERRUPT_ENABLE
+      children:
+      - children:
+        - attributes:
+            id: uart2
+            value: 'false'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    UART_2_INTERRUPT_ENABLE_UPDATE:
+      attributes:
+        id: UART_2_INTERRUPT_ENABLE_UPDATE
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: 'true'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    UART_2_INTERRUPT_HANDLER:
+      attributes:
+        id: UART_2_INTERRUPT_HANDLER
+      children:
+      - children:
+        - attributes:
+            id: uart2
+            value: UART_2_Handler
+          type: Dynamic
+        type: Values
+      type: String
+    UART_2_INTERRUPT_HANDLER_LOCK:
+      attributes:
+        id: UART_2_INTERRUPT_HANDLER_LOCK
+      children:
+      - children:
+        - attributes:
+            id: uart2
+            value: 'false'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    USE_PPS_INPUT_0:
+      attributes:
+        id: USE_PPS_INPUT_0
+      children:
+      - children:
+        - attributes:
+            value: 'true'
+          type: User
+        type: Values
+      type: Boolean
+    USE_PPS_OUTPUT_0:
+      attributes:
+        id: USE_PPS_OUTPUT_0
+      children:
+      - children:
+        - attributes:
+            value: 'true'
+          type: User
+        type: Values
+      type: Boolean
+    BSP_PIN_77_FUNCTION_TYPE:
+      attributes:
+        id: BSP_PIN_77_FUNCTION_TYPE
+      children:
+      - children:
+        - attributes:
+            value: GPIO
+          type: User
+        type: Values
+      type: String
+    BSP_PIN_77_FUNCTION_NAME:
+      attributes:
+        id: BSP_PIN_77_FUNCTION_NAME
+      children:
+      - children:
+        - attributes:
+            value: LED3
+          type: User
+        type: Values
+      type: String
+    BSP_PIN_72_MODE:
+      attributes:
+        id: BSP_PIN_72_MODE
+      children:
+      - children:
+        - attributes:
+            value: DIGITAL
+          type: User
+        type: Values
+      type: String
+    BSP_PIN_83_FUNCTION_TYPE:
+      attributes:
+        id: BSP_PIN_83_FUNCTION_TYPE
+      children:
+      - children:
+        - attributes:
+            value: GPIO
+          type: User
+        type: Values
+      type: String
+    BSP_PIN_83_FUNCTION_NAME:
+      attributes:
+        id: BSP_PIN_83_FUNCTION_NAME
+      children:
+      - children:
+        - attributes:
+            value: SWITCH1
+          type: User
+        type: Values
+      type: String
+  userData:
+    children:
+    - attributes:
+        canvasHeight: '400'
+        canvasWidth: '400'
+      type: GraphSettings
+    - children:
+      - attributes:
+          id: profile0
+          name: Main
+        type: Profile
+      type: PowerProfiles
+    type: UserData

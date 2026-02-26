@@ -52,24 +52,6 @@
         </logicalFolder>
       </logicalFolder>
       <logicalFolder name="packs" displayName="packs" projectFiles="true">
-        <logicalFolder name="CMSIS" displayName="CMSIS" projectFiles="true">
-          <logicalFolder name="CMSIS" displayName="CMSIS" projectFiles="true">
-            <logicalFolder name="Core" displayName="Core" projectFiles="true">
-              <logicalFolder name="Include" displayName="Include" projectFiles="true">
-                <itemPath>../src/packs/CMSIS/CMSIS/Core/Include/cmsis_armclang_ltm.h</itemPath>
-                <itemPath>../src/packs/CMSIS/CMSIS/Core/Include/cmsis_iccarm.h</itemPath>
-                <itemPath>../src/packs/CMSIS/CMSIS/Core/Include/cmsis_armcc.h</itemPath>
-                <itemPath>../src/packs/CMSIS/CMSIS/Core/Include/core_cm4.h</itemPath>
-                <itemPath>../src/packs/CMSIS/CMSIS/Core/Include/cmsis_compiler.h</itemPath>
-                <itemPath>../src/packs/CMSIS/CMSIS/Core/Include/cmsis_gcc.h</itemPath>
-                <itemPath>../src/packs/CMSIS/CMSIS/Core/Include/cachel1_armv7.h</itemPath>
-                <itemPath>../src/packs/CMSIS/CMSIS/Core/Include/cmsis_armclang.h</itemPath>
-                <itemPath>../src/packs/CMSIS/CMSIS/Core/Include/cmsis_version.h</itemPath>
-                <itemPath>../src/packs/CMSIS/CMSIS/Core/Include/mpu_armv7.h</itemPath>
-              </logicalFolder>
-            </logicalFolder>
-          </logicalFolder>
-        </logicalFolder>
         <logicalFolder name="PIC32CX1025SG41128_DFP"
                        displayName="PIC32CX1025SG41128_DFP"
                        projectFiles="true">
@@ -188,8 +170,27 @@
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
                    projectFiles="true">
+      <logicalFolder name="uart_fail_safe_bootloader_test_app_pic32cx_sg41_cult_pic32cx_sg41_cult"
+                     displayName="uart_fail_safe_bootloader_test_app_pic32cx_sg41_cult_pic32cx_sg41_cult"
+                     projectFiles="true">
+        <logicalFolder name="components" displayName="components" projectFiles="true">
+          <itemPath>uart_fail_safe_bootloader_test_app_pic32cx_sg41_cult_pic32cx_sg41_cult/components/stdio.yml</itemPath>
+          <itemPath>uart_fail_safe_bootloader_test_app_pic32cx_sg41_cult_pic32cx_sg41_cult/components/cmsis.yml</itemPath>
+          <itemPath>uart_fail_safe_bootloader_test_app_pic32cx_sg41_cult_pic32cx_sg41_cult/components/nvmctrl.yml</itemPath>
+          <itemPath>uart_fail_safe_bootloader_test_app_pic32cx_sg41_cult_pic32cx_sg41_cult/components/core.yml</itemPath>
+          <itemPath>uart_fail_safe_bootloader_test_app_pic32cx_sg41_cult_pic32cx_sg41_cult/components/sercom4.yml</itemPath>
+          <itemPath>uart_fail_safe_bootloader_test_app_pic32cx_sg41_cult_pic32cx_sg41_cult/components/HarmonyCore.yml</itemPath>
+          <itemPath>uart_fail_safe_bootloader_test_app_pic32cx_sg41_cult_pic32cx_sg41_cult/components/evsys.yml</itemPath>
+          <itemPath>uart_fail_safe_bootloader_test_app_pic32cx_sg41_cult_pic32cx_sg41_cult/components/BSP_PIC32CX_SG41_Curiosity_Ultra.yml</itemPath>
+          <itemPath>uart_fail_safe_bootloader_test_app_pic32cx_sg41_cult_pic32cx_sg41_cult/components/dfp.yml</itemPath>
+        </logicalFolder>
+        <itemPath>uart_fail_safe_bootloader_test_app_pic32cx_sg41_cult_pic32cx_sg41_cult/mcc-config.mc4</itemPath>
+      </logicalFolder>
       <itemPath>Makefile</itemPath>
-      <itemPath>pic32cx_sg41_cult.mc3</itemPath>
+    </logicalFolder>
+    <logicalFolder name="LibraryFiles"
+                   displayName="LibraryFiles"
+                   projectFiles="true">
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"

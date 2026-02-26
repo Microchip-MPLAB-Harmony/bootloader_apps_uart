@@ -14,9 +14,9 @@ harmony_version: v5.6.4
 compiler: XC32 4.60
 
 modules:
-    - {name: "csp", version: "v3.22.5"}
+    - {name: "csp", version: "v3.25.1"}
     - {name: "CMSIS_5", version: "5.9.0"}
-    - {name: "bootloader", version: "v3.8.0"}
+    - {name: "bootloader", version: "v3.9.0"}
 
 packs:
     - {name: "PIC32CM-GC00_DFP", version: "1.0.27"}

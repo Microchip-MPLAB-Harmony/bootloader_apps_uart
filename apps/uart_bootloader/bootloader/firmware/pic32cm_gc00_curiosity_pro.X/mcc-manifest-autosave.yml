@@ -18,6 +18,6 @@ device_library: {library_class: com.microchip.mcc.harmony.Harmony3Library, name:
   version: Bundled}
 packs: {name: PIC32CM-GC00_DFP, version: 1.0.27}
 modules:
-- {name: csp, type: HARMONY, version: v3.22.5}
+- {name: csp, type: HARMONY, version: v3.25.1}
 - {name: CMSIS_5, type: HARMONY, version: 5.9.0}
-- {name: bootloader, type: HARMONY, version: v3.8.0}
+- {name: bootloader, type: HARMONY, version: v3.9.0}

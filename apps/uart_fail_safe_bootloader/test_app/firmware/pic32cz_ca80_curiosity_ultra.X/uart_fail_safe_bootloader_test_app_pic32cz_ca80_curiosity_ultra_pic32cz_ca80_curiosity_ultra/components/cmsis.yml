@@ -15,15 +15,15 @@ dependency:
 - dependencyPackage: ''
   name: bsp
   type: package
-  version: v3.22.0
+  version: v3.24.0
 - dependencyPackage: ''
   name: core
   type: package
-  version: v3.15.2
+  version: v3.16.0
 - dependencyPackage: ''
   name: csp
   type: package
-  version: v3.22.5
+  version: v3.25.1
 customDataClassName: com.microchip.utils_mh3.utils.persistence.CustomModuleData
 data:
   attachments: {}

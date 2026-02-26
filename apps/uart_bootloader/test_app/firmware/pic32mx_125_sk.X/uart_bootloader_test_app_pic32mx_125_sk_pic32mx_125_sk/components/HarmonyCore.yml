@@ -1,0 +1,45 @@
+configVersion: 1.0.0
+componentName: HarmonyCore
+coreVersion: 5.8.4
+device: PIC32MX570F512L
+library: []
+dependency:
+- dependencyPackage: class com.microchip.mcc.harmony.HarmonyModule
+  name: HarmonyCore
+  type: module
+  version: ''
+- dependencyPackage: ''
+  name: core
+  type: package
+  version: v3.16.0
+customDataClassName: com.microchip.utils_mh3.utils.persistence.CustomModuleData
+data:
+  attachments: {}
+  elementPosition:
+    attributes:
+      id: __ROOTVIEW
+    children:
+    - children:
+      - attributes:
+          id: HarmonyCore
+          x: '422'
+          y: '57'
+        type: ElementPosition
+      type: ElementPositions
+    type: ComponentGraph
+  symbols:
+    ENABLE_APP_FILE:
+      attributes:
+        id: ENABLE_APP_FILE
+      children:
+      - children:
+        - attributes:
+            id: HarmonyCore
+            value: 'false'
+          type: Dynamic
+        - attributes:
+            value: 'true'
+          type: User
+        type: Values
+      type: Boolean
+  userData: {}

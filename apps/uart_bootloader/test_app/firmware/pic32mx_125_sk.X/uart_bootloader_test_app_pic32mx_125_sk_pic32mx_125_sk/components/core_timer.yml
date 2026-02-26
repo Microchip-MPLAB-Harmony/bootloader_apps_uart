@@ -1,0 +1,74 @@
+configVersion: 1.0.0
+componentName: core_timer
+coreVersion: 5.8.4
+device: PIC32MX570F512L
+library: []
+dependency:
+- dependencyPackage: class com.microchip.mcc.harmony.HarmonyModule
+  name: core_timer
+  type: module
+  version: ''
+- dependencyPackage: ''
+  name: csp
+  type: package
+  version: v3.25.1
+customDataClassName: com.microchip.utils_mh3.utils.persistence.CustomModuleData
+data:
+  attachments: {}
+  elementPosition:
+    attributes:
+      id: __ROOTVIEW
+    children:
+    - children:
+      - attributes:
+          id: core_timer
+          x: '117'
+          y: '91'
+        type: ElementPosition
+      type: ElementPositions
+    type: ComponentGraph
+  symbols:
+    CORE_TIMER_COMPARE_MS:
+      attributes:
+        id: CORE_TIMER_COMPARE_MS
+      children:
+      - children:
+        - attributes:
+            value: '1000.0'
+          type: User
+        type: Values
+      type: Float
+    CORE_TIMER_FREQUENCY:
+      attributes:
+        id: CORE_TIMER_FREQUENCY
+      children:
+      - children:
+        - attributes:
+            id: core_timer
+            value: '24000000'
+          type: Dynamic
+        type: Values
+      type: Integer
+    CORE_TIMER_PERIOD_US:
+      attributes:
+        id: CORE_TIMER_PERIOD_US
+      children:
+      - children:
+        - attributes:
+            id: core_timer
+            value: '1000000'
+          type: Dynamic
+        type: Values
+      type: Integer
+    CORE_TIMER_PERIOD_VALUE:
+      attributes:
+        id: CORE_TIMER_PERIOD_VALUE
+      children:
+      - children:
+        - attributes:
+            id: core_timer
+            value: '0x16e3600'
+          type: Dynamic
+        type: Values
+      type: String
+  userData: {}

@@ -20,4 +20,4 @@ packs: {name: PIC32CZ-CA80_DFP, version: 1.4.158}
 modules:
 - {name: csp, type: HARMONY, version: v3.25.1}
 - {name: CMSIS_5, type: HARMONY, version: 5.9.0}
-- {name: bootloader, type: HARMONY, version: v3.8.0}
+- {name: bootloader, type: HARMONY, version: v3.9.0}

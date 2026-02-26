@@ -16,7 +16,7 @@ compiler: XC32 4.60
 modules:
     - {name: "csp", version: "v3.25.1"}
     - {name: "CMSIS_5", version: "5.9.0"}
-    - {name: "bootloader", version: "v3.8.0"}
+    - {name: "bootloader", version: "v3.9.0"}
 
 packs:
     - {name: "PIC32CZ-CA80_DFP", version: "1.4.158"}

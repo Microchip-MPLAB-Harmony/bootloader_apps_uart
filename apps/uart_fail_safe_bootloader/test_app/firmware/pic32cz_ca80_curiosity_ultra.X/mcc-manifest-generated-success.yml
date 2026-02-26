@@ -18,7 +18,7 @@ device_library: {library_class: com.microchip.mcc.harmony.Harmony3Library, name:
   version: Bundled}
 packs: {name: PIC32CZ-CA80_DFP, version: 1.4.158}
 modules:
-- {name: csp, type: HARMONY, version: v3.22.5}
-- {name: core, type: HARMONY, version: v3.15.2}
+- {name: csp, type: HARMONY, version: v3.25.1}
+- {name: core, type: HARMONY, version: v3.16.0}
 - {name: CMSIS_5, type: HARMONY, version: 5.9.0}
-- {name: bsp, type: HARMONY, version: v3.22.0}
+- {name: bsp, type: HARMONY, version: v3.24.0}

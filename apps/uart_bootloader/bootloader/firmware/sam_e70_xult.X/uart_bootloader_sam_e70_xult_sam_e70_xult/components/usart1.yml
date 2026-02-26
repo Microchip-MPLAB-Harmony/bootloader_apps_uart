@@ -1,0 +1,188 @@
+configVersion: 1.0.0
+componentName: usart1
+coreVersion: 5.8.4
+device: ATSAME70Q21B
+library: []
+dependency:
+- dependencyPackage: class com.microchip.mcc.harmony.HarmonyModule
+  name: usart1
+  type: module
+  version: ''
+- dependencyPackage: ''
+  devMode: true
+  name: CMSIS_5
+  type: package
+  version: 5.9.0
+- dependencyPackage: ''
+  name: bootloader
+  type: package
+  version: v3.8.0
+- dependencyPackage: ''
+  name: csp
+  type: package
+  version: v3.22.5
+customDataClassName: com.microchip.utils_mh3.utils.persistence.CustomModuleData
+data:
+  attachments:
+    children:
+    - children:
+      - attributes:
+          id: USART1_SPI
+        children:
+        - children:
+          - attributes:
+              id: enabled
+            children:
+            - type: Value
+              value: 'false'
+            type: Boolean
+          type: Attributes
+        type: DirectCapability
+      - attributes:
+          id: USART1_UART
+        children:
+        - children:
+          - attributes:
+              id: targetComponentID
+            children:
+            - type: Value
+              value: uart_bootloader
+            type: String
+          - attributes:
+              id: targetAttachmentID
+            children:
+            - type: Value
+              value: btl_UART_dependency
+            type: String
+          type: Attributes
+        type: DirectCapability
+      type: Attachments
+    type: usart1
+  elementPosition:
+    attributes:
+      id: __ROOTVIEW
+    children:
+    - children:
+      - attributes:
+          id: usart1
+          x: '54'
+          y: '197'
+        type: ElementPosition
+      type: ElementPositions
+    type: ComponentGraph
+  symbols:
+    BAUD_RATE:
+      attributes:
+        id: BAUD_RATE
+      children:
+      - children:
+        - attributes:
+            value: '115200'
+          type: User
+        type: Values
+      type: Integer
+    BRG_VALUE:
+      attributes:
+        id: BRG_VALUE
+      children:
+      - children:
+        - attributes:
+            id: usart1
+            value: '81'
+          type: Dynamic
+        type: Values
+      type: Integer
+    USART_CLOCK_FREQ:
+      attributes:
+        id: USART_CLOCK_FREQ
+      children:
+      - children:
+        - attributes:
+            id: usart1
+            value: '150000000'
+          type: Dynamic
+        type: Values
+      type: Integer
+    USART_INTERRUPT_MODE:
+      attributes:
+        id: USART_INTERRUPT_MODE
+      children:
+      - children:
+        - attributes:
+            id: label
+          children:
+          - type: Value
+            value: '---'
+          type: String
+        type: Attributes
+      - children:
+        - attributes:
+            id: uart_bootloader
+            value: 'false'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    USART_INTERRUPT_MODE_ENABLE:
+      attributes:
+        id: USART_INTERRUPT_MODE_ENABLE
+      children:
+      - children:
+        - attributes:
+            id: usart1
+            value: 'false'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    USART_MODE:
+      attributes:
+        id: USART_MODE
+      children:
+      - children:
+        - attributes:
+            id: readOnly
+          children:
+          - type: Value
+            value: 'true'
+          type: Boolean
+        type: Attributes
+      - children:
+        - attributes:
+            id: usart1
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: KeyValueSet
+    USART_OPERATING_MODE:
+      attributes:
+        id: USART_OPERATING_MODE
+      children:
+      - children:
+        - attributes:
+            id: usart1
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: KeyValueSet
+    USART_RING_BUFFER_MODE_ENABLE:
+      attributes:
+        id: USART_RING_BUFFER_MODE_ENABLE
+      children:
+      - children:
+        - attributes:
+            id: usart1
+            value: 'false'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    USART_SPI_BRG_VALUE:
+      attributes:
+        id: USART_SPI_BRG_VALUE
+      children:
+      - children:
+        - attributes:
+            id: usart1
+            value: '150'
+          type: Dynamic
+        type: Values
+      type: Integer
+  userData: {}
