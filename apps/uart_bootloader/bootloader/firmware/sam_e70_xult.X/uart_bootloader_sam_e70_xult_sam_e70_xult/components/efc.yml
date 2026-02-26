@@ -9,18 +9,9 @@ dependency:
   type: module
   version: ''
 - dependencyPackage: ''
-  devMode: true
-  name: CMSIS_5
-  type: package
-  version: 5.9.0
-- dependencyPackage: ''
-  name: bootloader
-  type: package
-  version: v3.8.0
-- dependencyPackage: ''
   name: csp
   type: package
-  version: v3.22.5
+  version: v3.25.1
 customDataClassName: com.microchip.utils_mh3.utils.persistence.CustomModuleData
 data:
   attachments:

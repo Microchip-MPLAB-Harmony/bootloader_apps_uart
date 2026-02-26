@@ -4,19 +4,19 @@
 
 
 project: uart_bootloader_sam_e70_xult
-creation_date: 2026-02-26T12:25:45.953+05:30[Asia/Calcutta]    # ISO 8601 format: https://www.w3.org/TR/NOTE-datetime
+creation_date: 2026-02-26T16:08:05.944+05:30[Asia/Calcutta]    # ISO 8601 format: https://www.w3.org/TR/NOTE-datetime
 operating_system: Windows 11
 mcc_mode: IDE            # [IDE|Standalone|Headless]
 mcc_version: v5.6.4
 mcc_core_version: v5.8.4
 mplabx_version: v6.30        # if MPLAB X plugin only
 harmony_version: v5.6.4
-compiler: XC32 4.60
+compiler: XC32 5.00
 
 modules:
-    - {name: "csp", version: "v3.22.5"}
+    - {name: "csp", version: "v3.25.1"}
     - {name: "CMSIS_5", version: "5.9.0"}
-    - {name: "bootloader", version: "v3.8.0"}
+    - {name: "bootloader", version: "v3.9.0"}
 
 packs:
     - {name: "SAME70_DFP", version: "4.11.257"}

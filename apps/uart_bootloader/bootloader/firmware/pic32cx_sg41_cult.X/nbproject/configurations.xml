@@ -60,15 +60,15 @@
           <logicalFolder name="CMSIS" displayName="CMSIS" projectFiles="true">
             <logicalFolder name="Core" displayName="Core" projectFiles="true">
               <logicalFolder name="Include" displayName="Include" projectFiles="true">
+                <itemPath>../src/packs/CMSIS/CMSIS/Core/Include/cmsis_version.h</itemPath>
+                <itemPath>../src/packs/CMSIS/CMSIS/Core/Include/cmsis_compiler.h</itemPath>
                 <itemPath>../src/packs/CMSIS/CMSIS/Core/Include/cmsis_iccarm.h</itemPath>
                 <itemPath>../src/packs/CMSIS/CMSIS/Core/Include/cmsis_gcc.h</itemPath>
-                <itemPath>../src/packs/CMSIS/CMSIS/Core/Include/mpu_armv7.h</itemPath>
-                <itemPath>../src/packs/CMSIS/CMSIS/Core/Include/cmsis_compiler.h</itemPath>
-                <itemPath>../src/packs/CMSIS/CMSIS/Core/Include/cmsis_armclang_ltm.h</itemPath>
-                <itemPath>../src/packs/CMSIS/CMSIS/Core/Include/cmsis_version.h</itemPath>
                 <itemPath>../src/packs/CMSIS/CMSIS/Core/Include/cmsis_armcc.h</itemPath>
-                <itemPath>../src/packs/CMSIS/CMSIS/Core/Include/core_cm4.h</itemPath>
                 <itemPath>../src/packs/CMSIS/CMSIS/Core/Include/cmsis_armclang.h</itemPath>
+                <itemPath>../src/packs/CMSIS/CMSIS/Core/Include/cmsis_armclang_ltm.h</itemPath>
+                <itemPath>../src/packs/CMSIS/CMSIS/Core/Include/core_cm4.h</itemPath>
+                <itemPath>../src/packs/CMSIS/CMSIS/Core/Include/mpu_armv7.h</itemPath>
                 <itemPath>../src/packs/CMSIS/CMSIS/Core/Include/cachel1_armv7.h</itemPath>
               </logicalFolder>
             </logicalFolder>
@@ -191,8 +191,26 @@
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
                    projectFiles="true">
+      <logicalFolder name="uart_bootloader_pic32cx_sg41_cult_pic32cx_sg41_cult"
+                     displayName="uart_bootloader_pic32cx_sg41_cult_pic32cx_sg41_cult"
+                     projectFiles="true">
+        <logicalFolder name="components" displayName="components" projectFiles="true">
+          <itemPath>uart_bootloader_pic32cx_sg41_cult_pic32cx_sg41_cult/components/dsu.yml</itemPath>
+          <itemPath>uart_bootloader_pic32cx_sg41_cult_pic32cx_sg41_cult/components/nvmctrl.yml</itemPath>
+          <itemPath>uart_bootloader_pic32cx_sg41_cult_pic32cx_sg41_cult/components/cmsis.yml</itemPath>
+          <itemPath>uart_bootloader_pic32cx_sg41_cult_pic32cx_sg41_cult/components/sercom4.yml</itemPath>
+          <itemPath>uart_bootloader_pic32cx_sg41_cult_pic32cx_sg41_cult/components/uart_bootloader.yml</itemPath>
+          <itemPath>uart_bootloader_pic32cx_sg41_cult_pic32cx_sg41_cult/components/dfp.yml</itemPath>
+          <itemPath>uart_bootloader_pic32cx_sg41_cult_pic32cx_sg41_cult/components/core.yml</itemPath>
+          <itemPath>uart_bootloader_pic32cx_sg41_cult_pic32cx_sg41_cult/components/evsys.yml</itemPath>
+        </logicalFolder>
+        <itemPath>uart_bootloader_pic32cx_sg41_cult_pic32cx_sg41_cult/mcc-config.mc4</itemPath>
+      </logicalFolder>
       <itemPath>Makefile</itemPath>
-      <itemPath>pic32cx_sg41_cult.mc3</itemPath>
+    </logicalFolder>
+    <logicalFolder name="LibraryFiles"
+                   displayName="LibraryFiles"
+                   projectFiles="true">
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -263,14 +281,14 @@
         <targetDevice>PIC32CX1025SG41128</targetDevice>
         <targetHeader></targetHeader>
         <targetPluginBoard></targetPluginBoard>
-        <platformTool>pkob4hybrid</platformTool>
+        <platformTool>noID</platformTool>
         <languageToolchain>XC32</languageToolchain>
-        <languageToolchainVersion>4.60</languageToolchainVersion>
+        <languageToolchainVersion>5.00</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <packs>
-        <pack name="CMSIS" vendor="ARM" version="6.1.0"/>
         <pack name="PIC32CX-SG41_DFP" vendor="Microchip" version="1.5.140"/>
+        <pack name="CMSIS" vendor="ARM" version="5.9.0"/>
       </packs>
       <ScriptingSettings>
       </ScriptingSettings>
@@ -569,8 +587,6 @@
                   value="${memories.instruction.ram.ranges}"/>
         <property key="memories.programmemory" value="true"/>
         <property key="memories.programmemory.ranges" value="0-47001fff"/>
-        <property key="programmerToGoFilePath"
-                  value="C:/Users/I76597/h3/Bootloader_pic32wm_bz6_curioity/bootloader_apps_uart/apps/uart_bootloader/bootloader/firmware/pic32cx_sg41_cult.X/debug/default/pic32cx_sg41_cult_ptg"/>
         <property key="programoptions.donoteraseauxmem" value="false"/>
         <property key="programoptions.eraseb4program" value="true"/>
         <property key="programoptions.pgmentry.voltage" value="low"/>

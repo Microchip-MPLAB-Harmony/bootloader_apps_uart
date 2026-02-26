@@ -28,9 +28,9 @@
 #include <sys/cdefs.h>
 #include <stdbool.h>
 
-/* MISRAC 2012 deviation block start */
-/* MISRA C-2012 Rule 21.2 deviated 1 times. Deviation record ID -  H3_MISRAC_2012_R_21_2_DR_1 */
-/* MISRA C-2012 Rule 8.6 deviated 8 times.  Deviation record ID -  H3_MISRAC_2012_R_8_6_DR_1 */
+/* MISRAC 2023 deviation block start */
+/* MISRA C-2023 Rule 21.2 deviated 1 times. Deviation record ID -  H3_MISRAC_2023_R_21_2_DR_1 */
+/* MISRA C-2023 Rule 8.6 deviated 8 times.  Deviation record ID -  H3_MISRAC_2023_R_8_6_DR_1 */
 /* Initialize segments */
 extern uint32_t _sfixed;
 extern void _stack(void);
@@ -57,10 +57,10 @@ void (* const vectors[])(void) =
 /* Linker-defined symbols for data initialization. */
 extern uint32_t _sdata, _edata, _etext;
 extern uint32_t _sbss, _ebss;
-/* MISRAC 2012 deviation block end */
+/* MISRAC 2023 deviation block end */
 
 
-void __attribute__((noinline, section(".romfunc.Reset_Handler"))) Reset_Handler(void)
+void __attribute__((optimize("-O1"), noinline, section(".romfunc.Reset_Handler"))) Reset_Handler(void)
 {
     register uint32_t count;
 

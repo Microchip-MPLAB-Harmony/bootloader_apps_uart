@@ -1,0 +1,156 @@
+configVersion: 1.0.0
+componentName: uart_bootloader
+coreVersion: 5.8.4
+device: PIC32CX1025SG41128
+library: []
+dependency:
+- dependencyPackage: class com.microchip.mcc.harmony.HarmonyModule
+  name: uart_bootloader
+  type: module
+  version: ''
+- dependencyPackage: ''
+  name: bootloader
+  type: package
+  version: v3.9.0
+customDataClassName: com.microchip.utils_mh3.utils.persistence.CustomModuleData
+data:
+  attachments:
+    children:
+    - children:
+      - attributes:
+          id: btl_MEMORY_dependency
+        children:
+        - children:
+          - attributes:
+              id: targetComponentID
+            children:
+            - type: Value
+              value: nvmctrl
+            type: String
+          - attributes:
+              id: targetAttachmentID
+            children:
+            - type: Value
+              value: NVMCTRL_MEMORY
+            type: String
+          type: Attributes
+        type: DirectDependency
+      - attributes:
+          id: btl_UART_dependency
+        children:
+        - children:
+          - attributes:
+              id: targetComponentID
+            children:
+            - type: Value
+              value: sercom4
+            type: String
+          - attributes:
+              id: targetAttachmentID
+            children:
+            - type: Value
+              value: SERCOM4_UART
+            type: String
+          type: Attributes
+        type: DirectDependency
+      type: Attachments
+    type: uart_bootloader
+  elementPosition:
+    attributes:
+      id: __ROOTVIEW
+    children:
+    - children:
+      - attributes:
+          id: uart_bootloader
+          x: '363'
+          y: '253'
+        type: ElementPosition
+      type: ElementPositions
+    type: ComponentGraph
+  symbols:
+    BTL_DUAL_BANK:
+      attributes:
+        id: BTL_DUAL_BANK
+      children:
+      - children:
+        - attributes:
+            value: 'false'
+          type: User
+        type: Values
+      type: Boolean
+    BTL_MEM_START_ADDR:
+      attributes:
+        id: BTL_MEM_START_ADDR
+      children:
+      - children:
+        - attributes:
+            id: uart_bootloader
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: Integer
+    BTL_SIZE:
+      attributes:
+        id: BTL_SIZE
+      children:
+      - children:
+        - attributes:
+            id: uart_bootloader
+            value: '8192'
+          type: Dynamic
+        - attributes:
+            value: '8192'
+          type: User
+        type: Values
+      type: String
+    BTL_TRIGGER_ENABLE:
+      attributes:
+        id: BTL_TRIGGER_ENABLE
+      children:
+      - children:
+        - attributes:
+            value: 'true'
+          type: User
+        type: Values
+      type: Boolean
+    BTL_TRIGGER_LEN:
+      attributes:
+        id: BTL_TRIGGER_LEN
+      children:
+      - children:
+        - attributes:
+            id: visible
+          children:
+          - type: Value
+            value: 'true'
+          type: Boolean
+        type: Attributes
+      - children:
+        - attributes:
+            value: '16'
+          type: User
+        type: Values
+      type: String
+    MEM_USED:
+      attributes:
+        id: MEM_USED
+      children:
+      - children:
+        - attributes:
+            id: uart_bootloader
+            value: NVMCTRL
+          type: Dynamic
+        type: Values
+      type: String
+    PERIPH_USED:
+      attributes:
+        id: PERIPH_USED
+      children:
+      - children:
+        - attributes:
+            id: uart_bootloader
+            value: SERCOM4_USART
+          type: Dynamic
+        type: Values
+      type: String
+  userData: {}

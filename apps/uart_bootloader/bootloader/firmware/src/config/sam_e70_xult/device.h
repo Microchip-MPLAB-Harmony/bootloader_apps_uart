@@ -57,6 +57,9 @@
 #ifndef DONT_USE_PREDEFINED_PERIPHERALS_HANDLERS
     #define DONT_USE_PREDEFINED_PERIPHERALS_HANDLERS
 #endif //DONT_USE_PREDEFINED_PERIPHERALS_HANDLERS
+#ifndef DISABLE_CMSIS_INIT
+    #define DISABLE_CMSIS_INIT
+#endif //DISABLE_CMSIS_INIT
 #include "same70q21b.h"
 #pragma GCC diagnostic pop
 #include "device_cache.h"

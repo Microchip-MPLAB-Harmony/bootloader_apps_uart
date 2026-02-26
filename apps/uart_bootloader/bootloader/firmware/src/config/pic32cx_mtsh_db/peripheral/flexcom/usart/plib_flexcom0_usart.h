@@ -50,7 +50,7 @@
 // Section: Included Files
 // *****************************************************************************
 // *****************************************************************************
-/* This section lists the other files that are included in this file. */
+
 #include "device.h"
 #include "plib_flexcom_usart_local.h"
 
@@ -87,9 +87,7 @@ bool FLEXCOM0_USART_TransmitterIsReady( void );
 
 bool FLEXCOM0_USART_ReceiverIsReady( void );
 
-
 bool FLEXCOM0_USART_TransmitComplete( void );
-
 
 
 // DOM-IGNORE-BEGIN

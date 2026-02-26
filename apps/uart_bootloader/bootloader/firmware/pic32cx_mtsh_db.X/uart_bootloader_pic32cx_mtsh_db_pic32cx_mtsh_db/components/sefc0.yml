@@ -1,0 +1,64 @@
+configVersion: 1.0.0
+componentName: sefc0
+coreVersion: 5.8.4
+device: PIC32CX2051MTSH128
+library: []
+dependency:
+- dependencyPackage: class com.microchip.mcc.harmony.HarmonyModule
+  name: sefc0
+  type: module
+  version: ''
+- dependencyPackage: ''
+  name: csp
+  type: package
+  version: v3.25.1
+customDataClassName: com.microchip.utils_mh3.utils.persistence.CustomModuleData
+data:
+  attachments:
+    children:
+    - children:
+      - attributes:
+          id: SEFC0_MEMORY
+        children:
+        - children:
+          - attributes:
+              id: targetComponentID
+            children:
+            - type: Value
+              value: uart_bootloader
+            type: String
+          - attributes:
+              id: targetAttachmentID
+            children:
+            - type: Value
+              value: btl_MEMORY_dependency
+            type: String
+          type: Attributes
+        type: DirectCapability
+      type: Attachments
+    type: sefc0
+  elementPosition:
+    attributes:
+      id: __ROOTVIEW
+    children:
+    - children:
+      - attributes:
+          id: sefc0
+          x: '104'
+          y: '170'
+        type: ElementPosition
+      type: ElementPositions
+    type: ComponentGraph
+  symbols:
+    INTERRUPT_ENABLE:
+      attributes:
+        id: INTERRUPT_ENABLE
+      children:
+      - children:
+        - attributes:
+            id: uart_bootloader
+            value: 'false'
+          type: Dynamic
+        type: Values
+      type: Boolean
+  userData: {}
